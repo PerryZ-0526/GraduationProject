@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "graduation-project"
+version = "0.1.0"
+description = "面向机器人辅助肩关节置换的骨表面增量重建与实时可视化研究工具"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "manifold3d==3.5.2",
+  "matplotlib==3.11.1",
+  "numpy==2.5.2",
+  "pillow==12.3.0",
+  "pymeshlab==2025.7.post1",
+  "pyqt6==6.11.0",
+  "pyvista==0.48.4",
+  "pyvistaqt==0.13.0",
+  "rtree==1.4.1",
+  "scipy==1.18.1",
+  "triangle==20250106",
+  "trimesh==5.1.0",
+  "tzdata==2025.3",
+  "vtk==9.6.2",
+]
+
+[project.optional-dependencies]
+opencl = ["pyopencl==2026.1.4"]
+remote = ["paramiko==5.0.0"]
+cuda = [
+  "cupy-cuda12x==13.6.0; platform_system == 'Linux' and platform_machine == 'x86_64'",
+]
+
+[project.scripts]
+graduation-project = "graduation_project.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/graduation_project"]

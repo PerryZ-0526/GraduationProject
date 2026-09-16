@@ -1,5 +1,9 @@
 # GraduationProject 项目协作说明
 
+> **修改时间及内容补充**：2026-09-17 02:50:08（北京时间），补齐根级项目入口：新增`README.md`、`.python-version`、`pyproject.toml`、`uv.lock`及可安装的`graduation_project`命令行包。新环境统一使用`uv sync`，OpenCL、远程SSH和CUDA分别作为可选依赖；历史实验目录中的requirements文件保留用于旧报告复现。`graduation-project info/test/gui`分别提供环境检查、隔离子进程测试和默认在线窗口入口，测试分core/gui/opencl/cuda/all五组，不可用硬件明确跳过。实际验证核心11组51项、GUI 1项通过，OpenCL因非Intel GPU跳过，CUDA因本机无CuPy/NVIDIA设备跳过；`uv build --wheel`成功。测试生成的临时GUI证据已清理，未改写历史实验结果。
+
+> **修改时间及内容补充**：2026-09-17 02:39:07（北京时间），补充Apple Silicon macOS本地环境。使用`uv 0.12.15`创建项目根目录`.venv`，Python为3.13.15；安装交互原型、Triangle拼接及PyOpenCL依赖，不安装仅支持NVIDIA CUDA的CuPy。Apple OpenCL 1.2可枚举，但既有核显集成测试明确要求Intel双精度GPU，故不在本机执行。PyMeshLab 2025.7.post1自带Qt5，与PyQt6同进程会在macOS触发段错误；新增`pymeshlab_isolation.py`，仅在macOS子进程执行相同自相交检测，其他平台保持进程内调用，不改变验收阈值。CPU核心及GUI相关52项测试通过；跨x86/ARM保存快照比较只允许绝对误差1e-12 mm。CUDA测试未运行，旧`dynamic_quality.py`路线仍在第2步按既有质量门槛拒绝，不属于默认在线入口。
+
 > **修改时间及内容补充**：2026-09-09 12:19:56（北京时间），新增31号原计划分类与竖直磨削分层机制报告。138段分类为134水平/4竖直，92段需径向裁剪，不是执行完成。新增`初步实验/竖直磨削曲面分层/`，用解析开放面验证球底—圆柱C1连接与坑口折线区分；两档尺度、9状态、两种机制共36候选，强制全部连接环有4个形状失败，去除非特征光滑环的18候选形状均通过，仍无整体距离证书/真实骨面拼接，accepted保持false。5项新增、旧三维5项/联合6项及真实16步快照回归通过。远端SSH连接失败，未执行新强基线或CUDA，不作算法优势结论；本机沿用`.venv`，无新依赖/环境配置，在线16步入口未改。同步研究范本与18号；下一研究编号32，详细参数、数学依据、反例和复现命令见31号。
 
 > **修改时间及内容补充**：2026-09-09 10:51:30（北京时间），新增30号受限逐步重建在线接入报告。原`real_bone_interactive_app.py`命令默认进入`validated_online.py`受限CPU在线模式，旧布尔须显式加`--legacy-bool`且标题标明不保证逐步质量；`--self-test`仍为旧布尔自检。`dynamic.py`批量/在线共享逐状态生成器，初态及每步通过原质量、误差与整骨复核后才交付独立快照；拒绝停止，GUI刀位与已发布网格同版本。新增5项、既有联合重建6项及相机2项通过，16步逐张与20号既有顶点一致；角≥25.926°、q≥0.5977、证书≤0.09471mm。一次窗口序列CPU计算验收均值810.794ms，100%超100ms，不含渲染等端到端成本。无新依赖/环境配置、无远端运行；CPU窗口不等于CUDA在线接入。同步研究范本和18号；原138段、一般动态重三角化与下游验收仍未完成。环境沿用`.venv`，入口、测试、导出及限制见30号。下一研究编号31。
@@ -265,6 +269,10 @@
 在上述问题没有明确答案时，先补充证据或向用户说明关键歧义；不要静默扩大任务范围。
 
 ## 十、当前运行环境
+
+**2026-09-17统一入口**：新建环境优先运行`uv sync`，需要本机OpenCL探索时运行`uv sync --extra opencl`；远程控制与Linux CUDA环境分别使用`--extra remote`、`--extra cuda`，不得在Apple Silicon上安装CUDA额外依赖。`uv.lock`是新环境的统一版本锁；旧requirements继续服务已归档实验。环境检查、核心测试和GUI分别运行`.venv/bin/graduation-project info`、`.venv/bin/graduation-project test`、`.venv/bin/graduation-project gui`；Windows使用对应`.venv\Scripts\graduation-project.exe`。统一测试器为每个实验建立独立Python进程，避免同名模块和全局导入路径互相污染。
+
+**2026-09-17 Apple Silicon macOS环境**：项目根目录`.venv`由`/Users/bytedance/.local/bin/uv 0.12.15`创建，使用uv托管的CPython3.13.15。先安装`初步实验/真实骨模型演示/requirements_interactive.txt`与`初步实验/真实骨面共边拼接/requirements.txt`，再安装`初步实验/局部适用域与核显计算/requirements.txt`；环境约1.2 GB。Apple OpenCL 1.2可枚举，但`SweepDevice`要求唯一Intel双精度GPU，因此相关集成测试按设计拒绝；CUDA/CuPy不可在本机执行。macOS中PyMeshLab自带Qt5与PyQt6冲突，默认在线链通过`初步实验/真实骨面共边拼接/pymeshlab_isolation.py`在独立子进程运行同一自相交过滤器。运行入口为`.venv/bin/python 初步实验/真实骨模型演示/real_bone_interactive_app.py`；激活命令为`source .venv/bin/activate`。本次实际Qt 16步窗口回归通过；VTK仍输出NumPy2.5的第三方弃用警告，不影响运行。
 
 **2026-09-08 14:27界面与RXMesh**：本机现有`.venv`运行`初步实验/真实骨模型演示/research_viewer.py`查看26/27号网格和曲线；原入口右侧新增“研究结果与指标曲线”和“显示 / 隐藏在线指标曲线”。测试为`test_research_results.py`、`research_gui_smoke.py`、`live_metrics_smoke.py`。研究窗口是证据回放，原窗口曲线消费实际已完成记录，两者不得混淆；缺失质量/误差不填零。RXMesh隔离路径`/root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858`仅上传源码并失败配置；`run_build.sh`计划创建cmake_venv安装cmake3.31.6但尚未执行，SSH不可达。恢复前核对用户实例状态及固定主机指纹，详见28号及RXMesh动态对照目录。
 

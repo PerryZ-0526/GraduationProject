@@ -1,9 +1,8 @@
 """通过初始联合验收后，沿同一共边网格执行局部逐步更新和整骨复核。"""
 from time import perf_counter
 import numpy as np
-import pymeshlab
 from joint import mesh_quality, Rejected
-from stitch import edges_of, topology, audit_candidate
+from stitch import edges_of, topology, audit_candidate, self_intersection_flags
 from real_patch import RealPatch, local_trajectory
 from surface_patch import overlay_error
 from intersections import resolve_flags
@@ -88,10 +87,7 @@ def iter_sequence(candidate, chart, z=2.95, model_factory=JointPatch, trajectory
         whole = candidate['whole'].copy()
         whole.vertices[candidate['mapping']] = model.vertices
         proposed = dict(candidate, whole=whole)
-        meshset = pymeshlab.MeshSet()
-        meshset.add_mesh(pymeshlab.Mesh(whole.vertices, whole.faces))
-        meshset.compute_selection_by_self_intersections_per_face()
-        proposed['intersection_flags'] = meshset.current_mesh().face_selection_array()
+        proposed['intersection_flags'] = self_intersection_flags(whole.vertices, whole.faces)
         check = dict(topology(whole), degenerate=row['degenerate'], bad_faces=0,
                      error_max_mm=row['error_bound_mm'], coverage_max_mm2=model.coverage_max,
                      coverage_reused_fixed_xy=True)

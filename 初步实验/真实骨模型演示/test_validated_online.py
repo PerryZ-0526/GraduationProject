@@ -32,7 +32,9 @@ class SessionTests(unittest.TestCase):
         self.assertEqual(session.step, 16)
         saved = np.load(HERE.parent / '局部适用域与核显计算/实验结果/local_1.8.npz')
         for actual, expected in zip(session.snapshots, saved['snapshots']):
-            np.testing.assert_array_equal(actual[session.candidate['mapping']], expected)
+            # 不同CPU架构允许远低于几何预算的末位舍入差异，不放宽任何验收阈值。
+            np.testing.assert_allclose(
+                actual[session.candidate['mapping']], expected, rtol=0, atol=1e-12)
         self.assertEqual(len(session.snapshots), len(saved['snapshots']))
         self.assertIsNone(session.advance())
 

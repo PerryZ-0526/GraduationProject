@@ -4,7 +4,7 @@ import sys
 import numpy as np
 import triangle
 import trimesh
-import pymeshlab
+from pymeshlab_isolation import self_intersection_flags
 
 sys.path.insert(0, str(Path(__file__).parents[1]/'真实骨面高度图验证'))
 from projection import ProjectedSurface, load_bone
@@ -94,11 +94,8 @@ def audit_candidate(surface, candidate):
     error, coverage = overlay_error(surface, vertices, faces)
     seam = np.any(faces < len(candidate['source_ids']), axis=1)
     result = topology(candidate['whole'])
-    meshset = pymeshlab.MeshSet()
-    meshset.add_mesh(pymeshlab.Mesh(candidate['whole'].vertices, candidate['whole'].faces))
-    meshset.compute_selection_by_self_intersections_per_face()
     # 保留检测器报警；浮点接触报警未经复核不能解释为真实穿插。
-    flags = meshset.current_mesh().face_selection_array()
+    flags = self_intersection_flags(candidate['whole'].vertices, candidate['whole'].faces)
     candidate['intersection_flags'] = flags
     result['self_intersection_flags'] = int(flags.sum())
     result['new_face_intersection_flags'] = int(flags[candidate['keep'].sum():].sum())
