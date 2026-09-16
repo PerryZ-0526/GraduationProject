@@ -1,0 +1,51 @@
+[  0%] Built target CLI11
+[  0%] Built target cuBQL_queries
+[  0%] Built target glm
+[ 21%] Built target GKlib
+[ 42%] Built target OpenMeshCore
+[ 51%] Built target OpenMeshTools
+[ 81%] Built target metis
+[ 96%] Built target RXMesh
+[ 96%] Building CUDA object apps/Remesh/CMakeFiles/Remesh.dir/remesh.cu.o
+nvcc warning : Resource usage is not shown as the final resource allocation is not done.
+In file included from /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/source/include/rxmesh/geometry_factory.h:4,
+                 from /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/source/apps/Remesh/remesh.cu:8:
+/root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/source/include/rxmesh/types.h:6: warning: "GLM_ENABLE_EXPERIMENTAL" redefined
+    6 | #define GLM_ENABLE_EXPERIMENTAL
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/source/include/rxmesh/geometry_factory.h:4,
+                 from /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/source/apps/Remesh/remesh.cu:8:
+/root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/source/include/rxmesh/types.h:6: warning: "GLM_ENABLE_EXPERIMENTAL" redefined
+    6 | #define GLM_ENABLE_EXPERIMENTAL
+      | 
+<command-line>: note: this is the location of the previous definition
+/root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/build/_deps/cli11-src/include/CLI/TypeTools.hpp(163): warning #2361-D: invalid narrowing conversion from "double" to "unsigned long"
+          TT{std::declval<CC>()}
+             ^
+          detected during:
+            instantiation of "CLI::detail::is_direct_constructible<T, C>::test [with T=std::vector<std::string, std::allocator<std::string>>, C=double]" based on template arguments <std::vector<std::string, std::allocator<std::string>>, double> at line 175
+            instantiation of class "CLI::detail::is_direct_constructible<T, C> [with T=std::vector<std::string, std::allocator<std::string>>, C=double]" at line 674 of /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/build/_deps/cli11-src/include/CLI/Option.hpp
+            instantiation of "void CLI::Option::results(T &) const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 703 of /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/build/_deps/cli11-src/include/CLI/Option.hpp
+            instantiation of "T CLI::Option::as<T>() const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 985 of /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/build/_deps/cli11-src/include/CLI/impl/App_inl.hpp
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/build/_deps/cli11-src/include/CLI/TypeTools.hpp(163): warning #2361-D: invalid narrowing conversion from "int" to "unsigned long"
+          TT{std::declval<CC>()}
+             ^
+          detected during:
+            instantiation of "CLI::detail::is_direct_constructible<T, C>::test [with T=std::vector<std::string, std::allocator<std::string>>, C=int]" based on template arguments <std::vector<std::string, std::allocator<std::string>>, int> at line 175
+            instantiation of class "CLI::detail::is_direct_constructible<T, C> [with T=std::vector<std::string, std::allocator<std::string>>, C=int]" at line 674 of /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/build/_deps/cli11-src/include/CLI/Option.hpp
+            instantiation of "void CLI::Option::results(T &) const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 703 of /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/build/_deps/cli11-src/include/CLI/Option.hpp
+            instantiation of "T CLI::Option::as<T>() const [with T=std::vector<std::string, std::allocator<std::string>>]" at line 985 of /root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/build/_deps/cli11-src/include/CLI/impl/App_inl.hpp
+
+/root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/source/include/rxmesh/attribute.h:484: warning: ignoring ‘#pragma unroll ’ [-Wunknown-pragmas]
+  484 |         for (int i = 0; i < N; ++i) {
+      | 
+/root/autodl-tmp/graduation_project/build_rxmesh_dynamic_20260908_141858/source/include/rxmesh/attribute.h:506: warning: ignoring ‘#pragma unroll ’ [-Wunknown-pragmas]
+  506 |         for (int i = 0; i < N; ++i) {
+      | 
+[ 96%] Linking CUDA device code CMakeFiles/Remesh.dir/cmake_device_link.o
+[100%] Linking CXX executable ../../bin/Remesh
+[100%] Built target Remesh

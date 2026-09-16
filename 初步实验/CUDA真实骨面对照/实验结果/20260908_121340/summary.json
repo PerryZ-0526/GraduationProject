@@ -1,0 +1,323 @@
+{
+  "status": "completed",
+  "methods": {
+    "cpu": {
+      "requests": 48,
+      "accepted": 48,
+      "timings_ms": {
+        "total_ms": {
+          "mean": 1192.3538332727428,
+          "p95": 1752.1513424813747,
+          "p99": 1824.845491182059,
+          "min": 580.6212425231934,
+          "max": 1851.8111445009708
+        },
+        "local_update_ms": {
+          "mean": 925.3572485564897,
+          "p95": 1489.2678629606962,
+          "p99": 1543.4538752026856,
+          "min": 315.5147936195135,
+          "max": 1557.78001062572
+        },
+        "height_ms": {
+          "mean": 753.1155617131541,
+          "p95": 1299.63511954993,
+          "p99": 1333.9069529809058,
+          "min": 174.15816150605679,
+          "max": 1335.2287225425243
+        },
+        "certificate_ms": {
+          "mean": 900.21133760456,
+          "p95": 1448.206637147814,
+          "p99": 1497.310841511935,
+          "min": 309.2881664633751,
+          "max": 1509.7606517374516
+        }
+      },
+      "over_100ms": 48,
+      "min_angle_deg": 25.92635114054054,
+      "max_error_bound_mm": 0.09470902688721339,
+      "max_device_cpu_delta_mm": 0
+    },
+    "cuda_checked": {
+      "requests": 48,
+      "accepted": 48,
+      "timings_ms": {
+        "total_ms": {
+          "mean": 1446.162035727563,
+          "p95": 2163.423817977309,
+          "p99": 2275.0231428444386,
+          "min": 665.6874362379313,
+          "max": 2284.602841362357
+        },
+        "local_update_ms": {
+          "mean": 1178.5525718781475,
+          "p95": 1897.7245195768774,
+          "p99": 2007.8728792257607,
+          "min": 394.5942111313343,
+          "max": 2022.0305863767862
+        },
+        "height_ms": {
+          "mean": 1006.6486302142342,
+          "p95": 1705.1092124544084,
+          "p99": 1814.0601912513375,
+          "min": 246.29964493215084,
+          "max": 1829.3568193912506
+        },
+        "certificate_ms": {
+          "mean": 1152.6153224986047,
+          "p95": 1853.5064653493464,
+          "p99": 1964.070772062987,
+          "min": 382.51188583672047,
+          "max": 1979.3337490409613
+        },
+        "base_ms": {
+          "mean": 115.21408745708565,
+          "p95": 120.44310141354799,
+          "p99": 122.33409501612186,
+          "min": 107.77375660836697,
+          "max": 122.97612056136131
+        },
+        "reference_ms": {
+          "mean": 863.4767658853283,
+          "p95": 1559.5750007778406,
+          "p99": 1665.0672276131809,
+          "min": 104.19697128236294,
+          "max": 1678.6907445639372
+        },
+        "gpu_wall_ms": {
+          "mean": 25.090994080528617,
+          "p95": 27.218681573867798,
+          "p99": 30.84327396005392,
+          "min": 20.766345784068108,
+          "max": 31.270625069737434
+        },
+        "gpu_kernel_ms": {
+          "mean": 2.814032001576076,
+          "p95": 3.9900879856199025,
+          "p99": 4.123478069379926,
+          "min": 1.2615680042654276,
+          "max": 4.192255973815918
+        },
+        "gpu_transfer_ms": {
+          "mean": 13.73452532683344,
+          "p95": 14.48130401307717,
+          "p99": 14.636678427532315,
+          "min": 12.141215987503529,
+          "max": 14.649312008172274
+        }
+      },
+      "over_100ms": 48,
+      "min_angle_deg": 25.92635114054054,
+      "max_error_bound_mm": 0.09470902688721339,
+      "max_device_cpu_delta_mm": 0.0
+    },
+    "geogram_s2": {
+      "requests": 16,
+      "accepted": 0,
+      "command_successes": 16,
+      "diagnostic_timings_ms": {
+        "mean": 1346.9254419906065,
+        "p95": 1455.4433738812804,
+        "p99": 1468.859083764255,
+        "min": 1278.5222362726927,
+        "max": 1472.2130112349987
+      },
+      "last_quality": {
+        "step": 16,
+        "returncode": 0,
+        "command": [
+          "/root/autodl-tmp/graduation_project/build/geogram/bin/boolean_op",
+          "/root/autodl-tmp/graduation_project/stage1/初步实验/CUDA真实骨面对照/实验结果/20260908_121340/geogram_s2_15.obj",
+          "/root/autodl-tmp/graduation_project/stage1/初步实验/CUDA真实骨面对照/实验结果/20260908_121340/cutter_s2_16.obj",
+          "/root/autodl-tmp/graduation_project/stage1/初步实验/CUDA真实骨面对照/实验结果/20260908_121340/geogram_s2_16.obj",
+          "operation=difference",
+          "pre=false",
+          "post=false",
+          "sys:max_threads=4"
+        ],
+        "accepted": null,
+        "candidate_with_io_ms": 906.9665744900703,
+        "faces": 43546,
+        "changed_faces": 43546,
+        "watertight": true,
+        "winding": true,
+        "euler": 2,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "whole": {
+          "faces": 43546,
+          "min_q": NaN,
+          "min_angle_deg": NaN,
+          "bad_faces": 9553
+        },
+        "changed": {
+          "faces": 43546,
+          "min_q": NaN,
+          "min_angle_deg": NaN,
+          "bad_faces": 9553
+        },
+        "roi": {
+          "faces": 3253,
+          "min_q": NaN,
+          "min_angle_deg": NaN,
+          "bad_faces": 1206
+        },
+        "self_intersection_flag_faces": 9,
+        "candidate_and_diagnostics_ms": 1472.2130112349987
+      },
+      "states_with_changed_bad_faces": 16,
+      "minimum_changed_angle_deg": NaN,
+      "max_self_intersection_flags": 14
+    },
+    "geogram_s3": {
+      "requests": 16,
+      "accepted": 0,
+      "command_successes": 16,
+      "diagnostic_timings_ms": {
+        "mean": 1382.712047896348,
+        "p95": 1575.5118471570313,
+        "p99": 1644.7129704989493,
+        "min": 1288.2016263902187,
+        "max": 1662.0132513344288
+      },
+      "last_quality": {
+        "step": 16,
+        "returncode": 0,
+        "command": [
+          "/root/autodl-tmp/graduation_project/build/geogram/bin/boolean_op",
+          "/root/autodl-tmp/graduation_project/stage1/初步实验/CUDA真实骨面对照/实验结果/20260908_121340/geogram_s3_15.obj",
+          "/root/autodl-tmp/graduation_project/stage1/初步实验/CUDA真实骨面对照/实验结果/20260908_121340/cutter_s3_16.obj",
+          "/root/autodl-tmp/graduation_project/stage1/初步实验/CUDA真实骨面对照/实验结果/20260908_121340/geogram_s3_16.obj",
+          "operation=difference",
+          "pre=false",
+          "post=false",
+          "sys:max_threads=4"
+        ],
+        "accepted": null,
+        "candidate_with_io_ms": 901.6582313925028,
+        "faces": 44342,
+        "changed_faces": 44342,
+        "watertight": true,
+        "winding": true,
+        "euler": 2,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "whole": {
+          "faces": 44342,
+          "min_q": 0.0,
+          "min_angle_deg": NaN,
+          "bad_faces": 9987
+        },
+        "changed": {
+          "faces": 44342,
+          "min_q": 0.0,
+          "min_angle_deg": NaN,
+          "bad_faces": 9987
+        },
+        "roi": {
+          "faces": 4049,
+          "min_q": 0.0,
+          "min_angle_deg": NaN,
+          "bad_faces": 1640
+        },
+        "self_intersection_flag_faces": 7,
+        "candidate_and_diagnostics_ms": 1405.0436094403267
+      },
+      "states_with_changed_bad_faces": 16,
+      "minimum_changed_angle_deg": NaN,
+      "max_self_intersection_flags": 7
+    }
+  },
+  "initial": {
+    "faces": 44694,
+    "changed_faces": 0,
+    "watertight": true,
+    "winding": true,
+    "euler": 2,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "whole": {
+      "faces": 44694,
+      "min_q": 5.691756885914672e-05,
+      "min_angle_deg": 0.0018828182939307036,
+      "bad_faces": 8346
+    },
+    "changed": {
+      "faces": 0,
+      "min_q": null,
+      "min_angle_deg": null,
+      "bad_faces": 0
+    },
+    "roi": {
+      "faces": 4398,
+      "min_q": 0.5977289698208927,
+      "min_angle_deg": 29.778396029346943,
+      "bad_faces": 0
+    }
+  },
+  "state_deltas": [
+    {
+      "repeat": 0,
+      "same_shape": true,
+      "max_delta_mm": 0.0
+    },
+    {
+      "repeat": 1,
+      "same_shape": true,
+      "max_delta_mm": 0.0
+    },
+    {
+      "repeat": 2,
+      "same_shape": true,
+      "max_delta_mm": 0.0
+    }
+  ],
+  "sampled_errors": {
+    "geogram_s2": {
+      "max_over_states_mm": 0.0876464502751407,
+      "final": {
+        "method": "geogram_s2",
+        "step": 16,
+        "missing": 0,
+        "sampled_vertical_error_mm": {
+          "mean": 0.03273822397826168,
+          "p95": 0.050758502279495084,
+          "p99": 0.0551005631582313,
+          "max": 0.05697011254411277,
+          "min": 0.00013910493575752803
+        }
+      }
+    },
+    "geogram_s3": {
+      "max_over_states_mm": 0.021888494911418206,
+      "final": {
+        "method": "geogram_s3",
+        "step": 16,
+        "missing": 0,
+        "sampled_vertical_error_mm": {
+          "mean": 0.00847813164095358,
+          "p95": 0.012741114973205613,
+          "p99": 0.013688050249611505,
+          "max": 0.014420910121104247,
+          "min": 1.3512805314697118e-05
+        }
+      }
+    },
+    "local": {
+      "max_over_states_mm": 0.0442974418176976,
+      "final": {
+        "method": "local",
+        "step": 16,
+        "missing": 0,
+        "sampled_vertical_error_mm": {
+          "mean": 0.001342014911086019,
+          "p95": 0.0019515780330807571,
+          "p99": 0.00862321046682903,
+          "max": 0.01930180859846331,
+          "min": 1.417877006026913e-06
+        }
+      }
+    }
+  }
+}

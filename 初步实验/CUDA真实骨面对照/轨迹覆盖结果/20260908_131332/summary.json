@@ -1,0 +1,504 @@
+{
+  "cuda_status": "completed",
+  "baseline_status": "failed",
+  "original": {
+    "accepted_prefix": 0,
+    "total": 138,
+    "records": [],
+    "first_preflight_rejection": {
+      "step": 1,
+      "phase": "面粗",
+      "reasons": [
+        "requires_plan_clipping",
+        "outside_patch_possible"
+      ]
+    },
+    "not_executed_after_rejection": 137
+  },
+  "phases": {
+    "面粗": 54,
+    "面精": 54,
+    "台粗": 13,
+    "台精": 13,
+    "柱钻": 4
+  },
+  "reason_counts": {
+    "requires_plan_clipping": 92,
+    "outside_patch_possible": 124,
+    "nonhorizontal": 4
+  },
+  "variants": [
+    {
+      "case": "control",
+      "method": "cpu",
+      "accepted": 16,
+      "requested": 16,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 1142.8742139833048,
+      "max_ms": 1661.843542009592
+    },
+    {
+      "case": "control",
+      "method": "cuda",
+      "accepted": 16,
+      "requested": 16,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 584.3682026024908,
+      "max_ms": 617.3941511660814
+    },
+    {
+      "case": "shift_x_1",
+      "method": "cpu",
+      "accepted": 6,
+      "requested": 16,
+      "not_executed": 9,
+      "failure": {
+        "step": 7,
+        "accepted": false,
+        "tool": {
+          "start": [
+            1.5,
+            0.037
+          ],
+          "end": [
+            1.75,
+            0.037
+          ],
+          "radius": 3.0,
+          "z": 1.8
+        },
+        "min_q": 0.5149528998615849,
+        "min_angle_deg": 20.51144286615139,
+        "degenerate": 0,
+        "error_bound_mm": 0.09819750922662394,
+        "sampled_max_mm": 0.08100622522188997,
+        "queries": 1144308,
+        "affected_faces": 2013,
+        "faces": 4823,
+        "vertices": 2441,
+        "locate_ms": 0.42494572699069977,
+        "reconstruct_ms": 1.1757239699363708,
+        "lipschitz": 1.7762738014078256,
+        "reason": "逐面质量或垂直几何偏差证书超限",
+        "pipeline_ms": 770.3467383980751,
+        "height_ms": 627.7348287403584,
+        "certificate_ms": 766.7218539863825,
+        "local_ceiling_mm": 0.32827057238369145,
+        "global_ceiling_mm": 2.261836060871758,
+        "local_update_ms": 784.7238071262836,
+        "total_ms": 784.735357388854
+      },
+      "mean_ms": 776.6854797622988,
+      "max_ms": 970.0215980410576
+    },
+    {
+      "case": "shift_x_1",
+      "method": "cuda",
+      "accepted": 6,
+      "requested": 16,
+      "not_executed": 9,
+      "failure": {
+        "step": 7,
+        "accepted": false,
+        "tool": {
+          "start": [
+            1.5,
+            0.037
+          ],
+          "end": [
+            1.75,
+            0.037
+          ],
+          "radius": 3.0,
+          "z": 1.8
+        },
+        "min_q": 0.5149528998615845,
+        "min_angle_deg": 20.51144286615141,
+        "degenerate": 0,
+        "error_bound_mm": 0.09819750922662608,
+        "sampled_max_mm": 0.08100622522189027,
+        "queries": 1144308,
+        "affected_faces": 2013,
+        "faces": 4823,
+        "vertices": 2441,
+        "locate_ms": 0.5371812731027603,
+        "reconstruct_ms": 3.6212578415870667,
+        "lipschitz": 1.7762738014078256,
+        "reason": "逐面质量或垂直几何偏差证书超限",
+        "pipeline_ms": 337.86692656576633,
+        "height_ms": 190.07364101707935,
+        "certificate_ms": 331.3522692769766,
+        "local_ceiling_mm": 0.32827057238369145,
+        "global_ceiling_mm": 2.261836060871758,
+        "local_update_ms": 352.30633802711964,
+        "gpu_wall_ms": 21.800102666020393,
+        "gpu_kernel_ms": 4.854784019291401,
+        "gpu_transfer_ms": 10.581952085718513,
+        "gpu_calls": 6,
+        "gpu_points": 1145375,
+        "base_ms": 130.03433495759964,
+        "reference_ms": 0.0,
+        "device_buffer_bytes": 11490048,
+        "numeric_interval_width_mm": 1.776356839400251e-15,
+        "validation_max_cpu_delta_mm": null,
+        "total_ms": 352.3429296910763
+      },
+      "mean_ms": 568.0988343166454,
+      "max_ms": 666.1230232566595
+    },
+    {
+      "case": "rotate_45",
+      "method": "cpu",
+      "accepted": 16,
+      "requested": 16,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 1160.3624057024717,
+      "max_ms": 1726.9671075046062
+    },
+    {
+      "case": "rotate_45",
+      "method": "cuda",
+      "accepted": 16,
+      "requested": 16,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 607.8591983532533,
+      "max_ms": 646.4609298855066
+    },
+    {
+      "case": "deep_1p5",
+      "method": "cpu",
+      "accepted": 16,
+      "requested": 16,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 1260.709762107581,
+      "max_ms": 1832.9367637634277
+    },
+    {
+      "case": "deep_1p5",
+      "method": "cuda",
+      "accepted": 16,
+      "requested": 16,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 626.1626149062067,
+      "max_ms": 665.718998759985
+    },
+    {
+      "case": "boundary_x4",
+      "method": "cpu",
+      "accepted": 0,
+      "requested": 16,
+      "not_executed": 15,
+      "failure": {
+        "step": 1,
+        "accepted": false,
+        "tool": {
+          "start": [
+            3.0,
+            0.037
+          ],
+          "end": [
+            3.25,
+            0.037
+          ],
+          "radius": 3.0,
+          "z": 1.8
+        },
+        "min_q": 0.5468775963593374,
+        "min_angle_deg": 22.65615789878646,
+        "degenerate": 0,
+        "error_bound_mm": 0.33205386127349945,
+        "sampled_max_mm": 0.32533082434721683,
+        "queries": 4282398,
+        "affected_faces": 1522,
+        "faces": 4823,
+        "vertices": 2441,
+        "locate_ms": 0.45780837535858154,
+        "reconstruct_ms": 0.7593296468257904,
+        "lipschitz": 2.086036188871635,
+        "reason": "逐面质量或垂直几何偏差证书超限",
+        "pipeline_ms": 1469.0193515270948,
+        "height_ms": 862.7937622368336,
+        "certificate_ms": 1465.6279291957617,
+        "local_ceiling_mm": 0.5031743750001102,
+        "global_ceiling_mm": 2.261836060871758,
+        "local_update_ms": 1471.5061411261559,
+        "total_ms": 1471.5168122202158
+      },
+      "mean_ms": 1471.5168122202158,
+      "max_ms": 1471.5168122202158
+    },
+    {
+      "case": "boundary_x4",
+      "method": "cuda",
+      "accepted": 0,
+      "requested": 16,
+      "not_executed": 15,
+      "failure": {
+        "step": 1,
+        "accepted": false,
+        "tool": {
+          "start": [
+            3.0,
+            0.037
+          ],
+          "end": [
+            3.25,
+            0.037
+          ],
+          "radius": 3.0,
+          "z": 1.8
+        },
+        "min_q": 0.5468775963593382,
+        "min_angle_deg": 22.65615789878644,
+        "degenerate": 0,
+        "error_bound_mm": 0.33205386127350156,
+        "sampled_max_mm": 0.3253308243472171,
+        "queries": 4282398,
+        "affected_faces": 1522,
+        "faces": 4823,
+        "vertices": 2441,
+        "locate_ms": 0.5083698779344559,
+        "reconstruct_ms": 8.475443348288536,
+        "lipschitz": 2.086036188871635,
+        "reason": "逐面质量或垂直几何偏差证书超限",
+        "pipeline_ms": 1471.3206123560667,
+        "height_ms": 806.49708583951,
+        "certificate_ms": 1460.0933883339167,
+        "local_ceiling_mm": 0.5031743750001102,
+        "global_ceiling_mm": 2.261836060871758,
+        "local_update_ms": 1473.9783499389887,
+        "gpu_wall_ms": 102.42148116230965,
+        "gpu_kernel_ms": 2.675712026655674,
+        "gpu_transfer_ms": 56.674270901829004,
+        "gpu_calls": 8,
+        "gpu_points": 4283207,
+        "base_ms": 525.1234751194715,
+        "reference_ms": 0.0,
+        "device_buffer_bytes": 100199928,
+        "numeric_interval_width_mm": 1.776356839400251e-15,
+        "validation_max_cpu_delta_mm": null,
+        "total_ms": 1474.0196950733662
+      },
+      "mean_ms": 1474.0196950733662,
+      "max_ms": 1474.0196950733662
+    },
+    {
+      "case": "fine_32",
+      "method": "cpu",
+      "accepted": 32,
+      "requested": 32,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 1676.5721233095974,
+      "max_ms": 2844.2874904721975
+    },
+    {
+      "case": "fine_32",
+      "method": "cuda",
+      "accepted": 32,
+      "requested": 32,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 602.8945941943675,
+      "max_ms": 641.9977638870478
+    },
+    {
+      "case": "coarse_8",
+      "method": "cpu",
+      "accepted": 8,
+      "requested": 8,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 875.4167186561972,
+      "max_ms": 1112.3259477317333
+    },
+    {
+      "case": "coarse_8",
+      "method": "cuda",
+      "accepted": 8,
+      "requested": 8,
+      "not_executed": 0,
+      "failure": null,
+      "mean_ms": 578.6452884785831,
+      "max_ms": 600.4382539540529
+    }
+  ],
+  "baseline_raw": {
+    "executed": 9,
+    "unexecuted": 129,
+    "quality_gate_count": 1,
+    "first_bad": 2,
+    "last": {
+      "step": 9,
+      "phase": "面粗",
+      "faces": 50186,
+      "changed_faces": 5637,
+      "watertight": false,
+      "winding": true,
+      "euler": 561,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 1793,
+      "whole": {
+        "faces": 50186,
+        "min_q": 0.0,
+        "min_angle_deg": 0.0,
+        "invalid_angle_or_q": 36,
+        "degenerate": 4212,
+        "bad_faces": 13706
+      },
+      "changed": {
+        "faces": 5637,
+        "min_q": 0.0,
+        "min_angle_deg": 0.0,
+        "invalid_angle_or_q": 36,
+        "degenerate": 4212,
+        "bad_faces": 5374
+      },
+      "roi": {
+        "faces": 4398,
+        "min_q": 0.5977289698208927,
+        "min_angle_deg": 29.778396029346943,
+        "invalid_angle_or_q": 0,
+        "degenerate": 0,
+        "bad_faces": 0
+      },
+      "self_intersection_flags": 3269,
+      "flags_cleared_by_exact_projection": false,
+      "quality_gate": false,
+      "elapsed_ms": 1747.9592878371477
+    },
+    "error": "Command '['/root/autodl-tmp/graduation_project/cuda_stage0/geogram_plan_nosimplify', '/root/autodl-tmp/graduation_project/stage1/初步实验/CUDA真实骨面对照/强基线覆盖结果/20260908_132411/raw_9.obj', '/root/autodl-tmp/graduation_project/stage1/初步实验/CUDA真实骨面对照/强基线覆盖结果/20260908_132411/tool_10.obj', '/root/autodl-tmp/graduation_project/stage1/初步实验/CUDA真实骨面对照/强基线覆盖结果/20260908_132411/raw_10.obj']' timed out after 59.999985691159964 seconds"
+  },
+  "maintenance": {
+    "0.4": {
+      "attempted": 2,
+      "accepted": 1,
+      "last": {
+        "step": 2,
+        "phase": "面粗",
+        "accepted": false,
+        "faces": 45108,
+        "changed_faces": 502,
+        "watertight": true,
+        "winding": true,
+        "euler": 2,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "whole": {
+          "faces": 45108,
+          "min_q": 5.6917568859142006e-05,
+          "min_angle_deg": 0.0018828182939307036,
+          "invalid_angle_or_q": 0,
+          "degenerate": 0,
+          "bad_faces": 8376
+        },
+        "changed": {
+          "faces": 502,
+          "min_q": 0.0001006992497018524,
+          "min_angle_deg": 0.003331104423520517,
+          "invalid_angle_or_q": 0,
+          "degenerate": 0,
+          "bad_faces": 41
+        },
+        "roi": {
+          "faces": 4398,
+          "min_q": 0.5977289698208927,
+          "min_angle_deg": 29.778396029346943,
+          "invalid_angle_or_q": 0,
+          "degenerate": 0,
+          "bad_faces": 0
+        },
+        "self_intersection_flags": 2,
+        "flags_cleared_by_exact_projection": false,
+        "quality_gate": false,
+        "sampled_drift": [
+          {
+            "mean": 2.7745144402748365e-06,
+            "p95": 7.105427357601002e-15,
+            "p99": 1.4210854715202004e-14,
+            "max": 0.00409896129276187,
+            "min": 0.0
+          },
+          {
+            "mean": 4.676613732227252e-06,
+            "p95": 7.105427357601002e-15,
+            "p99": 1.4210854715202004e-14,
+            "max": 0.00951290115291204,
+            "min": 0.0
+          }
+        ],
+        "elapsed_ms": 2950.037593021989
+      }
+    },
+    "0.6": {
+      "attempted": 2,
+      "accepted": 1,
+      "last": {
+        "step": 2,
+        "phase": "面粗",
+        "accepted": false,
+        "faces": 44868,
+        "changed_faces": 256,
+        "watertight": true,
+        "winding": true,
+        "euler": 2,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "whole": {
+          "faces": 44868,
+          "min_q": 5.6917568859142006e-05,
+          "min_angle_deg": 0.0018828182939307036,
+          "invalid_angle_or_q": 0,
+          "degenerate": 0,
+          "bad_faces": 8358
+        },
+        "changed": {
+          "faces": 256,
+          "min_q": 0.0001006992497018524,
+          "min_angle_deg": 0.003331104423520517,
+          "invalid_angle_or_q": 0,
+          "degenerate": 0,
+          "bad_faces": 23
+        },
+        "roi": {
+          "faces": 4398,
+          "min_q": 0.5977289698208927,
+          "min_angle_deg": 29.778396029346943,
+          "invalid_angle_or_q": 0,
+          "degenerate": 0,
+          "bad_faces": 0
+        },
+        "self_intersection_flags": 2,
+        "flags_cleared_by_exact_projection": false,
+        "quality_gate": false,
+        "sampled_drift": [
+          {
+            "mean": 1.7714994628635605e-06,
+            "p95": 7.105427357601002e-15,
+            "p99": 1.4210854715202004e-14,
+            "max": 0.0035280825250527874,
+            "min": 0.0
+          },
+          {
+            "mean": 4.351589667219549e-06,
+            "p95": 7.105427357601002e-15,
+            "p99": 1.4210854715202004e-14,
+            "max": 0.004899915116385244,
+            "min": 0.0
+          }
+        ],
+        "elapsed_ms": 2863.694701343775
+      }
+    }
+  },
+  "resampled_final_delta_mm": {
+    "fine_32": 2.498001805406602e-16,
+    "coarse_8": 1.9984014443252818e-15
+  }
+}

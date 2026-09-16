@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\24848\Desktop\GraduationProject\初步实验\CUDA远程验证\remote.py", line 53, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\24848\Desktop\GraduationProject\初步实验\CUDA远程验证\remote.py", line 34, in main
+    client.connect(config['CUDA_SSH_HOST'], port=int(config['CUDA_SSH_PORT']), username=config['CUDA_SSH_USER'], password=config['CUDA_SSH_PASSWORD'], look_for_keys=False, allow_agent=False, timeout=20, auth_timeout=20)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\24848\AppData\Local\uv\cache\archive-v0\deLYW2BH5BPu0ig1\Lib\site-packages\paramiko\client.py", line 387, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to configured SSH endpoint

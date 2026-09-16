@@ -1,0 +1,22 @@
+# 本地连接凭据和主机信任记录不进入版本控制。
+.env
+.env.*
+!.env.example
+.ssh_known_hosts
+
+# 本地运行环境、编辑器配置和缓存不进入版本控制。
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# 临时工作目录不作为项目交付内容。
+/tmp/
+
+# 私钥文件不进入版本控制。
+*.pem
+*.key
+id_rsa
+id_ed25519
