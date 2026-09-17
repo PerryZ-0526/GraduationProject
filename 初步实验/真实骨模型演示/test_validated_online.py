@@ -23,13 +23,29 @@ class SessionTests(unittest.TestCase):
         session = ValidatedSession()
         result = session.advance()
         self.assertEqual(result[1]['step'], 0)
+        self.assertEqual(result[1]['state']['step'], 0)
         while not session.finished:
             result = session.advance()
             self.assertTrue(result[1]['accepted'])
+            self.assertEqual(result[1]['state']['step'], result[1]['step'])
+            self.assertGreater(result[1]['state_ms'], 0.0)
+            self.assertGreaterEqual(result[1]['wall_ms'], result[1]['state_ms'])
+            self.assertGreater(
+                result[1]['state']['age_at_compute_completion_ms'],
+                result[1]['state_ms'],
+            )
+            self.assertFalse(
+                result[1]['state']['algorithm_interval_includes_state_age']
+            )
             self.assertGreaterEqual(result[1]['min_angle_deg'], 25)
             self.assertGreaterEqual(result[1]['min_q'], .4)
             self.assertLessEqual(result[1]['error_bound_mm'], .1)
         self.assertEqual(session.step, 16)
+        self.assertEqual(session.published_state['step'], 16)
+        self.assertGreater(
+            session.published_state['nominal']['completion_fraction'],
+            0.04,
+        )
         saved = np.load(HERE.parent / '局部适用域与核显计算/实验结果/local_1.8.npz')
         for actual, expected in zip(session.snapshots, saved['snapshots']):
             # 不同CPU架构允许远低于几何预算的末位舍入差异，不放宽任何验收阈值。
@@ -43,10 +59,13 @@ class SessionTests(unittest.TestCase):
         session.advance()
         whole, _ = session.advance()
         before = whole.vertices.copy()
+        before_state = session.published_state
         mesh, row = session.advance()
         self.assertIsNone(mesh)
         self.assertFalse(row['accepted'])
         self.assertEqual(session.step, 1)
+        self.assertIs(session.published_state, before_state)
+        self.assertEqual(session.published_state['step'], 1)
         self.assertTrue(session.finished)
         np.testing.assert_array_equal(session.snapshots[-1], before)
 
@@ -54,12 +73,15 @@ class SessionTests(unittest.TestCase):
         session = ValidatedSession()
         session.advance()
         initial = session.snapshots[-1].copy()
+        initial_state = session.published_state
         # 初态已独立验收；只在本步整骨复核注入拒绝，检查发布门控而非放宽几何规则。
         with patch('dynamic.resolve_flags', side_effect=lambda candidate, audit: audit.update(accepted=False)):
             mesh, row = session.advance()
         self.assertIsNone(mesh)
         self.assertFalse(row['accepted'])
         self.assertEqual(session.step, 0)
+        self.assertIs(session.published_state, initial_state)
+        self.assertEqual(session.published_state['step'], 0)
         np.testing.assert_array_equal(session.snapshots[-1], initial)
 
     def test_actual_gui_playback_and_camera(self):
@@ -107,6 +129,13 @@ class SessionTests(unittest.TestCase):
             window.grab().save(str(output / '窗口验证.png'))
             records = json.loads((output / 'records.json').read_text(encoding='utf-8'))
             self.assertEqual(len(records), 17)
+            self.assertTrue(
+                all(
+                    row['state']['age_at_display_ms']
+                    >= row['state']['age_at_compute_completion_ms']
+                    for row in records
+                )
+            )
             print('GUI_EVIDENCE', output, flush=True)
             self.assertTrue((output / 'metadata.json').exists())
             window.restart()

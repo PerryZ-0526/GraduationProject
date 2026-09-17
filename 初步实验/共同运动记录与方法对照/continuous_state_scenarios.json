@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "record_kind": "simulated_arrival_timeline",
+  "frozen_before_first_run": "2026-09-18 00:50:00",
+  "source_scope": "输入周期、显示刷新周期和速度均为时间线方法验证假设，不是实际跟踪设备记录",
+  "execution_policy": {
+    "compute": "single_worker_fifo_process_every_event",
+    "drop_motion_events": false,
+    "publish": "display_latest_completed_accepted_state_at_refresh_tick",
+    "rejected_state": "retain_last_accepted_version"
+  },
+  "display_refresh_period_ms": 100.0,
+  "age_uncertainty": {
+    "ct_surface_mm": 0.0,
+    "registration_translation_mm": 0.0,
+    "registration_rotation_deg": 0.0,
+    "tool_calibration_mm": 0.0,
+    "tracking_mm": 0.0,
+    "max_tool_speed_mm_s": 10.0,
+    "note": "只隔离算法证书与状态年龄造成的范围；速度是假设值"
+  },
+  "arrival_scenarios": [
+    {
+      "id": "input_10_hz",
+      "input_period_ms": 100.0
+    },
+    {
+      "id": "input_2_hz",
+      "input_period_ms": 500.0
+    },
+    {
+      "id": "input_1_hz",
+      "input_period_ms": 1000.0
+    }
+  ]
+}

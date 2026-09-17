@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "record_kind": "simulated_uncertainty_budget",
+  "frozen_before_first_run": "2026-09-18 00:12:00",
+  "source_scope": "参数是方法验证用显式假设，不是设备规格、测量结果或临床安全阈值",
+  "combination_rule": "各项绝对位置上界按三角不等式相加；旋转项使用2*r*sin(theta/2)，时延项使用v_max*age",
+  "analysis_region": {
+    "kind": "plan_frame_disk",
+    "radius_mm": 8.0,
+    "full_plan_radius_mm": 12.5,
+    "includes_full_plan_boundary": false,
+    "note": "只评价既有验证图域内的局部状态，不报告全计划越界结论"
+  },
+  "quadrature": {
+    "radial_intervals_mm": [
+      [
+        0.0,
+        2.5
+      ],
+      [
+        2.5,
+        5.5
+      ],
+      [
+        5.5,
+        8.0
+      ]
+    ],
+    "radial_order": 128,
+    "angular_samples": 256,
+    "convergence_reference_radial_order": 256,
+    "convergence_reference_angular_samples": 512
+  },
+  "scenarios": [
+    {
+      "id": "algorithm_bound_only",
+      "description": "仅加入现有逐面几何证书上界，其余误差项置零",
+      "ct_surface_mm": 0.0,
+      "registration_translation_mm": 0.0,
+      "registration_rotation_deg": 0.0,
+      "tool_calibration_mm": 0.0,
+      "tracking_mm": 0.0,
+      "max_tool_speed_mm_s": 0.0,
+      "state_age_ms": 0.0
+    },
+    {
+      "id": "illustrative_moderate",
+      "description": "用于检验传播逻辑的中等合成误差，不代表本项目设备实测",
+      "ct_surface_mm": 0.2,
+      "registration_translation_mm": 0.3,
+      "registration_rotation_deg": 0.5,
+      "tool_calibration_mm": 0.2,
+      "tracking_mm": 0.2,
+      "max_tool_speed_mm_s": 10.0,
+      "state_age_ms": 50.0
+    },
+    {
+      "id": "illustrative_stress",
+      "description": "用于检验区间扩大和风险降级的压力假设，不代表临床上限",
+      "ct_surface_mm": 0.4,
+      "registration_translation_mm": 0.8,
+      "registration_rotation_deg": 1.0,
+      "tool_calibration_mm": 0.4,
+      "tracking_mm": 0.5,
+      "max_tool_speed_mm_s": 20.0,
+      "state_age_ms": 100.0
+    }
+  ]
+}

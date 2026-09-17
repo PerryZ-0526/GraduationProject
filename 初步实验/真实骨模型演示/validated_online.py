@@ -17,6 +17,10 @@ from local_model import LocalPatch
 from dynamic import iter_sequence
 from real_patch import local_trajectory
 
+STATE_DIR = HERE.parent / '共同运动记录与方法对照'
+sys.path.insert(0, str(STATE_DIR))
+from real_ct_state import RealCtStateMapper, SCENARIOS
+
 
 class ValidatedSession:
     """只支持既有真实标本和16段水平交叉轨迹，不接收任意骨面或原138段计划。"""
@@ -28,7 +32,12 @@ class ValidatedSession:
         self.candidate, chart = loader.load_candidate()
         self.trajectory = list(local_trajectory(1.8) if trajectory is None else trajectory)
         self.iterator = iter_sequence(self.candidate, chart, model_factory=LocalPatch, trajectory=self.trajectory)
+        self.state_mapper = RealCtStateMapper(
+            self.candidate['vertices'],
+            self.candidate['faces'],
+        )
         self.records, self.snapshots = [], []
+        self.published_state = None
         self.finished = False
         self.step = 0
 
@@ -44,12 +53,28 @@ class ValidatedSession:
         row = dict(row) if row is not None else dict(step=0, accepted=True,
             min_angle_deg=float(model.angles.min()), min_q=float(model.q.min()),
             error_bound_mm=float(model.bounds.max()), initial=True)
-        row['wall_ms'] = (time.perf_counter() - started) * 1000
         row['time_beijing'] = datetime.now(ZoneInfo('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S')
-        self.records.append(row)
         if not row['accepted']:
+            row['state_ms'] = 0.0
+            row['wall_ms'] = (time.perf_counter() - started) * 1000
+            self.records.append(row)
             self.finished = True
             return None, row
+        state_started = time.perf_counter()
+        state = self.state_mapper.published_state(
+            model.vertices,
+            row['error_bound_mm'],
+        )
+        row['state_ms'] = (time.perf_counter() - state_started) * 1000
+        row['wall_ms'] = (time.perf_counter() - started) * 1000
+        state['step'] = row['step']
+        state['age_at_compute_completion_ms'] = row['wall_ms']
+        state['age_basis'] = '从本次输入交给ValidatedSession.advance到状态计算完成'
+        state['algorithm_interval_includes_state_age'] = False
+        row['_completion_monotonic_s'] = time.perf_counter()
+        row['state'] = state
+        self.records.append(row)
+        self.published_state = state
         whole = self.candidate['whole'].copy()
         whole.vertices[self.candidate['mapping']] = model.vertices
         self.step = row['step']
@@ -148,6 +173,12 @@ def create_window():
                 result = self.future.result()
                 if result is not None:
                     mesh, row = result
+                    completion = row.pop('_completion_monotonic_s', None)
+                    if mesh is not None and completion is not None:
+                        row['state']['age_at_display_ms'] = (
+                            row['state']['age_at_compute_completion_ms']
+                            + (time.perf_counter() - completion) * 1000
+                        )
                     self.rows.append(row)
                     if mesh is not None:
                         first = self.mesh is None
@@ -158,8 +189,16 @@ def create_window():
                         if first:
                             self.reset_view()
                         row['render_ms'] = (time.perf_counter() - started) * 1000
+                        nominal = row['state']['nominal']
+                        completion = nominal['completion_fraction'] * 100
+                        interval = row['state']['algorithm_bound_interval'][
+                            'completion_fraction_interval'
+                        ]
                         self.status.setText(f"已发布 {row['step']}/16；角 {row['min_angle_deg']:.3f}°；"
                             f"q {row['min_q']:.3f}；误差证书 {row['error_bound_mm']:.5f} mm；"
+                            f"完成 {completion:.2f}%（算法界 {interval[0]*100:.2f}%–{interval[1]*100:.2f}%）；"
+                            f"剩余 {nominal['remaining_within_plan_volume_mm3']:.2f} mm³；"
+                            f"状态龄 {row['state']['age_at_display_ms']:.0f} ms；"
                             f"计算验收 {row['wall_ms']:.0f} ms（100 ms仅为目标）")
                     else:
                         self.status.setText(f"第{row['step']}步拒绝：{row.get('reason', '未通过验收')}；"
@@ -239,7 +278,7 @@ def create_window():
             self.figure.clear()
             for axis, key, title, limit in zip(self.figure.subplots(1, 3),
                     ['min_angle_deg', 'error_bound_mm', 'wall_ms'],
-                    ['Minimum angle (deg)', 'Error bound (mm)', 'Compute + audit (ms)'], [25, .1, 100]):
+                    ['Minimum angle (deg)', 'Error bound (mm)', 'Compute + audit + state (ms)'], [25, .1, 100]):
                 axis.plot([r['step'] for r in self.rows], [r.get(key, np.nan) for r in self.rows], '.-')
                 axis.axhline(limit, color='red', linestyle='--')
                 axis.set_title(title)
@@ -259,9 +298,12 @@ def create_window():
                 backend='CPU float64', source=str(source), source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
                 trajectory=[tool.__dict__ for tool in self.session.trajectory],
                 thresholds=dict(angle_deg=25, q=.4, error_mm=.1),
+                state_scope='计划坐标6 mm局部圆盘；不含完整计划边界，不评价计划外去除',
+                state_uncertainty_scenarios=str(SCENARIOS),
+                state_uncertainty_sha256=hashlib.sha256(SCENARIOS.read_bytes()).hexdigest(),
                 scope='固定局部重建域含过渡带；整骨拓扑与自交复核；不保证外部原网格形状质量',
                 snapshots='初态及接受步；拒绝步只有记录，没有新快照',
-                timing='wall_ms含生成器更新和验收；不含初态文件加载、显示传输与图表绘制；render_ms单独记录')
+                timing='wall_ms含生成器更新、验收和状态计算；state_ms单列状态计算；不含初态文件加载、显示传输与图表绘制；render_ms单独记录')
             (folder / 'metadata.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding='utf-8')
             self.figure.savefig(folder / '指标.png', dpi=150)
             self.status.setText(f'已导出逐状态记录及双精度整骨快照：{folder}')

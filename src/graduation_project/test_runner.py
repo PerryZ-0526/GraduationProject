@@ -17,6 +17,14 @@ class TestCommand:
 CORE_TESTS = (
     TestCommand("三维目标几何", ("初步实验/三维目标几何机制/test_target.py",)),
     TestCommand("竖直磨削分层", ("初步实验/竖直磨削曲面分层/test_axis.py",)),
+    TestCommand("计划裁剪特征重建", ("初步实验/计划裁剪特征重建/test_clipped_patch.py",)),
+    TestCommand("共同运动记录", ("初步实验/共同运动记录与方法对照/test_motion_record.py",)),
+    TestCommand(
+        "来源约束v3冻结证据",
+        ("初步实验/共同运动记录与方法对照/test_source_constrained_v3_freeze.py",),
+    ),
+    TestCommand("真实CT状态边界", ("初步实验/共同运动记录与方法对照/test_real_ct_state.py",)),
+    TestCommand("持续状态时间线", ("初步实验/共同运动记录与方法对照/test_continuous_state_timeline.py",)),
     TestCommand("解析局部重建", ("初步实验/局部区域重建阶段一/test_patch.py",)),
     TestCommand("真实骨面投影", ("初步实验/真实骨面高度图验证/test_projection.py",)),
     TestCommand("真实骨面拼接", ("初步实验/真实骨面共边拼接/test_stitch.py",)),
