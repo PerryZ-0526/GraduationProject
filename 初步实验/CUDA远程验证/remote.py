@@ -23,6 +23,7 @@ def main():
     parser.add_argument('--command')
     parser.add_argument('--put', nargs=2, metavar=('LOCAL', 'REMOTE'))
     parser.add_argument('--get', nargs=2, metavar=('REMOTE', 'LOCAL'))
+    parser.add_argument('--timeout', type=int, default=600)
     args = parser.parse_args()
     # 密码不进入命令行、日志、远端文件或版本控制。
     config = dict(line.split('=', 1) for line in (ROOT / '.env').read_text(encoding='utf-8').splitlines() if line and not line.startswith('#'))
@@ -39,7 +40,10 @@ def main():
                 else:
                     sftp.get(*args.get)
         if args.command:
-            _, stdout, stderr = client.exec_command(args.command, timeout=600)
+            _, stdout, stderr = client.exec_command(
+                args.command,
+                timeout=args.timeout,
+            )
             # 合并输出并逐行读取，避免大量错误输出填满SSH窗口。
             stdout.channel.set_combine_stderr(True)
             for line in stdout:
