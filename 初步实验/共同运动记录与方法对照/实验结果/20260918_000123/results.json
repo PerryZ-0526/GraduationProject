@@ -1,0 +1,4563 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-09-18 00:01:23",
+  "status": "completed",
+  "scope": "第一批共同仿真运动记录与固定答案；第二批包含解析竖直接缝消融，以及倾斜开发案例和三条冻结评测路线上的受限候选、来源切换线局部生成、固定质量维护、普通工程基线与Geogram正式几何基线；第三批增加四条在来源修复运行前冻结的原始质量失败路线；另含四例计划体积状态固定答案",
+  "record_kind": "simulated",
+  "coordinate_frame": {
+    "name": "bone",
+    "length_unit": "mm",
+    "time_unit": "ms",
+    "handedness": "right"
+  },
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200,
+    "interpolate_missing_motion": false
+  },
+  "source_sha256": {
+    "初步实验/共同运动记录与方法对照/cases.json": "d8245820737d4dfa134a040cac5a32fc025dc05de41b35b8435d8d8765581e9a",
+    "初步实验/共同运动记录与方法对照/method_evaluation_cases.json": "7452aaa0545b1cfac2b996fcaa06cd39ef44747498c40843c796e1802bb037ff",
+    "初步实验/共同运动记录与方法对照/quality_failure_cases.json": "1af1c5c2d5d510dddc85e9689f3c6bc862a541f71bfa3c91daf5f695f0281210",
+    "初步实验/共同运动记录与方法对照/quality_failure_cases_v2.json": "4d57420bdd3f6792caf3244172bd15f19858f6b87c56c2f8016fc292b34ba8ec",
+    "初步实验/共同运动记录与方法对照/screen_quality_failure_cases.py": "f673d79766a4a456de112c5683550c50e3c1742d16aa0bb78a9d1d24afbe650a",
+    "初步实验/共同运动记录与方法对照/geogram_baseline.py": "e0da13c6144b0036ae5c24f28f3152dcaa5d1f58e11a9dfcf2c000673b5a3093",
+    "初步实验/共同运动记录与方法对照/geogram_boolean.cpp": "5a101695bb322d3a613a207f845a6f9d18d7e8ced4d7865f55b2155ce78c516f",
+    "初步实验/共同运动记录与方法对照/build_geogram_baseline.sh": "091db9fb5cb09de92421818c39817f46741b92862c3ec48bede222822e87e7fb",
+    "初步实验/共同运动记录与方法对照/motion_record.py": "92464af86e46f2083571f49e2937d036b1b9ff81cd70cbc8bb5728af6404f0e3",
+    "初步实验/共同运动记录与方法对照/state_metrics.py": "b99cf0add838272111a0200a1a48b14d590a63514a8c3041cc05a9c3cd53a3b5",
+    "初步实验/共同运动记录与方法对照/surface_methods.py": "7cafaeeec447484c0536c6bf59f18b81ff705c90e0c3045d0530572175171c5c",
+    "初步实验/共同运动记录与方法对照/test_motion_record.py": "da73dd1ff345c314da3de1062b265a0bf071fc46ebf0f13e3d2ed6649106c580",
+    "初步实验/共同运动记录与方法对照/experiment.py": "ec8a7a3cbfd43a1ec73d7f190155c007417564ca397eda078897ee80bdf8c543",
+    "初步实验/局部区域重建阶段一/patch_model.py": "20ef1e9423aaa578346d711a1dae65289890ca16a3cb13bedb5fbecdd5abbd0b",
+    "初步实验/计划裁剪特征重建/clipped_patch.py": "48c130f0ffa1bcaa6738d5941dbd1c7ec6e7ed06bbbd8e798e8e2a0b2ea59837"
+  },
+  "baseline_registry": [
+    {
+      "id": "geogram",
+      "role": "几何差集参照",
+      "status": "TOG 2025作者提交已接共同输入；本批只评估未维护的精确网格CSG输出"
+    },
+    {
+      "id": "openmeshcraft",
+      "role": "交点解析参照",
+      "status": "作者代码已归档，尚无本任务竞争结果"
+    },
+    {
+      "id": "pamo",
+      "role": "网格质量维护参照",
+      "status": "作者代码已归档，尚未完成本任务适配"
+    },
+    {
+      "id": "rxmesh",
+      "role": "CUDA动态执行参照",
+      "status": "作者Remesh已初跑，尚无输出质量审计"
+    }
+  ],
+  "case_results": [
+    {
+      "case_id": "shallow_milling",
+      "split": "development",
+      "purpose": "正常浅磨",
+      "accepted_event_ids": [
+        "s0",
+        "s1"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 2,
+      "connected_segment_count": 1,
+      "point_states": [
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.3
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        },
+        {
+          "point_mm": [
+            0.0,
+            2.0,
+            -0.1
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true,
+        "state_metrics": true
+      },
+      "state_metrics": {
+        "actual": {
+          "planned_removal_volume_mm3": 5.654866776461628,
+          "achieved_within_plan_volume_mm3": 0.4442839419614426,
+          "remaining_within_plan_volume_mm3": 5.210582834500185,
+          "overcut_within_plan_volume_mm3": 0.0,
+          "outside_plan_removed_volume_mm3": 0.0,
+          "completion_fraction": 0.07856665055501814,
+          "actual_removed_volume_mm3": 0.4442839419614426,
+          "inside_plan_actual_removed_volume_mm3": 0.4442839419614426,
+          "independently_integrated_total_removed_volume_mm3": 0.444268593439788,
+          "integration_closure_residual_mm3": -1.5348521654634517e-05,
+          "swept_bounds_inside_plan": true,
+          "target_depth_mm": 0.2,
+          "quadrature_order": 256,
+          "integration_bounds_xy_mm": [
+            -2.0,
+            2.0,
+            -1.0,
+            1.0
+          ],
+          "scope": "解析平面、顶部连通单值去除和圆形计划域上的确定性体积；数值为高阶Gauss-Legendre求积，不是实测骨量"
+        },
+        "expected": {
+          "derivation": "水平胶囊与半空间交集的圆段面积乘路径长度，加两个半球合成的球冠体积",
+          "absolute_tolerance_mm3": 5e-05,
+          "planned_removal_volume_mm3": 5.654866776461628,
+          "achieved_within_plan_volume_mm3": 0.44428834332058753,
+          "remaining_within_plan_volume_mm3": 5.21057843314104,
+          "overcut_within_plan_volume_mm3": 0.0,
+          "outside_plan_removed_volume_mm3": 0.0,
+          "actual_removed_volume_mm3": 0.44428834332058753,
+          "completion_fraction": 0.07856742888620064
+        },
+        "checks": {
+          "planned_removal_volume_mm3": true,
+          "achieved_within_plan_volume_mm3": true,
+          "remaining_within_plan_volume_mm3": true,
+          "overcut_within_plan_volume_mm3": true,
+          "outside_plan_removed_volume_mm3": true,
+          "actual_removed_volume_mm3": true,
+          "completion_fraction": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "repeat_same_path",
+      "split": "development",
+      "purpose": "重复经过同一位置",
+      "accepted_event_ids": [
+        "r0",
+        "r1",
+        "r2"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 3,
+      "connected_segment_count": 2,
+      "point_states": [
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.3
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true,
+        "state_metrics": true
+      },
+      "state_metrics": {
+        "actual": {
+          "planned_removal_volume_mm3": 5.654866776461628,
+          "achieved_within_plan_volume_mm3": 0.44428394196144266,
+          "remaining_within_plan_volume_mm3": 5.210582834500185,
+          "overcut_within_plan_volume_mm3": 0.0,
+          "outside_plan_removed_volume_mm3": 0.0,
+          "completion_fraction": 0.07856665055501816,
+          "actual_removed_volume_mm3": 0.44428394196144266,
+          "inside_plan_actual_removed_volume_mm3": 0.44428394196144266,
+          "independently_integrated_total_removed_volume_mm3": 0.4442685934397881,
+          "integration_closure_residual_mm3": -1.5348521654579006e-05,
+          "swept_bounds_inside_plan": true,
+          "target_depth_mm": 0.2,
+          "quadrature_order": 256,
+          "integration_bounds_xy_mm": [
+            -2.0,
+            2.0,
+            -1.0,
+            1.0
+          ],
+          "scope": "解析平面、顶部连通单值去除和圆形计划域上的确定性体积；数值为高阶Gauss-Legendre求积，不是实测骨量"
+        },
+        "expected": {
+          "derivation": "重复胶囊并集与单次路径相同，固定答案必须与shallow_milling一致",
+          "absolute_tolerance_mm3": 5e-05,
+          "planned_removal_volume_mm3": 5.654866776461628,
+          "achieved_within_plan_volume_mm3": 0.44428834332058753,
+          "remaining_within_plan_volume_mm3": 5.21057843314104,
+          "overcut_within_plan_volume_mm3": 0.0,
+          "outside_plan_removed_volume_mm3": 0.0,
+          "actual_removed_volume_mm3": 0.44428834332058753,
+          "completion_fraction": 0.07856742888620064
+        },
+        "checks": {
+          "planned_removal_volume_mm3": true,
+          "achieved_within_plan_volume_mm3": true,
+          "remaining_within_plan_volume_mm3": true,
+          "overcut_within_plan_volume_mm3": true,
+          "outside_plan_removed_volume_mm3": true,
+          "actual_removed_volume_mm3": true,
+          "completion_fraction": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "plan_edge_overcut",
+      "split": "evaluation",
+      "purpose": "磨到计划边缘",
+      "accepted_event_ids": [
+        "e0",
+        "e1"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 2,
+      "connected_segment_count": 1,
+      "point_states": [
+        {
+          "point_mm": [
+            2.9,
+            0.0,
+            -0.1
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            3.5,
+            0.0,
+            -0.1
+          ],
+          "state": "outside_plan_removed",
+          "actual_state": "outside_plan_removed"
+        },
+        {
+          "point_mm": [
+            1.5,
+            0.0,
+            -0.1
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true,
+        "state_metrics": true
+      },
+      "state_metrics": {
+        "actual": {
+          "planned_removal_volume_mm3": 5.654866776461628,
+          "achieved_within_plan_volume_mm3": 0.08933368889263028,
+          "remaining_within_plan_volume_mm3": 5.565533087568998,
+          "overcut_within_plan_volume_mm3": 0.0,
+          "outside_plan_removed_volume_mm3": 0.2568396336201093,
+          "completion_fraction": 0.015797664635439617,
+          "actual_removed_volume_mm3": 0.3461733225127396,
+          "inside_plan_actual_removed_volume_mm3": 0.08933368889263028,
+          "independently_integrated_total_removed_volume_mm3": 0.3461733225127396,
+          "integration_closure_residual_mm3": 0.0,
+          "swept_bounds_inside_plan": false,
+          "target_depth_mm": 0.2,
+          "quadrature_order": 256,
+          "integration_bounds_xy_mm": [
+            1.7999999999999998,
+            5.2,
+            -1.0,
+            1.0
+          ],
+          "scope": "解析平面、顶部连通单值去除和圆形计划域上的确定性体积；数值为高阶Gauss-Legendre求积，不是实测骨量"
+        },
+        "expected": {
+          "derivation": "总量用水平胶囊圆段与球冠闭式解，计划内量用圆域截交的一维高精度积分",
+          "absolute_tolerance_mm3": 5e-05,
+          "planned_removal_volume_mm3": 5.654866776461628,
+          "achieved_within_plan_volume_mm3": 0.08932188661597504,
+          "remaining_within_plan_volume_mm3": 5.565544889845652,
+          "overcut_within_plan_volume_mm3": 0.0,
+          "outside_plan_removed_volume_mm3": 0.25686579142864185,
+          "actual_removed_volume_mm3": 0.3461876780446169,
+          "completion_fraction": 0.015795577534695817
+        },
+        "checks": {
+          "planned_removal_volume_mm3": true,
+          "achieved_within_plan_volume_mm3": true,
+          "remaining_within_plan_volume_mm3": true,
+          "overcut_within_plan_volume_mm3": true,
+          "outside_plan_removed_volume_mm3": true,
+          "actual_removed_volume_mm3": true,
+          "completion_fraction": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "vertical_depth_transition",
+      "split": "development",
+      "purpose": "改变深度并向下钻孔",
+      "accepted_event_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 3,
+      "connected_segment_count": 2,
+      "point_states": [
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.9
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -1.1
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        },
+        {
+          "point_mm": [
+            1.2,
+            0.0,
+            -0.05
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true,
+        "state_metrics": true
+      },
+      "state_metrics": {
+        "actual": {
+          "planned_removal_volume_mm3": 6.283185307179586,
+          "achieved_within_plan_volume_mm3": 1.4406485676293137,
+          "remaining_within_plan_volume_mm3": 4.8425367395502725,
+          "overcut_within_plan_volume_mm3": 0.6547910254620664,
+          "outside_plan_removed_volume_mm3": 0.0,
+          "completion_fraction": 0.22928634079646396,
+          "actual_removed_volume_mm3": 2.09543959309138,
+          "inside_plan_actual_removed_volume_mm3": 2.09543959309138,
+          "independently_integrated_total_removed_volume_mm3": 2.0949234055700576,
+          "integration_closure_residual_mm3": -0.0005161875213222089,
+          "swept_bounds_inside_plan": true,
+          "target_depth_mm": 0.5,
+          "quadrature_order": 256,
+          "integration_bounds_xy_mm": [
+            -1.0,
+            1.0,
+            -1.0,
+            1.0
+          ],
+          "scope": "解析平面、顶部连通单值去除和圆形计划域上的确定性体积；数值为高阶Gauss-Legendre求积，不是实测骨量"
+        },
+        "expected": {
+          "derivation": "竖直胶囊底部球冠的极坐标闭式积分；完成量按目标深度0.5 mm截断",
+          "absolute_tolerance_mm3": 0.001,
+          "planned_removal_volume_mm3": 6.283185307179586,
+          "achieved_within_plan_volume_mm3": 1.4399751570047454,
+          "remaining_within_plan_volume_mm3": 4.843210150174841,
+          "overcut_within_plan_volume_mm3": 0.6547341046538089,
+          "outside_plan_removed_volume_mm3": 0.0,
+          "actual_removed_volume_mm3": 2.0947092616585543,
+          "completion_fraction": 0.22917916416683332
+        },
+        "checks": {
+          "planned_removal_volume_mm3": true,
+          "achieved_within_plan_volume_mm3": true,
+          "remaining_within_plan_volume_mm3": true,
+          "overcut_within_plan_volume_mm3": true,
+          "outside_plan_removed_volume_mm3": true,
+          "actual_removed_volume_mm3": true,
+          "completion_fraction": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "tilted_crossing_paths",
+      "split": "evaluation",
+      "purpose": "倾斜表面、偏心与交叉路线",
+      "accepted_event_ids": [
+        "x0",
+        "x1",
+        "x_stop",
+        "y0",
+        "y1"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 4,
+      "connected_segment_count": 2,
+      "point_states": [
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            2.0,
+            0.0,
+            -0.2
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "stop_gap_and_late_event",
+      "split": "evaluation",
+      "purpose": "停钻、信息中断和数据晚到",
+      "accepted_event_ids": [
+        "g0",
+        "g1",
+        "g_stop",
+        "g3"
+      ],
+      "late_event_ids": [
+        "g_late"
+      ],
+      "primitive_count": 3,
+      "connected_segment_count": 1,
+      "point_states": [
+        {
+          "point_mm": [
+            0.5,
+            0.0,
+            -0.05
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            2.0,
+            0.0,
+            -0.05
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        },
+        {
+          "point_mm": [
+            3.0,
+            0.0,
+            -0.05
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true
+      },
+      "passed": true
+    }
+  ],
+  "invariants": {
+    "repeat_path_max_delta_mm": 0.0,
+    "repeat_path_pass": true,
+    "crossing_order_max_delta_mm": 0.0,
+    "crossing_order_pass": true,
+    "probe_grid_role": "只验证集合不变量，不作为曲面误差证书"
+  },
+  "restricted_height_map": {
+    "runs": [
+      {
+        "case_id": "shallow_milling",
+        "method": "既有固定底网高度更新",
+        "scope": "仅支持单值表面和水平等高球心运动",
+        "accepted_steps": 2,
+        "attempted_steps": 2,
+        "rows": [
+          {
+            "step": 1,
+            "accepted": true,
+            "tool": {
+              "start": [
+                -1.0,
+                0.0
+              ],
+              "end": [
+                -1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484158,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 65076,
+            "affected_faces": 116,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.16745799803175032,
+            "reconstruct_ms": 0.05866699211765081,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 4.600250002113171
+          },
+          {
+            "step": 2,
+            "accepted": true,
+            "tool": {
+              "start": [
+                -1.0,
+                0.0
+              ],
+              "end": [
+                1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484157,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 171666,
+            "affected_faces": 306,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.17154100351035595,
+            "reconstruct_ms": 0.07554198964498937,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 13.807541006826796
+          }
+        ],
+        "common_boundary_residual_max_mm": 1.1102230246251565e-16,
+        "passed": true
+      },
+      {
+        "case_id": "repeat_same_path",
+        "method": "既有固定底网高度更新",
+        "scope": "仅支持单值表面和水平等高球心运动",
+        "accepted_steps": 3,
+        "attempted_steps": 3,
+        "rows": [
+          {
+            "step": 1,
+            "accepted": true,
+            "tool": {
+              "start": [
+                -1.0,
+                0.0
+              ],
+              "end": [
+                -1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484158,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 65076,
+            "affected_faces": 116,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.1433750003343448,
+            "reconstruct_ms": 0.052041999879293144,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 4.126708998228423
+          },
+          {
+            "step": 2,
+            "accepted": true,
+            "tool": {
+              "start": [
+                -1.0,
+                0.0
+              ],
+              "end": [
+                1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484157,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 171666,
+            "affected_faces": 306,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.14224999176803976,
+            "reconstruct_ms": 0.058375007938593626,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 13.817957995343022
+          },
+          {
+            "step": 3,
+            "accepted": true,
+            "tool": {
+              "start": [
+                1.0,
+                0.0
+              ],
+              "end": [
+                -1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484157,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 171666,
+            "affected_faces": 306,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.1348750083707273,
+            "reconstruct_ms": 0.06987499364186078,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 18.260292010381818
+          }
+        ],
+        "common_boundary_residual_max_mm": 1.1102230246251565e-16,
+        "passed": true
+      }
+    ],
+    "repeat_vs_single_max_vertex_delta_mm": 0.0,
+    "repeat_invariant_pass": true,
+    "unsupported_cases": [
+      "plan_edge_overcut",
+      "vertical_depth_transition",
+      "tilted_crossing_paths",
+      "stop_gap_and_late_event"
+    ],
+    "unsupported_is_not_failure_or_success": true
+  },
+  "seam_comparison": {
+    "case_id": "vertical_depth_transition",
+    "input": {
+      "center_z": -0.0001,
+      "tool_radius": 1.0,
+      "clip_radius": 2.0,
+      "outer_radius": 3.0,
+      "spacing": 0.25
+    },
+    "methods": {
+      "all_seams": {
+        "mesh": "vertical_all_seams.npz",
+        "preserve_smooth_seam": true,
+        "audit": {
+          "vertices": 571,
+          "faces": 1062,
+          "min_angle_deg": 0.021947999726823878,
+          "min_q": 0.0006634877352780864,
+          "degenerate": 0,
+          "bad_faces": 48,
+          "winding": true,
+          "euler": 1,
+          "connected": true,
+          "boundary_edges": 78,
+          "one_boundary_loop": true,
+          "outer_boundary_ok": true,
+          "feature_count": 2,
+          "expected_feature_names": [
+            "sweep_cylinder_plane"
+          ],
+          "feature_name_mismatch": true,
+          "feature_geometry_max_mm": 0.0,
+          "missing_feature_edges": 0,
+          "nonmanifold_feature_edges": 0,
+          "self_intersection_faces": 0,
+          "mesh_to_target_upper_mm": 0.05247918794665696,
+          "target_to_mesh_upper_mm": 0.05417947708725139,
+          "mesh_to_target_samples": 51342,
+          "target_to_mesh_samples": 30866,
+          "target_to_mesh_strata": {
+            "sphere": {
+              "sampled_max_mm": 0.014661025194784853,
+              "cover_radius_mm": 0.03951845189246654,
+              "upper_bound_mm": 0.05417947708725139,
+              "samples": 6478
+            },
+            "sweep_cylinder": {
+              "sampled_max_mm": 0.0001,
+              "cover_radius_mm": 0.01993349780753034,
+              "upper_bound_mm": 0.02003349780753034,
+              "samples": 316
+            },
+            "plane": {
+              "sampled_max_mm": 0.0024330054852912397,
+              "cover_radius_mm": 0.039967749916884274,
+              "upper_bound_mm": 0.04240075540217551,
+              "samples": 24072
+            }
+          },
+          "error_limit_mm": 0.1,
+          "certificate_spacing_mm": 0.04,
+          "accepted": false,
+          "reasons": [
+            "shape_quality",
+            "feature_curve_connectivity"
+          ]
+        }
+      },
+      "source_aware": {
+        "mesh": "vertical_source_aware.npz",
+        "preserve_smooth_seam": false,
+        "audit": {
+          "vertices": 547,
+          "faces": 1014,
+          "min_angle_deg": 40.62342112128187,
+          "min_q": 0.8093308771661841,
+          "degenerate": 0,
+          "bad_faces": 0,
+          "winding": true,
+          "euler": 1,
+          "connected": true,
+          "boundary_edges": 78,
+          "one_boundary_loop": true,
+          "outer_boundary_ok": true,
+          "feature_count": 1,
+          "expected_feature_names": [
+            "sweep_cylinder_plane"
+          ],
+          "feature_name_mismatch": false,
+          "feature_geometry_max_mm": 0.0,
+          "missing_feature_edges": 0,
+          "nonmanifold_feature_edges": 0,
+          "self_intersection_faces": 0,
+          "mesh_to_target_upper_mm": 0.0524813578741505,
+          "target_to_mesh_upper_mm": 0.05417983265256575,
+          "mesh_to_target_samples": 49614,
+          "target_to_mesh_samples": 30866,
+          "target_to_mesh_strata": {
+            "sphere": {
+              "sampled_max_mm": 0.014661380760099206,
+              "cover_radius_mm": 0.03951845189246654,
+              "upper_bound_mm": 0.05417983265256575,
+              "samples": 6478
+            },
+            "sweep_cylinder": {
+              "sampled_max_mm": 0.0001,
+              "cover_radius_mm": 0.01993349780753034,
+              "upper_bound_mm": 0.02003349780753034,
+              "samples": 316
+            },
+            "plane": {
+              "sampled_max_mm": 0.0024330054852912397,
+              "cover_radius_mm": 0.039967749916884274,
+              "upper_bound_mm": 0.04240075540217551,
+              "samples": 24072
+            }
+          },
+          "error_limit_mm": 0.1,
+          "certificate_spacing_mm": 0.04,
+          "accepted": true,
+          "reasons": []
+        }
+      }
+    },
+    "checks": {
+      "all_seams_shape_rejected": true,
+      "source_aware_accepted": true,
+      "same_error_budget": true
+    },
+    "passed": true,
+    "conclusion_scope": "只支持解析平面上的同轴竖直近转折案例；证明该案例中不强制C1接缝可消除薄带差面，不证明一般三维方法优势"
+  },
+  "crossing_comparison": {
+    "case_id": "tilted_crossing_paths",
+    "input": {
+      "xy_bounds_mm": [
+        -2.0,
+        2.0,
+        -2.0,
+        2.0
+      ],
+      "z_bounds_mm": [
+        -0.9,
+        0.9
+      ],
+      "method_spacing_mm": 0.1,
+      "dense_target_spacing_mm": 0.025,
+      "primitive_count": 4,
+      "parameter_policy": {
+        "development_case": "tilted_crossing_paths",
+        "candidate_xy_spacing_mm": 0.1,
+        "maintenance_target_length_mm": 0.12,
+        "maintenance_iterations": 3,
+        "maintenance_feature_angle_deg": 30.0,
+        "maintenance_surface_budget_mm": 0.025,
+        "note": "参数只由开发案例和项目既有重网格规则确定，评测案例首轮运行后不回调"
+      }
+    },
+    "common_target": {
+      "kind": "解析倾斜平面减实际胶囊运动后的外表面下包络",
+      "mesh": "tilted_crossing_paths_dense_target.vtp",
+      "diagnostics": {
+        "sample_count": 25921,
+        "cut_sample_count": 9090,
+        "internal_cavity_sample_count": 0,
+        "all_removed_intervals_top_connected": true,
+        "connection_iterations": 2,
+        "grid_dimensions_xy": [
+          161,
+          161
+        ],
+        "spacing_mm": 0.025,
+        "cell_center_sample_count": 25600,
+        "cell_center_internal_cavity_sample_count": 0,
+        "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+        "first_diagonal_cells": 20236,
+        "second_diagonal_cells": 5364
+      },
+      "warning": "密集目标网格只用于抽样近邻测量，不是严格误差证书"
+    },
+    "methods": {
+      "analytic_height_raw": {
+        "role": "解析单值候选的生成消融",
+        "scope": "仅在每条竖线上的实际去除区间都与外表面连通、剩余外表面可写为单值高度时适用；未做质量维护",
+        "mesh": "tilted_crossing_paths_height_raw.vtp",
+        "elapsed_ms": 2.984249993460253,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 572,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+          "first_diagonal_cells": 1283,
+          "second_diagonal_cells": 317
+        },
+        "quality": {
+          "vertices": 1681,
+          "faces": 3200,
+          "bad_faces": 4,
+          "min_q": 0.6384288808513786,
+          "min_angle_deg": 23.998162806050384,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.02625561768720397,
+            "p95_mm": 0.0036635881460114206,
+            "rms_mm": 0.0019719808153726413,
+            "samples": 4881
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.02529169910191574,
+            "p95_mm": 0.003505302587563397,
+            "rms_mm": 0.001900540601077572,
+            "samples": 4881
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.034156502553198666,
+            "p95_mm": 0.0035983725283889674,
+            "rms_mm": 0.002182559020944371,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "failure_reasons": [
+          "shape_quality"
+        ],
+        "accepted_for_this_case": false
+      },
+      "analytic_height_source_fitted": {
+        "role": "来源切换线约束与局部质量生成候选",
+        "scope": "仅在原始候选质量失败单元内对齐连续来源切换线，并沿三维长方向局部细分；不改动原本通过的单元",
+        "mesh": "tilted_crossing_paths_height_source_fitted.vtp",
+        "elapsed_ms": 52.62308300007135,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 572,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "source_transition_count": 3,
+          "source_transition_edges_inspected": 7,
+          "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+          "source_transition_max_one_sided_jump_mm": 1.0009770790020411e-12,
+          "source_transition_continuous": true,
+          "source_transition_continuity_tolerance_mm": 1e-08,
+          "snapped_vertex_count": 3,
+          "maximum_snap_distance_mm": 0.025634974384964426,
+          "snap_fraction_of_spacing": 0.35,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+          "pre_alignment_bad_cells": 2,
+          "pre_refinement_bad_cells": 2,
+          "split_edge_count": 3,
+          "inserted_midpoint_count": 3,
+          "locally_refined_cell_count": 4,
+          "post_refinement_bad_cells": 0
+        },
+        "quality": {
+          "vertices": 1684,
+          "faces": 3206,
+          "bad_faces": 0,
+          "min_q": 0.6942951529946763,
+          "min_angle_deg": 27.321267556893755,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.02625561768720397,
+            "p95_mm": 0.0037537089480036423,
+            "rms_mm": 0.001967534701001122,
+            "samples": 4890
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.02529169910191574,
+            "p95_mm": 0.003537994848190346,
+            "rms_mm": 0.001908829027133979,
+            "samples": 4890
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.034156502553198666,
+            "p95_mm": 0.003596077608541273,
+            "rms_mm": 0.0021689131534681576,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "failure_reasons": [],
+        "accepted_for_this_case": true
+      },
+      "analytic_height_maintained": {
+        "role": "受限候选方法加项目既有各向同性质量维护",
+        "scope": "解析单值候选生成后，使用开发案例固定的PyMeshLab参数维护；不支持内部空腔或非单值拓扑",
+        "mesh": "tilted_crossing_paths_height_maintained.vtp",
+        "elapsed_ms": 25.4416669922648,
+        "diagnostics": {
+          "generation": {
+            "sample_count": 1681,
+            "cut_sample_count": 572,
+            "internal_cavity_sample_count": 0,
+            "all_removed_intervals_top_connected": true,
+            "connection_iterations": 2,
+            "grid_dimensions_xy": [
+              41,
+              41
+            ],
+            "spacing_mm": 0.1,
+            "cell_center_sample_count": 1600,
+            "cell_center_internal_cavity_sample_count": 0,
+            "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+            "first_diagonal_cells": 1283,
+            "second_diagonal_cells": 317
+          },
+          "maintenance": {
+            "elapsed_ms": 22.457416998804547,
+            "target_length_mm": 0.12,
+            "iterations": 3,
+            "feature_angle_deg": 30.0,
+            "surface_budget_mm": 0.025,
+            "implementation": "PyMeshLab meshing_isotropic_explicit_remeshing"
+          },
+          "all_removed_intervals_top_connected": true
+        },
+        "quality": {
+          "vertices": 1702,
+          "faces": 3242,
+          "bad_faces": 0,
+          "min_q": 0.702947701155339,
+          "min_angle_deg": 28.81542992335188,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.026345561397255857,
+            "p95_mm": 0.004810558051280867,
+            "rms_mm": 0.002374830798546656,
+            "samples": 4944
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.02592082088678461,
+            "p95_mm": 0.004615393525624088,
+            "rms_mm": 0.002272550835474937,
+            "samples": 4944
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.0369483579861584,
+            "p95_mm": 0.004432263047760299,
+            "rms_mm": 0.0024314466050105745,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "failure_reasons": [],
+        "accepted_for_this_case": true
+      },
+      "implicit_contour_baseline": {
+        "role": "项目既有普通工程基线，非作者强基线",
+        "scope": "规则三维体素采样加VTK等值面提取",
+        "mesh": "tilted_crossing_paths_implicit_contour.vtp",
+        "elapsed_ms": 22.581458993954584,
+        "diagnostics": {
+          "grid_dimensions_xyz": [
+            41,
+            41,
+            19
+          ],
+          "spacing_mm": 0.1,
+          "elapsed_ms": 22.581458993954584
+        },
+        "quality": {
+          "vertices": 2274,
+          "faces": 4375,
+          "bad_faces": 872,
+          "min_q": 0.0,
+          "min_angle_deg": 0.0,
+          "boundary_edges": 171,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 171,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.02642303109169003,
+            "p95_mm": 0.004083367208601268,
+            "rms_mm": 0.0024212846288070417,
+            "samples": 6649
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.025015571158131602,
+            "p95_mm": 0.003861430278379006,
+            "rms_mm": 0.0023084746328189206,
+            "samples": 6649
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.03811721948490125,
+            "p95_mm": 0.004070530083524457,
+            "rms_mm": 0.0026170759756322234,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "failure_reasons": [
+          "shape_quality"
+        ],
+        "accepted_for_this_case": false
+      },
+      "geogram_exact_csg": {
+        "role": "正式竞争性几何布尔基线",
+        "scope": "TOG 2025作者Geogram默认精确网格CSG；输入工具为固定subdivisions=3的离散胶囊，结果不附加质量维护",
+        "mesh": "tilted_crossing_paths_geogram_exact_csg.vtp",
+        "elapsed_ms": 306.75304200849496,
+        "diagnostics": {
+          "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+          "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+          "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+          "doi": "10.1145/3744642",
+          "repository": "https://github.com/BrunoLevy/geogram",
+          "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+          "license": "BSD-3-Clause",
+          "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+          "binary_sha256": "1cd1332696eb98bf50e85caf16001f01d714924da7b1d1160ed42454bc7e4fcb",
+          "tool_discretization": "icosphere subdivisions=3",
+          "input_primitive_count": 4,
+          "effective_primitive_count": 2,
+          "redundant_contained_event_ids": [
+            "x0",
+            "y0"
+          ],
+          "steps": [
+            {
+              "event_id": "x1",
+              "elapsed_ms": 215.28954200039152,
+              "input_faces": 1388,
+              "output": "difference_0.obj",
+              "log": "difference_0.log"
+            },
+            {
+              "event_id": "y1",
+              "elapsed_ms": 65.70666701009031,
+              "input_faces": 1384,
+              "output": "difference_1.obj",
+              "log": "difference_1.log"
+            }
+          ],
+          "elapsed_ms": 306.75304200849496,
+          "full_solid_watertight": true,
+          "full_solid_winding_consistent": true,
+          "full_solid_euler_number": 2,
+          "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+        },
+        "quality": {
+          "vertices": 1086,
+          "faces": 2070,
+          "bad_faces": 874,
+          "min_q": 3.162356500286464e-16,
+          "min_angle_deg": 0.0,
+          "boundary_edges": 100,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 100,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 6
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.0031698573266188967,
+            "p95_mm": 0.002622031610234582,
+            "rms_mm": 0.0013904951315885231,
+            "samples": 3156
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.013648140628461406,
+            "p95_mm": 0.005890761944664501,
+            "rms_mm": 0.0024662008798013767,
+            "samples": 3156
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.003169816055013316,
+            "p95_mm": 0.002271914978605108,
+            "rms_mm": 0.0010634080776277851,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "failure_reasons": [
+          "shape_quality",
+          "topology"
+        ],
+        "accepted_for_this_case": false
+      }
+    },
+    "observed_comparison": {
+      "maintenance_reduced_raw_bad_faces": true,
+      "source_fitting_reduced_raw_bad_faces": true,
+      "source_fitting_did_not_move_passing_grid": true,
+      "maintained_candidate_bad_faces_not_more_than_baseline": true,
+      "maintained_candidate_sampled_max_not_more_than_baseline": true,
+      "maintained_candidate_faster_in_this_run": false,
+      "source_fitted_has_fewer_bad_faces_than_geogram": true
+    },
+    "checks": {
+      "dense_target_scope_valid": true,
+      "candidate_scope_valid": true,
+      "candidate_mesh_nonempty": true,
+      "source_fitted_mesh_nonempty": true,
+      "baseline_mesh_nonempty": true,
+      "geogram_mesh_nonempty": true,
+      "geogram_full_solid_valid": true
+    },
+    "passed": true,
+    "conclusion_scope": "这是解析倾斜输入上的受限候选、既有质量维护、普通工程基线和Geogram精确网格CSG比较；Geogram承担几何布尔角色，其离散工具与未维护输出不代表质量优化方法；结果不外推到真实骨面、内部空腔或一般非单值拓扑"
+  },
+  "surface_method_evaluation": {
+    "frozen_before_first_run": "2026-09-17 22:50:30",
+    "parameter_policy": {
+      "development_case": "tilted_crossing_paths",
+      "candidate_xy_spacing_mm": 0.1,
+      "maintenance_target_length_mm": 0.12,
+      "maintenance_iterations": 3,
+      "maintenance_feature_angle_deg": 30.0,
+      "maintenance_surface_budget_mm": 0.025,
+      "note": "参数只由开发案例和项目既有重网格规则确定，评测案例首轮运行后不回调"
+    },
+    "cases": [
+      {
+        "case_id": "heldout_tilted_offset",
+        "input": {
+          "xy_bounds_mm": [
+            -2.0,
+            2.0,
+            -2.0,
+            2.0
+          ],
+          "z_bounds_mm": [
+            -0.9,
+            0.9
+          ],
+          "method_spacing_mm": 0.1,
+          "dense_target_spacing_mm": 0.025,
+          "primitive_count": 2,
+          "parameter_policy": {
+            "development_case": "tilted_crossing_paths",
+            "candidate_xy_spacing_mm": 0.1,
+            "maintenance_target_length_mm": 0.12,
+            "maintenance_iterations": 3,
+            "maintenance_feature_angle_deg": 30.0,
+            "maintenance_surface_budget_mm": 0.025,
+            "note": "参数只由开发案例和项目既有重网格规则确定，评测案例首轮运行后不回调"
+          }
+        },
+        "common_target": {
+          "kind": "解析倾斜平面减实际胶囊运动后的外表面下包络",
+          "mesh": "heldout_tilted_offset_dense_target.vtp",
+          "diagnostics": {
+            "sample_count": 25921,
+            "cut_sample_count": 5154,
+            "internal_cavity_sample_count": 0,
+            "all_removed_intervals_top_connected": true,
+            "connection_iterations": 2,
+            "grid_dimensions_xy": [
+              161,
+              161
+            ],
+            "spacing_mm": 0.025,
+            "cell_center_sample_count": 25600,
+            "cell_center_internal_cavity_sample_count": 0,
+            "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+            "first_diagonal_cells": 23514,
+            "second_diagonal_cells": 2086
+          },
+          "warning": "密集目标网格只用于抽样近邻测量，不是严格误差证书"
+        },
+        "methods": {
+          "analytic_height_raw": {
+            "role": "解析单值候选的生成消融",
+            "scope": "仅在每条竖线上的实际去除区间都与外表面连通、剩余外表面可写为单值高度时适用；未做质量维护",
+            "mesh": "heldout_tilted_offset_height_raw.vtp",
+            "elapsed_ms": 2.1156660077394918,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 321,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+              "first_diagonal_cells": 1523,
+              "second_diagonal_cells": 77
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 0,
+              "min_q": 0.6804053292798166,
+              "min_angle_deg": 30.00966736516037,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.015110397715301246,
+                "p95_mm": 0.0020657517745000797,
+                "rms_mm": 0.0013714048136462187,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.014768760182740096,
+                "p95_mm": 0.0019340409719816756,
+                "rms_mm": 0.0013143634287240992,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.020519074877256727,
+                "p95_mm": 0.0021507528572535855,
+                "rms_mm": 0.0014988086308397087,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "analytic_height_source_fitted": {
+            "role": "来源切换线约束与局部质量生成候选",
+            "scope": "仅在原始候选质量失败单元内对齐连续来源切换线，并沿三维长方向局部细分；不改动原本通过的单元",
+            "mesh": "heldout_tilted_offset_height_source_fitted.vtp",
+            "elapsed_ms": 13.525582995498553,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 321,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "source_transition_count": 0,
+              "source_transition_edges_inspected": 0,
+              "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+              "source_transition_max_one_sided_jump_mm": 0.0,
+              "source_transition_continuous": true,
+              "source_transition_continuity_tolerance_mm": 1e-08,
+              "snapped_vertex_count": 0,
+              "maximum_snap_distance_mm": 0.0,
+              "snap_fraction_of_spacing": 0.35,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+              "pre_alignment_bad_cells": 0,
+              "pre_refinement_bad_cells": 0,
+              "split_edge_count": 0,
+              "inserted_midpoint_count": 0,
+              "locally_refined_cell_count": 0,
+              "post_refinement_bad_cells": 0
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 0,
+              "min_q": 0.6804053292798166,
+              "min_angle_deg": 30.00966736516037,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.015110397715301246,
+                "p95_mm": 0.0020657517745000797,
+                "rms_mm": 0.0013714048136462187,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.014768760182740096,
+                "p95_mm": 0.0019340409719816756,
+                "rms_mm": 0.0013143634287240992,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.020519074877256727,
+                "p95_mm": 0.0021507528572535855,
+                "rms_mm": 0.0014988086308397087,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "analytic_height_maintained": {
+            "role": "受限候选方法加项目既有各向同性质量维护",
+            "scope": "解析单值候选生成后，使用开发案例固定的PyMeshLab参数维护；不支持内部空腔或非单值拓扑",
+            "mesh": "heldout_tilted_offset_height_maintained.vtp",
+            "elapsed_ms": 19.544666007277556,
+            "diagnostics": {
+              "generation": {
+                "sample_count": 1681,
+                "cut_sample_count": 321,
+                "internal_cavity_sample_count": 0,
+                "all_removed_intervals_top_connected": true,
+                "connection_iterations": 2,
+                "grid_dimensions_xy": [
+                  41,
+                  41
+                ],
+                "spacing_mm": 0.1,
+                "cell_center_sample_count": 1600,
+                "cell_center_internal_cavity_sample_count": 0,
+                "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+                "first_diagonal_cells": 1523,
+                "second_diagonal_cells": 77
+              },
+              "maintenance": {
+                "elapsed_ms": 17.428999999538064,
+                "target_length_mm": 0.12,
+                "iterations": 3,
+                "feature_angle_deg": 30.0,
+                "surface_budget_mm": 0.025,
+                "implementation": "PyMeshLab meshing_isotropic_explicit_remeshing"
+              },
+              "all_removed_intervals_top_connected": true
+            },
+            "quality": {
+              "vertices": 1677,
+              "faces": 3192,
+              "bad_faces": 0,
+              "min_q": 0.7437520744989952,
+              "min_angle_deg": 33.06185299616715,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02151978811413857,
+                "p95_mm": 0.0023956727367794306,
+                "rms_mm": 0.0015543198594352076,
+                "samples": 4869
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.018702626200527348,
+                "p95_mm": 0.0022460278930967062,
+                "rms_mm": 0.0014778989769103454,
+                "samples": 4869
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.022130672845119524,
+                "p95_mm": 0.0029524118148164004,
+                "rms_mm": 0.001665304059641454,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "implicit_contour_baseline": {
+            "role": "项目既有普通工程基线，非作者强基线",
+            "scope": "规则三维体素采样加VTK等值面提取",
+            "mesh": "heldout_tilted_offset_implicit_contour.vtp",
+            "elapsed_ms": 2.693041999009438,
+            "diagnostics": {
+              "grid_dimensions_xyz": [
+                41,
+                41,
+                19
+              ],
+              "spacing_mm": 0.1,
+              "elapsed_ms": 2.693041999009438
+            },
+            "quality": {
+              "vertices": 2258,
+              "faces": 4331,
+              "bad_faces": 881,
+              "min_q": 0.0,
+              "min_angle_deg": 0.0,
+              "boundary_edges": 183,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 183,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.019798190721311282,
+                "p95_mm": 0.0027645012296532746,
+                "rms_mm": 0.0015421285759038958,
+                "samples": 6589
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.017578542339107953,
+                "p95_mm": 0.0026089804215785797,
+                "rms_mm": 0.0014593046493677857,
+                "samples": 6589
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.02509768345819537,
+                "p95_mm": 0.002931354891071346,
+                "rms_mm": 0.0017511051239425058,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "geogram_exact_csg": {
+            "role": "正式竞争性几何布尔基线",
+            "scope": "TOG 2025作者Geogram默认精确网格CSG；输入工具为固定subdivisions=3的离散胶囊，结果不附加质量维护",
+            "mesh": "heldout_tilted_offset_geogram_exact_csg.vtp",
+            "elapsed_ms": 159.7457919997396,
+            "diagnostics": {
+              "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+              "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+              "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+              "doi": "10.1145/3744642",
+              "repository": "https://github.com/BrunoLevy/geogram",
+              "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+              "license": "BSD-3-Clause",
+              "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "binary_sha256": "1cd1332696eb98bf50e85caf16001f01d714924da7b1d1160ed42454bc7e4fcb",
+              "tool_discretization": "icosphere subdivisions=3",
+              "input_primitive_count": 2,
+              "effective_primitive_count": 1,
+              "redundant_contained_event_ids": [
+                "o0"
+              ],
+              "steps": [
+                {
+                  "event_id": "o1",
+                  "elapsed_ms": 138.0221659928793,
+                  "input_faces": 1392,
+                  "output": "difference_0.obj",
+                  "log": "difference_0.log"
+                }
+              ],
+              "elapsed_ms": 159.7457919997396,
+              "full_solid_watertight": true,
+              "full_solid_winding_consistent": true,
+              "full_solid_euler_number": 2,
+              "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+            },
+            "quality": {
+              "vertices": 964,
+              "faces": 1827,
+              "bad_faces": 556,
+              "min_q": 6.297593453307174e-05,
+              "min_angle_deg": 0.002083252659562743,
+              "boundary_edges": 99,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 99,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.0029434389461462374,
+                "p95_mm": 0.00233570508528147,
+                "rms_mm": 0.0009140260720180088,
+                "samples": 2791
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.007626206128052262,
+                "p95_mm": 0.003247769701118196,
+                "rms_mm": 0.0014055944489903504,
+                "samples": 2791
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.002943083609891001,
+                "p95_mm": 0.0020027890814085037,
+                "rms_mm": 0.0007487781578402526,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          }
+        },
+        "observed_comparison": {
+          "maintenance_reduced_raw_bad_faces": false,
+          "source_fitting_reduced_raw_bad_faces": false,
+          "source_fitting_did_not_move_passing_grid": true,
+          "maintained_candidate_bad_faces_not_more_than_baseline": true,
+          "maintained_candidate_sampled_max_not_more_than_baseline": true,
+          "maintained_candidate_faster_in_this_run": false,
+          "source_fitted_has_fewer_bad_faces_than_geogram": true
+        },
+        "checks": {
+          "dense_target_scope_valid": true,
+          "candidate_scope_valid": true,
+          "candidate_mesh_nonempty": true,
+          "source_fitted_mesh_nonempty": true,
+          "baseline_mesh_nonempty": true,
+          "geogram_mesh_nonempty": true,
+          "geogram_full_solid_valid": true
+        },
+        "passed": true,
+        "conclusion_scope": "这是解析倾斜输入上的受限候选、既有质量维护、普通工程基线和Geogram精确网格CSG比较；Geogram承担几何布尔角色，其离散工具与未维护输出不代表质量优化方法；结果不外推到真实骨面、内部空腔或一般非单值拓扑"
+      },
+      {
+        "case_id": "heldout_tilted_repeat_cross",
+        "input": {
+          "xy_bounds_mm": [
+            -2.0,
+            2.0,
+            -2.0,
+            2.0
+          ],
+          "z_bounds_mm": [
+            -0.9,
+            0.9
+          ],
+          "method_spacing_mm": 0.1,
+          "dense_target_spacing_mm": 0.025,
+          "primitive_count": 5,
+          "parameter_policy": {
+            "development_case": "tilted_crossing_paths",
+            "candidate_xy_spacing_mm": 0.1,
+            "maintenance_target_length_mm": 0.12,
+            "maintenance_iterations": 3,
+            "maintenance_feature_angle_deg": 30.0,
+            "maintenance_surface_budget_mm": 0.025,
+            "note": "参数只由开发案例和项目既有重网格规则确定，评测案例首轮运行后不回调"
+          }
+        },
+        "common_target": {
+          "kind": "解析倾斜平面减实际胶囊运动后的外表面下包络",
+          "mesh": "heldout_tilted_repeat_cross_dense_target.vtp",
+          "diagnostics": {
+            "sample_count": 25921,
+            "cut_sample_count": 9159,
+            "internal_cavity_sample_count": 0,
+            "all_removed_intervals_top_connected": true,
+            "connection_iterations": 2,
+            "grid_dimensions_xy": [
+              161,
+              161
+            ],
+            "spacing_mm": 0.025,
+            "cell_center_sample_count": 25600,
+            "cell_center_internal_cavity_sample_count": 0,
+            "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+            "first_diagonal_cells": 20022,
+            "second_diagonal_cells": 5578
+          },
+          "warning": "密集目标网格只用于抽样近邻测量，不是严格误差证书"
+        },
+        "methods": {
+          "analytic_height_raw": {
+            "role": "解析单值候选的生成消融",
+            "scope": "仅在每条竖线上的实际去除区间都与外表面连通、剩余外表面可写为单值高度时适用；未做质量维护",
+            "mesh": "heldout_tilted_repeat_cross_height_raw.vtp",
+            "elapsed_ms": 2.782374998787418,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 571,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+              "first_diagonal_cells": 1252,
+              "second_diagonal_cells": 348
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 0,
+              "min_q": 0.6712225871808519,
+              "min_angle_deg": 28.144404321828826,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.020384898988853054,
+                "p95_mm": 0.0035266300343154144,
+                "rms_mm": 0.0019777195450774846,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.02017614698394355,
+                "p95_mm": 0.003321502982801707,
+                "rms_mm": 0.0018944846847764002,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.03604669203354619,
+                "p95_mm": 0.003522965572664696,
+                "rms_mm": 0.002173331345479971,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "analytic_height_source_fitted": {
+            "role": "来源切换线约束与局部质量生成候选",
+            "scope": "仅在原始候选质量失败单元内对齐连续来源切换线，并沿三维长方向局部细分；不改动原本通过的单元",
+            "mesh": "heldout_tilted_repeat_cross_height_source_fitted.vtp",
+            "elapsed_ms": 14.334583000163548,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 571,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "source_transition_count": 0,
+              "source_transition_edges_inspected": 0,
+              "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+              "source_transition_max_one_sided_jump_mm": 0.0,
+              "source_transition_continuous": true,
+              "source_transition_continuity_tolerance_mm": 1e-08,
+              "snapped_vertex_count": 0,
+              "maximum_snap_distance_mm": 0.0,
+              "snap_fraction_of_spacing": 0.35,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+              "pre_alignment_bad_cells": 0,
+              "pre_refinement_bad_cells": 0,
+              "split_edge_count": 0,
+              "inserted_midpoint_count": 0,
+              "locally_refined_cell_count": 0,
+              "post_refinement_bad_cells": 0
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 0,
+              "min_q": 0.6712225871808519,
+              "min_angle_deg": 28.144404321828826,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.020384898988853054,
+                "p95_mm": 0.0035266300343154144,
+                "rms_mm": 0.0019777195450774846,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.02017614698394355,
+                "p95_mm": 0.003321502982801707,
+                "rms_mm": 0.0018944846847764002,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.03604669203354619,
+                "p95_mm": 0.003522965572664696,
+                "rms_mm": 0.002173331345479971,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "analytic_height_maintained": {
+            "role": "受限候选方法加项目既有各向同性质量维护",
+            "scope": "解析单值候选生成后，使用开发案例固定的PyMeshLab参数维护；不支持内部空腔或非单值拓扑",
+            "mesh": "heldout_tilted_repeat_cross_height_maintained.vtp",
+            "elapsed_ms": 21.37708400550764,
+            "diagnostics": {
+              "generation": {
+                "sample_count": 1681,
+                "cut_sample_count": 571,
+                "internal_cavity_sample_count": 0,
+                "all_removed_intervals_top_connected": true,
+                "connection_iterations": 2,
+                "grid_dimensions_xy": [
+                  41,
+                  41
+                ],
+                "spacing_mm": 0.1,
+                "cell_center_sample_count": 1600,
+                "cell_center_internal_cavity_sample_count": 0,
+                "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+                "first_diagonal_cells": 1252,
+                "second_diagonal_cells": 348
+              },
+              "maintenance": {
+                "elapsed_ms": 18.594709006720223,
+                "target_length_mm": 0.12,
+                "iterations": 3,
+                "feature_angle_deg": 30.0,
+                "surface_budget_mm": 0.025,
+                "implementation": "PyMeshLab meshing_isotropic_explicit_remeshing"
+              },
+              "all_removed_intervals_top_connected": true
+            },
+            "quality": {
+              "vertices": 1687,
+              "faces": 3212,
+              "bad_faces": 0,
+              "min_q": 0.743760233738445,
+              "min_angle_deg": 34.71897886217648,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 20
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02311952595437025,
+                "p95_mm": 0.004170565636369947,
+                "rms_mm": 0.002214139917610244,
+                "samples": 4899
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.02288276994208041,
+                "p95_mm": 0.0039771191860850045,
+                "rms_mm": 0.0021233439502413355,
+                "samples": 4899
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.0382413965034163,
+                "p95_mm": 0.004124238714477739,
+                "rms_mm": 0.0024435489975953065,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "topology"
+            ],
+            "accepted_for_this_case": false
+          },
+          "implicit_contour_baseline": {
+            "role": "项目既有普通工程基线，非作者强基线",
+            "scope": "规则三维体素采样加VTK等值面提取",
+            "mesh": "heldout_tilted_repeat_cross_implicit_contour.vtp",
+            "elapsed_ms": 5.177708007977344,
+            "diagnostics": {
+              "grid_dimensions_xyz": [
+                41,
+                41,
+                19
+              ],
+              "spacing_mm": 0.1,
+              "elapsed_ms": 5.177708007977344
+            },
+            "quality": {
+              "vertices": 2247,
+              "faces": 4316,
+              "bad_faces": 868,
+              "min_q": 0.002806096600110503,
+              "min_angle_deg": 0.09282511623170726,
+              "boundary_edges": 176,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 176,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02812242831272571,
+                "p95_mm": 0.003937780355993772,
+                "rms_mm": 0.002371804094550515,
+                "samples": 6563
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.028339170487382347,
+                "p95_mm": 0.0037580022494247797,
+                "rms_mm": 0.002286873990243594,
+                "samples": 6563
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.036211617116788816,
+                "p95_mm": 0.003981914428519223,
+                "rms_mm": 0.0025899039006497962,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "geogram_exact_csg": {
+            "role": "正式竞争性几何布尔基线",
+            "scope": "TOG 2025作者Geogram默认精确网格CSG；输入工具为固定subdivisions=3的离散胶囊，结果不附加质量维护",
+            "mesh": "heldout_tilted_repeat_cross_geogram_exact_csg.vtp",
+            "elapsed_ms": 251.56041599984746,
+            "diagnostics": {
+              "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+              "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+              "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+              "doi": "10.1145/3744642",
+              "repository": "https://github.com/BrunoLevy/geogram",
+              "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+              "license": "BSD-3-Clause",
+              "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "binary_sha256": "1cd1332696eb98bf50e85caf16001f01d714924da7b1d1160ed42454bc7e4fcb",
+              "tool_discretization": "icosphere subdivisions=3",
+              "input_primitive_count": 5,
+              "effective_primitive_count": 2,
+              "redundant_contained_event_ids": [
+                "r0",
+                "r2",
+                "c0"
+              ],
+              "steps": [
+                {
+                  "event_id": "r1",
+                  "elapsed_ms": 152.30187500128523,
+                  "input_faces": 1380,
+                  "output": "difference_0.obj",
+                  "log": "difference_0.log"
+                },
+                {
+                  "event_id": "c1",
+                  "elapsed_ms": 73.93420800508466,
+                  "input_faces": 1396,
+                  "output": "difference_1.obj",
+                  "log": "difference_1.log"
+                }
+              ],
+              "elapsed_ms": 251.56041599984746,
+              "full_solid_watertight": true,
+              "full_solid_winding_consistent": true,
+              "full_solid_euler_number": 2,
+              "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+            },
+            "quality": {
+              "vertices": 1135,
+              "faces": 2170,
+              "bad_faces": 861,
+              "min_q": 0.0007011104543446548,
+              "min_angle_deg": 0.023192550808026884,
+              "boundary_edges": 98,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 98,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.0032604246788081603,
+                "p95_mm": 0.0026968156431550483,
+                "rms_mm": 0.0014087798928677851,
+                "samples": 3305
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.01068687744206338,
+                "p95_mm": 0.004647152397234712,
+                "rms_mm": 0.0020610380808058076,
+                "samples": 3305
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.003222555086165998,
+                "p95_mm": 0.0025079676083870424,
+                "rms_mm": 0.0011636361117845113,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          }
+        },
+        "observed_comparison": {
+          "maintenance_reduced_raw_bad_faces": false,
+          "source_fitting_reduced_raw_bad_faces": false,
+          "source_fitting_did_not_move_passing_grid": true,
+          "maintained_candidate_bad_faces_not_more_than_baseline": true,
+          "maintained_candidate_sampled_max_not_more_than_baseline": false,
+          "maintained_candidate_faster_in_this_run": false,
+          "source_fitted_has_fewer_bad_faces_than_geogram": true
+        },
+        "checks": {
+          "dense_target_scope_valid": true,
+          "candidate_scope_valid": true,
+          "candidate_mesh_nonempty": true,
+          "source_fitted_mesh_nonempty": true,
+          "baseline_mesh_nonempty": true,
+          "geogram_mesh_nonempty": true,
+          "geogram_full_solid_valid": true
+        },
+        "passed": true,
+        "conclusion_scope": "这是解析倾斜输入上的受限候选、既有质量维护、普通工程基线和Geogram精确网格CSG比较；Geogram承担几何布尔角色，其离散工具与未维护输出不代表质量优化方法；结果不外推到真实骨面、内部空腔或一般非单值拓扑",
+        "repeat_path_max_field_delta_mm": 4.440892098500626e-16,
+        "repeat_path_invariant_pass": true
+      },
+      {
+        "case_id": "heldout_tilted_depth_change",
+        "input": {
+          "xy_bounds_mm": [
+            -2.0,
+            2.0,
+            -2.0,
+            2.0
+          ],
+          "z_bounds_mm": [
+            -0.9,
+            0.9
+          ],
+          "method_spacing_mm": 0.1,
+          "dense_target_spacing_mm": 0.025,
+          "primitive_count": 3,
+          "parameter_policy": {
+            "development_case": "tilted_crossing_paths",
+            "candidate_xy_spacing_mm": 0.1,
+            "maintenance_target_length_mm": 0.12,
+            "maintenance_iterations": 3,
+            "maintenance_feature_angle_deg": 30.0,
+            "maintenance_surface_budget_mm": 0.025,
+            "note": "参数只由开发案例和项目既有重网格规则确定，评测案例首轮运行后不回调"
+          }
+        },
+        "common_target": {
+          "kind": "解析倾斜平面减实际胶囊运动后的外表面下包络",
+          "mesh": "heldout_tilted_depth_change_dense_target.vtp",
+          "diagnostics": {
+            "sample_count": 25921,
+            "cut_sample_count": 5965,
+            "internal_cavity_sample_count": 0,
+            "all_removed_intervals_top_connected": true,
+            "connection_iterations": 2,
+            "grid_dimensions_xy": [
+              161,
+              161
+            ],
+            "spacing_mm": 0.025,
+            "cell_center_sample_count": 25600,
+            "cell_center_internal_cavity_sample_count": 0,
+            "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+            "first_diagonal_cells": 23458,
+            "second_diagonal_cells": 2142
+          },
+          "warning": "密集目标网格只用于抽样近邻测量，不是严格误差证书"
+        },
+        "methods": {
+          "analytic_height_raw": {
+            "role": "解析单值候选的生成消融",
+            "scope": "仅在每条竖线上的实际去除区间都与外表面连通、剩余外表面可写为单值高度时适用；未做质量维护",
+            "mesh": "heldout_tilted_depth_change_height_raw.vtp",
+            "elapsed_ms": 2.3585839953739196,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 374,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+              "first_diagonal_cells": 1522,
+              "second_diagonal_cells": 78
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 0,
+              "min_q": 0.5929480082797554,
+              "min_angle_deg": 25.62860862633422,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02276919069054084,
+                "p95_mm": 0.002764342759386529,
+                "rms_mm": 0.0016775587594718582,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.019799622715659895,
+                "p95_mm": 0.002660063229748073,
+                "rms_mm": 0.0015992135458731225,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.027565849846989874,
+                "p95_mm": 0.002613032387948681,
+                "rms_mm": 0.0018211915747897726,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "analytic_height_source_fitted": {
+            "role": "来源切换线约束与局部质量生成候选",
+            "scope": "仅在原始候选质量失败单元内对齐连续来源切换线，并沿三维长方向局部细分；不改动原本通过的单元",
+            "mesh": "heldout_tilted_depth_change_height_source_fitted.vtp",
+            "elapsed_ms": 13.7386249989504,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 374,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "source_transition_count": 0,
+              "source_transition_edges_inspected": 0,
+              "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+              "source_transition_max_one_sided_jump_mm": 0.0,
+              "source_transition_continuous": true,
+              "source_transition_continuity_tolerance_mm": 1e-08,
+              "snapped_vertex_count": 0,
+              "maximum_snap_distance_mm": 0.0,
+              "snap_fraction_of_spacing": 0.35,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+              "pre_alignment_bad_cells": 0,
+              "pre_refinement_bad_cells": 0,
+              "split_edge_count": 0,
+              "inserted_midpoint_count": 0,
+              "locally_refined_cell_count": 0,
+              "post_refinement_bad_cells": 0
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 0,
+              "min_q": 0.5929480082797554,
+              "min_angle_deg": 25.62860862633422,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02276919069054084,
+                "p95_mm": 0.002764342759386529,
+                "rms_mm": 0.0016775587594718582,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.019799622715659895,
+                "p95_mm": 0.002660063229748073,
+                "rms_mm": 0.0015992135458731225,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.027565849846989874,
+                "p95_mm": 0.002613032387948681,
+                "rms_mm": 0.0018211915747897726,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "analytic_height_maintained": {
+            "role": "受限候选方法加项目既有各向同性质量维护",
+            "scope": "解析单值候选生成后，使用开发案例固定的PyMeshLab参数维护；不支持内部空腔或非单值拓扑",
+            "mesh": "heldout_tilted_depth_change_height_maintained.vtp",
+            "elapsed_ms": 20.37566799845081,
+            "diagnostics": {
+              "generation": {
+                "sample_count": 1681,
+                "cut_sample_count": 374,
+                "internal_cavity_sample_count": 0,
+                "all_removed_intervals_top_connected": true,
+                "connection_iterations": 2,
+                "grid_dimensions_xy": [
+                  41,
+                  41
+                ],
+                "spacing_mm": 0.1,
+                "cell_center_sample_count": 1600,
+                "cell_center_internal_cavity_sample_count": 0,
+                "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+                "first_diagonal_cells": 1522,
+                "second_diagonal_cells": 78
+              },
+              "maintenance": {
+                "elapsed_ms": 18.01708400307689,
+                "target_length_mm": 0.12,
+                "iterations": 3,
+                "feature_angle_deg": 30.0,
+                "surface_budget_mm": 0.025,
+                "implementation": "PyMeshLab meshing_isotropic_explicit_remeshing"
+              },
+              "all_removed_intervals_top_connected": true
+            },
+            "quality": {
+              "vertices": 1690,
+              "faces": 3218,
+              "bad_faces": 1,
+              "min_q": 0.6483284211946392,
+              "min_angle_deg": 24.898052506072393,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 4
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02857864558356349,
+                "p95_mm": 0.003342850885473654,
+                "rms_mm": 0.0018870141207678849,
+                "samples": 4908
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.026997873476730334,
+                "p95_mm": 0.003174658047163432,
+                "rms_mm": 0.0018000663801615309,
+                "samples": 4908
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.028372352212789508,
+                "p95_mm": 0.003218267045268617,
+                "rms_mm": 0.0020042568479807844,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality",
+              "topology"
+            ],
+            "accepted_for_this_case": false
+          },
+          "implicit_contour_baseline": {
+            "role": "项目既有普通工程基线，非作者强基线",
+            "scope": "规则三维体素采样加VTK等值面提取",
+            "mesh": "heldout_tilted_depth_change_implicit_contour.vtp",
+            "elapsed_ms": 3.448749994277023,
+            "diagnostics": {
+              "grid_dimensions_xyz": [
+                41,
+                41,
+                19
+              ],
+              "spacing_mm": 0.1,
+              "elapsed_ms": 3.448749994277023
+            },
+            "quality": {
+              "vertices": 2273,
+              "faces": 4368,
+              "bad_faces": 923,
+              "min_q": 0.0,
+              "min_angle_deg": 0.0,
+              "boundary_edges": 176,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 176,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02845428720116614,
+                "p95_mm": 0.0031730054022583998,
+                "rms_mm": 0.0019424353808273724,
+                "samples": 6641
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.027868248784040196,
+                "p95_mm": 0.002982420626087439,
+                "rms_mm": 0.0018474801619271244,
+                "samples": 6641
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.03118139389309592,
+                "p95_mm": 0.0028291856897021085,
+                "rms_mm": 0.0019721101429642294,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "geogram_exact_csg": {
+            "role": "正式竞争性几何布尔基线",
+            "scope": "TOG 2025作者Geogram默认精确网格CSG；输入工具为固定subdivisions=3的离散胶囊，结果不附加质量维护",
+            "mesh": "heldout_tilted_depth_change_geogram_exact_csg.vtp",
+            "elapsed_ms": 212.55266599473543,
+            "diagnostics": {
+              "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+              "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+              "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+              "doi": "10.1145/3744642",
+              "repository": "https://github.com/BrunoLevy/geogram",
+              "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+              "license": "BSD-3-Clause",
+              "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "binary_sha256": "1cd1332696eb98bf50e85caf16001f01d714924da7b1d1160ed42454bc7e4fcb",
+              "tool_discretization": "icosphere subdivisions=3",
+              "input_primitive_count": 3,
+              "effective_primitive_count": 2,
+              "redundant_contained_event_ids": [
+                "d0"
+              ],
+              "steps": [
+                {
+                  "event_id": "d1",
+                  "elapsed_ms": 131.59345799067523,
+                  "input_faces": 1384,
+                  "output": "difference_0.obj",
+                  "log": "difference_0.log"
+                },
+                {
+                  "event_id": "d2",
+                  "elapsed_ms": 60.584834005567245,
+                  "input_faces": 1380,
+                  "output": "difference_1.obj",
+                  "log": "difference_1.log"
+                }
+              ],
+              "elapsed_ms": 212.55266599473543,
+              "full_solid_watertight": true,
+              "full_solid_winding_consistent": true,
+              "full_solid_euler_number": 2,
+              "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+            },
+            "quality": {
+              "vertices": 986,
+              "faces": 1856,
+              "bad_faces": 606,
+              "min_q": 7.870621112129533e-16,
+              "min_angle_deg": 0.0,
+              "boundary_edges": 122,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 122,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 5
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.003396275707091667,
+                "p95_mm": 0.0027234933748084777,
+                "rms_mm": 0.001156405953252863,
+                "samples": 2842
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.011264390197534824,
+                "p95_mm": 0.004267481348730026,
+                "rms_mm": 0.0018563424910741494,
+                "samples": 2842
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.003354460239091215,
+                "p95_mm": 0.0025037244839278567,
+                "rms_mm": 0.0009827247166031626,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality",
+              "topology"
+            ],
+            "accepted_for_this_case": false
+          }
+        },
+        "observed_comparison": {
+          "maintenance_reduced_raw_bad_faces": false,
+          "source_fitting_reduced_raw_bad_faces": false,
+          "source_fitting_did_not_move_passing_grid": true,
+          "maintained_candidate_bad_faces_not_more_than_baseline": true,
+          "maintained_candidate_sampled_max_not_more_than_baseline": true,
+          "maintained_candidate_faster_in_this_run": false,
+          "source_fitted_has_fewer_bad_faces_than_geogram": true
+        },
+        "checks": {
+          "dense_target_scope_valid": true,
+          "candidate_scope_valid": true,
+          "candidate_mesh_nonempty": true,
+          "source_fitted_mesh_nonempty": true,
+          "baseline_mesh_nonempty": true,
+          "geogram_mesh_nonempty": true,
+          "geogram_full_solid_valid": true
+        },
+        "passed": true,
+        "conclusion_scope": "这是解析倾斜输入上的受限候选、既有质量维护、普通工程基线和Geogram精确网格CSG比较；Geogram承担几何布尔角色，其离散工具与未维护输出不代表质量优化方法；结果不外推到真实骨面、内部空腔或一般非单值拓扑"
+      }
+    ],
+    "all_experiments_completed": true,
+    "raw_candidate_accepted": 3,
+    "source_fitted_candidate_accepted": 3,
+    "maintained_candidate_accepted": 1,
+    "implicit_baseline_accepted": 0,
+    "geogram_baseline_completed": 3,
+    "geogram_baseline_accepted": 0,
+    "unconditional_maintenance_regressions": 2,
+    "recommended_policy": "原始解析候选通过时不改动；仅对质量失败单元启用来源切换线对齐和局部质量生成，复核几何与拓扑后发布。固定各向同性维护在冻结评测中引入自交，仍不得自动回灌"
+  },
+  "quality_failure_challenge": {
+    "frozen_before_source_fitted_run": "2026-09-17 23:49:00",
+    "screening": {
+      "purpose": "使用密集适用域检查和原始候选质量筛出失败路线，冻结后才允许运行来源切换局部生成",
+      "raw_only_screening": true,
+      "source_fitted_not_run_before_freeze": true,
+      "surface_methods_sha256": "7cafaeeec447484c0536c6bf59f18b81ff705c90e0c3045d0530572175171c5c",
+      "supersedes_input": "quality_failure_cases.json",
+      "superseded_input_reason": "第一版只在0.1 mm候选网格检查适用域，其中两例被0.025 mm密集检查检出内部空腔",
+      "previously_executed_generation_indices_excluded": [
+        30,
+        138,
+        240,
+        348
+      ],
+      "xy_bounds_mm": [
+        -2.0,
+        2.0,
+        -2.0,
+        2.0
+      ],
+      "candidate_spacing_mm": 0.1,
+      "dense_scope_spacing_mm": 0.025,
+      "cartesian_parameter_order": [
+        "plane_a",
+        "plane_b",
+        "tool_radius_mm",
+        "path_shift_mm",
+        "endpoint_z_delta_mm"
+      ],
+      "cartesian_parameters": {
+        "plane_a": [
+          0.11,
+          0.15,
+          0.19,
+          0.23
+        ],
+        "plane_b": [
+          -0.14,
+          -0.1,
+          -0.06
+        ],
+        "tool_radius_mm": [
+          0.66,
+          0.7,
+          0.74
+        ],
+        "path_shift_mm": [
+          -0.06,
+          -0.02,
+          0.02,
+          0.06
+        ],
+        "endpoint_z_delta_mm": [
+          -0.04,
+          0.0,
+          0.04
+        ]
+      },
+      "screened_case_count": 432,
+      "raw_failure_count": 256,
+      "dense_scope_raw_failure_count": 214,
+      "selection_rule": "排除第一版已经执行来源修复的编号后，每个plane_a层选择密集适用域内raw bad_faces最多的路线，并列时取笛卡尔积生成编号最小者",
+      "selected_generation_indices": [
+        15,
+        132,
+        247,
+        356
+      ]
+    },
+    "parameter_policy": {
+      "development_case": "tilted_crossing_paths",
+      "candidate_xy_spacing_mm": 0.1,
+      "maintenance_target_length_mm": 0.12,
+      "maintenance_iterations": 3,
+      "maintenance_feature_angle_deg": 30.0,
+      "maintenance_surface_budget_mm": 0.025,
+      "note": "来源规则与门槛继承第二批第二轮，冻结后不得按本批结果回调",
+      "dense_target_spacing_mm": 0.025,
+      "quality_min_angle_deg": 25.0,
+      "quality_min_q": 0.4,
+      "sampled_geometry_budget_mm": 0.1,
+      "source_snap_fraction": 0.35
+    },
+    "cases": [
+      {
+        "case_id": "challenge_v2_raw_failure_a011",
+        "input": {
+          "xy_bounds_mm": [
+            -2.0,
+            2.0,
+            -2.0,
+            2.0
+          ],
+          "z_bounds_mm": [
+            -0.9,
+            0.9
+          ],
+          "method_spacing_mm": 0.1,
+          "dense_target_spacing_mm": 0.025,
+          "primitive_count": 4,
+          "parameter_policy": {
+            "development_case": "tilted_crossing_paths",
+            "candidate_xy_spacing_mm": 0.1,
+            "maintenance_target_length_mm": 0.12,
+            "maintenance_iterations": 3,
+            "maintenance_feature_angle_deg": 30.0,
+            "maintenance_surface_budget_mm": 0.025,
+            "note": "来源规则与门槛继承第二批第二轮，冻结后不得按本批结果回调",
+            "dense_target_spacing_mm": 0.025,
+            "quality_min_angle_deg": 25.0,
+            "quality_min_q": 0.4,
+            "sampled_geometry_budget_mm": 0.1,
+            "source_snap_fraction": 0.35
+          }
+        },
+        "common_target": {
+          "kind": "解析倾斜平面减实际胶囊运动后的外表面下包络",
+          "mesh": "challenge_v2_raw_failure_a011_dense_target.vtp",
+          "diagnostics": {
+            "sample_count": 25921,
+            "cut_sample_count": 8899,
+            "internal_cavity_sample_count": 0,
+            "all_removed_intervals_top_connected": true,
+            "connection_iterations": 2,
+            "grid_dimensions_xy": [
+              161,
+              161
+            ],
+            "spacing_mm": 0.025,
+            "cell_center_sample_count": 25600,
+            "cell_center_internal_cavity_sample_count": 0,
+            "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+            "first_diagonal_cells": 20218,
+            "second_diagonal_cells": 5382
+          },
+          "warning": "密集目标网格只用于抽样近邻测量，不是严格误差证书"
+        },
+        "methods": {
+          "analytic_height_raw": {
+            "role": "解析单值候选的生成消融",
+            "scope": "仅在每条竖线上的实际去除区间都与外表面连通、剩余外表面可写为单值高度时适用；未做质量维护",
+            "mesh": "challenge_v2_raw_failure_a011_height_raw.vtp",
+            "elapsed_ms": 2.667374996235594,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 560,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+              "first_diagonal_cells": 1290,
+              "second_diagonal_cells": 310
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 14,
+              "min_q": 0.6108836048144158,
+              "min_angle_deg": 22.587809731392138,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02862669163545012,
+                "p95_mm": 0.0040355485627020515,
+                "rms_mm": 0.0023132940528560273,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.028183468791908306,
+                "p95_mm": 0.003815513583002966,
+                "rms_mm": 0.002206083425175581,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.03758914960100765,
+                "p95_mm": 0.0038891746345253502,
+                "rms_mm": 0.002533811540461929,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "analytic_height_source_fitted": {
+            "role": "来源切换线约束与局部质量生成候选",
+            "scope": "仅在原始候选质量失败单元内对齐连续来源切换线，并沿三维长方向局部细分；不改动原本通过的单元",
+            "mesh": "challenge_v2_raw_failure_a011_height_source_fitted.vtp",
+            "elapsed_ms": 127.60666699614376,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 562,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "source_transition_count": 9,
+              "source_transition_edges_inspected": 23,
+              "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+              "source_transition_max_one_sided_jump_mm": 1.0010325901532724e-12,
+              "source_transition_continuous": true,
+              "source_transition_continuity_tolerance_mm": 1e-08,
+              "snapped_vertex_count": 5,
+              "maximum_snap_distance_mm": 0.02999939744950164,
+              "snap_fraction_of_spacing": 0.35,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+              "pre_alignment_bad_cells": 7,
+              "pre_refinement_bad_cells": 7,
+              "split_edge_count": 9,
+              "inserted_midpoint_count": 9,
+              "locally_refined_cell_count": 11,
+              "post_refinement_bad_cells": 0
+            },
+            "quality": {
+              "vertices": 1690,
+              "faces": 3218,
+              "bad_faces": 0,
+              "min_q": 0.6108836048144158,
+              "min_angle_deg": 26.33232463261549,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02862669163545012,
+                "p95_mm": 0.0040355485627020515,
+                "rms_mm": 0.0022521372179765842,
+                "samples": 4908
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.028183468791908306,
+                "p95_mm": 0.003806718748953536,
+                "rms_mm": 0.002148416881423532,
+                "samples": 4908
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.03758914960100765,
+                "p95_mm": 0.003750141292798589,
+                "rms_mm": 0.0024651267577981053,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "analytic_height_maintained": {
+            "role": "受限候选方法加项目既有各向同性质量维护",
+            "scope": "解析单值候选生成后，使用开发案例固定的PyMeshLab参数维护；不支持内部空腔或非单值拓扑",
+            "mesh": "challenge_v2_raw_failure_a011_height_maintained.vtp",
+            "elapsed_ms": 21.466207996127196,
+            "diagnostics": {
+              "generation": {
+                "sample_count": 1681,
+                "cut_sample_count": 560,
+                "internal_cavity_sample_count": 0,
+                "all_removed_intervals_top_connected": true,
+                "connection_iterations": 2,
+                "grid_dimensions_xy": [
+                  41,
+                  41
+                ],
+                "spacing_mm": 0.1,
+                "cell_center_sample_count": 1600,
+                "cell_center_internal_cavity_sample_count": 0,
+                "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+                "first_diagonal_cells": 1290,
+                "second_diagonal_cells": 310
+              },
+              "maintenance": {
+                "elapsed_ms": 18.7988329998916,
+                "target_length_mm": 0.12,
+                "iterations": 3,
+                "feature_angle_deg": 30.0,
+                "surface_budget_mm": 0.025,
+                "implementation": "PyMeshLab meshing_isotropic_explicit_remeshing"
+              },
+              "all_removed_intervals_top_connected": true
+            },
+            "quality": {
+              "vertices": 1708,
+              "faces": 3254,
+              "bad_faces": 0,
+              "min_q": 0.6502565986282187,
+              "min_angle_deg": 25.72735313455909,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02862669163545012,
+                "p95_mm": 0.005345161855439536,
+                "rms_mm": 0.002635664811056312,
+                "samples": 4962
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.028183468791908306,
+                "p95_mm": 0.005119547517157283,
+                "rms_mm": 0.0025126759029289016,
+                "samples": 4962
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.03758914960100765,
+                "p95_mm": 0.004672461766341285,
+                "rms_mm": 0.002703367491100623,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "implicit_contour_baseline": {
+            "role": "项目既有普通工程基线，非作者强基线",
+            "scope": "规则三维体素采样加VTK等值面提取",
+            "mesh": "challenge_v2_raw_failure_a011_implicit_contour.vtp",
+            "elapsed_ms": 4.393541006720625,
+            "diagnostics": {
+              "grid_dimensions_xyz": [
+                41,
+                41,
+                19
+              ],
+              "spacing_mm": 0.1,
+              "elapsed_ms": 4.393541006720625
+            },
+            "quality": {
+              "vertices": 2401,
+              "faces": 4622,
+              "bad_faces": 1049,
+              "min_q": 0.0,
+              "min_angle_deg": 0.0,
+              "boundary_edges": 178,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 178,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.027490918639007544,
+                "p95_mm": 0.00408780215091946,
+                "rms_mm": 0.002454846904704277,
+                "samples": 7023
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.02650269764889244,
+                "p95_mm": 0.0038552285452017354,
+                "rms_mm": 0.002305082948535001,
+                "samples": 7023
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.03713071834736099,
+                "p95_mm": 0.003930026052560278,
+                "rms_mm": 0.002702275209711274,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "geogram_exact_csg": {
+            "role": "正式竞争性几何布尔基线",
+            "scope": "TOG 2025作者Geogram默认精确网格CSG；输入工具为固定subdivisions=3的离散胶囊，结果不附加质量维护",
+            "mesh": "challenge_v2_raw_failure_a011_geogram_exact_csg.vtp",
+            "elapsed_ms": 227.59112500352785,
+            "diagnostics": {
+              "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+              "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+              "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+              "doi": "10.1145/3744642",
+              "repository": "https://github.com/BrunoLevy/geogram",
+              "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+              "license": "BSD-3-Clause",
+              "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "binary_sha256": "1cd1332696eb98bf50e85caf16001f01d714924da7b1d1160ed42454bc7e4fcb",
+              "tool_discretization": "icosphere subdivisions=3",
+              "input_primitive_count": 4,
+              "effective_primitive_count": 2,
+              "redundant_contained_event_ids": [
+                "a0",
+                "b0"
+              ],
+              "steps": [
+                {
+                  "event_id": "a1",
+                  "elapsed_ms": 136.87133399071172,
+                  "input_faces": 1384,
+                  "output": "difference_0.obj",
+                  "log": "difference_0.log"
+                },
+                {
+                  "event_id": "b1",
+                  "elapsed_ms": 69.73329199536238,
+                  "input_faces": 1384,
+                  "output": "difference_1.obj",
+                  "log": "difference_1.log"
+                }
+              ],
+              "elapsed_ms": 227.59112500352785,
+              "full_solid_watertight": true,
+              "full_solid_winding_consistent": true,
+              "full_solid_euler_number": 2,
+              "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+            },
+            "quality": {
+              "vertices": 1101,
+              "faces": 2105,
+              "bad_faces": 924,
+              "min_q": 0.000353981182533328,
+              "min_angle_deg": 0.01170960390389673,
+              "boundary_edges": 95,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 95,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 29
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.0031698573266190078,
+                "p95_mm": 0.002672852032403944,
+                "rms_mm": 0.0014305339186485026,
+                "samples": 3206
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.014972285485733407,
+                "p95_mm": 0.005851689643235906,
+                "rms_mm": 0.002556036841045499,
+                "samples": 3206
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.0031667124182751254,
+                "p95_mm": 0.0023799601168449824,
+                "rms_mm": 0.0010973164455933026,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality",
+              "topology"
+            ],
+            "accepted_for_this_case": false
+          }
+        },
+        "observed_comparison": {
+          "maintenance_reduced_raw_bad_faces": true,
+          "source_fitting_reduced_raw_bad_faces": true,
+          "source_fitting_did_not_move_passing_grid": true,
+          "maintained_candidate_bad_faces_not_more_than_baseline": true,
+          "maintained_candidate_sampled_max_not_more_than_baseline": false,
+          "maintained_candidate_faster_in_this_run": false,
+          "source_fitted_has_fewer_bad_faces_than_geogram": true
+        },
+        "checks": {
+          "dense_target_scope_valid": true,
+          "candidate_scope_valid": true,
+          "candidate_mesh_nonempty": true,
+          "source_fitted_mesh_nonempty": true,
+          "baseline_mesh_nonempty": true,
+          "geogram_mesh_nonempty": true,
+          "geogram_full_solid_valid": true
+        },
+        "passed": true,
+        "conclusion_scope": "这是解析倾斜输入上的受限候选、既有质量维护、普通工程基线和Geogram精确网格CSG比较；Geogram承担几何布尔角色，其离散工具与未维护输出不代表质量优化方法；结果不外推到真实骨面、内部空腔或一般非单值拓扑",
+        "frozen_raw_checks": {
+          "vertices": true,
+          "faces": true,
+          "bad_faces": true,
+          "min_q": true,
+          "min_angle_deg": true,
+          "all_removed_intervals_top_connected": true
+        }
+      },
+      {
+        "case_id": "challenge_v2_raw_failure_a015",
+        "input": {
+          "xy_bounds_mm": [
+            -2.0,
+            2.0,
+            -2.0,
+            2.0
+          ],
+          "z_bounds_mm": [
+            -0.9,
+            0.9
+          ],
+          "method_spacing_mm": 0.1,
+          "dense_target_spacing_mm": 0.025,
+          "primitive_count": 4,
+          "parameter_policy": {
+            "development_case": "tilted_crossing_paths",
+            "candidate_xy_spacing_mm": 0.1,
+            "maintenance_target_length_mm": 0.12,
+            "maintenance_iterations": 3,
+            "maintenance_feature_angle_deg": 30.0,
+            "maintenance_surface_budget_mm": 0.025,
+            "note": "来源规则与门槛继承第二批第二轮，冻结后不得按本批结果回调",
+            "dense_target_spacing_mm": 0.025,
+            "quality_min_angle_deg": 25.0,
+            "quality_min_q": 0.4,
+            "sampled_geometry_budget_mm": 0.1,
+            "source_snap_fraction": 0.35
+          }
+        },
+        "common_target": {
+          "kind": "解析倾斜平面减实际胶囊运动后的外表面下包络",
+          "mesh": "challenge_v2_raw_failure_a015_dense_target.vtp",
+          "diagnostics": {
+            "sample_count": 25921,
+            "cut_sample_count": 10050,
+            "internal_cavity_sample_count": 0,
+            "all_removed_intervals_top_connected": true,
+            "connection_iterations": 2,
+            "grid_dimensions_xy": [
+              161,
+              161
+            ],
+            "spacing_mm": 0.025,
+            "cell_center_sample_count": 25600,
+            "cell_center_internal_cavity_sample_count": 0,
+            "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+            "first_diagonal_cells": 19864,
+            "second_diagonal_cells": 5736
+          },
+          "warning": "密集目标网格只用于抽样近邻测量，不是严格误差证书"
+        },
+        "methods": {
+          "analytic_height_raw": {
+            "role": "解析单值候选的生成消融",
+            "scope": "仅在每条竖线上的实际去除区间都与外表面连通、剩余外表面可写为单值高度时适用；未做质量维护",
+            "mesh": "challenge_v2_raw_failure_a015_height_raw.vtp",
+            "elapsed_ms": 2.6122090057469904,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 626,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+              "first_diagonal_cells": 1256,
+              "second_diagonal_cells": 344
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 19,
+              "min_q": 0.4748687647497046,
+              "min_angle_deg": 16.63936704890643,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.03219842430559272,
+                "p95_mm": 0.0039000926031107497,
+                "rms_mm": 0.0024051734802753647,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.02886135735380939,
+                "p95_mm": 0.003773853653172178,
+                "rms_mm": 0.002267211077347687,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.04374846229504201,
+                "p95_mm": 0.003830751387510091,
+                "rms_mm": 0.0026828570035625147,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "analytic_height_source_fitted": {
+            "role": "来源切换线约束与局部质量生成候选",
+            "scope": "仅在原始候选质量失败单元内对齐连续来源切换线，并沿三维长方向局部细分；不改动原本通过的单元",
+            "mesh": "challenge_v2_raw_failure_a015_height_source_fitted.vtp",
+            "elapsed_ms": 157.897833007155,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 631,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "source_transition_count": 12,
+              "source_transition_edges_inspected": 32,
+              "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+              "source_transition_max_one_sided_jump_mm": 1.0058620603103918e-12,
+              "source_transition_continuous": true,
+              "source_transition_continuity_tolerance_mm": 1e-08,
+              "snapped_vertex_count": 8,
+              "maximum_snap_distance_mm": 0.02151396486458723,
+              "snap_fraction_of_spacing": 0.35,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+              "pre_alignment_bad_cells": 10,
+              "pre_refinement_bad_cells": 8,
+              "split_edge_count": 10,
+              "inserted_midpoint_count": 10,
+              "locally_refined_cell_count": 12,
+              "post_refinement_bad_cells": 2
+            },
+            "quality": {
+              "vertices": 1691,
+              "faces": 3220,
+              "bad_faces": 4,
+              "min_q": 0.6496154446488802,
+              "min_angle_deg": 24.315192112185322,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.03413275374183844,
+                "p95_mm": 0.004008977362828348,
+                "rms_mm": 0.002374578152888965,
+                "samples": 4911
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.029110651588359005,
+                "p95_mm": 0.0038660911275776996,
+                "rms_mm": 0.0022597382253829743,
+                "samples": 4911
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.04374846229504201,
+                "p95_mm": 0.003745242386338335,
+                "rms_mm": 0.0026059258360213514,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "analytic_height_maintained": {
+            "role": "受限候选方法加项目既有各向同性质量维护",
+            "scope": "解析单值候选生成后，使用开发案例固定的PyMeshLab参数维护；不支持内部空腔或非单值拓扑",
+            "mesh": "challenge_v2_raw_failure_a015_height_maintained.vtp",
+            "elapsed_ms": 22.493292010040022,
+            "diagnostics": {
+              "generation": {
+                "sample_count": 1681,
+                "cut_sample_count": 626,
+                "internal_cavity_sample_count": 0,
+                "all_removed_intervals_top_connected": true,
+                "connection_iterations": 2,
+                "grid_dimensions_xy": [
+                  41,
+                  41
+                ],
+                "spacing_mm": 0.1,
+                "cell_center_sample_count": 1600,
+                "cell_center_internal_cavity_sample_count": 0,
+                "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+                "first_diagonal_cells": 1256,
+                "second_diagonal_cells": 344
+              },
+              "maintenance": {
+                "elapsed_ms": 19.881083004293032,
+                "target_length_mm": 0.12,
+                "iterations": 3,
+                "feature_angle_deg": 30.0,
+                "surface_budget_mm": 0.025,
+                "implementation": "PyMeshLab meshing_isotropic_explicit_remeshing"
+              },
+              "all_removed_intervals_top_connected": true
+            },
+            "quality": {
+              "vertices": 1731,
+              "faces": 3300,
+              "bad_faces": 0,
+              "min_q": 0.6969829266303466,
+              "min_angle_deg": 26.588273525071177,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.03441657386773933,
+                "p95_mm": 0.006081072274011723,
+                "rms_mm": 0.0030345717514443063,
+                "samples": 5031
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.033714206042603924,
+                "p95_mm": 0.005879242146589577,
+                "rms_mm": 0.002880081615907876,
+                "samples": 5031
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.04374846229504201,
+                "p95_mm": 0.004674513045572288,
+                "rms_mm": 0.002884411502021596,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [],
+            "accepted_for_this_case": true
+          },
+          "implicit_contour_baseline": {
+            "role": "项目既有普通工程基线，非作者强基线",
+            "scope": "规则三维体素采样加VTK等值面提取",
+            "mesh": "challenge_v2_raw_failure_a015_implicit_contour.vtp",
+            "elapsed_ms": 3.956665997975506,
+            "diagnostics": {
+              "grid_dimensions_xyz": [
+                41,
+                41,
+                19
+              ],
+              "spacing_mm": 0.1,
+              "elapsed_ms": 3.956665997975506
+            },
+            "quality": {
+              "vertices": 2480,
+              "faces": 4780,
+              "bad_faces": 1178,
+              "min_q": 0.0,
+              "min_angle_deg": 0.0,
+              "boundary_edges": 178,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 178,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.026542589647883363,
+                "p95_mm": 0.004110429112553277,
+                "rms_mm": 0.0025608951324132636,
+                "samples": 7260
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.025194456539628967,
+                "p95_mm": 0.0038669519688194895,
+                "rms_mm": 0.002383869026047499,
+                "samples": 7260
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.037508614752858424,
+                "p95_mm": 0.0039566667476717155,
+                "rms_mm": 0.002869257502287215,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "geogram_exact_csg": {
+            "role": "正式竞争性几何布尔基线",
+            "scope": "TOG 2025作者Geogram默认精确网格CSG；输入工具为固定subdivisions=3的离散胶囊，结果不附加质量维护",
+            "mesh": "challenge_v2_raw_failure_a015_geogram_exact_csg.vtp",
+            "elapsed_ms": 235.48145800305065,
+            "diagnostics": {
+              "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+              "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+              "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+              "doi": "10.1145/3744642",
+              "repository": "https://github.com/BrunoLevy/geogram",
+              "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+              "license": "BSD-3-Clause",
+              "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "binary_sha256": "1cd1332696eb98bf50e85caf16001f01d714924da7b1d1160ed42454bc7e4fcb",
+              "tool_discretization": "icosphere subdivisions=3",
+              "input_primitive_count": 4,
+              "effective_primitive_count": 2,
+              "redundant_contained_event_ids": [
+                "a0",
+                "b0"
+              ],
+              "steps": [
+                {
+                  "event_id": "a1",
+                  "elapsed_ms": 148.21191699593328,
+                  "input_faces": 1384,
+                  "output": "difference_0.obj",
+                  "log": "difference_0.log"
+                },
+                {
+                  "event_id": "b1",
+                  "elapsed_ms": 65.64437500492204,
+                  "input_faces": 1384,
+                  "output": "difference_1.obj",
+                  "log": "difference_1.log"
+                }
+              ],
+              "elapsed_ms": 235.48145800305065,
+              "full_solid_watertight": true,
+              "full_solid_winding_consistent": true,
+              "full_solid_euler_number": 2,
+              "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+            },
+            "quality": {
+              "vertices": 1105,
+              "faces": 2097,
+              "bad_faces": 886,
+              "min_q": 0.00025967391990500745,
+              "min_angle_deg": 0.008589944418340986,
+              "boundary_edges": 121,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 121,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 6
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.003350992030997202,
+                "p95_mm": 0.002802906648628134,
+                "rms_mm": 0.0015314498960063941,
+                "samples": 3202
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.015764061040059136,
+                "p95_mm": 0.005855342450647572,
+                "rms_mm": 0.0026144486390736956,
+                "samples": 3202
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.0055156891924405425,
+                "p95_mm": 0.0025346559706970295,
+                "rms_mm": 0.0012347585584050647,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality",
+              "topology"
+            ],
+            "accepted_for_this_case": false
+          }
+        },
+        "observed_comparison": {
+          "maintenance_reduced_raw_bad_faces": true,
+          "source_fitting_reduced_raw_bad_faces": true,
+          "source_fitting_did_not_move_passing_grid": true,
+          "maintained_candidate_bad_faces_not_more_than_baseline": true,
+          "maintained_candidate_sampled_max_not_more_than_baseline": false,
+          "maintained_candidate_faster_in_this_run": false,
+          "source_fitted_has_fewer_bad_faces_than_geogram": true
+        },
+        "checks": {
+          "dense_target_scope_valid": true,
+          "candidate_scope_valid": true,
+          "candidate_mesh_nonempty": true,
+          "source_fitted_mesh_nonempty": true,
+          "baseline_mesh_nonempty": true,
+          "geogram_mesh_nonempty": true,
+          "geogram_full_solid_valid": true
+        },
+        "passed": true,
+        "conclusion_scope": "这是解析倾斜输入上的受限候选、既有质量维护、普通工程基线和Geogram精确网格CSG比较；Geogram承担几何布尔角色，其离散工具与未维护输出不代表质量优化方法；结果不外推到真实骨面、内部空腔或一般非单值拓扑",
+        "frozen_raw_checks": {
+          "vertices": true,
+          "faces": true,
+          "bad_faces": true,
+          "min_q": true,
+          "min_angle_deg": true,
+          "all_removed_intervals_top_connected": true
+        }
+      },
+      {
+        "case_id": "challenge_v2_raw_failure_a019",
+        "input": {
+          "xy_bounds_mm": [
+            -2.0,
+            2.0,
+            -2.0,
+            2.0
+          ],
+          "z_bounds_mm": [
+            -0.9,
+            0.9
+          ],
+          "method_spacing_mm": 0.1,
+          "dense_target_spacing_mm": 0.025,
+          "primitive_count": 4,
+          "parameter_policy": {
+            "development_case": "tilted_crossing_paths",
+            "candidate_xy_spacing_mm": 0.1,
+            "maintenance_target_length_mm": 0.12,
+            "maintenance_iterations": 3,
+            "maintenance_feature_angle_deg": 30.0,
+            "maintenance_surface_budget_mm": 0.025,
+            "note": "来源规则与门槛继承第二批第二轮，冻结后不得按本批结果回调",
+            "dense_target_spacing_mm": 0.025,
+            "quality_min_angle_deg": 25.0,
+            "quality_min_q": 0.4,
+            "sampled_geometry_budget_mm": 0.1,
+            "source_snap_fraction": 0.35
+          }
+        },
+        "common_target": {
+          "kind": "解析倾斜平面减实际胶囊运动后的外表面下包络",
+          "mesh": "challenge_v2_raw_failure_a019_dense_target.vtp",
+          "diagnostics": {
+            "sample_count": 25921,
+            "cut_sample_count": 10011,
+            "internal_cavity_sample_count": 0,
+            "all_removed_intervals_top_connected": true,
+            "connection_iterations": 2,
+            "grid_dimensions_xy": [
+              161,
+              161
+            ],
+            "spacing_mm": 0.025,
+            "cell_center_sample_count": 25600,
+            "cell_center_internal_cavity_sample_count": 0,
+            "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+            "first_diagonal_cells": 19864,
+            "second_diagonal_cells": 5736
+          },
+          "warning": "密集目标网格只用于抽样近邻测量，不是严格误差证书"
+        },
+        "methods": {
+          "analytic_height_raw": {
+            "role": "解析单值候选的生成消融",
+            "scope": "仅在每条竖线上的实际去除区间都与外表面连通、剩余外表面可写为单值高度时适用；未做质量维护",
+            "mesh": "challenge_v2_raw_failure_a019_height_raw.vtp",
+            "elapsed_ms": 2.5731250061653554,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 621,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+              "first_diagonal_cells": 1259,
+              "second_diagonal_cells": 341
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 22,
+              "min_q": 0.5782511645335059,
+              "min_angle_deg": 21.233506535684494,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.03333222956847137,
+                "p95_mm": 0.00398569345312616,
+                "rms_mm": 0.0025768546257925735,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.032440990329548836,
+                "p95_mm": 0.0039002441325589805,
+                "rms_mm": 0.0023933308112318325,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.05295648262515302,
+                "p95_mm": 0.004093258894052681,
+                "rms_mm": 0.0028623769091225956,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "analytic_height_source_fitted": {
+            "role": "来源切换线约束与局部质量生成候选",
+            "scope": "仅在原始候选质量失败单元内对齐连续来源切换线，并沿三维长方向局部细分；不改动原本通过的单元",
+            "mesh": "challenge_v2_raw_failure_a019_height_source_fitted.vtp",
+            "elapsed_ms": 166.34083300596103,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 622,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "source_transition_count": 11,
+              "source_transition_edges_inspected": 35,
+              "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+              "source_transition_max_one_sided_jump_mm": 1.0090817070818048e-12,
+              "source_transition_continuous": true,
+              "source_transition_continuity_tolerance_mm": 1e-08,
+              "snapped_vertex_count": 4,
+              "maximum_snap_distance_mm": 0.014377527028609949,
+              "snap_fraction_of_spacing": 0.35,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+              "pre_alignment_bad_cells": 11,
+              "pre_refinement_bad_cells": 11,
+              "split_edge_count": 13,
+              "inserted_midpoint_count": 13,
+              "locally_refined_cell_count": 15,
+              "post_refinement_bad_cells": 2
+            },
+            "quality": {
+              "vertices": 1694,
+              "faces": 3226,
+              "bad_faces": 3,
+              "min_q": 0.6430133297726932,
+              "min_angle_deg": 24.296398384543096,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.03333222956847137,
+                "p95_mm": 0.003996209124066175,
+                "rms_mm": 0.0025293228408554904,
+                "samples": 4920
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.032440990329548836,
+                "p95_mm": 0.0039002441325585715,
+                "rms_mm": 0.0023401692731712183,
+                "samples": 4920
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.05295648262515302,
+                "p95_mm": 0.003874806580638027,
+                "rms_mm": 0.00276234739093244,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "analytic_height_maintained": {
+            "role": "受限候选方法加项目既有各向同性质量维护",
+            "scope": "解析单值候选生成后，使用开发案例固定的PyMeshLab参数维护；不支持内部空腔或非单值拓扑",
+            "mesh": "challenge_v2_raw_failure_a019_height_maintained.vtp",
+            "elapsed_ms": 23.265625015483238,
+            "diagnostics": {
+              "generation": {
+                "sample_count": 1681,
+                "cut_sample_count": 621,
+                "internal_cavity_sample_count": 0,
+                "all_removed_intervals_top_connected": true,
+                "connection_iterations": 2,
+                "grid_dimensions_xy": [
+                  41,
+                  41
+                ],
+                "spacing_mm": 0.1,
+                "cell_center_sample_count": 1600,
+                "cell_center_internal_cavity_sample_count": 0,
+                "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+                "first_diagonal_cells": 1259,
+                "second_diagonal_cells": 341
+              },
+              "maintenance": {
+                "elapsed_ms": 20.692500009317882,
+                "target_length_mm": 0.12,
+                "iterations": 3,
+                "feature_angle_deg": 30.0,
+                "surface_budget_mm": 0.025,
+                "implementation": "PyMeshLab meshing_isotropic_explicit_remeshing"
+              },
+              "all_removed_intervals_top_connected": true
+            },
+            "quality": {
+              "vertices": 1723,
+              "faces": 3284,
+              "bad_faces": 4,
+              "min_q": 0.5288907724644767,
+              "min_angle_deg": 19.30000044193768,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.039174978328666454,
+                "p95_mm": 0.006022241064467001,
+                "rms_mm": 0.003107774100980679,
+                "samples": 5007
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.03813503993123144,
+                "p95_mm": 0.005700570458080733,
+                "rms_mm": 0.0028937253573165663,
+                "samples": 5007
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.05374697695580176,
+                "p95_mm": 0.005092457192961346,
+                "rms_mm": 0.0030979946532830663,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "implicit_contour_baseline": {
+            "role": "项目既有普通工程基线，非作者强基线",
+            "scope": "规则三维体素采样加VTK等值面提取",
+            "mesh": "challenge_v2_raw_failure_a019_implicit_contour.vtp",
+            "elapsed_ms": 4.20141700305976,
+            "diagnostics": {
+              "grid_dimensions_xyz": [
+                41,
+                41,
+                19
+              ],
+              "spacing_mm": 0.1,
+              "elapsed_ms": 4.20141700305976
+            },
+            "quality": {
+              "vertices": 2516,
+              "faces": 4845,
+              "bad_faces": 1238,
+              "min_q": 0.0,
+              "min_angle_deg": 0.0,
+              "boundary_edges": 185,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 185,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.0296453548673693,
+                "p95_mm": 0.004058308908899355,
+                "rms_mm": 0.002743074365909079,
+                "samples": 7361
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.028269519063488017,
+                "p95_mm": 0.0038254730122330633,
+                "rms_mm": 0.0025234299073012894,
+                "samples": 7361
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.04253715864223868,
+                "p95_mm": 0.003982326615575082,
+                "rms_mm": 0.002953548206003227,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "geogram_exact_csg": {
+            "role": "正式竞争性几何布尔基线",
+            "scope": "TOG 2025作者Geogram默认精确网格CSG；输入工具为固定subdivisions=3的离散胶囊，结果不附加质量维护",
+            "mesh": "challenge_v2_raw_failure_a019_geogram_exact_csg.vtp",
+            "elapsed_ms": 242.11908300640061,
+            "diagnostics": {
+              "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+              "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+              "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+              "doi": "10.1145/3744642",
+              "repository": "https://github.com/BrunoLevy/geogram",
+              "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+              "license": "BSD-3-Clause",
+              "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "binary_sha256": "1cd1332696eb98bf50e85caf16001f01d714924da7b1d1160ed42454bc7e4fcb",
+              "tool_discretization": "icosphere subdivisions=3",
+              "input_primitive_count": 4,
+              "effective_primitive_count": 2,
+              "redundant_contained_event_ids": [
+                "a0",
+                "b0"
+              ],
+              "steps": [
+                {
+                  "event_id": "a1",
+                  "elapsed_ms": 149.7195000119973,
+                  "input_faces": 1388,
+                  "output": "difference_0.obj",
+                  "log": "difference_0.log"
+                },
+                {
+                  "event_id": "b1",
+                  "elapsed_ms": 65.95808301062789,
+                  "input_faces": 1384,
+                  "output": "difference_1.obj",
+                  "log": "difference_1.log"
+                }
+              ],
+              "elapsed_ms": 242.11908300640061,
+              "full_solid_watertight": true,
+              "full_solid_winding_consistent": true,
+              "full_solid_euler_number": 2,
+              "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+            },
+            "quality": {
+              "vertices": 1143,
+              "faces": 2167,
+              "bad_faces": 917,
+              "min_q": 3.09054977554091e-16,
+              "min_angle_deg": 0.0,
+              "boundary_edges": 127,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 127,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 7
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.003350992030997202,
+                "p95_mm": 0.0028024520590781143,
+                "rms_mm": 0.001502036721160658,
+                "samples": 3310
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.01704027378744355,
+                "p95_mm": 0.006754295924881401,
+                "rms_mm": 0.0029184653022049515,
+                "samples": 3310
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.0073386836237310914,
+                "p95_mm": 0.002470697491957789,
+                "rms_mm": 0.0011976859151571794,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality",
+              "topology"
+            ],
+            "accepted_for_this_case": false
+          }
+        },
+        "observed_comparison": {
+          "maintenance_reduced_raw_bad_faces": true,
+          "source_fitting_reduced_raw_bad_faces": true,
+          "source_fitting_did_not_move_passing_grid": true,
+          "maintained_candidate_bad_faces_not_more_than_baseline": true,
+          "maintained_candidate_sampled_max_not_more_than_baseline": false,
+          "maintained_candidate_faster_in_this_run": false,
+          "source_fitted_has_fewer_bad_faces_than_geogram": true
+        },
+        "checks": {
+          "dense_target_scope_valid": true,
+          "candidate_scope_valid": true,
+          "candidate_mesh_nonempty": true,
+          "source_fitted_mesh_nonempty": true,
+          "baseline_mesh_nonempty": true,
+          "geogram_mesh_nonempty": true,
+          "geogram_full_solid_valid": true
+        },
+        "passed": true,
+        "conclusion_scope": "这是解析倾斜输入上的受限候选、既有质量维护、普通工程基线和Geogram精确网格CSG比较；Geogram承担几何布尔角色，其离散工具与未维护输出不代表质量优化方法；结果不外推到真实骨面、内部空腔或一般非单值拓扑",
+        "frozen_raw_checks": {
+          "vertices": true,
+          "faces": true,
+          "bad_faces": true,
+          "min_q": true,
+          "min_angle_deg": true,
+          "all_removed_intervals_top_connected": true
+        }
+      },
+      {
+        "case_id": "challenge_v2_raw_failure_a023",
+        "input": {
+          "xy_bounds_mm": [
+            -2.0,
+            2.0,
+            -2.0,
+            2.0
+          ],
+          "z_bounds_mm": [
+            -0.9,
+            0.9
+          ],
+          "method_spacing_mm": 0.1,
+          "dense_target_spacing_mm": 0.025,
+          "primitive_count": 4,
+          "parameter_policy": {
+            "development_case": "tilted_crossing_paths",
+            "candidate_xy_spacing_mm": 0.1,
+            "maintenance_target_length_mm": 0.12,
+            "maintenance_iterations": 3,
+            "maintenance_feature_angle_deg": 30.0,
+            "maintenance_surface_budget_mm": 0.025,
+            "note": "来源规则与门槛继承第二批第二轮，冻结后不得按本批结果回调",
+            "dense_target_spacing_mm": 0.025,
+            "quality_min_angle_deg": 25.0,
+            "quality_min_q": 0.4,
+            "sampled_geometry_budget_mm": 0.1,
+            "source_snap_fraction": 0.35
+          }
+        },
+        "common_target": {
+          "kind": "解析倾斜平面减实际胶囊运动后的外表面下包络",
+          "mesh": "challenge_v2_raw_failure_a023_dense_target.vtp",
+          "diagnostics": {
+            "sample_count": 25921,
+            "cut_sample_count": 9945,
+            "internal_cavity_sample_count": 0,
+            "all_removed_intervals_top_connected": true,
+            "connection_iterations": 2,
+            "grid_dimensions_xy": [
+              161,
+              161
+            ],
+            "spacing_mm": 0.025,
+            "cell_center_sample_count": 25600,
+            "cell_center_internal_cavity_sample_count": 0,
+            "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+            "first_diagonal_cells": 19846,
+            "second_diagonal_cells": 5754
+          },
+          "warning": "密集目标网格只用于抽样近邻测量，不是严格误差证书"
+        },
+        "methods": {
+          "analytic_height_raw": {
+            "role": "解析单值候选的生成消融",
+            "scope": "仅在每条竖线上的实际去除区间都与外表面连通、剩余外表面可写为单值高度时适用；未做质量维护",
+            "mesh": "challenge_v2_raw_failure_a023_height_raw.vtp",
+            "elapsed_ms": 3.006875005667098,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 627,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+              "first_diagonal_cells": 1265,
+              "second_diagonal_cells": 335
+            },
+            "quality": {
+              "vertices": 1681,
+              "faces": 3200,
+              "bad_faces": 22,
+              "min_q": 0.5367173426875796,
+              "min_angle_deg": 19.43417838094675,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.04266556290180462,
+                "p95_mm": 0.004522816842973287,
+                "rms_mm": 0.0028448587593402504,
+                "samples": 4881
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.04119825575921544,
+                "p95_mm": 0.004321549871179931,
+                "rms_mm": 0.0026434745830033134,
+                "samples": 4881
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.056162499618095316,
+                "p95_mm": 0.004474401092260373,
+                "rms_mm": 0.0031315761793298774,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "analytic_height_source_fitted": {
+            "role": "来源切换线约束与局部质量生成候选",
+            "scope": "仅在原始候选质量失败单元内对齐连续来源切换线，并沿三维长方向局部细分；不改动原本通过的单元",
+            "mesh": "challenge_v2_raw_failure_a023_height_source_fitted.vtp",
+            "elapsed_ms": 172.76020799181424,
+            "diagnostics": {
+              "sample_count": 1681,
+              "cut_sample_count": 627,
+              "internal_cavity_sample_count": 0,
+              "all_removed_intervals_top_connected": true,
+              "connection_iterations": 2,
+              "source_transition_count": 11,
+              "source_transition_edges_inspected": 35,
+              "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+              "source_transition_max_one_sided_jump_mm": 0.041578208581391385,
+              "source_transition_continuous": false,
+              "source_transition_continuity_tolerance_mm": 1e-08,
+              "snapped_vertex_count": 3,
+              "maximum_snap_distance_mm": 0.014012649286067491,
+              "snap_fraction_of_spacing": 0.35,
+              "grid_dimensions_xy": [
+                41,
+                41
+              ],
+              "spacing_mm": 0.1,
+              "cell_center_sample_count": 1600,
+              "cell_center_internal_cavity_sample_count": 0,
+              "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+              "pre_alignment_bad_cells": 11,
+              "pre_refinement_bad_cells": 11,
+              "split_edge_count": 13,
+              "inserted_midpoint_count": 13,
+              "locally_refined_cell_count": 15,
+              "post_refinement_bad_cells": 4
+            },
+            "quality": {
+              "vertices": 1694,
+              "faces": 3226,
+              "bad_faces": 5,
+              "min_q": 0.6200041593235404,
+              "min_angle_deg": 22.76670165249439,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.04266556290180462,
+                "p95_mm": 0.0045509564094941505,
+                "rms_mm": 0.0028093098009660247,
+                "samples": 4920
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.04119825575921544,
+                "p95_mm": 0.004273248744158883,
+                "rms_mm": 0.00260138607111139,
+                "samples": 4920
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.056162499618095316,
+                "p95_mm": 0.004260642500323107,
+                "rms_mm": 0.00304812310823807,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality",
+              "discontinuous_source_transition"
+            ],
+            "accepted_for_this_case": false
+          },
+          "analytic_height_maintained": {
+            "role": "受限候选方法加项目既有各向同性质量维护",
+            "scope": "解析单值候选生成后，使用开发案例固定的PyMeshLab参数维护；不支持内部空腔或非单值拓扑",
+            "mesh": "challenge_v2_raw_failure_a023_height_maintained.vtp",
+            "elapsed_ms": 24.779750005109236,
+            "diagnostics": {
+              "generation": {
+                "sample_count": 1681,
+                "cut_sample_count": 627,
+                "internal_cavity_sample_count": 0,
+                "all_removed_intervals_top_connected": true,
+                "connection_iterations": 2,
+                "grid_dimensions_xy": [
+                  41,
+                  41
+                ],
+                "spacing_mm": 0.1,
+                "cell_center_sample_count": 1600,
+                "cell_center_internal_cavity_sample_count": 0,
+                "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+                "first_diagonal_cells": 1265,
+                "second_diagonal_cells": 335
+              },
+              "maintenance": {
+                "elapsed_ms": 21.772874999442138,
+                "target_length_mm": 0.12,
+                "iterations": 3,
+                "feature_angle_deg": 30.0,
+                "surface_budget_mm": 0.025,
+                "implementation": "PyMeshLab meshing_isotropic_explicit_remeshing"
+              },
+              "all_removed_intervals_top_connected": true
+            },
+            "quality": {
+              "vertices": 1739,
+              "faces": 3316,
+              "bad_faces": 2,
+              "min_q": 0.5087798525212838,
+              "min_angle_deg": 18.102975351170745,
+              "boundary_edges": 160,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 160,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.04705728041292989,
+                "p95_mm": 0.006728732496276613,
+                "rms_mm": 0.0034670643057769616,
+                "samples": 5055
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.045438938148944605,
+                "p95_mm": 0.0065475657387772885,
+                "rms_mm": 0.0032512308501940236,
+                "samples": 5055
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.056273238047476686,
+                "p95_mm": 0.005644648747669229,
+                "rms_mm": 0.0033445305834160486,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "implicit_contour_baseline": {
+            "role": "项目既有普通工程基线，非作者强基线",
+            "scope": "规则三维体素采样加VTK等值面提取",
+            "mesh": "challenge_v2_raw_failure_a023_implicit_contour.vtp",
+            "elapsed_ms": 4.51729200722184,
+            "diagnostics": {
+              "grid_dimensions_xyz": [
+                41,
+                41,
+                19
+              ],
+              "spacing_mm": 0.1,
+              "elapsed_ms": 4.51729200722184
+            },
+            "quality": {
+              "vertices": 2589,
+              "faces": 4987,
+              "bad_faces": 1278,
+              "min_q": 0.0,
+              "min_angle_deg": 0.0,
+              "boundary_edges": 189,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 189,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 0
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.02911940340217478,
+                "p95_mm": 0.003965411039371647,
+                "rms_mm": 0.002825199748367596,
+                "samples": 7576
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.029738053979700956,
+                "p95_mm": 0.003756778785213424,
+                "rms_mm": 0.0026160460118343845,
+                "samples": 7576
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.041143532486634216,
+                "p95_mm": 0.004218636020133888,
+                "rms_mm": 0.0032098123537773107,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality"
+            ],
+            "accepted_for_this_case": false
+          },
+          "geogram_exact_csg": {
+            "role": "正式竞争性几何布尔基线",
+            "scope": "TOG 2025作者Geogram默认精确网格CSG；输入工具为固定subdivisions=3的离散胶囊，结果不附加质量维护",
+            "mesh": "challenge_v2_raw_failure_a023_geogram_exact_csg.vtp",
+            "elapsed_ms": 237.8279160038801,
+            "diagnostics": {
+              "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+              "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+              "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+              "doi": "10.1145/3744642",
+              "repository": "https://github.com/BrunoLevy/geogram",
+              "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+              "license": "BSD-3-Clause",
+              "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "binary_sha256": "1cd1332696eb98bf50e85caf16001f01d714924da7b1d1160ed42454bc7e4fcb",
+              "tool_discretization": "icosphere subdivisions=3",
+              "input_primitive_count": 4,
+              "effective_primitive_count": 2,
+              "redundant_contained_event_ids": [
+                "a0",
+                "b0"
+              ],
+              "steps": [
+                {
+                  "event_id": "a1",
+                  "elapsed_ms": 134.5376670069527,
+                  "input_faces": 1388,
+                  "output": "difference_0.obj",
+                  "log": "difference_0.log"
+                },
+                {
+                  "event_id": "b1",
+                  "elapsed_ms": 76.05883400538005,
+                  "input_faces": 1384,
+                  "output": "difference_1.obj",
+                  "log": "difference_1.log"
+                }
+              ],
+              "elapsed_ms": 237.8279160038801,
+              "full_solid_watertight": true,
+              "full_solid_winding_consistent": true,
+              "full_solid_euler_number": 2,
+              "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+            },
+            "quality": {
+              "vertices": 1160,
+              "faces": 2181,
+              "bad_faces": 920,
+              "min_q": 0.00014344254303539286,
+              "min_angle_deg": 0.004745041123030029,
+              "boundary_edges": 141,
+              "quality_gate": {
+                "min_q": 0.4,
+                "min_angle_deg": 25.0
+              }
+            },
+            "topology": {
+              "connected_components": 1,
+              "boundary_edges": 141,
+              "non_manifold_edges": 0,
+              "inconsistent_interior_edges": 0,
+              "self_intersection_faces": 8
+            },
+            "sampled_surface_audit": {
+              "implicit_residual": {
+                "max_mm": 0.003350992030997202,
+                "p95_mm": 0.0028021397184433416,
+                "rms_mm": 0.0015055520372349244,
+                "samples": 3341
+              },
+              "mesh_to_dense_target": {
+                "max_mm": 0.01704831160028726,
+                "p95_mm": 0.006298737871183865,
+                "rms_mm": 0.0028029380882101875,
+                "samples": 3341
+              },
+              "dense_target_to_mesh": {
+                "max_mm": 0.0073386836237310914,
+                "p95_mm": 0.0024988003005910857,
+                "rms_mm": 0.0012010193664083054,
+                "samples": 25921
+              },
+              "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+            },
+            "failure_reasons": [
+              "shape_quality",
+              "topology"
+            ],
+            "accepted_for_this_case": false
+          }
+        },
+        "observed_comparison": {
+          "maintenance_reduced_raw_bad_faces": true,
+          "source_fitting_reduced_raw_bad_faces": true,
+          "source_fitting_did_not_move_passing_grid": true,
+          "maintained_candidate_bad_faces_not_more_than_baseline": true,
+          "maintained_candidate_sampled_max_not_more_than_baseline": false,
+          "maintained_candidate_faster_in_this_run": false,
+          "source_fitted_has_fewer_bad_faces_than_geogram": true
+        },
+        "checks": {
+          "dense_target_scope_valid": true,
+          "candidate_scope_valid": true,
+          "candidate_mesh_nonempty": true,
+          "source_fitted_mesh_nonempty": true,
+          "baseline_mesh_nonempty": true,
+          "geogram_mesh_nonempty": true,
+          "geogram_full_solid_valid": true
+        },
+        "passed": true,
+        "conclusion_scope": "这是解析倾斜输入上的受限候选、既有质量维护、普通工程基线和Geogram精确网格CSG比较；Geogram承担几何布尔角色，其离散工具与未维护输出不代表质量优化方法；结果不外推到真实骨面、内部空腔或一般非单值拓扑",
+        "frozen_raw_checks": {
+          "vertices": true,
+          "faces": true,
+          "bad_faces": true,
+          "min_q": true,
+          "min_angle_deg": true,
+          "all_removed_intervals_top_connected": true
+        }
+      }
+    ],
+    "all_experiments_completed": true,
+    "raw_failures_confirmed": 4,
+    "source_fitted_candidate_accepted": 1,
+    "source_transition_continuous": 3,
+    "interpretation": "挑战集只按原始候选失败筛选；来源修复首次运行后不回调输入或旧参数，未通过案例按负结果保留"
+  },
+  "summary": {
+    "fixed_cases_passed": 6,
+    "fixed_cases_total": 6,
+    "state_metric_cases_passed": 4,
+    "state_metric_cases_total": 4,
+    "invariants_passed": true,
+    "restricted_height_map_passed": true,
+    "seam_comparison_passed": true,
+    "crossing_comparison_completed": true,
+    "heldout_surface_cases_completed": true,
+    "heldout_raw_candidate_accepted": 3,
+    "heldout_source_fitted_candidate_accepted": 3,
+    "heldout_maintained_candidate_accepted": 1,
+    "heldout_candidate_total": 3,
+    "quality_failure_challenge_completed": true,
+    "quality_failure_raw_confirmed": 4,
+    "quality_failure_source_fitted_accepted": 1,
+    "quality_failure_challenge_total": 4,
+    "engineering_baseline_completed": true,
+    "competitive_baseline_completed": true,
+    "real_motion_record_used": false,
+    "real_bone_updated": false
+  }
+}

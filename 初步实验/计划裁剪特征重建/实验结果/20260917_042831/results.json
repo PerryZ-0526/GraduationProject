@@ -1,0 +1,1291 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-09-17 04:28:31",
+  "status": "completed",
+  "scope": "解析半空间上的同轴竖直球扫掠与计划圆柱裁剪；非真实骨面整骨重建",
+  "units": {
+    "length": "mm",
+    "angle": "degree"
+  },
+  "thresholds": {
+    "min_angle_deg": 25.0,
+    "min_q": 0.4,
+    "bidirectional_error_upper_mm": 0.1,
+    "certificate_spacing_mm": 0.04
+  },
+  "plan_sha256": "bedd90203c68077f9f8c4b5f006b182bdde5b32ede22d04df30cdd463eb447a0",
+  "plan_source_sha256": "9c0511c736652dcf52d9b2221e53f9432657591e867fb45b7b0aba1afd42debf",
+  "cases": [
+    {
+      "name": "plan_step_135_h0.4",
+      "group": "original_plan_vertical_parameters",
+      "plan_step": 135,
+      "center_z": -1.0,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.4,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": -1.0,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.039338088856046,
+        "mouth_radius": 2.5,
+        "clip_active": true,
+        "wall_kind": "plan_clip",
+        "wall_bottom_z": -2.469693845669906,
+        "features": [
+          {
+            "name": "sphere_plan_clip",
+            "sources": [
+              "sphere",
+              "plan_clip"
+            ],
+            "radius": 2.5,
+            "z": -2.469693845669906,
+            "angle_deg": 30.450314021355634,
+            "preserved": true
+          },
+          {
+            "name": "plan_clip_plane",
+            "sources": [
+              "plan_clip",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "plan_clip_plane",
+        "sphere_plan_clip"
+      ],
+      "mesh": "plan_step_135_h0.4.npz",
+      "audit": {
+        "vertices": 709,
+        "faces": 1356,
+        "min_angle_deg": 42.03821101837671,
+        "min_q": 0.8302547974375462,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 60,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 2,
+        "expected_feature_names": [
+          "plan_clip_plane",
+          "sphere_plan_clip"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.05189977703423647,
+        "target_to_mesh_upper_mm": 0.05271446607809875,
+        "mesh_to_target_samples": 140214,
+        "target_to_mesh_samples": 79551,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.01290030329128081,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.05271446607809875,
+            "samples": 30261
+          },
+          "plan_clip": {
+            "sampled_max_mm": 0.006990099508613782,
+            "cover_radius_mm": 0.039901571943714784,
+            "upper_bound_mm": 0.046891671452328566,
+            "samples": 24759
+          },
+          "plane": {
+            "sampled_max_mm": 0.005481847122894128,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04519702088850573,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 1422.0983339910163,
+      "expectation_met": true
+    },
+    {
+      "name": "plan_step_136_h0.4",
+      "group": "original_plan_vertical_parameters",
+      "plan_step": 136,
+      "center_z": -2.5,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.4,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": -2.5,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.039338088856046,
+        "mouth_radius": 2.5,
+        "clip_active": true,
+        "wall_kind": "plan_clip",
+        "wall_bottom_z": -3.969693845669906,
+        "features": [
+          {
+            "name": "sphere_plan_clip",
+            "sources": [
+              "sphere",
+              "plan_clip"
+            ],
+            "radius": 2.5,
+            "z": -3.969693845669906,
+            "angle_deg": 30.450314021355634,
+            "preserved": true
+          },
+          {
+            "name": "plan_clip_plane",
+            "sources": [
+              "plan_clip",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "plan_clip_plane",
+        "sphere_plan_clip"
+      ],
+      "mesh": "plan_step_136_h0.4.npz",
+      "audit": {
+        "vertices": 835,
+        "faces": 1608,
+        "min_angle_deg": 42.03821101837672,
+        "min_q": 0.8302547974375462,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 60,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 2,
+        "expected_feature_names": [
+          "plan_clip_plane",
+          "sphere_plan_clip"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.051899777034236455,
+        "target_to_mesh_upper_mm": 0.05271446607809876,
+        "mesh_to_target_samples": 179274,
+        "target_to_mesh_samples": 94485,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.012900303291280814,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.05271446607809876,
+            "samples": 30261
+          },
+          "plan_clip": {
+            "sampled_max_mm": 0.006990099508613782,
+            "cover_radius_mm": 0.03983315531988765,
+            "upper_bound_mm": 0.046823254828501436,
+            "samples": 39693
+          },
+          "plane": {
+            "sampled_max_mm": 0.005481847122894128,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04519702088850573,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 1326.9130419939756,
+      "expectation_met": true
+    },
+    {
+      "name": "plan_step_137_h0.4",
+      "group": "original_plan_vertical_parameters",
+      "plan_step": 137,
+      "center_z": -4.0,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.4,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": -4.0,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.039338088856046,
+        "mouth_radius": 2.5,
+        "clip_active": true,
+        "wall_kind": "plan_clip",
+        "wall_bottom_z": -5.469693845669906,
+        "features": [
+          {
+            "name": "sphere_plan_clip",
+            "sources": [
+              "sphere",
+              "plan_clip"
+            ],
+            "radius": 2.5,
+            "z": -5.469693845669906,
+            "angle_deg": 30.450314021355634,
+            "preserved": true
+          },
+          {
+            "name": "plan_clip_plane",
+            "sources": [
+              "plan_clip",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "plan_clip_plane",
+        "sphere_plan_clip"
+      ],
+      "mesh": "plan_step_137_h0.4.npz",
+      "audit": {
+        "vertices": 1003,
+        "faces": 1944,
+        "min_angle_deg": 42.03821101837672,
+        "min_q": 0.8302547974375462,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 60,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 2,
+        "expected_feature_names": [
+          "plan_clip_plane",
+          "sphere_plan_clip"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.051899777034236455,
+        "target_to_mesh_upper_mm": 0.05271446607809876,
+        "mesh_to_target_samples": 219594,
+        "target_to_mesh_samples": 109026,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.012900303291280814,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.05271446607809876,
+            "samples": 30261
+          },
+          "plan_clip": {
+            "sampled_max_mm": 0.00699025152492106,
+            "cover_radius_mm": 0.039947072389603475,
+            "upper_bound_mm": 0.046937323914524536,
+            "samples": 54234
+          },
+          "plane": {
+            "sampled_max_mm": 0.005481847122894128,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04519702088850573,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 4274.354958994081,
+      "expectation_met": true
+    },
+    {
+      "name": "plan_step_138_h0.4",
+      "group": "original_plan_vertical_parameters",
+      "plan_step": 138,
+      "center_z": -5.1499999999999995,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.4,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": -5.1499999999999995,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.039338088856046,
+        "mouth_radius": 2.5,
+        "clip_active": true,
+        "wall_kind": "plan_clip",
+        "wall_bottom_z": -6.6196938456699055,
+        "features": [
+          {
+            "name": "sphere_plan_clip",
+            "sources": [
+              "sphere",
+              "plan_clip"
+            ],
+            "radius": 2.5,
+            "z": -6.6196938456699055,
+            "angle_deg": 30.450314021355634,
+            "preserved": true
+          },
+          {
+            "name": "plan_clip_plane",
+            "sources": [
+              "plan_clip",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "plan_clip_plane",
+        "sphere_plan_clip"
+      ],
+      "mesh": "plan_step_138_h0.4.npz",
+      "audit": {
+        "vertices": 1129,
+        "faces": 2196,
+        "min_angle_deg": 42.03821101837667,
+        "min_q": 0.8302547974375462,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 60,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 2,
+        "expected_feature_names": [
+          "plan_clip_plane",
+          "sphere_plan_clip"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.051899777034237295,
+        "target_to_mesh_upper_mm": 0.05271446607809892,
+        "mesh_to_target_samples": 249834,
+        "target_to_mesh_samples": 120423,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.012900303291280973,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.05271446607809892,
+            "samples": 30261
+          },
+          "plan_clip": {
+            "sampled_max_mm": 0.006990099508613782,
+            "cover_radius_mm": 0.039923522976086034,
+            "upper_bound_mm": 0.04691362248469982,
+            "samples": 65631
+          },
+          "plane": {
+            "sampled_max_mm": 0.005481847122894128,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04519702088850573,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 2597.7334159979364,
+      "expectation_met": true
+    },
+    {
+      "name": "plan_step_135_h0.25",
+      "group": "original_plan_vertical_parameters",
+      "plan_step": 135,
+      "center_z": -1.0,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.25,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": -1.0,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.039338088856046,
+        "mouth_radius": 2.5,
+        "clip_active": true,
+        "wall_kind": "plan_clip",
+        "wall_bottom_z": -2.469693845669906,
+        "features": [
+          {
+            "name": "sphere_plan_clip",
+            "sources": [
+              "sphere",
+              "plan_clip"
+            ],
+            "radius": 2.5,
+            "z": -2.469693845669906,
+            "angle_deg": 30.450314021355634,
+            "preserved": true
+          },
+          {
+            "name": "plan_clip_plane",
+            "sources": [
+              "plan_clip",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "plan_clip_plane",
+        "sphere_plan_clip"
+      ],
+      "mesh": "plan_step_135_h0.25.npz",
+      "audit": {
+        "vertices": 1603,
+        "faces": 3102,
+        "min_angle_deg": 42.24557521822359,
+        "min_q": 0.8320540379577577,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 102,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 2,
+        "expected_feature_names": [
+          "plan_clip_plane",
+          "sphere_plan_clip"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.043887142404736054,
+        "target_to_mesh_upper_mm": 0.04493794064976746,
+        "mesh_to_target_samples": 157644,
+        "target_to_mesh_samples": 79551,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.005123777862949513,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.04493794064976746,
+            "samples": 30261
+          },
+          "plan_clip": {
+            "sampled_max_mm": 0.0034259634197288885,
+            "cover_radius_mm": 0.039901571943714784,
+            "upper_bound_mm": 0.04332753536344367,
+            "samples": 24759
+          },
+          "plane": {
+            "sampled_max_mm": 0.0018957352655893179,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04161090903120092,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 2558.562249992974,
+      "expectation_met": true
+    },
+    {
+      "name": "plan_step_136_h0.25",
+      "group": "original_plan_vertical_parameters",
+      "plan_step": 136,
+      "center_z": -2.5,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.25,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": -2.5,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.039338088856046,
+        "mouth_radius": 2.5,
+        "clip_active": true,
+        "wall_kind": "plan_clip",
+        "wall_bottom_z": -3.969693845669906,
+        "features": [
+          {
+            "name": "sphere_plan_clip",
+            "sources": [
+              "sphere",
+              "plan_clip"
+            ],
+            "radius": 2.5,
+            "z": -3.969693845669906,
+            "angle_deg": 30.450314021355634,
+            "preserved": true
+          },
+          {
+            "name": "plan_clip_plane",
+            "sources": [
+              "plan_clip",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "plan_clip_plane",
+        "sphere_plan_clip"
+      ],
+      "mesh": "plan_step_136_h0.25.npz",
+      "audit": {
+        "vertices": 1963,
+        "faces": 3822,
+        "min_angle_deg": 42.24557521822356,
+        "min_q": 0.8320540379577578,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 102,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 2,
+        "expected_feature_names": [
+          "plan_clip_plane",
+          "sphere_plan_clip"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.04388714240473609,
+        "target_to_mesh_upper_mm": 0.04493794064976772,
+        "mesh_to_target_samples": 218364,
+        "target_to_mesh_samples": 94485,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.005123777862949779,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.04493794064976772,
+            "samples": 30261
+          },
+          "plan_clip": {
+            "sampled_max_mm": 0.0034259634197288885,
+            "cover_radius_mm": 0.03983315531988765,
+            "upper_bound_mm": 0.04325911873961654,
+            "samples": 39693
+          },
+          "plane": {
+            "sampled_max_mm": 0.0018957352655893179,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04161090903120092,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 2149.522125007934,
+      "expectation_met": true
+    },
+    {
+      "name": "plan_step_137_h0.25",
+      "group": "original_plan_vertical_parameters",
+      "plan_step": 137,
+      "center_z": -4.0,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.25,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": -4.0,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.039338088856046,
+        "mouth_radius": 2.5,
+        "clip_active": true,
+        "wall_kind": "plan_clip",
+        "wall_bottom_z": -5.469693845669906,
+        "features": [
+          {
+            "name": "sphere_plan_clip",
+            "sources": [
+              "sphere",
+              "plan_clip"
+            ],
+            "radius": 2.5,
+            "z": -5.469693845669906,
+            "angle_deg": 30.450314021355634,
+            "preserved": true
+          },
+          {
+            "name": "plan_clip_plane",
+            "sources": [
+              "plan_clip",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "plan_clip_plane",
+        "sphere_plan_clip"
+      ],
+      "mesh": "plan_step_137_h0.25.npz",
+      "audit": {
+        "vertices": 2323,
+        "faces": 4542,
+        "min_angle_deg": 42.24557521822356,
+        "min_q": 0.8320540379577578,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 102,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 2,
+        "expected_feature_names": [
+          "plan_clip_plane",
+          "sphere_plan_clip"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.04388714240473609,
+        "target_to_mesh_upper_mm": 0.04493794064976772,
+        "mesh_to_target_samples": 265884,
+        "target_to_mesh_samples": 109026,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.005123777862949779,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.04493794064976772,
+            "samples": 30261
+          },
+          "plan_clip": {
+            "sampled_max_mm": 0.0034260986789363323,
+            "cover_radius_mm": 0.039947072389603475,
+            "upper_bound_mm": 0.04337317106853981,
+            "samples": 54234
+          },
+          "plane": {
+            "sampled_max_mm": 0.0018957352655893179,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04161090903120092,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 2515.717041998869,
+      "expectation_met": true
+    },
+    {
+      "name": "plan_step_138_h0.25",
+      "group": "original_plan_vertical_parameters",
+      "plan_step": 138,
+      "center_z": -5.1499999999999995,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.25,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": -5.1499999999999995,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.039338088856046,
+        "mouth_radius": 2.5,
+        "clip_active": true,
+        "wall_kind": "plan_clip",
+        "wall_bottom_z": -6.6196938456699055,
+        "features": [
+          {
+            "name": "sphere_plan_clip",
+            "sources": [
+              "sphere",
+              "plan_clip"
+            ],
+            "radius": 2.5,
+            "z": -6.6196938456699055,
+            "angle_deg": 30.450314021355634,
+            "preserved": true
+          },
+          {
+            "name": "plan_clip_plane",
+            "sources": [
+              "plan_clip",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "plan_clip_plane",
+        "sphere_plan_clip"
+      ],
+      "mesh": "plan_step_138_h0.25.npz",
+      "audit": {
+        "vertices": 2623,
+        "faces": 5142,
+        "min_angle_deg": 42.24557521822363,
+        "min_q": 0.8320540379577579,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 102,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 2,
+        "expected_feature_names": [
+          "plan_clip_plane",
+          "sphere_plan_clip"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.04388714240473602,
+        "target_to_mesh_upper_mm": 0.044937940649767444,
+        "mesh_to_target_samples": 269844,
+        "target_to_mesh_samples": 120423,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.005123777862949497,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.044937940649767444,
+            "samples": 30261
+          },
+          "plan_clip": {
+            "sampled_max_mm": 0.0034259634197288885,
+            "cover_radius_mm": 0.039923522976086034,
+            "upper_bound_mm": 0.04334948639581492,
+            "samples": 65631
+          },
+          "plane": {
+            "sampled_max_mm": 0.0018957352655893179,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04161090903120092,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 3086.28316699469,
+      "expectation_met": true
+    },
+    {
+      "name": "clip_inactive_shallow",
+      "group": "mechanism_control",
+      "center_z": 1.8,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.25,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": 1.8,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 0.9011743305153158,
+        "mouth_radius": 2.2737634001804143,
+        "clip_active": false,
+        "wall_kind": null,
+        "wall_bottom_z": null,
+        "features": [
+          {
+            "name": "sphere_plane",
+            "sources": [
+              "sphere",
+              "plane"
+            ],
+            "radius": 2.2737634001804143,
+            "z": 0.0,
+            "angle_deg": 51.63348574405511,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "sphere_plane"
+      ],
+      "mesh": "clip_inactive_shallow.npz",
+      "audit": {
+        "vertices": 961,
+        "faces": 1818,
+        "min_angle_deg": 42.981176303295946,
+        "min_q": 0.8387596779477396,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 102,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 1,
+        "expected_feature_names": [
+          "sphere_plane"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.044209259010305896,
+        "target_to_mesh_upper_mm": 0.0448820709139241,
+        "mesh_to_target_samples": 85830,
+        "target_to_mesh_samples": 52291,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.005130364084101961,
+            "cover_radius_mm": 0.03975170682982214,
+            "upper_bound_mm": 0.0448820709139241,
+            "samples": 23986
+          },
+          "plane": {
+            "sampled_max_mm": 0.0018957352655893179,
+            "cover_radius_mm": 0.03959465665829828,
+            "upper_bound_mm": 0.0414903919238876,
+            "samples": 28305
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 1219.2311660037376,
+      "expectation_met": true
+    },
+    {
+      "name": "unclipped_smooth_sweep_seam",
+      "group": "mechanism_control",
+      "center_z": -1.0,
+      "tool_radius": 2.0,
+      "clip_radius": 3.0,
+      "outer_radius": 4.0,
+      "spacing": 0.25,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": -1.0,
+        "tool_radius": 2.0,
+        "clip_radius": 3.0,
+        "outer_radius": 4.0,
+        "theta_end": 1.5707963267948966,
+        "mouth_radius": 2.0,
+        "clip_active": false,
+        "wall_kind": "sweep_cylinder",
+        "wall_bottom_z": -1.0,
+        "features": [
+          {
+            "name": "sphere_sweep_cylinder",
+            "sources": [
+              "sphere",
+              "sweep_cylinder"
+            ],
+            "radius": 2.0,
+            "z": -1.0,
+            "angle_deg": 0.0,
+            "preserved": false
+          },
+          {
+            "name": "sweep_cylinder_plane",
+            "sources": [
+              "sweep_cylinder",
+              "plane"
+            ],
+            "radius": 2.0,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "sweep_cylinder_plane"
+      ],
+      "mesh": "unclipped_smooth_sweep_seam.npz",
+      "audit": {
+        "vertices": 1267,
+        "faces": 2430,
+        "min_angle_deg": 42.027098310574445,
+        "min_q": 0.8378902989004715,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 102,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 1,
+        "expected_feature_names": [
+          "sweep_cylinder_plane"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 0.0,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.0474482366579152,
+        "target_to_mesh_upper_mm": 0.04764650108070724,
+        "mesh_to_target_samples": 122472,
+        "target_to_mesh_samples": 65469,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.007816383250384567,
+            "cover_radius_mm": 0.03983011783032267,
+            "upper_bound_mm": 0.04764650108070724,
+            "samples": 25200
+          },
+          "sweep_cylinder": {
+            "sampled_max_mm": 0.005518790800555791,
+            "cover_radius_mm": 0.03994662002279234,
+            "upper_bound_mm": 0.04546541082334813,
+            "samples": 8190
+          },
+          "plane": {
+            "sampled_max_mm": 0.0018957352655893179,
+            "cover_radius_mm": 0.03997833166034845,
+            "upper_bound_mm": 0.041874066925937765,
+            "samples": 32079
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 1698.9640840038192,
+      "expectation_met": true
+    },
+    {
+      "name": "clip_activation_tangent",
+      "group": "degenerate_boundary",
+      "center_z": 1.469693845669907,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.25,
+      "expected": "accept",
+      "generated": true,
+      "profile": {
+        "center_z": 1.469693845669907,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.0393380888560457,
+        "mouth_radius": 2.5,
+        "clip_active": false,
+        "wall_kind": null,
+        "wall_bottom_z": null,
+        "features": [
+          {
+            "name": "sphere_plane",
+            "sources": [
+              "sphere",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 59.54968597864436,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "sphere_plane"
+      ],
+      "mesh": "clip_activation_tangent.npz",
+      "audit": {
+        "vertices": 1003,
+        "faces": 1902,
+        "min_angle_deg": 42.24557521822348,
+        "min_q": 0.8320540379577577,
+        "degenerate": 0,
+        "bad_faces": 0,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 102,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 1,
+        "expected_feature_names": [
+          "sphere_plane"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 8.881784197001252e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.04388714240473576,
+        "target_to_mesh_upper_mm": 0.04493794064976724,
+        "mesh_to_target_samples": 91644,
+        "target_to_mesh_samples": 54792,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.0051237778629492975,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.04493794064976724,
+            "samples": 30261
+          },
+          "plane": {
+            "sampled_max_mm": 0.0018957352655893179,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04161090903120092,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": true,
+        "reasons": []
+      },
+      "accepted": true,
+      "elapsed_ms": 1081.7580000002636,
+      "expectation_met": true
+    },
+    {
+      "name": "clip_near_tangent_thin_wall",
+      "group": "degenerate_boundary",
+      "center_z": 1.469593845669907,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.25,
+      "expected": "reject_quality",
+      "generated": true,
+      "profile": {
+        "center_z": 1.469593845669907,
+        "tool_radius": 2.9,
+        "clip_radius": 2.5,
+        "outer_radius": 4.0,
+        "theta_end": 1.039338088856046,
+        "mouth_radius": 2.5,
+        "clip_active": true,
+        "wall_kind": "plan_clip",
+        "wall_bottom_z": -9.999999999932285e-05,
+        "features": [
+          {
+            "name": "sphere_plan_clip",
+            "sources": [
+              "sphere",
+              "plan_clip"
+            ],
+            "radius": 2.5,
+            "z": -9.999999999932285e-05,
+            "angle_deg": 30.450314021355634,
+            "preserved": true
+          },
+          {
+            "name": "plan_clip_plane",
+            "sources": [
+              "plan_clip",
+              "plane"
+            ],
+            "radius": 2.5,
+            "z": 0.0,
+            "angle_deg": 90.0,
+            "preserved": true
+          }
+        ]
+      },
+      "feature_names": [
+        "plan_clip_plane",
+        "sphere_plan_clip"
+      ],
+      "mesh": "clip_near_tangent_thin_wall.npz",
+      "audit": {
+        "vertices": 1063,
+        "faces": 2022,
+        "min_angle_deg": 0.021895377767691022,
+        "min_q": 0.0006618969744530384,
+        "degenerate": 0,
+        "bad_faces": 120,
+        "winding": true,
+        "euler": 1,
+        "connected": true,
+        "boundary_edges": 102,
+        "one_boundary_loop": true,
+        "outer_boundary_ok": true,
+        "feature_count": 2,
+        "expected_feature_names": [
+          "plan_clip_plane",
+          "sphere_plan_clip"
+        ],
+        "feature_name_mismatch": false,
+        "feature_geometry_max_mm": 4.440892098500626e-16,
+        "missing_feature_edges": 0,
+        "nonmanifold_feature_edges": 0,
+        "self_intersection_faces": 0,
+        "mesh_to_target_upper_mm": 0.04388714240473593,
+        "target_to_mesh_upper_mm": 0.04493794064976724,
+        "mesh_to_target_samples": 95964,
+        "target_to_mesh_samples": 55578,
+        "target_to_mesh_strata": {
+          "sphere": {
+            "sampled_max_mm": 0.005123777862949297,
+            "cover_radius_mm": 0.039814162786817944,
+            "upper_bound_mm": 0.04493794064976724,
+            "samples": 30261
+          },
+          "plan_clip": {
+            "sampled_max_mm": 9.999999999932285e-05,
+            "cover_radius_mm": 0.020034686091537784,
+            "upper_bound_mm": 0.020134686091537107,
+            "samples": 786
+          },
+          "plane": {
+            "sampled_max_mm": 0.0018957352655893179,
+            "cover_radius_mm": 0.0397151737656116,
+            "upper_bound_mm": 0.04161090903120092,
+            "samples": 24531
+          }
+        },
+        "error_limit_mm": 0.1,
+        "certificate_spacing_mm": 0.04,
+        "accepted": false,
+        "reasons": [
+          "shape_quality"
+        ]
+      },
+      "accepted": false,
+      "elapsed_ms": 1187.1312080038479,
+      "expectation_met": true
+    },
+    {
+      "name": "no_contact",
+      "group": "degenerate_boundary",
+      "center_z": 2.9,
+      "tool_radius": 2.9,
+      "clip_radius": 2.5,
+      "outer_radius": 4.0,
+      "spacing": 0.25,
+      "expected": "reject_precondition",
+      "generated": false,
+      "accepted": false,
+      "precondition_rejection": "无接触或相切状态不生成凹坑",
+      "elapsed_ms": 0.028541995561681688,
+      "expectation_met": true
+    }
+  ],
+  "source_sha256": {
+    "clipped_patch.py": "48c130f0ffa1bcaa6738d5941dbd1c7ec6e7ed06bbbd8e798e8e2a0b2ea59837",
+    "experiment.py": "d9ba583334e255c277c840205a0684c6bdb75d904bf09c5c2f04b361a01728a1",
+    "test_clipped_patch.py": "edcd5f3edb383815e0326d2c9203615f2d58602e9629ef3e55d383006dbfad87"
+  },
+  "summary": {
+    "cases": 13,
+    "expectations_met": 13,
+    "plan_parameter_cases_accepted": 8,
+    "plan_parameter_cases_total": 8,
+    "worst_plan_parameter_min_angle_deg": 42.03821101837667,
+    "worst_plan_parameter_min_q": 0.8302547974375462,
+    "worst_plan_parameter_bidirectional_upper_mm": 0.05271446607809892
+  }
+}

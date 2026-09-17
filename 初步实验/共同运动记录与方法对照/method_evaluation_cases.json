@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "record_kind": "simulated",
+  "coordinate_frame": {
+    "name": "bone",
+    "length_unit": "mm",
+    "time_unit": "ms",
+    "handedness": "right"
+  },
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200,
+    "interpolate_missing_motion": false
+  },
+  "baselines": [],
+  "frozen_before_first_run": "2026-09-17 22:50:30",
+  "parameter_policy": {
+    "development_case": "tilted_crossing_paths",
+    "candidate_xy_spacing_mm": 0.1,
+    "maintenance_target_length_mm": 0.12,
+    "maintenance_iterations": 3,
+    "maintenance_feature_angle_deg": 30.0,
+    "maintenance_surface_budget_mm": 0.025,
+    "note": "参数只由开发案例和项目既有重网格规则确定，评测案例首轮运行后不回调"
+  },
+  "cases": [
+    {
+      "id": "heldout_tilted_offset",
+      "split": "evaluation",
+      "purpose": "未见过的反向倾斜平面与偏心斜向走刀",
+      "initial_surface": {
+        "kind": "plane",
+        "height_coefficients": [-0.12, 0.18, 0.02]
+      },
+      "plan": {
+        "center_xy_mm": [0.0, 0.0],
+        "allowed_radius_mm": 3.0
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.65
+      },
+      "events": [
+        {
+          "id": "o0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [-1.3, -0.7, 0.48],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "o1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [0.9, 0.8, 0.52],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ]
+    },
+    {
+      "id": "heldout_tilted_repeat_cross",
+      "split": "evaluation",
+      "purpose": "未见过的倾斜面重复往返后再交叉走刀",
+      "initial_surface": {
+        "kind": "plane",
+        "height_coefficients": [0.08, 0.12, -0.03]
+      },
+      "plan": {
+        "center_xy_mm": [0.0, 0.0],
+        "allowed_radius_mm": 3.0
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.72
+      },
+      "repeat_equivalent_event_ids": ["r1", "r2"],
+      "events": [
+        {
+          "id": "r0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [-1.1, 0.6, 0.45],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "r1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [1.1, -0.4, 0.48],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "r2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [-1.1, 0.6, 0.45],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "r_stop",
+          "arrival_index": 3,
+          "timestamp_ms": 250,
+          "position_mm": [-1.1, 0.6, 0.45],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "c0",
+          "arrival_index": 4,
+          "timestamp_ms": 300,
+          "position_mm": [-0.5, -1.1, 0.35],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "c1",
+          "arrival_index": 5,
+          "timestamp_ms": 400,
+          "position_mm": [0.6, 1.0, 0.55],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ]
+    },
+    {
+      "id": "heldout_tilted_depth_change",
+      "split": "evaluation",
+      "purpose": "未见过的较陡斜面与连续变深路线",
+      "initial_surface": {
+        "kind": "plane",
+        "height_coefficients": [0.2, -0.05, 0.01]
+      },
+      "plan": {
+        "center_xy_mm": [0.0, 0.0],
+        "allowed_radius_mm": 3.0
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.75
+      },
+      "events": [
+        {
+          "id": "d0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [-0.8, -0.8, 0.5],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "d1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [0.0, 0.0, 0.38],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "d2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [0.9, 0.7, 0.52],
+          "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1661 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-09-18T01:17:44.127568+08:00",
+  "record_kind": "simulated",
+  "dataset": "development",
+  "input_document": "quality_development_cases_v3.json",
+  "input_document_sha256": "a2c0e524c4be557629cc10e6cc12db02a1d1724b50f4e4ce92e8d3a39abe9b9d",
+  "core_sha256": {
+    "surface_methods.py": "98fdfdb61922c14830aa11f591f39190fadb551bd5f5f99e2b486d4ea7ddaa24",
+    "test_motion_record.py": "dc6bc4c3a9f362c71040d95a525f677f56eca01abd0c730968f975c4f0087965",
+    "screen_quality_development_cases.py": "893b099e44ad2ac0609dd01010ad4324c4781d3efacac44397bca9105b70564d",
+    "quality_development_cases_v3.json": "a2c0e524c4be557629cc10e6cc12db02a1d1724b50f4e4ce92e8d3a39abe9b9d",
+    "quality_failure_cases_v2.json": "4d57420bdd3f6792caf3244172bd15f19858f6b87c56c2f8016fc292b34ba8ec",
+    "evaluate_source_constrained_v3.py": "11c7af8308fbcfc12c7f89161414d9431ab86b3af2be418e914715eb0d374806"
+  },
+  "quality_gate": {
+    "min_angle_deg": 25.0,
+    "min_q": 0.4,
+    "sampled_geometry_budget_mm": 0.1
+  },
+  "cases": [
+    {
+      "case_id": "development_v3_raw_failure_024",
+      "screening_generation_index": 24,
+      "raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 14,
+        "min_q": 0.5344768486924288,
+        "min_angle_deg": 19.07745296016523,
+        "boundary_edges": 160,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        }
+      },
+      "legacy_v2": {
+        "quality": {
+          "vertices": 1690,
+          "faces": 3218,
+          "bad_faces": 0,
+          "min_q": 0.6441422430385646,
+          "min_angle_deg": 25.815012800308732,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "source_transition_continuous": true,
+        "source_transition_max_one_sided_jump_mm": 1.00180974627051e-12
+      },
+      "source_constrained_v3": {
+        "mesh": "development_v3_raw_failure_024_source_constrained_v3.vtp",
+        "elapsed_ms": 334.44970901473425,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 630,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "source_transition_count": 9,
+          "source_transition_edges_inspected": 23,
+          "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+          "source_transition_max_one_sided_jump_mm": 1.00180974627051e-12,
+          "source_transition_continuous": true,
+          "source_transition_continuity_tolerance_mm": 1e-08,
+          "snapped_vertex_count": 8,
+          "maximum_snap_distance_mm": 0.03108372572628193,
+          "snap_fraction_of_spacing": 0.35,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+          "pre_alignment_bad_cells": 7,
+          "pre_refinement_bad_cells": 7,
+          "split_edge_count": 9,
+          "inserted_midpoint_count": 9,
+          "inserted_midpoint_parent_edges": [
+            [
+              1191,
+              1192
+            ],
+            [
+              1232,
+              1233
+            ],
+            [
+              1273,
+              1274
+            ],
+            [
+              1314,
+              1315
+            ],
+            [
+              1355,
+              1356
+            ],
+            [
+              1525,
+              1566
+            ],
+            [
+              1526,
+              1567
+            ],
+            [
+              1527,
+              1568
+            ],
+            [
+              1528,
+              1569
+            ]
+          ],
+          "locally_refined_cell_count": 11,
+          "post_refinement_bad_cells": 0,
+          "global_source_transition_count": 214,
+          "global_source_transition_scan_fraction": 0.25,
+          "global_source_transition_max_one_sided_jump_mm": 1.0032807917781383e-12,
+          "global_discontinuous_source_transition_count": 0,
+          "global_source_transition_continuous": true,
+          "algorithm_version": "source_constrained_v3",
+          "constraint_optimization_policy": "新增边点保持在父边XY参数线上，以解析高度映射到曲面；分层确定性搜索最大化关联三角形的最差三维质量",
+          "constraint_search_samples_per_level": 33,
+          "constraint_search_levels": 3,
+          "constraint_optimization_sweeps": 3,
+          "optimized_constraint_point_count": 9,
+          "constraint_point_min_parameter": 0.2548828125,
+          "constraint_point_max_parameter": 0.6453857421875,
+          "normalized_minimum_quality_before_optimization": 1.0326005120123494,
+          "normalized_minimum_quality_after_optimization": 1.0326005120123494,
+          "height_graph_supported": true,
+          "source_transition_model": "continuous_feature_curve",
+          "constraint_optimization_skipped": false,
+          "generation_policy_v3": "先沿用冻结v2的失败单元来源吸附与共边局部剖分，再将新增点约束在各自父边上，按解析曲面三维质量作确定性max-min优化；全网格检出高度跳变时拒绝候选"
+        },
+        "quality": {
+          "vertices": 1690,
+          "faces": 3218,
+          "bad_faces": 0,
+          "min_q": 0.6441422430385646,
+          "min_angle_deg": 25.815012800308732,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.027715074498444292,
+            "p95_mm": 0.00403970132480036,
+            "rms_mm": 0.0022763703663485255,
+            "samples": 4908
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.02728596608855171,
+            "p95_mm": 0.0038882563009263516,
+            "rms_mm": 0.002232550623801993,
+            "samples": 4908
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.04104801679588458,
+            "p95_mm": 0.0037777861061682404,
+            "rms_mm": 0.002533870609619313,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "sampled_geometry_max_mm": 0.04104801679588458,
+        "failure_reasons": [],
+        "accepted_for_this_case": true
+      },
+      "dense_target": {
+        "mesh": "development_v3_raw_failure_024_dense_target.vtp",
+        "diagnostics": {
+          "sample_count": 25921,
+          "cut_sample_count": 10109,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "grid_dimensions_xy": [
+            161,
+            161
+          ],
+          "spacing_mm": 0.025,
+          "cell_center_sample_count": 25600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+          "first_diagonal_cells": 19667,
+          "second_diagonal_cells": 5933
+        },
+        "warning": "密集目标和近邻距离仍是抽样检查，不是连续误差证书"
+      },
+      "frozen_raw_checks": {
+        "vertices": true,
+        "faces": true,
+        "bad_faces": true,
+        "min_q": true,
+        "min_angle_deg": true,
+        "all_removed_intervals_top_connected": true
+      },
+      "completed": true
+    },
+    {
+      "case_id": "development_v3_raw_failure_000",
+      "screening_generation_index": 0,
+      "raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 13,
+        "min_q": 0.6152882706717862,
+        "min_angle_deg": 22.596613227789575,
+        "boundary_edges": 160,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        }
+      },
+      "legacy_v2": {
+        "quality": {
+          "vertices": 1690,
+          "faces": 3218,
+          "bad_faces": 0,
+          "min_q": 0.5952377199842959,
+          "min_angle_deg": 25.799474288942957,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "source_transition_continuous": true,
+        "source_transition_max_one_sided_jump_mm": 1.000310945187266e-12
+      },
+      "source_constrained_v3": {
+        "mesh": "development_v3_raw_failure_000_source_constrained_v3.vtp",
+        "elapsed_ms": 335.86183399893343,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 486,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "source_transition_count": 9,
+          "source_transition_edges_inspected": 23,
+          "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+          "source_transition_max_one_sided_jump_mm": 1.000310945187266e-12,
+          "source_transition_continuous": true,
+          "source_transition_continuity_tolerance_mm": 1e-08,
+          "snapped_vertex_count": 6,
+          "maximum_snap_distance_mm": 0.03085483550358492,
+          "snap_fraction_of_spacing": 0.35,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+          "pre_alignment_bad_cells": 7,
+          "pre_refinement_bad_cells": 7,
+          "split_edge_count": 9,
+          "inserted_midpoint_count": 9,
+          "inserted_midpoint_parent_edges": [
+            [
+              1192,
+              1193
+            ],
+            [
+              1233,
+              1234
+            ],
+            [
+              1274,
+              1275
+            ],
+            [
+              1315,
+              1316
+            ],
+            [
+              1356,
+              1357
+            ],
+            [
+              1484,
+              1525
+            ],
+            [
+              1485,
+              1526
+            ],
+            [
+              1486,
+              1527
+            ],
+            [
+              1487,
+              1528
+            ]
+          ],
+          "locally_refined_cell_count": 11,
+          "post_refinement_bad_cells": 0,
+          "global_source_transition_count": 193,
+          "global_source_transition_scan_fraction": 0.25,
+          "global_source_transition_max_one_sided_jump_mm": 1.0031975250512914e-12,
+          "global_discontinuous_source_transition_count": 0,
+          "global_source_transition_continuous": true,
+          "algorithm_version": "source_constrained_v3",
+          "constraint_optimization_policy": "新增边点保持在父边XY参数线上，以解析高度映射到曲面；分层确定性搜索最大化关联三角形的最差三维质量",
+          "constraint_search_samples_per_level": 33,
+          "constraint_search_levels": 3,
+          "constraint_optimization_sweeps": 3,
+          "optimized_constraint_point_count": 9,
+          "constraint_point_min_parameter": 0.2498779296875,
+          "constraint_point_max_parameter": 0.747802734375,
+          "normalized_minimum_quality_before_optimization": 1.0319789715577183,
+          "normalized_minimum_quality_after_optimization": 1.0319789715577183,
+          "height_graph_supported": true,
+          "source_transition_model": "continuous_feature_curve",
+          "constraint_optimization_skipped": false,
+          "generation_policy_v3": "先沿用冻结v2的失败单元来源吸附与共边局部剖分，再将新增点约束在各自父边上，按解析曲面三维质量作确定性max-min优化；全网格检出高度跳变时拒绝候选"
+        },
+        "quality": {
+          "vertices": 1690,
+          "faces": 3218,
+          "bad_faces": 0,
+          "min_q": 0.5952377199842959,
+          "min_angle_deg": 25.799474288942957,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.028840998487842218,
+            "p95_mm": 0.0037652343475092823,
+            "rms_mm": 0.002089506396502251,
+            "samples": 4908
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.026425423267877224,
+            "p95_mm": 0.0035362774731485924,
+            "rms_mm": 0.001997440356036952,
+            "samples": 4908
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.03848382700202228,
+            "p95_mm": 0.003531583338505477,
+            "rms_mm": 0.0022405044077912465,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "sampled_geometry_max_mm": 0.03848382700202228,
+        "failure_reasons": [],
+        "accepted_for_this_case": true
+      },
+      "dense_target": {
+        "mesh": "development_v3_raw_failure_000_dense_target.vtp",
+        "diagnostics": {
+          "sample_count": 25921,
+          "cut_sample_count": 7753,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "grid_dimensions_xy": [
+            161,
+            161
+          ],
+          "spacing_mm": 0.025,
+          "cell_center_sample_count": 25600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+          "first_diagonal_cells": 20698,
+          "second_diagonal_cells": 4902
+        },
+        "warning": "密集目标和近邻距离仍是抽样检查，不是连续误差证书"
+      },
+      "frozen_raw_checks": {
+        "vertices": true,
+        "faces": true,
+        "bad_faces": true,
+        "min_q": true,
+        "min_angle_deg": true,
+        "all_removed_intervals_top_connected": true
+      },
+      "completed": true
+    },
+    {
+      "case_id": "development_v3_raw_failure_123",
+      "screening_generation_index": 123,
+      "raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 18,
+        "min_q": 0.5846027243515411,
+        "min_angle_deg": 21.257843927443574,
+        "boundary_edges": 160,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        }
+      },
+      "legacy_v2": {
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 1,
+          "min_q": 0.572430913112455,
+          "min_angle_deg": 24.57210322555965,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "source_transition_continuous": true,
+        "source_transition_max_one_sided_jump_mm": 1.0020873020266663e-12
+      },
+      "source_constrained_v3": {
+        "mesh": "development_v3_raw_failure_123_source_constrained_v3.vtp",
+        "elapsed_ms": 416.5229159989394,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 559,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "source_transition_count": 10,
+          "source_transition_edges_inspected": 32,
+          "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+          "source_transition_max_one_sided_jump_mm": 1.0020873020266663e-12,
+          "source_transition_continuous": true,
+          "source_transition_continuity_tolerance_mm": 1e-08,
+          "snapped_vertex_count": 6,
+          "maximum_snap_distance_mm": 0.024259633066214148,
+          "snap_fraction_of_spacing": 0.35,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+          "pre_alignment_bad_cells": 10,
+          "pre_refinement_bad_cells": 10,
+          "split_edge_count": 12,
+          "inserted_midpoint_count": 12,
+          "inserted_midpoint_parent_edges": [
+            [
+              1151,
+              1152
+            ],
+            [
+              1192,
+              1193
+            ],
+            [
+              1233,
+              1234
+            ],
+            [
+              1274,
+              1275
+            ],
+            [
+              1315,
+              1316
+            ],
+            [
+              1356,
+              1357
+            ],
+            [
+              1483,
+              1524
+            ],
+            [
+              1484,
+              1525
+            ],
+            [
+              1485,
+              1526
+            ],
+            [
+              1486,
+              1527
+            ],
+            [
+              1487,
+              1528
+            ],
+            [
+              1488,
+              1529
+            ]
+          ],
+          "locally_refined_cell_count": 14,
+          "post_refinement_bad_cells": 1,
+          "global_source_transition_count": 203,
+          "global_source_transition_scan_fraction": 0.25,
+          "global_source_transition_max_one_sided_jump_mm": 1.0055845045542355e-12,
+          "global_discontinuous_source_transition_count": 0,
+          "global_source_transition_continuous": true,
+          "algorithm_version": "source_constrained_v3",
+          "constraint_optimization_policy": "新增边点保持在父边XY参数线上，以解析高度映射到曲面；分层确定性搜索最大化关联三角形的最差三维质量",
+          "constraint_search_samples_per_level": 33,
+          "constraint_search_levels": 3,
+          "constraint_optimization_sweeps": 3,
+          "optimized_constraint_point_count": 12,
+          "constraint_point_min_parameter": 0.2479248046875,
+          "constraint_point_max_parameter": 0.788330078125,
+          "normalized_minimum_quality_before_optimization": 0.9828841290223861,
+          "normalized_minimum_quality_after_optimization": 1.0066097747862714,
+          "height_graph_supported": true,
+          "source_transition_model": "continuous_feature_curve",
+          "constraint_optimization_skipped": false,
+          "generation_policy_v3": "先沿用冻结v2的失败单元来源吸附与共边局部剖分，再将新增点约束在各自父边上，按解析曲面三维质量作确定性max-min优化；全网格检出高度跳变时拒绝候选"
+        },
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 0,
+          "min_q": 0.572430913112455,
+          "min_angle_deg": 25.165244369656786,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.03459323069642939,
+            "p95_mm": 0.004010915761749363,
+            "rms_mm": 0.0025840533979023255,
+            "samples": 4917
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.03369751304796544,
+            "p95_mm": 0.0037155617267529513,
+            "rms_mm": 0.002432911739965107,
+            "samples": 4917
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.047937145167994404,
+            "p95_mm": 0.003683129924597508,
+            "rms_mm": 0.002818239039684724,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "sampled_geometry_max_mm": 0.047937145167994404,
+        "failure_reasons": [],
+        "accepted_for_this_case": true
+      },
+      "dense_target": {
+        "mesh": "development_v3_raw_failure_123_dense_target.vtp",
+        "diagnostics": {
+          "sample_count": 25921,
+          "cut_sample_count": 8922,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "grid_dimensions_xy": [
+            161,
+            161
+          ],
+          "spacing_mm": 0.025,
+          "cell_center_sample_count": 25600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+          "first_diagonal_cells": 20364,
+          "second_diagonal_cells": 5236
+        },
+        "warning": "密集目标和近邻距离仍是抽样检查，不是连续误差证书"
+      },
+      "frozen_raw_checks": {
+        "vertices": true,
+        "faces": true,
+        "bad_faces": true,
+        "min_q": true,
+        "min_angle_deg": true,
+        "all_removed_intervals_top_connected": true
+      },
+      "completed": true
+    },
+    {
+      "case_id": "development_v3_raw_failure_124",
+      "screening_generation_index": 124,
+      "raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 18,
+        "min_q": 0.6164051820949903,
+        "min_angle_deg": 22.587809731392138,
+        "boundary_edges": 160,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        }
+      },
+      "legacy_v2": {
+        "quality": {
+          "vertices": 1692,
+          "faces": 3222,
+          "bad_faces": 0,
+          "min_q": 0.6792400054053623,
+          "min_angle_deg": 26.84570844040569,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "source_transition_continuous": true,
+        "source_transition_max_one_sided_jump_mm": 1.0009770790020411e-12
+      },
+      "source_constrained_v3": {
+        "mesh": "development_v3_raw_failure_124_source_constrained_v3.vtp",
+        "elapsed_ms": 403.10004199272953,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 576,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "source_transition_count": 12,
+          "source_transition_edges_inspected": 32,
+          "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+          "source_transition_max_one_sided_jump_mm": 1.0009770790020411e-12,
+          "source_transition_continuous": true,
+          "source_transition_continuity_tolerance_mm": 1e-08,
+          "snapped_vertex_count": 6,
+          "maximum_snap_distance_mm": 0.03180910343198051,
+          "snap_fraction_of_spacing": 0.35,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+          "pre_alignment_bad_cells": 10,
+          "pre_refinement_bad_cells": 9,
+          "split_edge_count": 11,
+          "inserted_midpoint_count": 11,
+          "inserted_midpoint_parent_edges": [
+            [
+              1151,
+              1152
+            ],
+            [
+              1192,
+              1193
+            ],
+            [
+              1233,
+              1234
+            ],
+            [
+              1274,
+              1275
+            ],
+            [
+              1315,
+              1316
+            ],
+            [
+              1483,
+              1524
+            ],
+            [
+              1484,
+              1525
+            ],
+            [
+              1485,
+              1526
+            ],
+            [
+              1486,
+              1527
+            ],
+            [
+              1487,
+              1528
+            ],
+            [
+              1488,
+              1529
+            ]
+          ],
+          "locally_refined_cell_count": 13,
+          "post_refinement_bad_cells": 0,
+          "global_source_transition_count": 204,
+          "global_source_transition_scan_fraction": 0.25,
+          "global_source_transition_max_one_sided_jump_mm": 1.0038636588660665e-12,
+          "global_discontinuous_source_transition_count": 0,
+          "global_source_transition_continuous": true,
+          "algorithm_version": "source_constrained_v3",
+          "constraint_optimization_policy": "新增边点保持在父边XY参数线上，以解析高度映射到曲面；分层确定性搜索最大化关联三角形的最差三维质量",
+          "constraint_search_samples_per_level": 33,
+          "constraint_search_levels": 3,
+          "constraint_optimization_sweeps": 3,
+          "optimized_constraint_point_count": 11,
+          "constraint_point_min_parameter": 0.2196044921875,
+          "constraint_point_max_parameter": 0.6947021484375,
+          "normalized_minimum_quality_before_optimization": 1.0738283376162276,
+          "normalized_minimum_quality_after_optimization": 1.3310102810019575,
+          "height_graph_supported": true,
+          "source_transition_model": "continuous_feature_curve",
+          "constraint_optimization_skipped": false,
+          "generation_policy_v3": "先沿用冻结v2的失败单元来源吸附与共边局部剖分，再将新增点约束在各自父边上，按解析曲面三维质量作确定性max-min优化；全网格检出高度跳变时拒绝候选"
+        },
+        "quality": {
+          "vertices": 1692,
+          "faces": 3222,
+          "bad_faces": 0,
+          "min_q": 0.691689443607253,
+          "min_angle_deg": 33.27525702504894,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.03159785364570944,
+            "p95_mm": 0.0039788159185169415,
+            "rms_mm": 0.0023590523390407602,
+            "samples": 4914
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.032919836901196285,
+            "p95_mm": 0.00377382955688041,
+            "rms_mm": 0.0022103290100336636,
+            "samples": 4914
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.038523452149229157,
+            "p95_mm": 0.0037174297784025928,
+            "rms_mm": 0.002513519527390036,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "sampled_geometry_max_mm": 0.038523452149229157,
+        "failure_reasons": [],
+        "accepted_for_this_case": true
+      },
+      "dense_target": {
+        "mesh": "development_v3_raw_failure_124_dense_target.vtp",
+        "diagnostics": {
+          "sample_count": 25921,
+          "cut_sample_count": 9028,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "grid_dimensions_xy": [
+            161,
+            161
+          ],
+          "spacing_mm": 0.025,
+          "cell_center_sample_count": 25600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+          "first_diagonal_cells": 20262,
+          "second_diagonal_cells": 5338
+        },
+        "warning": "密集目标和近邻距离仍是抽样检查，不是连续误差证书"
+      },
+      "frozen_raw_checks": {
+        "vertices": true,
+        "faces": true,
+        "bad_faces": true,
+        "min_q": true,
+        "min_angle_deg": true,
+        "all_removed_intervals_top_connected": true
+      },
+      "completed": true
+    },
+    {
+      "case_id": "development_v3_raw_failure_282",
+      "screening_generation_index": 282,
+      "raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 20,
+        "min_q": 0.5860953139748284,
+        "min_angle_deg": 21.457626770490428,
+        "boundary_edges": 160,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        }
+      },
+      "legacy_v2": {
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 2,
+          "min_q": 0.5761168697385198,
+          "min_angle_deg": 20.76296421714495,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "source_transition_continuous": true,
+        "source_transition_max_one_sided_jump_mm": 1.0046408149833042e-12
+      },
+      "source_constrained_v3": {
+        "mesh": "development_v3_raw_failure_282_source_constrained_v3.vtp",
+        "elapsed_ms": 417.71920799510553,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 623,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "source_transition_count": 10,
+          "source_transition_edges_inspected": 32,
+          "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+          "source_transition_max_one_sided_jump_mm": 1.0046408149833042e-12,
+          "source_transition_continuous": true,
+          "source_transition_continuity_tolerance_mm": 1e-08,
+          "snapped_vertex_count": 5,
+          "maximum_snap_distance_mm": 0.03374155409887969,
+          "snap_fraction_of_spacing": 0.35,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+          "pre_alignment_bad_cells": 10,
+          "pre_refinement_bad_cells": 10,
+          "split_edge_count": 12,
+          "inserted_midpoint_count": 12,
+          "inserted_midpoint_parent_edges": [
+            [
+              1151,
+              1152
+            ],
+            [
+              1192,
+              1193
+            ],
+            [
+              1233,
+              1234
+            ],
+            [
+              1274,
+              1275
+            ],
+            [
+              1315,
+              1316
+            ],
+            [
+              1483,
+              1524
+            ],
+            [
+              1484,
+              1525
+            ],
+            [
+              1485,
+              1526
+            ],
+            [
+              1486,
+              1527
+            ],
+            [
+              1487,
+              1528
+            ],
+            [
+              1488,
+              1529
+            ],
+            [
+              1489,
+              1530
+            ]
+          ],
+          "locally_refined_cell_count": 14,
+          "post_refinement_bad_cells": 1,
+          "global_source_transition_count": 210,
+          "global_source_transition_scan_fraction": 0.25,
+          "global_source_transition_max_one_sided_jump_mm": 1.0058065491591606e-12,
+          "global_discontinuous_source_transition_count": 0,
+          "global_source_transition_continuous": true,
+          "algorithm_version": "source_constrained_v3",
+          "constraint_optimization_policy": "新增边点保持在父边XY参数线上，以解析高度映射到曲面；分层确定性搜索最大化关联三角形的最差三维质量",
+          "constraint_search_samples_per_level": 33,
+          "constraint_search_levels": 3,
+          "constraint_optimization_sweeps": 3,
+          "optimized_constraint_point_count": 12,
+          "constraint_point_min_parameter": 0.275146484375,
+          "constraint_point_max_parameter": 0.7724609375,
+          "normalized_minimum_quality_before_optimization": 0.8305185686857981,
+          "normalized_minimum_quality_after_optimization": 1.0590294239196836,
+          "height_graph_supported": true,
+          "source_transition_model": "continuous_feature_curve",
+          "constraint_optimization_skipped": false,
+          "generation_policy_v3": "先沿用冻结v2的失败单元来源吸附与共边局部剖分，再将新增点约束在各自父边上，按解析曲面三维质量作确定性max-min优化；全网格检出高度跳变时拒绝候选"
+        },
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 0,
+          "min_q": 0.5591749595843054,
+          "min_angle_deg": 26.47573559799209,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.03466556290180467,
+            "p95_mm": 0.003987482439579069,
+            "rms_mm": 0.002629959583506261,
+            "samples": 4917
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.03389312830296071,
+            "p95_mm": 0.0037356228076335617,
+            "rms_mm": 0.002470134650046551,
+            "samples": 4917
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.05295648262515305,
+            "p95_mm": 0.003773764716522436,
+            "rms_mm": 0.0027814018852996515,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "sampled_geometry_max_mm": 0.05295648262515305,
+        "failure_reasons": [],
+        "accepted_for_this_case": true
+      },
+      "dense_target": {
+        "mesh": "development_v3_raw_failure_282_dense_target.vtp",
+        "diagnostics": {
+          "sample_count": 25921,
+          "cut_sample_count": 10014,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "grid_dimensions_xy": [
+            161,
+            161
+          ],
+          "spacing_mm": 0.025,
+          "cell_center_sample_count": 25600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+          "first_diagonal_cells": 19958,
+          "second_diagonal_cells": 5642
+        },
+        "warning": "密集目标和近邻距离仍是抽样检查，不是连续误差证书"
+      },
+      "frozen_raw_checks": {
+        "vertices": true,
+        "faces": true,
+        "bad_faces": true,
+        "min_q": true,
+        "min_angle_deg": true,
+        "all_removed_intervals_top_connected": true
+      },
+      "completed": true
+    },
+    {
+      "case_id": "development_v3_raw_failure_267",
+      "screening_generation_index": 267,
+      "raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 19,
+        "min_q": 0.5537356502627531,
+        "min_angle_deg": 19.930441124656312,
+        "boundary_edges": 160,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        }
+      },
+      "legacy_v2": {
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 0,
+          "min_q": 0.6969950911154369,
+          "min_angle_deg": 29.66089987971561,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "source_transition_continuous": true,
+        "source_transition_max_one_sided_jump_mm": 1.0046963261345354e-12
+      },
+      "source_constrained_v3": {
+        "mesh": "development_v3_raw_failure_267_source_constrained_v3.vtp",
+        "elapsed_ms": 420.3718329954427,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 557,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "source_transition_count": 11,
+          "source_transition_edges_inspected": 32,
+          "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+          "source_transition_max_one_sided_jump_mm": 1.0046963261345354e-12,
+          "source_transition_continuous": true,
+          "source_transition_continuity_tolerance_mm": 1e-08,
+          "snapped_vertex_count": 5,
+          "maximum_snap_distance_mm": 0.03061439003786126,
+          "snap_fraction_of_spacing": 0.35,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+          "pre_alignment_bad_cells": 10,
+          "pre_refinement_bad_cells": 10,
+          "split_edge_count": 12,
+          "inserted_midpoint_count": 12,
+          "inserted_midpoint_parent_edges": [
+            [
+              1151,
+              1152
+            ],
+            [
+              1192,
+              1193
+            ],
+            [
+              1233,
+              1234
+            ],
+            [
+              1274,
+              1275
+            ],
+            [
+              1315,
+              1316
+            ],
+            [
+              1356,
+              1357
+            ],
+            [
+              1483,
+              1524
+            ],
+            [
+              1484,
+              1525
+            ],
+            [
+              1485,
+              1526
+            ],
+            [
+              1486,
+              1527
+            ],
+            [
+              1487,
+              1528
+            ],
+            [
+              1488,
+              1529
+            ]
+          ],
+          "locally_refined_cell_count": 14,
+          "post_refinement_bad_cells": 0,
+          "global_source_transition_count": 202,
+          "global_source_transition_scan_fraction": 0.25,
+          "global_source_transition_max_one_sided_jump_mm": 1.0094702851404236e-12,
+          "global_discontinuous_source_transition_count": 0,
+          "global_source_transition_continuous": true,
+          "algorithm_version": "source_constrained_v3",
+          "constraint_optimization_policy": "新增边点保持在父边XY参数线上，以解析高度映射到曲面；分层确定性搜索最大化关联三角形的最差三维质量",
+          "constraint_search_samples_per_level": 33,
+          "constraint_search_levels": 3,
+          "constraint_optimization_sweeps": 3,
+          "optimized_constraint_point_count": 12,
+          "constraint_point_min_parameter": 0.258544921875,
+          "constraint_point_max_parameter": 0.838623046875,
+          "normalized_minimum_quality_before_optimization": 1.1864359951886245,
+          "normalized_minimum_quality_after_optimization": 1.2556500215542608,
+          "height_graph_supported": true,
+          "source_transition_model": "continuous_feature_curve",
+          "constraint_optimization_skipped": false,
+          "generation_policy_v3": "先沿用冻结v2的失败单元来源吸附与共边局部剖分，再将新增点约束在各自父边上，按解析曲面三维质量作确定性max-min优化；全网格检出高度跳变时拒绝候选"
+        },
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 0,
+          "min_q": 0.6933481758093055,
+          "min_angle_deg": 31.39125053885652,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.03953406592853653,
+            "p95_mm": 0.003735961605204391,
+            "rms_mm": 0.0024265377756144567,
+            "samples": 4917
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.03865314902426806,
+            "p95_mm": 0.003509056042698253,
+            "rms_mm": 0.0023032296507755237,
+            "samples": 4917
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.05236375030952046,
+            "p95_mm": 0.0035866280685513878,
+            "rms_mm": 0.0026904639676635024,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "sampled_geometry_max_mm": 0.05236375030952046,
+        "failure_reasons": [],
+        "accepted_for_this_case": true
+      },
+      "dense_target": {
+        "mesh": "development_v3_raw_failure_267_dense_target.vtp",
+        "diagnostics": {
+          "sample_count": 25921,
+          "cut_sample_count": 8989,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "grid_dimensions_xy": [
+            161,
+            161
+          ],
+          "spacing_mm": 0.025,
+          "cell_center_sample_count": 25600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+          "first_diagonal_cells": 20397,
+          "second_diagonal_cells": 5203
+        },
+        "warning": "密集目标和近邻距离仍是抽样检查，不是连续误差证书"
+      },
+      "frozen_raw_checks": {
+        "vertices": true,
+        "faces": true,
+        "bad_faces": true,
+        "min_q": true,
+        "min_angle_deg": true,
+        "all_removed_intervals_top_connected": true
+      },
+      "completed": true
+    },
+    {
+      "case_id": "development_v3_raw_failure_391",
+      "screening_generation_index": 391,
+      "raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 21,
+        "min_q": 0.545332403900872,
+        "min_angle_deg": 19.627173304400813,
+        "boundary_edges": 160,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        }
+      },
+      "legacy_v2": {
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 2,
+          "min_q": 0.5889201109562894,
+          "min_angle_deg": 24.002360609503295,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "source_transition_continuous": false,
+        "source_transition_max_one_sided_jump_mm": 0.017700222453187142
+      },
+      "source_constrained_v3": {
+        "mesh": "development_v3_raw_failure_391_source_constrained_v3.vtp",
+        "elapsed_ms": 180.4054999956861,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 627,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "source_transition_count": 11,
+          "source_transition_edges_inspected": 35,
+          "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+          "source_transition_max_one_sided_jump_mm": 0.017700222453187142,
+          "source_transition_continuous": false,
+          "source_transition_continuity_tolerance_mm": 1e-08,
+          "snapped_vertex_count": 4,
+          "maximum_snap_distance_mm": 0.030805375641787425,
+          "snap_fraction_of_spacing": 0.35,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+          "pre_alignment_bad_cells": 11,
+          "pre_refinement_bad_cells": 10,
+          "split_edge_count": 12,
+          "inserted_midpoint_count": 12,
+          "inserted_midpoint_parent_edges": [
+            [
+              1151,
+              1152
+            ],
+            [
+              1192,
+              1193
+            ],
+            [
+              1233,
+              1234
+            ],
+            [
+              1274,
+              1275
+            ],
+            [
+              1315,
+              1316
+            ],
+            [
+              1483,
+              1524
+            ],
+            [
+              1484,
+              1525
+            ],
+            [
+              1485,
+              1526
+            ],
+            [
+              1486,
+              1527
+            ],
+            [
+              1487,
+              1528
+            ],
+            [
+              1488,
+              1529
+            ],
+            [
+              1489,
+              1530
+            ]
+          ],
+          "locally_refined_cell_count": 14,
+          "post_refinement_bad_cells": 2,
+          "global_source_transition_count": 209,
+          "global_source_transition_scan_fraction": 0.25,
+          "global_source_transition_max_one_sided_jump_mm": 0.017700222453187142,
+          "global_discontinuous_source_transition_count": 6,
+          "global_source_transition_continuous": false,
+          "algorithm_version": "source_constrained_v3",
+          "height_graph_supported": false,
+          "source_transition_model": "non_single_valued_vertical_wall",
+          "constraint_optimization_skipped": true,
+          "constraint_rejection_reason": "来源切换存在非零单侧高度差，需显式生成垂直壁；连续高度图候选不得跨越该跳变"
+        },
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 2,
+          "min_q": 0.5889201109562894,
+          "min_angle_deg": 24.002360609503295,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.04399889623513803,
+            "p95_mm": 0.00428601493127128,
+            "rms_mm": 0.002662003341778385,
+            "samples": 4917
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.042677166604121616,
+            "p95_mm": 0.003946273831027249,
+            "rms_mm": 0.0024584845081751204,
+            "samples": 4917
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.056162499618095295,
+            "p95_mm": 0.003917180946340497,
+            "rms_mm": 0.002850002238750682,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "sampled_geometry_max_mm": 0.056162499618095295,
+        "failure_reasons": [
+          "non_single_valued_vertical_wall",
+          "shape_quality"
+        ],
+        "accepted_for_this_case": false
+      },
+      "dense_target": {
+        "mesh": "development_v3_raw_failure_391_dense_target.vtp",
+        "diagnostics": {
+          "sample_count": 25921,
+          "cut_sample_count": 9953,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "grid_dimensions_xy": [
+            161,
+            161
+          ],
+          "spacing_mm": 0.025,
+          "cell_center_sample_count": 25600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+          "first_diagonal_cells": 20085,
+          "second_diagonal_cells": 5515
+        },
+        "warning": "密集目标和近邻距离仍是抽样检查，不是连续误差证书"
+      },
+      "frozen_raw_checks": {
+        "vertices": true,
+        "faces": true,
+        "bad_faces": true,
+        "min_q": true,
+        "min_angle_deg": true,
+        "all_removed_intervals_top_connected": true
+      },
+      "completed": true
+    },
+    {
+      "case_id": "development_v3_raw_failure_392",
+      "screening_generation_index": 392,
+      "raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 20,
+        "min_q": 0.5981160711883624,
+        "min_angle_deg": 22.017940858102506,
+        "boundary_edges": 160,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        }
+      },
+      "legacy_v2": {
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 0,
+          "min_q": 0.5981160711883624,
+          "min_angle_deg": 26.680738585600274,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "source_transition_continuous": true,
+        "source_transition_max_one_sided_jump_mm": 1.003752636563604e-12
+      },
+      "source_constrained_v3": {
+        "mesh": "development_v3_raw_failure_392_source_constrained_v3.vtp",
+        "elapsed_ms": 419.300084002316,
+        "diagnostics": {
+          "sample_count": 1681,
+          "cut_sample_count": 630,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "source_transition_count": 11,
+          "source_transition_edges_inspected": 32,
+          "source_transition_scan_scope": "仅检查原始候选质量失败单元的边；通过单元不移动",
+          "source_transition_max_one_sided_jump_mm": 1.003752636563604e-12,
+          "source_transition_continuous": true,
+          "source_transition_continuity_tolerance_mm": 1e-08,
+          "snapped_vertex_count": 6,
+          "maximum_snap_distance_mm": 0.027487242653371657,
+          "snap_fraction_of_spacing": 0.35,
+          "grid_dimensions_xy": [
+            41,
+            41
+          ],
+          "spacing_mm": 0.1,
+          "cell_center_sample_count": 1600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "generation_policy": "只在原候选质量失败单元内，将邻近格点吸附到连续来源切换线；仍失败的单元沿三维长方向插入共享解析中点；局部剖分最大化最差三角质量",
+          "pre_alignment_bad_cells": 10,
+          "pre_refinement_bad_cells": 10,
+          "split_edge_count": 12,
+          "inserted_midpoint_count": 12,
+          "inserted_midpoint_parent_edges": [
+            [
+              1151,
+              1152
+            ],
+            [
+              1192,
+              1193
+            ],
+            [
+              1233,
+              1234
+            ],
+            [
+              1274,
+              1275
+            ],
+            [
+              1315,
+              1316
+            ],
+            [
+              1483,
+              1524
+            ],
+            [
+              1484,
+              1525
+            ],
+            [
+              1485,
+              1526
+            ],
+            [
+              1486,
+              1527
+            ],
+            [
+              1487,
+              1528
+            ],
+            [
+              1488,
+              1529
+            ],
+            [
+              1489,
+              1530
+            ]
+          ],
+          "locally_refined_cell_count": 14,
+          "post_refinement_bad_cells": 0,
+          "global_source_transition_count": 210,
+          "global_source_transition_scan_fraction": 0.25,
+          "global_source_transition_max_one_sided_jump_mm": 1.0068612610325545e-12,
+          "global_discontinuous_source_transition_count": 0,
+          "global_source_transition_continuous": true,
+          "algorithm_version": "source_constrained_v3",
+          "constraint_optimization_policy": "新增边点保持在父边XY参数线上，以解析高度映射到曲面；分层确定性搜索最大化关联三角形的最差三维质量",
+          "constraint_search_samples_per_level": 33,
+          "constraint_search_levels": 3,
+          "constraint_optimization_sweeps": 3,
+          "optimized_constraint_point_count": 12,
+          "constraint_point_min_parameter": 0.324951171875,
+          "constraint_point_max_parameter": 0.7816162109375,
+          "normalized_minimum_quality_before_optimization": 1.0672295434240109,
+          "normalized_minimum_quality_after_optimization": 1.1119184190463962,
+          "height_graph_supported": true,
+          "source_transition_model": "continuous_feature_curve",
+          "constraint_optimization_skipped": false,
+          "generation_policy_v3": "先沿用冻结v2的失败单元来源吸附与共边局部剖分，再将新增点约束在各自父边上，按解析曲面三维质量作确定性max-min优化；全网格检出高度跳变时拒绝候选"
+        },
+        "quality": {
+          "vertices": 1693,
+          "faces": 3224,
+          "bad_faces": 0,
+          "min_q": 0.5869004926074036,
+          "min_angle_deg": 27.797960476159908,
+          "boundary_edges": 160,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "topology": {
+          "connected_components": 1,
+          "boundary_edges": 160,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "sampled_surface_audit": {
+          "implicit_residual": {
+            "max_mm": 0.030665562901804666,
+            "p95_mm": 0.004230329869691463,
+            "rms_mm": 0.0026548227335997467,
+            "samples": 4917
+          },
+          "mesh_to_dense_target": {
+            "max_mm": 0.02974436744902551,
+            "p95_mm": 0.0040111024137136995,
+            "rms_mm": 0.002484748990632,
+            "samples": 4917
+          },
+          "dense_target_to_mesh": {
+            "max_mm": 0.04986481561309463,
+            "p95_mm": 0.004099823874528268,
+            "rms_mm": 0.0028491452401917033,
+            "samples": 25921
+          },
+          "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+        },
+        "sampled_geometry_max_mm": 0.04986481561309463,
+        "failure_reasons": [],
+        "accepted_for_this_case": true
+      },
+      "dense_target": {
+        "mesh": "development_v3_raw_failure_392_dense_target.vtp",
+        "diagnostics": {
+          "sample_count": 25921,
+          "cut_sample_count": 9992,
+          "internal_cavity_sample_count": 0,
+          "all_removed_intervals_top_connected": true,
+          "connection_iterations": 2,
+          "grid_dimensions_xy": [
+            161,
+            161
+          ],
+          "spacing_mm": 0.025,
+          "cell_center_sample_count": 25600,
+          "cell_center_internal_cavity_sample_count": 0,
+          "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+          "first_diagonal_cells": 20027,
+          "second_diagonal_cells": 5573
+        },
+        "warning": "密集目标和近邻距离仍是抽样检查，不是连续误差证书"
+      },
+      "frozen_raw_checks": {
+        "vertices": true,
+        "faces": true,
+        "bad_faces": true,
+        "min_q": true,
+        "min_angle_deg": true,
+        "all_removed_intervals_top_connected": true
+      },
+      "completed": true
+    }
+  ],
+  "summary": {
+    "cases_completed": 8,
+    "case_count": 8,
+    "height_graph_supported": 7,
+    "accepted": 7,
+    "legacy_v2_accepted_by_quality_and_continuity": 5
+  },
+  "interpretation": "v3只接受连续高度交界；来源切换存在单侧高度差时，必须转入显式垂直壁三维重建，不能由高度图跨接"
+}

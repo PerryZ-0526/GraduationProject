@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "record_kind": "simulated",
+  "coordinate_frame": {
+    "name": "bone",
+    "length_unit": "mm",
+    "time_unit": "ms",
+    "handedness": "right"
+  },
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200,
+    "interpolate_missing_motion": false
+  },
+  "baselines": [],
+  "frozen_before_source_fitted_run": "2026-09-17 23:42:50",
+  "screening": {
+    "purpose": "只用原始解析候选筛出质量失败路线，冻结后才允许运行来源切换局部生成",
+    "raw_only_screening": true,
+    "source_fitted_not_run_before_freeze": true,
+    "surface_methods_sha256": "7cafaeeec447484c0536c6bf59f18b81ff705c90e0c3045d0530572175171c5c",
+    "xy_bounds_mm": [
+      -2.0,
+      2.0,
+      -2.0,
+      2.0
+    ],
+    "spacing_mm": 0.1,
+    "cartesian_parameter_order": [
+      "plane_a",
+      "plane_b",
+      "tool_radius_mm",
+      "path_shift_mm",
+      "endpoint_z_delta_mm"
+    ],
+    "cartesian_parameters": {
+      "plane_a": [
+        0.11,
+        0.15,
+        0.19,
+        0.23
+      ],
+      "plane_b": [
+        -0.14,
+        -0.1,
+        -0.06
+      ],
+      "tool_radius_mm": [
+        0.66,
+        0.7,
+        0.74
+      ],
+      "path_shift_mm": [
+        -0.06,
+        -0.02,
+        0.02,
+        0.06
+      ],
+      "endpoint_z_delta_mm": [
+        -0.04,
+        0.0,
+        0.04
+      ]
+    },
+    "screened_case_count": 432,
+    "in_scope_raw_failure_count": 245,
+    "selection_rule": "每个plane_a层选择适用域内raw bad_faces最多的路线，并列时取笛卡尔积生成编号最小者",
+    "selected_generation_indices": [
+      30,
+      138,
+      240,
+      348
+    ]
+  },
+  "parameter_policy": {
+    "candidate_xy_spacing_mm": 0.1,
+    "quality_min_angle_deg": 25.0,
+    "quality_min_q": 0.4,
+    "sampled_geometry_budget_mm": 0.1,
+    "source_snap_fraction": 0.35,
+    "note": "来源规则与门槛继承第二批第二轮，冻结后不得按本批结果回调"
+  },
+  "cases": [
+    {
+      "id": "challenge_raw_failure_a011",
+      "split": "evaluation",
+      "purpose": "未见质量失败挑战：较缓倾斜面、偏移正交交叉及双向变深",
+      "screening_generation_index": 30,
+      "screening_parameters": {
+        "plane_a": 0.11,
+        "plane_b": -0.14,
+        "tool_radius_mm": 0.74,
+        "path_shift_mm": 0.02,
+        "endpoint_z_delta_mm": -0.04
+      },
+      "expected_raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 16,
+        "min_q": 0.6039359745998455,
+        "min_angle_deg": 22.019928178985015,
+        "all_removed_intervals_top_connected": true
+      },
+      "initial_surface": {
+        "kind": "plane",
+        "height_coefficients": [
+          0.11,
+          -0.14,
+          0.0
+        ]
+      },
+      "plan": {
+        "center_xy_mm": [
+          0.0,
+          0.0
+        ],
+        "allowed_radius_mm": 3.0
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.74
+      },
+      "events": [
+        {
+          "id": "a0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.98,
+            -1.02,
+            0.41
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "a1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            1.02,
+            0.98,
+            0.59
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "pause",
+          "arrival_index": 2,
+          "timestamp_ms": 150,
+          "position_mm": [
+            1.02,
+            0.98,
+            0.59
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "b0",
+          "arrival_index": 3,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.02,
+            1.02,
+            0.54
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "b1",
+          "arrival_index": 4,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.98,
+            -0.98,
+            0.46
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ]
+    },
+    {
+      "id": "challenge_raw_failure_a015",
+      "split": "evaluation",
+      "purpose": "未见质量失败挑战：中等倾斜面、偏移正交交叉及双向变深",
+      "screening_generation_index": 138,
+      "screening_parameters": {
+        "plane_a": 0.15,
+        "plane_b": -0.14,
+        "tool_radius_mm": 0.74,
+        "path_shift_mm": 0.02,
+        "endpoint_z_delta_mm": -0.04
+      },
+      "expected_raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 21,
+        "min_q": 0.6039359745998455,
+        "min_angle_deg": 22.019928178985015,
+        "all_removed_intervals_top_connected": true
+      },
+      "initial_surface": {
+        "kind": "plane",
+        "height_coefficients": [
+          0.15,
+          -0.14,
+          0.0
+        ]
+      },
+      "plan": {
+        "center_xy_mm": [
+          0.0,
+          0.0
+        ],
+        "allowed_radius_mm": 3.0
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.74
+      },
+      "events": [
+        {
+          "id": "a0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.98,
+            -1.02,
+            0.41
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "a1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            1.02,
+            0.98,
+            0.59
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "pause",
+          "arrival_index": 2,
+          "timestamp_ms": 150,
+          "position_mm": [
+            1.02,
+            0.98,
+            0.59
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "b0",
+          "arrival_index": 3,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.02,
+            1.02,
+            0.54
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "b1",
+          "arrival_index": 4,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.98,
+            -0.98,
+            0.46
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ]
+    },
+    {
+      "id": "challenge_raw_failure_a019",
+      "split": "evaluation",
+      "purpose": "未见质量失败挑战：较陡倾斜面、反向偏移交叉及双向变深",
+      "screening_generation_index": 240,
+      "screening_parameters": {
+        "plane_a": 0.19,
+        "plane_b": -0.14,
+        "tool_radius_mm": 0.74,
+        "path_shift_mm": -0.06,
+        "endpoint_z_delta_mm": -0.04
+      },
+      "expected_raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 25,
+        "min_q": 0.40390346941678795,
+        "min_angle_deg": 13.906360602653315,
+        "all_removed_intervals_top_connected": true
+      },
+      "initial_surface": {
+        "kind": "plane",
+        "height_coefficients": [
+          0.19,
+          -0.14,
+          0.0
+        ]
+      },
+      "plan": {
+        "center_xy_mm": [
+          0.0,
+          0.0
+        ],
+        "allowed_radius_mm": 3.0
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.74
+      },
+      "events": [
+        {
+          "id": "a0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -1.06,
+            -0.94,
+            0.41
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "a1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.94,
+            1.06,
+            0.59
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "pause",
+          "arrival_index": 2,
+          "timestamp_ms": 150,
+          "position_mm": [
+            0.94,
+            1.06,
+            0.59
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "b0",
+          "arrival_index": 3,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.94,
+            0.94,
+            0.54
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "b1",
+          "arrival_index": 4,
+          "timestamp_ms": 300,
+          "position_mm": [
+            1.06,
+            -1.06,
+            0.46
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ]
+    },
+    {
+      "id": "challenge_raw_failure_a023",
+      "split": "evaluation",
+      "purpose": "未见质量失败挑战：最陡倾斜面、反向偏移交叉及双向变深",
+      "screening_generation_index": 348,
+      "screening_parameters": {
+        "plane_a": 0.23,
+        "plane_b": -0.14,
+        "tool_radius_mm": 0.74,
+        "path_shift_mm": -0.06,
+        "endpoint_z_delta_mm": -0.04
+      },
+      "expected_raw_quality": {
+        "vertices": 1681,
+        "faces": 3200,
+        "bad_faces": 29,
+        "min_q": 0.3497567569614956,
+        "min_angle_deg": 11.913408568914463,
+        "all_removed_intervals_top_connected": true
+      },
+      "initial_surface": {
+        "kind": "plane",
+        "height_coefficients": [
+          0.23,
+          -0.14,
+          0.0
+        ]
+      },
+      "plan": {
+        "center_xy_mm": [
+          0.0,
+          0.0
+        ],
+        "allowed_radius_mm": 3.0
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.74
+      },
+      "events": [
+        {
+          "id": "a0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -1.06,
+            -0.94,
+            0.41
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "a1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.94,
+            1.06,
+            0.59
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "pause",
+          "arrival_index": 2,
+          "timestamp_ms": 150,
+          "position_mm": [
+            0.94,
+            1.06,
+            0.59
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "b0",
+          "arrival_index": 3,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.94,
+            0.94,
+            0.54
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "b1",
+          "arrival_index": 4,
+          "timestamp_ms": 300,
+          "position_mm": [
+            1.06,
+            -1.06,
+            0.46
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ]
+    }
+  ]
+}

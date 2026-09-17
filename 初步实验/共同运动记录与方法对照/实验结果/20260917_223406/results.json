@@ -1,0 +1,664 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-09-17 22:34:06",
+  "status": "completed",
+  "scope": "第一批共同仿真运动记录与固定答案；第二批仅启动解析竖直案例的最小接缝消融",
+  "record_kind": "simulated",
+  "coordinate_frame": {
+    "name": "bone",
+    "length_unit": "mm",
+    "time_unit": "ms",
+    "handedness": "right"
+  },
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200,
+    "interpolate_missing_motion": false
+  },
+  "source_sha256": {
+    "初步实验/共同运动记录与方法对照/cases.json": "6ac44bb3332dce8a7ac2d34c1034c35cf1d2c49c45cc114eb7d803cbf1ec1e52",
+    "初步实验/共同运动记录与方法对照/motion_record.py": "dbaa95976f7461cbd5e4f6196e7edd40d5a06af862057c94e143030f5464923a",
+    "初步实验/共同运动记录与方法对照/test_motion_record.py": "4ccc9155cde2e1523fc3f3d84a7a7c9d073911f6dd2ea898850f5f0bce97ffe2",
+    "初步实验/共同运动记录与方法对照/experiment.py": "ea8f3d089b4da80bf9acb5dadb5af549a21d6a5db604c57cb5efeb4346b73423",
+    "初步实验/局部区域重建阶段一/patch_model.py": "20ef1e9423aaa578346d711a1dae65289890ca16a3cb13bedb5fbecdd5abbd0b",
+    "初步实验/计划裁剪特征重建/clipped_patch.py": "48c130f0ffa1bcaa6738d5941dbd1c7ec6e7ed06bbbd8e798e8e2a0b2ea59837"
+  },
+  "baseline_registry": [
+    {
+      "id": "geogram",
+      "role": "几何差集参照",
+      "status": "已有连续诊断，尚缺竞争性质量维护"
+    },
+    {
+      "id": "openmeshcraft",
+      "role": "交点解析参照",
+      "status": "作者代码已归档，尚无本任务竞争结果"
+    },
+    {
+      "id": "pamo",
+      "role": "网格质量维护参照",
+      "status": "作者代码已归档，尚未完成本任务适配"
+    },
+    {
+      "id": "rxmesh",
+      "role": "CUDA动态执行参照",
+      "status": "作者Remesh已初跑，尚无输出质量审计"
+    }
+  ],
+  "case_results": [
+    {
+      "case_id": "shallow_milling",
+      "split": "development",
+      "purpose": "正常浅磨",
+      "accepted_event_ids": [
+        "s0",
+        "s1"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 2,
+      "connected_segment_count": 1,
+      "point_states": [
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.3
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        },
+        {
+          "point_mm": [
+            0.0,
+            2.0,
+            -0.1
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "repeat_same_path",
+      "split": "development",
+      "purpose": "重复经过同一位置",
+      "accepted_event_ids": [
+        "r0",
+        "r1",
+        "r2"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 3,
+      "connected_segment_count": 2,
+      "point_states": [
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.3
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "plan_edge_overcut",
+      "split": "evaluation",
+      "purpose": "磨到计划边缘",
+      "accepted_event_ids": [
+        "e0",
+        "e1"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 2,
+      "connected_segment_count": 1,
+      "point_states": [
+        {
+          "point_mm": [
+            2.9,
+            0.0,
+            -0.1
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            3.5,
+            0.0,
+            -0.1
+          ],
+          "state": "outside_plan_removed",
+          "actual_state": "outside_plan_removed"
+        },
+        {
+          "point_mm": [
+            1.5,
+            0.0,
+            -0.1
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "vertical_depth_transition",
+      "split": "development",
+      "purpose": "改变深度并向下钻孔",
+      "accepted_event_ids": [
+        "v0",
+        "v1",
+        "v2"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 3,
+      "connected_segment_count": 2,
+      "point_states": [
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.9
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -1.1
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        },
+        {
+          "point_mm": [
+            1.2,
+            0.0,
+            -0.05
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "tilted_crossing_paths",
+      "split": "evaluation",
+      "purpose": "倾斜表面、偏心与交叉路线",
+      "accepted_event_ids": [
+        "x0",
+        "x1",
+        "x_stop",
+        "y0",
+        "y1"
+      ],
+      "late_event_ids": [],
+      "primitive_count": 4,
+      "connected_segment_count": 2,
+      "point_states": [
+        {
+          "point_mm": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            2.0,
+            0.0,
+            -0.2
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true
+      },
+      "passed": true
+    },
+    {
+      "case_id": "stop_gap_and_late_event",
+      "split": "evaluation",
+      "purpose": "停钻、信息中断和数据晚到",
+      "accepted_event_ids": [
+        "g0",
+        "g1",
+        "g_stop",
+        "g3"
+      ],
+      "late_event_ids": [
+        "g_late"
+      ],
+      "primitive_count": 3,
+      "connected_segment_count": 1,
+      "point_states": [
+        {
+          "point_mm": [
+            0.5,
+            0.0,
+            -0.05
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        },
+        {
+          "point_mm": [
+            2.0,
+            0.0,
+            -0.05
+          ],
+          "state": "retained",
+          "actual_state": "retained"
+        },
+        {
+          "point_mm": [
+            3.0,
+            0.0,
+            -0.05
+          ],
+          "state": "removed_within_plan",
+          "actual_state": "removed_within_plan"
+        }
+      ],
+      "checks": {
+        "accepted_events": true,
+        "late_events": true,
+        "primitive_count": true,
+        "connected_segment_count": true,
+        "point_states": true
+      },
+      "passed": true
+    }
+  ],
+  "invariants": {
+    "repeat_path_max_delta_mm": 0.0,
+    "repeat_path_pass": true,
+    "crossing_order_max_delta_mm": 0.0,
+    "crossing_order_pass": true,
+    "probe_grid_role": "只验证集合不变量，不作为曲面误差证书"
+  },
+  "restricted_height_map": {
+    "runs": [
+      {
+        "case_id": "shallow_milling",
+        "method": "既有固定底网高度更新",
+        "scope": "仅支持单值表面和水平等高球心运动",
+        "accepted_steps": 2,
+        "attempted_steps": 2,
+        "rows": [
+          {
+            "step": 1,
+            "accepted": true,
+            "tool": {
+              "start": [
+                -1.0,
+                0.0
+              ],
+              "end": [
+                -1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484158,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 65076,
+            "affected_faces": 116,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.16137499187607318,
+            "reconstruct_ms": 0.06350000330712646,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 4.2205829959129915
+          },
+          {
+            "step": 2,
+            "accepted": true,
+            "tool": {
+              "start": [
+                -1.0,
+                0.0
+              ],
+              "end": [
+                1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484157,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 171666,
+            "affected_faces": 306,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.1303329918300733,
+            "reconstruct_ms": 0.058542005717754364,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 13.707124991924502
+          }
+        ],
+        "common_boundary_residual_max_mm": 1.1102230246251565e-16,
+        "passed": true
+      },
+      {
+        "case_id": "repeat_same_path",
+        "method": "既有固定底网高度更新",
+        "scope": "仅支持单值表面和水平等高球心运动",
+        "accepted_steps": 3,
+        "attempted_steps": 3,
+        "rows": [
+          {
+            "step": 1,
+            "accepted": true,
+            "tool": {
+              "start": [
+                -1.0,
+                0.0
+              ],
+              "end": [
+                -1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484158,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 65076,
+            "affected_faces": 116,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.14183399616740644,
+            "reconstruct_ms": 0.045666005462408066,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 4.115917006856762
+          },
+          {
+            "step": 2,
+            "accepted": true,
+            "tool": {
+              "start": [
+                -1.0,
+                0.0
+              ],
+              "end": [
+                1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484157,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 171666,
+            "affected_faces": 306,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.12587499804794788,
+            "reconstruct_ms": 0.05916699592489749,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 14.01729199278634
+          },
+          {
+            "step": 3,
+            "accepted": true,
+            "tool": {
+              "start": [
+                1.0,
+                0.0
+              ],
+              "end": [
+                -1.0,
+                0.0
+              ],
+              "radius": 1.0,
+              "z": 0.8
+            },
+            "min_q": 0.9887736292402649,
+            "min_angle_deg": 52.82364197484157,
+            "degenerate": 0,
+            "error_bound_mm": 0.040000617876730926,
+            "sampled_max_mm": 0.032936155589753935,
+            "queries": 171666,
+            "affected_faces": 306,
+            "faces": 3760,
+            "vertices": 1968,
+            "locate_ms": 0.13374999980442226,
+            "reconstruct_ms": 0.08570800127927214,
+            "lipschitz": 0.7499999999999998,
+            "pipeline_ms": 18.432083001243882
+          }
+        ],
+        "common_boundary_residual_max_mm": 1.1102230246251565e-16,
+        "passed": true
+      }
+    ],
+    "repeat_vs_single_max_vertex_delta_mm": 0.0,
+    "repeat_invariant_pass": true,
+    "unsupported_cases": [
+      "plan_edge_overcut",
+      "vertical_depth_transition",
+      "tilted_crossing_paths",
+      "stop_gap_and_late_event"
+    ],
+    "unsupported_is_not_failure_or_success": true
+  },
+  "seam_comparison": {
+    "case_id": "vertical_depth_transition",
+    "input": {
+      "center_z": -0.0001,
+      "tool_radius": 1.0,
+      "clip_radius": 2.0,
+      "outer_radius": 3.0,
+      "spacing": 0.25
+    },
+    "methods": {
+      "all_seams": {
+        "mesh": "vertical_all_seams.npz",
+        "preserve_smooth_seam": true,
+        "audit": {
+          "vertices": 571,
+          "faces": 1062,
+          "min_angle_deg": 0.021947999726823878,
+          "min_q": 0.0006634877352780864,
+          "degenerate": 0,
+          "bad_faces": 48,
+          "winding": true,
+          "euler": 1,
+          "connected": true,
+          "boundary_edges": 78,
+          "one_boundary_loop": true,
+          "outer_boundary_ok": true,
+          "feature_count": 2,
+          "expected_feature_names": [
+            "sweep_cylinder_plane"
+          ],
+          "feature_name_mismatch": true,
+          "feature_geometry_max_mm": 0.0,
+          "missing_feature_edges": 0,
+          "nonmanifold_feature_edges": 0,
+          "self_intersection_faces": 0,
+          "mesh_to_target_upper_mm": 0.05247918794665696,
+          "target_to_mesh_upper_mm": 0.05417947708725139,
+          "mesh_to_target_samples": 51342,
+          "target_to_mesh_samples": 30866,
+          "target_to_mesh_strata": {
+            "sphere": {
+              "sampled_max_mm": 0.014661025194784853,
+              "cover_radius_mm": 0.03951845189246654,
+              "upper_bound_mm": 0.05417947708725139,
+              "samples": 6478
+            },
+            "sweep_cylinder": {
+              "sampled_max_mm": 0.0001,
+              "cover_radius_mm": 0.01993349780753034,
+              "upper_bound_mm": 0.02003349780753034,
+              "samples": 316
+            },
+            "plane": {
+              "sampled_max_mm": 0.0024330054852912397,
+              "cover_radius_mm": 0.039967749916884274,
+              "upper_bound_mm": 0.04240075540217551,
+              "samples": 24072
+            }
+          },
+          "error_limit_mm": 0.1,
+          "certificate_spacing_mm": 0.04,
+          "accepted": false,
+          "reasons": [
+            "shape_quality",
+            "feature_curve_connectivity"
+          ]
+        }
+      },
+      "source_aware": {
+        "mesh": "vertical_source_aware.npz",
+        "preserve_smooth_seam": false,
+        "audit": {
+          "vertices": 547,
+          "faces": 1014,
+          "min_angle_deg": 40.62342112128187,
+          "min_q": 0.8093308771661841,
+          "degenerate": 0,
+          "bad_faces": 0,
+          "winding": true,
+          "euler": 1,
+          "connected": true,
+          "boundary_edges": 78,
+          "one_boundary_loop": true,
+          "outer_boundary_ok": true,
+          "feature_count": 1,
+          "expected_feature_names": [
+            "sweep_cylinder_plane"
+          ],
+          "feature_name_mismatch": false,
+          "feature_geometry_max_mm": 0.0,
+          "missing_feature_edges": 0,
+          "nonmanifold_feature_edges": 0,
+          "self_intersection_faces": 0,
+          "mesh_to_target_upper_mm": 0.0524813578741505,
+          "target_to_mesh_upper_mm": 0.05417983265256575,
+          "mesh_to_target_samples": 49614,
+          "target_to_mesh_samples": 30866,
+          "target_to_mesh_strata": {
+            "sphere": {
+              "sampled_max_mm": 0.014661380760099206,
+              "cover_radius_mm": 0.03951845189246654,
+              "upper_bound_mm": 0.05417983265256575,
+              "samples": 6478
+            },
+            "sweep_cylinder": {
+              "sampled_max_mm": 0.0001,
+              "cover_radius_mm": 0.01993349780753034,
+              "upper_bound_mm": 0.02003349780753034,
+              "samples": 316
+            },
+            "plane": {
+              "sampled_max_mm": 0.0024330054852912397,
+              "cover_radius_mm": 0.039967749916884274,
+              "upper_bound_mm": 0.04240075540217551,
+              "samples": 24072
+            }
+          },
+          "error_limit_mm": 0.1,
+          "certificate_spacing_mm": 0.04,
+          "accepted": true,
+          "reasons": []
+        }
+      }
+    },
+    "checks": {
+      "all_seams_shape_rejected": true,
+      "source_aware_accepted": true,
+      "same_error_budget": true
+    },
+    "passed": true,
+    "conclusion_scope": "只支持解析平面上的同轴竖直近转折案例；证明该案例中不强制C1接缝可消除薄带差面，不证明一般三维方法优势"
+  },
+  "summary": {
+    "fixed_cases_passed": 6,
+    "fixed_cases_total": 6,
+    "invariants_passed": true,
+    "restricted_height_map_passed": true,
+    "seam_comparison_passed": true,
+    "competitive_baseline_completed": false,
+    "real_motion_record_used": false,
+    "real_bone_updated": false
+  }
+}
