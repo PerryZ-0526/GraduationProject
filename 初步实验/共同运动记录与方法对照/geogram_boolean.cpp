@@ -1,4 +1,4 @@
-// Thin experiment adapter: Geogram's default mesh difference with FP64 OBJ I/O.
+// Geogram布尔运算薄适配层：保留FP64 OBJ输出并暴露作者已有的运算选项。
 #include <geogram/basic/common.h>
 #include <geogram/basic/command_line.h>
 #include <geogram/basic/command_line_args.h>
@@ -8,6 +8,8 @@
 
 #include <fstream>
 #include <iomanip>
+#include <string>
+#include <vector>
 
 bool save_double_obj(const GEO::Mesh& mesh, const char* filename) {
     std::ofstream output(filename);
@@ -29,7 +31,29 @@ bool save_double_obj(const GEO::Mesh& mesh, const char* filename) {
 }
 
 int main(int argc, char** argv) {
-    if(argc != 4) {
+    std::string operation = "A-B";
+    GEO::MeshBooleanOperationFlags flags = GEO::MESH_BOOL_OPS_DEFAULT;
+    std::vector<const char*> positional;
+    for(int i = 1; i < argc; ++i) {
+        const std::string argument(argv[i]);
+        if(argument == "--no-simplify") {
+            flags = GEO::MESH_BOOL_OPS_NO_SIMPLIFY;
+        } else if(argument == "--operation" && i + 1 < argc) {
+            const std::string requested(argv[++i]);
+            if(requested == "difference") {
+                operation = "A-B";
+            } else if(requested == "intersection") {
+                operation = "A*B";
+            } else if(requested == "union") {
+                operation = "A+B";
+            } else {
+                return 2;
+            }
+        } else {
+            positional.push_back(argv[i]);
+        }
+    }
+    if(positional.size() != 3) {
         return 2;
     }
     GEO::initialize(GEO::GEOGRAM_INSTALL_ALL);
@@ -40,16 +64,17 @@ int main(int argc, char** argv) {
     GEO::Mesh subtrahend;
     GEO::Mesh result;
     if(
-        !GEO::mesh_load(argv[1], minuend)
-        || !GEO::mesh_load(argv[2], subtrahend)
+        !GEO::mesh_load(positional[0], minuend)
+        || !GEO::mesh_load(positional[1], subtrahend)
     ) {
         return 3;
     }
-    GEO::mesh_difference(
+    GEO::mesh_boolean_operation(
         result,
         minuend,
         subtrahend,
-        GEO::MESH_BOOL_OPS_DEFAULT
+        operation,
+        flags
     );
-    return save_double_obj(result, argv[3]) ? 0 : 4;
+    return save_double_obj(result, positional[2]) ? 0 : 4;
 }

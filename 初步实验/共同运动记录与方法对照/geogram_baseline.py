@@ -144,9 +144,9 @@ def _slab_mesh(case, xy_bounds, bottom_z, spacing):
     return mesh
 
 
-def _capsule_mesh(primitive):
+def _capsule_mesh(primitive, subdivisions=TOOL_SUBDIVISIONS):
     sphere = trimesh.creation.icosphere(
-        subdivisions=TOOL_SUBDIVISIONS,
+        subdivisions=subdivisions,
         radius=1.0,
     )
     start = np.asarray(primitive["start"], dtype=np.float64)
@@ -201,6 +201,10 @@ def geogram_surface(
     spacing,
     work_directory,
     binary=DEFAULT_BINARY,
+    tool_subdivisions=TOOL_SUBDIVISIONS,
+    deduplicate_contained=True,
+    no_simplify=False,
+    timeout_s=60,
 ):
     """顺序执行去重后的胶囊差集并返回朝上的开放表面。"""
     binary = Path(binary).resolve()
@@ -212,21 +216,29 @@ def geogram_surface(
     previous_path = work_directory / "initial.obj"
     _export_double_obj(previous_path, initial)
 
-    primitives, removed_ids = effective_primitives(replay["primitives"])
+    if deduplicate_contained:
+        primitives, removed_ids = effective_primitives(replay["primitives"])
+    else:
+        primitives = list(replay["primitives"])
+        removed_ids = []
     step_rows = []
     started = perf_counter()
     for index, primitive in enumerate(primitives):
         tool_path = work_directory / f"tool_{index}.obj"
         output_path = work_directory / f"difference_{index}.obj"
         log_path = work_directory / f"difference_{index}.log"
-        tool = _capsule_mesh(primitive)
+        tool = _capsule_mesh(primitive, subdivisions=tool_subdivisions)
         _export_double_obj(tool_path, tool)
         step_started = perf_counter()
+        command = [str(binary)]
+        if no_simplify:
+            command.append("--no-simplify")
+        command.extend((str(previous_path), str(tool_path), str(output_path)))
         completed = subprocess.run(
-            [str(binary), str(previous_path), str(tool_path), str(output_path)],
+            command,
             capture_output=True,
             text=True,
-            timeout=60,
+            timeout=timeout_s,
             check=False,
         )
         log_path.write_text(
@@ -243,6 +255,7 @@ def geogram_surface(
                 "event_id": primitive["event_id"],
                 "elapsed_ms": (perf_counter() - step_started) * 1000.0,
                 "input_faces": int(len(tool.faces)),
+                "command": command,
                 "output": output_path.name,
                 "log": log_path.name,
             }
@@ -252,7 +265,14 @@ def geogram_surface(
     full_mesh = trimesh.load(previous_path, force="mesh", process=False)
     surface = _top_surface(full_mesh)
     return surface, {
-        "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+        "implementation": (
+            "Geogram mesh_difference, "
+            + (
+                "MESH_BOOL_OPS_NO_SIMPLIFY"
+                if no_simplify
+                else "MESH_BOOL_OPS_DEFAULT"
+            )
+        ),
         "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
         "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
         "doi": "10.1145/3744642",
@@ -261,11 +281,16 @@ def geogram_surface(
         "license": "BSD-3-Clause",
         "binary": str(binary),
         "binary_sha256": sha256(binary.read_bytes()).hexdigest(),
-        "tool_discretization": f"icosphere subdivisions={TOOL_SUBDIVISIONS}",
+        "tool_discretization": f"icosphere subdivisions={tool_subdivisions}",
+        "tool_subdivisions": tool_subdivisions,
+        "deduplicate_contained": deduplicate_contained,
+        "no_simplify": no_simplify,
+        "timeout_s": timeout_s,
         "input_primitive_count": len(replay["primitives"]),
         "effective_primitive_count": len(primitives),
         "redundant_contained_event_ids": removed_ids,
         "steps": step_rows,
+        "final_full_mesh": str(previous_path),
         "elapsed_ms": (perf_counter() - started) * 1000.0,
         "full_solid_watertight": bool(full_mesh.is_watertight),
         "full_solid_winding_consistent": bool(full_mesh.is_winding_consistent),

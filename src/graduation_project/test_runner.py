@@ -16,6 +16,10 @@ class TestCommand:
 
 CORE_TESTS = (
     TestCommand("三维目标几何", ("初步实验/三维目标几何机制/test_target.py",)),
+    TestCommand(
+        "Geogram基线适配",
+        ("初步实验/Geogram几何基线审计/test_geogram_audit.py",),
+    ),
     TestCommand("竖直磨削分层", ("初步实验/竖直磨削曲面分层/test_axis.py",)),
     TestCommand("计划裁剪特征重建", ("初步实验/计划裁剪特征重建/test_clipped_patch.py",)),
     TestCommand("共同运动记录", ("初步实验/共同运动记录与方法对照/test_motion_record.py",)),
