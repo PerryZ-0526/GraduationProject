@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "time_local": "2026-09-18T00:19:53.575172+08:00",
+  "status": "completed",
+  "scope": "公开真实CT肩胛骨在既有计划坐标系中的6 mm半径局部图域；16段轨迹为仿真运动，状态为运动推算值，不是实测磨后骨量",
+  "inputs": {
+    "ct_mesh": "/Users/bytedance/GraduationProject/初步实验/真实骨模型演示/scapula_hill_sachs_001_R.stl",
+    "ct_mesh_sha256": "8e9974dc46b293766bd6d433c54096390ff226082854d66f0dfef37f75460309",
+    "joint": "/Users/bytedance/GraduationProject/初步实验/边界过渡带联合重建/实验结果/joint.npz",
+    "joint_sha256": "c072886a0843ce981e92146179a28fb112ff70986bff840e857683d14bbf0623",
+    "sequence": "/Users/bytedance/GraduationProject/初步实验/局部适用域与核显计算/实验结果/local_1.8.npz",
+    "sequence_sha256": "c2fe81edd3b6129c68ccfc0931fe44d8839144c2fbd2cfce169ccd0a5e62a869",
+    "sequence_record": "/Users/bytedance/GraduationProject/初步实验/局部适用域与核显计算/实验结果/comparison.json",
+    "sequence_record_sha256": "5f0bfa592751cc6e4c9abfbb437b7e5292ba0dae7ce03529801fdb17356470b0",
+    "uncertainty_scenarios": "/Users/bytedance/GraduationProject/初步实验/共同运动记录与方法对照/real_ct_uncertainty_scenarios_v2.json",
+    "uncertainty_scenarios_sha256": "9e4f6ae3c393b00f19237476b642d66572d2a264d6008d6445c4266bc5cf93af",
+    "plan_definition": "/Users/bytedance/GraduationProject/初步实验/真实骨模型演示/real_bone_demo.py",
+    "plan_definition_sha256": "c23def1f45ffa1c5ff6c3601950cd01320e2d3e97415270d1a0e2de3b348ef1e",
+    "implementation": "/Users/bytedance/GraduationProject/初步实验/共同运动记录与方法对照/real_ct_state.py",
+    "implementation_sha256": "7b68fb8f547af3e6d1942b0c4f6450a212192e0dea7004f673d8337db15c9e7c",
+    "test": "/Users/bytedance/GraduationProject/初步实验/共同运动记录与方法对照/test_real_ct_state.py",
+    "test_sha256": "77f64366347f0add91723ca131d8b50ec8c897bcf3e74fdd01ce0e153b86a349"
+  },
+  "plan": {
+    "coordinate_frame": "glenoid plan frame stored in joint.npz transform",
+    "analysis_radius_mm": 6.0,
+    "full_plan_radius_mm": 12.5,
+    "post_radius_mm": 2.5,
+    "boss_radius_mm": 5.5,
+    "post_target_z_mm": -8.0,
+    "boss_target_z_mm": -4.5,
+    "outer_target_z_mm": 0.0,
+    "full_plan_boundary_included": false
+  },
+  "quadrature": {
+    "radial_intervals_mm": [
+      [
+        0.0,
+        2.5
+      ],
+      [
+        2.5,
+        5.5
+      ],
+      [
+        5.5,
+        6.0
+      ]
+    ],
+    "radial_order": 128,
+    "angular_samples": 256,
+    "convergence_reference_radial_order": 256,
+    "convergence_reference_angular_samples": 512,
+    "sample_count": 98304,
+    "area_weight_sum_mm2": 113.09733552923254,
+    "expected_analysis_area_mm2": 113.09733552923255,
+    "final_volume_absolute_difference_vs_reference_mm3": {
+      "planned_removal_volume_mm3": 5.3935619007461355e-05,
+      "actual_removed_volume_mm3": 5.276137872556319e-05,
+      "achieved_within_plan_volume_mm3": 5.276137872556319e-05,
+      "remaining_within_plan_volume_mm3": 1.174240310319874e-06,
+      "overcut_within_plan_volume_mm3": 0.0
+    },
+    "note": "在计划深度跳变半径处分段做极坐标Gauss-Legendre积分；收敛差只评价数值积分，不包含CT或跟踪误差"
+  },
+  "algorithm_surface_bound_mm": 0.09470902688721816,
+  "nominal_states": [
+    {
+      "step": 0,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 0.0,
+      "achieved_within_plan_volume_mm3": 0.0,
+      "remaining_within_plan_volume_mm3": 504.5055405170648,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.0,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 1,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 11.48526729808232,
+      "achieved_within_plan_volume_mm3": 11.48526729808232,
+      "remaining_within_plan_volume_mm3": 493.0202732189825,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.022765393787967395,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 2,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 12.485471483023503,
+      "achieved_within_plan_volume_mm3": 12.485471483023503,
+      "remaining_within_plan_volume_mm3": 492.02006903404134,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.024747937297630498,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 3,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 13.499624411485769,
+      "achieved_within_plan_volume_mm3": 13.499624411485769,
+      "remaining_within_plan_volume_mm3": 491.005916105579,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.02675812915285347,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 4,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 14.523287606737334,
+      "achieved_within_plan_volume_mm3": 14.523287606737334,
+      "remaining_within_plan_volume_mm3": 489.9822529103275,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.028787171676752054,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 5,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 15.564606067626357,
+      "achieved_within_plan_volume_mm3": 15.564606067626357,
+      "remaining_within_plan_volume_mm3": 488.94093444943843,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.0308512093874614,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 6,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 16.61425892172107,
+      "achieved_within_plan_volume_mm3": 16.61425892172107,
+      "remaining_within_plan_volume_mm3": 487.89128159534374,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.03293176702220795,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 7,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 17.683409895352582,
+      "achieved_within_plan_volume_mm3": 17.683409895352582,
+      "remaining_within_plan_volume_mm3": 486.82213062171223,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.035050972635957495,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 8,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 18.75806469635185,
+      "achieved_within_plan_volume_mm3": 18.75806469635185,
+      "remaining_within_plan_volume_mm3": 485.74747582071296,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.03718108759940836,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 9,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 21.125590416690578,
+      "achieved_within_plan_volume_mm3": 21.125590416690578,
+      "remaining_within_plan_volume_mm3": 483.3799501003742,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.04187385215837092,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 10,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 21.12896760615251,
+      "achieved_within_plan_volume_mm3": 21.12896760615251,
+      "remaining_within_plan_volume_mm3": 483.3765729109123,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.041880546216593685,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 11,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 21.129773512865302,
+      "achieved_within_plan_volume_mm3": 21.129773512865302,
+      "remaining_within_plan_volume_mm3": 483.3757670041995,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.04188214363554763,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 12,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 21.1298315347912,
+      "achieved_within_plan_volume_mm3": 21.1298315347912,
+      "remaining_within_plan_volume_mm3": 483.3757089822736,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.04188225864305744,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 13,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 21.433310533247486,
+      "achieved_within_plan_volume_mm3": 21.433310533247486,
+      "remaining_within_plan_volume_mm3": 483.0722299838173,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.04248379613686821,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 14,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 22.086047694639475,
+      "achieved_within_plan_volume_mm3": 22.086047694639475,
+      "remaining_within_plan_volume_mm3": 482.4194928224253,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.04377761178203041,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 15,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 22.942916542428698,
+      "achieved_within_plan_volume_mm3": 22.942916542428698,
+      "remaining_within_plan_volume_mm3": 481.5626239746361,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.04547604476040964,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    },
+    {
+      "step": 16,
+      "planned_removal_volume_mm3": 504.5055405170648,
+      "actual_removed_volume_mm3": 23.94293422161893,
+      "achieved_within_plan_volume_mm3": 23.94293422161893,
+      "remaining_within_plan_volume_mm3": 480.5626062954459,
+      "overcut_within_plan_volume_mm3": 0.0,
+      "completion_fraction": 0.04745821858978983,
+      "remaining_area_mm2": 113.02592286051791,
+      "overcut_area_mm2": 0.0
+    }
+  ],
+  "final_uncertainty_scenarios": [
+    {
+      "component_bounds_mm": {
+        "planned_depth_error_min": 0.0,
+        "planned_depth_error_max": 0.0,
+        "actual_depth_error_min": 0.09470902688721816,
+        "actual_depth_error_max": 0.09470902688721816,
+        "latency_displacement": 0.0,
+        "algorithm_surface_bound": 0.09470902688721816
+      },
+      "planned_removal_volume_interval_mm3": [
+        504.5055405170648,
+        504.5055405170648
+      ],
+      "actual_removed_volume_interval_mm3": [
+        20.82948235034224,
+        34.654272813129744
+      ],
+      "achieved_within_plan_volume_interval_mm3": [
+        20.82948235034224,
+        34.57982431621877
+      ],
+      "remaining_within_plan_volume_interval_mm3": [
+        469.92571620084607,
+        483.67605816672256
+      ],
+      "overcut_within_plan_volume_interval_mm3": [
+        0.0,
+        0.07444849691097714
+      ],
+      "completion_fraction_interval": [
+        0.04128692487498596,
+        0.06854201101692185
+      ],
+      "uncertain_target_state_area_mm2": 1.4306617640377879,
+      "definitely_remaining_area_mm2": 111.66667376519476,
+      "definitely_overcut_area_mm2": 0.0,
+      "id": "algorithm_bound_only",
+      "description": "仅加入现有逐面几何证书上界，其余误差项置零"
+    },
+    {
+      "component_bounds_mm": {
+        "planned_depth_error_min": 0.5449241318239084,
+        "planned_depth_error_max": 0.573141822105774,
+        "actual_depth_error_min": 1.5396331587111265,
+        "actual_depth_error_max": 1.567850848992992,
+        "latency_displacement": 0.5,
+        "algorithm_surface_bound": 0.09470902688721816
+      },
+      "planned_removal_volume_interval_mm3": [
+        447.2521597195648,
+        567.431540285521
+      ],
+      "actual_removed_volume_interval_mm3": [
+        0.0,
+        199.36787455789522
+      ],
+      "achieved_within_plan_volume_interval_mm3": [
+        0.0,
+        185.66660365911304
+      ],
+      "remaining_within_plan_volume_interval_mm3": [
+        275.7927948041196,
+        567.431540285521
+      ],
+      "overcut_within_plan_volume_interval_mm3": [
+        0.0,
+        27.908509642449946
+      ],
+      "completion_fraction_interval": [
+        0.0,
+        0.41512734958178704
+      ],
+      "uncertain_target_state_area_mm2": 18.064157758141306,
+      "definitely_remaining_area_mm2": 95.03317777109123,
+      "definitely_overcut_area_mm2": 0.0,
+      "id": "illustrative_moderate",
+      "description": "用于检验传播逻辑的中等合成误差，不代表本项目设备实测"
+    },
+    {
+      "component_bounds_mm": {
+        "planned_depth_error_min": 1.2898474083571037,
+        "planned_depth_error_max": 1.3462822516966866,
+        "actual_depth_error_min": 4.284556435244321,
+        "actual_depth_error_max": 4.340991278583905,
+        "latency_displacement": 2.0,
+        "algorithm_surface_bound": 0.09470902688721816
+      },
+      "planned_removal_volume_interval_mm3": [
+        375.25955738525613,
+        652.976885744615
+      ],
+      "actual_removed_volume_interval_mm3": [
+        0.0,
+        511.10789107545435
+      ],
+      "achieved_within_plan_volume_interval_mm3": [
+        0.0,
+        461.27830466038955
+      ],
+      "remaining_within_plan_volume_interval_mm3": [
+        25.76938070676965,
+        652.976885744615
+      ],
+      "overcut_within_plan_volume_interval_mm3": [
+        0.0,
+        161.61771439696787
+      ],
+      "completion_fraction_interval": [
+        0.0,
+        1.0
+      ],
+      "uncertain_target_state_area_mm2": 93.46238144429633,
+      "definitely_remaining_area_mm2": 19.634954084936204,
+      "definitely_overcut_area_mm2": 0.0,
+      "id": "illustrative_stress",
+      "description": "用于检验区间扩大和风险降级的压力假设，不代表临床上限"
+    }
+  ],
+  "face_state_fields": "face_state_fields.npz",
+  "status_code_legend": {
+    "0": "分析域外或无计划去除",
+    "1": "在给定误差上界下确定仍有剩余",
+    "2": "在给定误差上界下确定已经过深",
+    "3": "误差区间跨越目标，无法确定"
+  },
+  "checks": {
+    "initial_patch_matches_joint": true,
+    "faces_match_joint": true,
+    "xy_fixed_across_sequence": true,
+    "sixteen_steps_accepted": true,
+    "seventeen_snapshots_present": true,
+    "analysis_inside_full_plan": true,
+    "analysis_radius_matches_quadrature": true,
+    "full_plan_radius_matches_source": true,
+    "planned_identity_each_step": true,
+    "actual_identity_each_step": true,
+    "actual_removal_monotone": true,
+    "remaining_monotone": true,
+    "completion_bounded": true,
+    "quadrature_convergence_within_0p1_mm3": true,
+    "uncertainty_intervals_contain_nominal": true,
+    "stress_intervals_not_narrower": true
+  },
+  "interpretation": "区间来自显式上界相加，不是概率置信区间；合成参数不代表设备规格或临床安全阈值。局部分析域不含完整12.5 mm计划边界，因此本轮不评价计划外去除"
+}

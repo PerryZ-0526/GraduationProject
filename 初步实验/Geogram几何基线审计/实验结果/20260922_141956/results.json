@@ -1,0 +1,702 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-09-22 14:19:56",
+  "status": "running",
+  "research_question": "Geogram作为精确CSG基线时，工具离散、共面简化和连续布尔组织方式分别怎样影响几何、拓扑、网格质量与耗时",
+  "scope": "解析倾斜平面与球形工具仿真；不含真实CT误差、真实运动、质量维护、CUDA或临床结论",
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.15",
+    "machine": "arm64"
+  },
+  "geogram": {
+    "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+    "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+    "binary_sha256": "1d26546cb3d89392b8ea1d2e6194632586764f796855f8b46ef485c568e20abe",
+    "source_repository": "https://github.com/BrunoLevy/geogram",
+    "paper_doi": "10.1145/3744642",
+    "license": "BSD-3-Clause"
+  },
+  "thresholds": {
+    "geometry_budget_mm": 0.1,
+    "minimum_angle_deg": 25.0,
+    "minimum_q": 0.4,
+    "boolean_timeout_s": 60
+  },
+  "source_sha256": {
+    "初步实验/Geogram几何基线审计/experiment.py": "a90727ca9263cfa6e4c89818efcb0fc431ffa4e1d42823da88801629d59ed374",
+    "初步实验/共同运动记录与方法对照/geogram_baseline.py": "5d7730deb9d08d05f563ad896d18f725a6e67a54dee98a47182884208e8bb7e2",
+    "初步实验/共同运动记录与方法对照/geogram_boolean.cpp": "d31c6002572338657cd2de3f5fa826620d64b083c3495ae8231d12e7c313fd78",
+    "初步实验/共同运动记录与方法对照/build_geogram_baseline.sh": "091db9fb5cb09de92421818c39817f46741b92862c3ec48bede222822e87e7fb",
+    "初步实验/共同运动记录与方法对照/cases.json": "d8245820737d4dfa134a040cac5a32fc025dc05de41b35b8435d8d8765581e9a"
+  },
+  "runs": {
+    "resolution_s1": {
+      "diagnostics": {
+        "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+        "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+        "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+        "doi": "10.1145/3744642",
+        "repository": "https://github.com/BrunoLevy/geogram",
+        "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+        "license": "BSD-3-Clause",
+        "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+        "binary_sha256": "1d26546cb3d89392b8ea1d2e6194632586764f796855f8b46ef485c568e20abe",
+        "tool_discretization": "icosphere subdivisions=1",
+        "tool_subdivisions": 1,
+        "deduplicate_contained": true,
+        "no_simplify": false,
+        "timeout_s": 60,
+        "input_primitive_count": 4,
+        "effective_primitive_count": 2,
+        "redundant_contained_event_ids": [
+          "x0",
+          "y0"
+        ],
+        "steps": [
+          {
+            "event_id": "x1",
+            "elapsed_ms": 131.418458011467,
+            "input_faces": 108,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s1/initial.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s1/tool_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s1/difference_0.obj"
+            ],
+            "output": "difference_0.obj",
+            "log": "difference_0.log"
+          },
+          {
+            "event_id": "y1",
+            "elapsed_ms": 58.3824579953216,
+            "input_faces": 104,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s1/difference_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s1/tool_1.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s1/difference_1.obj"
+            ],
+            "output": "difference_1.obj",
+            "log": "difference_1.log"
+          }
+        ],
+        "final_full_mesh": "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s1/difference_1.obj",
+        "elapsed_ms": 211.18458302225918,
+        "full_solid_watertight": true,
+        "full_solid_winding_consistent": true,
+        "full_solid_euler_number": 2,
+        "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+      },
+      "full_solid": {
+        "vertices": 694,
+        "faces": 1384,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "body_count": 1,
+        "volume_mm3": 13.54183106718663
+      },
+      "top_surface_quality": {
+        "vertices": 690,
+        "faces": 1270,
+        "bad_faces": 503,
+        "min_q": 1.20845486688662e-16,
+        "min_angle_deg": 0.0,
+        "boundary_edges": 116,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        },
+        "bad_face_fraction": 0.3960629921259842
+      },
+      "top_surface_topology": {
+        "connected_components": 1,
+        "unique_edges": 1963,
+        "boundary_edges": 116,
+        "non_manifold_edges": 0,
+        "inconsistent_interior_edges": 0,
+        "self_intersection_flag_faces": 0,
+        "self_intersection_interpretation": "PyMeshLab检测器报警面数量，未经精确复核时不等同于真实穿插面"
+      },
+      "sampled_geometry": {
+        "implicit_residual": {
+          "max_mm": 0.04607934872609909,
+          "p95_mm": 0.03869357105208371,
+          "rms_mm": 0.015431317555279322,
+          "samples": 1960
+        },
+        "mesh_to_dense_target": {
+          "max_mm": 0.060472352007335736,
+          "p95_mm": 0.03906113569189257,
+          "rms_mm": 0.01603612919778422,
+          "samples": 1960
+        },
+        "dense_target_to_mesh": {
+          "max_mm": 0.04607930745449347,
+          "p95_mm": 0.03614727271047568,
+          "rms_mm": 0.01676365313081604,
+          "samples": 25921
+        },
+        "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+      },
+      "sampled_geometry_max_mm": 0.060472352007335736,
+      "geometry_gate": true,
+      "full_solid_gate": true,
+      "quality_gate": false,
+      "accepted_as_geometry_baseline": true,
+      "accepted_as_complete_mesh_delivery": false,
+      "name": "resolution_s1",
+      "surface": "resolution_s1.vtp",
+      "tool_discretization": {
+        "subdivisions": 1,
+        "sphere_faces": 80,
+        "capsule_faces": 108,
+        "radial_deficit_bound_mm": 0.04607934872609911,
+        "analytic_capsule_volume_mm3": 5.7935007355720725,
+        "mesh_capsule_volume_mm3": 5.26928086493009,
+        "volume_deficit_mm3": 0.524219870641982,
+        "relative_volume_deficit": 0.09048412946998936
+      }
+    },
+    "resolution_s2": {
+      "diagnostics": {
+        "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+        "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+        "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+        "doi": "10.1145/3744642",
+        "repository": "https://github.com/BrunoLevy/geogram",
+        "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+        "license": "BSD-3-Clause",
+        "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+        "binary_sha256": "1d26546cb3d89392b8ea1d2e6194632586764f796855f8b46ef485c568e20abe",
+        "tool_discretization": "icosphere subdivisions=2",
+        "tool_subdivisions": 2,
+        "deduplicate_contained": true,
+        "no_simplify": false,
+        "timeout_s": 60,
+        "input_primitive_count": 4,
+        "effective_primitive_count": 2,
+        "redundant_contained_event_ids": [
+          "x0",
+          "y0"
+        ],
+        "steps": [
+          {
+            "event_id": "x1",
+            "elapsed_ms": 121.86212500091642,
+            "input_faces": 380,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s2/initial.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s2/tool_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s2/difference_0.obj"
+            ],
+            "output": "difference_0.obj",
+            "log": "difference_0.log"
+          },
+          {
+            "event_id": "y1",
+            "elapsed_ms": 59.374541975557804,
+            "input_faces": 372,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s2/difference_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s2/tool_1.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s2/difference_1.obj"
+            ],
+            "output": "difference_1.obj",
+            "log": "difference_1.log"
+          }
+        ],
+        "final_full_mesh": "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s2/difference_1.obj",
+        "elapsed_ms": 198.5588339739479,
+        "full_solid_watertight": true,
+        "full_solid_winding_consistent": true,
+        "full_solid_euler_number": 2,
+        "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+      },
+      "full_solid": {
+        "vertices": 817,
+        "faces": 1630,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "body_count": 1,
+        "volume_mm3": 13.409349701112353
+      },
+      "top_surface_quality": {
+        "vertices": 813,
+        "faces": 1523,
+        "bad_faces": 669,
+        "min_q": 1.1821491924489125e-16,
+        "min_angle_deg": 0.0,
+        "boundary_edges": 103,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        },
+        "bad_face_fraction": 0.4392646093237032
+      },
+      "top_surface_topology": {
+        "connected_components": 1,
+        "unique_edges": 2336,
+        "boundary_edges": 103,
+        "non_manifold_edges": 0,
+        "inconsistent_interior_edges": 0,
+        "self_intersection_flag_faces": 4,
+        "self_intersection_interpretation": "PyMeshLab检测器报警面数量，未经精确复核时不等同于真实穿插面"
+      },
+      "sampled_geometry": {
+        "implicit_residual": {
+          "max_mm": 0.012427137536207833,
+          "p95_mm": 0.0103771244843337,
+          "rms_mm": 0.004751795882190011,
+          "samples": 2336
+        },
+        "mesh_to_dense_target": {
+          "max_mm": 0.02190779155674295,
+          "p95_mm": 0.011671375168086803,
+          "rms_mm": 0.005668086161069322,
+          "samples": 2336
+        },
+        "dense_target_to_mesh": {
+          "max_mm": 0.012427096264602214,
+          "p95_mm": 0.009213020000293892,
+          "rms_mm": 0.004363740696622234,
+          "samples": 25921
+        },
+        "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+      },
+      "sampled_geometry_max_mm": 0.02190779155674295,
+      "geometry_gate": true,
+      "full_solid_gate": true,
+      "quality_gate": false,
+      "accepted_as_geometry_baseline": true,
+      "accepted_as_complete_mesh_delivery": false,
+      "name": "resolution_s2",
+      "surface": "resolution_s2.vtp",
+      "tool_discretization": {
+        "subdivisions": 2,
+        "sphere_faces": 320,
+        "capsule_faces": 380,
+        "radial_deficit_bound_mm": 0.012427137536207833,
+        "analytic_capsule_volume_mm3": 5.7935007355720725,
+        "mesh_capsule_volume_mm3": 5.660127324204571,
+        "volume_deficit_mm3": 0.13337341136750158,
+        "relative_volume_deficit": 0.023021212468066043
+      }
+    },
+    "resolution_s3": {
+      "diagnostics": {
+        "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+        "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+        "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+        "doi": "10.1145/3744642",
+        "repository": "https://github.com/BrunoLevy/geogram",
+        "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+        "license": "BSD-3-Clause",
+        "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+        "binary_sha256": "1d26546cb3d89392b8ea1d2e6194632586764f796855f8b46ef485c568e20abe",
+        "tool_discretization": "icosphere subdivisions=3",
+        "tool_subdivisions": 3,
+        "deduplicate_contained": true,
+        "no_simplify": false,
+        "timeout_s": 60,
+        "input_primitive_count": 4,
+        "effective_primitive_count": 2,
+        "redundant_contained_event_ids": [
+          "x0",
+          "y0"
+        ],
+        "steps": [
+          {
+            "event_id": "x1",
+            "elapsed_ms": 146.65633300319314,
+            "input_faces": 1388,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s3/initial.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s3/tool_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s3/difference_0.obj"
+            ],
+            "output": "difference_0.obj",
+            "log": "difference_0.log"
+          },
+          {
+            "event_id": "y1",
+            "elapsed_ms": 72.17049994505942,
+            "input_faces": 1384,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s3/difference_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s3/tool_1.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s3/difference_1.obj"
+            ],
+            "output": "difference_1.obj",
+            "log": "difference_1.log"
+          }
+        ],
+        "final_full_mesh": "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s3/difference_1.obj",
+        "elapsed_ms": 245.18849997548386,
+        "full_solid_watertight": true,
+        "full_solid_winding_consistent": true,
+        "full_solid_euler_number": 2,
+        "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+      },
+      "full_solid": {
+        "vertices": 1090,
+        "faces": 2176,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "body_count": 1,
+        "volume_mm3": 13.372805862482833
+      },
+      "top_surface_quality": {
+        "vertices": 1086,
+        "faces": 2070,
+        "bad_faces": 874,
+        "min_q": 3.162356500286464e-16,
+        "min_angle_deg": 0.0,
+        "boundary_edges": 100,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        },
+        "bad_face_fraction": 0.4222222222222222
+      },
+      "top_surface_topology": {
+        "connected_components": 1,
+        "unique_edges": 3155,
+        "boundary_edges": 100,
+        "non_manifold_edges": 0,
+        "inconsistent_interior_edges": 0,
+        "self_intersection_flag_faces": 8,
+        "self_intersection_interpretation": "PyMeshLab检测器报警面数量，未经精确复核时不等同于真实穿插面"
+      },
+      "sampled_geometry": {
+        "implicit_residual": {
+          "max_mm": 0.0031698573266188967,
+          "p95_mm": 0.002622031610234582,
+          "rms_mm": 0.001390495131588523,
+          "samples": 3156
+        },
+        "mesh_to_dense_target": {
+          "max_mm": 0.013648140628461406,
+          "p95_mm": 0.005890761944664501,
+          "rms_mm": 0.0024662008798013763,
+          "samples": 3156
+        },
+        "dense_target_to_mesh": {
+          "max_mm": 0.003169816055013316,
+          "p95_mm": 0.002271914978605108,
+          "rms_mm": 0.0010634080776277851,
+          "samples": 25921
+        },
+        "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+      },
+      "sampled_geometry_max_mm": 0.013648140628461406,
+      "geometry_gate": true,
+      "full_solid_gate": true,
+      "quality_gate": false,
+      "accepted_as_geometry_baseline": true,
+      "accepted_as_complete_mesh_delivery": false,
+      "name": "resolution_s3",
+      "surface": "resolution_s3.vtp",
+      "tool_discretization": {
+        "subdivisions": 3,
+        "sphere_faces": 1280,
+        "capsule_faces": 1388,
+        "radial_deficit_bound_mm": 0.0031698573266188633,
+        "analytic_capsule_volume_mm3": 5.7935007355720725,
+        "mesh_capsule_volume_mm3": 5.76009637584508,
+        "volume_deficit_mm3": 0.03340435972699218,
+        "relative_volume_deficit": 0.005765833345267317
+      }
+    },
+    "resolution_s4": {
+      "diagnostics": {
+        "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_DEFAULT",
+        "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+        "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+        "doi": "10.1145/3744642",
+        "repository": "https://github.com/BrunoLevy/geogram",
+        "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+        "license": "BSD-3-Clause",
+        "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+        "binary_sha256": "1d26546cb3d89392b8ea1d2e6194632586764f796855f8b46ef485c568e20abe",
+        "tool_discretization": "icosphere subdivisions=4",
+        "tool_subdivisions": 4,
+        "deduplicate_contained": true,
+        "no_simplify": false,
+        "timeout_s": 60,
+        "input_primitive_count": 4,
+        "effective_primitive_count": 2,
+        "redundant_contained_event_ids": [
+          "x0",
+          "y0"
+        ],
+        "steps": [
+          {
+            "event_id": "x1",
+            "elapsed_ms": 160.7732090051286,
+            "input_faces": 5328,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s4/initial.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s4/tool_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s4/difference_0.obj"
+            ],
+            "output": "difference_0.obj",
+            "log": "difference_0.log"
+          },
+          {
+            "event_id": "y1",
+            "elapsed_ms": 105.65216699615121,
+            "input_faces": 5328,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s4/difference_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s4/tool_1.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s4/difference_1.obj"
+            ],
+            "output": "difference_1.obj",
+            "log": "difference_1.log"
+          }
+        ],
+        "final_full_mesh": "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/resolution_s4/difference_1.obj",
+        "elapsed_ms": 322.7898750337772,
+        "full_solid_watertight": true,
+        "full_solid_winding_consistent": true,
+        "full_solid_euler_number": 2,
+        "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+      },
+      "full_solid": {
+        "vertices": 1969,
+        "faces": 3934,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "body_count": 1,
+        "volume_mm3": 13.364085510662035
+      },
+      "top_surface_quality": {
+        "vertices": 1965,
+        "faces": 3827,
+        "bad_faces": 1299,
+        "min_q": 3.1523978465304326e-16,
+        "min_angle_deg": 0.0,
+        "boundary_edges": 103,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        },
+        "bad_face_fraction": 0.33943036320877973
+      },
+      "top_surface_topology": {
+        "connected_components": 1,
+        "unique_edges": 5792,
+        "boundary_edges": 103,
+        "non_manifold_edges": 0,
+        "inconsistent_interior_edges": 0,
+        "self_intersection_flag_faces": 10,
+        "self_intersection_interpretation": "PyMeshLab检测器报警面数量，未经精确复核时不等同于真实穿插面"
+      },
+      "sampled_geometry": {
+        "implicit_residual": {
+          "max_mm": 0.0007965182892512024,
+          "p95_mm": 0.0007445948238332667,
+          "rms_mm": 0.0004279109765899582,
+          "samples": 5792
+        },
+        "mesh_to_dense_target": {
+          "max_mm": 0.012879991892157583,
+          "p95_mm": 0.004611502971931133,
+          "rms_mm": 0.0018528289647215042,
+          "samples": 5792
+        },
+        "dense_target_to_mesh": {
+          "max_mm": 0.0007964770176456151,
+          "p95_mm": 0.0005859622559814486,
+          "rms_mm": 0.0002722945600164656,
+          "samples": 25921
+        },
+        "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+      },
+      "sampled_geometry_max_mm": 0.012879991892157583,
+      "geometry_gate": true,
+      "full_solid_gate": true,
+      "quality_gate": false,
+      "accepted_as_geometry_baseline": true,
+      "accepted_as_complete_mesh_delivery": false,
+      "name": "resolution_s4",
+      "surface": "resolution_s4.vtp",
+      "tool_discretization": {
+        "subdivisions": 4,
+        "sphere_faces": 5120,
+        "capsule_faces": 5328,
+        "radial_deficit_bound_mm": 0.0007965182892512357,
+        "analytic_capsule_volume_mm3": 5.7935007355720725,
+        "mesh_capsule_volume_mm3": 5.785072637911398,
+        "volume_deficit_mm3": 0.008428097660674538,
+        "relative_volume_deficit": 0.0014547504255805219
+      }
+    },
+    "no_simplify_s3": {
+      "diagnostics": {
+        "implementation": "Geogram mesh_difference, MESH_BOOL_OPS_NO_SIMPLIFY",
+        "paper": "Exact predicates, exact constructions and combinatorics for mesh CSG",
+        "venue": "ACM Transactions on Graphics 2025 (CCF-A)",
+        "doi": "10.1145/3744642",
+        "repository": "https://github.com/BrunoLevy/geogram",
+        "commit": "130442ff0f0c069d48ab4ebb4012218f3d861cf2",
+        "license": "BSD-3-Clause",
+        "binary": "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+        "binary_sha256": "1d26546cb3d89392b8ea1d2e6194632586764f796855f8b46ef485c568e20abe",
+        "tool_discretization": "icosphere subdivisions=3",
+        "tool_subdivisions": 3,
+        "deduplicate_contained": true,
+        "no_simplify": true,
+        "timeout_s": 60,
+        "input_primitive_count": 4,
+        "effective_primitive_count": 2,
+        "redundant_contained_event_ids": [
+          "x0",
+          "y0"
+        ],
+        "steps": [
+          {
+            "event_id": "x1",
+            "elapsed_ms": 120.54979102686048,
+            "input_faces": 1388,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "--no-simplify",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/no_simplify_s3/initial.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/no_simplify_s3/tool_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/no_simplify_s3/difference_0.obj"
+            ],
+            "output": "difference_0.obj",
+            "log": "difference_0.log"
+          },
+          {
+            "event_id": "y1",
+            "elapsed_ms": 123.30691597890109,
+            "input_faces": 1384,
+            "command": [
+              "/Users/bytedance/GraduationProject/tmp/geogram/geogram_boolean",
+              "--no-simplify",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/no_simplify_s3/difference_0.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/no_simplify_s3/tool_1.obj",
+              "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/no_simplify_s3/difference_1.obj"
+            ],
+            "output": "difference_1.obj",
+            "log": "difference_1.log"
+          }
+        ],
+        "final_full_mesh": "/Users/bytedance/GraduationProject/初步实验/Geogram几何基线审计/实验结果/20260922_141956/no_simplify_s3/difference_1.obj",
+        "elapsed_ms": 278.4009160241112,
+        "full_solid_watertight": true,
+        "full_solid_winding_consistent": true,
+        "full_solid_euler_number": 2,
+        "scope": "作者精确网格CSG作用于离散三角工具和闭合平面厚片；精确谓词不消除工具离散误差，也不自动保证输出三角形质量"
+      },
+      "full_solid": {
+        "vertices": 3567,
+        "faces": 7130,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "body_count": 1,
+        "volume_mm3": 13.37280586248283
+      },
+      "top_surface_quality": {
+        "vertices": 1886,
+        "faces": 3610,
+        "bad_faces": 960,
+        "min_q": 3.162356500286464e-16,
+        "min_angle_deg": 0.0,
+        "boundary_edges": 160,
+        "quality_gate": {
+          "min_q": 0.4,
+          "min_angle_deg": 25.0
+        },
+        "bad_face_fraction": 0.2659279778393352
+      },
+      "top_surface_topology": {
+        "connected_components": 1,
+        "unique_edges": 5495,
+        "boundary_edges": 160,
+        "non_manifold_edges": 0,
+        "inconsistent_interior_edges": 0,
+        "self_intersection_flag_faces": 23,
+        "self_intersection_interpretation": "PyMeshLab检测器报警面数量，未经精确复核时不等同于真实穿插面"
+      },
+      "sampled_geometry": {
+        "implicit_residual": {
+          "max_mm": 0.0031698573266188967,
+          "p95_mm": 0.002541927149821266,
+          "rms_mm": 0.0011645085025404158,
+          "samples": 5496
+        },
+        "mesh_to_dense_target": {
+          "max_mm": 0.013864847939452396,
+          "p95_mm": 0.005259580260631995,
+          "rms_mm": 0.002214502077520341,
+          "samples": 5496
+        },
+        "dense_target_to_mesh": {
+          "max_mm": 0.003169816055013316,
+          "p95_mm": 0.002271914978605108,
+          "rms_mm": 0.0010634080776277853,
+          "samples": 25921
+        },
+        "interpretation": "顶点和面心的抽样误差；dense_target也是解析高度的离散网格，这些数值不是连续曲面的严格上界证书"
+      },
+      "sampled_geometry_max_mm": 0.013864847939452396,
+      "geometry_gate": true,
+      "full_solid_gate": true,
+      "quality_gate": false,
+      "accepted_as_geometry_baseline": true,
+      "accepted_as_complete_mesh_delivery": false,
+      "name": "no_simplify_s3",
+      "surface": "no_simplify_s3.vtp"
+    }
+  },
+  "comparisons": {},
+  "input": {
+    "case_id": "tilted_crossing_paths",
+    "record_kind": "simulated",
+    "xy_bounds_mm": [
+      -2.0,
+      2.0,
+      -2.0,
+      2.0
+    ],
+    "z_bounds_mm": [
+      -0.9,
+      0.9
+    ],
+    "slab_spacing_mm": 0.1,
+    "dense_target_spacing_mm": 0.025,
+    "primitive_count": 4,
+    "dense_target_diagnostics": {
+      "sample_count": 25921,
+      "cut_sample_count": 9090,
+      "internal_cavity_sample_count": 0,
+      "all_removed_intervals_top_connected": true,
+      "connection_iterations": 2,
+      "grid_dimensions_xy": [
+        161,
+        161
+      ],
+      "spacing_mm": 0.025,
+      "cell_center_sample_count": 25600,
+      "cell_center_internal_cavity_sample_count": 0,
+      "diagonal_policy": "先满足最小角门槛，再选择单元中心解析高度误差较小的对角线",
+      "first_diagonal_cells": 20236,
+      "second_diagonal_cells": 5364
+    }
+  }
+}
