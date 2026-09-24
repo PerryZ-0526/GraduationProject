@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>骨表面实时可视化研究脉络</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --surface-2: #f8f9fa;
+  --text: #212529;
+  --muted: #667085;
+  --hint: #8b93a1;
+  --border: #dfe3e8;
+  --sky-1: #e7f5ff;
+  --sky-6: #339af0;
+  --sky-8: #1c7ed6;
+  --indigo-1: #edf2ff;
+  --indigo-6: #5c7cfa;
+  --indigo-8: #4263eb;
+  --violet-1: #f3f0ff;
+  --violet-6: #845ef7;
+  --violet-8: #7048e8;
+  --mint-1: #e6fcf5;
+  --mint-6: #20c997;
+  --mint-8: #0ca678;
+  --amber-1: #fff9db;
+  --amber-6: #fcc419;
+  --amber-8: #f59f00;
+  --coral-1: #fff5f5;
+  --coral-6: #ff6b6b;
+  --coral-8: #f03e3e;
+  --slate-5: #ced4da;
+  --slate-6: #adb5bd;
+  --shadow: 0 3px 14px rgba(20, 30, 45, 0.08);
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+  --serif: "Songti SC", "STSong", Georgia, serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17191d;
+    --surface: #202329;
+    --surface-2: #282c33;
+    --text: #f1f3f5;
+    --muted: #c1c7d0;
+    --hint: #939ba7;
+    --border: #3a4049;
+    --sky-1: #15354d;
+    --sky-8: #74c0fc;
+    --indigo-1: #242f58;
+    --indigo-8: #91a7ff;
+    --violet-1: #34275a;
+    --violet-8: #b197fc;
+    --mint-1: #163f35;
+    --mint-8: #63e6be;
+    --amber-1: #4a3b12;
+    --amber-8: #ffe066;
+    --coral-1: #4d2528;
+    --coral-8: #ffa8a8;
+    --shadow: 0 4px 18px rgba(0, 0, 0, 0.24);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.5;
+}
+
+button {
+  font: inherit;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 30px 24px 48px;
+}
+
+.header {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  color: var(--sky-8);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.subtitle {
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.toolbar,
+.status-row,
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toolbar {
+  margin-top: 16px;
+}
+
+.toolbar button {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 11px;
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  border-color: var(--sky-6);
+  background: var(--sky-1);
+}
+
+.status-row {
+  margin-top: 14px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.p-main {
+  background: var(--sky-1);
+  color: var(--sky-8);
+}
+
+.p-good {
+  background: var(--mint-1);
+  color: var(--mint-8);
+}
+
+.p-warn {
+  background: var(--amber-1);
+  color: var(--amber-8);
+}
+
+.p-open {
+  background: var(--coral-1);
+  color: var(--coral-8);
+}
+
+section {
+  margin-top: 28px;
+}
+
+.panel {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.core-question {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.question {
+  min-width: 0;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: 8px;
+}
+
+.question .num {
+  margin-bottom: 5px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.question .q {
+  margin-bottom: 7px;
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.question p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.arrow,
+.flow-arrow {
+  align-self: center;
+  color: var(--hint);
+  font-size: 22px;
+  text-align: center;
+}
+
+.flow-shell {
+  overflow: auto;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: 180px 1fr 48px 1fr 48px 1fr;
+  gap: 12px;
+  min-width: 900px;
+  align-items: stretch;
+}
+
+.input {
+  padding: 15px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.input code {
+  display: block;
+  margin: 8px 0;
+  color: var(--text);
+  font-size: 12px;
+}
+
+.layer,
+.era {
+  appearance: none;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.layer {
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+}
+
+.layer:hover,
+.layer.active {
+  background: var(--fill);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.layer .tag,
+.era .id,
+.gate .g {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.layer .title {
+  margin: 6px 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.layer .answer {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.steps {
+  display: grid;
+  gap: 6px;
+}
+
+.step {
+  padding: 7px 8px;
+  background: var(--surface-2);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.detail {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: var(--surface-2);
+  border-left: 4px solid var(--sky-6);
+  border-radius: 0 8px 8px 0;
+}
+
+.detail-title {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detail-body {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.detail-meta {
+  margin-top: 7px;
+  color: var(--hint);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(125px, 1fr));
+  gap: 10px;
+  overflow: auto;
+  padding-bottom: 4px;
+}
+
+.era {
+  min-height: 145px;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: 8px;
+}
+
+.era:hover,
+.era.active {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.era .name {
+  margin: 5px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.era .evidence {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.legend {
+  gap: 14px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
+}
+
+.band {
+  padding: 17px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+}
+
+.band ul {
+  display: grid;
+  gap: 7px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.band li {
+  position: relative;
+  padding-left: 15px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.band li::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  content: "";
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.metric,
+.gate {
+  padding: 13px;
+  background: var(--surface-2);
+  border-radius: 8px;
+}
+
+.metric .v {
+  color: var(--mint-8);
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.metric .l {
+  margin-top: 4px;
+  color: var(--hint);
+  font-size: 11px;
+}
+
+.next {
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--amber-6);
+  border-radius: 8px;
+}
+
+.next-title {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.next-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.gate .t {
+  margin: 4px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.gate .d {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.stop {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--coral-1);
+  border-radius: 8px;
+  color: var(--coral-8);
+  font-size: 12px;
+}
+
+.foot {
+  margin-top: 24px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+  color: var(--hint);
+  font-size: 12px;
+}
+
+@media (max-width: 820px) {
+  .wrap {
+    padding: 16px 12px 32px;
+  }
+
+  .core-question {
+    grid-template-columns: 1fr;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  .split,
+  .next-grid,
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(7, 170px);
+  }
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  .toolbar {
+    display: none;
+  }
+
+  .wrap {
+    max-width: none;
+    padding: 0;
+  }
+
+  .header,
+  .panel {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .flow-shell,
+  .timeline {
+    overflow: visible;
+  }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="header">
+    <div class="eyebrow">Research map · 2026-09-17</div>
+    <h1>机器人辅助肩关节置换中的骨表面实时可视化</h1>
+    <p class="subtitle">完整主线不是“做一个可运行界面”，而是依次回答三个可验证的问题：骨面如何正确更新、同一正确结果如何及时一致地交付、结果如何转化为可信的磨削状态与风险信息。</p>
+    <div class="status-row">
+      <span class="pill p-main">主攻：研究一</span>
+      <span class="pill p-good">G1 机制证据已完成</span>
+      <span class="pill p-warn">研究二受限验证</span>
+      <span class="pill p-open">完整138段未完成</span>
+    </div>
+    <div class="toolbar">
+      <button type="button" id="printButton">打印 / 保存为 PDF</button>
+      <button type="button" id="resetButton">重置选中节点</button>
+    </div>
+  </header>
+
+  <section>
+    <div class="eyebrow">Three research questions</div>
+    <h2>三层研究链</h2>
+    <div class="core-question">
+      <div class="question" style="--accent:var(--sky-6)">
+        <div class="num">研究一 · 算法层</div>
+        <div class="q">骨面应怎样更新才正确？</div>
+        <p>目标几何、活动边界、特征约束、局部离散、误差与质量。</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="question" style="--accent:var(--indigo-6)">
+        <div class="num">研究二 · 系统层</div>
+        <div class="q">同样正确的结果怎样及时交付？</div>
+        <p>固定算法后的CPU/CUDA执行、调度、积压与版本一致发布。</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="question" style="--accent:var(--violet-6)">
+        <div class="num">研究三 · 应用层</div>
+        <div class="q">当前状态与风险意味着什么？</div>
+        <p>剩余量、完成度、过磨、越界以及几何与时间可信范围。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="eyebrow">Dependency map</div>
+    <h2>从输入到可信视觉反馈</h2>
+    <div class="flow-shell">
+      <div class="flow">
+        <div class="input">
+          <div class="eyebrow">Input</div>
+          <h3>统一物理输入</h3>
+          <code>CT三角骨面 B₀</code>
+          <code>计划区域 / 目标面</code>
+          <code>球形磨钻轨迹 S₁…Sₖ</code>
+          <p style="font-size:11px;color:var(--hint);margin-top:8px">单位、坐标和轨迹必须共享</p>
+        </div>
+
+        <button class="layer inspect active" type="button"
+          style="--accent:var(--sky-6);--fill:var(--sky-1)"
+          data-title="研究一：几何约束下的骨面增量重建"
+          data-body="定义目标 Bₖ=B₀ \ ∪(Sⱼ∩Cⱼ)，从初始骨面和累计扫掠恢复活动曲面。论文贡献候选是CSG活动源、真实特征图与质量约束局部离散的协同，而不是调用布尔库或做网格拼接。"
+          data-meta="输出：Mₖ + 几何误差 Eₖ + 网格质量 Qₖ">
+          <div class="tag">Research 1 · 主攻</div>
+          <div class="title">正确几何</div>
+          <div class="answer">决定“算什么”以及“结果是否合格”</div>
+          <div class="steps">
+            <div class="step">累计扫掠目标表达</div>
+            <div class="step">活动源与真实特征图</div>
+            <div class="step">质量约束局部重建</div>
+            <div class="step">逐状态拒绝 / 回滚</div>
+          </div>
+        </button>
+
+        <div class="flow-arrow">→</div>
+
+        <button class="layer inspect" type="button"
+          style="--accent:var(--indigo-6);--fill:var(--indigo-1)"
+          data-title="研究二：异构计算与一致性状态发布"
+          data-body="冻结研究一的算法、输入、精度预算和质量门槛，再比较CPU/CUDA、空间索引、patch/cavity、驻留、批量化和队列策略。任何改变几何语义的CUDA方案都必须退回研究一重新验证。"
+          data-meta="发布单元：(Mₖ, Pₖ, Fₖ, t_in(k))">
+          <div class="tag">Research 2 · 系统</div>
+          <div class="title">同义执行与发布</div>
+          <div class="answer">决定“怎样算得快”以及“何时可显示”</div>
+          <div class="steps">
+            <div class="step">CPU/CUDA同精度执行</div>
+            <div class="step">连续输入与无损合并</div>
+            <div class="step">质量门控后发布</div>
+            <div class="step">版本 / 滞后 / 积压</div>
+          </div>
+        </button>
+
+        <div class="flow-arrow">→</div>
+
+        <button class="layer inspect" type="button"
+          style="--accent:var(--violet-6);--fill:var(--violet-1)"
+          data-title="研究三：不确定性感知的磨削状态表达"
+          data-body="比较当前面与计划面，定义剩余量、完成度、过磨和越界，并将几何误差、配准误差、跟踪误差与状态时效传播到风险判断。界面只是验证载体，核心是状态定义、误差传播和评价。"
+          data-meta="输出：状态字段 Fₖ + 可信范围 + 风险评价">
+          <div class="tag">Research 3 · 应用</div>
+          <div class="title">可信状态解释</div>
+          <div class="answer">决定“显示什么”以及“提示是否可信”</div>
+          <div class="steps">
+            <div class="step">当前面与计划面对比</div>
+            <div class="step">剩余 / 完成 / 过磨</div>
+            <div class="step">误差与时间传播</div>
+            <div class="step">漏报 / 误报 / 尾部事件</div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div class="detail" id="detail">
+      <div class="detail-title" id="detailTitle">研究一：几何约束下的骨面增量重建</div>
+      <div class="detail-body" id="detailBody">定义目标 Bₖ=B₀ \ ∪(Sⱼ∩Cⱼ)，从初始骨面和累计扫掠恢复活动曲面。论文贡献候选是CSG活动源、真实特征图与质量约束局部离散的协同，而不是调用布尔库或做网格拼接。</div>
+      <div class="detail-meta" id="detailMeta">输出：Mₖ + 几何误差 Eₖ + 网格质量 Qₖ</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="eyebrow">Evidence evolution</div>
+    <h2>从可运行原型到研究问题收敛</h2>
+    <div class="timeline">
+      <button class="era inspect" type="button" style="--accent:var(--slate-6)"
+        data-title="13–16号：建立CPU工作流"
+        data-body="完成真实CT骨面、布尔差集、局部图域和解析高度图验证。证明系统可以跑通，但单值图域和固定边界限制明显。"
+        data-meta="性质：工程底座 + 受限正确性">
+        <div class="id">13–16</div>
+        <div class="name">CPU与真实骨面起点</div>
+        <div class="evidence">工作流、解析真值、真实局部图域</div>
+      </button>
+
+      <button class="era inspect" type="button" style="--accent:var(--sky-6)"
+        data-title="17–20号：边界、过渡带与适用域"
+        data-body="固定边界候选失败后，引入质量反馈扩域、误差反馈采样和整骨逐状态验收；受限水平轨迹达到16步，但不能覆盖原计划。"
+        data-meta="性质：受限方法证据">
+        <div class="id">17–20</div>
+        <div class="name">质量生成与整骨拼接</div>
+        <div class="evidence">浅/中深16步通过，边界和深切仍拒绝</div>
+      </button>
+
+      <button class="era inspect" type="button" style="--accent:var(--indigo-6)"
+        data-title="21–26号：GPU、强基线与覆盖审计"
+        data-body="完成OpenCL/CUDA查询、区间误差预算、Geogram连续布尔诊断和轨迹覆盖审计。CUDA受限算子约2倍于CPU，但完整步骤仍超过100 ms。"
+        data-meta="性质：性能与基线证据，不是完整算法胜出">
+        <div class="id">21–26</div>
+        <div class="name">数值与性能证据</div>
+        <div class="evidence">同精度对拍、区间过滤、强基线负结果</div>
+      </button>
+
+      <button class="era inspect" type="button" style="--accent:var(--coral-6)"
+        data-title="27号：核心表示路线修正"
+        data-body="普通等值面提取和均匀加密产生质量反例，固定单高度图退出完整任务唯一表示。研究重心转向三维目标、交线和质量协同生成。"
+        data-meta="性质：关键否证与路线决策">
+        <div class="id">27</div>
+        <div class="name">退出单一高度图</div>
+        <div class="evidence">8张解析网格中7张质量失败</div>
+      </button>
+
+      <button class="era inspect" type="button" style="--accent:var(--indigo-6)"
+        data-title="28–30号：系统载体和一致发布"
+        data-body="接入研究结果工作台、RXMesh作者Remesh初跑和受限CPU在线窗口；实现拒绝不发布、网格与刀位同版本，但没有持续输入与CUDA在线链。"
+        data-meta="性质：研究二载体与控制流证据">
+        <div class="id">28–30</div>
+        <div class="name">在线状态交接</div>
+        <div class="evidence">16步同版本发布，100%步骤超过100 ms</div>
+      </button>
+
+      <button class="era inspect" type="button" style="--accent:var(--amber-6)"
+        data-title="31号：竖直曲面分层机制"
+        data-body="发现把球面—扫掠圆柱的C1连接强制成特征环会制造薄带差面；只保护实际坑口折线时，两档尺度18个候选形状通过。"
+        data-meta="性质：有限机制消融，不是一般三维重建">
+        <div class="id">31</div>
+        <div class="name">光滑接缝反例</div>
+        <div class="evidence">all-seams失败，sharp-only形状18/18</div>
+      </button>
+
+      <button class="era inspect" type="button" style="--accent:var(--mint-6)"
+        data-title="G1：计划裁剪真实特征"
+        data-body="显式区分球面、扫掠圆柱、计划裁剪圆柱和原平面；保护真实折线，放开C1接缝，并加入双向误差上界、拓扑和自交审计。"
+        data-meta="性质：解析半空间上的机制证据；真实骨面仍未完成">
+        <div class="id">G1 · 当前</div>
+        <div class="name">来源感知裁剪特征</div>
+        <div class="evidence">13/13预期；计划参数候选8/8接受</div>
+      </button>
+    </div>
+
+    <div class="legend">
+      <span><i class="dot" style="background:var(--mint-6)"></i>已验证</span>
+      <span><i class="dot" style="background:var(--sky-6)"></i>受限证据</span>
+      <span><i class="dot" style="background:var(--amber-6)"></i>机制假设</span>
+      <span><i class="dot" style="background:var(--coral-6)"></i>否证 / 路线调整</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Academic boundary</div>
+    <h2>什么构成学术贡献，什么只是验证载体</h2>
+    <div class="split">
+      <div class="band" style="--accent:var(--indigo-6)">
+        <h3>论文方法主线</h3>
+        <ul>
+          <li>累计扫掠CSG的目标定义与离散状态分离</li>
+          <li>活动几何源传播、真实特征图和C1接缝分类</li>
+          <li>误差与三角形质量共同约束的局部生成机制</li>
+          <li>固定语义下的GPU任务组织与一致性发布</li>
+          <li>几何可信度与时间有效性向风险状态传播</li>
+        </ul>
+      </div>
+      <div class="band" style="--accent:var(--slate-6)">
+        <h3>工程与实验载体</h3>
+        <ul>
+          <li>PyVista / Qt窗口和交互控件</li>
+          <li>uv环境、CLI和统一测试器</li>
+          <li>远程CUDA配置、数据传输和日志</li>
+          <li>网格导出、截图和结果回放</li>
+          <li>第三方库构建与兼容修复</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Current evidence</div>
+    <h2>当前最硬的四条事实</h2>
+    <div class="metrics">
+      <div class="metric">
+        <div class="v">8 / 8</div>
+        <div class="l">G1原计划柱钻参数解析候选接受</div>
+      </div>
+      <div class="metric">
+        <div class="v">42.038°</div>
+        <div class="l">G1最差最小角</div>
+      </div>
+      <div class="metric">
+        <div class="v">0.052715</div>
+        <div class="l">G1最大双向上界，单位mm</div>
+      </div>
+      <div class="metric">
+        <div class="v">0 / 138</div>
+        <div class="l">完整真实骨面计划尚未完成</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Next academic gate</div>
+    <h2>下一步不应叫“真实骨面接入”，而应形成算法核心</h2>
+    <div class="next">
+      <div class="next-title">活动约束驱动的特征图提取与质量受控局部重建</div>
+      <div class="next-grid">
+        <div class="gate" style="--accent:var(--amber-8)">
+          <div class="g">A2.1</div>
+          <div class="t">CSG活动源传播</div>
+          <div class="d">表达式树输出值、来源、梯度和并列活动约束。</div>
+        </div>
+        <div class="gate" style="--accent:var(--amber-8)">
+          <div class="g">A2.2</div>
+          <div class="t">非轴对称特征图</div>
+          <div class="d">倾斜面、曲面、偏心和交叉扫掠，不再依赖同心环。</div>
+        </div>
+        <div class="gate" style="--accent:var(--amber-8)">
+          <div class="g">A2.3</div>
+          <div class="t">质量约束离散</div>
+          <div class="d">真实折线受约束，光滑接缝跨越三角化，失败明确拒绝。</div>
+        </div>
+        <div class="gate" style="--accent:var(--amber-8)">
+          <div class="g">A2.4</div>
+          <div class="t">消融与强基线</div>
+          <div class="d">全约束、无约束、来源感知三组；对拍Geogram与隐式复形方法。</div>
+        </div>
+      </div>
+      <div class="stop">暂不推进：完整138段刷覆盖率、CUDA最终优化、GUI继续美化。只有算法在解析与真实局部曲面上成立后，才冻结研究一并进入研究二。</div>
+    </div>
+  </section>
+
+  <footer class="foot">证据快照：2026-09-17。结论口径：G1是解析机制证据，不是完整骨面算法；研究一仍是主攻，研究二必须冻结研究一语义，研究三尚处于方法待验证阶段。</footer>
+</main>
+
+<script>
+(function () {
+  var items = document.querySelectorAll(".inspect");
+  var detail = document.getElementById("detail");
+  var title = document.getElementById("detailTitle");
+  var body = document.getElementById("detailBody");
+  var meta = document.getElementById("detailMeta");
+  var defaultItem = document.querySelector(".layer.inspect");
+
+  function selectItem(item, scroll) {
+    for (var i = 0; i < items.length; i += 1) {
+      items[i].classList.remove("active");
+    }
+    item.classList.add("active");
+    title.textContent = item.getAttribute("data-title");
+    body.textContent = item.getAttribute("data-body");
+    meta.textContent = item.getAttribute("data-meta");
+    if (scroll) {
+      detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }
+
+  for (var i = 0; i < items.length; i += 1) {
+    items[i].addEventListener("click", function () {
+      selectItem(this, true);
+    });
+  }
+
+  document.getElementById("printButton").addEventListener("click", function () {
+    window.print();
+  });
+
+  document.getElementById("resetButton").addEventListener("click", function () {
+    selectItem(defaultItem, false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
+</script>
+</body>
+</html>

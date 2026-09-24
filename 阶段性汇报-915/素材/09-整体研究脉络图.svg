@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#627086"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#2557c7"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="1120" fill="#ffffff"/>
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#17263b">
+    <text x="42" y="46" font-size="15" fill="#2557c7">RESEARCH MAP · 2026-09-17</text>
+    <text x="42" y="82" font-size="29" font-weight="600">机器人辅助肩关节置换中的骨表面实时可视化研究脉络</text>
+    <text x="42" y="111" font-size="17" fill="#58667a">主线：正确几何 → 同义执行与一致发布 → 可信状态与风险表达</text>
+
+    <rect x="42" y="139" width="1516" height="186" rx="6" fill="#f7f9fc" stroke="#d7dee8"/>
+    <text x="62" y="169" font-size="15" fill="#66758b">三层研究问题</text>
+
+    <rect x="62" y="188" width="442" height="112" rx="6" fill="#edf4ff" stroke="#2557c7" stroke-width="2"/>
+    <text x="82" y="217" font-size="15" fill="#2557c7">研究一 · 算法层 · 主攻</text>
+    <text x="82" y="249" font-size="22" font-weight="600">骨面应怎样更新才正确？</text>
+    <text x="82" y="278" font-size="15" fill="#58667a">目标几何、活动边界、特征约束、误差与质量生成</text>
+
+    <path d="M515 244H548" fill="none" stroke="#627086" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="560" y="188" width="442" height="112" rx="6" fill="#eef8f4" stroke="#16835d" stroke-width="2"/>
+    <text x="580" y="217" font-size="15" fill="#16835d">研究二 · 系统层</text>
+    <text x="580" y="249" font-size="22" font-weight="600">同样结果怎样及时一致地交付？</text>
+    <text x="580" y="278" font-size="15" fill="#58667a">冻结算法后的CPU/CUDA、调度、积压和版本发布</text>
+
+    <path d="M1013 244H1046" fill="none" stroke="#627086" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="1058" y="188" width="480" height="112" rx="6" fill="#f5f0ff" stroke="#6743b8" stroke-width="2"/>
+    <text x="1078" y="217" font-size="15" fill="#6743b8">研究三 · 应用与验证层</text>
+    <text x="1078" y="249" font-size="22" font-weight="600">当前状态与风险意味着什么？</text>
+    <text x="1078" y="278" font-size="15" fill="#58667a">剩余量、完成度、过磨、越界和判断可信范围</text>
+
+    <path d="M1338 302C1338 323 1010 326 858 306" fill="none" stroke="#6743b8" stroke-width="1.7" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+    <text x="1070" y="320" font-size="13" fill="#6743b8">状态字段送回研究二统一发布</text>
+
+    <text x="42" y="366" font-size="20" font-weight="600">证据演进：从“能运行”到“问题收敛”</text>
+    <line x1="86" y1="420" x2="1514" y2="420" stroke="#bcc6d3" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g>
+      <circle cx="108" cy="420" r="9" fill="#8a96a8"/>
+      <rect x="42" y="441" width="194" height="120" rx="6" fill="#f7f9fc" stroke="#c8d0dc"/>
+      <text x="58" y="468" font-size="14" fill="#66758b">13–16号</text>
+      <text x="58" y="495" font-size="17" font-weight="600">CPU与真实骨面起点</text>
+      <text x="58" y="520" font-size="14" fill="#58667a">布尔工作流、解析真值</text>
+      <text x="58" y="543" font-size="14" fill="#58667a">真实局部图域</text>
+
+      <circle cx="326" cy="420" r="9" fill="#3673d4"/>
+      <rect x="260" y="441" width="194" height="120" rx="6" fill="#edf4ff" stroke="#8aabe8"/>
+      <text x="276" y="468" font-size="14" fill="#2557c7">17–20号</text>
+      <text x="276" y="495" font-size="17" font-weight="600">质量生成与整骨拼接</text>
+      <text x="276" y="520" font-size="14" fill="#58667a">浅/中深16步通过</text>
+      <text x="276" y="543" font-size="14" fill="#58667a">边界与深切仍拒绝</text>
+
+      <circle cx="544" cy="420" r="9" fill="#4866cc"/>
+      <rect x="478" y="441" width="194" height="120" rx="6" fill="#f0f2ff" stroke="#93a2e3"/>
+      <text x="494" y="468" font-size="14" fill="#4866cc">21–26号</text>
+      <text x="494" y="495" font-size="17" font-weight="600">GPU与强基线证据</text>
+      <text x="494" y="520" font-size="14" fill="#58667a">区间CUDA约2倍</text>
+      <text x="494" y="543" font-size="14" fill="#58667a">但完整步骤仍超100 ms</text>
+
+      <circle cx="762" cy="420" r="9" fill="#d75345"/>
+      <rect x="696" y="441" width="194" height="120" rx="6" fill="#fff3f1" stroke="#e5968c"/>
+      <text x="712" y="468" font-size="14" fill="#b63f32">27号 · 路线修正</text>
+      <text x="712" y="495" font-size="17" font-weight="600">退出单一高度图</text>
+      <text x="712" y="520" font-size="14" fill="#58667a">普通等值面出现质量反例</text>
+      <text x="712" y="543" font-size="14" fill="#58667a">转向三维目标与交线</text>
+
+      <circle cx="980" cy="420" r="9" fill="#16835d"/>
+      <rect x="914" y="441" width="194" height="120" rx="6" fill="#eef8f4" stroke="#78bea4"/>
+      <text x="930" y="468" font-size="14" fill="#16835d">28–30号</text>
+      <text x="930" y="495" font-size="17" font-weight="600">在线一致状态交接</text>
+      <text x="930" y="520" font-size="14" fill="#58667a">拒绝不发布</text>
+      <text x="930" y="543" font-size="14" fill="#58667a">网格与刀位同版本</text>
+
+      <circle cx="1198" cy="420" r="9" fill="#d89614"/>
+      <rect x="1132" y="441" width="194" height="120" rx="6" fill="#fff9e8" stroke="#e7bd66"/>
+      <text x="1148" y="468" font-size="14" fill="#a97100">31号</text>
+      <text x="1148" y="495" font-size="17" font-weight="600">光滑接缝反例</text>
+      <text x="1148" y="520" font-size="14" fill="#58667a">C1接缝强制成环失败</text>
+      <text x="1148" y="543" font-size="14" fill="#58667a">只保护真实折线</text>
+
+      <circle cx="1416" cy="420" r="11" fill="#0d9b70"/>
+      <rect x="1350" y="441" width="208" height="120" rx="6" fill="#eaf9f3" stroke="#36aa82" stroke-width="2"/>
+      <text x="1366" y="468" font-size="14" fill="#087a58">G1 · 当前</text>
+      <text x="1366" y="495" font-size="17" font-weight="600">计划裁剪真实特征</text>
+      <text x="1366" y="520" font-size="14" fill="#58667a">13/13预期满足</text>
+      <text x="1366" y="543" font-size="14" fill="#58667a">计划参数候选8/8接受</text>
+    </g>
+
+    <text x="42" y="613" font-size="20" font-weight="600">论文贡献与工程载体必须分开</text>
+    <rect x="42" y="636" width="988" height="192" rx="6" fill="#f3f5ff" stroke="#7488da" stroke-width="2"/>
+    <text x="62" y="666" font-size="16" fill="#4866cc">学术方法主线</text>
+    <line x1="62" y1="680" x2="1010" y2="680" stroke="#c8d0ee"/>
+
+    <text x="72" y="712" font-size="16" font-weight="600">研究一</text>
+    <text x="72" y="739" font-size="14" fill="#58667a">累计扫掠CSG、活动几何源、真实特征图</text>
+    <text x="72" y="763" font-size="14" fill="#58667a">误差与质量共同约束的局部生成机制</text>
+
+    <text x="394" y="712" font-size="16" font-weight="600">研究二</text>
+    <text x="394" y="739" font-size="14" fill="#58667a">固定几何语义后的GPU任务组织</text>
+    <text x="394" y="763" font-size="14" fill="#58667a">不漏扫掠的积压合并与一致状态发布</text>
+
+    <text x="712" y="712" font-size="16" font-weight="600">研究三</text>
+    <text x="712" y="739" font-size="14" fill="#58667a">几何可信度与时间有效性传播</text>
+    <text x="712" y="763" font-size="14" fill="#58667a">风险判断、漏报误报与尾部事件评价</text>
+
+    <rect x="1054" y="636" width="504" height="192" rx="6" fill="#f7f9fc" stroke="#b8c1cf"/>
+    <text x="1074" y="666" font-size="16" fill="#66758b">工程与实验载体</text>
+    <line x1="1074" y1="680" x2="1538" y2="680" stroke="#d7dee8"/>
+    <text x="1084" y="712" font-size="14" fill="#58667a">• Qt / PyVista界面与结果回放</text>
+    <text x="1084" y="739" font-size="14" fill="#58667a">• uv环境、CLI、统一测试与数据导出</text>
+    <text x="1084" y="766" font-size="14" fill="#58667a">• 远程CUDA配置与第三方库构建</text>
+    <text x="1084" y="793" font-size="14" fill="#58667a">这些用于验证方法，本身不构成算法创新</text>
+
+    <text x="42" y="877" font-size="20" font-weight="600">下一学术关口：活动约束驱动的特征图提取与质量受控局部重建</text>
+    <g>
+      <rect x="42" y="902" width="330" height="116" rx="6" fill="#edf4ff" stroke="#2557c7"/>
+      <text x="60" y="930" font-size="14" fill="#2557c7">A2.1</text>
+      <text x="60" y="958" font-size="18" font-weight="600">CSG活动源与梯度传播</text>
+      <text x="60" y="985" font-size="14" fill="#58667a">输出值、来源、梯度与并列活动约束</text>
+
+      <path d="M383 960H412" fill="none" stroke="#627086" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <rect x="424" y="902" width="330" height="116" rx="6" fill="#eef8f4" stroke="#16835d"/>
+      <text x="442" y="930" font-size="14" fill="#16835d">A2.2</text>
+      <text x="442" y="958" font-size="18" font-weight="600">非轴对称特征图与离散</text>
+      <text x="442" y="985" font-size="14" fill="#58667a">真实折线受约束，C1接缝跨越三角化</text>
+
+      <path d="M765 960H794" fill="none" stroke="#627086" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <rect x="806" y="902" width="330" height="116" rx="6" fill="#fff9e8" stroke="#d89614"/>
+      <text x="824" y="930" font-size="14" fill="#a97100">A2.3</text>
+      <text x="824" y="958" font-size="18" font-weight="600">质量与误差联合门控</text>
+      <text x="824" y="985" font-size="14" fill="#58667a">角、q、双向距离、拓扑与自交</text>
+
+      <path d="M1147 960H1176" fill="none" stroke="#627086" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <rect x="1188" y="902" width="370" height="116" rx="6" fill="#f5f0ff" stroke="#6743b8"/>
+      <text x="1206" y="930" font-size="14" fill="#6743b8">A2.4</text>
+      <text x="1206" y="958" font-size="18" font-weight="600">消融、强基线与真实骨面验证</text>
+      <text x="1206" y="985" font-size="14" fill="#58667a">全约束 / 无约束 / 来源感知；Geogram对拍</text>
+    </g>
+
+    <rect x="42" y="1044" width="1516" height="48" rx="6" fill="#fff3f1" stroke="#e5968c"/>
+    <text x="62" y="1074" font-size="15" fill="#a83d31">当前不应直接推进：完整138段刷覆盖率、CUDA最终优化或GUI继续美化；先形成研究一的通用算法核心。</text>
+  </g>
+</svg>
