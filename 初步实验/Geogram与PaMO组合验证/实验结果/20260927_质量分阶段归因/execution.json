@@ -105,9 +105,33 @@
     {
       "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260927_质量分阶段归因\\s4_isotropic_audit.json",
       "sha256": "ba16da828a49f1e9034e9c6ac06cce8165bfc2b89f6e1fc9dac82b577e6b76d1"
+    },
+    {
+      "path": "初步实验\\Geogram与PaMO组合验证\\collision_path_probe.py",
+      "sha256": "313202f3f7cedceab01f6f5e397a424f3b23143cf8d44bcea88f7ac2d1892986"
+    },
+    {
+      "path": "初步实验\\Geogram与PaMO组合验证\\classify_collision_path.py",
+      "sha256": "a751f21fb44e8d9442d5d6d39c87f53cd8f62a2850e7403ac85241464bba3d9a"
+    },
+    {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260927_质量分阶段归因\\collision_path_s3.json",
+      "sha256": "77cd54fef37b2dd84ad8c1d0767e1ad975424a9f0c3f4f677f43001a5282d4f0"
+    },
+    {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260927_质量分阶段归因\\collision_path_s4.json",
+      "sha256": "d0592df21d87456d378bc4ae8cb12f35900b58520936899103c07f3cb9931990"
+    },
+    {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260927_质量分阶段归因\\collision_classification_s3.json",
+      "sha256": "d349822ca47514d08b9be33f29702554988d5b74886c381dc1ef04d5e2a37fec"
+    },
+    {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260927_质量分阶段归因\\collision_classification_s4.json",
+      "sha256": "2caecafd2c14d31edb8294b362ca4949a566624ec56334eb1f3cdf63ffc832b3"
     }
   ],
-  "last_modified_beijing": "2026-09-27 03:36:34",
+  "last_modified_beijing": "2026-09-27 03:47:41",
   "isotropic_feasibility": {
     "iterations": 10,
     "target_edge_mm": 0.06,
@@ -116,5 +140,16 @@
     "status": "diagnostic_failed_joint_gate"
   },
   "mesh_archive": "mesh_artifacts.tar.gz",
-  "mesh_archive_sha256": "9ef92cd3c117bcaaf76b77e7881528f1ba22532b312ac6dfd9dcba92349cbad9"
+  "mesh_archive_sha256": "9ef92cd3c117bcaaf76b77e7881528f1ba22532b312ac6dfd9dcba92349cbad9",
+  "cumesh2sdf_commit": "7789ade81bcd5fa77112d2cb5d825ed0e634e76b",
+  "collision_probe": {
+    "resolution": 256,
+    "seed_physical_mm": [
+      0.0,
+      0.0,
+      -0.5
+    ],
+    "method": "get_collide open-edge BFS, local winding and ray cross-check",
+    "status": "two_open_edges_cross_source_triangles"
+  }
 }
