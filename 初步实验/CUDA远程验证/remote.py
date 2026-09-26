@@ -2,6 +2,7 @@
 import argparse
 import base64
 import hashlib
+import os
 from pathlib import Path
 
 import paramiko
@@ -25,8 +26,9 @@ def main():
     parser.add_argument('--get', nargs=2, metavar=('REMOTE', 'LOCAL'))
     parser.add_argument('--timeout', type=int, default=600)
     args = parser.parse_args()
-    # 密码不进入命令行、日志、远端文件或版本控制。
-    config = dict(line.split('=', 1) for line in (ROOT / '.env').read_text(encoding='utf-8').splitlines() if line and not line.startswith('#'))
+    # 凭据只从被忽略的本机配置文件读取，不进入命令行、日志或远端文件。
+    config_path = Path(os.environ.get('CUDA_CONFIG_FILE', ROOT / '.env'))
+    config = dict(line.split('=', 1) for line in config_path.read_text(encoding='utf-8').splitlines() if line and not line.startswith('#'))
     client = paramiko.SSHClient()
     if (ROOT / '.ssh_known_hosts').exists():
         client.load_host_keys(str(ROOT / '.ssh_known_hosts'))

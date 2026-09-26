@@ -3,6 +3,7 @@ import argparse
 from datetime import datetime, timedelta, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import shlex
@@ -20,6 +21,7 @@ AUDITOR = HERE / "audit_pamo_outputs.py"
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("prepared", type=Path)
+    parser.add_argument("--connection-config", type=Path, default=ROOT / ".env")
     args = parser.parse_args()
 
     prepared = args.prepared.resolve()
@@ -49,12 +51,13 @@ def main():
         )
 
     save()
-    if not (ROOT / ".env").is_file():
+    connection_config = args.connection_config.resolve()
+    if not connection_config.is_file():
         attempt.update(
             {
                 "status": "blocked_missing_connection_config",
                 "reason": (
-                    "既有remote.py要求项目根目录.env包含CUDA_SSH_HOST、"
+                    "远端配置需要CUDA_SSH_HOST、"
                     "CUDA_SSH_PORT、CUDA_SSH_USER和CUDA_SSH_PASSWORD"
                 ),
             }
@@ -65,7 +68,7 @@ def main():
 
     config = dict(
         line.split("=", 1)
-        for line in (ROOT / ".env").read_text(encoding="utf-8").splitlines()
+        for line in connection_config.read_text(encoding="utf-8").splitlines()
         if line and not line.startswith("#") and "=" in line
     )
     remote_root = config.get("CUDA_REMOTE_ROOT", "/root/autodl-tmp/graduation_project")
@@ -88,6 +91,7 @@ def main():
                 text=True,
                 timeout=timeout + 60,
                 check=False,
+                env={**os.environ, "CUDA_CONFIG_FILE": str(connection_config)},
             )
             exit_code = completed.returncode
             raw_content = completed.stdout + completed.stderr

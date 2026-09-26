@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "recorded_time_beijing": "2026-09-27 02:53:21",
+  "remote_workdir": "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3",
+  "prepared_package_sha256": "16dc964f76e0d6500099f198371cdc63e4fda53d71f34a97b6c1300479b1c22a",
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+    "driver": "595.71.05",
+    "cuda_compiler": "12.8.93",
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "dependencies_sha256": "2fac0e212d69b9b01d02322acfa5931c3f56bb8a97e218ea5b9cd20e374403e2",
+    "adaptations": [
+      "固定提交的cumesh2sdf与pdmc源码本地打包并校验后上传",
+      "依赖及PaMO源码安装使用--no-build-isolation",
+      "Warp packman远端副本的CRLF转为LF",
+      "运行进程预加载系统libstdc++.so.6以满足GLIBCXX_3.4.30"
+    ]
+  },
+  "actual_commands_relative_to_remote_workdir": {
+    "author_example": "venv/bin/python pamo/example.py --input pamo/mesh/BirdHouse_B019SXLRJ2_MetalLeafRoofGreenWalls_TU.obj --output author_example.obj --ratio 0.001",
+    "six_cases": "venv/bin/python run_pamo_author.py --pamo-root pamo --input-dir inputs --output-dir outputs --ratio 1.0",
+    "four_additional_repeats": "for rep in 2 3 4 5; do venv/bin/python run_pamo_author.py --pamo-root pamo --input-dir inputs --output-dir outputs_repeat$rep --ratio 1.0; done",
+    "stage3_disabled": "venv/bin/python pamo/example.py --input inputs/<case_id>.obj --output ablation_stage3off/<case_id>.obj --ratio 1.0 --disable_stage3",
+    "stage1_disabled": "venv/bin/python pamo/example.py --input inputs/<case_id>.obj --output ablation_stage1off/<case_id>.obj --ratio 1.0 --disable_stage1",
+    "stage1_probe": "venv/bin/python stage1_probe.py --input inputs/<case_id>.obj --output-dir probe_<case_id>_R<resolution> --resolution <resolution>",
+    "sdf_sign_probe": "venv/bin/python sdf_sign_probe.py --input inputs/<case_id>.obj --output sdf_<case_id>.json --resolution 256"
+  },
+  "environment_exports": {
+    "PATH_prefix": "/usr/local/cuda/bin:/root/miniconda3/bin",
+    "CUDA_HOME": "/usr/local/cuda",
+    "TORCH_CUDA_ARCH_LIST": "8.9",
+    "PYTHONFAULTHANDLER": "1",
+    "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6"
+  },
+  "artifacts_sha256": {
+    "author_example.obj": "d4f57cfcaca6d2c55531b3f2ea512f935e76c339b49603e3a73282e3f1544396",
+    "outputs/remote_results.json": "89a19dde07378f78b6429b5de421fcbf542273a36687246c58e3c0e223de7045",
+    "outputs/audit.json": "052bef3cd15ddbd91891e78e3e027b694c7e5edddc5b74bc0ea86f3b9fe0397c",
+    "pamo_run_artifacts.tar.gz": "63f3f771115f52e0edeae14020e09a5f2c8026e22e510b3f4584411b2e4",
+    "pamo_repeats_artifacts.tar.gz": "9eee9a0769b590b04df9fb9bef9ee5c31dc90ff5375e8aa929a90f3f2ce604cb",
+    "pamo_ablation_artifacts.tar.gz": "fd992055259adcb1a412c99d385636051729e0660d85e548edf07dba8dfcfd00",
+    "stage_probe_evidence.tar.gz": "3859cb9ae15bf88f106a325b0ec06ed5c591c52daf6fb6c09fb7e5b099b56e66",
+    "pamo_sdf_sign_artifacts.tar.gz": "462418c8510d65da03ccc07210479ba07c85e0e51185b7042c18c50c78d43f19"
+  },
+  "status": "t2_completed_t3_diagnostic_in_progress"
+}

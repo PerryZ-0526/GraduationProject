@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-09-27 01:55:56",
+  "status": "remote_run_failed_no_results",
+  "prepared_manifest": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\共同运动记录与方法对照\\实验结果\\20260927_014721_pamo_prepared\\manifest.json",
+  "archive_sha256": "16dc964f76e0d6500099f198371cdc63e4fda53d71f34a97b6c1300479b1c22a",
+  "steps": [
+    {
+      "name": "01_create",
+      "arguments": [
+        "--command",
+        "mkdir -p /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159"
+      ],
+      "exit_code": 0,
+      "log": "01_create.log"
+    },
+    {
+      "name": "02_upload",
+      "arguments": [
+        "--put",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\共同运动记录与方法对照\\实验结果\\20260927_014721_pamo_prepared\\pamo_remote_bundle.tar.gz",
+        "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159/pamo_remote_bundle.tar.gz"
+      ],
+      "exit_code": 0,
+      "log": "02_upload.log"
+    },
+    {
+      "name": "03_unpack",
+      "arguments": [
+        "--command",
+        "cd /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159 && printf '%s  %s\\n' 16dc964f76e0d6500099f198371cdc63e4fda53d71f34a97b6c1300479b1c22a pamo_remote_bundle.tar.gz | sha256sum -c - && tar -xzf pamo_remote_bundle.tar.gz"
+      ],
+      "exit_code": 0,
+      "log": "03_unpack.log"
+    },
+    {
+      "name": "04_run",
+      "arguments": [
+        "--command",
+        "cd /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159; bash run_pamo_remote.sh environment > environment.log 2>&1 && bash run_pamo_remote.sh setup > setup.log 2>&1 && venv/bin/python pamo/example.py --input pamo/mesh/BirdHouse_B019SXLRJ2_MetalLeafRoofGreenWalls_TU.obj --output author_example.obj --ratio 0.001 > author_example.log 2>&1 && bash run_pamo_remote.sh run > run.log 2>&1; rc=$?; tar -czf remote_artifacts.tar.gz environment.log setup.log author_example.log author_example.obj run.log dependencies.txt outputs 2>/dev/null || tar -czf remote_artifacts.tar.gz --ignore-failed-read environment.log setup.log author_example.log author_example.obj run.log dependencies.txt outputs 2>/dev/null; exit $rc"
+      ],
+      "exit_code": 1,
+      "log": "04_run.log"
+    },
+    {
+      "name": "05_download",
+      "arguments": [
+        "--get",
+        "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159/remote_artifacts.tar.gz",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\共同运动记录与方法对照\\实验结果\\20260927_014721_pamo_prepared\\attempts\\20260927_015556_807159\\remote_artifacts.tar.gz"
+      ],
+      "exit_code": 0,
+      "log": "05_download.log"
+    }
+  ]
+}

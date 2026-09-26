@@ -1,0 +1,34 @@
+# of input verts : 1969
+# of input faces : 3934
+Stage1 :  False
+Stage3 :  True
+Warp 1.0.0-beta.2 initialized:
+   CUDA Toolkit: 12.8, Driver: 13.2
+   Devices:
+     "cpu"    | x86_64
+     "cuda:0" | NVIDIA GeForce RTX 4080 SUPER (sm_89)
+   Kernel cache: /root/.cache/warp/1.0.0-beta.2
+Target faces : 3934
+Time for Simplification: 0.042757272720336914 sec
+[33;20mWARNING - Triangle area is too small (min_area=5.519863183944618e-10), may cause numerical instability (system.py:213)[0m
+Module pamo_safe_project.kernels.geometry_kernels load on device 'cuda:0' took 86.54 ms
+Module pamo_safe_project.kernels.energy_kernels.elastic_energy load on device 'cuda:0' took 14.45 ms
+Module pamo_safe_project.kernels.energy_kernels.hinge_energy load on device 'cuda:0' took 36.14 ms
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py", line 57, in <module>
+    main()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py", line 32, in main
+    verts, faces = pamo.run(torch.from_numpy(input_mesh.vertices).float().cuda(), 
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/pamo/__init__.py", line 168, in run
+    verts, faces = pamo_safe_project.process(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/pamo_safe_project/processing.py", line 61, in process
+    system.register_mesh(gt_V, gt_F, stage2_V, stage2_F)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/pamo_safe_project/system.py", line 272, in register_mesh
+    self._energy_preprocess(V, F)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/pamo_safe_project/system.py", line 277, in _energy_preprocess
+    ec.preprocess(V, F)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/pamo_safe_project/energy.py", line 633, in preprocess
+    n_hinges == s.n_edges
+AssertionError: Number of hinges 5623 != number of edges 5617
