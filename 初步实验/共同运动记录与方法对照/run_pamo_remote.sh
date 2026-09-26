@@ -9,7 +9,7 @@ BASE_PYTHON="${PAMO_BASE_PYTHON:-/root/miniconda3/bin/python}"
 
 export PATH="/usr/local/cuda/bin:/root/miniconda3/bin:$PATH"
 export CUDA_HOME="${CUDA_HOME:-/usr/local/cuda}"
-export TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-8.9}"
+export TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -n 1 | tr -d '[:space:]')}"
 export MAX_JOBS="${MAX_JOBS:-4}"
 
 environment_report() {
@@ -17,6 +17,8 @@ environment_report() {
   nvidia-smi --query-gpu=name,driver_version,memory.total,compute_cap --format=csv
   nvcc --version
   "$BASE_PYTHON" --version
+  "$BASE_PYTHON" -c 'import torch; print("torch", torch.__version__, "torch_cuda", torch.version.cuda)'
+  printf 'TORCH_CUDA_ARCH_LIST=%s\n' "$TORCH_CUDA_ARCH_LIST"
 }
 
 setup_environment() {
@@ -27,8 +29,8 @@ setup_environment() {
     libigl==2.5.1 \
     numpy==1.26.4 \
     trimesh==4.4.0 \
-    git+https://github.com/eliphatfs/cumesh2sdf.git \
-    git+https://github.com/seonghunn/pdmc.git
+    git+https://github.com/eliphatfs/cumesh2sdf.git@7789ade81bcd5fa77112d2cb5d825ed0e634e76b \
+    git+https://github.com/seonghunn/pdmc.git@54406314bb9870c2c1b3c2badfde3f6d01f1e499
   (
     cd "$SOURCE/simp_cuda"
     FORCE_CUDA=1 "$VENV/bin/python" -m pip install .
@@ -40,6 +42,7 @@ setup_environment() {
     "$VENV/bin/python" -m pip install .
   )
   "$VENV/bin/python" -m pip install "$SOURCE/simp_cuda/safe_project"
+  "$VENV/bin/python" -m pip freeze > "$ROOT/dependencies.txt"
 }
 
 run_cases() {

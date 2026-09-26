@@ -16,6 +16,12 @@ def file_hash(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def output_text(value):
+    if isinstance(value, bytes):
+        return value.decode("utf-8", errors="replace")
+    return value or ""
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--pamo-root", type=Path, required=True)
@@ -53,7 +59,7 @@ def main():
             "stage1_enabled": True,
             "stage2_enabled": True,
             "stage3_enabled": True,
-            "note": "ratio=1.0令目标面数等于Geogram输入面数，不主动追加低面数压缩",
+            "note": "ratio=1.0只设置目标面数；三阶段仍执行，实际输出面数可能变化",
         },
         "environment": {
             "python": sys.version,
@@ -106,10 +112,10 @@ def main():
                 check=False,
             )
             return_code = completed.returncode
-            content = completed.stdout + completed.stderr
+            content = output_text(completed.stdout) + output_text(completed.stderr)
         except subprocess.TimeoutExpired as error:
             return_code = 124
-            content = (error.stdout or "") + (error.stderr or "")
+            content = output_text(error.stdout) + output_text(error.stderr)
         elapsed_ms = (perf_counter() - started) * 1000.0
         log.write_text(content, encoding="utf-8")
         row = {
@@ -120,6 +126,7 @@ def main():
             "output_sha256": file_hash(target) if target.is_file() else None,
             "log": log.name,
             "exit_code": return_code,
+            "status": "accepted_execution" if return_code == 0 and target.is_file() else "execution_failed",
             "process_wall_ms": elapsed_ms,
         }
         result["runs"].append(row)
