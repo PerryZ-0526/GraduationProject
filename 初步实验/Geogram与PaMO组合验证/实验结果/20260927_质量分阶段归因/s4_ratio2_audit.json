@@ -1,0 +1,81 @@
+{
+  "input_quality": {
+    "vertices": 1966,
+    "faces": 3928,
+    "bad_faces": 1396,
+    "min_q": 8.196373605747852e-05,
+    "min_angle_deg": 0.0027113384467967187,
+    "boundary_edges": 0,
+    "quality_gate": {
+      "min_q": 0.4,
+      "min_angle_deg": 25.0
+    }
+  },
+  "input_topology": {
+    "connected_components": 1,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "inconsistent_interior_edges": 0,
+    "self_intersection_faces": 0
+  },
+  "input_validity_status": "passes_listed_topology_checks",
+  "output_quality": {
+    "vertices": 3918,
+    "faces": 7832,
+    "bad_faces": 698,
+    "min_q": 0.12245635498189428,
+    "min_angle_deg": 5.2351760118392106,
+    "boundary_edges": 0,
+    "quality_gate": {
+      "min_q": 0.4,
+      "min_angle_deg": 25.0
+    }
+  },
+  "output_topology": {
+    "connected_components": 1,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "inconsistent_interior_edges": 0,
+    "self_intersection_faces": 0
+  },
+  "output_watertight": true,
+  "output_winding_consistent": true,
+  "sampled_drift": {
+    "pamo_to_geogram": {
+      "max_mm": 0.01277217333333347,
+      "p95_mm": 0.003402172703658237,
+      "rms_mm": 0.0014945403836386332,
+      "samples": 11750
+    },
+    "geogram_to_pamo": {
+      "max_mm": 0.027557587648788424,
+      "p95_mm": 0.006955986047291225,
+      "rms_mm": 0.0035114266779640944,
+      "samples": 5894
+    },
+    "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+  },
+  "sampled_reference_geometry": {
+    "pamo_to_reference": {
+      "max_mm": 0.013095360456346572,
+      "p95_mm": 0.003053981250728011,
+      "rms_mm": 0.0014065278009000493,
+      "samples": 8192
+    },
+    "reference_to_pamo": {
+      "max_mm": 0.010293069809201773,
+      "p95_mm": 0.002982313445671186,
+      "rms_mm": 0.001336891107525331,
+      "samples": 8192
+    },
+    "sampled_max_mm": 0.013095360456346572,
+    "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+  },
+  "quality_passed": false,
+  "topology_passed": true,
+  "sampled_geometry_passed": true,
+  "accepted_under_sampled_protocol": false,
+  "continuous_error_certificate_status": "not_available",
+  "accepted_under_common_budget": null,
+  "audit_wall_ms": 442.60629999917
+}
