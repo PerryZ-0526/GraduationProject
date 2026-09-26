@@ -1,0 +1,39 @@
+{
+  "time_beijing": "2026-09-27 02:57:29",
+  "purpose": "只用于FP32输入退化与SDF符号归因，不替代冻结六例",
+  "source_manifest_sha256": "ce23d892590c2baadd54ab913ddc942365d07b6077f9d69a58981cda2eae996b",
+  "cases": [
+    {
+      "case_id": "resolution_s3",
+      "source_sha256": "f1c48dabca4921303f362deaf8f0db3ef0be2631169de082a8b6c3af67480594",
+      "clean_sha256": "fc4043e6759e13536ca7cea68d1a745a44e73ebf2e7316363d4e794f419a7fc2",
+      "clean_file": "resolution_s3_clean.obj",
+      "original_faces": 2176,
+      "clean_faces": 2172,
+      "original_vertices": 1090,
+      "clean_vertices": 1088,
+      "fp32_zero_area_faces_before": 2,
+      "fp32_zero_area_faces_after": 0,
+      "clean_watertight": true,
+      "clean_components": 1,
+      "volume_difference_mm3": -1.5327703550838123e-09,
+      "max_original_vertex_to_clean_vertex_mm": 8.267302334223947e-09
+    },
+    {
+      "case_id": "resolution_s4",
+      "source_sha256": "7385b3b4f219a4d8cf1a8e2c145f38e49ffe2667fbe0193e0033f8d24f11e56d",
+      "clean_sha256": "a988c24cd1b7998d073201be22c1f2aba1f3a13cb983b7cae162ce5109734fb6",
+      "clean_file": "resolution_s4_clean.obj",
+      "original_faces": 3934,
+      "clean_faces": 3928,
+      "original_vertices": 1969,
+      "clean_vertices": 1966,
+      "fp32_zero_area_faces_before": 4,
+      "fp32_zero_area_faces_after": 0,
+      "clean_watertight": true,
+      "clean_components": 1,
+      "volume_difference_mm3": -5.015259318952303e-10,
+      "max_original_vertex_to_clean_vertex_mm": 7.93761724292727e-09
+    }
+  ]
+}
