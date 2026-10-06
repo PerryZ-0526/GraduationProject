@@ -1,0 +1,69 @@
+{
+  "time_beijing": "2026-10-06T22:36:05.687174+08:00",
+  "status": "completed",
+  "previous_record_sha256": "075749227ad84725e9c53ab2c1606aa627cc9336c796b157ec1da5e82deea10f",
+  "failed_source_sha256": "6da8a56378ad1571f5b611b8561f757e5b5e8d4b8e2655acb919bc611179e106",
+  "candidate_repair_sha256": "56a4d3a62698afad0ce7510c73217832fbf4fc70abf0e12bee3b84372e74d280",
+  "resume_source_sha256": "12fd4c5fbd8c75614c5062bff374e0bd69c56b42ee7f3edda1745ffe2b515e87",
+  "stages": [
+    {
+      "name": "02_build_fixed",
+      "argv": [
+        "cmake",
+        "--build",
+        "/tmp/geogram_unique_facets_20261006_flat/geogram_build",
+        "--target",
+        "geogram",
+        "--parallel",
+        "4"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "03_adapter_fixed",
+      "argv": [
+        "g++",
+        "-std=c++17",
+        "-O3",
+        "-fPIC",
+        "-shared",
+        "-DGEO_DYNAMIC_LIBS",
+        "-I/tmp/geogram_unique_facets_20261006_flat/geogram_source/src/lib",
+        "/tmp/geogram_unique_facets_20261006_flat/workers/geogram_memory.cpp",
+        "-L/tmp/geogram_unique_facets_20261006_flat/geogram_build/lib",
+        "-lgeogram",
+        "-Wl,-rpath,/tmp/geogram_unique_facets_20261006_flat/geogram_build/lib",
+        "-o",
+        "/tmp/geogram_unique_facets_20261006_flat/workers/libgeogram_memory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "libraries": [
+    {
+      "path": "/tmp/geogram_unique_facets_20261006_flat/geogram_build/lib/libgeogram.so",
+      "sha256": "a8377d1f91237f8f3b6f43a59fae5caa002781d36c9a3ff9b77bfe582189012e"
+    },
+    {
+      "path": "/tmp/geogram_unique_facets_20261006_flat/workers/libgeogram_memory.so",
+      "sha256": "f951baf321cc435653ffbdd8dd6f10134263db0e49008726e544833539252f70"
+    },
+    {
+      "path": "/tmp/filtered_source_certificate_20261006/workers/local_separation.so",
+      "sha256": "e778ba3af2757041372c84b86b06e4420da6756fd9294b72c7a061d1424c1450"
+    },
+    {
+      "path": "/tmp/filtered_source_certificate_20261006/workers/libexact_mesh_memory.so",
+      "sha256": "5dfbd22a14cdda76d1548bda5eb3070224c54df044a9ee9d293117d43f34429e"
+    },
+    {
+      "path": "/tmp/filtered_source_certificate_20261006/workers/libincremental_mesh_memory.so",
+      "sha256": "ad9d07d89699189e177759c4af868aaa6e5fe5654df0069264477ecdaecd556f"
+    },
+    {
+      "path": "/tmp/filtered_source_certificate_20261006/workers/libshort_edge_scan.so",
+      "sha256": "0b44bd7f99b20e6b2792cde798cabc6b00f22ce659275d1f3a46bad75552caa0"
+    }
+  ],
+  "protected_original_repair_sha256": "1dfcd670516128ae8d7e9efec6ced07369c385ed1b4fea170f476e5965a6b7a5"
+}

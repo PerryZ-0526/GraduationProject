@@ -1,0 +1,370 @@
+{
+  "time_beijing": "2026-10-04T05:23:47.220970+08:00",
+  "source_manifest_sha256": "c8535a9ea87413bea459b0e03e4c5f3dc5ebca3f878d29cb33cee8c3333de9a4",
+  "generator_sha256": "bed325f5cf14af2acbb8db6d508b940837e600774ae539fc2850a1b00cfaad11",
+  "routes": [
+    {
+      "id": "BP3D_FJ3384_交叉浅磨",
+      "split": "development",
+      "category": "交叉浅磨",
+      "body": "ct",
+      "source_kind": "public_atlas_test_scale",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "BP3D_FJ3384.obj",
+      "initial_mesh_sha256": "0a513ec24ca6c95631c83e84aade495e21856761a791bfcdda2688b770fe769c",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 1.0,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            19.20713860277306,
+            26.722478237952615,
+            -24.07457616071061
+          ],
+          "explicit_sweep_start_mm": [
+            19.732907247154927,
+            27.033736518157227,
+            -24.43050538905372
+          ],
+          "tool_radius_mm": 1.0,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            18.833877945120207,
+            26.66895735121829,
+            -24.672750045238956
+          ],
+          "explicit_sweep_start_mm": [
+            19.20713860277306,
+            26.722478237952615,
+            -24.07457616071061
+          ],
+          "tool_radius_mm": 1.0,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            19.359646589502074,
+            26.9802156314229,
+            -25.028679273582068
+          ],
+          "explicit_sweep_start_mm": [
+            18.833877945120207,
+            26.66895735121829,
+            -24.672750045238956
+          ],
+          "tool_radius_mm": 1.0,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 400,
+          "position_mm": [
+            19.732907247154927,
+            27.033736518157227,
+            -24.43050538905372
+          ],
+          "explicit_sweep_start_mm": [
+            19.359646589502074,
+            26.9802156314229,
+            -25.028679273582068
+          ],
+          "tool_radius_mm": 1.0,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "BP3D_FJ3384_交叉浅磨_e0_tool.obj",
+          "sha256": "c7f1b288278ef9fd39986731e2fe47055db1069a0106ad4d5ec9ec6eb7493eed",
+          "faces": 1392
+        },
+        {
+          "event_id": "e1",
+          "mesh": "BP3D_FJ3384_交叉浅磨_e1_tool.obj",
+          "sha256": "818aacbc8d80ecf1722e709a6a46ef747d84f8e1d1881b00b7efd201cc8962a9",
+          "faces": 1396
+        },
+        {
+          "event_id": "e2",
+          "mesh": "BP3D_FJ3384_交叉浅磨_e2_tool.obj",
+          "sha256": "518c0fd8b6031874ac28ac2737120cc89a509d1518a0bdc0afe4e689d1d0b9fd",
+          "faces": 1392
+        },
+        {
+          "event_id": "e3",
+          "mesh": "BP3D_FJ3384_交叉浅磨_e3_tool.obj",
+          "sha256": "aac4f359afc8b5f12deebb92e78b4c091c9411a41187b04d571f564a991e1565",
+          "faces": 1396
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      }
+    }
+  ],
+  "derivatives": [
+    {
+      "id": "BP3D_FJ3384",
+      "organ_mapping": "FMA13395\tright scapula\tFJ3384",
+      "original_sha256": "1641b04e55f9d75bdd6f1f4f07ea596e5dea0a8cb6b348bff47281b8a0bc6e5d",
+      "derived_sha256": "0a513ec24ca6c95631c83e84aade495e21856761a791bfcdda2688b770fe769c",
+      "translate_before_scale": [
+        111.7589,
+        48.886624999999995,
+        -1266.9099999999999
+      ],
+      "scale": 0.6027727546714894,
+      "maximum_extent_test_mm": 100,
+      "units_note": "人为测试尺度，不是恢复解剖真实毫米",
+      "repair": "逐位相同坐标去重后坐标变换；没有补洞或重网格",
+      "exact_weld": {
+        "before_vertices": 13118,
+        "after_vertices": 13088,
+        "coordinate_movement_mm": 0
+      },
+      "initial_watertight": true,
+      "initial_winding_consistent": true,
+      "initial_faces": 26172,
+      "cut_anchor_source_face": 5534
+    },
+    {
+      "id": "BP3D_FJ3279",
+      "organ_mapping": "FMA13396\tleft scapula\tFJ3279",
+      "original_sha256": "e63a5675c6cdbe942322305920241b4a63762d7a65879572400f444fa3d42739",
+      "derived_sha256": "b920fef03ffc07072c83d66b03cd60abe1804cadd309a51f79f712b4bf61fc56",
+      "translate_before_scale": [
+        -111.7627,
+        48.884299999999996,
+        -1266.905
+      ],
+      "scale": 0.6027364233620643,
+      "maximum_extent_test_mm": 100,
+      "units_note": "人为测试尺度，不是恢复解剖真实毫米",
+      "repair": "逐位相同坐标去重后坐标变换；没有补洞或重网格",
+      "exact_weld": {
+        "before_vertices": 14068,
+        "after_vertices": 14055,
+        "coordinate_movement_mm": 0
+      },
+      "initial_watertight": true,
+      "initial_winding_consistent": true,
+      "initial_faces": 28106,
+      "cut_anchor_source_face": 19663
+    },
+    {
+      "id": "BP3D_FJ3368",
+      "organ_mapping": "FMA23130\tright humerus\tFJ3368",
+      "original_sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237",
+      "derived_sha256": "98178ec8f322b547892147b3a6de9c294072fdeada2e268270bd342ae81ecb50",
+      "translate_before_scale": [
+        190.46550000000002,
+        75.62904999999999,
+        -1182.87
+      ],
+      "scale": 0.3253725515715495,
+      "maximum_extent_test_mm": 100,
+      "units_note": "人为测试尺度，不是恢复解剖真实毫米",
+      "repair": "逐位相同坐标去重后坐标变换；没有补洞或重网格",
+      "exact_weld": {
+        "before_vertices": 2233,
+        "after_vertices": 1894,
+        "coordinate_movement_mm": 0
+      },
+      "initial_watertight": true,
+      "initial_winding_consistent": true,
+      "initial_faces": 3784,
+      "cut_anchor_source_face": 1800
+    },
+    {
+      "id": "BP3D_FJ3262",
+      "organ_mapping": "FMA23131\tleft humerus\tFJ3262",
+      "original_sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc",
+      "derived_sha256": "1e9543ad8b33f74cb5d664eef46c9deb051bbcb89e57b8d45b2487fd4fe9db06",
+      "translate_before_scale": [
+        -190.41649999999998,
+        75.64245,
+        -1182.865
+      ],
+      "scale": 0.3254043148612151,
+      "maximum_extent_test_mm": 100,
+      "units_note": "人为测试尺度，不是恢复解剖真实毫米",
+      "repair": "逐位相同坐标去重后坐标变换；没有补洞或重网格",
+      "exact_weld": {
+        "before_vertices": 2073,
+        "after_vertices": 1924,
+        "coordinate_movement_mm": 0
+      },
+      "initial_watertight": true,
+      "initial_winding_consistent": true,
+      "initial_faces": 3844,
+      "cut_anchor_source_face": 2100
+    },
+    {
+      "id": "BP3D_FJ3365",
+      "organ_mapping": "FMA24474\tright femur\tFJ3365",
+      "original_sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037",
+      "derived_sha256": "4c768d4f5f6437782a0794651f4cb52693665596d67e25a448e7ab210c51471d",
+      "translate_before_scale": [
+        91.01415,
+        80.8611,
+        -601.201
+      ],
+      "scale": 0.21454531411579442,
+      "maximum_extent_test_mm": 100,
+      "units_note": "人为测试尺度，不是恢复解剖真实毫米",
+      "repair": "逐位相同坐标去重后坐标变换；没有补洞或重网格",
+      "exact_weld": {
+        "before_vertices": 1574,
+        "after_vertices": 1553,
+        "coordinate_movement_mm": 0
+      },
+      "initial_watertight": true,
+      "initial_winding_consistent": true,
+      "initial_faces": 3102,
+      "cut_anchor_source_face": 1289
+    },
+    {
+      "id": "BP3D_FJ3259",
+      "organ_mapping": "FMA24475\tleft femur\tFJ3259",
+      "original_sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d",
+      "derived_sha256": "af296abcc1730f185c8c0d9a1d9d96be8f1f3019723a467738bc34066a0e79d8",
+      "translate_before_scale": [
+        -91.10159999999999,
+        80.8791,
+        -601.1475
+      ],
+      "scale": 0.21450803654358908,
+      "maximum_extent_test_mm": 100,
+      "units_note": "人为测试尺度，不是恢复解剖真实毫米",
+      "repair": "逐位相同坐标去重后坐标变换；没有补洞或重网格",
+      "exact_weld": {
+        "before_vertices": 1623,
+        "after_vertices": 1604,
+        "coordinate_movement_mm": 0
+      },
+      "initial_watertight": true,
+      "initial_winding_consistent": true,
+      "initial_faces": 3204,
+      "cut_anchor_source_face": 1749
+    },
+    {
+      "id": "BP3D_FJ3387",
+      "organ_mapping": "FMA24477\tright tibia\tFJ3387",
+      "original_sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578",
+      "derived_sha256": "1b9ee6ba2b6aad85028121c3cd03c734779b0da436f6fc3075b0db205c5b112b",
+      "translate_before_scale": [
+        72.2845,
+        83.45394999999999,
+        -183.94142
+      ],
+      "scale": 0.2631875656718773,
+      "maximum_extent_test_mm": 100,
+      "units_note": "人为测试尺度，不是恢复解剖真实毫米",
+      "repair": "逐位相同坐标去重后坐标变换；没有补洞或重网格",
+      "exact_weld": {
+        "before_vertices": 857,
+        "after_vertices": 834,
+        "coordinate_movement_mm": 0
+      },
+      "initial_watertight": true,
+      "initial_winding_consistent": true,
+      "initial_faces": 1664,
+      "cut_anchor_source_face": 1397
+    },
+    {
+      "id": "BP3D_FJ3282",
+      "organ_mapping": "FMA24478\tleft tibia\tFJ3282",
+      "original_sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef",
+      "derived_sha256": "2f73510761ce482c3c0bb48474fdd2135793e68591babc4ae8cdc48cfc31060d",
+      "translate_before_scale": [
+        -72.24459999999999,
+        83.24855,
+        -183.88333500000002
+      ],
+      "scale": 0.26318744791684895,
+      "maximum_extent_test_mm": 100,
+      "units_note": "人为测试尺度，不是恢复解剖真实毫米",
+      "repair": "逐位相同坐标去重后坐标变换；没有补洞或重网格",
+      "exact_weld": {
+        "before_vertices": 880,
+        "after_vertices": 848,
+        "coordinate_movement_mm": 0
+      },
+      "initial_watertight": true,
+      "initial_winding_consistent": true,
+      "initial_faces": 1692,
+      "cut_anchor_source_face": 287
+    }
+  ],
+  "negative_inputs": [],
+  "scope": "单个解剖图谱八个骨模型，非独立患者或真实磨削；全部用于公开应用开发",
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200
+  },
+  "units": {
+    "length": "mm_explicit_test_scale",
+    "time": "ms"
+  },
+  "生成时间": "2026-10-04T19:08:05.707799+08:00",
+  "修改时间及修改内容": "首次生成，原样复用已见公开骨输入，开发真实父反馈",
+  "文档概述": "单公开骨四刀开发，非新患者或独立评价",
+  "索引目录": [
+    "routes"
+  ],
+  "role": "cut_exclusion_public_atlas_application_8_bones_32_cuts",
+  "maximum_gpu_calls": 8,
+  "expected_maximum_with_first_cut_sharing": 56,
+  "method_snapshot_sha256": "710f13c9dff226f4770629d909693246026f14b23d3e20fc88f44a5083692a0a"
+}

@@ -1,0 +1,1107 @@
+{
+  "time_beijing": "2026-10-04T02:42:46.913723+08:00",
+  "manifest_sha256": "fada77f4c0d5e5a0fd50f29c8519bafe9cbb73d13dcc65825951401e76f7e50a",
+  "script_sha256": "d33f235ecffe9c186a969e251ae5325317083aa4d544ece24a5cc9a83d272645",
+  "audit_code_sha256": "e24cda944afbbca969c0e59e95e681fd2052e73b66c4af498953b80fdc0f419a",
+  "environment": {
+    "extension_sha256": "c0836ff8d36fe5c9e2fca8f27e9a341578aa3d716dfb1d0563784710717353ad",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "torch": "2.8.0+cu128",
+    "geogram_binary_sha256": "5452616f1ff5a495b35f973ea8f0ad63c8073f3553a04273e379a786ffbf4dc2",
+    "geogram_library_sha256": "a4877e7ff69e46381e0c763cfdf4edb129af1de2c775e4d113fe4ab56c4efe71"
+  },
+  "remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2",
+  "split": "application",
+  "rows": [
+    {
+      "route": "application_ct_16",
+      "event": "e0",
+      "branch": "R",
+      "status": "reference_valid",
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 847.6676999998745,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 21936,
+        "faces": 43868,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62228.80494414765,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "a680bc38d899450f7e1f5fba71298ef4528b7a5a3bd7c3a1e198e6c885596c60"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e0",
+      "branch": "C0",
+      "status": "output_invalid_or_reference_unavailable",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 721.9309000001886,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 21936,
+        "faces": 43868,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62228.80494414765,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 6.938893903907228e-18,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 5322.455699999409,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C0_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C0_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C0_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 21931,
+        "faces": 43858,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62616.442881278366,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "output_sha256": "db4395af4d746fe293e6c4eed97e3f7cf11a04623844b24d6434b2349d2cde8e",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 8186,
+        "candidate_to_initial_samples": 8187,
+        "uncut_sampled_max_mm": 0.25862116229193405,
+        "uncut_sampled_mean_mm": 0.02391772518536563,
+        "quality_all": {
+          "total_faces": 43858,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 2,
+            "fraction": 4.560171462446988e-05,
+            "area_fraction": 9.668714007749619e-06
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 42972,
+            "fraction": 0.9797984404213599,
+            "area_fraction": 0.9858820344030665
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 33,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 33,
+            "fraction": 1.0,
+            "area_fraction": 1.0
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.6604138411391264,
+            "p95_mm": 0.07684850423792908,
+            "rms_mm": 0.03640444242024575,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.8158736538253595,
+            "p95_mm": 0.07788517393184453,
+            "rms_mm": 0.03607152243829861,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.8158736538253595,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": 376.3423520016586
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.2253565677673803,
+          "p95_mm": 0.07682359875075934,
+          "rms_mm": 0.03466907026298443,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.18672418921888242,
+          "p95_mm": 0.0783635223593608,
+          "rms_mm": 0.03514627421879862,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.2253565677673803,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e0",
+      "branch": "C1",
+      "status": "output_invalid_or_reference_unavailable",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 968.4543000003032,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C1_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C1_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 21936,
+        "faces": 43868,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62228.80494414765,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 6.938893903907228e-18,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 5668.435300000056,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C1_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C1_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e0/C1_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 20637,
+        "faces": 41270,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62614.33859050792,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "output_sha256": "df9489b0bb75a1a1500f9404458f911135fd104974de88fd46f67af08ba3df57",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 8186,
+        "candidate_to_initial_samples": 8182,
+        "uncut_sampled_max_mm": 0.1984173423863119,
+        "uncut_sampled_mean_mm": 0.024306502756863184,
+        "quality_all": {
+          "total_faces": 41270,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 5,
+            "fraction": 0.000121153380179307,
+            "area_fraction": 3.6842110392053826e-05
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 40453,
+            "fraction": 0.9802035376787013,
+            "area_fraction": 0.9861662140198661
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 33,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 33,
+            "fraction": 1.0,
+            "area_fraction": 1.0
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.5999665017669811,
+            "p95_mm": 0.07663291916332166,
+            "rms_mm": 0.0354885323552169,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.8792847667099625,
+            "p95_mm": 0.07767085426067509,
+            "rms_mm": 0.036628104372867024,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.8792847667099625,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": 374.23806123121176
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.19626628813348362,
+          "p95_mm": 0.07655248871993135,
+          "rms_mm": 0.03482100689123334,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.1972129871168684,
+          "p95_mm": 0.07816117937111554,
+          "rms_mm": 0.03536127994229607,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.1972129871168684,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e1",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 138.69880000038393,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e1_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e1/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e1/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 719.184700000369,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e1/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e1/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e1/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 21902,
+        "faces": 43800,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62227.8125274649,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "8b52ff1f6a466d357111b03d3eddcb4cff6229b942feab66d414747bb41370a9"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e1",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e1",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e2",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 142.7510000003167,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e1/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e2_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e2/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e2/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 676.4124999999694,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e2/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e2/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e2/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 21856,
+        "faces": 43708,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62226.80804460676,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "4d218d692af948615f5a0d4525ec53e96dcb33725d3bdcfcd2ec14a379d70669"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e2",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e2",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e3",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 140.2885999996215,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e2/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e3_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e3/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e3/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 716.3190000001123,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e3/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e3/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e3/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 21818,
+        "faces": 43632,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62225.791026009945,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "a18c041a4b37c1e99018702eb4f1ebb18816bb36bfbccd1aadab1bff004f9d0d"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e3",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e3",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e4",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 142.56070000010368,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e3/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e4_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e4/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e4/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 792.788699999619,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e4/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e4/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e4/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 21769,
+        "faces": 43534,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62224.76108388201,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "9476f08d66e21649498a01f42f0f8870fa27256f48be3d9a9e4fb5407cd927ba"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e4",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e4",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e5",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 140.53530000001047,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e4/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e5_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e5/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e5/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 871.6809999996258,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e5/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e5/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e5/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 21731,
+        "faces": 43458,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62223.7178747411,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "e915ba8ead3afbb05519a35834f7ab17651d5d9de205f8f7de0197ffe675524a"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e5",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e5",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e6",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 140.89450000028592,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e5/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e6_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e6/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e6/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 758.7780000003477,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e6/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e6/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e6/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 21692,
+        "faces": 43380,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62222.66183100571,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "96c515f844db3e3f56942e46dd225c21565c55a3195378e2977e982f61e9e571"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e6",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e6",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e7",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 144.52989999972488,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e6/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e7_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e7/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e7/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 755.6741000007605,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e7/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e7/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e7/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 21638,
+        "faces": 43272,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62221.59323790981,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40397,
+              40423
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "7a50019deb3d5ef64ef0e520626866784d3667335c81a54cde6b0ab80cb2731b"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e7",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e7",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e8",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 160.22260000045208,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e7/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e8_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e8/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e8/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 742.4700000001394,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e8/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e8/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e8/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 21642,
+        "faces": 43280,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62219.264590014944,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40316,
+              40342
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "cbd4146a34a070b548cfb1d9dbb5f1138d4320c3285e111d2592523d765fcf3c"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e8",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e8",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e9",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 146.5438000004724,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e8/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e9_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e9/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e9/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 701.5527000003203,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e9/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e9/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e9/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 7.492154816014724e-15,
+      "metrics": {
+        "vertices": 21650,
+        "faces": 43296,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62219.26243593241,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40316,
+              40342
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "3e09b64d86e037e5220c9cf3e1206b8be4accad821f2f892c88d7d7c9e1b7ad0"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e9",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e9",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e10",
+      "branch": "R",
+      "status": "reference_topology_invalid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 149.48770000046352,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e9/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_e10_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e10/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e10/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 751.4112999997451,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/inputs/application_ct_16_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e10/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e10/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_application_v2/application_ct_16_e10/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 7.492154816014724e-15,
+      "metrics": {
+        "vertices": 21661,
+        "faces": 43315,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": false,
+        "winding_consistent": true,
+        "vertex_manifold_closed": false,
+        "euler_number": -1,
+        "self_intersection_faces": 2,
+        "volume_mm3": 62219.26165982962,
+        "self_intersection_raw_alarm_faces": 4,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              40316,
+              40342
+            ],
+            "separation_gap_mm": 0.15464251811804897
+          },
+          {
+            "faces": [
+              40316,
+              42088
+            ],
+            "separation_gap_mm": 4.3275958729548325
+          },
+          {
+            "faces": [
+              40316,
+              42100
+            ],
+            "separation_gap_mm": 4.05162111386813
+          },
+          {
+            "faces": [
+              40342,
+              42088
+            ],
+            "separation_gap_mm": 4.131258547522102
+          },
+          {
+            "faces": [
+              40342,
+              42100
+            ],
+            "separation_gap_mm": 3.961241219815528
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "sha256": "d4726012388ec2aa3ed8093e6fc49b0472503f18dbd9d8ba27e32902d8644421"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e10",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e10",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e11",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e11",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e11",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e12",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e12",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e12",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e13",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e13",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e13",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e14",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e14",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e14",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e15",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e15",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "application_ct_16",
+      "event": "e15",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    }
+  ],
+  "status": "complete_with_recorded_failures",
+  "initial_audits": {
+    "application_ct_16": {
+      "valid": true,
+      "metrics": {
+        "vertices": 22349,
+        "faces": 44694,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 62240.10052927671,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              44131,
+              44467
+            ],
+            "separation_gap_mm": 0.21593237097916274
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      }
+    }
+  },
+  "finished_beijing": "2026-10-04T02:43:47.462739+08:00"
+}

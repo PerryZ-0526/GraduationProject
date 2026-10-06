@@ -1,0 +1,51 @@
+{
+  "生成时间": "2026-10-07T00:18:08+08:00",
+  "修改时间及修改内容": "2026-10-07T00:18:08+08:00，完整开发终态后第一次方法封存",
+  "文档概述": "二十轮为主候选；二十一轮首刀开放和自交负例不交付；新参数评价前冻结",
+  "索引目录": [
+    "method",
+    "files",
+    "evidence"
+  ],
+  "status": "frozen_native_method_before_new_parameter_evaluation",
+  "method": {
+    "remote_root": "/tmp/geogram_native_quality_20261006_21",
+    "source_manifest_sha256": "95b7fb0acdc3bf7088c3681e285ab90ebacdc07ee90a9100c44d9bc35f7068a3",
+    "build_sha256": "8c04c9220639da072fd80355c6b6f220acb7d4c2df583f9078e9c44c3f9837f0",
+    "candidate_binary_sha256": "54fb4a65ca034ac0c6b04e6399311125ad6dcadd9f8e91893adc81425a5cd42b",
+    "candidate_library_sha256": "d17baf203cedf30467cefd8d32bad47be0beb602e2be803b14ce11823af02eb5",
+    "baseline_binary_sha256": "50058cc744dfeb9611ec884f8be9e1d173ec58611a490c376674fd80d3bde5b6",
+    "baseline_library_sha256": "dff5313c7c678c74f74a5c3531017fb793ea167e6444da540ac27ffd884c49c0",
+    "parameters": {
+      "diagnostic_small_angle_deg": 10,
+      "triangle_target_deg": 20,
+      "interior_added_point_budget": 64,
+      "conditional_boundary_point_budget": 128,
+      "strip_design_deg": 15,
+      "max_strip_slices": 64,
+      "max_strip_boundary_points": 126,
+      "machine_length_epsilon_multiplier": 128,
+      "machine_planar_normal_angle_deg": 1e-05,
+      "original_distinct_coordinate_merge_forbidden": true,
+      "retained_face_orientation_must_be_positive": true,
+      "disjoint_one_ring_each_pass": true,
+      "pre_and_post_coplanar_cleanup": true,
+      "quality_gate_bad_count_and_absolute_area": true
+    }
+  },
+  "files": {
+    "03-原生布尔质量与阶段计时.cpp": "cc4c0bbd06f40ee1a6f1f95b2700624df5f54c03f15a54c8a02926fa421f5549",
+    "371-共面重建前清理原生独立编译.py": "5ac4f1c914ec4e46e62132e93a19b1aadd6c9d627efadd60d227002743b8291e",
+    "mesh_surface_intersection.cpp": "99800b5a128e7353f521a738c505b84ac7b9c1d7833a5b61e1b8a54c701bb529",
+    "mesh_surface_intersection_internal.cpp": "2e670419fdaaafd21dba38fe48c7c325947836855e4bd3374f6f0c1882b5e840",
+    "mesh_surface_intersection_internal.h": "4247d6131cda4df157d7a8f185ddddeb47136bb38a754dca008e2f0a62e925c9"
+  },
+  "evidence": {
+    "complete_development_summary_sha256": "8aacd70011b6d56fa3f225d11397883049edf0cff7fc03e3b0d3b5223111bbf0",
+    "all_development_audit_sha256": "d763b983e322176690c210b40027b5b5189a84846acf403d8058cf9398da91b9",
+    "complete_feedback_summary_sha256": "a6ff036ac5a12a509fec62a97cbc08ed8f8b30e8ce428a6022701f860b0c99e1",
+    "rejected_skip_group_summary_sha256": "e3cf874a6a300e6908ef882ea01bb04b0ddeb8ca5094188080bfdb33c1f377d6"
+  },
+  "new_evaluation_policy": "方法和全部参数固定；新案例提前一次生成与冻结，评价后不能据其修改此方法或移除失败",
+  "speed_policy": "先报告完整中位、P95、最大和网格规模，用户确定速度标准；研究30秒防失控上限不作为速度合格值"
+}

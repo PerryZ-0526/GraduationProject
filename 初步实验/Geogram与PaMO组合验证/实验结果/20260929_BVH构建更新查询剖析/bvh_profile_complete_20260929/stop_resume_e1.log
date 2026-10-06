@@ -1,0 +1,28 @@
+Stage1 :  True
+Stage3 :  True
+Warp 1.0.0-beta.2 initialized:
+   CUDA Toolkit: 12.8, Driver: 13.2
+   Devices:
+     "cpu"    | x86_64
+     "cuda:0" | NVIDIA GeForce RTX 4080 SUPER (sm_89)
+   Kernel cache: /root/.cache/warp/1.0.0-beta.2
+Target faces : 5486
+Time for Remeshing: 0.08700299263000488 sec
+Time for Simplification: 0.4978673458099365 sec
+Module pamo_safe_project.kernels.geometry_kernels load on device 'cuda:0' took 21.87 ms
+Module pamo_safe_project.kernels.energy_kernels.elastic_energy load on device 'cuda:0' took 19.60 ms
+Module pamo_safe_project.kernels.energy_kernels.hinge_energy load on device 'cuda:0' took 48.66 ms
+Module pamo_safe_project.kernels.energy_kernels.contact_detection load on device 'cuda:0' took 27.83 ms
+Module pamo_safe_project.kernels.energy_kernels.distance_energy load on device 'cuda:0' took 37.62 ms
+Module pamo_safe_project.kernels.energy_kernels.collision_energy load on device 'cuda:0' took 124.43 ms
+Module pamo_safe_project.kernels.utils_kernels load on device 'cuda:0' took 5.47 ms
+Module pamo_safe_project.kernels.solver_kernels load on device 'cuda:0' took 4.30 ms
+Module warp.utils load on device 'cuda:0' took 2.16 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs load on device 'cuda:0' took 30.68 ms
+Module pamo_safe_project.kernels.distance_kernels.hessian_funcs load on device 'cuda:0' took 138.89 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels load on device 'cuda:0' took 186.63 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs_struct load on device 'cuda:0' took 28.85 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels_struct load on device 'cuda:0' took 31.72 ms
+Module pamo_safe_project.kernels.ccd_kernels load on device 'cuda:0' took 37.33 ms
+Module pamo_safe_project.kernels.energy_kernels.lb_curvature_energy load on device 'cuda:0' took 5.32 ms
+{"time_beijing": "2026-09-29 05:25:18", "input_sha256": "64e604e3b90e487947c395cdf178f1dfc7c4da4318da1fbf384869fdb13a0417", "output_sha256": "9231dc73dfdb8469bd711c231c48b4c654f9e08a6ad4972c20e65e2822d6f9e6", "author_system_sha256": "bb6c38d3e644fad99bd4bdbf3e3402fae2afa161a46bd5dcdc38b7f1c6183474", "author_energy_sha256": "674a722a83e772f3a35c5a6ba069495936b546981f44ace9034a5f7810b11ce2", "construct_ms": 378.95833142101765, "run_ms": 1859.6254466101527, "contact_count_max": 2266, "contact_count_min": 2131, "operations": {"build_compute_edge_bounds": {"count": 1, "sum_ms": 22.22253568470478, "mean_ms": 22.22253568470478, "max_ms": 22.22253568470478}, "build_bvh_1": {"count": 1, "sum_ms": 3.5840971395373344, "mean_ms": 3.5840971395373344, "max_ms": 3.5840971395373344}, "build_compute_tri_bounds": {"count": 1, "sum_ms": 0.15298835933208466, "mean_ms": 0.15298835933208466, "max_ms": 0.15298835933208466}, "build_bvh_2": {"count": 1, "sum_ms": 2.712463028728962, "mean_ms": 2.712463028728962, "max_ms": 2.712463028728962}, "build_mesh_bvh_1": {"count": 1, "sum_ms": 2.5708088651299477, "mean_ms": 2.5708088651299477, "max_ms": 2.5708088651299477}, "build_mesh_bvh_2": {"count": 1, "sum_ms": 2.696603536605835, "mean_ms": 2.696603536605835, "max_ms": 2.696603536605835}, "register_mesh_total": {"count": 1, "sum_ms": 202.27889996021986, "mean_ms": 202.27889996021986, "max_ms": 202.27889996021986}, "query_target_bvh": {"count": 5, "sum_ms": 1.2634648010134697, "mean_ms": 0.25269296020269394, "max_ms": 0.3821961581707001}, "update_edge_bvh": {"count": 50, "sum_ms": 3.9815474301576614, "mean_ms": 0.07963094860315323, "max_ms": 0.1637972891330719}, "update_tri_bvh": {"count": 50, "sum_ms": 3.4408587962388992, "mean_ms": 0.06881717592477798, "max_ms": 0.08430890738964081}, "query_contact_bvh": {"count": 50, "sum_ms": 43.48345100879669, "mean_ms": 0.8696690201759338, "max_ms": 28.56563124805689}}}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/cut_sdf_fp64_20261005_01/build_fp64_sdf.py", line 11, in <module>
+    m=load(name="cut_sdf_fp64",sources=[str(p/"torchcumesh2sdf.cu"),str(p/"binding.cpp")],build_directory=str(b),extra_cflags=["-O3","-std=c++17"],extra_cuda_cflags=["-O3","-std=c++17"],verbose=True)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/cpp_extension.py", line 1681, in load
+    return _jit_compile(
+           ^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/cpp_extension.py", line 2138, in _jit_compile
+    _write_ninja_file_and_build_library(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/cpp_extension.py", line 2248, in _write_ninja_file_and_build_library
+    verify_ninja_availability()
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/cpp_extension.py", line 2309, in verify_ninja_availability
+    raise RuntimeError("Ninja is required to load C++ extensions (pip install ninja to get it)")
+RuntimeError: Ninja is required to load C++ extensions (pip install ninja to get it)

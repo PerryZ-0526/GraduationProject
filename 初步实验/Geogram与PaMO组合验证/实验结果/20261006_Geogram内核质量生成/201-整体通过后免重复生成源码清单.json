@@ -1,0 +1,21 @@
+{
+  "生成时间": "2026-10-06T22:35:20+08:00",
+  "修改时间及修改内容": "2026-10-06T22:35:20+08:00，首次跳过已合格的全网格重复生成",
+  "文档概述": "生成与质量判据不变；正式速度与保存质量待同输入验证",
+  "索引目录": [
+    "files",
+    "changes"
+  ],
+  "prior_manifest_sha256": "09e5dbb1f7daea15addbcf0e6f553157d7303d934117ea2661065990490fc452",
+  "files": {
+    "mesh_surface_intersection.cpp": "c287ae5e47350a96398ef4ce7465bf480c5656754c92b2063853293b1d8e766b",
+    "mesh_surface_intersection_internal.cpp": "2e670419fdaaafd21dba38fe48c7c325947836855e4bd3374f6f0c1882b5e840",
+    "mesh_surface_intersection_internal.h": "4247d6131cda4df157d7a8f185ddddeb47136bb38a754dca008e2f0a62e925c9"
+  },
+  "changes": [
+    "共边同步完整候选先核对原质量判据",
+    "通过则跳过全网格邻域CDT",
+    "失败仍执行原再生成与回退",
+    "避免并行日志流交错"
+  ]
+}

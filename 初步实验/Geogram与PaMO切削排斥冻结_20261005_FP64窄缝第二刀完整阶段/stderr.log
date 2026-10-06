@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/cut_sdf_fp64_gap_full_20261005_01/run_fp64_gap_full_worker.py", line 115, in <module>
+    main()
+  File "/root/autodl-tmp/graduation_project/cut_sdf_fp64_gap_full_20261005_01/run_fp64_gap_full_worker.py", line 88, in main
+    v, f = model.run(points, faces, ratio=1., min_verts=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/pamo/__init__.py", line 113, in run
+    verts, faces = self.remesh(tris, tris_min, tris_max, tris_mean)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/cut_sdf_fp64_gap_full_20261005_01/sdf_bias_remesh.py", line 19, in remesh
+    d = pamo.torchcumesh2sdf.get_sdf(tris, self.R, self.band)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 需要连续CUDA FP64三角数组

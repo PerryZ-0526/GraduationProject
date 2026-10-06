@@ -1,0 +1,92 @@
+{
+  "time_beijing": "2026-09-29 05:37:40",
+  "input_sha256": "77d7a311cde234a9f92247a27b6bb5697d685a659d397c12f90cef8caf092ce2",
+  "output_sha256": "0b2d5ef93f7df8933ff9692719bb371b258c0719c3a08feb3b41cbc72d4ab436",
+  "cg_source_sha256": "e37f579478c0618fa0f3919d2919d6584d62376e909a902ae295acc1af1db7fc",
+  "run_ms": 2479.4528586789966,
+  "solve_count": 50,
+  "trace": {
+    "cg_solve_index": 2,
+    "cg_wall_with_profiler_ms": 876.1081881821156,
+    "cuda_event_count": 487,
+    "gpu_kernel_groups": [
+      {
+        "name": "memset_kernel(int*, int, unsigned long)",
+        "calls": 162,
+        "total_gpu_ms": 0.6334550000000018,
+        "mean_gpu_ms": 0.003910216049382727
+      },
+      {
+        "name": "hinge_hess_dx_kernel_cuda_kernel_forward",
+        "calls": 40,
+        "total_gpu_ms": 0.5571410000000001,
+        "mean_gpu_ms": 0.013928525000000002
+      },
+      {
+        "name": "elastic_hess_dx_kernel_cuda_kernel_forward",
+        "calls": 40,
+        "total_gpu_ms": 0.11347100000000046,
+        "mean_gpu_ms": 0.0028367750000000114
+      },
+      {
+        "name": "update_p_r_z_compute_zr_kernel_cuda_kernel_forward",
+        "calls": 40,
+        "total_gpu_ms": 0.09247700000000214,
+        "mean_gpu_ms": 0.0023119250000000536
+      },
+      {
+        "name": "compute_dot_kernel_cuda_kernel_forward",
+        "calls": 41,
+        "total_gpu_ms": 0.0642550000000001,
+        "mean_gpu_ms": 0.001567195121951222
+      },
+      {
+        "name": "update_v_kernel_cuda_kernel_forward",
+        "calls": 40,
+        "total_gpu_ms": 0.04396700000000601,
+        "mean_gpu_ms": 0.0010991750000001502
+      },
+      {
+        "name": "collision_hess_dx_kernel_cuda_kernel_forward",
+        "calls": 40,
+        "total_gpu_ms": 0.042785000000003945,
+        "mean_gpu_ms": 0.0010696250000000987
+      },
+      {
+        "name": "mesh2gt_pp_distance_energy_hess_dx_kernel_cuda_kernel_forward",
+        "calls": 40,
+        "total_gpu_ms": 0.03766000000000122,
+        "mean_gpu_ms": 0.0009415000000000305
+      },
+      {
+        "name": "memcpy32_post",
+        "calls": 40,
+        "total_gpu_ms": 0.03100699999999915,
+        "mean_gpu_ms": 0.0007751749999999788
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "calls": 2,
+        "total_gpu_ms": 0.00188799999999992,
+        "mean_gpu_ms": 0.00094399999999996
+      },
+      {
+        "name": "compute_block_diag_inv_kernel_cuda_kernel_forward",
+        "calls": 1,
+        "total_gpu_ms": 0.0011840000000001964,
+        "mean_gpu_ms": 0.0011840000000001964
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pageable)",
+        "calls": 1,
+        "total_gpu_ms": 0.0008959999999997308,
+        "mean_gpu_ms": 0.0008959999999997308
+      }
+    ],
+    "stage3_particles": 698,
+    "stage3_edges": 2088,
+    "stage3_triangles": 1392,
+    "max_particles": 1048576,
+    "max_blocks": 65536
+  }
+}

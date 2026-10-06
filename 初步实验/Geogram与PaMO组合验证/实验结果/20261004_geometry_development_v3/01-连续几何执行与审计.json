@@ -1,0 +1,3274 @@
+{
+  "time_beijing": "2026-10-04T02:25:05.781803+08:00",
+  "manifest_sha256": "fada77f4c0d5e5a0fd50f29c8519bafe9cbb73d13dcc65825951401e76f7e50a",
+  "script_sha256": "d33f235ecffe9c186a969e251ae5325317083aa4d544ece24a5cc9a83d272645",
+  "audit_code_sha256": "15a0dcd2d6b33caf09e52ab5a1586186df263369aad0a2c6dae086f06fec3c9b",
+  "environment": {
+    "extension_sha256": "c0836ff8d36fe5c9e2fca8f27e9a341578aa3d716dfb1d0563784710717353ad",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "torch": "2.8.0+cu128",
+    "geogram_binary_sha256": "5452616f1ff5a495b35f973ea8f0ad63c8073f3553a04273e379a786ffbf4dc2",
+    "geogram_library_sha256": "a4877e7ff69e46381e0c763cfdf4edb129af1de2c775e4d113fe4ab56c4efe71"
+  },
+  "remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3",
+  "split": "development",
+  "rows": [
+    {
+      "route": "development_long_slab_24",
+      "event": "e0",
+      "branch": "R",
+      "status": "reference_valid",
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 185.64549999973678,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 544,
+        "faces": 1084,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.147287069126982,
+        "components": 1
+      },
+      "sha256": "fbe44ee6824dab5c30457a78306a42cac10429194b72903bb669aac9c258aafe"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e0",
+      "branch": "C0",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 164.56299999936164,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 544,
+        "faces": 1084,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.14728706912698,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 6.938893903907228e-18,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4666.144699999677,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C0_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C0_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C0_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 538,
+        "faces": 1072,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.145560482746053,
+        "components": 1
+      },
+      "output_sha256": "c8addbbf46e85277a1d52fa1574edb07701d7bd09569a8fc15b6e7f8f8f735c9",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 8028,
+        "candidate_to_initial_samples": 7998,
+        "uncut_sampled_max_mm": 0.04418273146757688,
+        "uncut_sampled_mean_mm": 0.0006155017031146358,
+        "quality_all": {
+          "total_faces": 1072,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 33,
+            "fraction": 0.030783582089552237,
+            "area_fraction": 0.0059173025525769305
+          },
+          "angle_below_5_deg": {
+            "faces": 2,
+            "fraction": 0.0018656716417910447,
+            "area_fraction": 0.0001451107789380534
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 822,
+            "fraction": 0.7667910447761194,
+            "area_fraction": 0.9059771120462612
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 58,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 53,
+            "fraction": 0.9137931034482759,
+            "area_fraction": 0.9392144235694643
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.157356358138304,
+            "p95_mm": 0.0035883051955445376,
+            "rms_mm": 0.010889828219361642,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.15211253930143698,
+            "p95_mm": 0.003955184812282553,
+            "rms_mm": 0.009745892891895126,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.157356358138304,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.05443951725394669
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.01808969217443135,
+          "p95_mm": 0.0034640658417038105,
+          "rms_mm": 0.0019110480629213997,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.026322347255454726,
+          "p95_mm": 0.0036270814854713995,
+          "rms_mm": 0.002064739472097573,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.026322347255454726,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e0",
+      "branch": "C1",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 127.11350000063248,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C1_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C1_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 544,
+        "faces": 1084,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.14728706912698,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 6.938893903907228e-18,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4561.601399999745,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C1_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C1_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C1_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 526,
+        "faces": 1048,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.143313083528838,
+        "components": 1
+      },
+      "output_sha256": "365c7d67d84dc067efc0965bacbe0fd6846a8ccb18fa581ded815e14d523d3f0",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 8028,
+        "candidate_to_initial_samples": 7998,
+        "uncut_sampled_max_mm": 0.027377746860273302,
+        "uncut_sampled_mean_mm": 0.0006621554103861371,
+        "quality_all": {
+          "total_faces": 1048,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 22,
+            "fraction": 0.02099236641221374,
+            "area_fraction": 0.003342311192718516
+          },
+          "angle_below_5_deg": {
+            "faces": 2,
+            "fraction": 0.0019083969465648854,
+            "area_fraction": 0.0003202794309595202
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 799,
+            "fraction": 0.7624045801526718,
+            "area_fraction": 0.9084596269208445
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 55,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 48,
+            "fraction": 0.8727272727272727,
+            "area_fraction": 0.8708781195632195
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.15463549073761887,
+            "p95_mm": 0.003709972953781945,
+            "rms_mm": 0.011412011254910696,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.15653890369942697,
+            "p95_mm": 0.00418983658789735,
+            "rms_mm": 0.009896374010204736,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.15653890369942697,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.0566869164711612
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.02464846223062742,
+          "p95_mm": 0.0036483453234880323,
+          "rms_mm": 0.002074297318724715,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.02933228767554237,
+          "p95_mm": 0.004398890749249273,
+          "rms_mm": 0.0022496681524135686,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.02933228767554237,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e1",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 132.64210000033927,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e1_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 185.94739999934973,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 559,
+        "faces": 1114,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.06810280130114,
+        "components": 1
+      },
+      "sha256": "3e1ea523dc541ca272a1dd9c54eabc661576f81ca9292521d285b747d89f261e"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e1",
+      "branch": "C0",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C0_clean.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 143.38889999999083,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C0_clean.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e1_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 590,
+        "faces": 1176,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.06810280130114,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 1.8949279502303436e-15,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4499.035100000583,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C0_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C0_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C0_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 588,
+        "faces": 1172,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.070760634909604,
+        "components": 1
+      },
+      "output_sha256": "131f280514a06a2ab9484a8f8295af891e0576d5c8f4b36a2e6b6d69f6616723",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7879,
+        "candidate_to_initial_samples": 7868,
+        "uncut_sampled_max_mm": 0.022725318195263623,
+        "uncut_sampled_mean_mm": 0.000613703810023178,
+        "quality_all": {
+          "total_faces": 1172,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 33,
+            "fraction": 0.028156996587030716,
+            "area_fraction": 0.004738087171075987
+          },
+          "angle_below_5_deg": {
+            "faces": 4,
+            "fraction": 0.0034129692832764505,
+            "area_fraction": 0.00019781338555444725
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 900,
+            "fraction": 0.7679180887372014,
+            "area_fraction": 0.9063661427880667
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 82,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 76,
+            "fraction": 0.926829268292683,
+            "area_fraction": 0.9416301733743958
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.15696745558449013,
+            "p95_mm": 0.004582195339009747,
+            "rms_mm": 0.013621748269982416,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.15829925693680175,
+            "p95_mm": 0.004223072914446267,
+            "rms_mm": 0.012004106784980989,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.15829925693680175,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.07479984783644866
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.018204757734543886,
+          "p95_mm": 0.004215958303222534,
+          "rms_mm": 0.002034371256291511,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.03138126032833814,
+          "p95_mm": 0.0041821222958262835,
+          "rms_mm": 0.0021040826076537604,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.03138126032833814,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e1",
+      "branch": "C1",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C1_pamo.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 93.29760000036913,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e0/C1_pamo.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e1_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C1_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C1_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 715,
+        "faces": 1426,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.05917314548085,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 6.938893903907228e-18,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4370.120399999905,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C1_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C1_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C1_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 715,
+        "faces": 1426,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.05188475335537,
+        "components": 1
+      },
+      "output_sha256": "8e0e97b6e9671958edc17e28cb465da7f72ac49e870f04c5a7bce776ff5a5e50",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7879,
+        "candidate_to_initial_samples": 7818,
+        "uncut_sampled_max_mm": 0.04536531777836869,
+        "uncut_sampled_mean_mm": 0.001137097410709004,
+        "quality_all": {
+          "total_faces": 1426,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 34,
+            "fraction": 0.023842917251051893,
+            "area_fraction": 0.006028651864644506
+          },
+          "angle_below_5_deg": {
+            "faces": 1,
+            "fraction": 0.0007012622720897616,
+            "area_fraction": 2.6052971200897055e-05
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 1106,
+            "fraction": 0.7755960729312763,
+            "area_fraction": 0.9125353264230323
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 105,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 1,
+            "fraction": 0.009523809523809525,
+            "area_fraction": 0.00227619349620775
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 90,
+            "fraction": 0.8571428571428571,
+            "area_fraction": 0.9028469461642672
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.1592822274355688,
+            "p95_mm": 0.0050257981111001,
+            "rms_mm": 0.013767987067086904,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.15766509516349442,
+            "p95_mm": 0.005325076691112644,
+            "rms_mm": 0.012930281784203008,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.1592822274355688,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.09142833017346774
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.03509582049471516,
+          "p95_mm": 0.006391633430272566,
+          "rms_mm": 0.002732094018762577,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.05313415443804744,
+          "p95_mm": 0.0072638760763558494,
+          "rms_mm": 0.00333691727220264,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.05313415443804744,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e2",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 138.4649999999965,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e2_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 183.08209999941027,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 573,
+        "faces": 1142,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.988918533475303,
+        "components": 1
+      },
+      "sha256": "ca0c0f68f45c318a3cbc662c024ed15f4fe9807b5f0c5171c2981cc3549b30fd"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e2",
+      "branch": "C0",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C0_clean.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 141.55070000015257,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C0_clean.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e2_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 614,
+        "faces": 1224,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.9889185334753,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 9.156372208145168e-15,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4469.5417000002635,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C0_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C0_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C0_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 592,
+        "faces": 1180,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.996246929005128,
+        "components": 1
+      },
+      "output_sha256": "ae67b8f1d9876f7d129ba98cb8bc0eb1f723f0baf2e273f6a14afc133ebe3c1a",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7736,
+        "candidate_to_initial_samples": 7682,
+        "uncut_sampled_max_mm": 0.027381617467691417,
+        "uncut_sampled_mean_mm": 0.0006238718641876844,
+        "quality_all": {
+          "total_faces": 1180,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 28,
+            "fraction": 0.023728813559322035,
+            "area_fraction": 0.003950417927190199
+          },
+          "angle_below_5_deg": {
+            "faces": 3,
+            "fraction": 0.002542372881355932,
+            "area_fraction": 0.0003463722312950006
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 846,
+            "fraction": 0.7169491525423729,
+            "area_fraction": 0.8845414196044825
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 103,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 1,
+            "fraction": 0.009708737864077669,
+            "area_fraction": 0.0023917539990251243
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 69,
+            "fraction": 0.6699029126213593,
+            "area_fraction": 0.6449516562885401
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.15937685806005553,
+            "p95_mm": 0.0048157627309644265,
+            "rms_mm": 0.013086896006734306,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.15646636813985956,
+            "p95_mm": 0.004558640620050596,
+            "rms_mm": 0.011663774940239872,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.15937685806005553,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.07451370590447581
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.02035152955423758,
+          "p95_mm": 0.00440471219980695,
+          "rms_mm": 0.0022029943718126607,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.033722646462412326,
+          "p95_mm": 0.005053883027578289,
+          "rms_mm": 0.002342814485164561,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.033722646462412326,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e2",
+      "branch": "C1",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C1_pamo.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 92.2869999994873,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e1/C1_pamo.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e2_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C1_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C1_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 852,
+        "faces": 1700,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.970238484399264,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 7.663399883020687e-18,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4416.214000000764,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C1_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C1_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C1_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 810,
+        "faces": 1616,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.95744923079626,
+        "components": 1
+      },
+      "output_sha256": "a3c7d3e4e38c2d90758ead9eee02c690dda372a4d46b202a4cfa75d1f2183742",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7736,
+        "candidate_to_initial_samples": 7664,
+        "uncut_sampled_max_mm": 0.048576423674679875,
+        "uncut_sampled_mean_mm": 0.001619732170843459,
+        "quality_all": {
+          "total_faces": 1616,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 19,
+            "fraction": 0.011757425742574257,
+            "area_fraction": 0.0031031606979830756
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 1266,
+            "fraction": 0.7834158415841584,
+            "area_fraction": 0.9136508565731555
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 130,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 108,
+            "fraction": 0.8307692307692308,
+            "area_fraction": 0.8378225352192794
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.15920467321790435,
+            "p95_mm": 0.006339821053029406,
+            "rms_mm": 0.014149854840385983,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.1580474453106263,
+            "p95_mm": 0.006506041968942316,
+            "rms_mm": 0.013274281297851472,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.15920467321790435,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.09443552255910959
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.02987405156040035,
+          "p95_mm": 0.009252037468754705,
+          "rms_mm": 0.003822221652431331,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.06784304500731567,
+          "p95_mm": 0.010866508757288677,
+          "rms_mm": 0.0047038561088480904,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.06784304500731567,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e3",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 149.73290000034467,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e3_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 189.62349999947037,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 632,
+        "faces": 1260,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.96979501105117,
+        "components": 1
+      },
+      "sha256": "104ff8d9215f1efa37c4828b87f4b541717779b143225d8530f86785703cca38"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e3",
+      "branch": "C0",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C0_clean.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 122.08199999986391,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C0_clean.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e3_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 700,
+        "faces": 1396,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.969795011051165,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 8.899114524108741e-16,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4373.744999999872,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C0_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C0_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C0_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 684,
+        "faces": 1364,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.976136368189703,
+        "components": 1
+      },
+      "output_sha256": "f13949230daab5e793e4379df07af890ed7e3e267c9fdeb2be72422c740b8530",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7697,
+        "candidate_to_initial_samples": 7651,
+        "uncut_sampled_max_mm": 0.02981178139475855,
+        "uncut_sampled_mean_mm": 0.0006043364738032451,
+        "quality_all": {
+          "total_faces": 1364,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 26,
+            "fraction": 0.01906158357771261,
+            "area_fraction": 0.004334554120325712
+          },
+          "angle_below_5_deg": {
+            "faces": 1,
+            "fraction": 0.0007331378299120235,
+            "area_fraction": 6.690792096544876e-05
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 1099,
+            "fraction": 0.8057184750733137,
+            "area_fraction": 0.9181970555411357
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 145,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 119,
+            "fraction": 0.8206896551724138,
+            "area_fraction": 0.8322892023182935
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.09858618333059557,
+            "p95_mm": 0.003678915637605843,
+            "rms_mm": 0.004887005882938727,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.10291718861737635,
+            "p95_mm": 0.0038927965260273393,
+            "rms_mm": 0.004719280675880873,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.10291718861737635,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.02011056081542506
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.019966616904960155,
+          "p95_mm": 0.00398943192919935,
+          "rms_mm": 0.0019800773268014668,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.04738672888274833,
+          "p95_mm": 0.00467663383031675,
+          "rms_mm": 0.002264602630563763,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.04738672888274833,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e3",
+      "branch": "C1",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C1_pamo.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 96.54330000012123,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e2/C1_pamo.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e3_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C1_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C1_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 963,
+        "faces": 1922,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.93523614608428,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 6.938893903907228e-18,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4518.077700000504,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C1_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C1_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C1_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 962,
+        "faces": 1920,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.920003707426066,
+        "components": 1
+      },
+      "output_sha256": "1cfffac1ef3122f116188a68455dba8d7ac267fef674ed70e05be74b62602897",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7697,
+        "candidate_to_initial_samples": 7637,
+        "uncut_sampled_max_mm": 0.05779987444485006,
+        "uncut_sampled_mean_mm": 0.0020280619225927746,
+        "quality_all": {
+          "total_faces": 1920,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 18,
+            "fraction": 0.009375,
+            "area_fraction": 0.0025454757115664756
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 1498,
+            "fraction": 0.7802083333333333,
+            "area_fraction": 0.9049989817095422
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 156,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 122,
+            "fraction": 0.782051282051282,
+            "area_fraction": 0.7777875912295972
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.10112095347466081,
+            "p95_mm": 0.004562416378077535,
+            "rms_mm": 0.0049084748124991326,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.103678960037075,
+            "p95_mm": 0.004949855687406169,
+            "rms_mm": 0.004886419286066445,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.103678960037075,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.03744552337019513
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.03540830556314467,
+          "p95_mm": 0.011527995307401161,
+          "rms_mm": 0.004687274752900317,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.06908289158842024,
+          "p95_mm": 0.015254221260557423,
+          "rms_mm": 0.006319781948760113,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.06908289158842024,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e4",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 173.1551999992007,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e4_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 451.2362999994366,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 645,
+        "faces": 1286,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.94069480207293,
+        "components": 1
+      },
+      "sha256": "dcfada9a720df686689b9242d6b2f8057b4121ff0b453b93400ac87c2b70f2a9"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e4",
+      "branch": "C0",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C0_clean.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 112.80899999928806,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C0_clean.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e4_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 730,
+        "faces": 1456,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.940694802072926,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 4.660953740672398e-16,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4407.383700000537,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C0_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C0_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C0_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 691,
+        "faces": 1378,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.947300902507322,
+        "components": 1
+      },
+      "output_sha256": "b33d798e0d94a19105faaa040e79220c856f3411727701490b00d9cbd062238b",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7668,
+        "candidate_to_initial_samples": 7658,
+        "uncut_sampled_max_mm": 0.018388241627343538,
+        "uncut_sampled_mean_mm": 0.0005891647548365939,
+        "quality_all": {
+          "total_faces": 1378,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 29,
+            "fraction": 0.02104499274310595,
+            "area_fraction": 0.004086093119710857
+          },
+          "angle_below_5_deg": {
+            "faces": 1,
+            "fraction": 0.000725689404934688,
+            "area_fraction": 4.3584345620858296e-05
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 1087,
+            "fraction": 0.7888243831640058,
+            "area_fraction": 0.9068375998072328
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 147,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 121,
+            "fraction": 0.8231292517006803,
+            "area_fraction": 0.827655517621058
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.10508411296627511,
+            "p95_mm": 0.003816272132281759,
+            "rms_mm": 0.005859850885425069,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.10373439647110592,
+            "p95_mm": 0.00420551487787821,
+            "rms_mm": 0.005918703847473953,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.10508411296627511,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.0288354656823806
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.02524450860750992,
+          "p95_mm": 0.004139589904249717,
+          "rms_mm": 0.002012678083006218,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.022677262831710048,
+          "p95_mm": 0.004725969467012143,
+          "rms_mm": 0.002151238040078871,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.02524450860750992,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e4",
+      "branch": "C1",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C1_pamo.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 88.4671999992861,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e3/C1_pamo.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e4_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C1_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C1_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 1085,
+        "faces": 2166,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.887584559690893,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 6.938893903907228e-18,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4369.1193000004205,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C1_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C1_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C1_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 1080,
+        "faces": 2156,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.867945597004567,
+        "components": 1
+      },
+      "output_sha256": "ab61a0c2e8ea9690d75c93011ca7d73683362b78b2febdad4259a1faf30c1f28",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7668,
+        "candidate_to_initial_samples": 7625,
+        "uncut_sampled_max_mm": 0.07833851412930108,
+        "uncut_sampled_mean_mm": 0.0025139493447117584,
+        "quality_all": {
+          "total_faces": 2156,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 13,
+            "fraction": 0.006029684601113173,
+            "area_fraction": 0.0014540687025224066
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 1749,
+            "fraction": 0.8112244897959183,
+            "area_fraction": 0.9160526731373547
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 164,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 149,
+            "fraction": 0.9085365853658537,
+            "area_fraction": 0.92438782815228
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.09919161165137966,
+            "p95_mm": 0.005739231435667015,
+            "rms_mm": 0.006355543492840332,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.1027532231121823,
+            "p95_mm": 0.005546042817941564,
+            "rms_mm": 0.005839072269670289,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.1027532231121823,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.05205811042149833
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.05309059077372247,
+          "p95_mm": 0.014823650660422249,
+          "rms_mm": 0.006041731793072894,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.07157320540672818,
+          "p95_mm": 0.018957957767776732,
+          "rms_mm": 0.007771253686361971,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.07157320540672818,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e5",
+      "branch": "R",
+      "status": "reference_topology_invalid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 153.53830000003654,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e5_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 189.4525000006979,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 7.176305923866031e-16,
+      "metrics": {
+        "vertices": 633,
+        "faces": 1262,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 2,
+        "volume_mm3": 18.908376899807298,
+        "components": 1
+      },
+      "sha256": "1bfbd665155ddbb25615daa2fc180e23065a45a159ce7c0e071a51a2c6bd3c5b"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e5",
+      "branch": "C0",
+      "status": "output_invalid_or_reference_unavailable",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C0_clean.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 115.69969999982277,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C0_clean.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e5_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 711,
+        "faces": 1418,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.908376899807298,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 7.176305923866031e-16,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4555.842799999482,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C0_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C0_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C0_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 703,
+        "faces": 1402,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.91326927366086,
+        "components": 1
+      },
+      "output_sha256": "09c71156673fa8886a44e031677e4b5a48c55bb49f7e5a8fd49669c82aeb18ad",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7629,
+        "candidate_to_initial_samples": 7588,
+        "uncut_sampled_max_mm": 0.02893583676923445,
+        "uncut_sampled_mean_mm": 0.000640459252386973,
+        "quality_all": {
+          "total_faces": 1402,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 27,
+            "fraction": 0.01925820256776034,
+            "area_fraction": 0.0031406552900138697
+          },
+          "angle_below_5_deg": {
+            "faces": 1,
+            "fraction": 0.0007132667617689016,
+            "area_fraction": 0.00010845308188826081
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 1116,
+            "fraction": 0.7960057061340942,
+            "area_fraction": 0.9171128202315117
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 151,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 120,
+            "fraction": 0.7947019867549668,
+            "area_fraction": 0.8011144204913464
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.10948399623499654,
+            "p95_mm": 0.004155764484048776,
+            "rms_mm": 0.006915855578098823,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.11256708737932916,
+            "p95_mm": 0.004059008221815933,
+            "rms_mm": 0.006280140785972417,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.11256708737932916,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.03403162884646349
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e5",
+      "branch": "C1",
+      "status": "output_invalid_or_reference_unavailable",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C1_pamo.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 92.4713000003976,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e4/C1_pamo.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_slab_24_e5_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C1_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C1_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 1187,
+        "faces": 2370,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.83242545629957,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 6.938893903907228e-18,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4401.444099999935,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C1_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C1_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_slab_24_e5/C1_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 1136,
+        "faces": 2268,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.811515190634953,
+        "components": 1
+      },
+      "output_sha256": "fe592b6f2d3cac81e6850146e3b4c7a79381e2f17b83d6856995fe479689a620",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 7629,
+        "candidate_to_initial_samples": 7595,
+        "uncut_sampled_max_mm": 0.09256304498289054,
+        "uncut_sampled_mean_mm": 0.00306005760642199,
+        "quality_all": {
+          "total_faces": 2268,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 9,
+            "fraction": 0.003968253968253968,
+            "area_fraction": 0.0011780777966436393
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 1821,
+            "fraction": 0.8029100529100529,
+            "area_fraction": 0.9130576005898916
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 194,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 168,
+            "fraction": 0.865979381443299,
+            "area_fraction": 0.8897829708063619
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.0983575072640419,
+            "p95_mm": 0.004959542123900488,
+            "rms_mm": 0.006234314337182529,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.09836077860066167,
+            "p95_mm": 0.005264994850440227,
+            "rms_mm": 0.006863639971838716,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.09836077860066167,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.05643040636961416
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e6",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e6",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e6",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e7",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e7",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e7",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e8",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e8",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e8",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e9",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e9",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e9",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e10",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e10",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e10",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e11",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e11",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e11",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e12",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e12",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e12",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e13",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e13",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e13",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e14",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e14",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e14",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e15",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e15",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e15",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e16",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e16",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e16",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e17",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e17",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e17",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e18",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e18",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e18",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e19",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e19",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e19",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e20",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e20",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e20",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e21",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e21",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e21",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e22",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e22",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e22",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e23",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e23",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_slab_24",
+      "event": "e23",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e0",
+      "branch": "R",
+      "status": "reference_valid",
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 171.93200000019715,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 2708,
+        "faces": 5412,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.24114722412722,
+        "components": 1
+      },
+      "sha256": "bb74d009a4560735a759559148e6946cef5fc0b6c6c9fde27538ab82ea2115f2"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e0",
+      "branch": "C0",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_initial.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 115.61759999949572,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 2708,
+        "faces": 5412,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.24114722412722,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4479.74720000002,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C0_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C0_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C0_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 2697,
+        "faces": 5390,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.0932133268518,
+        "components": 1
+      },
+      "output_sha256": "f2edb052226637582d2a1b13a6188decae7392f646bc4d7acf1723d51ec1926b",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 8089,
+        "candidate_to_initial_samples": 8077,
+        "uncut_sampled_max_mm": 0.0062434103120504805,
+        "uncut_sampled_mean_mm": 0.0019582785985606498,
+        "quality_all": {
+          "total_faces": 5390,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 5362,
+            "fraction": 0.9948051948051948,
+            "area_fraction": 0.9969840255274062
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 106,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 95,
+            "fraction": 0.8962264150943396,
+            "area_fraction": 0.9273429145488009
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.19416268707347428,
+            "p95_mm": 0.003784201879628713,
+            "rms_mm": 0.011121466424657243,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.1960147494383852,
+            "p95_mm": 0.0037755203283437126,
+            "rms_mm": 0.010988693162246288,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.1960147494383852,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.21520773556444794
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.014452539912122926,
+          "p95_mm": 0.0037695563112804305,
+          "rms_mm": 0.002283114595905077,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.015301710055650888,
+          "p95_mm": 0.003783014600632809,
+          "rms_mm": 0.0022777984199380593,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.015301710055650888,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e0",
+      "branch": "C1",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_initial.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 107.4841000008746,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C1_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C1_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 2708,
+        "faces": 5412,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.24114722412722,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4430.642999999691,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C1_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C1_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C1_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 2631,
+        "faces": 5258,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.08658030409156,
+        "components": 1
+      },
+      "output_sha256": "727fd041bcfc7788db89496e1b5c89fac274fb5cddebd80e3bf0a3a0f80752b4",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 8089,
+        "candidate_to_initial_samples": 8091,
+        "uncut_sampled_max_mm": 0.006221791055081878,
+        "uncut_sampled_mean_mm": 0.002052669382084195,
+        "quality_all": {
+          "total_faces": 5258,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 5230,
+            "fraction": 0.9946747812856599,
+            "area_fraction": 0.9968618817493641
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 115,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 105,
+            "fraction": 0.9130434782608695,
+            "area_fraction": 0.9437524916730214
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.1999588904106718,
+            "p95_mm": 0.003863523743890629,
+            "rms_mm": 0.010997366278219848,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.20060646086928566,
+            "p95_mm": 0.003947017562878819,
+            "rms_mm": 0.011032900865009456,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.20060646086928566,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.22184075832468864
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.01222328902141351,
+          "p95_mm": 0.0038437656170131596,
+          "rms_mm": 0.0023326247597645184,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.01257260678958609,
+          "p95_mm": 0.0038892017092508474,
+          "rms_mm": 0.002333495455171346,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.01257260678958609,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e1",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 131.9007000001875,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e0_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e1_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 169.58180000074208,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 0.0,
+      "metrics": {
+        "vertices": 2695,
+        "faces": 5386,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.16143683407019,
+        "components": 1
+      },
+      "sha256": "5712e1ccd68335821d72456ba83048145e3bcd5ae4d8e15deee70f17629d36a4"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e1",
+      "branch": "C0",
+      "status": "accepted_sampled",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C0_clean.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 118.59189999995579,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C0_clean.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e1_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 2733,
+        "faces": 5462,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.16143683407019,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 2.1585202619993173e-15,
+      "pamo_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4478.688600000169,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/C0_clean.obj --output /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/C0_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/C0_pamo.log 2>&1"
+      },
+      "output_metrics": {
+        "vertices": 2569,
+        "faces": 5134,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.00533812028726,
+        "components": 1
+      },
+      "output_sha256": "7562458cc43a6fb37d9023f0cbc4c462b17b262a390f3f81c105f0bf3c7b461d",
+      "preservation": {
+        "uncut_margin_mm": 0.1,
+        "initial_to_candidate_samples": 8015,
+        "candidate_to_initial_samples": 7995,
+        "uncut_sampled_max_mm": 0.006584903354821145,
+        "uncut_sampled_mean_mm": 0.0020797393877620266,
+        "quality_all": {
+          "total_faces": 5134,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 5092,
+            "fraction": 0.991819244253993,
+            "area_fraction": 0.9947786540242499
+          }
+        },
+        "quality_sweep_margin_roi": {
+          "total_faces": 156,
+          "invalid_faces": 0,
+          "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+          "angle_below_10_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_5_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "angle_below_1_deg": {
+            "faces": 0,
+            "fraction": 0.0,
+            "area_fraction": 0.0
+          },
+          "high_quality_25_deg_q_0_4": {
+            "faces": 135,
+            "fraction": 0.8653846153846154,
+            "area_fraction": 0.9025266432456087
+          }
+        },
+        "previous_mesh_sampled_difference": {
+          "pamo_to_reference": {
+            "max_mm": 0.20066982257723168,
+            "p95_mm": 0.0027125979725176434,
+            "rms_mm": 0.01194941720348415,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.19601280558098425,
+            "p95_mm": 0.0026681550916395395,
+            "rms_mm": 0.010472938151618759,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.20066982257723168,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "previous_volume_delta_mm3": -0.08787520656453296
+      },
+      "to_cumulative_reference": {
+        "pamo_to_reference": {
+          "max_mm": 0.010020249980242696,
+          "p95_mm": 0.003977789052094342,
+          "rms_mm": 0.00237038576197045,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.009636281494343181,
+          "p95_mm": 0.003956836848875266,
+          "rms_mm": 0.0023674411670805773,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.010020249980242696,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "topology_matches_reference": true,
+      "continuous_geometry_certificate": null
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e1",
+      "branch": "C1",
+      "status": "pamo_input_invalid",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C1_pamo.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 119.64009999974223,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e0/C1_pamo.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e1_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/C1_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/C1_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 2773,
+        "faces": 5542,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 2,
+        "volume_mm3": 65.00446047584965,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 6.938893903907228e-18
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e2",
+      "branch": "R",
+      "status": "reference_valid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 142.29799999975512,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e2_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e2/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e2/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 180.74559999968187,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e2/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e2/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e2/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 4.965299533829003e-16,
+      "metrics": {
+        "vertices": 2727,
+        "faces": 5450,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.06739033288535,
+        "components": 1
+      },
+      "sha256": "b89cdd4f74762b1b1723acff5aa9f2d9877ffdf56959136ae1ad724033146550"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e2",
+      "branch": "C0",
+      "status": "pamo_input_invalid",
+      "parent_remote": "/root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/C0_clean.obj",
+      "geogram_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 126.27830000019458,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e1/C0_clean.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e2_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e2/C0_geogram.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e2/C0_geogram.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 2785,
+        "faces": 5566,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 9,
+        "volume_mm3": 65.06739033288535,
+        "components": 1
+      },
+      "cleanup_max_vertex_difference_mm": 3.142168299454311e-16
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e2",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e3",
+      "branch": "R",
+      "status": "reference_topology_invalid",
+      "union_run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 154.96929999972053,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e2/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_e3_tool.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e3/union.obj --operation union > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e3/union.log 2>&1"
+      },
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 186.4236000001256,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/inputs/development_long_sphere_24_initial.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e3/union.obj /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e3/R.obj > /root/autodl-tmp/graduation_project/geometry_study_20261004_geometry_development_v3/development_long_sphere_24_e3/R.log 2>&1"
+      },
+      "cleanup_max_vertex_difference_mm": 4.965299533829003e-16,
+      "metrics": {
+        "vertices": 2788,
+        "faces": 5572,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 2,
+        "volume_mm3": 65.05276722120054,
+        "components": 1
+      },
+      "sha256": "ca8c65eb433371e53b1ea16dbfa52a90e14fe99bed80b6ef36e69de9df96efd1"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e3",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e3",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e4",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e4",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e4",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e5",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e5",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e5",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e6",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e6",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e6",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e7",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e7",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e7",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e8",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e8",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e8",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e9",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e9",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e9",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e10",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e10",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e10",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e11",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e11",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e11",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e12",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e12",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e12",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e13",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e13",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e13",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e14",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e14",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e14",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e15",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e15",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e15",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e16",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e16",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e16",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e17",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e17",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e17",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e18",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e18",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e18",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e19",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e19",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e19",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e20",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e20",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e20",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e21",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e21",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e21",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e22",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e22",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e22",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e23",
+      "branch": "R",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e23",
+      "branch": "C0",
+      "status": "blocked_by_previous_failure"
+    },
+    {
+      "route": "development_long_sphere_24",
+      "event": "e23",
+      "branch": "C1",
+      "status": "blocked_by_previous_failure"
+    }
+  ],
+  "status": "complete_with_recorded_failures",
+  "initial_audits": {
+    "development_long_slab_24": {
+      "valid": true,
+      "metrics": {
+        "vertices": 882,
+        "faces": 1760,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.2,
+        "components": 1
+      }
+    },
+    "development_long_sphere_24": {
+      "valid": true,
+      "metrics": {
+        "vertices": 2562,
+        "faces": 5120,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.30842106241624,
+        "components": 1
+      }
+    }
+  },
+  "finished_beijing": "2026-10-04T02:26:55.554115+08:00"
+}

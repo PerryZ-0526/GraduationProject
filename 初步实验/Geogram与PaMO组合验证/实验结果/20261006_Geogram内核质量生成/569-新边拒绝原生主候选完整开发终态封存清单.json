@@ -1,0 +1,54 @@
+{
+  "生成时间": "2026-10-07T01:18:34+08:00",
+  "修改时间及修改内容": "首次新边拒绝原生方法在完整三十开发及十六反馈终态后封存",
+  "文档概述": "当前可复现候选，全部开发输入已见；原独立评价十五成功一失败保持；新方法独立评价仍待完成",
+  "索引目录": [
+    "method",
+    "files",
+    "evidence"
+  ],
+  "status": "frozen_native_method_after_complete_seen_development_before_future_new_evaluation",
+  "method": {
+    "remote_root": "/tmp/geogram_native_quality_20261007_27",
+    "build_sha256": "2bdef3e2de7221e1e0da5a2444176a810831c70c18a3dab9afce01f0e9e48363",
+    "source_manifest_sha256": "34330b5a3565965690b0925f6f4c1960e2486d6e943cc0e7e5ff0f11ff793433",
+    "candidate_binary_sha256": "867e70214c2fe59ea7392dbddb2c84775ba7189b4e406359116c73dd5a68f0ec",
+    "candidate_library_sha256": "170f8306366050117a4781e9dd4c1587bace9bfa653b56de9c5776cde3db022f",
+    "baseline_binary_sha256": "50058cc744dfeb9611ec884f8be9e1d173ec58611a490c376674fd80d3bde5b6",
+    "baseline_library_sha256": "dff5313c7c678c74f74a5c3531017fb793ea167e6444da540ac27ffd884c49c0",
+    "parameters": {
+      "diagnostic_small_angle_deg": 10,
+      "triangle_target_deg": 20,
+      "interior_added_point_budget": 64,
+      "conditional_boundary_point_budget": 128,
+      "strip_design_deg": 15,
+      "max_strip_slices": 64,
+      "max_strip_boundary_points": 126,
+      "machine_length_epsilon_multiplier": 128,
+      "machine_planar_normal_angle_deg": 1e-05,
+      "original_distinct_coordinate_merge_forbidden": true,
+      "retained_face_orientation_must_be_positive": true,
+      "disjoint_one_ring_each_pass": true,
+      "pre_and_post_coplanar_cleanup": true,
+      "quality_gate_bad_count_and_absolute_area": true,
+      "reject_unqualified_boundary_proposal_with_machine_new_edge_before_recursive_cdt": true
+    }
+  },
+  "files": {
+    "03-原生布尔质量与阶段计时.cpp": "cc4c0bbd06f40ee1a6f1f95b2700624df5f54c03f15a54c8a02926fa421f5549",
+    "509-递归前机器新边拒绝原生独立编译.py": "0494f6d77304791e8c603063eb972456a2068cc3620bd93e22ef07a79381e0bf",
+    "mesh_surface_intersection.cpp": "35147637905f74c3568eb2d97986dbeed1fca9332ad3afacafcdf875717a586f",
+    "mesh_surface_intersection_internal.cpp": "2e670419fdaaafd21dba38fe48c7c325947836855e4bd3374f6f0c1882b5e840",
+    "mesh_surface_intersection_internal.h": "4247d6131cda4df157d7a8f185ddddeb47136bb38a754dca008e2f0a62e925c9"
+  },
+  "evidence": {
+    "565-新边拒绝三十已见原归档完整复算.json": "ec5d1a1f8327b82b41f37b052a1984fb948dc7cded784fa7340dde5a5b560754",
+    "01-420计划实际保存对象准确复审记录.json": "32677bef0006b7d4941a305334aa5b3a90605f13165cf14d1f6122a312a25c92",
+    "567-新边拒绝CT确定后缀完整保存联合复算.json": "4d59f44cdeb9f0b775198e16605e8da53a6b5d2b00526ee549524788f44bc8fc",
+    "553-新边拒绝CT磁盘中断时远端原始记录.json": "a7c70bf75d7de0feaa94cde5dc558014c2941f99047bd3074dd068a00c113f7e",
+    "551-实际插点近点与缓存有理数复审记录.json": "5239defe1dc09f393488d7f398a608ebe423903c51433357990abe8532aa726b"
+  },
+  "speed_policy": "先报告完整最小、中位、P95、最大和输出规模，用户确定速度标准；不新增硬验收值",
+  "new_evaluation_policy": "全部三十输入已见；新独立参数须在本封存后生成与冻结；不据未来评价修改本版",
+  "environment_recovery_policy": "原十五刀进程因本机磁盘写满后断连失败；只恢复确证未执行末刀；旧进程状态和原字节保留，不把旧失败改成完成"
+}

@@ -1,0 +1,253 @@
+{
+  "time_beijing": "2026-10-04T21:03:55.285048+08:00",
+  "published": false,
+  "repair": {
+    "initial_arithmetic_invalid_faces": 34,
+    "steps": [
+      {
+        "operation": "repair_degenerate",
+        "details": {
+          "initial_invalid_faces": 34,
+          "max_flips": 34,
+          "plane_tolerance_mm": 1e-08,
+          "area_threshold_mm2": 1e-12,
+          "flips": [
+            {
+              "faces": [
+                44621,
+                44938
+              ],
+              "old_edge": [
+                22322,
+                22356
+              ],
+              "new_edge": [
+                22358,
+                22519
+              ],
+              "source_bit": 1,
+              "plane_deviation_mm": 6.027390332634202e-11
+            },
+            {
+              "faces": [
+                45012,
+                45068
+              ],
+              "old_edge": [
+                22418,
+                22417
+              ],
+              "new_edge": [
+                22442,
+                22565
+              ],
+              "source_bit": 2,
+              "plane_deviation_mm": 1.0698293967495637e-15
+            }
+          ],
+          "rejected_pair_checks": {
+            "new_invalid_face": 53,
+            "different_source": 23,
+            "diagonal_exists": 1
+          },
+          "scope": "数值近共面与凸性测试，非精确谓词或连续几何证书",
+          "remaining_invalid_faces": 32,
+          "vertices_exact": true
+        }
+      },
+      {
+        "operation": "collapse_degenerate",
+        "details": {
+          "initial_invalid_faces": 32,
+          "max_collapses": 32,
+          "plane_tolerance_mm": 1e-08,
+          "collapses": [
+            {
+              "removed_vertex": 22537,
+              "retained_vertex": 22538,
+              "endpoint_distance_mm": 4.9908004929050675e-09,
+              "max_incident_plane_deviation_mm": 2.671767586973235e-15,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22443,
+              "retained_vertex": 22451,
+              "endpoint_distance_mm": 7.690718382085095e-09,
+              "max_incident_plane_deviation_mm": 2.0816681711721685e-16,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22451,
+              "retained_vertex": 22485,
+              "endpoint_distance_mm": 7.992084869246762e-09,
+              "max_incident_plane_deviation_mm": 7.551908612346558e-10,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22520,
+              "retained_vertex": 22519,
+              "endpoint_distance_mm": 1.4703688266948234e-08,
+              "max_incident_plane_deviation_mm": 6.2314052030779894e-18,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22569,
+              "retained_vertex": 22356,
+              "endpoint_distance_mm": 1.8918390151195493e-08,
+              "max_incident_plane_deviation_mm": 2.891621661370701e-17,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22475,
+              "retained_vertex": 22523,
+              "endpoint_distance_mm": 2.343999257766506e-08,
+              "max_incident_plane_deviation_mm": 3.113035328172305e-14,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22491,
+              "retained_vertex": 22492,
+              "endpoint_distance_mm": 2.3996607926315086e-08,
+              "max_incident_plane_deviation_mm": 1.0915336445357857e-15,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22572,
+              "retained_vertex": 22574,
+              "endpoint_distance_mm": 3.055331344937541e-08,
+              "max_incident_plane_deviation_mm": 2.2546325364223135e-15,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22557,
+              "retained_vertex": 22558,
+              "endpoint_distance_mm": 5.838171348317917e-08,
+              "max_incident_plane_deviation_mm": 7.128975862842684e-15,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22478,
+              "retained_vertex": 22479,
+              "endpoint_distance_mm": 6.779867645083215e-08,
+              "max_incident_plane_deviation_mm": 2.7970822678892545e-16,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22523,
+              "retained_vertex": 22474,
+              "endpoint_distance_mm": 8.346943418807238e-08,
+              "max_incident_plane_deviation_mm": 8.209698225788393e-14,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22536,
+              "retained_vertex": 22535,
+              "endpoint_distance_mm": 2.7945800259161466e-07,
+              "max_incident_plane_deviation_mm": 1.6650292256059629e-12,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 22450,
+              "retained_vertex": 22489,
+              "endpoint_distance_mm": 3.165380874574181e-07,
+              "max_incident_plane_deviation_mm": 2.698390476341128e-09,
+              "deleted_faces": 2
+            }
+          ],
+          "allow_small_incident": true,
+          "scope": "数值链接和逐面平面检查，后续必须重审整网格与来源",
+          "remaining_invalid_faces": 6
+        }
+      },
+      {
+        "operation": "repair_degenerate",
+        "details": {
+          "initial_invalid_faces": 6,
+          "max_flips": 6,
+          "plane_tolerance_mm": 1e-08,
+          "area_threshold_mm2": 1e-12,
+          "flips": [],
+          "rejected_pair_checks": {
+            "new_invalid_face": 6,
+            "nonplanar": 3,
+            "different_source": 6
+          },
+          "scope": "数值近共面与凸性测试，非精确谓词或连续几何证书",
+          "remaining_invalid_faces": 6,
+          "vertices_exact": true
+        }
+      }
+    ],
+    "accepted_for_fixed_geometry_backend": true,
+    "requires_full_embedding_before_gpu": true,
+    "published": false,
+    "policy": "FP64物理面积门槛保持；FP32退化仅可进入原固定几何后端并验证所有相关自由度固定",
+    "audit": {
+      "vertices": 22568,
+      "faces": 45132,
+      "finite": true,
+      "zero_area_faces": 0,
+      "fp32_zero_area_faces": 6,
+      "watertight": true,
+      "winding_consistent": true,
+      "vertex_manifold_closed": true,
+      "euler_number": 2,
+      "self_intersection_faces": 0,
+      "volume_mm3": 62220.447421303565,
+      "self_intersection_raw_alarm_faces": 4,
+      "separated_alarm_pairs": [
+        {
+          "faces": [
+            41195,
+            41296
+          ],
+          "separation_gap_mm": 0.15464251811804897
+        },
+        {
+          "faces": [
+            41195,
+            44727
+          ],
+          "separation_gap_mm": 11.610373390625023
+        },
+        {
+          "faces": [
+            41195,
+            44731
+          ],
+          "separation_gap_mm": 11.903779439666293
+        },
+        {
+          "faces": [
+            41296,
+            44727
+          ],
+          "separation_gap_mm": 12.634008280596467
+        },
+        {
+          "faces": [
+            41296,
+            44731
+          ],
+          "separation_gap_mm": 11.780945952723206
+        },
+        {
+          "faces": [
+            44727,
+            44731
+          ],
+          "separation_gap_mm": 0.14120660953512854
+        }
+      ],
+      "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+      "components": 1
+    },
+    "topology_preserved": true,
+    "geometry_probe_max_mm": 8.99463434783812e-10,
+    "geometry_budget_mm": 1e-07,
+    "remaining_arithmetic_invalid_faces": 6,
+    "remaining_fp64_threshold_faces": 0,
+    "remaining_fp32_true_zero_faces": 6,
+    "continuous_geometry_certified": false
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-09-28 22:38:36",
+  "description": "historical development only; no independent test",
+  "code": "auto_quality_q.py",
+  "code_sha256": "b55e45e803307317fa876d4917229bdc67480286b3ae4fc72bbc2e8401e98d8b",
+  "inputs": [
+    {
+      "case": "s3",
+      "role": "geogram_source",
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260927_025729_fp32_cleanup_diagnostic\\resolution_s3_clean.obj",
+      "sha256": "fc4043e6759e13536ca7cea68d1a745a44e73ebf2e7316363d4e794f419a7fc2"
+    },
+    {
+      "case": "s3",
+      "role": "full_pamo_output",
+      "path": "tmp\\qdev\\edge4_full_s3\\final.obj",
+      "sha256": "983282eb7e55978a1c68e7a3cf67730e10a34278edf3f8959efbf7742f95b58e"
+    },
+    {
+      "case": "s4",
+      "role": "geogram_source",
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260927_025729_fp32_cleanup_diagnostic\\resolution_s4_clean.obj",
+      "sha256": "a988c24cd1b7998d073201be22c1f2aba1f3a13cb983b7cae162ce5109734fb6"
+    },
+    {
+      "case": "s4",
+      "role": "full_pamo_output",
+      "path": "tmp\\qdev\\edge4_full_s4\\final.obj",
+      "sha256": "6335262d7e4a71e9c363f199c769fbad763a002bea028aed8e25bd85f3fb3545"
+    }
+  ],
+  "runs": [
+    {
+      "case": "s3",
+      "mode": "q",
+      "output": "s3_q_candidate.obj",
+      "output_sha256": "51623eb30a1a55ce29c116bf938c375baa049828a1f00cecc87366a96b5960cc",
+      "diagnostics": "s3_q_diagnostics.json",
+      "diagnostics_sha256": "140a07b0c643fabc9dcfd840dc8274ffbeebae11d931748477ec9dd9302eda16",
+      "initial_bad_faces": 390,
+      "final_bad_faces": 354,
+      "accepted_operations": 27,
+      "status": "rejected",
+      "elapsed_ms": 6307.677999953739
+    },
+    {
+      "case": "s3",
+      "mode": "q_minus",
+      "output": "s3_q_minus_candidate.obj",
+      "output_sha256": "0763f06d1708fddd38ee0e0133129ac667ea4dfcb743ab12331ddc0238e22d05",
+      "diagnostics": "s3_q_minus_diagnostics.json",
+      "diagnostics_sha256": "18fa9028d3ad64378860ec04383371f3c3fa2285da491556d0a66d16d7b056cd",
+      "initial_bad_faces": 390,
+      "final_bad_faces": 349,
+      "accepted_operations": 29,
+      "status": "rejected",
+      "elapsed_ms": 6172.919400036335
+    },
+    {
+      "case": "s4",
+      "mode": "q",
+      "output": "s4_q_candidate.obj",
+      "output_sha256": "c8cc1889b5c4fb7ee412a8d6893c86aa7752593fd6e77bf6260403857a2aa444",
+      "diagnostics": "s4_q_diagnostics.json",
+      "diagnostics_sha256": "e88063df5d9a1b262b4cf4ad7b5e17e67fd47cebd98e440f83c49531e9a0ff23",
+      "initial_bad_faces": 492,
+      "final_bad_faces": 413,
+      "accepted_operations": 56,
+      "status": "rejected",
+      "elapsed_ms": 17405.52440006286
+    },
+    {
+      "case": "s4",
+      "mode": "q_minus",
+      "output": "s4_q_minus_candidate.obj",
+      "output_sha256": "ad72cbaa79ed8265589e4e0c313f14ef332acee9b4d8e675360331783fbf4e80",
+      "diagnostics": "s4_q_minus_diagnostics.json",
+      "diagnostics_sha256": "04039745ead59ebeb2f012038c0815e308031d5c6480ff7f30d84dcac3bdfb3c",
+      "initial_bad_faces": 492,
+      "final_bad_faces": 362,
+      "accepted_operations": 80,
+      "status": "rejected",
+      "elapsed_ms": 20287.32190001756
+    }
+  ],
+  "mode_semantics": {
+    "q": "source sharp-edge protection plus source projection and distance",
+    "q_minus": "sharp-edge protection disabled only; source projection and distance remain; not formal Q-minus"
+  }
+}

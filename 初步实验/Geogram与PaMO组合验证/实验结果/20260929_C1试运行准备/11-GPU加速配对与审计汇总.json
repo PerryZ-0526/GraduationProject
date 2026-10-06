@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-09-29 04:23:55",
+  "scope": "两条已见开发路线8个固定Geogram输入，每种主模式4轮；非真实C1端到端",
+  "modes": {
+    "isolated": {
+      "execution_sha256": "b2e6bb61c1b538e4cde12bfcb17487f5ebbd9eac803f633fa2c98fc6cea3056c",
+      "audit_sha256": "c023bd2e19f14f456ad9cd7cfb79ed0b0ead37a22e7aa0da536a18de89132360",
+      "wall_ms": {
+        "count": 32,
+        "mean": 5118.11399817816,
+        "median": 4977.430794853717,
+        "p95_nearest_rank": 5974.259652197361,
+        "max": 6027.079680934548
+      },
+      "accepted_sampled": 32,
+      "sampled_max_mm": 0.06410757760258053,
+      "author_internal_ms": {
+        "count": 32,
+        "mean": 1782.5540751218796,
+        "median": 1730.8636903762817,
+        "p95_nearest_rank": 2051.5224933624268,
+        "max": 2066.99275970459
+      }
+    },
+    "resident": {
+      "execution_sha256": "2f87ad6f6f4a6ecfd6b083ec3d8c0f4c5cf2aeb28b4319a1ba06cadc8cbb9f1b",
+      "audit_sha256": "c023bd2e19f14f456ad9cd7cfb79ed0b0ead37a22e7aa0da536a18de89132360",
+      "wall_ms": {
+        "count": 32,
+        "mean": 3391.359242988983,
+        "median": 1119.5730371400714,
+        "p95_nearest_rank": 16394.69804801047,
+        "max": 17638.848762959242
+      },
+      "accepted_sampled": 29,
+      "sampled_max_mm": 0.2027428214133171
+    },
+    "resident_clear": {
+      "execution_sha256": "fd7868e4e16ab1f4ca456645c2a22f30878f0feb9bda22c1660882dc27b0f512",
+      "audit_sha256": "cc10ee29576498a4a53d251fd4681f42fc5fc05bffdec35c8d5f90550b606036",
+      "wall_ms": {
+        "count": 32,
+        "mean": 4407.895148644457,
+        "median": 1077.64977728948,
+        "p95_nearest_rank": 17874.59410727024,
+        "max": 24900.710474699736
+      },
+      "accepted_sampled": 32,
+      "sampled_max_mm": 0.08971182709009783
+    },
+    "preloaded_fork": {
+      "execution_sha256": "4aa2e8cdb24c62ef7305df7d759d061aafabd1e7d7d40933d0ee56c3d46d08d0",
+      "audit_sha256": "d0ca73055475083e45a42a60f69c2d3e1cf2880d1387aa49c51824af04b36b13",
+      "wall_ms": {
+        "count": 32,
+        "mean": 2486.1325282545295,
+        "median": 2506.792583502829,
+        "p95_nearest_rank": 2597.3977549001575,
+        "max": 2623.7464481964707
+      },
+      "accepted_sampled": 32,
+      "sampled_max_mm": 0.06518404850284937
+    },
+    "isolated_stage3_3": {
+      "execution_sha256": "676da7891a1da560017304bd95785c2fdf17e91c9df46f833d1040adc8d52843",
+      "audit_sha256": "c6592f658044393b23aac7b332442a19c11062beef3bc6561a5beb7bf6b2c7e8",
+      "wall_ms": {
+        "count": 16,
+        "mean": 5490.707511722576,
+        "median": 5628.501814324409,
+        "p95_nearest_rank": 5878.495012409985,
+        "max": 5878.495012409985
+      },
+      "accepted_sampled": 16,
+      "sampled_max_mm": 0.05603498184114892,
+      "author_internal_ms": {
+        "count": 16,
+        "mean": 1802.0775467157364,
+        "median": 1842.0445919036865,
+        "p95_nearest_rank": 1932.783603668213,
+        "max": 1932.783603668213
+      }
+    }
+  },
+  "isolated_to_preloaded_fork_mean_speedup": 2.058664990708077,
+  "sync_profile_ms": {
+    "stage1": {
+      "count": 16,
+      "mean": 73.14058585325256,
+      "median": 69.63537447154522,
+      "p95_nearest_rank": 87.76811044663191,
+      "max": 87.76811044663191
+    },
+    "stage2": {
+      "count": 16,
+      "mean": 466.18598635541275,
+      "median": 461.7639696225524,
+      "p95_nearest_rank": 512.2970575466752,
+      "max": 512.2970575466752
+    },
+    "stage3": {
+      "count": 16,
+      "mean": 1157.5533463037573,
+      "median": 1046.9494801945984,
+      "p95_nearest_rank": 1371.076070703566,
+      "max": 1371.076070703566
+    },
+    "total": {
+      "count": 16,
+      "mean": 1807.0018589496613,
+      "median": 1706.976056098938,
+      "p95_nearest_rank": 2053.8125038146973,
+      "max": 2053.8125038146973
+    }
+  },
+  "stage3_3_vs_original_first_two_rounds": {
+    "original_wall_mean_ms": 4994.586725486442,
+    "variant_wall_mean_ms": 5490.707511722576,
+    "original_internal_mean_ms": 1733.8508367538452,
+    "variant_internal_mean_ms": 1802.0775467157364
+  },
+  "grouped_fork_status": {
+    "report_sha256": "4e86fc4cfeae88d6d46e3be116269aafbccc4fa962d7e9e5fe23ef4bde121739",
+    "completed_groups": 2,
+    "failed": true
+  }
+}

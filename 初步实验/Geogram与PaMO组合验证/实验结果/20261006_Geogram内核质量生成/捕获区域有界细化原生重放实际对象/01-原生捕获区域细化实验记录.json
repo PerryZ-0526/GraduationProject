@@ -1,0 +1,537 @@
+{
+  "生成时间": "2026-10-06T21:21:57+08:00",
+  "修改时间及修改内容": "实际捕获区域重放、定向面积细化及归一化诊断",
+  "文档概述": "小规模区域机理实验，非完整布尔改善或速度结论",
+  "索引目录": [
+    "rows"
+  ],
+  "status": "completed_fourteen_actual_region_replay_experiments",
+  "inputs": [
+    {
+      "case_index": 5,
+      "source_sha256": "09e18f2e60941141c0da136078653b168dd4d3946a4593f8e8c2833339dd1dff",
+      "group": 3,
+      "input": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261006_Geogram内核质量生成\\捕获区域有界细化原生重放实际对象\\05-实际区域重放输入.txt",
+      "input_sha256": "2a130213ec33a34073411777e20289e54a26604e429d23ee10f33fe0a7bf6635",
+      "projection_axes": [
+        0,
+        1
+      ],
+      "projection_match_error": 0.0
+    },
+    {
+      "case_index": 6,
+      "source_sha256": "684c3dd3b95425eb55a340e4a9a5644e526ca28df5438898ecc6dcad00a537af",
+      "group": 3,
+      "input": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261006_Geogram内核质量生成\\捕获区域有界细化原生重放实际对象\\06-实际区域重放输入.txt",
+      "input_sha256": "f0d661357fe7c36856921ba94786610ae42cd4dbed3d791e7e3557a0ae39e9ea",
+      "projection_axes": [
+        0,
+        1
+      ],
+      "projection_match_error": 0.0
+    },
+    {
+      "case_index": 10,
+      "source_sha256": "62926d53feec887b4cdf50bc6f3bd716708aa838c6f573fca8acc0ca7fa65f7f",
+      "group": 48451,
+      "input": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261006_Geogram内核质量生成\\捕获区域有界细化原生重放实际对象\\10-实际区域重放输入.txt",
+      "input_sha256": "6313099d36eae59b0e81a187cddec20a30457ec70a66a8e973490555d22cc668",
+      "projection_axes": [
+        0,
+        1
+      ],
+      "projection_match_error": 0.0
+    }
+  ],
+  "driver_sha256": "76ee5dbb26aafabccc98ef973b26a5caf925834364f415bae968cefa40a14d40",
+  "rows": [
+    {
+      "case_index": 5,
+      "total_point_budget": 64,
+      "boundary_split": false,
+      "normalization": "raw",
+      "options": "rpzq20YYS64Q",
+      "returncode": 0,
+      "log_sha256": "acd1a5b3bce03c7b57b413d630f7b949ea27b289bcf67c6ae7ead1ba6c2ae536",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.050422054870205076,
+          "min_angle": 0.03526954267091855
+        },
+        {
+          "stage": "quality",
+          "points": 95,
+          "triangles": 144,
+          "bad": 7,
+          "zero": 0,
+          "bad_area": 0.22120685918791433,
+          "min_angle": 3.767357734314615
+        },
+        {
+          "stage": "targeted_area",
+          "points": 100,
+          "triangles": 154,
+          "bad": 6,
+          "zero": 0,
+          "bad_area": 0.30563654451763445,
+          "min_angle": 3.767357734314615
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 5,
+      "total_point_budget": 64,
+      "boundary_split": true,
+      "normalization": "raw",
+      "options": "rpzq20S64Q",
+      "returncode": 0,
+      "log_sha256": "0a525775fd8b2cf3fca9339275ed4c5cb1c2a4d78f5c134d483f17c1dde83545",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.050422054870205076,
+          "min_angle": 0.03526954267091855
+        },
+        {
+          "stage": "quality",
+          "points": 85,
+          "triangles": 122,
+          "bad": 8,
+          "zero": 0,
+          "bad_area": 0.09343667456484239,
+          "min_angle": 0.97967433255072
+        },
+        {
+          "stage": "targeted_area",
+          "points": 87,
+          "triangles": 126,
+          "bad": 6,
+          "zero": 0,
+          "bad_area": 0.005551637651113174,
+          "min_angle": 2.0006032993144176
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 5,
+      "total_point_budget": 128,
+      "boundary_split": false,
+      "normalization": "raw",
+      "options": "rpzq20YYS128Q",
+      "returncode": 0,
+      "log_sha256": "acd1a5b3bce03c7b57b413d630f7b949ea27b289bcf67c6ae7ead1ba6c2ae536",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.050422054870205076,
+          "min_angle": 0.03526954267091855
+        },
+        {
+          "stage": "quality",
+          "points": 95,
+          "triangles": 144,
+          "bad": 7,
+          "zero": 0,
+          "bad_area": 0.22120685918791433,
+          "min_angle": 3.767357734314615
+        },
+        {
+          "stage": "targeted_area",
+          "points": 100,
+          "triangles": 154,
+          "bad": 6,
+          "zero": 0,
+          "bad_area": 0.30563654451763445,
+          "min_angle": 3.767357734314615
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 5,
+      "total_point_budget": 128,
+      "boundary_split": true,
+      "normalization": "raw",
+      "options": "rpzq20S128Q",
+      "returncode": 0,
+      "log_sha256": "5a9cb7235148185b45aea43603b345a20f7730f9eabd769d5715151bcabc669e",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.050422054870205076,
+          "min_angle": 0.03526954267091855
+        },
+        {
+          "stage": "quality",
+          "points": 106,
+          "triangles": 162,
+          "bad": 0,
+          "zero": 0,
+          "bad_area": 0,
+          "min_angle": 20.15166749034112
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 5,
+      "total_point_budget": 256,
+      "boundary_split": false,
+      "normalization": "raw",
+      "options": "rpzq20YYS256Q",
+      "returncode": 0,
+      "log_sha256": "acd1a5b3bce03c7b57b413d630f7b949ea27b289bcf67c6ae7ead1ba6c2ae536",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.050422054870205076,
+          "min_angle": 0.03526954267091855
+        },
+        {
+          "stage": "quality",
+          "points": 95,
+          "triangles": 144,
+          "bad": 7,
+          "zero": 0,
+          "bad_area": 0.22120685918791433,
+          "min_angle": 3.767357734314615
+        },
+        {
+          "stage": "targeted_area",
+          "points": 100,
+          "triangles": 154,
+          "bad": 6,
+          "zero": 0,
+          "bad_area": 0.30563654451763445,
+          "min_angle": 3.767357734314615
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 5,
+      "total_point_budget": 256,
+      "boundary_split": true,
+      "normalization": "raw",
+      "options": "rpzq20S256Q",
+      "returncode": 0,
+      "log_sha256": "5a9cb7235148185b45aea43603b345a20f7730f9eabd769d5715151bcabc669e",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.050422054870205076,
+          "min_angle": 0.03526954267091855
+        },
+        {
+          "stage": "quality",
+          "points": 106,
+          "triangles": 162,
+          "bad": 0,
+          "zero": 0,
+          "bad_area": 0,
+          "min_angle": 20.15166749034112
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 6,
+      "total_point_budget": 64,
+      "boundary_split": false,
+      "normalization": "raw",
+      "options": "rpzq20YYS64Q",
+      "returncode": 0,
+      "log_sha256": "94515c9d9d57de78bbec220767f6f906aa27464b4c06f244806616b3e4ef6fbc",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.05042205487020507,
+          "min_angle": 0.0349950953394093
+        },
+        {
+          "stage": "quality",
+          "points": 95,
+          "triangles": 144,
+          "bad": 7,
+          "zero": 0,
+          "bad_area": 0.21858061297841663,
+          "min_angle": 3.767357734313838
+        },
+        {
+          "stage": "targeted_area",
+          "points": 100,
+          "triangles": 154,
+          "bad": 6,
+          "zero": 0,
+          "bad_area": 0.3098866983459334,
+          "min_angle": 3.767357734313838
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 6,
+      "total_point_budget": 64,
+      "boundary_split": true,
+      "normalization": "raw",
+      "options": "rpzq20S64Q",
+      "returncode": 0,
+      "log_sha256": "c26d0e42ae577d8ee0b2d36365dc8c134a14c1f89a55aee1f09f519539398596",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.05042205487020507,
+          "min_angle": 0.0349950953394093
+        },
+        {
+          "stage": "quality",
+          "points": 85,
+          "triangles": 122,
+          "bad": 8,
+          "zero": 0,
+          "bad_area": 0.09395392091655978,
+          "min_angle": 0.9627144136974513
+        },
+        {
+          "stage": "targeted_area",
+          "points": 87,
+          "triangles": 126,
+          "bad": 6,
+          "zero": 0,
+          "bad_area": 0.005635163344726373,
+          "min_angle": 1.9659602791029505
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 6,
+      "total_point_budget": 128,
+      "boundary_split": false,
+      "normalization": "raw",
+      "options": "rpzq20YYS128Q",
+      "returncode": 0,
+      "log_sha256": "94515c9d9d57de78bbec220767f6f906aa27464b4c06f244806616b3e4ef6fbc",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.05042205487020507,
+          "min_angle": 0.0349950953394093
+        },
+        {
+          "stage": "quality",
+          "points": 95,
+          "triangles": 144,
+          "bad": 7,
+          "zero": 0,
+          "bad_area": 0.21858061297841663,
+          "min_angle": 3.767357734313838
+        },
+        {
+          "stage": "targeted_area",
+          "points": 100,
+          "triangles": 154,
+          "bad": 6,
+          "zero": 0,
+          "bad_area": 0.3098866983459334,
+          "min_angle": 3.767357734313838
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 6,
+      "total_point_budget": 128,
+      "boundary_split": true,
+      "normalization": "raw",
+      "options": "rpzq20S128Q",
+      "returncode": 0,
+      "log_sha256": "29ab090a86b89902cf0b5adbe61f204f074b465e900469442d33d3b8f3478334",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.05042205487020507,
+          "min_angle": 0.0349950953394093
+        },
+        {
+          "stage": "quality",
+          "points": 106,
+          "triangles": 162,
+          "bad": 0,
+          "zero": 0,
+          "bad_area": 0,
+          "min_angle": 20.151667490340486
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 6,
+      "total_point_budget": 256,
+      "boundary_split": false,
+      "normalization": "raw",
+      "options": "rpzq20YYS256Q",
+      "returncode": 0,
+      "log_sha256": "94515c9d9d57de78bbec220767f6f906aa27464b4c06f244806616b3e4ef6fbc",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.05042205487020507,
+          "min_angle": 0.0349950953394093
+        },
+        {
+          "stage": "quality",
+          "points": 95,
+          "triangles": 144,
+          "bad": 7,
+          "zero": 0,
+          "bad_area": 0.21858061297841663,
+          "min_angle": 3.767357734313838
+        },
+        {
+          "stage": "targeted_area",
+          "points": 100,
+          "triangles": 154,
+          "bad": 6,
+          "zero": 0,
+          "bad_area": 0.3098866983459334,
+          "min_angle": 3.767357734313838
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 6,
+      "total_point_budget": 256,
+      "boundary_split": true,
+      "normalization": "raw",
+      "options": "rpzq20S256Q",
+      "returncode": 0,
+      "log_sha256": "29ab090a86b89902cf0b5adbe61f204f074b465e900469442d33d3b8f3478334",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 46,
+          "triangles": 46,
+          "bad": 42,
+          "zero": 0,
+          "bad_area": 0.05042205487020507,
+          "min_angle": 0.0349950953394093
+        },
+        {
+          "stage": "quality",
+          "points": 106,
+          "triangles": 162,
+          "bad": 0,
+          "zero": 0,
+          "bad_area": 0,
+          "min_angle": 20.151667490340486
+        }
+      ],
+      "queue_failure_lines": []
+    },
+    {
+      "case_index": 10,
+      "total_point_budget": 64,
+      "boundary_split": true,
+      "normalization": "raw",
+      "options": "rpzq20S64Q",
+      "returncode": -1,
+      "log_sha256": "74ee172f3e8e10a562d07994f8200900acf1a6a84d43fe72b1f1c17da3098794",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 23,
+          "triangles": 21,
+          "bad": 9,
+          "zero": 0,
+          "bad_area": 0.0006441276270780791,
+          "min_angle": 7.510844565670174e-13
+        }
+      ],
+      "queue_failure_lines": [
+        "TRIANGLE_QUEUE_FAILURE {\"key\":0,\"vertices\":[[-0.48717625576300949,0.59605740789975759],[-0.48717625576300949,0.59605740789975759],[-0.48717625576300938,0.59605740789975747]]}"
+      ]
+    },
+    {
+      "case_index": 10,
+      "total_point_budget": 64,
+      "boundary_split": true,
+      "normalization": "normalize",
+      "options": "rpzq20S64Q",
+      "returncode": 0,
+      "log_sha256": "9cf01c4dc7b3a273d8f38a803933b30239ea30b85dbb1da3977f1f4f29abf058",
+      "stages": [
+        {
+          "stage": "input",
+          "points": 23,
+          "triangles": 21,
+          "bad": 9,
+          "zero": 0,
+          "bad_area": 0.0006441276270780791,
+          "min_angle": 7.510844565670174e-13
+        },
+        {
+          "stage": "quality",
+          "points": 87,
+          "triangles": 85,
+          "bad": 64,
+          "zero": 2,
+          "bad_area": 9.75804316699425e-05,
+          "min_angle": 2.9689054517910467e-12
+        }
+      ],
+      "queue_failure_lines": []
+    }
+  ],
+  "compile_returncode": 0,
+  "finished_beijing": "2026-10-06T21:22:01+08:00"
+}

@@ -1,0 +1,87 @@
+{
+  "time_beijing": "2026-10-04T09:04:39.588072+08:00",
+  "environment": {
+    "code_sha256": {
+      "constrained_remesh.cpp": "4fc35fcf68c7c89ab6fbfa8985378fba2378c6a4254c9f3a2284d98036334710",
+      "constrained_quality.py": "cec0e94a49ecd5fb0410e3905e2a5e93f8ff667ee7e812e31cdb62f0e1cacf0b",
+      "run_constrained_worker.py": "5d731de7f80b0d613ee2dbf3f7ceb7c3b0c53ffb9d34d8f9c272c7769d90def9",
+      "locality_masks.py": "cfaeac76c08d10937bf237c5e7a88ffb3c373b52badbc07995b5132177d3b6b6",
+      "locality_gpu.py": "85efcc97cd2680d90867f499df3994d517c4f6dfefc5ef17966c6a0511cd247c"
+    },
+    "compile": {
+      "returncode": 0,
+      "remote_roundtrip_ms": 13548.378100000264,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 300 g++ -O1 -std=c++17 '/root/autodl-tmp/graduation_project/constrained_20261004_反向面抵消28体连续开发_488c09b319bf/constrained_remesh.cpp' -lgmp -lmpfr -o '/root/autodl-tmp/graduation_project/constrained_20261004_反向面抵消28体连续开发_488c09b319bf/constrained_remesh' > '/root/autodl-tmp/graduation_project/constrained_20261004_反向面抵消28体连续开发_488c09b319bf/compile.log' 2>&1"
+    },
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.8.0+cu128",
+      "extension_sha256": "c0836ff8d36fe5c9e2fca8f27e9a341578aa3d716dfb1d0563784710717353ad"
+    },
+    "executable_sha256": "8529a90f4a4f187b2d2d5aac711f49c8a99554612f729575d0180357bd7f8986",
+    "dependency": "libcgal-dev:amd64\t5.4-1",
+    "planar_code_sha256": {
+      "planar_patch.py": "79527a0d142d05e0ddb96d48a6cac6590dde415b40c81a1f45233fe15ca6cd3f",
+      "run_planar_worker.py": "9f101e12a365e6bc2a88a5baef008230e36d775f023076b7f82b688fc065cba7",
+      "tangent_plane_gpu.py": "12f8888833ef7e3e56eb322c330d892f61dac9d261cde5b70c884d4acff59e73"
+    },
+    "triangle": {
+      "version": "20250106",
+      "binary_sha256": "6d5b31720500c28b383b064a87ffb07223f57d2e730187331b10018e1421ebf1"
+    },
+    "mechanism": "same_source_planar_regions_and_per_vertex_tangent_PAP_Pg_safe_projection",
+    "geometry_generation": "CPU_Triangle",
+    "projection": "GPU_if_free_vertices_else_identity",
+    "exact_contact_audit_sha256": "2c632215eea684c919df31b13bf7e3dd7f7e83f4c21cde29f4c06b0bbf63f617",
+    "contact_scope": "仅原报警集合，精确证明共享单纯形接触；不认证完整无自交",
+    "shared_source_code_sha256": {
+      "locality_masks.py": "cfaeac76c08d10937bf237c5e7a88ffb3c373b52badbc07995b5132177d3b6b6",
+      "planar_patch.py": "79527a0d142d05e0ddb96d48a6cac6590dde415b40c81a1f45233fe15ca6cd3f",
+      "run_planar_worker.py": "9f101e12a365e6bc2a88a5baef008230e36d775f023076b7f82b688fc065cba7"
+    },
+    "shared_source_policy": "保留位3，分别核对父及工具表面；共同来源区域独立重建",
+    "shared_repair_sha256": {
+      "run_shared_repair_feedback.py": "dbf1b1d916824aa27c4cf59d36f4eb9e77627d0d89c7f72657153d9cf8ad4e76",
+      "fragment_pipeline.py": "1d2698075734605b77a11f2677f26e22af46e29df10b4f6d38155e8c249c5b57",
+      "locality_retriangulate.py": "448e13d84f3634ab8f257600bffa3f88787ae4971fbd2460d70e354e75690bb9",
+      "locality_sliver_collapse.py": "d7ad8652f0211f09c869f76e38918359e42f88f7b6ed6c696a4c67459fba262f",
+      "locality_cleanup.py": "c2b2ef02fe6432a0a396de2b2b68e038fd33fe9a16dce8672b0b98ed89e8a12f",
+      "locality_diagnostic.py": "d714dcd5a5dda874c4691d276e2024f71739559d6c4e94579a4fd8ad85dd22ab"
+    },
+    "repair_policy": "同来源碎片翻边折叠与整体回滚，保留位3；原面积及几何门槛不变",
+    "collision_protected_gpu_sha256": "0af337bcd4b4de7db0a35b9ca320a9917a0c1f7f063f076b2f2c0bcab5a0925b",
+    "collision_policy": "第一次求导，其他能量有限时增加固定新增点；完整碰撞和CCD不变",
+    "reference_recovery_policy": "原初态截至当前工具顺序重放；修复探针预算1e-7毫米；包含事件哈希复用",
+    "local_recovery_code_sha256": {
+      "run_recovered_area_feedback.py": "7e7e2bf2b16bfb64e44bf030a67bc126fe55ba92665f8db20b1b3ecdc3d64435",
+      "independent_reference_recovery.py": "11e02275e92e940227cdd827815610353ac21d6c8579ef0ad47a14a194b61546",
+      "recover_public_reference.py": "4beefd44d47f814e53d0af0f02b0d0733b56f77f77fe19d183f364bfaadadd43",
+      "run_constrained_feedback.py": "396affc692368367d5ae45c0407a9618d74087a70c79ddcd384087d9552c742f",
+      "recheck_shared_feedback.py": "e91b65a51336b2b25151bcc8b3d1cd634f0902a36d4940d1b07da91cd44594de"
+    },
+    "small_incident_code_sha256": {
+      "run_cluster_recovered_feedback.py": "d66b53c1e4d1ef185b4a29528783a207341553954a8d0a344e6c9e90539d2734",
+      "locality_sliver_collapse.py": "d7ad8652f0211f09c869f76e38918359e42f88f7b6ed6c696a4c67459fba262f",
+      "fragment_pipeline.py": "1d2698075734605b77a11f2677f26e22af46e29df10b4f6d38155e8c249c5b57"
+    },
+    "small_incident_policy": "极小正面积面有理数支撑方向；链接及1e-8平面预算不变；不新增坏面，每步坏面减少；整网格终态回滚",
+    "opposed_pair_code_sha256": {
+      "opposed_facet_cleanup.py": "d579797afa3f516531dbd442fbe45820dbfb2037cf80c853d1ad7cc5a82f5b9f",
+      "run_opposed_pair_feedback.py": "e7aa53197768755b6c2ca995fc06f0ab7d651776bef55f8cfa39b18baad45bd3"
+    },
+    "opposed_pair_policy": "八位焊接后的同来源双面反向链抵消，细精度拓扑保持及完整几何重审；同向或来源冲突拒绝",
+    "provenance_binary_sha256": "da6a45e3b45b0dceac87629379840046a692cfa3e24da6631234d0d00d50d033"
+  },
+  "parameters": {
+    "iterations": 3,
+    "rings": 2,
+    "expanded_rings": 4,
+    "projection_iterations": 5,
+    "geometry_budget_mm": 0.1,
+    "geometry_check": "8192_area_samples_and_all_vertices",
+    "fallback": "expanded_once_then_original_full"
+  },
+  "input_manifest_sha256": "71edf2699b843fa4a5c92a8bdc40c09c1e0811f69677af5ad3dd398e85cf60d5"
+}

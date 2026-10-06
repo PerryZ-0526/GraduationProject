@@ -1,0 +1,86 @@
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp: In function 'int main(int, char**)':
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:68:21: error: 'triangulateio' has not been declared
+   68 |     auto release=[](triangulateio& t) {
+      |                     ^~~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp: In lambda function:
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:69:16: error: request for member 'pointlist' in 't', which is of non-class type 'int'
+   69 |         free(t.pointlist);free(t.pointattributelist);free(t.pointmarkerlist);free(t.trianglelist);free(t.triangleattributelist);
+      |                ^~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:69:34: error: request for member 'pointattributelist' in 't', which is of non-class type 'int'
+   69 |         free(t.pointlist);free(t.pointattributelist);free(t.pointmarkerlist);free(t.trianglelist);free(t.triangleattributelist);
+      |                                  ^~~~~~~~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:69:61: error: request for member 'pointmarkerlist' in 't', which is of non-class type 'int'
+   69 |         free(t.pointlist);free(t.pointattributelist);free(t.pointmarkerlist);free(t.trianglelist);free(t.triangleattributelist);
+      |                                                             ^~~~~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:69:85: error: request for member 'trianglelist' in 't', which is of non-class type 'int'
+   69 |         free(t.pointlist);free(t.pointattributelist);free(t.pointmarkerlist);free(t.trianglelist);free(t.triangleattributelist);
+      |                                                                                     ^~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:69:106: error: request for member 'triangleattributelist' in 't', which is of non-class type 'int'
+   69 |         free(t.pointlist);free(t.pointattributelist);free(t.pointmarkerlist);free(t.trianglelist);free(t.triangleattributelist);
+      |                                                                                                          ^~~~~~~~~~~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:70:16: error: request for member 'trianglearealist' in 't', which is of non-class type 'int'
+   70 |         free(t.trianglearealist);free(t.neighborlist);free(t.segmentlist);free(t.segmentmarkerlist);free(t.edgelist);free(t.edgemarkerlist);free(t.normlist);
+      |                ^~~~~~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:70:41: error: request for member 'neighborlist' in 't', which is of non-class type 'int'
+   70 |         free(t.trianglearealist);free(t.neighborlist);free(t.segmentlist);free(t.segmentmarkerlist);free(t.edgelist);free(t.edgemarkerlist);free(t.normlist);
+      |                                         ^~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:70:62: error: request for member 'segmentlist' in 't', which is of non-class type 'int'
+   70 |         free(t.trianglearealist);free(t.neighborlist);free(t.segmentlist);free(t.segmentmarkerlist);free(t.edgelist);free(t.edgemarkerlist);free(t.normlist);
+      |                                                              ^~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:70:82: error: request for member 'segmentmarkerlist' in 't', which is of non-class type 'int'
+   70 |         free(t.trianglearealist);free(t.neighborlist);free(t.segmentlist);free(t.segmentmarkerlist);free(t.edgelist);free(t.edgemarkerlist);free(t.normlist);
+      |                                                                                  ^~~~~~~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:70:108: error: request for member 'edgelist' in 't', which is of non-class type 'int'
+   70 |         free(t.trianglearealist);free(t.neighborlist);free(t.segmentlist);free(t.segmentmarkerlist);free(t.edgelist);free(t.edgemarkerlist);free(t.normlist);
+      |                                                                                                            ^~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:70:125: error: request for member 'edgemarkerlist' in 't', which is of non-class type 'int'
+   70 |         free(t.trianglearealist);free(t.neighborlist);free(t.segmentlist);free(t.segmentmarkerlist);free(t.edgelist);free(t.edgemarkerlist);free(t.normlist);
+      |                                                                                                                             ^~~~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:70:148: error: request for member 'normlist' in 't', which is of non-class type 'int'
+   70 |         free(t.trianglearealist);free(t.neighborlist);free(t.segmentlist);free(t.segmentmarkerlist);free(t.edgelist);free(t.edgemarkerlist);free(t.normlist);
+      |                                                                                                                                                    ^~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp: In function 'int main(int, char**)':
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:72:5: error: 'triangulateio' was not declared in this scope
+   72 |     triangulateio input{},output{};input.pointlist=xy.data();input.numberofpoints=n;
+      |     ^~~~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:72:26: error: expected primary-expression before ',' token
+   72 |     triangulateio input{},output{};input.pointlist=xy.data();input.numberofpoints=n;
+      |                          ^
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:72:27: error: 'output' was not declared in this scope
+   72 |     triangulateio input{},output{};input.pointlist=xy.data();input.numberofpoints=n;
+      |                           ^~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:72:36: error: 'input' was not declared in this scope; did you mean 'int'?
+   72 |     triangulateio input{},output{};input.pointlist=xy.data();input.numberofpoints=n;
+      |                                    ^~~~~
+      |                                    int
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:77:7: error: '::triangulate' has not been declared
+   77 |     ::triangulate(switches.data(),&input,&output,nullptr);
+      |       ^~~~~~~~~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:86:22: error: expected ';' before 'refine'
+   86 |         triangulateio refine{},next{};
+      |                      ^~~~~~~
+      |                      ;
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:86:31: error: expected primary-expression before ',' token
+   86 |         triangulateio refine{},next{};
+      |                               ^
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:86:32: error: 'next' was not declared in this scope; did you mean 'std::next'?
+   86 |         triangulateio refine{},next{};
+      |                                ^~~~
+      |                                std::next
+In file included from /usr/include/c++/11/bits/stl_algobase.h:66,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/ios:40,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from /tmp/geogram_native_quality_20261006_07/candidate_source/src/lib/geogram/basic/common.h:47,
+                 from /tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:1:
+/usr/include/c++/11/bits/stl_iterator_base_funcs.h:213:5: note: 'std::next' declared here
+  213 |     next(_InputIterator __x, typename
+      |     ^~~~
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:87:9: error: 'refine' was not declared in this scope; did you mean 'rewind'?
+   87 |         refine.pointlist=output.pointlist;refine.numberofpoints=output.numberofpoints;
+      |         ^~~~~~
+      |         rewind
+/tmp/geogram_native_quality_20261006_07/region_replay/replay.cpp:91:11: error: '::triangulate' has not been declared
+   91 |         ::triangulate(area_options,&refine,&next,nullptr);
+      |           ^~~~~~~~~~~

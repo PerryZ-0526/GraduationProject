@@ -1,0 +1,36 @@
+{
+  "生成时间": "2026-10-07T02:02:29+08:00",
+  "修改时间及修改内容": "首次免重复判定实际副本完整开发后封存",
+  "文档概述": "实际原生布尔质量生成；16已见输入336三方法全部精确通过、当前反馈16/16；不是任意输入或新方法未见评价保证",
+  "索引目录": [
+    "files",
+    "evidence",
+    "semantic_change",
+    "reproduction_limits"
+  ],
+  "status": "frozen_current_native_optimization_after_complete_seen16_and_ct16",
+  "remote_native_root": "/tmp/geogram_native_quality_20261007_32",
+  "build_sha256": "af96c694e79d9d106174ad80d790f94e6c8f3b57d4cce98519aa470ed92ef3f4",
+  "candidate_binary_sha256": "cf1875535fd0f8c6cfcf11f236c476b52476c5233de3ef5cd956910bf95b7491",
+  "candidate_library_sha256": "859ac2965d8bcdc684e5e29391fae539b8704bfdf73189270927a34d4e8d5537",
+  "files": {
+    "03-原生布尔质量与阶段计时.cpp": "cc4c0bbd06f40ee1a6f1f95b2700624df5f54c03f15a54c8a02926fa421f5549",
+    "621-已保留接缝顶点免重复判定独立编译.py": "0494f6d77304791e8c603063eb972456a2068cc3620bd93e22ef07a79381e0bf",
+    "mesh_surface_intersection.cpp": "35147637905f74c3568eb2d97986dbeed1fca9332ad3afacafcdf875717a586f",
+    "mesh_surface_intersection_internal.cpp": "47710db72f2ffaf3c23f1819d877c2174b383898c8c98d83197d98d56e748a45",
+    "mesh_surface_intersection_internal.h": "4247d6131cda4df157d7a8f185ddddeb47136bb38a754dca008e2f0a62e925c9"
+  },
+  "evidence": {
+    "649-免重复判定十六已见三方法完整统计.json": "781ccc1f77a1a038f965cb8c27cf7632bc372dc04684fe8e97265a82545f6ec9",
+    "641-免重复判定原生CT十六刀保存联合复算.json": "a0bb77c7b53ab1ba6965395587e829b3b3b7e4307eef98b61e3cd05e651b4978",
+    "639-免重复判定四类保存质量速度完整统计.json": "b6db60d7c1305a5a17bd06e6203d5e6ca2e97d908b2863aa6c3089804f9efb0e",
+    "625-已保留接缝顶点免重复判定原生构建记录.json": "af96c694e79d9d106174ad80d790f94e6c8f3b57d4cce98519aa470ed92ef3f4",
+    "620-已保留接缝顶点免重复判定源码清单.json": "7b7eae09fc29efe755ad87b7f5864fb4fc9f3d77df1d9ef496a034892f1daf2d",
+    "569-新边拒绝原生主候选完整开发终态封存清单.json": "86e91e37c4ceacba923d3653aadad3645755a57b6a4a48caf09a3fb84e03da3d",
+    "582-新边拒绝固定方法第二批十六新参数完整复算.json": "701407830128f04af74556f829e38c339825e87c6417e5384a3d1316e5ae0f16",
+    "618-稳定原生四类阶段诊断完整统计.json": "95ed301d15d1bc016f7390d9c03b7811d615223c721157830d2362b62b430425"
+  },
+  "semantic_change": "--- 569封存原内核\n+++ 免重复判定内核\n@@ -947,6 +947,11 @@\n                 }\n                 v2 = halfedges_.vertex(h,0);\n                 v3 = halfedges_.vertex(h,1);\n+                // 保留标记只会变为真；已保留顶点无需再次复制准确坐标或判定，前驱仍正常推进。\n+                if(keep_vertex_[v2]) {\n+                    v1 = v2;\n+                    continue;\n+                }\n                 ExactPoint p1 = I_.exact_vertex(v1);\n                 ExactPoint p2 = I_.exact_vertex(v2);\n                 ExactPoint p3 = I_.exact_vertex(v3);\n",
+  "reproduction_limits": "五份源码冻结不是独立跨环境安装包；实际构建脚本仍读取远端02号2300文件源码与已编译原版，复现需同一冻结依赖或另行完整源码打包。",
+  "goal_status": "整体大幅质量改善与可接受速度尚未全部成立；先列完整统计，由用户之后确定速度标准"
+}

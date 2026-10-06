@@ -1,0 +1,318 @@
+{
+  "parent_manifest_sha256": "b191e698343da2842e06f23ee305062f40c4415c9f3c18a59acc7a5a355e74e0",
+  "generator_sha256": "13700ed914547720e9b1411b2017bea91491afb3609ef298bc4fb432ef5e3622",
+  "routes": [
+    {
+      "id": "development_vertical_sphere_01",
+      "split": "development",
+      "category": "vertical",
+      "body": "sphere",
+      "random_stream": "20260922/development/vertical/sphere/1",
+      "initial_mesh": "development_vertical_sphere_01_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.047292,
+            0.099461,
+            3.058972
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.047292,
+            0.099461,
+            2.978972
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.047292,
+            0.099461,
+            2.878972
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.047292,
+            0.099461,
+            2.998972
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_vertical_sphere_01_e0_tool.obj",
+          "sha256": "ddc5523fcc34ca2dfd0ce83dfe91cad504c1a17150bb75b866e5c0f0435fb628",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_vertical_sphere_01_e1_tool.obj",
+          "sha256": "62326b63494d9ff0afd5e2ff8f13bdff049216fdb5a38da4e7eda044ed41dc02",
+          "faces": 1280
+        },
+        {
+          "event_id": "e2",
+          "mesh": "development_vertical_sphere_01_e2_tool.obj",
+          "sha256": "917990547ebdd6ff47261eab0eb5c989ea649fee5de2e440fd66eb4052ad4a89",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_vertical_sphere_01_e3_tool.obj",
+          "sha256": "6685619ce2edc5f7ee19df117fbd7c547398516019d91106dcc2a0fc07de129f",
+          "faces": 1280
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "development_crossing_slab_01",
+      "split": "development",
+      "category": "crossing",
+      "body": "slab",
+      "random_stream": "20260922/development/crossing/slab/1",
+      "initial_mesh": "development_crossing_slab_01_initial.obj",
+      "initial_mesh_sha256": "174681df41b9dfc2fa3718fc87ca643cb5b06ac52834d5c4cc9772a89bde9aa1",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.152145,
+          -0.103524
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.726348,
+            -0.646526,
+            0.481349
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.573652,
+            0.553474,
+            0.554909
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.626348,
+            0.553474,
+            0.372335
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.673652,
+            -0.646526,
+            0.694352
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_crossing_slab_01_e0_tool.obj",
+          "sha256": "6b75f36501241413420c5cf283f006b126ba6f19aac64db191866ed288e2a2b4",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_crossing_slab_01_e1_tool.obj",
+          "sha256": "fb1e18d888056303e2c648be225741e8880c06246752866e7b746b097b6fd2bf",
+          "faces": 1396
+        },
+        {
+          "event_id": "e2",
+          "mesh": "development_crossing_slab_01_e2_tool.obj",
+          "sha256": "6572910bd803b71dd99e1bb04a727b350f2f3a25237a18ec5e7f8671f60f01a8",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_crossing_slab_01_e3_tool.obj",
+          "sha256": "f14f15bb7e5b49378dc8f7c1ca52aca1b860ed23d96e67686fe2b918cb048219",
+          "faces": 1388
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    }
+  ],
+  "negative_inputs": [],
+  "scope": "六条已见历史开发路线，不是新独立输入",
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200
+  },
+  "role": "seen_historical_routes_v2_development",
+  "time_beijing": "2026-10-04T07:15:52.746932+08:00"
+}

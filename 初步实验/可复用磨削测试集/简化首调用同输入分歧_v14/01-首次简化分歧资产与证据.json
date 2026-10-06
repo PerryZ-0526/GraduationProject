@@ -1,0 +1,138 @@
+{
+  "生成时间": "2026-10-04T22:11:20.193325+08:00",
+  "修改时间及修改内容": "2026-10-04T22:11:20.193325+08:00，首次生成",
+  "文档概述": "第一次原版简化调用即出现面数与形状分歧，观测读取不计性能",
+  "索引目录": [
+    "files_sha256",
+    "first_calls",
+    "geometry"
+  ],
+  "files_sha256": {
+    "布尔源.obj": "52d435b8ab796db09f2dbe28910ed53b19b521568bf068c349579dc2d5299001",
+    "来源标签.json": "35b507cb8ead0e58530ea701f80f0515497d34c66ed7cbf05ea373ecf6abc855",
+    "阶段一相同网格.obj": "a5f7d70836ee25ae8dfb3eb45d84da6d12ca7a05e99df38dc0ade11e0b2f22c2",
+    "首次简化输出一.obj": "298f5b638c6742e5b97d264551a603d29603220d7dff1f21c49da8370eb002c2",
+    "首次简化输出二.obj": "497497d2c8e342746584691de597fb349b98a2eb0b8d592955792ebc6fb3cd36"
+  },
+  "first_calls": [
+    {
+      "index": 0,
+      "input": {
+        "vertices": {
+          "sha256": "605dbdf988ad26e0abdcec752adfd0b1113f807450fb95212f6335f7998b18f7",
+          "shape": [
+            29070,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "7dde7ad9c07435215334ddcd9b86eef21540c99c91f3e805aa315276dc34808f",
+          "shape": [
+            58136,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "f6279b0cd50cdd5758e0364e91127456cc2501a6dbf986163c92a4b46b3492ce",
+          "shape": [
+            26839,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "d066adca35a425da66c8a6bf9f699640600b617ebc383a22967421275cb6f4b5",
+          "shape": [
+            53674,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 58136,
+      "num_faces_after": 53674,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": true,
+      "mesh_file": "iteration_000.obj"
+    },
+    {
+      "index": 0,
+      "input": {
+        "vertices": {
+          "sha256": "605dbdf988ad26e0abdcec752adfd0b1113f807450fb95212f6335f7998b18f7",
+          "shape": [
+            29070,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "7dde7ad9c07435215334ddcd9b86eef21540c99c91f3e805aa315276dc34808f",
+          "shape": [
+            58136,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "b19f7e2c9e1b5f96b9e1cdb4c9515606332a95809ab681f5f27673321eeacefa",
+          "shape": [
+            26852,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "62124323dd2c8b3b4cb3eb36fb1b92791889f208a9561a9613f89948f5f04b0e",
+          "shape": [
+            53700,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 58136,
+      "num_faces_after": 53700,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": true,
+      "mesh_file": "iteration_000.obj"
+    }
+  ],
+  "geometry": {
+    "sampled": {
+      "pamo_to_reference": {
+        "max_mm": 0.01322259535638782,
+        "p95_mm": 2.8435583831733384e-15,
+        "rms_mm": 0.00042663169599473945,
+        "samples": 8192
+      },
+      "reference_to_pamo": {
+        "max_mm": 0.019490931020180027,
+        "p95_mm": 2.917055154918098e-15,
+        "rms_mm": 0.0005233676379183876,
+        "samples": 8192
+      },
+      "sampled_max_mm": 0.019490931020180027,
+      "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+    },
+    "all_vertices_probe_max_mm": 0.03430976596826012,
+    "probe_max_mm": 0.03430976596826012,
+    "continuous_geometry_certified": false
+  },
+  "actual_record_sha256": "f6142a02bd16bb68a4196943a49b3cb04237f5629ae360c02df48cf62a217c96",
+  "cause_proved": false
+}

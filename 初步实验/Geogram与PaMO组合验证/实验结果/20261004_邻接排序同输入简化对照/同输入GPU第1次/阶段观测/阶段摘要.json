@@ -1,0 +1,2073 @@
+{
+  "role": "observational_full_three_stages_extra_readback_not_timing",
+  "tensors": {
+    "normalized_input_triangles": {
+      "sha256": "c0197c817b62a470b1506f904037afb5fc21d242b48ccef3bd25335b64139317",
+      "shape": [
+        4204,
+        3,
+        3
+      ],
+      "finite": true
+    },
+    "stage1_sdf": {
+      "sha256": "493df5827ebc871257faf424e651b3a8979d26813e1209026c9186efca024bc4",
+      "shape": [
+        256,
+        256,
+        256
+      ],
+      "finite": true
+    }
+  },
+  "extension": {
+    "variant": "sorted",
+    "source_sha256": {
+      "src/cusimp.cu": "32ebe5eafb970f4cbbff39f52c6228c0f8882491b57293c0119c673a18df0c94",
+      "src/cusimp.h": "48ba558a57e72d78bbd373776e98bf87bcb9fc730bf448956dcc408304f57ba8",
+      "src/cusimp_free.cu": "125067a4166c57613427198d227012e60381de66adc24847fe1a71a3c9a5a658",
+      "src/cusimp_free.h": "cba00625bbba8a40fbd05214b78722b8f932c005eb18f7338c40621747065682",
+      "src/pybind.cpp": "23fdd728459f07b47101125bd7c411e1c3d583fa457fa52f3c1816d426490d78",
+      "src/bvh/aabb.cuh": "ea0f8a997f92c50a0a786006112bd6e0fbe086430d2c965bdb027fa442624dda",
+      "src/bvh/bvh.cuh": "3969587736b24ecddf6504ce1e824992980f94c2cbcfcd4a20023ce55e84b409",
+      "src/bvh/math.cuh": "57a4a2eb6dafe7bf488a092dce126babbf5234bf899d3932da384f9d07d1b73a",
+      "src/bvh/morton_code.cuh": "f64ccc6e2d8e592dfdc273f4b21d7b6f61ef0de1a38398735af444bb8d065848",
+      "src/bvh/predicator.cuh": "2415bb0a35a0023c91092df50f373ae2cd901f1bc8fe37190982e39cc519000f",
+      "src/bvh/query.cuh": "55a78106991fa62e5ebb947d1b2b5105aefb7051baf0a6d5273c1001bd8380cf",
+      "src/bvh/self_intersect.cuh": "05659a8e5844367a026fd16d6dfab98fdf4693ccf8e6de0a64cbf7ec23b2cf8c",
+      "src/bvh/tri_tri_2d.cuh": "3196477345886a497cd68120c9e3e2ba856efcf10b158f5d46142c675a5b6144",
+      "src/bvh/tri_tri_3d.cuh": "37dd002681ec4c704f20b726bd6fbfe6c835138767676b55e010c98916c1a2c3",
+      "src/bvh/types.cuh": "eb70891b5a3b9f953923ec51467d61346224081a8a9d9c3357077e1583b4a884",
+      "src/bvh/utility.cuh": "06da0e43866507b4394581880599385f93d3494ad29885b8a321f3f20e545231"
+    },
+    "builder_sha256": "075fff5ceac94f5d21706515cad1f031c27e33443f0ee363e89dbf75c47cf8b8",
+    "module": "pamo_order_sorted",
+    "execution": {
+      "returncode": 0,
+      "remote_roundtrip_ms": 28312.843399995472,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 600 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 PATH=/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin:/root/autodl-tmp/graduation_project/locality_cuda_20261004/build_tools/bin:/root/miniconda3/bin:/usr/local/cuda/bin:/usr/bin:/bin /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_\u7b80\u5316\u90bb\u63a5\u987a\u5e8f\u9694\u79bb\u6784\u5efa_6b28c664b1dc/sorted/builder.py' --directory '/root/autodl-tmp/graduation_project/constrained_20261004_\u7b80\u5316\u90bb\u63a5\u987a\u5e8f\u9694\u79bb\u6784\u5efa_6b28c664b1dc/sorted' > '/root/autodl-tmp/graduation_project/constrained_20261004_\u7b80\u5316\u90bb\u63a5\u987a\u5e8f\u9694\u79bb\u6784\u5efa_6b28c664b1dc/sorted/build.log' 2>&1"
+    },
+    "extension": "/root/autodl-tmp/graduation_project/constrained_20261004_\u7b80\u5316\u90bb\u63a5\u987a\u5e8f\u9694\u79bb\u6784\u5efa_6b28c664b1dc/sorted/build/pamo_order_sorted.so",
+    "extension_sha256": "c7f2719c1db6a378687c21ad009d983a9e04914b444ead2b162230a8e457b591"
+  },
+  "simplification_calls": [
+    {
+      "index": 0,
+      "input": {
+        "vertices": {
+          "sha256": "605dbdf988ad26e0abdcec752adfd0b1113f807450fb95212f6335f7998b18f7",
+          "shape": [
+            29070,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "7dde7ad9c07435215334ddcd9b86eef21540c99c91f3e805aa315276dc34808f",
+          "shape": [
+            58136,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "61ad5dd75fd560c344cbb188bef505ca9872c1e1cda42d9baa1ac53c181d3de7",
+          "shape": [
+            26836,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "e479de85d4f8c38db9f9f60d0638e62833c6302980104b74a9a048685043f712",
+          "shape": [
+            53668,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 58136,
+      "num_faces_after": 53668,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": true,
+      "mesh_file": "iteration_000.obj"
+    },
+    {
+      "index": 1,
+      "input": {
+        "vertices": {
+          "sha256": "61ad5dd75fd560c344cbb188bef505ca9872c1e1cda42d9baa1ac53c181d3de7",
+          "shape": [
+            26836,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "e479de85d4f8c38db9f9f60d0638e62833c6302980104b74a9a048685043f712",
+          "shape": [
+            53668,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "ba3e5d516be883ce0648bde43e5087848b0dca410aeba2a30e6cbac2b5e1dbb1",
+          "shape": [
+            24831,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "57990055234dab36c94ee244f5ebd02575c4a3f2a5951b642f1a2b72ae9848a3",
+          "shape": [
+            49658,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 53668,
+      "num_faces_after": 49658,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_001.obj"
+    },
+    {
+      "index": 2,
+      "input": {
+        "vertices": {
+          "sha256": "ba3e5d516be883ce0648bde43e5087848b0dca410aeba2a30e6cbac2b5e1dbb1",
+          "shape": [
+            24831,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "57990055234dab36c94ee244f5ebd02575c4a3f2a5951b642f1a2b72ae9848a3",
+          "shape": [
+            49658,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "529790ef88c3e01d1d660960241a1bd88c3216fb217bc3164b219f79af67c322",
+          "shape": [
+            23048,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "9051c4ec026e128dc5134d7171dcb98c41558a8d1a367ec54224c106cb17d633",
+          "shape": [
+            46092,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 49658,
+      "num_faces_after": 46092,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_002.obj"
+    },
+    {
+      "index": 3,
+      "input": {
+        "vertices": {
+          "sha256": "529790ef88c3e01d1d660960241a1bd88c3216fb217bc3164b219f79af67c322",
+          "shape": [
+            23048,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "9051c4ec026e128dc5134d7171dcb98c41558a8d1a367ec54224c106cb17d633",
+          "shape": [
+            46092,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "4bfd72cc8fa86a6b31d111188f1758b1fd2e64cc75c2a11777f45d54958b5fbd",
+          "shape": [
+            21392,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "393fb005bf26a067cf65c6de2a3f78d1104c99b2168cefbeb511b77f3a5abcbe",
+          "shape": [
+            42780,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 46092,
+      "num_faces_after": 42780,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_003.obj"
+    },
+    {
+      "index": 4,
+      "input": {
+        "vertices": {
+          "sha256": "4bfd72cc8fa86a6b31d111188f1758b1fd2e64cc75c2a11777f45d54958b5fbd",
+          "shape": [
+            21392,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "393fb005bf26a067cf65c6de2a3f78d1104c99b2168cefbeb511b77f3a5abcbe",
+          "shape": [
+            42780,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "616bb9cac66d54f4c7dfe6ad902eacdaf3fc9ae4bd45453dd6c62ca17f412394",
+          "shape": [
+            19978,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "a09ffd32ab30af0c6441b865daa5eae2a132a2242f228481b222ac1848f07b30",
+          "shape": [
+            39952,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 42780,
+      "num_faces_after": 39952,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_004.obj"
+    },
+    {
+      "index": 5,
+      "input": {
+        "vertices": {
+          "sha256": "616bb9cac66d54f4c7dfe6ad902eacdaf3fc9ae4bd45453dd6c62ca17f412394",
+          "shape": [
+            19978,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "a09ffd32ab30af0c6441b865daa5eae2a132a2242f228481b222ac1848f07b30",
+          "shape": [
+            39952,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "387df96449336ff4aa66bcf211067869d88d80e00bc63d06f826dd6a9ae404ee",
+          "shape": [
+            18713,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "8bd4c778f80ac67e3bc936f9d47726688a384fc7d7c0bde9aa335a9843731006",
+          "shape": [
+            37422,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 39952,
+      "num_faces_after": 37422,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_005.obj"
+    },
+    {
+      "index": 6,
+      "input": {
+        "vertices": {
+          "sha256": "387df96449336ff4aa66bcf211067869d88d80e00bc63d06f826dd6a9ae404ee",
+          "shape": [
+            18713,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "8bd4c778f80ac67e3bc936f9d47726688a384fc7d7c0bde9aa335a9843731006",
+          "shape": [
+            37422,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "2b840afc5b5b2abb3c4b181ff6816b297772e0c2d647c1e91bfb63f8210536d7",
+          "shape": [
+            17591,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "81518a69f25f3bc3023f8fad0fb9c569bbf97ad79a17cf85c53e16e882113ee1",
+          "shape": [
+            35178,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 37422,
+      "num_faces_after": 35178,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_006.obj"
+    },
+    {
+      "index": 7,
+      "input": {
+        "vertices": {
+          "sha256": "2b840afc5b5b2abb3c4b181ff6816b297772e0c2d647c1e91bfb63f8210536d7",
+          "shape": [
+            17591,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "81518a69f25f3bc3023f8fad0fb9c569bbf97ad79a17cf85c53e16e882113ee1",
+          "shape": [
+            35178,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "e297f73f8492d74fc7128a9358f8674495a2d3379b002dde1a67f455d3dd94ee",
+          "shape": [
+            16585,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "0c6ab6141e6de507512a63de750ccb610ef6f73f64d082b43054e9c11d2b235b",
+          "shape": [
+            33166,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 35178,
+      "num_faces_after": 33166,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_007.obj"
+    },
+    {
+      "index": 8,
+      "input": {
+        "vertices": {
+          "sha256": "e297f73f8492d74fc7128a9358f8674495a2d3379b002dde1a67f455d3dd94ee",
+          "shape": [
+            16585,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "0c6ab6141e6de507512a63de750ccb610ef6f73f64d082b43054e9c11d2b235b",
+          "shape": [
+            33166,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "2fd08b074c751972388cc3421f1bb5a2467cc4bd9884b768b742790422040857",
+          "shape": [
+            15645,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "96df56eb91ddd65bd8e2699ceae833bca941fd3a18ec5471a8cabfb4348ec570",
+          "shape": [
+            31286,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 33166,
+      "num_faces_after": 31286,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_008.obj"
+    },
+    {
+      "index": 9,
+      "input": {
+        "vertices": {
+          "sha256": "2fd08b074c751972388cc3421f1bb5a2467cc4bd9884b768b742790422040857",
+          "shape": [
+            15645,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "96df56eb91ddd65bd8e2699ceae833bca941fd3a18ec5471a8cabfb4348ec570",
+          "shape": [
+            31286,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "715ea25d4cddfd482b1f96a8a0ce9a418ff23bc05e0c6b7107b979645c4d4822",
+          "shape": [
+            14790,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "edacabe7b649ead0ab43a0fd6284eb06b7b497fa7c4530d731bda5e4e2dd0745",
+          "shape": [
+            29576,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 31286,
+      "num_faces_after": 29576,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_009.obj"
+    },
+    {
+      "index": 10,
+      "input": {
+        "vertices": {
+          "sha256": "715ea25d4cddfd482b1f96a8a0ce9a418ff23bc05e0c6b7107b979645c4d4822",
+          "shape": [
+            14790,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "edacabe7b649ead0ab43a0fd6284eb06b7b497fa7c4530d731bda5e4e2dd0745",
+          "shape": [
+            29576,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "cced8a6277cfff7e48badf802c760cc7f3de03461f2a61c532d1db0c1384055b",
+          "shape": [
+            13972,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "dcb908928a45b1434195fd5e60b5381d879fe8ae68297782e2f0252319e2f0ab",
+          "shape": [
+            27940,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 29576,
+      "num_faces_after": 27940,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_010.obj"
+    },
+    {
+      "index": 11,
+      "input": {
+        "vertices": {
+          "sha256": "cced8a6277cfff7e48badf802c760cc7f3de03461f2a61c532d1db0c1384055b",
+          "shape": [
+            13972,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "dcb908928a45b1434195fd5e60b5381d879fe8ae68297782e2f0252319e2f0ab",
+          "shape": [
+            27940,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "bf53d293d0c3efd954ab52044952eff8df175ed3f88e2151918d9b9b86cec2d9",
+          "shape": [
+            13205,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "402c8654f3cfce6df10b36670527ce3fc4870da9811b0584de83a57c4fb7179c",
+          "shape": [
+            26406,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 27940,
+      "num_faces_after": 26406,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_011.obj"
+    },
+    {
+      "index": 12,
+      "input": {
+        "vertices": {
+          "sha256": "bf53d293d0c3efd954ab52044952eff8df175ed3f88e2151918d9b9b86cec2d9",
+          "shape": [
+            13205,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "402c8654f3cfce6df10b36670527ce3fc4870da9811b0584de83a57c4fb7179c",
+          "shape": [
+            26406,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "c3d40b6d62984630c192b2d6f213f1f57ee31eae51e00eae0258384bb0cd0086",
+          "shape": [
+            12456,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "67c81c71ecff2aa076a0197baafd3797281b5fead5987c927d2ef0618eedf3c9",
+          "shape": [
+            24908,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 26406,
+      "num_faces_after": 24908,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_012.obj"
+    },
+    {
+      "index": 13,
+      "input": {
+        "vertices": {
+          "sha256": "c3d40b6d62984630c192b2d6f213f1f57ee31eae51e00eae0258384bb0cd0086",
+          "shape": [
+            12456,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "67c81c71ecff2aa076a0197baafd3797281b5fead5987c927d2ef0618eedf3c9",
+          "shape": [
+            24908,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "f899a96387cc13c7e689f4aa81298750611c83be25e530cb9b0db11b2e783911",
+          "shape": [
+            11728,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "357535e6b955df9cc6f9d14bea15ef18cfc8ce971721b81438f87ed2dbee35be",
+          "shape": [
+            23452,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 24908,
+      "num_faces_after": 23452,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_013.obj"
+    },
+    {
+      "index": 14,
+      "input": {
+        "vertices": {
+          "sha256": "f899a96387cc13c7e689f4aa81298750611c83be25e530cb9b0db11b2e783911",
+          "shape": [
+            11728,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "357535e6b955df9cc6f9d14bea15ef18cfc8ce971721b81438f87ed2dbee35be",
+          "shape": [
+            23452,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "d95d11f98862696f9f732e0acecebbaf9e0d6bc55057b401b2e4fe9f3e768ad2",
+          "shape": [
+            11056,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "67449ae2fd31f91a04c1ff26ddafe90cf37420e443f88c27fbc5e6ee9a59a8b7",
+          "shape": [
+            22108,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 23452,
+      "num_faces_after": 22108,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_014.obj"
+    },
+    {
+      "index": 15,
+      "input": {
+        "vertices": {
+          "sha256": "d95d11f98862696f9f732e0acecebbaf9e0d6bc55057b401b2e4fe9f3e768ad2",
+          "shape": [
+            11056,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "67449ae2fd31f91a04c1ff26ddafe90cf37420e443f88c27fbc5e6ee9a59a8b7",
+          "shape": [
+            22108,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "adc6644a867aca173c94f62c25543ea38457c066527d1ad28d2701d2e6cf081a",
+          "shape": [
+            10395,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "bf31816f8530cdc9f775e66f9497aa603ebf2da4e25c3e1e5c0e5878806f186e",
+          "shape": [
+            20786,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 22108,
+      "num_faces_after": 20786,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_015.obj"
+    },
+    {
+      "index": 16,
+      "input": {
+        "vertices": {
+          "sha256": "adc6644a867aca173c94f62c25543ea38457c066527d1ad28d2701d2e6cf081a",
+          "shape": [
+            10395,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "bf31816f8530cdc9f775e66f9497aa603ebf2da4e25c3e1e5c0e5878806f186e",
+          "shape": [
+            20786,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "6de7eebc310dfa59137889dd1878b025df362d0cf402699242811486a84c5901",
+          "shape": [
+            9774,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "4fc42c229b4215f35ee8268e49c3548ec85956b36f99b3165e25e5330a5c041d",
+          "shape": [
+            19544,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 20786,
+      "num_faces_after": 19544,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_016.obj"
+    },
+    {
+      "index": 17,
+      "input": {
+        "vertices": {
+          "sha256": "6de7eebc310dfa59137889dd1878b025df362d0cf402699242811486a84c5901",
+          "shape": [
+            9774,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "4fc42c229b4215f35ee8268e49c3548ec85956b36f99b3165e25e5330a5c041d",
+          "shape": [
+            19544,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "373db1f01291ead081efd3059efd733c16d16e174c15dd9731fc782e034d20e9",
+          "shape": [
+            9185,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "6a61f376d81364ca757974c6f3397e283a5ebb10435fb3dfffc22a99f81fffd0",
+          "shape": [
+            18366,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 19544,
+      "num_faces_after": 18366,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_017.obj"
+    },
+    {
+      "index": 18,
+      "input": {
+        "vertices": {
+          "sha256": "373db1f01291ead081efd3059efd733c16d16e174c15dd9731fc782e034d20e9",
+          "shape": [
+            9185,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "6a61f376d81364ca757974c6f3397e283a5ebb10435fb3dfffc22a99f81fffd0",
+          "shape": [
+            18366,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "128976f9176b6973a46e9dafba1f7b57196652f304db2f99cd0b4aa5c27c55a9",
+          "shape": [
+            8633,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "1b7faa50d735c9d18bdba71ca7c308ec9817dbeb7b5d85edb83416a801113047",
+          "shape": [
+            17262,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 18366,
+      "num_faces_after": 17262,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_018.obj"
+    },
+    {
+      "index": 19,
+      "input": {
+        "vertices": {
+          "sha256": "128976f9176b6973a46e9dafba1f7b57196652f304db2f99cd0b4aa5c27c55a9",
+          "shape": [
+            8633,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "1b7faa50d735c9d18bdba71ca7c308ec9817dbeb7b5d85edb83416a801113047",
+          "shape": [
+            17262,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "559dd19b6d076bbd0f28abd16f5efe3acd3ea57242b472f8ab46d24a7ae52d97",
+          "shape": [
+            8096,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "b0953a222d1fdd1ebef63be355212a9105a1aac9ece139834382b91721772f03",
+          "shape": [
+            16188,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 17262,
+      "num_faces_after": 16188,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_019.obj"
+    },
+    {
+      "index": 20,
+      "input": {
+        "vertices": {
+          "sha256": "559dd19b6d076bbd0f28abd16f5efe3acd3ea57242b472f8ab46d24a7ae52d97",
+          "shape": [
+            8096,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "b0953a222d1fdd1ebef63be355212a9105a1aac9ece139834382b91721772f03",
+          "shape": [
+            16188,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "6bddc619880271a75b33c2ed08140816b884605a8e7b0289abb8579d49126803",
+          "shape": [
+            7602,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "301e2960578966a02e2de33d1717d246852672b019af562eb296ed131f4e5a66",
+          "shape": [
+            15200,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 16188,
+      "num_faces_after": 15200,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_020.obj"
+    },
+    {
+      "index": 21,
+      "input": {
+        "vertices": {
+          "sha256": "6bddc619880271a75b33c2ed08140816b884605a8e7b0289abb8579d49126803",
+          "shape": [
+            7602,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "301e2960578966a02e2de33d1717d246852672b019af562eb296ed131f4e5a66",
+          "shape": [
+            15200,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "55bd2a738dfc585bf0eb0ac5b8b19d47615d40ca2490f887584189e68f6a36b5",
+          "shape": [
+            7149,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "bb4d2cdca252b45fc8c11fa3c442a4544433f71007a0219a87d18871818399ba",
+          "shape": [
+            14294,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 15200,
+      "num_faces_after": 14294,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_021.obj"
+    },
+    {
+      "index": 22,
+      "input": {
+        "vertices": {
+          "sha256": "55bd2a738dfc585bf0eb0ac5b8b19d47615d40ca2490f887584189e68f6a36b5",
+          "shape": [
+            7149,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "bb4d2cdca252b45fc8c11fa3c442a4544433f71007a0219a87d18871818399ba",
+          "shape": [
+            14294,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "c37f1add946525d6f4405170f3a4814aaf03e4681ce9a34133304bffbf1bfd4c",
+          "shape": [
+            6717,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "1b54a0df540b8f3ac9915e4343151844576d89de15ce3b66c4b87ae177ce29d7",
+          "shape": [
+            13430,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 14294,
+      "num_faces_after": 13430,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_022.obj"
+    },
+    {
+      "index": 23,
+      "input": {
+        "vertices": {
+          "sha256": "c37f1add946525d6f4405170f3a4814aaf03e4681ce9a34133304bffbf1bfd4c",
+          "shape": [
+            6717,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "1b54a0df540b8f3ac9915e4343151844576d89de15ce3b66c4b87ae177ce29d7",
+          "shape": [
+            13430,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "20ad9dae34dccde0098aa9e77929a845bd68d32fe8137dc4bdd33f77f99cfdb6",
+          "shape": [
+            6337,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "d75ecab38fa98e52349e762c4de4b71db30a8d280403aa6619f8d6fdf6972f0b",
+          "shape": [
+            12670,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 13430,
+      "num_faces_after": 12670,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_023.obj"
+    },
+    {
+      "index": 24,
+      "input": {
+        "vertices": {
+          "sha256": "20ad9dae34dccde0098aa9e77929a845bd68d32fe8137dc4bdd33f77f99cfdb6",
+          "shape": [
+            6337,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "d75ecab38fa98e52349e762c4de4b71db30a8d280403aa6619f8d6fdf6972f0b",
+          "shape": [
+            12670,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "6484068c7a52028989b497ace640f12987ee93f5f986ee0509b3ea135adddd69",
+          "shape": [
+            5965,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "2aa2ff4c1422c5f79bd14eb5d7934afdf671a805b6a78509f983e0fc064e6b89",
+          "shape": [
+            11926,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 12670,
+      "num_faces_after": 11926,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_024.obj"
+    },
+    {
+      "index": 25,
+      "input": {
+        "vertices": {
+          "sha256": "6484068c7a52028989b497ace640f12987ee93f5f986ee0509b3ea135adddd69",
+          "shape": [
+            5965,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "2aa2ff4c1422c5f79bd14eb5d7934afdf671a805b6a78509f983e0fc064e6b89",
+          "shape": [
+            11926,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "ff8c022b5462fed7aed2340d981827cd8c2cea3985833733b6a015164674bfe6",
+          "shape": [
+            5607,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "eb42c0303894ea8f9397d255f2ea580100c93fa46884af3bc9ba56e006aef1a1",
+          "shape": [
+            11210,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 11926,
+      "num_faces_after": 11210,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_025.obj"
+    },
+    {
+      "index": 26,
+      "input": {
+        "vertices": {
+          "sha256": "ff8c022b5462fed7aed2340d981827cd8c2cea3985833733b6a015164674bfe6",
+          "shape": [
+            5607,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "eb42c0303894ea8f9397d255f2ea580100c93fa46884af3bc9ba56e006aef1a1",
+          "shape": [
+            11210,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "6eeb3bbefd11786c14d6b8fba54a7f50006946c710d24ce8e724a3a4c4b257d7",
+          "shape": [
+            5258,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "490f294f30c223e1bf54c17ac67d4f1c961c417eee8f28aeb368e8c2b23939b1",
+          "shape": [
+            10512,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 11210,
+      "num_faces_after": 10512,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_026.obj"
+    },
+    {
+      "index": 27,
+      "input": {
+        "vertices": {
+          "sha256": "6eeb3bbefd11786c14d6b8fba54a7f50006946c710d24ce8e724a3a4c4b257d7",
+          "shape": [
+            5258,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "490f294f30c223e1bf54c17ac67d4f1c961c417eee8f28aeb368e8c2b23939b1",
+          "shape": [
+            10512,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "8758143945ce51399e79fa013b22a180e032fa4d5cd30573e1092f4b534b6249",
+          "shape": [
+            4927,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "a77409eee9db49cf6ed1a240b50dd8dd5bcead8aed7d60419498cc43ffd452f6",
+          "shape": [
+            9850,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 10512,
+      "num_faces_after": 9850,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_027.obj"
+    },
+    {
+      "index": 28,
+      "input": {
+        "vertices": {
+          "sha256": "8758143945ce51399e79fa013b22a180e032fa4d5cd30573e1092f4b534b6249",
+          "shape": [
+            4927,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "a77409eee9db49cf6ed1a240b50dd8dd5bcead8aed7d60419498cc43ffd452f6",
+          "shape": [
+            9850,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "aff229a16012f71601148d998528a2f07bf73f28075f7331705d799c0b8e4768",
+          "shape": [
+            4627,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "d15f19dbb1c822a4e707c87858d5fc38e99d4daf5408ab925a8721df0e0d12e7",
+          "shape": [
+            9250,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 9850,
+      "num_faces_after": 9250,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_028.obj"
+    },
+    {
+      "index": 29,
+      "input": {
+        "vertices": {
+          "sha256": "aff229a16012f71601148d998528a2f07bf73f28075f7331705d799c0b8e4768",
+          "shape": [
+            4627,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "d15f19dbb1c822a4e707c87858d5fc38e99d4daf5408ab925a8721df0e0d12e7",
+          "shape": [
+            9250,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "fa89077f45ddb64d3e006916ff6f49e8ffc0b4e048f68cda1f01a3bd2aabc3b6",
+          "shape": [
+            4336,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "d3bff702406644356e3ee78ce33f510d12fd66d20edffcf3172a40637111f55a",
+          "shape": [
+            8668,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 9250,
+      "num_faces_after": 8668,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_029.obj"
+    },
+    {
+      "index": 30,
+      "input": {
+        "vertices": {
+          "sha256": "fa89077f45ddb64d3e006916ff6f49e8ffc0b4e048f68cda1f01a3bd2aabc3b6",
+          "shape": [
+            4336,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "d3bff702406644356e3ee78ce33f510d12fd66d20edffcf3172a40637111f55a",
+          "shape": [
+            8668,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "61b60bba2b165a8b9dec9a6bf0e46518b24ae89d0cf3372299fd6bbeca2b4d9e",
+          "shape": [
+            4064,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "4f430eeeb85b54bcac7cda2d046d729243a6cb6be6a0f10503495c9adb5a348e",
+          "shape": [
+            8124,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 8668,
+      "num_faces_after": 8124,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_030.obj"
+    },
+    {
+      "index": 31,
+      "input": {
+        "vertices": {
+          "sha256": "61b60bba2b165a8b9dec9a6bf0e46518b24ae89d0cf3372299fd6bbeca2b4d9e",
+          "shape": [
+            4064,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "4f430eeeb85b54bcac7cda2d046d729243a6cb6be6a0f10503495c9adb5a348e",
+          "shape": [
+            8124,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "01f5f3d12818246c0fc92efde1618ca2ab8ab74b55bb72c8d44caa5e350e87ae",
+          "shape": [
+            3821,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "51a6e5cdeb344161e771cacc80e4822ebc73398e1736cd532402fecae010734d",
+          "shape": [
+            7638,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 8124,
+      "num_faces_after": 7638,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_031.obj"
+    },
+    {
+      "index": 32,
+      "input": {
+        "vertices": {
+          "sha256": "01f5f3d12818246c0fc92efde1618ca2ab8ab74b55bb72c8d44caa5e350e87ae",
+          "shape": [
+            3821,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "51a6e5cdeb344161e771cacc80e4822ebc73398e1736cd532402fecae010734d",
+          "shape": [
+            7638,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "1e69fc446979dabee96d92a79a97a917a7ecf504b0406945efc505fc299664e2",
+          "shape": [
+            3593,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "d2014a8abd3348735d76afd5ceb819af7caaff73d5f99e33f2136ddc4633b58b",
+          "shape": [
+            7182,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 7638,
+      "num_faces_after": 7182,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_032.obj"
+    },
+    {
+      "index": 33,
+      "input": {
+        "vertices": {
+          "sha256": "1e69fc446979dabee96d92a79a97a917a7ecf504b0406945efc505fc299664e2",
+          "shape": [
+            3593,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "d2014a8abd3348735d76afd5ceb819af7caaff73d5f99e33f2136ddc4633b58b",
+          "shape": [
+            7182,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "78159893b291218a6f8cf7c7d3ed4789614387e98136df801f330582ad567e07",
+          "shape": [
+            3379,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "356c34588eb56cf8d849e3bbc590a298b232677e4ca88bd79ef49ed9f5e7678f",
+          "shape": [
+            6754,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 7182,
+      "num_faces_after": 6754,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_033.obj"
+    },
+    {
+      "index": 34,
+      "input": {
+        "vertices": {
+          "sha256": "78159893b291218a6f8cf7c7d3ed4789614387e98136df801f330582ad567e07",
+          "shape": [
+            3379,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "356c34588eb56cf8d849e3bbc590a298b232677e4ca88bd79ef49ed9f5e7678f",
+          "shape": [
+            6754,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "15ba3c6fa2806ebe86f41ca8bf1263b99f99e559be504b17fa6b7339fcafa82e",
+          "shape": [
+            3177,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "f379c3c1f55d8c95ca8b813598c295e262a595ab8ca0c3c5cd324d2ae7e00226",
+          "shape": [
+            6350,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 6754,
+      "num_faces_after": 6350,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_034.obj"
+    },
+    {
+      "index": 35,
+      "input": {
+        "vertices": {
+          "sha256": "15ba3c6fa2806ebe86f41ca8bf1263b99f99e559be504b17fa6b7339fcafa82e",
+          "shape": [
+            3177,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "f379c3c1f55d8c95ca8b813598c295e262a595ab8ca0c3c5cd324d2ae7e00226",
+          "shape": [
+            6350,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "e50154c2861d4c77848f266e7496bc83a89bc3684822644dfaef00821f092a8a",
+          "shape": [
+            2980,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "23b49617f50cfefca093f5743a1287cbd9a9fd7411b19543d7db9fb339ed360c",
+          "shape": [
+            5956,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 6350,
+      "num_faces_after": 5956,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_035.obj"
+    },
+    {
+      "index": 36,
+      "input": {
+        "vertices": {
+          "sha256": "e50154c2861d4c77848f266e7496bc83a89bc3684822644dfaef00821f092a8a",
+          "shape": [
+            2980,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "23b49617f50cfefca093f5743a1287cbd9a9fd7411b19543d7db9fb339ed360c",
+          "shape": [
+            5956,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "901d4261fef81ad2596d58cf4b63de27cc287c1edd22f5df90383dd2dedeeb6d",
+          "shape": [
+            2822,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "cb6f8fa61995dd13db86b3b8c476a394e0fcd58f1f58be1f3adc20684ee87773",
+          "shape": [
+            5640,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 5956,
+      "num_faces_after": 5640,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_036.obj"
+    },
+    {
+      "index": 37,
+      "input": {
+        "vertices": {
+          "sha256": "901d4261fef81ad2596d58cf4b63de27cc287c1edd22f5df90383dd2dedeeb6d",
+          "shape": [
+            2822,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "cb6f8fa61995dd13db86b3b8c476a394e0fcd58f1f58be1f3adc20684ee87773",
+          "shape": [
+            5640,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "2553c4c5ba548639ca90f6cf7535c5997795b607e4273236a687960d7d895ec3",
+          "shape": [
+            2661,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "c6ae749d845b45a41b7a338c2c3c143e1a57d6fb940d6ca9e40175cf64a4dfab",
+          "shape": [
+            5318,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 5640,
+      "num_faces_after": 5318,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_037.obj"
+    },
+    {
+      "index": 38,
+      "input": {
+        "vertices": {
+          "sha256": "2553c4c5ba548639ca90f6cf7535c5997795b607e4273236a687960d7d895ec3",
+          "shape": [
+            2661,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "c6ae749d845b45a41b7a338c2c3c143e1a57d6fb940d6ca9e40175cf64a4dfab",
+          "shape": [
+            5318,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "146ceb8741e9ccd97398c5487c429d572548768ed9c6d65f5e77cee55fc6d81f",
+          "shape": [
+            2499,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "8c0b9ff2fa94ede9fce47e1505a386905234ea48a77ce1ee5cf74cd8927a63a9",
+          "shape": [
+            4994,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 5318,
+      "num_faces_after": 4994,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_038.obj"
+    },
+    {
+      "index": 39,
+      "input": {
+        "vertices": {
+          "sha256": "146ceb8741e9ccd97398c5487c429d572548768ed9c6d65f5e77cee55fc6d81f",
+          "shape": [
+            2499,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "8c0b9ff2fa94ede9fce47e1505a386905234ea48a77ce1ee5cf74cd8927a63a9",
+          "shape": [
+            4994,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "82c98f04362e7bb8a147d2529cbdf76f99c496acb7871f356a747eec167cc294",
+          "shape": [
+            2350,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "fd5932cb9b48e484677ad2e4ef68c2122ee994779aeda43b5ecec3dc589fa6ad",
+          "shape": [
+            4696,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 4994,
+      "num_faces_after": 4696,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_039.obj"
+    },
+    {
+      "index": 40,
+      "input": {
+        "vertices": {
+          "sha256": "82c98f04362e7bb8a147d2529cbdf76f99c496acb7871f356a747eec167cc294",
+          "shape": [
+            2350,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "fd5932cb9b48e484677ad2e4ef68c2122ee994779aeda43b5ecec3dc589fa6ad",
+          "shape": [
+            4696,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "f49849606fbbf09ff683ef6944d106573b7da5afe399ab5ae3e840c6f27a9bc5",
+          "shape": [
+            2204,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "b49d52cab39774432f4c0204d1d918b5bdbd8868c2d772695c0c5a66b18d7167",
+          "shape": [
+            4404,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 4696,
+      "num_faces_after": 4404,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_040.obj"
+    },
+    {
+      "index": 41,
+      "input": {
+        "vertices": {
+          "sha256": "f49849606fbbf09ff683ef6944d106573b7da5afe399ab5ae3e840c6f27a9bc5",
+          "shape": [
+            2204,
+            3
+          ]
+        },
+        "faces": {
+          "sha256": "b49d52cab39774432f4c0204d1d918b5bdbd8868c2d772695c0c5a66b18d7167",
+          "shape": [
+            4404,
+            3
+          ]
+        },
+        "undo": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "output": {
+        "compacted_vertices": {
+          "sha256": "2ba056c16b04489ae080bb2099dca67fd3b24afff091782ffa746fd81e31c894",
+          "shape": [
+            2075,
+            3
+          ]
+        },
+        "mapped_faces": {
+          "sha256": "30941ac19c1dec787208daca59170e6c16603d34a03e85704761881eb3eaecf6",
+          "shape": [
+            4146,
+            3
+          ]
+        }
+      },
+      "num_faces_before": 4404,
+      "num_faces_after": 4146,
+      "n_verts_undo": 0,
+      "threshold": 0.001,
+      "is_stuck": 0,
+      "init": false,
+      "mesh_file": "iteration_041.obj"
+    }
+  ]
+}

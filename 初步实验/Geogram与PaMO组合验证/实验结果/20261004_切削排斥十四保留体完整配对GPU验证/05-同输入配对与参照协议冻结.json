@@ -1,0 +1,74 @@
+{
+  "生成时间": "2026-10-04T18:33:51.244948+08:00",
+  "修改时间及修改内容": "首次生成，先于保留输入候选输出",
+  "文档概述": "排除同父输入三角化差异，不改变算法预算",
+  "索引目录": [
+    "environment"
+  ],
+  "environment": {
+    "code_sha256": {
+      "constrained_remesh.cpp": "4fc35fcf68c7c89ab6fbfa8985378fba2378c6a4254c9f3a2284d98036334710",
+      "constrained_quality.py": "cec0e94a49ecd5fb0410e3905e2a5e93f8ff667ee7e812e31cdb62f0e1cacf0b",
+      "run_constrained_worker.py": "5d731de7f80b0d613ee2dbf3f7ceb7c3b0c53ffb9d34d8f9c272c7769d90def9",
+      "locality_masks.py": "cfaeac76c08d10937bf237c5e7a88ffb3c373b52badbc07995b5132177d3b6b6",
+      "locality_gpu.py": "85efcc97cd2680d90867f499df3994d517c4f6dfefc5ef17966c6a0511cd247c"
+    },
+    "compile": {
+      "returncode": 0,
+      "remote_roundtrip_ms": 23185.75879999844,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 300 g++ -O1 -std=c++17 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥十四保留体完整配对GPU验证_1ce5d8ae5c4a/constrained_remesh.cpp' -lgmp -lmpfr -o '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥十四保留体完整配对GPU验证_1ce5d8ae5c4a/constrained_remesh' > '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥十四保留体完整配对GPU验证_1ce5d8ae5c4a/compile.log' 2>&1"
+    },
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+      "torch": "2.8.0+cu128",
+      "extension_sha256": "c0836ff8d36fe5c9e2fca8f27e9a341578aa3d716dfb1d0563784710717353ad"
+    },
+    "executable_sha256": "8529a90f4a4f187b2d2d5aac711f49c8a99554612f729575d0180357bd7f8986",
+    "dependency": "libcgal-dev:amd64\t5.4-1",
+    "exclusion_code_sha256": {
+      "cut_exclusion.py": "bddb11a452360f3e28dcdb1687d78960b6a23cfdc01ec5b40925bda9531cfd64",
+      "run_cut_exclusion_feedback.py": "2b15cfa03ea8d6c5d7dddba1aeea2c291aba5955e8c7809c312dca1b5290fba6",
+      "positive_area_input.py": "4b59e246b00f3e0b164698daef865a7e76b3a17a58a418c55f618324cd2843f0",
+      "run_constrained_feedback.py": "396affc692368367d5ae45c0407a9618d74087a70c79ddcd384087d9552c742f",
+      "geometry_preservation_audit.py": "72a6c891e603edf7f818287d64684ffd7e557c837e1d58f16393e657b851bf79",
+      "locality_cleanup.py": "c2b2ef02fe6432a0a396de2b2b68e038fd33fe9a16dce8672b0b98ed89e8a12f"
+    },
+    "input_policy": "both_branches_positive_area_plus_exact_alarm_contact_diagnostic",
+    "output_policy": "unchanged_area_geometry_and_topology_with_same_exact_alarm_contact_review",
+    "candidate_gpu_budget": "one_original_full_PaMO_per_prefix_no_extra_candidate_attempts",
+    "mechanism": "cumulative_reference_targets_trust_ball_face_exclusion_and_at_most_two_conforming_refinements",
+    "adaptive_cut_code_sha256": {
+      "adaptive_cut_exclusion.py": "6679a88f79c3357130832bbdcc27419f5fb2be639d136ad424c00ae4ae3d41f8",
+      "run_adaptive_cut_feedback.py": "7718878e5f98075210b564a0d0f78caf0230866f0dcc458bce363912767a0784",
+      "pilot_cut_exclusion.py": "91508f916c90018dc7f5f5f144f8d9cef760afcb0c3f3c1f9aa37c769f08187b",
+      "exact_alarm_contact.py": "2c632215eea684c919df31b13bf7e3dd7f7e83f4c21cde29f4c06b0bbf63f617",
+      "study_cut_exclusion.py": "c4ad13f378988e53667591b4a4e2ef59822731e389e9363f6a8151c2b0476cc4"
+    },
+    "actual_remote_code_sha256": {
+      "constrained_remesh.cpp": "4fc35fcf68c7c89ab6fbfa8985378fba2378c6a4254c9f3a2284d98036334710",
+      "constrained_quality.py": "cec0e94a49ecd5fb0410e3905e2a5e93f8ff667ee7e812e31cdb62f0e1cacf0b",
+      "run_constrained_worker.py": "5d731de7f80b0d613ee2dbf3f7ceb7c3b0c53ffb9d34d8f9c272c7769d90def9",
+      "locality_masks.py": "cfaeac76c08d10937bf237c5e7a88ffb3c373b52badbc07995b5132177d3b6b6",
+      "locality_gpu.py": "85efcc97cd2680d90867f499df3994d517c4f6dfefc5ef17966c6a0511cd247c"
+    },
+    "exact_embedding_checker_sha256": "0af22fcb7cad4de31524cd09d5b143a3716f53c81d5c271a218307da05adcdd3",
+    "continuation_entry_sha256": "0c0473ef5eb2d022628d2acb585ca7db33b793dab217fa60cda440cd765c85f4",
+    "common_source_policy": "retain_bit_3_and_verify_both_operand_surfaces",
+    "actual_parameters": {
+      "pamo": "original_full_three_stages_once_per_branch_prefix",
+      "correction_budget_mm": 0.1,
+      "clearance_mm": 1e-08,
+      "max_refinement_levels": 2,
+      "geometry": "independent_cumulative_reference_8192_area_samples_and_all_vertices",
+      "candidate_attempts": 1,
+      "fallback": "none",
+      "embedding": "CGAL_EPECK_all_faces_before_parent_feedback"
+    },
+    "paired_input_policy": "equal_parent_and_tool_share_CSG_then_equal_source_labels_tool_share_raw_GPU",
+    "paired_entry_sha256": "2843f8fa59d54c1eee76c3b9999c1a0f68b90ce53d29c415db2bbe620126073a",
+    "reference_recovery": "independent_initial_tool_replay_plus_exact_saved_embedding",
+    "timing_scope": "shared_GPU_cost_is_counted_once_not_candidate_speedup"
+  }
+}

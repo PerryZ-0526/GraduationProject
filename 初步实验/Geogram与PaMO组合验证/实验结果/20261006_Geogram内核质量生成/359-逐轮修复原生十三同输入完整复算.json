@@ -1,0 +1,5322 @@
+{
+  "生成时间": "2026-10-06T23:46:38+08:00",
+  "修改时间及修改内容": "首次对全部实际重复质量及同源几何完整复算",
+  "文档概述": "原生内部质量生成开发；首份静态准确检查与重复质量分别列明",
+  "索引目录": [
+    "cases",
+    "all_repeat_quality"
+  ],
+  "status": "completed_all_182_saved_quality_recomputations_and_thirteen_geometry_timing_pairs",
+  "source_record_sha256": "04bd9d08667224399c429bf501677f42759779605e42aa53b507bd0a281c6cfc",
+  "detector_sha256": "5e7460c215b2dbd1ba0883bf0c01f5e3a7ba620e42ca76e177bc394a46041006",
+  "auditor_sha256": "130bfb0a536eed1a5d8de6954a966ec4f67424723a781f52ef9408351b97f1a9",
+  "cases": [
+    {
+      "case": "未见普通切口_00",
+      "index": 0,
+      "input_parent_quality": {
+        "faces": 1280,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0926021366322
+      },
+      "parent_sha256": "0d86f2fe7a0fd6fa20a3b72914ea3ab91340b4bc0b813eea0ee97292e074d093",
+      "tool_sha256": "095c99324ce170b875f15e540f27c506c307d221f25da77ee5f29b03f38bd432",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 1500,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 60,
+            "below_10_area_mm2": 0.12745817690196093,
+            "below_10_fraction": 0.04,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 519.0768870914535
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 1500,
+              "max": 1500
+            },
+            "below_10_faces": {
+              "min": 60,
+              "max": 60
+            },
+            "below_10_area_mm2": {
+              "min": 0.12745817690196093,
+              "max": 0.12745817690196093
+            },
+            "volume_mm3": {
+              "min": 519.0768870914535,
+              "max": 519.0768870914535
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":752,\"faces\":1500,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 24.411856,
+            "median_ms": 24.893210500000002,
+            "p95_ms": 27.423444,
+            "max_ms": 28.128895,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 30.362475663423538,
+            "median_ms": 30.704461270943284,
+            "p95_ms": 33.80587894935161,
+            "max_ms": 34.75147532299161,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 1540,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 41,
+            "below_10_area_mm2": 0.05553081481827744,
+            "below_10_fraction": 0.026623376623376622,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 519.0768870914534
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 1540,
+              "max": 1540
+            },
+            "below_10_faces": {
+              "min": 41,
+              "max": 41
+            },
+            "below_10_area_mm2": {
+              "min": 0.05553081481827744,
+              "max": 0.05553081481827744
+            },
+            "volume_mm3": {
+              "min": 519.0768870914534,
+              "max": 519.0768870914534
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":772,\"faces\":1540,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 58.545872,
+            "median_ms": 59.747861,
+            "p95_ms": 60.948730499999996,
+            "max_ms": 61.120455,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 63.7794379144907,
+            "median_ms": 65.10611693374813,
+            "p95_ms": 66.96604238823056,
+            "max_ms": 66.99002021923661,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 1.7918072902916016e-15,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 8.903441835098303e-16,
+            "0.95": 9.222205069512407e-16,
+            "0.99": 1.0175362097255202e-15,
+            "1": 1.7918072902916016e-15
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 1.0175362097255202e-15,
+          "all_vertices_max_mm": 6.377745716588144e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 8.903441835098303e-16,
+            "0.95": 9.222205069512407e-16,
+            "0.99": 1.0175362097255202e-15,
+            "1": 1.0175362097255202e-15
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -19,
+      "bad_area_change_mm2": -0.0719273620836835,
+      "boolean_median_ratio": 2.400166945119433
+    },
+    {
+      "case": "未见普通切口_01",
+      "index": 1,
+      "input_parent_quality": {
+        "faces": 1280,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.7829227770989
+      },
+      "parent_sha256": "c9f11be3cdb8c37c87bd443012cc4c8874beb42b0a21a04be52ef4173eca5b14",
+      "tool_sha256": "2b9e6e3a5f8e6a53a32962987846e8f55dd45a019a1e712102b8c3e077aedbbe",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 1510,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 55,
+            "below_10_area_mm2": 0.32468727079416737,
+            "below_10_fraction": 0.03642384105960265,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 533.732527671951
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 1510,
+              "max": 1510
+            },
+            "below_10_faces": {
+              "min": 55,
+              "max": 55
+            },
+            "below_10_area_mm2": {
+              "min": 0.3246872707941673,
+              "max": 0.32468727079416737
+            },
+            "volume_mm3": {
+              "min": 533.732527671951,
+              "max": 533.732527671951
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":757,\"faces\":1510,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 24.529983,
+            "median_ms": 25.399062999999998,
+            "p95_ms": 29.935098,
+            "max_ms": 30.597006,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 29.516146052628756,
+            "median_ms": 31.31312085315585,
+            "p95_ms": 35.78998986631632,
+            "max_ms": 36.359628196805716,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 1552,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 29,
+            "below_10_area_mm2": 0.18928282582665262,
+            "below_10_fraction": 0.018685567010309278,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 533.732527671951
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 1552,
+              "max": 1552
+            },
+            "below_10_faces": {
+              "min": 29,
+              "max": 29
+            },
+            "below_10_area_mm2": {
+              "min": 0.18928282582665262,
+              "max": 0.18928282582665262
+            },
+            "volume_mm3": {
+              "min": 533.732527671951,
+              "max": 533.732527671951
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":778,\"faces\":1552,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 53.719599,
+            "median_ms": 56.096962500000004,
+            "p95_ms": 61.46526,
+            "max_ms": 62.609776,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 59.071762021631,
+            "median_ms": 61.60790892317891,
+            "p95_ms": 68.60827759373933,
+            "max_ms": 70.37114817649126,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 1.3322676295501878e-15,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 8.881784197001252e-16,
+            "0.95": 9.222205069512407e-16,
+            "0.99": 9.992007221626409e-16,
+            "1": 1.3322676295501878e-15
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 1.8149684782055937e-15,
+          "all_vertices_max_mm": 1.0175362097255202e-15,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 8.881784197001252e-16,
+            "0.95": 9.222205069512407e-16,
+            "0.99": 1.0175362097255202e-15,
+            "1": 1.8149684782055937e-15
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -26,
+      "bad_area_change_mm2": -0.13540444496751475,
+      "boolean_median_ratio": 2.208623306300709
+    },
+    {
+      "case": "未见普通切口_02",
+      "index": 2,
+      "input_parent_quality": {
+        "faces": 1280,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.527877095672
+      },
+      "parent_sha256": "f2924f9d152eef1c6b53019d36c0ce663ccc59d379b083bee51b1b168f338561",
+      "tool_sha256": "8ac270269444f0fb1820640d8b9675416e883f622614d697868cec2fbe68b80c",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 1498,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 54,
+            "below_10_area_mm2": 0.3763283493968261,
+            "below_10_fraction": 0.036048064085447265,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 609.4401336766946
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 1498,
+              "max": 1498
+            },
+            "below_10_faces": {
+              "min": 54,
+              "max": 54
+            },
+            "below_10_area_mm2": {
+              "min": 0.3763283493968261,
+              "max": 0.3763283493968261
+            },
+            "volume_mm3": {
+              "min": 609.4401336766946,
+              "max": 609.4401336766946
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":751,\"faces\":1498,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 24.377883,
+            "median_ms": 25.6658005,
+            "p95_ms": 31.41022375,
+            "max_ms": 31.455019,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 29.702106956392527,
+            "median_ms": 31.124246073886752,
+            "p95_ms": 37.738798069767654,
+            "max_ms": 37.952051032334566,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 1514,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 45,
+            "below_10_area_mm2": 0.17386833494472234,
+            "below_10_fraction": 0.029722589167767502,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 609.4401336766946
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 1514,
+              "max": 1514
+            },
+            "below_10_faces": {
+              "min": 45,
+              "max": 45
+            },
+            "below_10_area_mm2": {
+              "min": 0.1738683349447223,
+              "max": 0.17386833494472234
+            },
+            "volume_mm3": {
+              "min": 609.4401336766946,
+              "max": 609.4401336766946
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":759,\"faces\":1514,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 47.903277,
+            "median_ms": 49.7309855,
+            "p95_ms": 227.0863865,
+            "max_ms": 285.515506,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 53.30286081880331,
+            "median_ms": 56.32922658696771,
+            "p95_ms": 233.36025490425527,
+            "max_ms": 292.05921990796924,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 1.8092292650409306e-15,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 8.901685767732399e-16,
+            "0.95": 9.222205069512407e-16,
+            "0.99": 1.0175362097255202e-15,
+            "1": 1.8092292650409306e-15
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 1.2755491433176288e-15,
+          "all_vertices_max_mm": 9.42055475210265e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 8.887156142752855e-16,
+            "0.95": 9.222205069512407e-16,
+            "0.99": 1.0175362097255202e-15,
+            "1": 1.2755491433176288e-15
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -9,
+      "bad_area_change_mm2": -0.20246001445210374,
+      "boolean_median_ratio": 1.937636252568861
+    },
+    {
+      "case": "未见薄壁_0.018毫米",
+      "index": 3,
+      "input_parent_quality": {
+        "faces": 12,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 8,
+        "below_10_area_mm2": 0.144,
+        "below_10_fraction": 0.6666666666666666,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.072
+      },
+      "parent_sha256": "029fbc16f2abafd213baee052dbeb6b3e661980424d04c8456b7ac766f0261ab",
+      "tool_sha256": "2dcce11ef851a596410645f79f0e7de1c55b139f1acbc63bc195d224afd9519d",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 162,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 50,
+            "below_10_area_mm2": 0.21135995168384836,
+            "below_10_fraction": 0.30864197530864196,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 0.0719981708653696
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 162,
+              "max": 162
+            },
+            "below_10_faces": {
+              "min": 50,
+              "max": 50
+            },
+            "below_10_area_mm2": {
+              "min": 0.21135995168384836,
+              "max": 0.21135995168384836
+            },
+            "volume_mm3": {
+              "min": 0.0719981708653696,
+              "max": 0.0719981708653696
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":83,\"faces\":162,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 10.745166,
+            "median_ms": 10.904052,
+            "p95_ms": 16.0462795,
+            "max_ms": 16.714776,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 14.43795207887888,
+            "median_ms": 14.66942997649312,
+            "p95_ms": 20.046321558766067,
+            "max_ms": 20.69645607843995,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 1084,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 0,
+            "below_10_area_mm2": 0.0,
+            "below_10_fraction": 0.0,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 0.0719981708653696
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 1084,
+              "max": 1084
+            },
+            "below_10_faces": {
+              "min": 0,
+              "max": 0
+            },
+            "below_10_area_mm2": {
+              "min": 0.0,
+              "max": 0.0
+            },
+            "volume_mm3": {
+              "min": 0.0719981708653696,
+              "max": 0.07199817086536961
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":544,\"faces\":1084,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 36.332573,
+            "median_ms": 37.4562435,
+            "p95_ms": 39.94340075,
+            "max_ms": 40.130918,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 40.971383918076754,
+            "median_ms": 42.58226044476032,
+            "p95_ms": 44.65602233540267,
+            "max_ms": 44.77591020986438,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 1.1102230246251565e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 1.734723475976807e-18,
+            "0.95": 1.734723475976807e-18,
+            "0.99": 1.734723475976807e-18,
+            "1": 1.1102230246251565e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 2.220446049250313e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 1.734723475976807e-18,
+            "0.95": 1.734723475976807e-18,
+            "0.99": 1.734723475976807e-18,
+            "1": 2.220446049250313e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -50,
+      "bad_area_change_mm2": -0.21135995168384836,
+      "boolean_median_ratio": 3.4350756489422465
+    },
+    {
+      "case": "未见薄壁_0.036毫米",
+      "index": 4,
+      "input_parent_quality": {
+        "faces": 12,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 8,
+        "below_10_area_mm2": 0.288,
+        "below_10_fraction": 0.6666666666666666,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.144
+      },
+      "parent_sha256": "bea1e7f53ff696ebbd8784270aed5dfbb1a23ed78b456e8061eecc5dd13bb777",
+      "tool_sha256": "64c8af6f6dd9195c7b23eb7fae5286865ad23c6eafec75b5fa04dbf6f1e6390d",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 162,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 50,
+            "below_10_area_mm2": 0.3553599516838484,
+            "below_10_fraction": 0.30864197530864196,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 0.1439981708653696
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 162,
+              "max": 162
+            },
+            "below_10_faces": {
+              "min": 50,
+              "max": 50
+            },
+            "below_10_area_mm2": {
+              "min": 0.3553599516838484,
+              "max": 0.3553599516838484
+            },
+            "volume_mm3": {
+              "min": 0.1439981708653696,
+              "max": 0.1439981708653696
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":83,\"faces\":162,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 10.671949,
+            "median_ms": 10.7964905,
+            "p95_ms": 11.12175575,
+            "max_ms": 11.200613,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 14.293962623924017,
+            "median_ms": 14.541460666805506,
+            "p95_ms": 14.83830192591995,
+            "max_ms": 14.908644836395979,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 642,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 0,
+            "below_10_area_mm2": 0.0,
+            "below_10_fraction": 0.0,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 0.1439981708653696
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 642,
+              "max": 642
+            },
+            "below_10_faces": {
+              "min": 0,
+              "max": 0
+            },
+            "below_10_area_mm2": {
+              "min": 0.0,
+              "max": 0.0
+            },
+            "volume_mm3": {
+              "min": 0.1439981708653696,
+              "max": 0.1439981708653696
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":323,\"faces\":642,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 24.128876,
+            "median_ms": 24.4464215,
+            "p95_ms": 24.89548575,
+            "max_ms": 25.010342,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 28.157558757811785,
+            "median_ms": 28.767524287104607,
+            "p95_ms": 29.30744201876223,
+            "max_ms": 29.454634990543127,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 1.1102230246251565e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.469446951953614e-18,
+            "0.95": 3.469446951953614e-18,
+            "0.99": 3.469446951953614e-18,
+            "1": 1.1102230246251565e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 1.1102230246251565e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.469446951953614e-18,
+            "0.95": 3.469446951953614e-18,
+            "0.99": 3.469446951953614e-18,
+            "1": 1.1102230246251565e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -50,
+      "bad_area_change_mm2": -0.3553599516838484,
+      "boolean_median_ratio": 2.2642933368023614
+    },
+    {
+      "case": "未见窄缝_0.018毫米",
+      "index": 5,
+      "input_parent_quality": {
+        "faces": 24,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999999999999996
+      },
+      "parent_sha256": "0c066a00280e2d28001326db7a3ca188d6d53f9a063d4f561eec83de842b0733",
+      "tool_sha256": "2a7ddf321d4b5121e1761a58e9689bfa544cdf902480a0f3e115186e46c665db",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 174,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 42,
+            "below_10_area_mm2": 0.050422054870205076,
+            "below_10_fraction": 0.2413793103448276,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 4,
+            "volume_mm3": 3.999998170865369
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 174,
+              "max": 174
+            },
+            "below_10_faces": {
+              "min": 42,
+              "max": 42
+            },
+            "below_10_area_mm2": {
+              "min": 0.050422054870205076,
+              "max": 0.050422054870205076
+            },
+            "volume_mm3": {
+              "min": 3.999998170865369,
+              "max": 3.9999981708653696
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":91,\"faces\":174,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 12.815073,
+            "median_ms": 13.269444,
+            "p95_ms": 16.62995425,
+            "max_ms": 17.566398,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 16.36941684409976,
+            "median_ms": 17.140275333076715,
+            "p95_ms": 20.60573676135391,
+            "max_ms": 21.477641072124243,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 296,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 0,
+            "below_10_area_mm2": 0.0,
+            "below_10_fraction": 0.0,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 4,
+            "volume_mm3": 3.9999981708653682
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 296,
+              "max": 296
+            },
+            "below_10_faces": {
+              "min": 0,
+              "max": 0
+            },
+            "below_10_area_mm2": {
+              "min": 0.0,
+              "max": 0.0
+            },
+            "volume_mm3": {
+              "min": 3.9999981708653682,
+              "max": 3.9999981708653696
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":152,\"faces\":296,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 19.138262,
+            "median_ms": 20.717871000000002,
+            "p95_ms": 22.10365725,
+            "max_ms": 22.212292,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 22.95776130631566,
+            "median_ms": 25.380491511896253,
+            "p95_ms": 26.251569506712258,
+            "max_ms": 26.360904332250357,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 2.220446049250313e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 0.0,
+            "0.95": 0.0,
+            "0.99": 1.1102230246251565e-16,
+            "1": 2.220446049250313e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 2.220446049250313e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 0.0,
+            "0.95": 0.0,
+            "0.99": 1.1102230246251565e-16,
+            "1": 2.220446049250313e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -42,
+      "bad_area_change_mm2": -0.050422054870205076,
+      "boolean_median_ratio": 1.561321710238952
+    },
+    {
+      "case": "未见窄缝_0.036毫米",
+      "index": 6,
+      "input_parent_quality": {
+        "faces": 24,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 4.0
+      },
+      "parent_sha256": "089b13ba00d9a818d9b1bbcf6d50e0b89402e1b31441cdd902c805868c8da189",
+      "tool_sha256": "2a7ddf321d4b5121e1761a58e9689bfa544cdf902480a0f3e115186e46c665db",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 174,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 42,
+            "below_10_area_mm2": 0.05042205487020508,
+            "below_10_fraction": 0.2413793103448276,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 4,
+            "volume_mm3": 3.9999981708653696
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 174,
+              "max": 174
+            },
+            "below_10_faces": {
+              "min": 42,
+              "max": 42
+            },
+            "below_10_area_mm2": {
+              "min": 0.05042205487020508,
+              "max": 0.05042205487020508
+            },
+            "volume_mm3": {
+              "min": 3.9999981708653696,
+              "max": 3.99999817086537
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":91,\"faces\":174,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 11.264804,
+            "median_ms": 11.619095000000002,
+            "p95_ms": 11.80834675,
+            "max_ms": 11.814955,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 14.80015879496932,
+            "median_ms": 15.280263964086771,
+            "p95_ms": 16.34832250420004,
+            "max_ms": 16.661175061017275,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 288,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 0,
+            "below_10_area_mm2": 0.0,
+            "below_10_fraction": 0.0,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 4,
+            "volume_mm3": 3.9999981708653696
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 288,
+              "max": 288
+            },
+            "below_10_faces": {
+              "min": 0,
+              "max": 0
+            },
+            "below_10_area_mm2": {
+              "min": 0.0,
+              "max": 0.0
+            },
+            "volume_mm3": {
+              "min": 3.9999981708653696,
+              "max": 3.99999817086537
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":148,\"faces\":288,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 16.850007,
+            "median_ms": 16.9720005,
+            "p95_ms": 17.3455825,
+            "max_ms": 17.435796,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 20.50981717184186,
+            "median_ms": 20.71330137550831,
+            "p95_ms": 21.23682340607047,
+            "max_ms": 21.38621686026454,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 2.220446049250313e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 0.0,
+            "0.95": 3.469446951953614e-18,
+            "0.99": 2.220446049250313e-16,
+            "1": 2.220446049250313e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 2.220446049250313e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 0.0,
+            "0.95": 3.469446951953614e-18,
+            "0.99": 2.220446049250313e-16,
+            "1": 2.220446049250313e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -42,
+      "bad_area_change_mm2": -0.05042205487020508,
+      "boolean_median_ratio": 1.4606990045266002
+    },
+    {
+      "case": "未见贯通孔_0.018毫米",
+      "index": 7,
+      "input_parent_quality": {
+        "faces": 4608,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1728,
+        "below_10_area_mm2": 0.8541091856148944,
+        "below_10_fraction": 0.375,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.481447140961914
+      },
+      "parent_sha256": "b07366c7d35fdd3be24bbd181b25e9ebc8c891d74e120df43883d94048b09732",
+      "tool_sha256": "d90d17ac5d3e061db830022637ef2f69284816ee6714841d9827e56a08e9992f",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 4740,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 1781,
+            "below_10_area_mm2": 0.8594123980189758,
+            "below_10_fraction": 0.37573839662447256,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 0,
+            "volume_mm3": 2.481445990917325
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 4740,
+              "max": 4740
+            },
+            "below_10_faces": {
+              "min": 1781,
+              "max": 1781
+            },
+            "below_10_area_mm2": {
+              "min": 0.8594123980189758,
+              "max": 0.8594123980189758
+            },
+            "volume_mm3": {
+              "min": 2.481445990917325,
+              "max": 2.481445990917325
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2370,\"faces\":4740,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 77.521367,
+            "median_ms": 109.2585305,
+            "p95_ms": 224.003048,
+            "max_ms": 256.528638,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 89.8182806558907,
+            "median_ms": 124.21920732595026,
+            "p95_ms": 236.78689659573138,
+            "max_ms": 269.1055224277079,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 45976,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 27,
+            "below_10_area_mm2": 0.004035418610808424,
+            "below_10_fraction": 0.0005872629197842353,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 0,
+            "volume_mm3": 2.4814459909173254
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 45976,
+              "max": 45976
+            },
+            "below_10_faces": {
+              "min": 27,
+              "max": 27
+            },
+            "below_10_area_mm2": {
+              "min": 0.004035418610808423,
+              "max": 0.004035418610808424
+            },
+            "volume_mm3": {
+              "min": 2.4814459909173254,
+              "max": 2.4814459909173254
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":22988,\"faces\":45976,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 303.841196,
+            "median_ms": 306.621639,
+            "p95_ms": 314.61999525,
+            "max_ms": 316.638194,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 357.883807271719,
+            "median_ms": 360.2176168933511,
+            "p95_ms": 368.9542184583843,
+            "max_ms": 370.8097683265805,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 2.387624894196368e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 1.1188630228279524e-16,
+            "0.95": 1.2424057881600194e-16,
+            "0.99": 1.577450533603108e-16,
+            "1": 2.387624894196368e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 2.3724523730670963e-16,
+          "all_vertices_max_mm": 1.6653571243298153e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 1.1188630228279524e-16,
+            "0.95": 1.2417518519112547e-16,
+            "0.99": 1.5838319836915702e-16,
+            "1": 2.3724523730670963e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -1754,
+      "bad_area_change_mm2": -0.8553769794081674,
+      "boolean_median_ratio": 2.806386261986198
+    },
+    {
+      "case": "未见贯通孔_0.036毫米",
+      "index": 8,
+      "input_parent_quality": {
+        "faces": 4608,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1728,
+        "below_10_area_mm2": 0.9205145044124703,
+        "below_10_fraction": 0.375,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525323416538844
+      },
+      "parent_sha256": "ded606931d656b44d3b4dde959f96cec32d56d0bca39dd19a40c0ae1d4fb1779",
+      "tool_sha256": "b5a1ad0c5228732addcc37d157060614574980ae4716d295442617e2f075e908",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 4740,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 1781,
+            "below_10_area_mm2": 0.9259043751575026,
+            "below_10_fraction": 0.37573839662447256,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 0,
+            "volume_mm3": 2.525322266494255
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 4740,
+              "max": 4740
+            },
+            "below_10_faces": {
+              "min": 1781,
+              "max": 1781
+            },
+            "below_10_area_mm2": {
+              "min": 0.9259043751575026,
+              "max": 0.9259043751575026
+            },
+            "volume_mm3": {
+              "min": 2.525322266494255,
+              "max": 2.525322266494255
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2370,\"faces\":4740,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 74.976303,
+            "median_ms": 81.726985,
+            "p95_ms": 94.84917225,
+            "max_ms": 97.589243,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 87.28427486494184,
+            "median_ms": 95.29265598393977,
+            "p95_ms": 108.56427589897066,
+            "max_ms": 111.66282324120402,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 26770,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 25,
+            "below_10_area_mm2": 0.00492064740069452,
+            "below_10_fraction": 0.0009338812103100486,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 0,
+            "volume_mm3": 2.525322266494255
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 26770,
+              "max": 26770
+            },
+            "below_10_faces": {
+              "min": 25,
+              "max": 25
+            },
+            "below_10_area_mm2": {
+              "min": 0.00492064740069452,
+              "max": 0.00492064740069452
+            },
+            "volume_mm3": {
+              "min": 2.525322266494255,
+              "max": 2.525322266494255
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":13385,\"faces\":26770,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 212.490737,
+            "median_ms": 233.114499,
+            "p95_ms": 252.30831975,
+            "max_ms": 255.905881,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 247.0264071598649,
+            "median_ms": 268.13560421578586,
+            "p95_ms": 286.7607823573053,
+            "max_ms": 289.9375781416893,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 2.387624894196368e-16,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 1.1443916996305594e-16,
+            "0.95": 1.249000902703301e-16,
+            "0.99": 1.594436429147036e-16,
+            "1": 2.387624894196368e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 2.3055512673781017e-16,
+          "all_vertices_max_mm": 1.1102569054260746e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 1.1188630228279524e-16,
+            "0.95": 1.249000902703301e-16,
+            "0.99": 1.6653345369377348e-16,
+            "1": 2.3055512673781017e-16
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -1756,
+      "bad_area_change_mm2": -0.920983727756808,
+      "boolean_median_ratio": 2.8523565258158
+    },
+    {
+      "case": "既有真实CT原始父输入_00",
+      "index": 9,
+      "input_parent_quality": {
+        "faces": 44694,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 607,
+        "below_10_area_mm2": 336.8331135573909,
+        "below_10_fraction": 0.01358124132993243,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62240.10052927671
+      },
+      "parent_sha256": "feea66dbcf0132890d0a88440431b8f6ac00be9691a6e3a3e309ca0789a58af2",
+      "tool_sha256": "cbd73586ef30987c5c6b7bd3452a37e510fe2cd6c15393a884064c1e60dc4c62",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 43868,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 796,
+            "below_10_area_mm2": 337.3037476965558,
+            "below_10_fraction": 0.018145345126287956,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 62228.80494414765
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 43868,
+              "max": 43868
+            },
+            "below_10_faces": {
+              "min": 796,
+              "max": 796
+            },
+            "below_10_area_mm2": {
+              "min": 337.3037476965558,
+              "max": 337.3037476965558
+            },
+            "volume_mm3": {
+              "min": 62228.80494414765,
+              "max": 62228.80494414765
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":21936,\"faces\":43868,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 607.126233,
+            "median_ms": 622.3919195,
+            "p95_ms": 663.7893240000001,
+            "max_ms": 666.836803,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 726.1883546598256,
+            "median_ms": 747.6557604968548,
+            "p95_ms": 802.8660365380347,
+            "max_ms": 812.0167520828545,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 44050,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 768,
+            "below_10_area_mm2": 337.12856837144074,
+            "below_10_fraction": 0.017434733257661747,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 62228.804944147654
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 44050,
+              "max": 44050
+            },
+            "below_10_faces": {
+              "min": 768,
+              "max": 768
+            },
+            "below_10_area_mm2": {
+              "min": 337.12856837144074,
+              "max": 337.12856837144074
+            },
+            "volume_mm3": {
+              "min": 62228.804944147654,
+              "max": 62228.804944147654
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":22027,\"faces\":44050,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 1025.855731,
+            "median_ms": 1062.8085405,
+            "p95_ms": 1206.9598935,
+            "max_ms": 1251.66942,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 1148.725853767246,
+            "median_ms": 1216.1154663190246,
+            "p95_ms": 1354.9649599008262,
+            "max_ms": 1373.9937688224018,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 1.7404671430534633e-14,
+          "all_vertices_max_mm": 0.0,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.552713678800501e-15,
+            "0.95": 3.66205343881779e-15,
+            "0.99": 7.944109290391274e-15,
+            "1": 1.7404671430534633e-14
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 1.6758116906701664e-14,
+          "all_vertices_max_mm": 5.383794727051534e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.552713678800501e-15,
+            "0.95": 3.972054645195637e-15,
+            "0.99": 7.944109290391274e-15,
+            "1": 1.6758116906701664e-14
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -28,
+      "bad_area_change_mm2": -0.17517932511503886,
+      "boolean_median_ratio": 1.7076194391370147
+    },
+    {
+      "case": "既有真实CT原始父输入_15",
+      "index": 10,
+      "input_parent_quality": {
+        "faces": 49100,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 471,
+        "below_10_area_mm2": 140.89768189592124,
+        "below_10_fraction": 0.00959266802443992,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62217.34873954341
+      },
+      "parent_sha256": "c272b07b4bb8d5e074e875fc2e6d28ca209ca58cb700d4e2936872f5a9043d72",
+      "tool_sha256": "d5e9ba8a14fc095c3288abecdf5f1d956ccc62b43a1444063d3c81b99bc07a2a",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 49022,
+            "nonpositive_or_nonfinite_faces": 2,
+            "below_10_faces": 634,
+            "below_10_area_mm2": 141.13298581382935,
+            "below_10_fraction": 0.01293296887111909,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 62216.3613490313
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 49022,
+              "max": 49022
+            },
+            "below_10_faces": {
+              "min": 634,
+              "max": 636
+            },
+            "below_10_area_mm2": {
+              "min": 141.1327640728447,
+              "max": 141.13301186350327
+            },
+            "volume_mm3": {
+              "min": 62216.3613490313,
+              "max": 62216.3613490313
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 2,
+              "max": 2
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":24513,\"faces\":49022,\"closed\":true,\"self_intersection_pairs\":8,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[[47886,47886],[48980,48980],[48397,48399],[48398,48399],[48981,48399],[48397,48978],[48398,48978],[48981,48978]]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": false,
+          "boolean_timing": {
+            "min_ms": 659.729195,
+            "median_ms": 678.886823,
+            "p95_ms": 764.6759895,
+            "max_ms": 787.181136,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 787.9616124555469,
+            "median_ms": 807.2934511583298,
+            "p95_ms": 892.8483832860366,
+            "max_ms": 916.1595529876649,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 49152,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 568,
+            "below_10_area_mm2": 141.01836822606546,
+            "below_10_fraction": 0.011555989583333334,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 62216.36134903128
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 49152,
+              "max": 49154
+            },
+            "below_10_faces": {
+              "min": 567,
+              "max": 570
+            },
+            "below_10_area_mm2": {
+              "min": 141.01836822606546,
+              "max": 141.0185890016876
+            },
+            "volume_mm3": {
+              "min": 62216.36134903128,
+              "max": 62216.36134903128
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":24578,\"faces\":49152,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 1236.20414,
+            "median_ms": 1284.339858,
+            "p95_ms": 1453.49774075,
+            "max_ms": 1500.533135,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 1366.3865830749273,
+            "median_ms": 1413.8148266356438,
+            "p95_ms": 1582.3946798918769,
+            "max_ms": 1629.6287728473544,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 2.842170943040401e-14,
+          "all_vertices_max_mm": 2.2887833992611187e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.552713678800501e-15,
+            "0.95": 3.972054645195637e-15,
+            "0.99": 7.944109290391274e-15,
+            "1": 2.842170943040401e-14
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 2.040878629308206e-14,
+          "all_vertices_max_mm": 5.200468367758596e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.552713678800501e-15,
+            "0.95": 3.6651271767451885e-15,
+            "0.99": 7.944109290391274e-15,
+            "1": 2.040878629308206e-14
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -66,
+      "bad_area_change_mm2": -0.1146175877638882,
+      "boolean_median_ratio": 1.891832061674881
+    },
+    {
+      "case": "原生CT第二刀机器尺度新边自交负例",
+      "index": 11,
+      "input_parent_quality": {
+        "faces": 44052,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 768,
+        "below_10_area_mm2": 337.1295080746595,
+        "below_10_fraction": 0.017433941705257423,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.804944147654
+      },
+      "parent_sha256": "8d5590f6e8f55f5b24007da3ae13b583f9d59622ed86a8a53a919ec607abb318",
+      "tool_sha256": "969b169e548770eccd368d6b6c33c6196a49bc4ecd76c853977225335cb8ab8d",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 43932,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 859,
+            "below_10_area_mm2": 337.2815249500558,
+            "below_10_fraction": 0.01955294546116726,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 62227.81252746491
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 43932,
+              "max": 43932
+            },
+            "below_10_faces": {
+              "min": 859,
+              "max": 859
+            },
+            "below_10_area_mm2": {
+              "min": 337.2815249500558,
+              "max": 337.2815249500558
+            },
+            "volume_mm3": {
+              "min": 62227.81252746491,
+              "max": 62227.81252746491
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":21968,\"faces\":43932,\"closed\":true,\"self_intersection_pairs\":2,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[[43605,42730],[43605,42847]]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": false,
+          "boolean_timing": {
+            "min_ms": 584.514592,
+            "median_ms": 592.6622895,
+            "p95_ms": 629.1265605,
+            "max_ms": 633.918284,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 705.1778477616608,
+            "median_ms": 732.3459964245558,
+            "p95_ms": 880.0329066580161,
+            "max_ms": 921.0804598405957,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 44116,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 813,
+            "below_10_area_mm2": 337.19444174088494,
+            "below_10_fraction": 0.018428688004352163,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 62227.81252746491
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 44116,
+              "max": 44118
+            },
+            "below_10_faces": {
+              "min": 813,
+              "max": 815
+            },
+            "below_10_area_mm2": {
+              "min": 337.19444174088494,
+              "max": 337.19444174088494
+            },
+            "volume_mm3": {
+              "min": 62227.81252746491,
+              "max": 62227.81252746491
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":22060,\"faces\":44116,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 1034.262176,
+            "median_ms": 1045.4624785,
+            "p95_ms": 1161.149981,
+            "max_ms": 1187.259297,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 1153.9557450450957,
+            "median_ms": 1166.99346806854,
+            "p95_ms": 1283.9456434594467,
+            "max_ms": 1310.6831419281662,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 2.040878629308206e-14,
+          "all_vertices_max_mm": 4.449557262054371e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.552713678800501e-15,
+            "0.95": 3.972054645195637e-15,
+            "0.99": 7.944109290391274e-15,
+            "1": 2.040878629308206e-14
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 1.7130564986077266e-14,
+          "all_vertices_max_mm": 5.551115123125783e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.552713678800501e-15,
+            "0.95": 3.972054645195637e-15,
+            "0.99": 7.944109290391274e-15,
+            "1": 1.7130564986077266e-14
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -46,
+      "bad_area_change_mm2": -0.08708320917088486,
+      "boolean_median_ratio": 1.7640104609692735
+    },
+    {
+      "case": "原生CT新父第二刀实际超时负例",
+      "index": 12,
+      "input_parent_quality": {
+        "faces": 43998,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 755,
+        "below_10_area_mm2": 337.1385860612734,
+        "below_10_fraction": 0.017159870903222872,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.80494414765
+      },
+      "parent_sha256": "288a7552c3680cd9fc809f685a00de67035bb9c10712b1ff77372a9df7c1cdfc",
+      "tool_sha256": "969b169e548770eccd368d6b6c33c6196a49bc4ecd76c853977225335cb8ab8d",
+      "methods": {
+        "baseline": {
+          "quality": {
+            "faces": 43944,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 850,
+            "below_10_area_mm2": 337.284259941722,
+            "below_10_fraction": 0.01934279992718005,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 62227.81252746491
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 43944,
+              "max": 43944
+            },
+            "below_10_faces": {
+              "min": 850,
+              "max": 850
+            },
+            "below_10_area_mm2": {
+              "min": 337.284259941722,
+              "max": 337.284259941722
+            },
+            "volume_mm3": {
+              "min": 62227.81252746491,
+              "max": 62227.81252746491
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":21974,\"faces\":43944,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 560.616684,
+            "median_ms": 575.23993,
+            "p95_ms": 752.99949125,
+            "max_ms": 811.516003,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 679.7823118977249,
+            "median_ms": 692.5937628839165,
+            "p95_ms": 873.057147837244,
+            "max_ms": 932.4127724394202,
+            "repeats": 6
+          }
+        },
+        "candidate": {
+          "quality": {
+            "faces": 44048,
+            "nonpositive_or_nonfinite_faces": 0,
+            "below_10_faces": 802,
+            "below_10_area_mm2": 337.19523933974756,
+            "below_10_fraction": 0.018207410098074826,
+            "watertight": true,
+            "winding_consistent": true,
+            "euler_number": 2,
+            "volume_mm3": 62227.81252746491
+          },
+          "repeat_quality_ranges": {
+            "faces": {
+              "min": 44048,
+              "max": 44048
+            },
+            "below_10_faces": {
+              "min": 802,
+              "max": 802
+            },
+            "below_10_area_mm2": {
+              "min": 337.19523933974756,
+              "max": 337.19523933974756
+            },
+            "volume_mm3": {
+              "min": 62227.81252746491,
+              "max": 62227.81252746491
+            },
+            "nonpositive_or_nonfinite_faces": {
+              "min": 0,
+              "max": 0
+            }
+          },
+          "native_first_output_audit": {
+            "returncode": 0,
+            "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":22026,\"faces\":44048,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"listed_pair_limit\":32,\"intersection_face_ids\":[]}\n",
+            "stderr": ""
+          },
+          "first_output_embedded_closed": true,
+          "boolean_timing": {
+            "min_ms": 1028.445534,
+            "median_ms": 1067.505465,
+            "p95_ms": 1102.4894375,
+            "max_ms": 1103.958788,
+            "repeats": 6
+          },
+          "process_timing": {
+            "min_ms": 1147.6059551350772,
+            "median_ms": 1189.0149870887399,
+            "p95_ms": 1369.1851231269538,
+            "max_ms": 1417.8796727210283,
+            "repeats": 6
+          }
+        }
+      },
+      "geometry": {
+        "baseline_to_candidate": {
+          "area_max_mm": 1.699765591301329e-14,
+          "all_vertices_max_mm": 4.449557262054371e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.552713678800501e-15,
+            "0.95": 3.972054645195637e-15,
+            "0.99": 7.944109290391274e-15,
+            "1": 1.699765591301329e-14
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        },
+        "candidate_to_baseline": {
+          "area_max_mm": 1.778575899402738e-14,
+          "all_vertices_max_mm": 5.142277524252921e-16,
+          "area_quantiles_mm": {
+            "0.5": 0.0,
+            "0.9": 3.552713678800501e-15,
+            "0.95": 3.972054645195637e-15,
+            "0.99": 7.944109290391274e-15,
+            "1": 1.778575899402738e-14
+          },
+          "area_within_distance_fraction": {
+            "0.01": 1.0,
+            "0.05": 1.0,
+            "0.1": 1.0,
+            "0.15": 1.0,
+            "0.2": 1.0
+          }
+        }
+      },
+      "bad_count_change": -48,
+      "bad_area_change_mm2": -0.08902060197442552,
+      "boolean_median_ratio": 1.8557568926065338
+    }
+  ],
+  "all_repeat_quality": [
+    {
+      "case_index": 0,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "615b521a9a10ff0fcbdf0e4ee26fcd5563f6b3a8ed10504be9d30cc9678723d0",
+      "quality": {
+        "faces": 1500,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 60,
+        "below_10_area_mm2": 0.12745817690196093,
+        "below_10_fraction": 0.04,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914535
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "e2f553deda3c6ec96ab3073372ce572f24e72a4f9837f302f88ad5a4ee1483a9",
+      "quality": {
+        "faces": 1500,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 60,
+        "below_10_area_mm2": 0.12745817690196093,
+        "below_10_fraction": 0.04,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914535
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "2698b785965156c4b43cee292a2c16082be06fcf30b5a0137821c927eb27af9b",
+      "quality": {
+        "faces": 1500,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 60,
+        "below_10_area_mm2": 0.12745817690196093,
+        "below_10_fraction": 0.04,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914535
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "cad7fd9dadae6bcddb0eb3e780ff4bc83b3d684bd9b49203297b8a6ddae7bcc7",
+      "quality": {
+        "faces": 1500,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 60,
+        "below_10_area_mm2": 0.12745817690196093,
+        "below_10_fraction": 0.04,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914535
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "90be359d48312ccc0a091be56ceaa513e541d025d8eef96e99874ce6270a3105",
+      "quality": {
+        "faces": 1500,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 60,
+        "below_10_area_mm2": 0.12745817690196093,
+        "below_10_fraction": 0.04,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914535
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "37f2ef9efdfb1ff5d7dee7a526340ce996fffd5e7adc5253a4d365fc641b7014",
+      "quality": {
+        "faces": 1500,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 60,
+        "below_10_area_mm2": 0.12745817690196093,
+        "below_10_fraction": 0.04,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914535
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "c63690cdab77cefbb18f4fdeab65902d26acfd0f2a71ad00b04c178214d537c4",
+      "quality": {
+        "faces": 1500,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 60,
+        "below_10_area_mm2": 0.12745817690196093,
+        "below_10_fraction": 0.04,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914535
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "fdb9263d4135622378bcb821616f83fb113667127cb48c3d693bab7ca5013758",
+      "quality": {
+        "faces": 1540,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 41,
+        "below_10_area_mm2": 0.05553081481827744,
+        "below_10_fraction": 0.026623376623376622,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914534
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "fbafd5ba6c025dbd2dc6b5c112eeedc4051af8f97e1bcff6579108b06681d43b",
+      "quality": {
+        "faces": 1540,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 41,
+        "below_10_area_mm2": 0.05553081481827744,
+        "below_10_fraction": 0.026623376623376622,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914534
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "d93babb1b2ced5e4fcbbe621a41fdd493280bf7ead7654f208d0dc5574313e74",
+      "quality": {
+        "faces": 1540,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 41,
+        "below_10_area_mm2": 0.05553081481827744,
+        "below_10_fraction": 0.026623376623376622,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914534
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "989bb18fd8833d37670622c58d65921a7f3bdce3a7426863cb08016235ddeb44",
+      "quality": {
+        "faces": 1540,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 41,
+        "below_10_area_mm2": 0.05553081481827744,
+        "below_10_fraction": 0.026623376623376622,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914534
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "52516a86f70ff1fe6ae9dd395aeff6694ecc3ac05d1d145ede431bb01e4ef627",
+      "quality": {
+        "faces": 1540,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 41,
+        "below_10_area_mm2": 0.05553081481827744,
+        "below_10_fraction": 0.026623376623376622,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914534
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "684541a75f6ffd7be85ff3a1e0f3d51ef3896986c82a09c164ae0696c1328314",
+      "quality": {
+        "faces": 1540,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 41,
+        "below_10_area_mm2": 0.05553081481827744,
+        "below_10_fraction": 0.026623376623376622,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914534
+      }
+    },
+    {
+      "case_index": 0,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "368838a77039f8de174318afd09422fcfe35ce3f6e3952980ab68745c3cf78d0",
+      "quality": {
+        "faces": 1540,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 41,
+        "below_10_area_mm2": 0.05553081481827744,
+        "below_10_fraction": 0.026623376623376622,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 519.0768870914534
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "e6f7c1f5ce2bba6be3aef117f290e003edfe57b4ef8d2cd8056af853896b7cc3",
+      "quality": {
+        "faces": 1510,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 55,
+        "below_10_area_mm2": 0.32468727079416737,
+        "below_10_fraction": 0.03642384105960265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "8a20cddece5cba6d0ede04f3d13bf0e65963b18e9734e9702b4872a06cd3e22d",
+      "quality": {
+        "faces": 1510,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 55,
+        "below_10_area_mm2": 0.32468727079416737,
+        "below_10_fraction": 0.03642384105960265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "1120f065a7abe4bb98fd5aab6fc506e3530864a5f4380384dca5f512e98cf219",
+      "quality": {
+        "faces": 1510,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 55,
+        "below_10_area_mm2": 0.32468727079416737,
+        "below_10_fraction": 0.03642384105960265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "71da172b7a5b2eee01640b38ebc6a7a4e135f3e5d18b4d0fa43d4268a0ace95d",
+      "quality": {
+        "faces": 1510,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 55,
+        "below_10_area_mm2": 0.32468727079416737,
+        "below_10_fraction": 0.03642384105960265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "92940a8d1bca826c145f12fd86c7d485d202bd59e9fb9703c3c0b4700a449cfc",
+      "quality": {
+        "faces": 1510,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 55,
+        "below_10_area_mm2": 0.3246872707941673,
+        "below_10_fraction": 0.03642384105960265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "670dc8c28d27e03a69f36a15bf50fe59ac4cb6821209c786fb52daea50599b26",
+      "quality": {
+        "faces": 1510,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 55,
+        "below_10_area_mm2": 0.3246872707941673,
+        "below_10_fraction": 0.03642384105960265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "bd8b1ba7b0d058acca9b404df83ae234e0da1fbd2f8a165a4ea6d4ad4e3fc0bb",
+      "quality": {
+        "faces": 1510,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 55,
+        "below_10_area_mm2": 0.32468727079416737,
+        "below_10_fraction": 0.03642384105960265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "2599a5ce324fc9fdaf6ae34692bd8eb9c12f2b36747eac5bfc9b84bcfdceeefa",
+      "quality": {
+        "faces": 1552,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 29,
+        "below_10_area_mm2": 0.18928282582665262,
+        "below_10_fraction": 0.018685567010309278,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "502c1a9cd9dd74d93575aa834823f6fb95bf5de7373f7f431addc8f27374a121",
+      "quality": {
+        "faces": 1552,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 29,
+        "below_10_area_mm2": 0.18928282582665262,
+        "below_10_fraction": 0.018685567010309278,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "ff5e0fb4675166bbff0a72b564dcef97bb4a06fb137104935d93fe2b3b953029",
+      "quality": {
+        "faces": 1552,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 29,
+        "below_10_area_mm2": 0.18928282582665262,
+        "below_10_fraction": 0.018685567010309278,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "4e9ce40e103cd5d4a65cec3a9b2f0d485b3f20f857f74c0586c382f25ade23b8",
+      "quality": {
+        "faces": 1552,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 29,
+        "below_10_area_mm2": 0.18928282582665262,
+        "below_10_fraction": 0.018685567010309278,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "c8ab56d3c645c5b0e0d2653354bdf9ba8e09f604286d13ed609d1f88d73ada07",
+      "quality": {
+        "faces": 1552,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 29,
+        "below_10_area_mm2": 0.18928282582665262,
+        "below_10_fraction": 0.018685567010309278,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "1bb32e450d1189e18dbd8da924c4dbf7ae7f16a6c0cfa2ce30bd2c1b310c6c43",
+      "quality": {
+        "faces": 1552,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 29,
+        "below_10_area_mm2": 0.18928282582665262,
+        "below_10_fraction": 0.018685567010309278,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 1,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "26da647d729131696cde85e14f54b675f09c536b0bd459d10a0c19f308c88e62",
+      "quality": {
+        "faces": 1552,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 29,
+        "below_10_area_mm2": 0.18928282582665262,
+        "below_10_fraction": 0.018685567010309278,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 533.732527671951
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "663025fc377aeeafc0352e1efe5d93eab5b51f1120e9a1358485d0e15b625aeb",
+      "quality": {
+        "faces": 1498,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 54,
+        "below_10_area_mm2": 0.3763283493968261,
+        "below_10_fraction": 0.036048064085447265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "de4ea1ec382b4fd4ab37204a218badad39788ef7856f0301da5e1afa9d0557ab",
+      "quality": {
+        "faces": 1498,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 54,
+        "below_10_area_mm2": 0.3763283493968261,
+        "below_10_fraction": 0.036048064085447265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "bc02dfbc19f92107780f14ceef65c78cb46e8d79b5d6525630f62cfd59fbef7e",
+      "quality": {
+        "faces": 1498,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 54,
+        "below_10_area_mm2": 0.3763283493968261,
+        "below_10_fraction": 0.036048064085447265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "8b067119ed000f0f773bee789ba127441a925bb4dd143381faf6da86aaa26662",
+      "quality": {
+        "faces": 1498,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 54,
+        "below_10_area_mm2": 0.3763283493968261,
+        "below_10_fraction": 0.036048064085447265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "aa70c2abb8389b94fd59550bf71a54faacfe3aa78a06f781af564d0434e616bd",
+      "quality": {
+        "faces": 1498,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 54,
+        "below_10_area_mm2": 0.3763283493968261,
+        "below_10_fraction": 0.036048064085447265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "32cca48256d967ad63e896d9a7695de37c28d84ad0ac3f46de3b1de4706e071a",
+      "quality": {
+        "faces": 1498,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 54,
+        "below_10_area_mm2": 0.3763283493968261,
+        "below_10_fraction": 0.036048064085447265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "3e87d57c073ef46ffdfb553aaee82436771f1a2b4fdfad9476152c327603af58",
+      "quality": {
+        "faces": 1498,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 54,
+        "below_10_area_mm2": 0.3763283493968261,
+        "below_10_fraction": 0.036048064085447265,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "0225881c1fd85afa66ff7e75737a437ba63884d99402431cb302ed1d77f44845",
+      "quality": {
+        "faces": 1514,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 45,
+        "below_10_area_mm2": 0.17386833494472234,
+        "below_10_fraction": 0.029722589167767502,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "b7260bfbd606bc4d7fb5691147310002e5da950f0c1a69a9a44c50ef4cb99fd9",
+      "quality": {
+        "faces": 1514,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 45,
+        "below_10_area_mm2": 0.17386833494472234,
+        "below_10_fraction": 0.029722589167767502,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "002e70fa95f255ef66347b7612aa6e8e9f42c9de1a9469b234541ee1c009be55",
+      "quality": {
+        "faces": 1514,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 45,
+        "below_10_area_mm2": 0.17386833494472234,
+        "below_10_fraction": 0.029722589167767502,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "4cb53b6c90d0f3fb4e3f8ed2916ac993c790bc341ff8e954f4bbb2cf3005ce96",
+      "quality": {
+        "faces": 1514,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 45,
+        "below_10_area_mm2": 0.17386833494472234,
+        "below_10_fraction": 0.029722589167767502,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "fa1b71c89422d3d1a3bd47bb58aeb0a8dba09cd0da65e2bc427dea6b604f6e15",
+      "quality": {
+        "faces": 1514,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 45,
+        "below_10_area_mm2": 0.1738683349447223,
+        "below_10_fraction": 0.029722589167767502,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "11ffc6bc265eb0c0880a6f0204d057c732cb8fceaac7ebe0b04a3fa2534879ad",
+      "quality": {
+        "faces": 1514,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 45,
+        "below_10_area_mm2": 0.1738683349447223,
+        "below_10_fraction": 0.029722589167767502,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 2,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "814b4803f2001a74bd24f4b646c58b13d67f96a8a8eddfa0566d52ca85476133",
+      "quality": {
+        "faces": 1514,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 45,
+        "below_10_area_mm2": 0.17386833494472234,
+        "below_10_fraction": 0.029722589167767502,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 609.4401336766946
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "cde3bc904b8e472f4b026c3715d2745976b10b687f8643e17ffcdad0ef83594e",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.21135995168384836,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "834d7f383667f68bbde063461b2d7fcb4629b304a4bdb04927f587de3c4eb8f0",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.21135995168384836,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "1291554b304b134f286da1e637a04683171f4f52362ece13de4e838eb917948f",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.21135995168384836,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "f0c047a346fc30c84fcd6a1fdb59988ac0b3fe7c6c00bb7b63620a49596fa428",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.21135995168384836,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "66cfdd0051a2fb26905c6b8e50dcb2ed269c86851f072961cd95f93b4ca9b52d",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.21135995168384836,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "b597d783c4eb54bf5a05dca30a321ddd68c803540b6e85b96a8333fe7c4d0fa7",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.21135995168384836,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "28fd7854892686b37fe9573912d792f76d32949801f036c7c10c76c416153363",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.21135995168384836,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "a8188b9a569e70ec9f211990a3473ad1bb3e4ec25db57f5c1b5b87612a5c7f2d",
+      "quality": {
+        "faces": 1084,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "d49ea3883adbef6f1be8aa2abc90479519dba9d5a17d01a19ed2562266935ae2",
+      "quality": {
+        "faces": 1084,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "93e0b60527ad1e6cc73bef9092ea1a94abdc897aa42401713453a1f81d4d5c01",
+      "quality": {
+        "faces": 1084,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "26d555cec8c68ab12d39c36278594b598c490fafcdd4efe696ffb32e1fa87da9",
+      "quality": {
+        "faces": 1084,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.07199817086536961
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "830578b35991a7e67570a3124dd15ad8c7822be999883f5202b949d539b6e49a",
+      "quality": {
+        "faces": 1084,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "f346ab011c54ea5466de50f40a1b6656217b60b1a19c599a8ebfa07511eba55c",
+      "quality": {
+        "faces": 1084,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 3,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "d49ea3883adbef6f1be8aa2abc90479519dba9d5a17d01a19ed2562266935ae2",
+      "quality": {
+        "faces": 1084,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.0719981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "c042c7fcb0d70c8b8e33eeebec55f222d44dabb4b2b98a59e92f9b2ce6b94e0e",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.3553599516838484,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "9428bb58c8b624d26d3330fa23d3020dbe14d4595ec26c8b538998bda3252733",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.3553599516838484,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "2636a6210d87a17a195555fe3031602c6a1041b5fa8e97b8f4d690c493fbc3d1",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.3553599516838484,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "c17aa701116b620d3efd1b0e7fd0cd0bb6c5d7456b9373281d77781902181ab3",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.3553599516838484,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "e7670f5dd1a7c4bb2a54653006e5b29deea97dc3b12438fa657e1d477eb026e9",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.3553599516838484,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "eb9852120ca63705d252d61775b948ce17a03b453334e8c326afccb07e9aca10",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.3553599516838484,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "c00ba8d34484547cf9a759d245bd08fa4fb62a64691f1c9b29243994d81563e1",
+      "quality": {
+        "faces": 162,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 50,
+        "below_10_area_mm2": 0.3553599516838484,
+        "below_10_fraction": 0.30864197530864196,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "f07e46ea0737cc6601756ad490f7b48b0be1deab9cbd1044c9372afa60a08e37",
+      "quality": {
+        "faces": 642,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "f9b0892019aa7bd7bddc259b1e4df691aca05a9c218bff3764ba479409c283f3",
+      "quality": {
+        "faces": 642,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "9fe2a8d5af42b7e4b72a90e6be3e2eb583f54de26386aa70fcb3d43378262234",
+      "quality": {
+        "faces": 642,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "5df2c8de54bd208f3f6836a80efaa72baa3a562a3004bf2dd0940a68ee4eb026",
+      "quality": {
+        "faces": 642,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "d745fec6c5636154003caa88819b78841bf2cf7fcf9c9b9c39b350971be708b1",
+      "quality": {
+        "faces": 642,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "6698d0fcabd030d59b99115db94433c9b537605c04e5a51f74c64dc71ffa8402",
+      "quality": {
+        "faces": 642,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 4,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "38779143de531be5c2a06017c971346da88c4713510173c4abbfed87d30795ba",
+      "quality": {
+        "faces": 642,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 0.1439981708653696
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "3b3273d4b10399a2fe02669963feb9bdc080690bdac3717677f43ed7bd64b25f",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.050422054870205076,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.999998170865369
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "01c1540e566fefccf2ed7fdb03525359950a085086dbd2842b5e98dcdeee5d37",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.050422054870205076,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.999998170865369
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "27a06f905761cfd2c07952485a8467a8c7917555de648f3e8f478b4cb3b47a37",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.050422054870205076,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.999998170865369
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "893f1531022addb333efbf00bdbec2bf5091741dcfb8fe0c76c983023a411e9d",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.050422054870205076,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.999998170865369
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "1a8c989251a8f40ade0daec0c48bf900cde7d1b1627ab763128267a96c055228",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.050422054870205076,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "c01f9742474d1062570b9dff2fe8340db3fcf40fc05ab5f8a428c8c943ee003c",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.050422054870205076,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.999998170865369
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "ccae8dc6714b4f9f65fa96a881b693de7236d224e26dc0ec93c0fa79e7253f4e",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.050422054870205076,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.999998170865369
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "e91ded551b88cab2d4f5f221cbec074b3059da1d89fa91ed64bd1891662e0b09",
+      "quality": {
+        "faces": 296,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653682
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "e91ded551b88cab2d4f5f221cbec074b3059da1d89fa91ed64bd1891662e0b09",
+      "quality": {
+        "faces": 296,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653682
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "1d2670c74214e3d95446348708b9054a3a0cb07c9a7c55e914b38a4068e746fd",
+      "quality": {
+        "faces": 296,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.999998170865369
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "e687f07900ee5b385ac658d9c0ad37042700f4129bd43f9afef93b674ec8e180",
+      "quality": {
+        "faces": 296,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653682
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "758ef66d2b6eb1988767ce014a54c2ad77a3c5f2098e8c3d34dfb276f519450d",
+      "quality": {
+        "faces": 296,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "e59b019364d6df6fba32acfe5a12734c557694e3656664f5c6645c537d2bcf25",
+      "quality": {
+        "faces": 296,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653682
+      }
+    },
+    {
+      "case_index": 5,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "34127e1759bc3b26b027354741cd5e7c90063d94cc85838ae7d629909a28cdeb",
+      "quality": {
+        "faces": 296,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653682
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "a8a37dac86ef9dac05709c8e61a5fa11fa3120b729bfe54c2497e81920983504",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.05042205487020508,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.99999817086537
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "d2401d4fb59e894b83fc25aab86d7df0a30bbdfbc905c96e56d0376cb2f0b99d",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.05042205487020508,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "a8a37dac86ef9dac05709c8e61a5fa11fa3120b729bfe54c2497e81920983504",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.05042205487020508,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.99999817086537
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "59dab6380d98e863a9245dec0b0d5f4a3e2e43eec4a2b19b3df48330b0a4d37d",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.05042205487020508,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "194a3f7fe1fc780931839cdc87c556c61f99f706b5454d8c4f3a632e06883818",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.05042205487020508,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "59dab6380d98e863a9245dec0b0d5f4a3e2e43eec4a2b19b3df48330b0a4d37d",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.05042205487020508,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "8febb7b1bd3e2862872e3ad61e61f4cb7bae664ab5e41ac01f0993c692e3be3a",
+      "quality": {
+        "faces": 174,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 42,
+        "below_10_area_mm2": 0.05042205487020508,
+        "below_10_fraction": 0.2413793103448276,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.99999817086537
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "6269643e65bc55b11e9e9b0f1030a9ee0aafb0a98fc4e6f07cb8b6242939b3f1",
+      "quality": {
+        "faces": 288,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "f238aeff2080215c5197efbf6752a7bca14ec4b980e29ccc9429d4111459a268",
+      "quality": {
+        "faces": 288,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "1e2674739d1e8d83da3305d58ad03f75fb0036a2d28245777769b0b87418994f",
+      "quality": {
+        "faces": 288,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "b24e2c31359d9687c70bda9f71049dba6362b3ddf649b945f9376dc0c0961b1b",
+      "quality": {
+        "faces": 288,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "fcf8fb7d287482dc1a04763cd79c58947be959a39c8bc450dd79d0bd0e6c2521",
+      "quality": {
+        "faces": 288,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "df23500adc6a838b92f6773189737d06020da05429a5efaf6f3c923c3d28033f",
+      "quality": {
+        "faces": 288,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.99999817086537
+      }
+    },
+    {
+      "case_index": 6,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "6269643e65bc55b11e9e9b0f1030a9ee0aafb0a98fc4e6f07cb8b6242939b3f1",
+      "quality": {
+        "faces": 288,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 0,
+        "below_10_area_mm2": 0.0,
+        "below_10_fraction": 0.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 4,
+        "volume_mm3": 3.9999981708653696
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "f928a22951c30f35d1ff0a15bdbf4c79f37b02def496db64f294a1c62ed66e1a",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.8594123980189758,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.481445990917325
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "5b96444906010ede7dfb429f8c4192ab1eb46506682db51cc97ec37599f58a34",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.8594123980189758,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.481445990917325
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "2283c94d2cf046e3538acf43684e7f596cec30eed145bbf1f60b1a408c9f7f10",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.8594123980189758,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.481445990917325
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "81d5747739b5e51f7f85abb2ee537f4a80f6b018fc1f833e686304ad01d7b5ca",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.8594123980189758,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.481445990917325
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "4dc6e90dcda0d41f37bd4cbea3806fd93a1da0a87cde4c4cfe0fbafca26e6602",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.8594123980189758,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.481445990917325
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "a30d7c3ea78962f5cd89fe5558af9c98106cee0f9de41d72d5a5ecfb0edf35db",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.8594123980189758,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.481445990917325
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "2ce0a76bb1dea36e557df6b8b6b4889c70e6c02073df8bf4baf4e770847cebd3",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.8594123980189758,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.481445990917325
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "46cc7d54bd241ed13d8a19f2ddf2f25fedbd9f0fae79cbbe343662a74ea36449",
+      "quality": {
+        "faces": 45976,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 27,
+        "below_10_area_mm2": 0.004035418610808424,
+        "below_10_fraction": 0.0005872629197842353,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.4814459909173254
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "78fe1f0873f283b241007850228587265bc00bf1df76929e4acfb9721826c331",
+      "quality": {
+        "faces": 45976,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 27,
+        "below_10_area_mm2": 0.004035418610808424,
+        "below_10_fraction": 0.0005872629197842353,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.4814459909173254
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "ae1cdccd7a6d0cc11a5aec90b1a8cf8475a7827c4738193b712d5061afdd1854",
+      "quality": {
+        "faces": 45976,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 27,
+        "below_10_area_mm2": 0.004035418610808423,
+        "below_10_fraction": 0.0005872629197842353,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.4814459909173254
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "dc5d47de4ba3587e594b61b2b3be97bd207640f23b48c7a7c1cace03c7db8a2b",
+      "quality": {
+        "faces": 45976,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 27,
+        "below_10_area_mm2": 0.004035418610808424,
+        "below_10_fraction": 0.0005872629197842353,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.4814459909173254
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "49a4f6cd96ef3313c54d11038179de5dd6cb92d39be2e20d607e587ee3c109b7",
+      "quality": {
+        "faces": 45976,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 27,
+        "below_10_area_mm2": 0.004035418610808424,
+        "below_10_fraction": 0.0005872629197842353,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.4814459909173254
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "2ac3963187ba25437c652f3a45640a5e26c930f28da01fe3120ebe1004a320a7",
+      "quality": {
+        "faces": 45976,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 27,
+        "below_10_area_mm2": 0.004035418610808424,
+        "below_10_fraction": 0.0005872629197842353,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.4814459909173254
+      }
+    },
+    {
+      "case_index": 7,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "d41f3ca458eb116769e9bcc499689e84b23da2675da8868678ed67372064e40a",
+      "quality": {
+        "faces": 45976,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 27,
+        "below_10_area_mm2": 0.004035418610808424,
+        "below_10_fraction": 0.0005872629197842353,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.4814459909173254
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "7482bf690cfb38daa8e22be61df9fc73111fc5ad55bd569d9e5ba5f1166dbc69",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.9259043751575026,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "640c95a29b8a0e075374f929d88dd6cd310d61b8e8a2ebc6f8752f5a7b79d492",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.9259043751575026,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "20ca9a7bb196461db80ece936697c6c6a3c93a6ef32491e674f5abcfe3cfb7f9",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.9259043751575026,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "e8ecee2c75b43e89ca4b69592035f668ca592b39b02b4786634927824b08e5e4",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.9259043751575026,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "9ebe7a279e287416ae5ef8304b1b9266c8324241ba97191c1181bbdfb45385a9",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.9259043751575026,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "4a00c9f2e4cb5092ffc17fa709a2a1a79f97a9bd5cbf6434761778dc4374a31f",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.9259043751575026,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "160c89f5e6486b746b90949aef60628434dd2f27c1a891339f9119927dff7a9d",
+      "quality": {
+        "faces": 4740,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 1781,
+        "below_10_area_mm2": 0.9259043751575026,
+        "below_10_fraction": 0.37573839662447256,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "f5b61d8747f7d8b64c77328473518a0312b65377e7d6b4db50a51466ed554fe2",
+      "quality": {
+        "faces": 26770,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 25,
+        "below_10_area_mm2": 0.00492064740069452,
+        "below_10_fraction": 0.0009338812103100486,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "9a53d9f5e35afdef1afe469dcd832ff44de8115c590c4cb551bad74fc6c3cfe8",
+      "quality": {
+        "faces": 26770,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 25,
+        "below_10_area_mm2": 0.00492064740069452,
+        "below_10_fraction": 0.0009338812103100486,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "e9bce52a340f0fdcd67c89ed7299510ae8a5aebab7e9794ff523192cb0aa53e3",
+      "quality": {
+        "faces": 26770,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 25,
+        "below_10_area_mm2": 0.00492064740069452,
+        "below_10_fraction": 0.0009338812103100486,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "e29d3011404cb0c2d90b45dc15651bfce58d49ef62d17f13f6cbc7eec959ce6f",
+      "quality": {
+        "faces": 26770,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 25,
+        "below_10_area_mm2": 0.00492064740069452,
+        "below_10_fraction": 0.0009338812103100486,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "97d7a112fb81d9dda28d8aa16ac42de2522f3d5d47409f63e10133c3403ff183",
+      "quality": {
+        "faces": 26770,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 25,
+        "below_10_area_mm2": 0.00492064740069452,
+        "below_10_fraction": 0.0009338812103100486,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "41f59293d0ca8bc091365918a3f51cf24cfb2839002fd9b71b6d898f0738dca4",
+      "quality": {
+        "faces": 26770,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 25,
+        "below_10_area_mm2": 0.00492064740069452,
+        "below_10_fraction": 0.0009338812103100486,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 8,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "3422d0cf96acfe7fd11b5014dfd8ac389765049adad590833cda94f689f6bb57",
+      "quality": {
+        "faces": 26770,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 25,
+        "below_10_area_mm2": 0.00492064740069452,
+        "below_10_fraction": 0.0009338812103100486,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 0,
+        "volume_mm3": 2.525322266494255
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "929303d76f2dc8c7edc7d08be3ded302fbdde90370c1f47040c34cc1d1cb3ebc",
+      "quality": {
+        "faces": 43868,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 796,
+        "below_10_area_mm2": 337.3037476965558,
+        "below_10_fraction": 0.018145345126287956,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.80494414765
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "f0fcb419befa15b13c37366c98226620272d4e14a59604d208050207bb888dae",
+      "quality": {
+        "faces": 43868,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 796,
+        "below_10_area_mm2": 337.3037476965558,
+        "below_10_fraction": 0.018145345126287956,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.80494414765
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "044297f28728513f23879cf840f9deb70e56dda2199c4c0acbb0d8dabe4f46ef",
+      "quality": {
+        "faces": 43868,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 796,
+        "below_10_area_mm2": 337.3037476965558,
+        "below_10_fraction": 0.018145345126287956,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.80494414765
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "7b083cf0e85be342a66b2ec5cff54261d2e02acb7cca4f9b46fc9cb24723fb2a",
+      "quality": {
+        "faces": 43868,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 796,
+        "below_10_area_mm2": 337.3037476965558,
+        "below_10_fraction": 0.018145345126287956,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.80494414765
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "de9f6cf36856e06a30a92b7092482502d77fd914eb9d25e44f94d0d488e4e6e7",
+      "quality": {
+        "faces": 43868,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 796,
+        "below_10_area_mm2": 337.3037476965558,
+        "below_10_fraction": 0.018145345126287956,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.80494414765
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "727279e2a422008dfd5e0b842ec43c66e8e756144003964b83a6ef9f814f2ea8",
+      "quality": {
+        "faces": 43868,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 796,
+        "below_10_area_mm2": 337.3037476965558,
+        "below_10_fraction": 0.018145345126287956,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.80494414765
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "88af9bc7b4fbb1100de44edc54029d95e149723a2e3e4c3b91dfb7365f5dba2e",
+      "quality": {
+        "faces": 43868,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 796,
+        "below_10_area_mm2": 337.3037476965558,
+        "below_10_fraction": 0.018145345126287956,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.80494414765
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "86a52c033b2c08dd44c6dd2188b50d69ff0803f6730c45bd884771f2930030f6",
+      "quality": {
+        "faces": 44050,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 768,
+        "below_10_area_mm2": 337.12856837144074,
+        "below_10_fraction": 0.017434733257661747,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.804944147654
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "41714fa36b245067389391ab48a46ec97d25d2f140b466ccbfd15c7010b63092",
+      "quality": {
+        "faces": 44050,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 768,
+        "below_10_area_mm2": 337.12856837144074,
+        "below_10_fraction": 0.017434733257661747,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.804944147654
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "964d6a68d8d8047eac98d734b34077d634c9f59a13df38a3bbc8cc9ec613e7a2",
+      "quality": {
+        "faces": 44050,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 768,
+        "below_10_area_mm2": 337.12856837144074,
+        "below_10_fraction": 0.017434733257661747,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.804944147654
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "c7b98ccd463005ceeb95484f84c2e627fc16fb415d8b5b837327d44734eeef74",
+      "quality": {
+        "faces": 44050,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 768,
+        "below_10_area_mm2": 337.12856837144074,
+        "below_10_fraction": 0.017434733257661747,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.804944147654
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "1514bdea6129cb1d2d259bc83ee4f66be2980ff8962c55e182d7f36ccc1c1789",
+      "quality": {
+        "faces": 44050,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 768,
+        "below_10_area_mm2": 337.12856837144074,
+        "below_10_fraction": 0.017434733257661747,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.804944147654
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "d71383c4939ca7e40bbe0cf36ef4d3e82e27ebe5da382bae7d0a8581b157e24d",
+      "quality": {
+        "faces": 44050,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 768,
+        "below_10_area_mm2": 337.12856837144074,
+        "below_10_fraction": 0.017434733257661747,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.804944147654
+      }
+    },
+    {
+      "case_index": 9,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "b8f129c4360cbe43d6c176ae5dd2b499dc4a198859fae409bdb9c8c59bd56e1f",
+      "quality": {
+        "faces": 44050,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 768,
+        "below_10_area_mm2": 337.12856837144074,
+        "below_10_fraction": 0.017434733257661747,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62228.804944147654
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "34f91e0245c3720c97619aef90acd3edcc21f3ccee07d84c73d8d1ccf44baee6",
+      "quality": {
+        "faces": 49022,
+        "nonpositive_or_nonfinite_faces": 2,
+        "below_10_faces": 634,
+        "below_10_area_mm2": 141.13298581382935,
+        "below_10_fraction": 0.01293296887111909,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.3613490313
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "2cd145c37414420d0e47a35edc8b3031d4332baec209d66a20e6ba3d97c13fad",
+      "quality": {
+        "faces": 49022,
+        "nonpositive_or_nonfinite_faces": 2,
+        "below_10_faces": 634,
+        "below_10_area_mm2": 141.13298581382935,
+        "below_10_fraction": 0.01293296887111909,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.3613490313
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "934bdc351fceb537eefce9d45e08bd268ee318a2797754c95005a6dfb52c02ca",
+      "quality": {
+        "faces": 49022,
+        "nonpositive_or_nonfinite_faces": 2,
+        "below_10_faces": 634,
+        "below_10_area_mm2": 141.1327640728447,
+        "below_10_fraction": 0.01293296887111909,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.3613490313
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "0b79e10e00375f80f34295a0b844f4d8f193b299725080fb7600be2da5355b88",
+      "quality": {
+        "faces": 49022,
+        "nonpositive_or_nonfinite_faces": 2,
+        "below_10_faces": 634,
+        "below_10_area_mm2": 141.13298581382935,
+        "below_10_fraction": 0.01293296887111909,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.3613490313
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "9beb4ce67911483d72280988633e8a89faf0053a5b152e5a7ad0e35b2ae26404",
+      "quality": {
+        "faces": 49022,
+        "nonpositive_or_nonfinite_faces": 2,
+        "below_10_faces": 636,
+        "below_10_area_mm2": 141.13301186350327,
+        "below_10_fraction": 0.012973766880176247,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.3613490313
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "1ed979443db90b6445f3d216021510a4ec469d3ee3310a3bd50c32f71e429c85",
+      "quality": {
+        "faces": 49022,
+        "nonpositive_or_nonfinite_faces": 2,
+        "below_10_faces": 634,
+        "below_10_area_mm2": 141.13298581382935,
+        "below_10_fraction": 0.01293296887111909,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.3613490313
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "7d3e5e69b6ffd74e80037feeb8d8121144b3ad4c153bf2f7514b6131d2fc9dc7",
+      "quality": {
+        "faces": 49022,
+        "nonpositive_or_nonfinite_faces": 2,
+        "below_10_faces": 635,
+        "below_10_area_mm2": 141.13276503820725,
+        "below_10_fraction": 0.012953367875647668,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.3613490313
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "0cde1ec85db3b8342983aca3f5659ae26278b4af827d8675960e9905ba85f463",
+      "quality": {
+        "faces": 49154,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 569,
+        "below_10_area_mm2": 141.0185890016876,
+        "below_10_fraction": 0.011575863612320462,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.36134903128
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "6b7f762ef23d2d1e53745a6e08e252c151a396ede49b9c4628f435a2ba8734cf",
+      "quality": {
+        "faces": 49152,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 568,
+        "below_10_area_mm2": 141.01836822606546,
+        "below_10_fraction": 0.011555989583333334,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.36134903128
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "ead9c74021db5b75b97e3b43fde1311cf48507e1f6db53d1cd30da02b543be06",
+      "quality": {
+        "faces": 49152,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 567,
+        "below_10_area_mm2": 141.0185890016876,
+        "below_10_fraction": 0.01153564453125,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.36134903128
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "48343767c8e8daafdadffd572b02b7ce2e72c54403e4ff2e6c40ccf7897a17c3",
+      "quality": {
+        "faces": 49154,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 569,
+        "below_10_area_mm2": 141.0185890016876,
+        "below_10_fraction": 0.011575863612320462,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.36134903128
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "c43e7d18289f3362b398fbbc0b3bf984c2a0172103252e72d40cad97e6f547e4",
+      "quality": {
+        "faces": 49154,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 570,
+        "below_10_area_mm2": 141.01836822606546,
+        "below_10_fraction": 0.011596207836595191,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.36134903128
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "1659400eb8ddc7e0000d65d41b16cbfa37bf4f9025648c0ba371480f21cd1d1d",
+      "quality": {
+        "faces": 49154,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 569,
+        "below_10_area_mm2": 141.0185890016876,
+        "below_10_fraction": 0.011575863612320462,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.36134903128
+      }
+    },
+    {
+      "case_index": 10,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "818e88ef59e53d20722b79850b585b247d749dd4ad3044c8f481fabcb99840bf",
+      "quality": {
+        "faces": 49154,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 570,
+        "below_10_area_mm2": 141.01836822606546,
+        "below_10_fraction": 0.011596207836595191,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62216.36134903128
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "9998843d5bb921fa11f30bd4ebf0fa7f0925d89b410de23755c976b95d9db489",
+      "quality": {
+        "faces": 43932,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 859,
+        "below_10_area_mm2": 337.2815249500558,
+        "below_10_fraction": 0.01955294546116726,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "ce903d8d9c339eb9815b4ed231b839356be01c5d7c103981dcfcb8174216677d",
+      "quality": {
+        "faces": 43932,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 859,
+        "below_10_area_mm2": 337.2815249500558,
+        "below_10_fraction": 0.01955294546116726,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "c9fc26fba201f32c640ecbfcba23d42f2298b8a168ade672cc78fdfeaf929b3b",
+      "quality": {
+        "faces": 43932,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 859,
+        "below_10_area_mm2": 337.2815249500558,
+        "below_10_fraction": 0.01955294546116726,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "67c3fbec1ed75a444c65be12f0133282cf59a89342bb52f667e4cf0f0255fe7d",
+      "quality": {
+        "faces": 43932,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 859,
+        "below_10_area_mm2": 337.2815249500558,
+        "below_10_fraction": 0.01955294546116726,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "2ae1c94e5968d39ad55de181167c4951f4e55e8843209388040bd5a19cd31bd3",
+      "quality": {
+        "faces": 43932,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 859,
+        "below_10_area_mm2": 337.2815249500558,
+        "below_10_fraction": 0.01955294546116726,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "80ac38534d3ad5f6eb81f9eede4ea8bc3563b1b5452fb536e377e87f4ac1f7a5",
+      "quality": {
+        "faces": 43932,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 859,
+        "below_10_area_mm2": 337.2815249500558,
+        "below_10_fraction": 0.01955294546116726,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "83480e0f1b2e1e7686b1bd47327bc7d43c1f68438274706bd4fad7f5cb1a8b7a",
+      "quality": {
+        "faces": 43932,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 859,
+        "below_10_area_mm2": 337.2815249500558,
+        "below_10_fraction": 0.01955294546116726,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "4b1b393de355a20a2a9cca6b56b1290bbadfa94a11398313c4c7004761969924",
+      "quality": {
+        "faces": 44116,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 813,
+        "below_10_area_mm2": 337.19444174088494,
+        "below_10_fraction": 0.018428688004352163,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "4f2b05ed00ac4ef75f2c78af114484ad2c46ae8757ec7bbdec9aa2f3bdcd7bef",
+      "quality": {
+        "faces": 44116,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 813,
+        "below_10_area_mm2": 337.19444174088494,
+        "below_10_fraction": 0.018428688004352163,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "8e3b654d65a69006d58496de868a8f5b6606650ff7cb91d2bb2dcde6f51b7ff3",
+      "quality": {
+        "faces": 44116,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 813,
+        "below_10_area_mm2": 337.19444174088494,
+        "below_10_fraction": 0.018428688004352163,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "71560192a633faf2f3dbe39442016e1df52bb9e788088b095adfc47fc7181898",
+      "quality": {
+        "faces": 44116,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 813,
+        "below_10_area_mm2": 337.19444174088494,
+        "below_10_fraction": 0.018428688004352163,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "32d1e1e989f52d84605307a5a4f25ce93161582b185e004d2a2c4328673566c9",
+      "quality": {
+        "faces": 44116,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 813,
+        "below_10_area_mm2": 337.19444174088494,
+        "below_10_fraction": 0.018428688004352163,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "1aeb5a591678850893699cdfdfde5ab6409b4399cff5e24551b4bdace6ff4165",
+      "quality": {
+        "faces": 44116,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 813,
+        "below_10_area_mm2": 337.19444174088494,
+        "below_10_fraction": 0.018428688004352163,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 11,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "4c53c6d98d0b7ac1e763d3ae37426961d4eccf74012c730828d5754925a8ee28",
+      "quality": {
+        "faces": 44118,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 815,
+        "below_10_area_mm2": 337.19444174088494,
+        "below_10_fraction": 0.01847318554784895,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "baseline",
+      "repeat": -1,
+      "mesh_sha256": "d30e8e227f6e6321a34e16d52f8a1421c0993628128f3e0c0e0c9c9189653aee",
+      "quality": {
+        "faces": 43944,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 850,
+        "below_10_area_mm2": 337.284259941722,
+        "below_10_fraction": 0.01934279992718005,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "baseline",
+      "repeat": 0,
+      "mesh_sha256": "facd37cfe5d7dfa2ae80082da203c5983c770329f4eeef12a02319ba5a447a8a",
+      "quality": {
+        "faces": 43944,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 850,
+        "below_10_area_mm2": 337.284259941722,
+        "below_10_fraction": 0.01934279992718005,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "baseline",
+      "repeat": 1,
+      "mesh_sha256": "507a4e247a2614ec62168990434098ed53c832ee38afdc3c8d71d8b39a7bdd18",
+      "quality": {
+        "faces": 43944,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 850,
+        "below_10_area_mm2": 337.284259941722,
+        "below_10_fraction": 0.01934279992718005,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "baseline",
+      "repeat": 2,
+      "mesh_sha256": "bd83232ce28ebdc75690edad3ffd0242ee5202ae79d31f3b34096fd8deb7378d",
+      "quality": {
+        "faces": 43944,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 850,
+        "below_10_area_mm2": 337.284259941722,
+        "below_10_fraction": 0.01934279992718005,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "baseline",
+      "repeat": 3,
+      "mesh_sha256": "09d9ede93d213bce856d5b11b3903904fb9279af2a7e9a6a4c560337d39ae19d",
+      "quality": {
+        "faces": 43944,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 850,
+        "below_10_area_mm2": 337.284259941722,
+        "below_10_fraction": 0.01934279992718005,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "baseline",
+      "repeat": 4,
+      "mesh_sha256": "f9d3c54a6bb502144d4b65ad3407ac2d891388b74bbc40907337a92fea31514c",
+      "quality": {
+        "faces": 43944,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 850,
+        "below_10_area_mm2": 337.284259941722,
+        "below_10_fraction": 0.01934279992718005,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "baseline",
+      "repeat": 5,
+      "mesh_sha256": "b3813ce5d0c98479cb3d2298bf0faa4a4fcc915d656f9f808c173ab50dd759a1",
+      "quality": {
+        "faces": 43944,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 850,
+        "below_10_area_mm2": 337.284259941722,
+        "below_10_fraction": 0.01934279992718005,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "candidate",
+      "repeat": -1,
+      "mesh_sha256": "45cdd79d2c7b989cbd34ed6fcefdd7cb5e6d291965ccb878990e229d97d026d8",
+      "quality": {
+        "faces": 44048,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 802,
+        "below_10_area_mm2": 337.19523933974756,
+        "below_10_fraction": 0.018207410098074826,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "candidate",
+      "repeat": 0,
+      "mesh_sha256": "b5252f5a30bf50ec698a714b4712a26e77060fb56d1dc5d3d3aaf8da8939fcea",
+      "quality": {
+        "faces": 44048,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 802,
+        "below_10_area_mm2": 337.19523933974756,
+        "below_10_fraction": 0.018207410098074826,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "candidate",
+      "repeat": 1,
+      "mesh_sha256": "6b8a2a5baef24bf18c78b45574f82854a4c136a2590002b6097f32b4bd00bc61",
+      "quality": {
+        "faces": 44048,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 802,
+        "below_10_area_mm2": 337.19523933974756,
+        "below_10_fraction": 0.018207410098074826,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "candidate",
+      "repeat": 2,
+      "mesh_sha256": "2505a62408e761683b29915db702fa4acf8c3ce8e6ef27dcc2278027f9ed3844",
+      "quality": {
+        "faces": 44048,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 802,
+        "below_10_area_mm2": 337.19523933974756,
+        "below_10_fraction": 0.018207410098074826,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "candidate",
+      "repeat": 3,
+      "mesh_sha256": "86416369127af316f888084e082304dcc70c2e52ca639afc8bd369c0aaca70d5",
+      "quality": {
+        "faces": 44048,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 802,
+        "below_10_area_mm2": 337.19523933974756,
+        "below_10_fraction": 0.018207410098074826,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "candidate",
+      "repeat": 4,
+      "mesh_sha256": "9261b3062fd7a73e18978b5a43db7b890a1f4fbebe513355bbbe93ceed61a2c6",
+      "quality": {
+        "faces": 44048,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 802,
+        "below_10_area_mm2": 337.19523933974756,
+        "below_10_fraction": 0.018207410098074826,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    },
+    {
+      "case_index": 12,
+      "method": "candidate",
+      "repeat": 5,
+      "mesh_sha256": "03a2d960d9319ebe7508bc8685959661e278cf5dbe2444cbbba1fcf24b385901",
+      "quality": {
+        "faces": 44048,
+        "nonpositive_or_nonfinite_faces": 0,
+        "below_10_faces": 802,
+        "below_10_area_mm2": 337.19523933974756,
+        "below_10_fraction": 0.018207410098074826,
+        "watertight": true,
+        "winding_consistent": true,
+        "euler_number": 2,
+        "volume_mm3": 62227.81252746491
+      }
+    }
+  ],
+  "finished_beijing": "2026-10-06T23:46:50+08:00"
+}

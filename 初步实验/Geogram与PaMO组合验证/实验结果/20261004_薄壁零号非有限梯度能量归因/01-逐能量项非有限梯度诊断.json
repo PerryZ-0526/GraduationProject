@@ -1,0 +1,65 @@
+{
+  "time_beijing": "2026-10-04T07:20:56.768626+08:00",
+  "run": {
+    "returncode": 1,
+    "remote_roundtrip_ms": 3524.5377000028384,
+    "stdout": "",
+    "stderr": "",
+    "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8' 'GRADIENT_DIAGNOSTIC_OUTPUT=/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零号非有限梯度能量归因_4766e1a3bc26/gradient.json' 'ORIGINAL_PLANAR_WORKER=/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/run_constrained_worker.py' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零号非有限梯度能量归因_4766e1a3bc26/diagnostic.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/薄壁_00_浅磨_e1_candidate_boolean/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/薄壁_00_浅磨_e1_candidate_boolean/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/薄壁_00_浅磨_e1_candidate_boolean/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/constrained_remesh' --method planar_tangent_shared --output '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零号非有限梯度能量归因_4766e1a3bc26/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零号非有限梯度能量归因_4766e1a3bc26/worker.log' 2>&1"
+  },
+  "original_attempt": {
+    "execution": {
+      "returncode": 1,
+      "remote_roundtrip_ms": 3455.2296999972896,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/薄壁_00_浅磨_e1_candidate_boolean/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/薄壁_00_浅磨_e1_candidate_boolean/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/薄壁_00_浅磨_e1_candidate_boolean/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/constrained_remesh' --method planar_tangent_shared --output '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/薄壁_00_浅磨_e1_candidate_boolean/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复多形状开发_09726fb2def8/薄壁_00_浅磨_e1_candidate_boolean/worker.log' 2>&1"
+    },
+    "method": "planar_tangent_shared",
+    "status": "execution_failed",
+    "inputs_sha256": {
+      "source.obj": "06093f229d95ff027faf94d21e2fa530e2cb80d02565aa953df8b498d2b0045f",
+      "labels.json": "f83d7855b18f593f50272fa9b53542df5abff4bdccf9f08d1750685c68a4112b",
+      "tool.obj": "db80ede4bc08ef65b8e693c339d54ae33aacc720fb57d05f9737542df6b1f945"
+    }
+  },
+  "diagnostic_code_sha256": "2c1a4384d4d2b084e5245ef6e34a60c1c15e70574392ea9d3802cdd2db5e8379",
+  "gradient": {
+    "solve_calls": 1,
+    "positions_finite": true,
+    "components": [
+      {
+        "name": "<class 'pamo_safe_project.energy.Mesh2GTDistanceBvhEnergyCalculator'>",
+        "nonfinite_gradient_vertices": 0,
+        "first_nonfinite_vertex_ids": [],
+        "nonfinite_diagonal_vertices": 0
+      },
+      {
+        "name": "<class 'pamo_safe_project.energy.ElasticEnergyCalculator'>",
+        "nonfinite_gradient_vertices": 0,
+        "first_nonfinite_vertex_ids": [],
+        "nonfinite_diagonal_vertices": 0
+      },
+      {
+        "name": "<class 'pamo_safe_project.energy.HingeEnergyCalculator'>",
+        "nonfinite_gradient_vertices": 0,
+        "first_nonfinite_vertex_ids": [],
+        "nonfinite_diagonal_vertices": 0
+      },
+      {
+        "name": "<class 'pamo_safe_project.energy.CollisionBvhEnergyCalculator'>",
+        "nonfinite_gradient_vertices": 6,
+        "first_nonfinite_vertex_ids": [
+          457,
+          479,
+          488,
+          519,
+          524,
+          548
+        ],
+        "nonfinite_diagonal_vertices": 77
+      }
+    ]
+  },
+  "scope": "故障复现，不发布网格，不改变作者能量"
+}

@@ -1,0 +1,65 @@
+{
+  "time_beijing": "2026-10-04T20:04:31.608493+08:00",
+  "schema": 1,
+  "files": [
+    {
+      "file": "source_original.obj",
+      "sha256": "8a0a2e5b28646fe1e33b31661bf07636b6b1a96c02159a9c8a0834236a9c58ae",
+      "source": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_非凸工具邻域真实CT两路线对照\\application_ct_original138_e5_candidate_input\\clean_source.obj"
+    },
+    {
+      "file": "source_original_labels.json",
+      "sha256": "01c296c1c5c48c5404e49be0831de157b50d20f1ba3582b616817555999a49f4",
+      "source": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_非凸工具邻域真实CT两路线对照\\application_ct_original138_e5_candidate_input\\clean_labels.json"
+    },
+    {
+      "file": "source_partial.obj",
+      "sha256": "f930f549d0510067a09a890866bc12875c012677d3e0061bf8e98a1ce0acd766",
+      "source": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_CT第六事件碎片停滞诊断\\partial_candidate_not_published.obj"
+    },
+    {
+      "file": "source_partial_labels.json",
+      "sha256": "2922bc26bcaf65374876b691f4d4091802199bdc36a480a96bc1f0ae10a23272",
+      "source": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_CT第六事件碎片停滞诊断\\partial_labels_not_published.json"
+    },
+    {
+      "file": "tool.obj",
+      "sha256": "05f66365d3ddbf7882c0278e98bf955034517051d6c334d929bee46d8569817a",
+      "source": "初步实验\\可复用磨削测试集\\真实CT既有两路线输入_v1\\inputs\\application_ct_original138_e5_tool.obj"
+    },
+    {
+      "file": "reference_default.obj",
+      "sha256": "a0f417b37fdd49bf32aef838eabad55a6e9b7d04e6dfc8f9f4f4e77c8eafdb3a",
+      "source": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_CT前六事件参照简化对照\\default_e5.obj"
+    },
+    {
+      "file": "reference_no_simplify.obj",
+      "sha256": "11a965dc6d0871205003a4420ce020b471302fc0b59e41beeecd61f61c4a8c9a",
+      "source": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_CT前六事件参照简化对照\\no_simplify_e5.obj"
+    },
+    {
+      "file": "gpu_expanded_candidate_not_published.obj",
+      "sha256": "6f205ccbc0af8022f725817a75920fd0817280d3b068fc825dd5886893139662",
+      "source": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_CT第六事件残留面GPU数值诊断\\expanded\\candidate.obj"
+    },
+    {
+      "file": "gpu_expanded_diff_trace.json",
+      "sha256": "eae25a1913bdb5d121fe2028738a4498f6ca80c1ce4b65131c97c35b36369ed9",
+      "source": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_CT第六事件残留面GPU数值诊断\\expanded\\diff_trace.json"
+    },
+    {
+      "file": "gpu_trace_binding.json",
+      "sha256": "2560223d8786780157b24f97a241db88169a7d348e0ad00ff562cc33272e8d86",
+      "source": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_CT第六事件残留面GPU数值诊断\\02-实际求导及作者归一化核对.json"
+    }
+  ],
+  "execution_record_sha256": "c5e30a3e2a8d41e3a9dccf4aae4bc4becc4fdd76e1e7045ba8c115b03833bbb9",
+  "gpu_trace_expected_calls": 50,
+  "gpu_trace_expected_finite_energy_calls": 0,
+  "gpu_trace_expected_finite_free_derivative_calls": 50,
+  "scope": "已有CT仿真第六事件故障回归；部分修复与GPU结果从未发布，不是新的独立评价或临床数据",
+  "source_original_invalid_faces": 34,
+  "source_partial_invalid_faces": 6,
+  "modified_beijing": "2026-10-04T20:07:26.710167+08:00",
+  "modification": "修正联合FP64或FP32坏面计数字段名称，避免将34个联合坏面误称纯FP32计数；十个冻结输入字节与摘要不变"
+}

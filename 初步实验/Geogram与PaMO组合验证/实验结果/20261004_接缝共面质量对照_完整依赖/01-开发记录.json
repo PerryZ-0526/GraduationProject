@@ -1,0 +1,5879 @@
+{
+  "time_beijing": "2026-10-04T05:14:20.245644+08:00",
+  "status": "completed_with_recorded_failures",
+  "scope": "已见保存帧机制开发，不是独立或连续反馈",
+  "rows": [
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4547.801799999434,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_full/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_full/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_full/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' --method full --output '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_full/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_full/worker.log' 2>&1"
+      },
+      "method": "full",
+      "status": "accepted_numeric_audit",
+      "inputs_sha256": {
+        "source.obj": "8d663e43bc978d6908ead5763be84c102936018734d24de9e1c30f8258a27517",
+        "labels.json": "88220f8f5a61623039e76fe714b2ee596879762e63f6e82194b88c6328ddb9e2",
+        "tool.obj": "6b75f36501241413420c5cf283f006b126ba6f19aac64db191866ed288e2a2b4"
+      },
+      "pamo_run_ms": 1412.076192907989,
+      "stage1": "original",
+      "maintenance_ms": 3060.464823618531,
+      "output_sha256": "0d54ad35d8a28f637c9e77a6b182049b1fa638b131a4b580ca57623386f0e6f1",
+      "case": "crossing_e0",
+      "output_metrics": {
+        "vertices": 1012,
+        "faces": 2020,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.13865563846017,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.01741411778197377,
+            "p95_mm": 0.0024790047746084845,
+            "rms_mm": 0.0017060271139700948,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.019342747842010996,
+            "p95_mm": 0.0030976891672372608,
+            "rms_mm": 0.0018215393479467895,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.019342747842010996,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.034057780026503885,
+        "probe_max_mm": 0.034057780026503885,
+        "continuous_geometry_certified": false
+      },
+      "quality": {
+        "total_faces": 2020,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 21,
+          "fraction": 0.010396039603960397,
+          "area_fraction": 0.0023266536571473835
+        },
+        "angle_below_5_deg": {
+          "faces": 1,
+          "fraction": 0.0004950495049504951,
+          "area_fraction": 1.4355610118308962e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1713,
+          "fraction": 0.848019801980198,
+          "area_fraction": 0.9429268491005317
+        }
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "capacity_alarm": false
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4775.441499999943,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' --method adaptive --output '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive/worker.log' 2>&1"
+      },
+      "method": "adaptive",
+      "status": "accepted_numeric_audit",
+      "inputs_sha256": {
+        "source.obj": "8d663e43bc978d6908ead5763be84c102936018734d24de9e1c30f8258a27517",
+        "labels.json": "88220f8f5a61623039e76fe714b2ee596879762e63f6e82194b88c6328ddb9e2",
+        "tool.obj": "6b75f36501241413420c5cf283f006b126ba6f19aac64db191866ed288e2a2b4"
+      },
+      "target_mm": 0.1001723031151933,
+      "max_splits": 10000,
+      "splits": [
+        {
+          "edge": [
+            199,
+            221
+          ],
+          "new_vertex": 1041,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            198,
+            220
+          ],
+          "new_vertex": 1042,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            110,
+            128
+          ],
+          "new_vertex": 1043,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            108,
+            126
+          ],
+          "new_vertex": 1044,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            68,
+            90
+          ],
+          "new_vertex": 1045,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            161,
+            181
+          ],
+          "new_vertex": 1046,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            144,
+            162
+          ],
+          "new_vertex": 1047,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            142,
+            160
+          ],
+          "new_vertex": 1048,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            127,
+            145
+          ],
+          "new_vertex": 1049,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            125,
+            143
+          ],
+          "new_vertex": 1050,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            87,
+            109
+          ],
+          "new_vertex": 1051,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            70,
+            92
+          ],
+          "new_vertex": 1052,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            69,
+            91
+          ],
+          "new_vertex": 1053,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            67,
+            89
+          ],
+          "new_vertex": 1054,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            200,
+            221
+          ],
+          "new_vertex": 1055,
+          "length_mm": 0.20230156707499838
+        },
+        {
+          "edge": [
+            199,
+            220
+          ],
+          "new_vertex": 1056,
+          "length_mm": 0.20230156707499838
+        },
+        {
+          "edge": [
+            180,
+            201
+          ],
+          "new_vertex": 1057,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            178,
+            197
+          ],
+          "new_vertex": 1058,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            160,
+            177
+          ],
+          "new_vertex": 1059,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            93,
+            110
+          ],
+          "new_vertex": 1060,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            70,
+            91
+          ],
+          "new_vertex": 1061,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            69,
+            90
+          ],
+          "new_vertex": 1062,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            68,
+            89
+          ],
+          "new_vertex": 1063,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            67,
+            88
+          ],
+          "new_vertex": 1064,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            197,
+            198
+          ],
+          "new_vertex": 1065,
+          "length_mm": 0.2010688656730327
+        },
+        {
+          "edge": [
+            200,
+            201
+          ],
+          "new_vertex": 1066,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            180,
+            181
+          ],
+          "new_vertex": 1067,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            177,
+            178
+          ],
+          "new_vertex": 1068,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            161,
+            162
+          ],
+          "new_vertex": 1069,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            144,
+            145
+          ],
+          "new_vertex": 1070,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            142,
+            143
+          ],
+          "new_vertex": 1071,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            127,
+            128
+          ],
+          "new_vertex": 1072,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            125,
+            126
+          ],
+          "new_vertex": 1073,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            108,
+            109
+          ],
+          "new_vertex": 1074,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            92,
+            93
+          ],
+          "new_vertex": 1075,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            87,
+            88
+          ],
+          "new_vertex": 1076,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            108,
+            1044
+          ],
+          "new_vertex": 1077,
+          "length_mm": 0.14150491163351905
+        },
+        {
+          "edge": [
+            68,
+            1045
+          ],
+          "new_vertex": 1078,
+          "length_mm": 0.14150491163351905
+        },
+        {
+          "edge": [
+            221,
+            1041
+          ],
+          "new_vertex": 1079,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            220,
+            1042
+          ],
+          "new_vertex": 1080,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            199,
+            1041
+          ],
+          "new_vertex": 1081,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            198,
+            1042
+          ],
+          "new_vertex": 1082,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            142,
+            1048
+          ],
+          "new_vertex": 1083,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            128,
+            1043
+          ],
+          "new_vertex": 1084,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            125,
+            1050
+          ],
+          "new_vertex": 1085,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            110,
+            1043
+          ],
+          "new_vertex": 1086,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            70,
+            1052
+          ],
+          "new_vertex": 1087,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            69,
+            1053
+          ],
+          "new_vertex": 1088,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            90,
+            1045
+          ],
+          "new_vertex": 1089,
+          "length_mm": 0.14150491163351891
+        },
+        {
+          "edge": [
+            89,
+            1054
+          ],
+          "new_vertex": 1090,
+          "length_mm": 0.14150491163351891
+        },
+        {
+          "edge": [
+            87,
+            1051
+          ],
+          "new_vertex": 1091,
+          "length_mm": 0.14150491163351891
+        },
+        {
+          "edge": [
+            181,
+            1046
+          ],
+          "new_vertex": 1092,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            162,
+            1047
+          ],
+          "new_vertex": 1093,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            161,
+            1046
+          ],
+          "new_vertex": 1094,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            145,
+            1049
+          ],
+          "new_vertex": 1095,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            144,
+            1047
+          ],
+          "new_vertex": 1096,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            127,
+            1049
+          ],
+          "new_vertex": 1097,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            126,
+            1044
+          ],
+          "new_vertex": 1098,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            109,
+            1051
+          ],
+          "new_vertex": 1099,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            67,
+            1054
+          ],
+          "new_vertex": 1100,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            160,
+            1048
+          ],
+          "new_vertex": 1101,
+          "length_mm": 0.14150491163351883
+        },
+        {
+          "edge": [
+            143,
+            1050
+          ],
+          "new_vertex": 1102,
+          "length_mm": 0.14150491163351883
+        },
+        {
+          "edge": [
+            92,
+            1052
+          ],
+          "new_vertex": 1103,
+          "length_mm": 0.14150491163351883
+        },
+        {
+          "edge": [
+            91,
+            1053
+          ],
+          "new_vertex": 1104,
+          "length_mm": 0.14150491163351883
+        }
+      ],
+      "contract": "允许外部共面细分，不再要求外部三角面编号或集合不变",
+      "budget_exhausted": false,
+      "input_faces": 2078,
+      "output_faces": 2206,
+      "actual_edge_length_mm": 0.1001723031151933,
+      "max_protected_edge_mm": 0.10115078353749919,
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1752,
+        "external_faces_retained": 1752,
+        "missing_fixed_vertices": 0
+      },
+      "safe_projection_ms": 898.0307029560208,
+      "projection_fp64_restoration_max_mm": 1.1916120404416533e-07,
+      "collision_scope": "whole_mesh_author_energy_and_ccd",
+      "maintenance_ms": 3366.739710792899,
+      "output_sha256": "8aa0a663ee3283a3665f027016b75ff1c8d0edf07ebe9a1e5b9f1925664e3ac3",
+      "case": "crossing_e0",
+      "output_metrics": {
+        "vertices": 1158,
+        "faces": 2312,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.134717556625493,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.0047027767535545864,
+            "p95_mm": 2.220446049250313e-16,
+            "rms_mm": 0.00020952686176490347,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.005883525480968445,
+            "p95_mm": 2.220446049250313e-16,
+            "rms_mm": 0.00018980576202776172,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.005883525480968445,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.00595486507929083,
+        "probe_max_mm": 0.00595486507929083,
+        "continuous_geometry_certified": false
+      },
+      "quality": {
+        "total_faces": 2312,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 139,
+          "fraction": 0.060121107266435984,
+          "area_fraction": 0.24533482701000375
+        },
+        "angle_below_5_deg": {
+          "faces": 28,
+          "fraction": 0.012110726643598616,
+          "area_fraction": 7.675618940633104e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 7,
+          "fraction": 0.003027681660899654,
+          "area_fraction": 4.40048054494619e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 2011,
+          "fraction": 0.8698096885813149,
+          "area_fraction": 0.6224033685553367
+        }
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "capacity_alarm": false
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 6921.0075000009965,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive_planar/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive_planar/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive_planar/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' --method adaptive_planar --output '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive_planar/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e0_adaptive_planar/worker.log' 2>&1"
+      },
+      "method": "adaptive_planar",
+      "status": "accepted_numeric_audit",
+      "inputs_sha256": {
+        "source.obj": "8d663e43bc978d6908ead5763be84c102936018734d24de9e1c30f8258a27517",
+        "labels.json": "88220f8f5a61623039e76fe714b2ee596879762e63f6e82194b88c6328ddb9e2",
+        "tool.obj": "6b75f36501241413420c5cf283f006b126ba6f19aac64db191866ed288e2a2b4"
+      },
+      "target_mm": 0.1001723031151933,
+      "max_splits": 10000,
+      "splits": [
+        {
+          "edge": [
+            199,
+            221
+          ],
+          "new_vertex": 1041,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            198,
+            220
+          ],
+          "new_vertex": 1042,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            110,
+            128
+          ],
+          "new_vertex": 1043,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            108,
+            126
+          ],
+          "new_vertex": 1044,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            68,
+            90
+          ],
+          "new_vertex": 1045,
+          "length_mm": 0.28300982326703794
+        },
+        {
+          "edge": [
+            161,
+            181
+          ],
+          "new_vertex": 1046,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            144,
+            162
+          ],
+          "new_vertex": 1047,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            142,
+            160
+          ],
+          "new_vertex": 1048,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            127,
+            145
+          ],
+          "new_vertex": 1049,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            125,
+            143
+          ],
+          "new_vertex": 1050,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            87,
+            109
+          ],
+          "new_vertex": 1051,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            70,
+            92
+          ],
+          "new_vertex": 1052,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            69,
+            91
+          ],
+          "new_vertex": 1053,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            67,
+            89
+          ],
+          "new_vertex": 1054,
+          "length_mm": 0.2830098232670378
+        },
+        {
+          "edge": [
+            200,
+            221
+          ],
+          "new_vertex": 1055,
+          "length_mm": 0.20230156707499838
+        },
+        {
+          "edge": [
+            199,
+            220
+          ],
+          "new_vertex": 1056,
+          "length_mm": 0.20230156707499838
+        },
+        {
+          "edge": [
+            180,
+            201
+          ],
+          "new_vertex": 1057,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            178,
+            197
+          ],
+          "new_vertex": 1058,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            160,
+            177
+          ],
+          "new_vertex": 1059,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            93,
+            110
+          ],
+          "new_vertex": 1060,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            70,
+            91
+          ],
+          "new_vertex": 1061,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            69,
+            90
+          ],
+          "new_vertex": 1062,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            68,
+            89
+          ],
+          "new_vertex": 1063,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            67,
+            88
+          ],
+          "new_vertex": 1064,
+          "length_mm": 0.20230156707499816
+        },
+        {
+          "edge": [
+            197,
+            198
+          ],
+          "new_vertex": 1065,
+          "length_mm": 0.2010688656730327
+        },
+        {
+          "edge": [
+            200,
+            201
+          ],
+          "new_vertex": 1066,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            180,
+            181
+          ],
+          "new_vertex": 1067,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            177,
+            178
+          ],
+          "new_vertex": 1068,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            161,
+            162
+          ],
+          "new_vertex": 1069,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            144,
+            145
+          ],
+          "new_vertex": 1070,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            142,
+            143
+          ],
+          "new_vertex": 1071,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            127,
+            128
+          ],
+          "new_vertex": 1072,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            125,
+            126
+          ],
+          "new_vertex": 1073,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            108,
+            109
+          ],
+          "new_vertex": 1074,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            92,
+            93
+          ],
+          "new_vertex": 1075,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            87,
+            88
+          ],
+          "new_vertex": 1076,
+          "length_mm": 0.20106886567303248
+        },
+        {
+          "edge": [
+            108,
+            1044
+          ],
+          "new_vertex": 1077,
+          "length_mm": 0.14150491163351905
+        },
+        {
+          "edge": [
+            68,
+            1045
+          ],
+          "new_vertex": 1078,
+          "length_mm": 0.14150491163351905
+        },
+        {
+          "edge": [
+            221,
+            1041
+          ],
+          "new_vertex": 1079,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            220,
+            1042
+          ],
+          "new_vertex": 1080,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            199,
+            1041
+          ],
+          "new_vertex": 1081,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            198,
+            1042
+          ],
+          "new_vertex": 1082,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            142,
+            1048
+          ],
+          "new_vertex": 1083,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            128,
+            1043
+          ],
+          "new_vertex": 1084,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            125,
+            1050
+          ],
+          "new_vertex": 1085,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            110,
+            1043
+          ],
+          "new_vertex": 1086,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            70,
+            1052
+          ],
+          "new_vertex": 1087,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            69,
+            1053
+          ],
+          "new_vertex": 1088,
+          "length_mm": 0.14150491163351897
+        },
+        {
+          "edge": [
+            90,
+            1045
+          ],
+          "new_vertex": 1089,
+          "length_mm": 0.14150491163351891
+        },
+        {
+          "edge": [
+            89,
+            1054
+          ],
+          "new_vertex": 1090,
+          "length_mm": 0.14150491163351891
+        },
+        {
+          "edge": [
+            87,
+            1051
+          ],
+          "new_vertex": 1091,
+          "length_mm": 0.14150491163351891
+        },
+        {
+          "edge": [
+            181,
+            1046
+          ],
+          "new_vertex": 1092,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            162,
+            1047
+          ],
+          "new_vertex": 1093,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            161,
+            1046
+          ],
+          "new_vertex": 1094,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            145,
+            1049
+          ],
+          "new_vertex": 1095,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            144,
+            1047
+          ],
+          "new_vertex": 1096,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            127,
+            1049
+          ],
+          "new_vertex": 1097,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            126,
+            1044
+          ],
+          "new_vertex": 1098,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            109,
+            1051
+          ],
+          "new_vertex": 1099,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            67,
+            1054
+          ],
+          "new_vertex": 1100,
+          "length_mm": 0.1415049116335189
+        },
+        {
+          "edge": [
+            160,
+            1048
+          ],
+          "new_vertex": 1101,
+          "length_mm": 0.14150491163351883
+        },
+        {
+          "edge": [
+            143,
+            1050
+          ],
+          "new_vertex": 1102,
+          "length_mm": 0.14150491163351883
+        },
+        {
+          "edge": [
+            92,
+            1052
+          ],
+          "new_vertex": 1103,
+          "length_mm": 0.14150491163351883
+        },
+        {
+          "edge": [
+            91,
+            1053
+          ],
+          "new_vertex": 1104,
+          "length_mm": 0.14150491163351883
+        }
+      ],
+      "contract": "允许外部共面细分，不再要求外部三角面编号或集合不变",
+      "budget_exhausted": false,
+      "input_faces": 2078,
+      "output_faces": 2206,
+      "planar_improvement": {
+        "max_flips": 200,
+        "plane_tolerance_mm": 1e-10,
+        "flips": [
+          {
+            "faces": [
+              1771,
+              1776
+            ],
+            "old_edge": [
+              127,
+              1032
+            ],
+            "new_edge": [
+              1031,
+              110
+            ],
+            "old_min_deg": 0.32848642980153325,
+            "new_min_deg": 5.530645061762539,
+            "active": true
+          },
+          {
+            "faces": [
+              1713,
+              1765
+            ],
+            "old_edge": [
+              959,
+              179
+            ],
+            "new_edge": [
+              957,
+              200
+            ],
+            "old_min_deg": 0.33382494028298815,
+            "new_min_deg": 0.8165088686264393,
+            "active": true
+          },
+          {
+            "faces": [
+              1740,
+              1814
+            ],
+            "old_edge": [
+              997,
+              178
+            ],
+            "new_edge": [
+              198,
+              999
+            ],
+            "old_min_deg": 1.169545333144422,
+            "new_min_deg": 4.138791887124529,
+            "active": true
+          },
+          {
+            "faces": [
+              1751,
+              1777
+            ],
+            "old_edge": [
+              1011,
+              110
+            ],
+            "new_edge": [
+              92,
+              1037
+            ],
+            "old_min_deg": 1.5326280272710247,
+            "new_min_deg": 1.9627648332176755,
+            "active": true
+          },
+          {
+            "faces": [
+              1708,
+              1709
+            ],
+            "old_edge": [
+              947,
+              88
+            ],
+            "new_edge": [
+              948,
+              89
+            ],
+            "old_min_deg": 1.5404825643864584,
+            "new_min_deg": 1.564515089988665,
+            "active": true
+          },
+          {
+            "faces": [
+              1742,
+              1754
+            ],
+            "old_edge": [
+              199,
+              998
+            ],
+            "new_edge": [
+              198,
+              975
+            ],
+            "old_min_deg": 1.6572039907135234,
+            "new_min_deg": 4.124790581700627,
+            "active": true
+          },
+          {
+            "faces": [
+              1745,
+              1749
+            ],
+            "old_edge": [
+              1007,
+              91
+            ],
+            "new_edge": [
+              949,
+              92
+            ],
+            "old_min_deg": 2.4696500274281625,
+            "new_min_deg": 15.358252600582142,
+            "active": true
+          },
+          {
+            "faces": [
+              1772,
+              1776
+            ],
+            "old_edge": [
+              127,
+              1031
+            ],
+            "new_edge": [
+              1030,
+              110
+            ],
+            "old_min_deg": 2.8891198620081218,
+            "new_min_deg": 13.253706067440083,
+            "active": true
+          },
+          {
+            "faces": [
+              1758,
+              1766
+            ],
+            "old_edge": [
+              200,
+              1017
+            ],
+            "new_edge": [
+              199,
+              959
+            ],
+            "old_min_deg": 4.519206194879057,
+            "new_min_deg": 6.506601662924997,
+            "active": true
+          },
+          {
+            "faces": [
+              1765,
+              1766
+            ],
+            "old_edge": [
+              959,
+              200
+            ],
+            "new_edge": [
+              957,
+              199
+            ],
+            "old_min_deg": 0.8165088686264393,
+            "new_min_deg": 1.0649278354489122,
+            "active": true
+          },
+          {
+            "faces": [
+              1740,
+              1815
+            ],
+            "old_edge": [
+              999,
+              178
+            ],
+            "new_edge": [
+              198,
+              983
+            ],
+            "old_min_deg": 6.115940194089951,
+            "new_min_deg": 9.521795981029081,
+            "active": true
+          },
+          {
+            "faces": [
+              1587,
+              1588
+            ],
+            "old_edge": [
+              844,
+              402
+            ],
+            "new_edge": [
+              843,
+              403
+            ],
+            "old_min_deg": 6.665783980657658,
+            "new_min_deg": 6.746670298206502,
+            "active": false
+          },
+          {
+            "faces": [
+              1589,
+              1590
+            ],
+            "old_edge": [
+              845,
+              403
+            ],
+            "new_edge": [
+              844,
+              404
+            ],
+            "old_min_deg": 6.746670298206502,
+            "new_min_deg": 6.829534348885025,
+            "active": false
+          },
+          {
+            "faces": [
+              1591,
+              1592
+            ],
+            "old_edge": [
+              846,
+              404
+            ],
+            "new_edge": [
+              845,
+              405
+            ],
+            "old_min_deg": 6.829534348885079,
+            "new_min_deg": 6.914449206380585,
+            "active": false
+          },
+          {
+            "faces": [
+              1593,
+              1594
+            ],
+            "old_edge": [
+              847,
+              405
+            ],
+            "new_edge": [
+              846,
+              406
+            ],
+            "old_min_deg": 6.914449206380585,
+            "new_min_deg": 7.001491570624815,
+            "active": false
+          },
+          {
+            "faces": [
+              1595,
+              1596
+            ],
+            "old_edge": [
+              848,
+              406
+            ],
+            "new_edge": [
+              847,
+              407
+            ],
+            "old_min_deg": 7.001491570624815,
+            "new_min_deg": 7.0907419943432695,
+            "active": false
+          },
+          {
+            "faces": [
+              1597,
+              1598
+            ],
+            "old_edge": [
+              849,
+              407
+            ],
+            "new_edge": [
+              848,
+              408
+            ],
+            "old_min_deg": 7.090741994343372,
+            "new_min_deg": 7.182285126707136,
+            "active": false
+          },
+          {
+            "faces": [
+              1712,
+              1713
+            ],
+            "old_edge": [
+              957,
+              179
+            ],
+            "new_edge": [
+              958,
+              200
+            ],
+            "old_min_deg": 7.123610766852373,
+            "new_min_deg": 10.177192951138474,
+            "active": true
+          },
+          {
+            "faces": [
+              1599,
+              1600
+            ],
+            "old_edge": [
+              850,
+              408
+            ],
+            "new_edge": [
+              849,
+              409
+            ],
+            "old_min_deg": 7.182285126707136,
+            "new_min_deg": 7.276209975604015,
+            "active": false
+          },
+          {
+            "faces": [
+              1601,
+              1602
+            ],
+            "old_edge": [
+              851,
+              409
+            ],
+            "new_edge": [
+              850,
+              410
+            ],
+            "old_min_deg": 7.2762099756039635,
+            "new_min_deg": 7.372610190198473,
+            "active": false
+          },
+          {
+            "faces": [
+              1603,
+              1604
+            ],
+            "old_edge": [
+              852,
+              410
+            ],
+            "new_edge": [
+              851,
+              411
+            ],
+            "old_min_deg": 7.372610190198473,
+            "new_min_deg": 7.471584365627105,
+            "active": false
+          },
+          {
+            "faces": [
+              1605,
+              1606
+            ],
+            "old_edge": [
+              853,
+              411
+            ],
+            "new_edge": [
+              852,
+              412
+            ],
+            "old_min_deg": 7.4715843656271534,
+            "new_min_deg": 7.573236371861805,
+            "active": false
+          },
+          {
+            "faces": [
+              1607,
+              1608
+            ],
+            "old_edge": [
+              854,
+              412
+            ],
+            "new_edge": [
+              853,
+              413
+            ],
+            "old_min_deg": 7.573236371861855,
+            "new_min_deg": 7.677675708994608,
+            "active": false
+          },
+          {
+            "faces": [
+              1609,
+              1610
+            ],
+            "old_edge": [
+              855,
+              413
+            ],
+            "new_edge": [
+              854,
+              414
+            ],
+            "old_min_deg": 7.67767570899456,
+            "new_min_deg": 7.785017891436309,
+            "active": false
+          },
+          {
+            "faces": [
+              1611,
+              1612
+            ],
+            "old_edge": [
+              856,
+              414
+            ],
+            "new_edge": [
+              855,
+              415
+            ],
+            "old_min_deg": 7.785017891436309,
+            "new_min_deg": 7.895384863791962,
+            "active": false
+          },
+          {
+            "faces": [
+              1613,
+              1614
+            ],
+            "old_edge": [
+              857,
+              415
+            ],
+            "new_edge": [
+              856,
+              416
+            ],
+            "old_min_deg": 7.895384863791962,
+            "new_min_deg": 8.00890545147906,
+            "active": false
+          },
+          {
+            "faces": [
+              1615,
+              1616
+            ],
+            "old_edge": [
+              858,
+              416
+            ],
+            "new_edge": [
+              857,
+              417
+            ],
+            "old_min_deg": 8.00890545147906,
+            "new_min_deg": 8.125715849497626,
+            "active": false
+          },
+          {
+            "faces": [
+              1617,
+              1618
+            ],
+            "old_edge": [
+              859,
+              417
+            ],
+            "new_edge": [
+              858,
+              418
+            ],
+            "old_min_deg": 8.12571584949767,
+            "new_min_deg": 8.245960153143098,
+            "active": false
+          },
+          {
+            "faces": [
+              1619,
+              1620
+            ],
+            "old_edge": [
+              860,
+              418
+            ],
+            "new_edge": [
+              859,
+              419
+            ],
+            "old_min_deg": 8.245960153143098,
+            "new_min_deg": 8.369790934888224,
+            "active": false
+          },
+          {
+            "faces": [
+              1621,
+              1622
+            ],
+            "old_edge": [
+              861,
+              419
+            ],
+            "new_edge": [
+              860,
+              420
+            ],
+            "old_min_deg": 8.369790934888224,
+            "new_min_deg": 8.49736987214847,
+            "active": false
+          },
+          {
+            "faces": [
+              1623,
+              1624
+            ],
+            "old_edge": [
+              862,
+              420
+            ],
+            "new_edge": [
+              861,
+              421
+            ],
+            "old_min_deg": 8.497369872148427,
+            "new_min_deg": 8.628868431197589,
+            "active": false
+          },
+          {
+            "faces": [
+              1625,
+              1626
+            ],
+            "old_edge": [
+              863,
+              421
+            ],
+            "new_edge": [
+              862,
+              422
+            ],
+            "old_min_deg": 8.628868431197589,
+            "new_min_deg": 8.764468613129383,
+            "active": false
+          },
+          {
+            "faces": [
+              1627,
+              1628
+            ],
+            "old_edge": [
+              842,
+              422
+            ],
+            "new_edge": [
+              863,
+              401
+            ],
+            "old_min_deg": 8.76446861312934,
+            "new_min_deg": 8.97160701979947,
+            "active": false
+          },
+          {
+            "faces": [
+              1629,
+              1630
+            ],
+            "old_edge": [
+              821,
+              401
+            ],
+            "new_edge": [
+              842,
+              380
+            ],
+            "old_min_deg": 8.971607019799553,
+            "new_min_deg": 9.188687315994406,
+            "active": false
+          },
+          {
+            "faces": [
+              1631,
+              1632
+            ],
+            "old_edge": [
+              800,
+              380
+            ],
+            "new_edge": [
+              821,
+              359
+            ],
+            "old_min_deg": 9.188687315994365,
+            "new_min_deg": 9.416436155942625,
+            "active": false
+          },
+          {
+            "faces": [
+              1633,
+              1634
+            ],
+            "old_edge": [
+              779,
+              359
+            ],
+            "new_edge": [
+              800,
+              338
+            ],
+            "old_min_deg": 9.416436155942664,
+            "new_min_deg": 9.655652061401788,
+            "active": false
+          },
+          {
+            "faces": [
+              1635,
+              1636
+            ],
+            "old_edge": [
+              758,
+              338
+            ],
+            "new_edge": [
+              779,
+              317
+            ],
+            "old_min_deg": 9.655652061401788,
+            "new_min_deg": 9.907214433486793,
+            "active": false
+          },
+          {
+            "faces": [
+              1637,
+              1638
+            ],
+            "old_edge": [
+              737,
+              317
+            ],
+            "new_edge": [
+              758,
+              296
+            ],
+            "old_min_deg": 9.907214433486757,
+            "new_min_deg": 10.172093938779545,
+            "active": false
+          }
+        ],
+        "budget_exhausted": false,
+        "vertices_exact": true
+      },
+      "actual_edge_length_mm": 0.1001723031151933,
+      "max_protected_edge_mm": 0.10115078353749919,
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1752,
+        "external_faces_retained": 1752,
+        "missing_fixed_vertices": 0
+      },
+      "safe_projection_ms": 894.6410249918699,
+      "projection_fp64_restoration_max_mm": 1.1916120404416533e-07,
+      "collision_scope": "whole_mesh_author_energy_and_ccd",
+      "maintenance_ms": 5476.914802566171,
+      "output_sha256": "749aee79fa8b324c49d9b498bb70c34894b6be619d828d4f36f7047da55193ab",
+      "case": "crossing_e0",
+      "output_metrics": {
+        "vertices": 1154,
+        "faces": 2304,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.134791917810787,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.004435017040189789,
+            "p95_mm": 2.220446049250313e-16,
+            "rms_mm": 0.0001999797416205388,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.004324179608534827,
+            "p95_mm": 2.220446049250313e-16,
+            "rms_mm": 0.00019747444304125974,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.004435017040189789,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.005396529187764338,
+        "probe_max_mm": 0.005396529187764338,
+        "continuous_geometry_certified": false
+      },
+      "quality": {
+        "total_faces": 2304,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 142,
+          "fraction": 0.06163194444444445,
+          "area_fraction": 0.24101113638354504
+        },
+        "angle_below_5_deg": {
+          "faces": 25,
+          "fraction": 0.010850694444444444,
+          "area_fraction": 6.663408390526223e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 8,
+          "fraction": 0.003472222222222222,
+          "area_fraction": 5.863255865366822e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1994,
+          "fraction": 0.8654513888888888,
+          "area_fraction": 0.6219896660425931
+        }
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "capacity_alarm": false
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4492.574300000342,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_full/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_full/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_full/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' --method full --output '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_full/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_full/worker.log' 2>&1"
+      },
+      "method": "full",
+      "status": "accepted_numeric_audit",
+      "inputs_sha256": {
+        "source.obj": "3019c17ecef627c6917d685da38b92b37eb322ed8691cfe38f31055b8c8e24d5",
+        "labels.json": "b763da5c811a059b07526263330842b9d3133076e35fb246d793a4898409fe20",
+        "tool.obj": "fb1e18d888056303e2c648be225741e8880c06246752866e7b746b097b6fd2bf"
+      },
+      "pamo_run_ms": 1399.8808404430747,
+      "stage1": "original",
+      "maintenance_ms": 3034.3935508280993,
+      "output_sha256": "6725d034edd92bb578b80c15849e3a1db95c5046f4667e5f73a99c902f1cb71a",
+      "case": "crossing_e1",
+      "output_metrics": {
+        "vertices": 711,
+        "faces": 1418,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.91308072383134,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.021460457641735643,
+            "p95_mm": 0.005072451921701687,
+            "rms_mm": 0.0022295225122712244,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.03155991292400391,
+            "p95_mm": 0.00502466903284272,
+            "rms_mm": 0.002424417411888093,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.03155991292400391,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.03600136965820991,
+        "probe_max_mm": 0.03600136965820991,
+        "continuous_geometry_certified": false
+      },
+      "quality": {
+        "total_faces": 1418,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 32,
+          "fraction": 0.022566995768688293,
+          "area_fraction": 0.005331299435521444
+        },
+        "angle_below_5_deg": {
+          "faces": 2,
+          "fraction": 0.0014104372355430183,
+          "area_fraction": 8.925328102691025e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1079,
+          "fraction": 0.7609308885754584,
+          "area_fraction": 0.9008519138868157
+        }
+      },
+      "source_quality": {
+        "total_faces": 1454,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 172,
+          "fraction": 0.11829436038514443,
+          "area_fraction": 0.04348161938251871
+        },
+        "angle_below_5_deg": {
+          "faces": 108,
+          "fraction": 0.07427785419532325,
+          "area_fraction": 0.03723934197470214
+        },
+        "angle_below_1_deg": {
+          "faces": 21,
+          "fraction": 0.014442916093535076,
+          "area_fraction": 0.0005943011228708636
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 974,
+          "fraction": 0.6698762035763411,
+          "area_fraction": 0.8641615879490206
+        }
+      },
+      "capacity_alarm": false
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 5347.628900000927,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' --method adaptive --output '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive/worker.log' 2>&1"
+      },
+      "method": "adaptive",
+      "status": "accepted_numeric_audit",
+      "inputs_sha256": {
+        "source.obj": "3019c17ecef627c6917d685da38b92b37eb322ed8691cfe38f31055b8c8e24d5",
+        "labels.json": "b763da5c811a059b07526263330842b9d3133076e35fb246d793a4898409fe20",
+        "tool.obj": "fb1e18d888056303e2c648be225741e8880c06246752866e7b746b097b6fd2bf"
+      },
+      "target_mm": 0.1001723031151933,
+      "max_splits": 10000,
+      "splits": [
+        {
+          "edge": [
+            216,
+            266
+          ],
+          "new_vertex": 729,
+          "length_mm": 0.6464490383222239
+        },
+        {
+          "edge": [
+            323,
+            353
+          ],
+          "new_vertex": 730,
+          "length_mm": 0.5493521872685381
+        },
+        {
+          "edge": [
+            114,
+            116
+          ],
+          "new_vertex": 731,
+          "length_mm": 0.5423819861553074
+        },
+        {
+          "edge": [
+            273,
+            319
+          ],
+          "new_vertex": 732,
+          "length_mm": 0.5259917703130724
+        },
+        {
+          "edge": [
+            238,
+            253
+          ],
+          "new_vertex": 733,
+          "length_mm": 0.5149436862509491
+        },
+        {
+          "edge": [
+            128,
+            157
+          ],
+          "new_vertex": 734,
+          "length_mm": 0.48548765228365137
+        },
+        {
+          "edge": [
+            200,
+            238
+          ],
+          "new_vertex": 735,
+          "length_mm": 0.4513567120537893
+        },
+        {
+          "edge": [
+            157,
+            201
+          ],
+          "new_vertex": 736,
+          "length_mm": 0.44878140065799615
+        },
+        {
+          "edge": [
+            276,
+            310
+          ],
+          "new_vertex": 737,
+          "length_mm": 0.4286007500189203
+        },
+        {
+          "edge": [
+            201,
+            216
+          ],
+          "new_vertex": 738,
+          "length_mm": 0.4267983910054972
+        },
+        {
+          "edge": [
+            253,
+            276
+          ],
+          "new_vertex": 739,
+          "length_mm": 0.4201687113314556
+        },
+        {
+          "edge": [
+            156,
+            171
+          ],
+          "new_vertex": 740,
+          "length_mm": 0.42005881255022537
+        },
+        {
+          "edge": [
+            114,
+            128
+          ],
+          "new_vertex": 741,
+          "length_mm": 0.4148601770065837
+        },
+        {
+          "edge": [
+            608,
+            700
+          ],
+          "new_vertex": 742,
+          "length_mm": 0.41463224567760953
+        },
+        {
+          "edge": [
+            353,
+            372
+          ],
+          "new_vertex": 743,
+          "length_mm": 0.3893241147287208
+        },
+        {
+          "edge": [
+            266,
+            273
+          ],
+          "new_vertex": 744,
+          "length_mm": 0.3841304741234294
+        },
+        {
+          "edge": [
+            334,
+            372
+          ],
+          "new_vertex": 745,
+          "length_mm": 0.37928399270683716
+        },
+        {
+          "edge": [
+            194,
+            200
+          ],
+          "new_vertex": 746,
+          "length_mm": 0.37735175888421624
+        },
+        {
+          "edge": [
+            156,
+            194
+          ],
+          "new_vertex": 747,
+          "length_mm": 0.3768706589864494
+        },
+        {
+          "edge": [
+            133,
+            171
+          ],
+          "new_vertex": 748,
+          "length_mm": 0.3742813568910278
+        },
+        {
+          "edge": [
+            296,
+            323
+          ],
+          "new_vertex": 749,
+          "length_mm": 0.3732733794452165
+        },
+        {
+          "edge": [
+            296,
+            319
+          ],
+          "new_vertex": 750,
+          "length_mm": 0.36351756209683106
+        },
+        {
+          "edge": [
+            303,
+            310
+          ],
+          "new_vertex": 751,
+          "length_mm": 0.3464660413317459
+        },
+        {
+          "edge": [
+            116,
+            133
+          ],
+          "new_vertex": 752,
+          "length_mm": 0.3402180815049151
+        },
+        {
+          "edge": [
+            303,
+            343
+          ],
+          "new_vertex": 753,
+          "length_mm": 0.34017882620286716
+        },
+        {
+          "edge": [
+            334,
+            343
+          ],
+          "new_vertex": 754,
+          "length_mm": 0.339363924071803
+        },
+        {
+          "edge": [
+            266,
+            729
+          ],
+          "new_vertex": 755,
+          "length_mm": 0.323224519161112
+        },
+        {
+          "edge": [
+            216,
+            729
+          ],
+          "new_vertex": 756,
+          "length_mm": 0.32322451916111195
+        },
+        {
+          "edge": [
+            602,
+            603
+          ],
+          "new_vertex": 757,
+          "length_mm": 0.27989204603622
+        },
+        {
+          "edge": [
+            353,
+            730
+          ],
+          "new_vertex": 758,
+          "length_mm": 0.2746760936342691
+        },
+        {
+          "edge": [
+            323,
+            730
+          ],
+          "new_vertex": 759,
+          "length_mm": 0.274676093634269
+        },
+        {
+          "edge": [
+            116,
+            731
+          ],
+          "new_vertex": 760,
+          "length_mm": 0.2711909930776537
+        },
+        {
+          "edge": [
+            114,
+            731
+          ],
+          "new_vertex": 761,
+          "length_mm": 0.2711909930776537
+        },
+        {
+          "edge": [
+            319,
+            732
+          ],
+          "new_vertex": 762,
+          "length_mm": 0.2629958851565362
+        },
+        {
+          "edge": [
+            273,
+            732
+          ],
+          "new_vertex": 763,
+          "length_mm": 0.26299588515653616
+        },
+        {
+          "edge": [
+            238,
+            733
+          ],
+          "new_vertex": 764,
+          "length_mm": 0.25747184312547455
+        },
+        {
+          "edge": [
+            253,
+            733
+          ],
+          "new_vertex": 765,
+          "length_mm": 0.2574718431254745
+        },
+        {
+          "edge": [
+            157,
+            734
+          ],
+          "new_vertex": 766,
+          "length_mm": 0.24274382614182574
+        },
+        {
+          "edge": [
+            128,
+            734
+          ],
+          "new_vertex": 767,
+          "length_mm": 0.24274382614182566
+        },
+        {
+          "edge": [
+            595,
+            596
+          ],
+          "new_vertex": 768,
+          "length_mm": 0.23307528069356084
+        },
+        {
+          "edge": [
+            596,
+            597
+          ],
+          "new_vertex": 769,
+          "length_mm": 0.2279682138277064
+        },
+        {
+          "edge": [
+            238,
+            735
+          ],
+          "new_vertex": 770,
+          "length_mm": 0.22567835602689468
+        },
+        {
+          "edge": [
+            200,
+            735
+          ],
+          "new_vertex": 771,
+          "length_mm": 0.22567835602689465
+        },
+        {
+          "edge": [
+            201,
+            736
+          ],
+          "new_vertex": 772,
+          "length_mm": 0.2243907003289981
+        },
+        {
+          "edge": [
+            157,
+            736
+          ],
+          "new_vertex": 773,
+          "length_mm": 0.22439070032899805
+        },
+        {
+          "edge": [
+            310,
+            737
+          ],
+          "new_vertex": 774,
+          "length_mm": 0.21430037500946025
+        },
+        {
+          "edge": [
+            276,
+            737
+          ],
+          "new_vertex": 775,
+          "length_mm": 0.21430037500946
+        },
+        {
+          "edge": [
+            201,
+            738
+          ],
+          "new_vertex": 776,
+          "length_mm": 0.2133991955027487
+        },
+        {
+          "edge": [
+            216,
+            738
+          ],
+          "new_vertex": 777,
+          "length_mm": 0.21339919550274855
+        },
+        {
+          "edge": [
+            253,
+            739
+          ],
+          "new_vertex": 778,
+          "length_mm": 0.21008435566572783
+        },
+        {
+          "edge": [
+            276,
+            739
+          ],
+          "new_vertex": 779,
+          "length_mm": 0.2100843556657278
+        },
+        {
+          "edge": [
+            171,
+            740
+          ],
+          "new_vertex": 780,
+          "length_mm": 0.2100294062751127
+        },
+        {
+          "edge": [
+            156,
+            740
+          ],
+          "new_vertex": 781,
+          "length_mm": 0.2100294062751127
+        },
+        {
+          "edge": [
+            128,
+            741
+          ],
+          "new_vertex": 782,
+          "length_mm": 0.20743008850329187
+        },
+        {
+          "edge": [
+            114,
+            741
+          ],
+          "new_vertex": 783,
+          "length_mm": 0.20743008850329184
+        },
+        {
+          "edge": [
+            700,
+            742
+          ],
+          "new_vertex": 784,
+          "length_mm": 0.2073161228388048
+        },
+        {
+          "edge": [
+            608,
+            742
+          ],
+          "new_vertex": 785,
+          "length_mm": 0.2073161228388047
+        },
+        {
+          "edge": [
+            602,
+            725
+          ],
+          "new_vertex": 786,
+          "length_mm": 0.2020671657478183
+        },
+        {
+          "edge": [
+            700,
+            722
+          ],
+          "new_vertex": 787,
+          "length_mm": 0.20171396193780491
+        },
+        {
+          "edge": [
+            353,
+            743
+          ],
+          "new_vertex": 788,
+          "length_mm": 0.19466205736436043
+        },
+        {
+          "edge": [
+            372,
+            743
+          ],
+          "new_vertex": 789,
+          "length_mm": 0.19466205736436037
+        },
+        {
+          "edge": [
+            273,
+            744
+          ],
+          "new_vertex": 790,
+          "length_mm": 0.19206523706171477
+        },
+        {
+          "edge": [
+            266,
+            744
+          ],
+          "new_vertex": 791,
+          "length_mm": 0.19206523706171463
+        },
+        {
+          "edge": [
+            334,
+            745
+          ],
+          "new_vertex": 792,
+          "length_mm": 0.18964199635341858
+        },
+        {
+          "edge": [
+            372,
+            745
+          ],
+          "new_vertex": 793,
+          "length_mm": 0.18964199635341855
+        },
+        {
+          "edge": [
+            200,
+            746
+          ],
+          "new_vertex": 794,
+          "length_mm": 0.18867587944210812
+        },
+        {
+          "edge": [
+            194,
+            746
+          ],
+          "new_vertex": 795,
+          "length_mm": 0.1886758794421081
+        },
+        {
+          "edge": [
+            725,
+            726
+          ],
+          "new_vertex": 796,
+          "length_mm": 0.1885483896237277
+        },
+        {
+          "edge": [
+            194,
+            747
+          ],
+          "new_vertex": 797,
+          "length_mm": 0.18843532949322472
+        },
+        {
+          "edge": [
+            156,
+            747
+          ],
+          "new_vertex": 798,
+          "length_mm": 0.18843532949322467
+        },
+        {
+          "edge": [
+            603,
+            650
+          ],
+          "new_vertex": 799,
+          "length_mm": 0.18791788291617423
+        },
+        {
+          "edge": [
+            133,
+            748
+          ],
+          "new_vertex": 800,
+          "length_mm": 0.18714067844551394
+        },
+        {
+          "edge": [
+            171,
+            748
+          ],
+          "new_vertex": 801,
+          "length_mm": 0.18714067844551385
+        },
+        {
+          "edge": [
+            323,
+            749
+          ],
+          "new_vertex": 802,
+          "length_mm": 0.1866366897226083
+        },
+        {
+          "edge": [
+            296,
+            749
+          ],
+          "new_vertex": 803,
+          "length_mm": 0.18663668972260822
+        },
+        {
+          "edge": [
+            319,
+            750
+          ],
+          "new_vertex": 804,
+          "length_mm": 0.18175878104841553
+        },
+        {
+          "edge": [
+            296,
+            750
+          ],
+          "new_vertex": 805,
+          "length_mm": 0.1817587810484155
+        },
+        {
+          "edge": [
+            675,
+            688
+          ],
+          "new_vertex": 806,
+          "length_mm": 0.17640313068278118
+        },
+        {
+          "edge": [
+            303,
+            751
+          ],
+          "new_vertex": 807,
+          "length_mm": 0.17323302066587307
+        },
+        {
+          "edge": [
+            310,
+            751
+          ],
+          "new_vertex": 808,
+          "length_mm": 0.17323302066587287
+        },
+        {
+          "edge": [
+            133,
+            752
+          ],
+          "new_vertex": 809,
+          "length_mm": 0.17010904075245756
+        },
+        {
+          "edge": [
+            116,
+            752
+          ],
+          "new_vertex": 810,
+          "length_mm": 0.17010904075245756
+        },
+        {
+          "edge": [
+            303,
+            753
+          ],
+          "new_vertex": 811,
+          "length_mm": 0.17008941310143358
+        },
+        {
+          "edge": [
+            343,
+            753
+          ],
+          "new_vertex": 812,
+          "length_mm": 0.17008941310143352
+        },
+        {
+          "edge": [
+            334,
+            754
+          ],
+          "new_vertex": 813,
+          "length_mm": 0.16968196203590155
+        },
+        {
+          "edge": [
+            343,
+            754
+          ],
+          "new_vertex": 814,
+          "length_mm": 0.16968196203590144
+        },
+        {
+          "edge": [
+            729,
+            756
+          ],
+          "new_vertex": 815,
+          "length_mm": 0.161612259580556
+        },
+        {
+          "edge": [
+            729,
+            755
+          ],
+          "new_vertex": 816,
+          "length_mm": 0.161612259580556
+        },
+        {
+          "edge": [
+            266,
+            755
+          ],
+          "new_vertex": 817,
+          "length_mm": 0.161612259580556
+        },
+        {
+          "edge": [
+            216,
+            756
+          ],
+          "new_vertex": 818,
+          "length_mm": 0.16161225958055597
+        },
+        {
+          "edge": [
+            720,
+            721
+          ],
+          "new_vertex": 819,
+          "length_mm": 0.16120461350802756
+        },
+        {
+          "edge": [
+            674,
+            718
+          ],
+          "new_vertex": 820,
+          "length_mm": 0.14277219060855434
+        },
+        {
+          "edge": [
+            602,
+            757
+          ],
+          "new_vertex": 821,
+          "length_mm": 0.13994602301811002
+        },
+        {
+          "edge": [
+            603,
+            757
+          ],
+          "new_vertex": 822,
+          "length_mm": 0.13994602301810996
+        },
+        {
+          "edge": [
+            636,
+            718
+          ],
+          "new_vertex": 823,
+          "length_mm": 0.13989562801217187
+        },
+        {
+          "edge": [
+            353,
+            758
+          ],
+          "new_vertex": 824,
+          "length_mm": 0.1373380468171346
+        },
+        {
+          "edge": [
+            730,
+            759
+          ],
+          "new_vertex": 825,
+          "length_mm": 0.1373380468171345
+        },
+        {
+          "edge": [
+            730,
+            758
+          ],
+          "new_vertex": 826,
+          "length_mm": 0.1373380468171345
+        },
+        {
+          "edge": [
+            323,
+            759
+          ],
+          "new_vertex": 827,
+          "length_mm": 0.1373380468171345
+        },
+        {
+          "edge": [
+            664,
+            726
+          ],
+          "new_vertex": 828,
+          "length_mm": 0.1359764005691326
+        },
+        {
+          "edge": [
+            116,
+            760
+          ],
+          "new_vertex": 829,
+          "length_mm": 0.13559549653882688
+        },
+        {
+          "edge": [
+            731,
+            761
+          ],
+          "new_vertex": 830,
+          "length_mm": 0.13559549653882685
+        },
+        {
+          "edge": [
+            731,
+            760
+          ],
+          "new_vertex": 831,
+          "length_mm": 0.13559549653882685
+        },
+        {
+          "edge": [
+            114,
+            761
+          ],
+          "new_vertex": 832,
+          "length_mm": 0.13559549653882685
+        },
+        {
+          "edge": [
+            719,
+            720
+          ],
+          "new_vertex": 833,
+          "length_mm": 0.13488524348979433
+        },
+        {
+          "edge": [
+            650,
+            672
+          ],
+          "new_vertex": 834,
+          "length_mm": 0.13302635267958182
+        },
+        {
+          "edge": [
+            319,
+            762
+          ],
+          "new_vertex": 835,
+          "length_mm": 0.13149794257826816
+        },
+        {
+          "edge": [
+            273,
+            763
+          ],
+          "new_vertex": 836,
+          "length_mm": 0.13149794257826808
+        },
+        {
+          "edge": [
+            732,
+            763
+          ],
+          "new_vertex": 837,
+          "length_mm": 0.13149794257826805
+        },
+        {
+          "edge": [
+            732,
+            762
+          ],
+          "new_vertex": 838,
+          "length_mm": 0.13149794257826802
+        },
+        {
+          "edge": [
+            733,
+            765
+          ],
+          "new_vertex": 839,
+          "length_mm": 0.12873592156273733
+        },
+        {
+          "edge": [
+            733,
+            764
+          ],
+          "new_vertex": 840,
+          "length_mm": 0.12873592156273733
+        },
+        {
+          "edge": [
+            238,
+            764
+          ],
+          "new_vertex": 841,
+          "length_mm": 0.12873592156273722
+        },
+        {
+          "edge": [
+            253,
+            765
+          ],
+          "new_vertex": 842,
+          "length_mm": 0.12873592156273717
+        }
+      ],
+      "contract": "允许外部共面细分，不再要求外部三角面编号或集合不变",
+      "budget_exhausted": false,
+      "input_faces": 1454,
+      "output_faces": 1682,
+      "actual_edge_length_mm": 0.1001723031151933,
+      "max_protected_edge_mm": 0.12137191307091287,
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1032,
+        "external_faces_retained": 1032,
+        "missing_fixed_vertices": 0
+      },
+      "safe_projection_ms": 892.7177330479026,
+      "projection_fp64_restoration_max_mm": 1.5319586352208474e-07,
+      "collision_scope": "whole_mesh_author_energy_and_ccd",
+      "maintenance_ms": 3909.350521862507,
+      "output_sha256": "d346fb0ef7d588c07500fbbcc215d038e69d75f5765b88a05b4bb455891d89d1",
+      "case": "crossing_e1",
+      "output_metrics": {
+        "vertices": 1328,
+        "faces": 2652,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.920487886096037,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.004433184444515515,
+            "p95_mm": 6.024158590892915e-05,
+            "rms_mm": 0.0003036916781503234,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.004684631485275885,
+            "p95_mm": 2.9269934076869167e-05,
+            "rms_mm": 0.00027355384810360937,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.004684631485275885,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.007283147360816634,
+        "probe_max_mm": 0.007283147360816634,
+        "continuous_geometry_certified": false
+      },
+      "quality": {
+        "total_faces": 2652,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 122,
+          "fraction": 0.04600301659125189,
+          "area_fraction": 0.011247903820270865
+        },
+        "angle_below_5_deg": {
+          "faces": 32,
+          "fraction": 0.012066365007541479,
+          "area_fraction": 0.0004686817539142586
+        },
+        "angle_below_1_deg": {
+          "faces": 6,
+          "fraction": 0.0022624434389140274,
+          "area_fraction": 1.8543579753699172e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 2146,
+          "fraction": 0.8092006033182504,
+          "area_fraction": 0.8829225588382735
+        }
+      },
+      "source_quality": {
+        "total_faces": 1454,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 172,
+          "fraction": 0.11829436038514443,
+          "area_fraction": 0.04348161938251871
+        },
+        "angle_below_5_deg": {
+          "faces": 108,
+          "fraction": 0.07427785419532325,
+          "area_fraction": 0.03723934197470214
+        },
+        "angle_below_1_deg": {
+          "faces": 21,
+          "fraction": 0.014442916093535076,
+          "area_fraction": 0.0005943011228708636
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 974,
+          "fraction": 0.6698762035763411,
+          "area_fraction": 0.8641615879490206
+        }
+      },
+      "capacity_alarm": false
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 6860.556799998449,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive_planar/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive_planar/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive_planar/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' --method adaptive_planar --output '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive_planar/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e1_adaptive_planar/worker.log' 2>&1"
+      },
+      "method": "adaptive_planar",
+      "status": "accepted_numeric_audit",
+      "inputs_sha256": {
+        "source.obj": "3019c17ecef627c6917d685da38b92b37eb322ed8691cfe38f31055b8c8e24d5",
+        "labels.json": "b763da5c811a059b07526263330842b9d3133076e35fb246d793a4898409fe20",
+        "tool.obj": "fb1e18d888056303e2c648be225741e8880c06246752866e7b746b097b6fd2bf"
+      },
+      "target_mm": 0.1001723031151933,
+      "max_splits": 10000,
+      "splits": [
+        {
+          "edge": [
+            216,
+            266
+          ],
+          "new_vertex": 729,
+          "length_mm": 0.6464490383222239
+        },
+        {
+          "edge": [
+            323,
+            353
+          ],
+          "new_vertex": 730,
+          "length_mm": 0.5493521872685381
+        },
+        {
+          "edge": [
+            114,
+            116
+          ],
+          "new_vertex": 731,
+          "length_mm": 0.5423819861553074
+        },
+        {
+          "edge": [
+            273,
+            319
+          ],
+          "new_vertex": 732,
+          "length_mm": 0.5259917703130724
+        },
+        {
+          "edge": [
+            238,
+            253
+          ],
+          "new_vertex": 733,
+          "length_mm": 0.5149436862509491
+        },
+        {
+          "edge": [
+            128,
+            157
+          ],
+          "new_vertex": 734,
+          "length_mm": 0.48548765228365137
+        },
+        {
+          "edge": [
+            200,
+            238
+          ],
+          "new_vertex": 735,
+          "length_mm": 0.4513567120537893
+        },
+        {
+          "edge": [
+            157,
+            201
+          ],
+          "new_vertex": 736,
+          "length_mm": 0.44878140065799615
+        },
+        {
+          "edge": [
+            276,
+            310
+          ],
+          "new_vertex": 737,
+          "length_mm": 0.4286007500189203
+        },
+        {
+          "edge": [
+            201,
+            216
+          ],
+          "new_vertex": 738,
+          "length_mm": 0.4267983910054972
+        },
+        {
+          "edge": [
+            253,
+            276
+          ],
+          "new_vertex": 739,
+          "length_mm": 0.4201687113314556
+        },
+        {
+          "edge": [
+            156,
+            171
+          ],
+          "new_vertex": 740,
+          "length_mm": 0.42005881255022537
+        },
+        {
+          "edge": [
+            114,
+            128
+          ],
+          "new_vertex": 741,
+          "length_mm": 0.4148601770065837
+        },
+        {
+          "edge": [
+            608,
+            700
+          ],
+          "new_vertex": 742,
+          "length_mm": 0.41463224567760953
+        },
+        {
+          "edge": [
+            353,
+            372
+          ],
+          "new_vertex": 743,
+          "length_mm": 0.3893241147287208
+        },
+        {
+          "edge": [
+            266,
+            273
+          ],
+          "new_vertex": 744,
+          "length_mm": 0.3841304741234294
+        },
+        {
+          "edge": [
+            334,
+            372
+          ],
+          "new_vertex": 745,
+          "length_mm": 0.37928399270683716
+        },
+        {
+          "edge": [
+            194,
+            200
+          ],
+          "new_vertex": 746,
+          "length_mm": 0.37735175888421624
+        },
+        {
+          "edge": [
+            156,
+            194
+          ],
+          "new_vertex": 747,
+          "length_mm": 0.3768706589864494
+        },
+        {
+          "edge": [
+            133,
+            171
+          ],
+          "new_vertex": 748,
+          "length_mm": 0.3742813568910278
+        },
+        {
+          "edge": [
+            296,
+            323
+          ],
+          "new_vertex": 749,
+          "length_mm": 0.3732733794452165
+        },
+        {
+          "edge": [
+            296,
+            319
+          ],
+          "new_vertex": 750,
+          "length_mm": 0.36351756209683106
+        },
+        {
+          "edge": [
+            303,
+            310
+          ],
+          "new_vertex": 751,
+          "length_mm": 0.3464660413317459
+        },
+        {
+          "edge": [
+            116,
+            133
+          ],
+          "new_vertex": 752,
+          "length_mm": 0.3402180815049151
+        },
+        {
+          "edge": [
+            303,
+            343
+          ],
+          "new_vertex": 753,
+          "length_mm": 0.34017882620286716
+        },
+        {
+          "edge": [
+            334,
+            343
+          ],
+          "new_vertex": 754,
+          "length_mm": 0.339363924071803
+        },
+        {
+          "edge": [
+            266,
+            729
+          ],
+          "new_vertex": 755,
+          "length_mm": 0.323224519161112
+        },
+        {
+          "edge": [
+            216,
+            729
+          ],
+          "new_vertex": 756,
+          "length_mm": 0.32322451916111195
+        },
+        {
+          "edge": [
+            602,
+            603
+          ],
+          "new_vertex": 757,
+          "length_mm": 0.27989204603622
+        },
+        {
+          "edge": [
+            353,
+            730
+          ],
+          "new_vertex": 758,
+          "length_mm": 0.2746760936342691
+        },
+        {
+          "edge": [
+            323,
+            730
+          ],
+          "new_vertex": 759,
+          "length_mm": 0.274676093634269
+        },
+        {
+          "edge": [
+            116,
+            731
+          ],
+          "new_vertex": 760,
+          "length_mm": 0.2711909930776537
+        },
+        {
+          "edge": [
+            114,
+            731
+          ],
+          "new_vertex": 761,
+          "length_mm": 0.2711909930776537
+        },
+        {
+          "edge": [
+            319,
+            732
+          ],
+          "new_vertex": 762,
+          "length_mm": 0.2629958851565362
+        },
+        {
+          "edge": [
+            273,
+            732
+          ],
+          "new_vertex": 763,
+          "length_mm": 0.26299588515653616
+        },
+        {
+          "edge": [
+            238,
+            733
+          ],
+          "new_vertex": 764,
+          "length_mm": 0.25747184312547455
+        },
+        {
+          "edge": [
+            253,
+            733
+          ],
+          "new_vertex": 765,
+          "length_mm": 0.2574718431254745
+        },
+        {
+          "edge": [
+            157,
+            734
+          ],
+          "new_vertex": 766,
+          "length_mm": 0.24274382614182574
+        },
+        {
+          "edge": [
+            128,
+            734
+          ],
+          "new_vertex": 767,
+          "length_mm": 0.24274382614182566
+        },
+        {
+          "edge": [
+            595,
+            596
+          ],
+          "new_vertex": 768,
+          "length_mm": 0.23307528069356084
+        },
+        {
+          "edge": [
+            596,
+            597
+          ],
+          "new_vertex": 769,
+          "length_mm": 0.2279682138277064
+        },
+        {
+          "edge": [
+            238,
+            735
+          ],
+          "new_vertex": 770,
+          "length_mm": 0.22567835602689468
+        },
+        {
+          "edge": [
+            200,
+            735
+          ],
+          "new_vertex": 771,
+          "length_mm": 0.22567835602689465
+        },
+        {
+          "edge": [
+            201,
+            736
+          ],
+          "new_vertex": 772,
+          "length_mm": 0.2243907003289981
+        },
+        {
+          "edge": [
+            157,
+            736
+          ],
+          "new_vertex": 773,
+          "length_mm": 0.22439070032899805
+        },
+        {
+          "edge": [
+            310,
+            737
+          ],
+          "new_vertex": 774,
+          "length_mm": 0.21430037500946025
+        },
+        {
+          "edge": [
+            276,
+            737
+          ],
+          "new_vertex": 775,
+          "length_mm": 0.21430037500946
+        },
+        {
+          "edge": [
+            201,
+            738
+          ],
+          "new_vertex": 776,
+          "length_mm": 0.2133991955027487
+        },
+        {
+          "edge": [
+            216,
+            738
+          ],
+          "new_vertex": 777,
+          "length_mm": 0.21339919550274855
+        },
+        {
+          "edge": [
+            253,
+            739
+          ],
+          "new_vertex": 778,
+          "length_mm": 0.21008435566572783
+        },
+        {
+          "edge": [
+            276,
+            739
+          ],
+          "new_vertex": 779,
+          "length_mm": 0.2100843556657278
+        },
+        {
+          "edge": [
+            171,
+            740
+          ],
+          "new_vertex": 780,
+          "length_mm": 0.2100294062751127
+        },
+        {
+          "edge": [
+            156,
+            740
+          ],
+          "new_vertex": 781,
+          "length_mm": 0.2100294062751127
+        },
+        {
+          "edge": [
+            128,
+            741
+          ],
+          "new_vertex": 782,
+          "length_mm": 0.20743008850329187
+        },
+        {
+          "edge": [
+            114,
+            741
+          ],
+          "new_vertex": 783,
+          "length_mm": 0.20743008850329184
+        },
+        {
+          "edge": [
+            700,
+            742
+          ],
+          "new_vertex": 784,
+          "length_mm": 0.2073161228388048
+        },
+        {
+          "edge": [
+            608,
+            742
+          ],
+          "new_vertex": 785,
+          "length_mm": 0.2073161228388047
+        },
+        {
+          "edge": [
+            602,
+            725
+          ],
+          "new_vertex": 786,
+          "length_mm": 0.2020671657478183
+        },
+        {
+          "edge": [
+            700,
+            722
+          ],
+          "new_vertex": 787,
+          "length_mm": 0.20171396193780491
+        },
+        {
+          "edge": [
+            353,
+            743
+          ],
+          "new_vertex": 788,
+          "length_mm": 0.19466205736436043
+        },
+        {
+          "edge": [
+            372,
+            743
+          ],
+          "new_vertex": 789,
+          "length_mm": 0.19466205736436037
+        },
+        {
+          "edge": [
+            273,
+            744
+          ],
+          "new_vertex": 790,
+          "length_mm": 0.19206523706171477
+        },
+        {
+          "edge": [
+            266,
+            744
+          ],
+          "new_vertex": 791,
+          "length_mm": 0.19206523706171463
+        },
+        {
+          "edge": [
+            334,
+            745
+          ],
+          "new_vertex": 792,
+          "length_mm": 0.18964199635341858
+        },
+        {
+          "edge": [
+            372,
+            745
+          ],
+          "new_vertex": 793,
+          "length_mm": 0.18964199635341855
+        },
+        {
+          "edge": [
+            200,
+            746
+          ],
+          "new_vertex": 794,
+          "length_mm": 0.18867587944210812
+        },
+        {
+          "edge": [
+            194,
+            746
+          ],
+          "new_vertex": 795,
+          "length_mm": 0.1886758794421081
+        },
+        {
+          "edge": [
+            725,
+            726
+          ],
+          "new_vertex": 796,
+          "length_mm": 0.1885483896237277
+        },
+        {
+          "edge": [
+            194,
+            747
+          ],
+          "new_vertex": 797,
+          "length_mm": 0.18843532949322472
+        },
+        {
+          "edge": [
+            156,
+            747
+          ],
+          "new_vertex": 798,
+          "length_mm": 0.18843532949322467
+        },
+        {
+          "edge": [
+            603,
+            650
+          ],
+          "new_vertex": 799,
+          "length_mm": 0.18791788291617423
+        },
+        {
+          "edge": [
+            133,
+            748
+          ],
+          "new_vertex": 800,
+          "length_mm": 0.18714067844551394
+        },
+        {
+          "edge": [
+            171,
+            748
+          ],
+          "new_vertex": 801,
+          "length_mm": 0.18714067844551385
+        },
+        {
+          "edge": [
+            323,
+            749
+          ],
+          "new_vertex": 802,
+          "length_mm": 0.1866366897226083
+        },
+        {
+          "edge": [
+            296,
+            749
+          ],
+          "new_vertex": 803,
+          "length_mm": 0.18663668972260822
+        },
+        {
+          "edge": [
+            319,
+            750
+          ],
+          "new_vertex": 804,
+          "length_mm": 0.18175878104841553
+        },
+        {
+          "edge": [
+            296,
+            750
+          ],
+          "new_vertex": 805,
+          "length_mm": 0.1817587810484155
+        },
+        {
+          "edge": [
+            675,
+            688
+          ],
+          "new_vertex": 806,
+          "length_mm": 0.17640313068278118
+        },
+        {
+          "edge": [
+            303,
+            751
+          ],
+          "new_vertex": 807,
+          "length_mm": 0.17323302066587307
+        },
+        {
+          "edge": [
+            310,
+            751
+          ],
+          "new_vertex": 808,
+          "length_mm": 0.17323302066587287
+        },
+        {
+          "edge": [
+            133,
+            752
+          ],
+          "new_vertex": 809,
+          "length_mm": 0.17010904075245756
+        },
+        {
+          "edge": [
+            116,
+            752
+          ],
+          "new_vertex": 810,
+          "length_mm": 0.17010904075245756
+        },
+        {
+          "edge": [
+            303,
+            753
+          ],
+          "new_vertex": 811,
+          "length_mm": 0.17008941310143358
+        },
+        {
+          "edge": [
+            343,
+            753
+          ],
+          "new_vertex": 812,
+          "length_mm": 0.17008941310143352
+        },
+        {
+          "edge": [
+            334,
+            754
+          ],
+          "new_vertex": 813,
+          "length_mm": 0.16968196203590155
+        },
+        {
+          "edge": [
+            343,
+            754
+          ],
+          "new_vertex": 814,
+          "length_mm": 0.16968196203590144
+        },
+        {
+          "edge": [
+            729,
+            756
+          ],
+          "new_vertex": 815,
+          "length_mm": 0.161612259580556
+        },
+        {
+          "edge": [
+            729,
+            755
+          ],
+          "new_vertex": 816,
+          "length_mm": 0.161612259580556
+        },
+        {
+          "edge": [
+            266,
+            755
+          ],
+          "new_vertex": 817,
+          "length_mm": 0.161612259580556
+        },
+        {
+          "edge": [
+            216,
+            756
+          ],
+          "new_vertex": 818,
+          "length_mm": 0.16161225958055597
+        },
+        {
+          "edge": [
+            720,
+            721
+          ],
+          "new_vertex": 819,
+          "length_mm": 0.16120461350802756
+        },
+        {
+          "edge": [
+            674,
+            718
+          ],
+          "new_vertex": 820,
+          "length_mm": 0.14277219060855434
+        },
+        {
+          "edge": [
+            602,
+            757
+          ],
+          "new_vertex": 821,
+          "length_mm": 0.13994602301811002
+        },
+        {
+          "edge": [
+            603,
+            757
+          ],
+          "new_vertex": 822,
+          "length_mm": 0.13994602301810996
+        },
+        {
+          "edge": [
+            636,
+            718
+          ],
+          "new_vertex": 823,
+          "length_mm": 0.13989562801217187
+        },
+        {
+          "edge": [
+            353,
+            758
+          ],
+          "new_vertex": 824,
+          "length_mm": 0.1373380468171346
+        },
+        {
+          "edge": [
+            730,
+            759
+          ],
+          "new_vertex": 825,
+          "length_mm": 0.1373380468171345
+        },
+        {
+          "edge": [
+            730,
+            758
+          ],
+          "new_vertex": 826,
+          "length_mm": 0.1373380468171345
+        },
+        {
+          "edge": [
+            323,
+            759
+          ],
+          "new_vertex": 827,
+          "length_mm": 0.1373380468171345
+        },
+        {
+          "edge": [
+            664,
+            726
+          ],
+          "new_vertex": 828,
+          "length_mm": 0.1359764005691326
+        },
+        {
+          "edge": [
+            116,
+            760
+          ],
+          "new_vertex": 829,
+          "length_mm": 0.13559549653882688
+        },
+        {
+          "edge": [
+            731,
+            761
+          ],
+          "new_vertex": 830,
+          "length_mm": 0.13559549653882685
+        },
+        {
+          "edge": [
+            731,
+            760
+          ],
+          "new_vertex": 831,
+          "length_mm": 0.13559549653882685
+        },
+        {
+          "edge": [
+            114,
+            761
+          ],
+          "new_vertex": 832,
+          "length_mm": 0.13559549653882685
+        },
+        {
+          "edge": [
+            719,
+            720
+          ],
+          "new_vertex": 833,
+          "length_mm": 0.13488524348979433
+        },
+        {
+          "edge": [
+            650,
+            672
+          ],
+          "new_vertex": 834,
+          "length_mm": 0.13302635267958182
+        },
+        {
+          "edge": [
+            319,
+            762
+          ],
+          "new_vertex": 835,
+          "length_mm": 0.13149794257826816
+        },
+        {
+          "edge": [
+            273,
+            763
+          ],
+          "new_vertex": 836,
+          "length_mm": 0.13149794257826808
+        },
+        {
+          "edge": [
+            732,
+            763
+          ],
+          "new_vertex": 837,
+          "length_mm": 0.13149794257826805
+        },
+        {
+          "edge": [
+            732,
+            762
+          ],
+          "new_vertex": 838,
+          "length_mm": 0.13149794257826802
+        },
+        {
+          "edge": [
+            733,
+            765
+          ],
+          "new_vertex": 839,
+          "length_mm": 0.12873592156273733
+        },
+        {
+          "edge": [
+            733,
+            764
+          ],
+          "new_vertex": 840,
+          "length_mm": 0.12873592156273733
+        },
+        {
+          "edge": [
+            238,
+            764
+          ],
+          "new_vertex": 841,
+          "length_mm": 0.12873592156273722
+        },
+        {
+          "edge": [
+            253,
+            765
+          ],
+          "new_vertex": 842,
+          "length_mm": 0.12873592156273717
+        }
+      ],
+      "contract": "允许外部共面细分，不再要求外部三角面编号或集合不变",
+      "budget_exhausted": false,
+      "input_faces": 1454,
+      "output_faces": 1682,
+      "planar_improvement": {
+        "max_flips": 200,
+        "plane_tolerance_mm": 1e-10,
+        "flips": [
+          {
+            "faces": [
+              1409,
+              1635
+            ],
+            "old_edge": [
+              554,
+              720
+            ],
+            "new_edge": [
+              506,
+              819
+            ],
+            "old_min_deg": 0.03624042779812858,
+            "new_min_deg": 1.0555169415306582,
+            "active": true
+          },
+          {
+            "faces": [
+              1394,
+              1635
+            ],
+            "old_edge": [
+              819,
+              554
+            ],
+            "new_edge": [
+              721,
+              506
+            ],
+            "old_min_deg": 0.040460187169715625,
+            "new_min_deg": 1.095977128698469,
+            "active": true
+          },
+          {
+            "faces": [
+              1394,
+              1402
+            ],
+            "old_edge": [
+              554,
+              721
+            ],
+            "new_edge": [
+              506,
+              603
+            ],
+            "old_min_deg": 0.608152433991559,
+            "new_min_deg": 1.6951777547692646,
+            "active": true
+          },
+          {
+            "faces": [
+              1402,
+              1641
+            ],
+            "old_edge": [
+              554,
+              603
+            ],
+            "new_edge": [
+              506,
+              822
+            ],
+            "old_min_deg": 0.12700625521853534,
+            "new_min_deg": 0.18628550025973964,
+            "active": true
+          },
+          {
+            "faces": [
+              1511,
+              1641
+            ],
+            "old_edge": [
+              822,
+              554
+            ],
+            "new_edge": [
+              757,
+              506
+            ],
+            "old_min_deg": 0.14759139501744556,
+            "new_min_deg": 0.15761492504271574,
+            "active": true
+          },
+          {
+            "faces": [
+              1394,
+              1395
+            ],
+            "old_edge": [
+              603,
+              721
+            ],
+            "new_edge": [
+              506,
+              799
+            ],
+            "old_min_deg": 0.17590147695804992,
+            "new_min_deg": 0.3144725603155455,
+            "active": true
+          },
+          {
+            "faces": [
+              1263,
+              1264
+            ],
+            "old_edge": [
+              535,
+              589
+            ],
+            "new_edge": [
+              537,
+              588
+            ],
+            "old_min_deg": 2.2391755131638575,
+            "new_min_deg": 2.4128217208786866,
+            "active": true
+          },
+          {
+            "faces": [
+              1269,
+              1270
+            ],
+            "old_edge": [
+              554,
+              539
+            ],
+            "new_edge": [
+              590,
+              506
+            ],
+            "old_min_deg": 2.3312785039953994,
+            "new_min_deg": 2.5133588786052843,
+            "active": true
+          },
+          {
+            "faces": [
+              1271,
+              1272
+            ],
+            "old_edge": [
+              557,
+              524
+            ],
+            "new_edge": [
+              516,
+              562
+            ],
+            "old_min_deg": 3.3987166171978074,
+            "new_min_deg": 3.5097678099641065,
+            "active": true
+          },
+          {
+            "faces": [
+              1259,
+              1260
+            ],
+            "old_edge": [
+              519,
+              565
+            ],
+            "new_edge": [
+              559,
+              525
+            ],
+            "old_min_deg": 3.4502628741261994,
+            "new_min_deg": 3.546087947334227,
+            "active": true
+          },
+          {
+            "faces": [
+              1261,
+              1262
+            ],
+            "old_edge": [
+              539,
+              589
+            ],
+            "new_edge": [
+              590,
+              537
+            ],
+            "old_min_deg": 3.5072957798098634,
+            "new_min_deg": 3.617753135140518,
+            "active": true
+          },
+          {
+            "faces": [
+              1353,
+              1354
+            ],
+            "old_edge": [
+              502,
+              601
+            ],
+            "new_edge": [
+              600,
+              655
+            ],
+            "old_min_deg": 4.207126562005628,
+            "new_min_deg": 6.184213270855435,
+            "active": true
+          },
+          {
+            "faces": [
+              1340,
+              1342
+            ],
+            "old_edge": [
+              676,
+              572
+            ],
+            "new_edge": [
+              579,
+              694
+            ],
+            "old_min_deg": 6.344072596526501,
+            "new_min_deg": 6.684949336069019,
+            "active": true
+          },
+          {
+            "faces": [
+              27,
+              1462
+            ],
+            "old_edge": [
+              733,
+              276
+            ],
+            "new_edge": [
+              779,
+              840
+            ],
+            "old_min_deg": 7.514850412021639,
+            "new_min_deg": 8.18790888568225,
+            "active": true
+          },
+          {
+            "faces": [
+              27,
+              1676
+            ],
+            "old_edge": [
+              840,
+              276
+            ],
+            "new_edge": [
+              779,
+              764
+            ],
+            "old_min_deg": 6.597577300354062,
+            "new_min_deg": 6.676587327483105,
+            "active": true
+          },
+          {
+            "faces": [
+              1100,
+              1101
+            ],
+            "old_edge": [
+              602,
+              234
+            ],
+            "new_edge": [
+              194,
+              786
+            ],
+            "old_min_deg": 8.301141200125317,
+            "new_min_deg": 13.805746028659307,
+            "active": true
+          },
+          {
+            "faces": [
+              79,
+              1502
+            ],
+            "old_edge": [
+              753,
+              334
+            ],
+            "new_edge": [
+              813,
+              811
+            ],
+            "old_min_deg": 8.922508485720334,
+            "new_min_deg": 10.606252029317742,
+            "active": true
+          },
+          {
+            "faces": [
+              1579,
+              1673
+            ],
+            "old_edge": [
+              266,
+              732
+            ],
+            "new_edge": [
+              791,
+              838
+            ],
+            "old_min_deg": 9.308459435344156,
+            "new_min_deg": 9.865171385235241,
+            "active": false
+          },
+          {
+            "faces": [
+              500,
+              1477
+            ],
+            "old_edge": [
+              740,
+              194
+            ],
+            "new_edge": [
+              797,
+              780
+            ],
+            "old_min_deg": 9.682041051269952,
+            "new_min_deg": 10.984167304940684,
+            "active": true
+          },
+          {
+            "faces": [
+              1281,
+              1283
+            ],
+            "old_edge": [
+              604,
+              541
+            ],
+            "new_edge": [
+              508,
+              605
+            ],
+            "old_min_deg": 9.695188303633538,
+            "new_min_deg": 10.097839313356632,
+            "active": true
+          }
+        ],
+        "budget_exhausted": false,
+        "vertices_exact": true
+      },
+      "actual_edge_length_mm": 0.1001723031151933,
+      "max_protected_edge_mm": 0.12137191307091287,
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1032,
+        "external_faces_retained": 1032,
+        "missing_fixed_vertices": 0
+      },
+      "safe_projection_ms": 910.9489023685455,
+      "projection_fp64_restoration_max_mm": 1.5319586352208474e-07,
+      "collision_scope": "whole_mesh_author_energy_and_ccd",
+      "maintenance_ms": 5378.2931715250015,
+      "output_sha256": "fca6dc596e60f50c566d83d0b40e21f7c2335710771e252e5760b3d90bc6b71e",
+      "case": "crossing_e1",
+      "output_metrics": {
+        "vertices": 1328,
+        "faces": 2652,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.920371085856015,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.0041635287319429495,
+            "p95_mm": 5.156294694343335e-05,
+            "rms_mm": 0.00027812554778746475,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.00588314700199652,
+            "p95_mm": 4.182298602781613e-05,
+            "rms_mm": 0.00026099256428664533,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.00588314700199652,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.007199308524416246,
+        "probe_max_mm": 0.007199308524416246,
+        "continuous_geometry_certified": false
+      },
+      "quality": {
+        "total_faces": 2652,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 119,
+          "fraction": 0.04487179487179487,
+          "area_fraction": 0.011190464471292608
+        },
+        "angle_below_5_deg": {
+          "faces": 32,
+          "fraction": 0.012066365007541479,
+          "area_fraction": 0.00046807666042006515
+        },
+        "angle_below_1_deg": {
+          "faces": 6,
+          "fraction": 0.0022624434389140274,
+          "area_fraction": 2.0148635065678106e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 2148,
+          "fraction": 0.8099547511312217,
+          "area_fraction": 0.8830217313127657
+        }
+      },
+      "source_quality": {
+        "total_faces": 1454,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 172,
+          "fraction": 0.11829436038514443,
+          "area_fraction": 0.04348161938251871
+        },
+        "angle_below_5_deg": {
+          "faces": 108,
+          "fraction": 0.07427785419532325,
+          "area_fraction": 0.03723934197470214
+        },
+        "angle_below_1_deg": {
+          "faces": 21,
+          "fraction": 0.014442916093535076,
+          "area_fraction": 0.0005943011228708636
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 974,
+          "fraction": 0.6698762035763411,
+          "area_fraction": 0.8641615879490206
+        }
+      },
+      "capacity_alarm": false
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4504.605699999956,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_full/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_full/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_full/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' --method full --output '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_full/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_full/worker.log' 2>&1"
+      },
+      "method": "full",
+      "status": "accepted_numeric_audit",
+      "inputs_sha256": {
+        "source.obj": "74677226ccd9f720a6b6e01df4e248c027d5cb34a731f43a14a82efec4742309",
+        "labels.json": "2909ea050169c767d6a926c04cb909b94ea040bf6ce66159d8f239ae394df60d",
+        "tool.obj": "6572910bd803b71dd99e1bb04a727b350f2f3a25237a18ec5e7f8671f60f01a8"
+      },
+      "pamo_run_ms": 1384.7422543913126,
+      "stage1": "original",
+      "maintenance_ms": 2963.571465574205,
+      "output_sha256": "9623f1355a115ba1c9583a4ea5c4c4527c9579869e6690ecf9b6a72c2f91f668",
+      "case": "crossing_e2",
+      "output_metrics": {
+        "vertices": 817,
+        "faces": 1630,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.841852488716384,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.020227799951437555,
+            "p95_mm": 0.005258491099877704,
+            "rms_mm": 0.0023976014335720277,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.022412365808513423,
+            "p95_mm": 0.005662748217252417,
+            "rms_mm": 0.002561990336942205,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.022412365808513423,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.030568743609679764,
+        "probe_max_mm": 0.030568743609679764,
+        "continuous_geometry_certified": false
+      },
+      "quality": {
+        "total_faces": 1630,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 29,
+          "fraction": 0.017791411042944787,
+          "area_fraction": 0.005174930079547091
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1271,
+          "fraction": 0.7797546012269939,
+          "area_fraction": 0.9026071146981732
+        }
+      },
+      "source_quality": {
+        "total_faces": 1724,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 92,
+          "fraction": 0.05336426914153132,
+          "area_fraction": 0.005222743706671391
+        },
+        "angle_below_5_deg": {
+          "faces": 42,
+          "fraction": 0.024361948955916472,
+          "area_fraction": 0.0005822434297419176
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0063805104408352666,
+          "area_fraction": 3.642322815840633e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1246,
+          "fraction": 0.722737819025522,
+          "area_fraction": 0.8919644317488797
+        }
+      },
+      "capacity_alarm": false
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4544.971699999223,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' --method adaptive --output '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive/worker.log' 2>&1"
+      },
+      "method": "adaptive",
+      "status": "accepted_numeric_audit",
+      "inputs_sha256": {
+        "source.obj": "74677226ccd9f720a6b6e01df4e248c027d5cb34a731f43a14a82efec4742309",
+        "labels.json": "2909ea050169c767d6a926c04cb909b94ea040bf6ce66159d8f239ae394df60d",
+        "tool.obj": "6572910bd803b71dd99e1bb04a727b350f2f3a25237a18ec5e7f8671f60f01a8"
+      },
+      "target_mm": 0.10017230311519328,
+      "max_splits": 10000,
+      "splits": [
+        {
+          "edge": [
+            289,
+            338
+          ],
+          "new_vertex": 864,
+          "length_mm": 0.48736609089332017
+        },
+        {
+          "edge": [
+            264,
+            279
+          ],
+          "new_vertex": 865,
+          "length_mm": 0.45435961193654445
+        },
+        {
+          "edge": [
+            338,
+            346
+          ],
+          "new_vertex": 866,
+          "length_mm": 0.42430407378249746
+        },
+        {
+          "edge": [
+            158,
+            194
+          ],
+          "new_vertex": 867,
+          "length_mm": 0.4070472885520774
+        },
+        {
+          "edge": [
+            194,
+            244
+          ],
+          "new_vertex": 868,
+          "length_mm": 0.4064457281099608
+        },
+        {
+          "edge": [
+            152,
+            200
+          ],
+          "new_vertex": 869,
+          "length_mm": 0.3924491110607261
+        },
+        {
+          "edge": [
+            279,
+            289
+          ],
+          "new_vertex": 870,
+          "length_mm": 0.3897245413255338
+        },
+        {
+          "edge": [
+            244,
+            264
+          ],
+          "new_vertex": 871,
+          "length_mm": 0.3654852429785677
+        },
+        {
+          "edge": [
+            273,
+            302
+          ],
+          "new_vertex": 872,
+          "length_mm": 0.35693489397115635
+        },
+        {
+          "edge": [
+            337,
+            368
+          ],
+          "new_vertex": 873,
+          "length_mm": 0.3411078267888981
+        },
+        {
+          "edge": [
+            141,
+            187
+          ],
+          "new_vertex": 874,
+          "length_mm": 0.3401798890395824
+        },
+        {
+          "edge": [
+            234,
+            255
+          ],
+          "new_vertex": 875,
+          "length_mm": 0.3253253546950105
+        },
+        {
+          "edge": [
+            336,
+            337
+          ],
+          "new_vertex": 876,
+          "length_mm": 0.2973381989323984
+        },
+        {
+          "edge": [
+            152,
+            187
+          ],
+          "new_vertex": 877,
+          "length_mm": 0.2946619898923788
+        },
+        {
+          "edge": [
+            141,
+            181
+          ],
+          "new_vertex": 878,
+          "length_mm": 0.2891598202527832
+        },
+        {
+          "edge": [
+            158,
+            181
+          ],
+          "new_vertex": 879,
+          "length_mm": 0.2797034582398863
+        },
+        {
+          "edge": [
+            200,
+            208
+          ],
+          "new_vertex": 880,
+          "length_mm": 0.26447296167963996
+        },
+        {
+          "edge": [
+            346,
+            368
+          ],
+          "new_vertex": 881,
+          "length_mm": 0.2566112385390354
+        },
+        {
+          "edge": [
+            338,
+            864
+          ],
+          "new_vertex": 882,
+          "length_mm": 0.2436830454466601
+        },
+        {
+          "edge": [
+            289,
+            864
+          ],
+          "new_vertex": 883,
+          "length_mm": 0.24368304544666006
+        },
+        {
+          "edge": [
+            279,
+            865
+          ],
+          "new_vertex": 884,
+          "length_mm": 0.22717980596827228
+        },
+        {
+          "edge": [
+            264,
+            865
+          ],
+          "new_vertex": 885,
+          "length_mm": 0.2271798059682722
+        },
+        {
+          "edge": [
+            302,
+            336
+          ],
+          "new_vertex": 886,
+          "length_mm": 0.22051806358483333
+        },
+        {
+          "edge": [
+            338,
+            866
+          ],
+          "new_vertex": 887,
+          "length_mm": 0.21215203689124879
+        },
+        {
+          "edge": [
+            346,
+            866
+          ],
+          "new_vertex": 888,
+          "length_mm": 0.21215203689124867
+        },
+        {
+          "edge": [
+            158,
+            867
+          ],
+          "new_vertex": 889,
+          "length_mm": 0.20352364427603872
+        },
+        {
+          "edge": [
+            194,
+            867
+          ],
+          "new_vertex": 890,
+          "length_mm": 0.20352364427603867
+        },
+        {
+          "edge": [
+            244,
+            868
+          ],
+          "new_vertex": 891,
+          "length_mm": 0.20322286405498047
+        },
+        {
+          "edge": [
+            194,
+            868
+          ],
+          "new_vertex": 892,
+          "length_mm": 0.20322286405498038
+        },
+        {
+          "edge": [
+            255,
+            273
+          ],
+          "new_vertex": 893,
+          "length_mm": 0.19891627143221763
+        },
+        {
+          "edge": [
+            200,
+            869
+          ],
+          "new_vertex": 894,
+          "length_mm": 0.19622455553036314
+        },
+        {
+          "edge": [
+            152,
+            869
+          ],
+          "new_vertex": 895,
+          "length_mm": 0.19622455553036294
+        },
+        {
+          "edge": [
+            279,
+            870
+          ],
+          "new_vertex": 896,
+          "length_mm": 0.19486227066276693
+        },
+        {
+          "edge": [
+            289,
+            870
+          ],
+          "new_vertex": 897,
+          "length_mm": 0.1948622706627669
+        },
+        {
+          "edge": [
+            244,
+            871
+          ],
+          "new_vertex": 898,
+          "length_mm": 0.18274262148928389
+        },
+        {
+          "edge": [
+            264,
+            871
+          ],
+          "new_vertex": 899,
+          "length_mm": 0.1827426214892838
+        },
+        {
+          "edge": [
+            208,
+            234
+          ],
+          "new_vertex": 900,
+          "length_mm": 0.18098402823312365
+        },
+        {
+          "edge": [
+            302,
+            872
+          ],
+          "new_vertex": 901,
+          "length_mm": 0.17846744698557818
+        },
+        {
+          "edge": [
+            273,
+            872
+          ],
+          "new_vertex": 902,
+          "length_mm": 0.17846744698557815
+        },
+        {
+          "edge": [
+            368,
+            873
+          ],
+          "new_vertex": 903,
+          "length_mm": 0.17055391339444909
+        },
+        {
+          "edge": [
+            337,
+            873
+          ],
+          "new_vertex": 904,
+          "length_mm": 0.17055391339444906
+        },
+        {
+          "edge": [
+            187,
+            874
+          ],
+          "new_vertex": 905,
+          "length_mm": 0.1700899445197913
+        },
+        {
+          "edge": [
+            141,
+            874
+          ],
+          "new_vertex": 906,
+          "length_mm": 0.17008994451979112
+        },
+        {
+          "edge": [
+            255,
+            875
+          ],
+          "new_vertex": 907,
+          "length_mm": 0.16266267734750525
+        },
+        {
+          "edge": [
+            234,
+            875
+          ],
+          "new_vertex": 908,
+          "length_mm": 0.16266267734750525
+        },
+        {
+          "edge": [
+            337,
+            876
+          ],
+          "new_vertex": 909,
+          "length_mm": 0.1486690994661992
+        },
+        {
+          "edge": [
+            336,
+            876
+          ],
+          "new_vertex": 910,
+          "length_mm": 0.14866909946619916
+        },
+        {
+          "edge": [
+            187,
+            877
+          ],
+          "new_vertex": 911,
+          "length_mm": 0.1473309949461894
+        },
+        {
+          "edge": [
+            152,
+            877
+          ],
+          "new_vertex": 912,
+          "length_mm": 0.1473309949461894
+        },
+        {
+          "edge": [
+            181,
+            878
+          ],
+          "new_vertex": 913,
+          "length_mm": 0.14457991012639168
+        },
+        {
+          "edge": [
+            141,
+            878
+          ],
+          "new_vertex": 914,
+          "length_mm": 0.14457991012639154
+        },
+        {
+          "edge": [
+            181,
+            879
+          ],
+          "new_vertex": 915,
+          "length_mm": 0.13985172911994317
+        },
+        {
+          "edge": [
+            158,
+            879
+          ],
+          "new_vertex": 916,
+          "length_mm": 0.1398517291199431
+        },
+        {
+          "edge": [
+            208,
+            880
+          ],
+          "new_vertex": 917,
+          "length_mm": 0.13223648083981998
+        },
+        {
+          "edge": [
+            200,
+            880
+          ],
+          "new_vertex": 918,
+          "length_mm": 0.13223648083981998
+        },
+        {
+          "edge": [
+            346,
+            881
+          ],
+          "new_vertex": 919,
+          "length_mm": 0.12830561926951772
+        },
+        {
+          "edge": [
+            368,
+            881
+          ],
+          "new_vertex": 920,
+          "length_mm": 0.12830561926951767
+        }
+      ],
+      "contract": "允许外部共面细分，不再要求外部三角面编号或集合不变",
+      "budget_exhausted": false,
+      "input_faces": 1724,
+      "output_faces": 1838,
+      "actual_edge_length_mm": 0.10017230311519328,
+      "max_protected_edge_mm": 0.12184152272333006,
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1430,
+        "external_faces_retained": 1430,
+        "missing_fixed_vertices": 0
+      },
+      "safe_projection_ms": 901.9371466711164,
+      "projection_fp64_restoration_max_mm": 1.5503342753302663e-07,
+      "collision_scope": "whole_mesh_author_energy_and_ccd",
+      "maintenance_ms": 3078.1466057524085,
+      "output_sha256": "6c692a96a1b1846e44938dad78100e29e4b05fbbc0d3748bc19b897d037ca078",
+      "case": "crossing_e2",
+      "output_metrics": {
+        "vertices": 989,
+        "faces": 1974,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.85181095223962,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.006673807626828306,
+            "p95_mm": 4.440892098500626e-16,
+            "rms_mm": 0.00020510152025632905,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.007435695534999458,
+            "p95_mm": 4.440892098500626e-16,
+            "rms_mm": 0.00022224919729895625,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.007435695534999458,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.010571238821208084,
+        "probe_max_mm": 0.010571238821208084,
+        "continuous_geometry_certified": false
+      },
+      "quality": {
+        "total_faces": 1974,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 78,
+          "fraction": 0.03951367781155015,
+          "area_fraction": 0.0056501234964323925
+        },
+        "angle_below_5_deg": {
+          "faces": 20,
+          "fraction": 0.010131712259371834,
+          "area_fraction": 0.00010316094732048416
+        },
+        "angle_below_1_deg": {
+          "faces": 4,
+          "fraction": 0.002026342451874367,
+          "area_fraction": 2.8372415378979696e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1492,
+          "fraction": 0.7558257345491388,
+          "area_fraction": 0.8900794133025564
+        }
+      },
+      "source_quality": {
+        "total_faces": 1724,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 92,
+          "fraction": 0.05336426914153132,
+          "area_fraction": 0.005222743706671391
+        },
+        "angle_below_5_deg": {
+          "faces": 42,
+          "fraction": 0.024361948955916472,
+          "area_fraction": 0.0005822434297419176
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0063805104408352666,
+          "area_fraction": 3.642322815840633e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1246,
+          "fraction": 0.722737819025522,
+          "area_fraction": 0.8919644317488797
+        }
+      },
+      "capacity_alarm": false
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4645.035799998368,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive_planar/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive_planar/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive_planar/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' --method adaptive_planar --output '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive_planar/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/crossing_e2_adaptive_planar/worker.log' 2>&1"
+      },
+      "method": "adaptive_planar",
+      "status": "accepted_numeric_audit",
+      "inputs_sha256": {
+        "source.obj": "74677226ccd9f720a6b6e01df4e248c027d5cb34a731f43a14a82efec4742309",
+        "labels.json": "2909ea050169c767d6a926c04cb909b94ea040bf6ce66159d8f239ae394df60d",
+        "tool.obj": "6572910bd803b71dd99e1bb04a727b350f2f3a25237a18ec5e7f8671f60f01a8"
+      },
+      "target_mm": 0.10017230311519328,
+      "max_splits": 10000,
+      "splits": [
+        {
+          "edge": [
+            289,
+            338
+          ],
+          "new_vertex": 864,
+          "length_mm": 0.48736609089332017
+        },
+        {
+          "edge": [
+            264,
+            279
+          ],
+          "new_vertex": 865,
+          "length_mm": 0.45435961193654445
+        },
+        {
+          "edge": [
+            338,
+            346
+          ],
+          "new_vertex": 866,
+          "length_mm": 0.42430407378249746
+        },
+        {
+          "edge": [
+            158,
+            194
+          ],
+          "new_vertex": 867,
+          "length_mm": 0.4070472885520774
+        },
+        {
+          "edge": [
+            194,
+            244
+          ],
+          "new_vertex": 868,
+          "length_mm": 0.4064457281099608
+        },
+        {
+          "edge": [
+            152,
+            200
+          ],
+          "new_vertex": 869,
+          "length_mm": 0.3924491110607261
+        },
+        {
+          "edge": [
+            279,
+            289
+          ],
+          "new_vertex": 870,
+          "length_mm": 0.3897245413255338
+        },
+        {
+          "edge": [
+            244,
+            264
+          ],
+          "new_vertex": 871,
+          "length_mm": 0.3654852429785677
+        },
+        {
+          "edge": [
+            273,
+            302
+          ],
+          "new_vertex": 872,
+          "length_mm": 0.35693489397115635
+        },
+        {
+          "edge": [
+            337,
+            368
+          ],
+          "new_vertex": 873,
+          "length_mm": 0.3411078267888981
+        },
+        {
+          "edge": [
+            141,
+            187
+          ],
+          "new_vertex": 874,
+          "length_mm": 0.3401798890395824
+        },
+        {
+          "edge": [
+            234,
+            255
+          ],
+          "new_vertex": 875,
+          "length_mm": 0.3253253546950105
+        },
+        {
+          "edge": [
+            336,
+            337
+          ],
+          "new_vertex": 876,
+          "length_mm": 0.2973381989323984
+        },
+        {
+          "edge": [
+            152,
+            187
+          ],
+          "new_vertex": 877,
+          "length_mm": 0.2946619898923788
+        },
+        {
+          "edge": [
+            141,
+            181
+          ],
+          "new_vertex": 878,
+          "length_mm": 0.2891598202527832
+        },
+        {
+          "edge": [
+            158,
+            181
+          ],
+          "new_vertex": 879,
+          "length_mm": 0.2797034582398863
+        },
+        {
+          "edge": [
+            200,
+            208
+          ],
+          "new_vertex": 880,
+          "length_mm": 0.26447296167963996
+        },
+        {
+          "edge": [
+            346,
+            368
+          ],
+          "new_vertex": 881,
+          "length_mm": 0.2566112385390354
+        },
+        {
+          "edge": [
+            338,
+            864
+          ],
+          "new_vertex": 882,
+          "length_mm": 0.2436830454466601
+        },
+        {
+          "edge": [
+            289,
+            864
+          ],
+          "new_vertex": 883,
+          "length_mm": 0.24368304544666006
+        },
+        {
+          "edge": [
+            279,
+            865
+          ],
+          "new_vertex": 884,
+          "length_mm": 0.22717980596827228
+        },
+        {
+          "edge": [
+            264,
+            865
+          ],
+          "new_vertex": 885,
+          "length_mm": 0.2271798059682722
+        },
+        {
+          "edge": [
+            302,
+            336
+          ],
+          "new_vertex": 886,
+          "length_mm": 0.22051806358483333
+        },
+        {
+          "edge": [
+            338,
+            866
+          ],
+          "new_vertex": 887,
+          "length_mm": 0.21215203689124879
+        },
+        {
+          "edge": [
+            346,
+            866
+          ],
+          "new_vertex": 888,
+          "length_mm": 0.21215203689124867
+        },
+        {
+          "edge": [
+            158,
+            867
+          ],
+          "new_vertex": 889,
+          "length_mm": 0.20352364427603872
+        },
+        {
+          "edge": [
+            194,
+            867
+          ],
+          "new_vertex": 890,
+          "length_mm": 0.20352364427603867
+        },
+        {
+          "edge": [
+            244,
+            868
+          ],
+          "new_vertex": 891,
+          "length_mm": 0.20322286405498047
+        },
+        {
+          "edge": [
+            194,
+            868
+          ],
+          "new_vertex": 892,
+          "length_mm": 0.20322286405498038
+        },
+        {
+          "edge": [
+            255,
+            273
+          ],
+          "new_vertex": 893,
+          "length_mm": 0.19891627143221763
+        },
+        {
+          "edge": [
+            200,
+            869
+          ],
+          "new_vertex": 894,
+          "length_mm": 0.19622455553036314
+        },
+        {
+          "edge": [
+            152,
+            869
+          ],
+          "new_vertex": 895,
+          "length_mm": 0.19622455553036294
+        },
+        {
+          "edge": [
+            279,
+            870
+          ],
+          "new_vertex": 896,
+          "length_mm": 0.19486227066276693
+        },
+        {
+          "edge": [
+            289,
+            870
+          ],
+          "new_vertex": 897,
+          "length_mm": 0.1948622706627669
+        },
+        {
+          "edge": [
+            244,
+            871
+          ],
+          "new_vertex": 898,
+          "length_mm": 0.18274262148928389
+        },
+        {
+          "edge": [
+            264,
+            871
+          ],
+          "new_vertex": 899,
+          "length_mm": 0.1827426214892838
+        },
+        {
+          "edge": [
+            208,
+            234
+          ],
+          "new_vertex": 900,
+          "length_mm": 0.18098402823312365
+        },
+        {
+          "edge": [
+            302,
+            872
+          ],
+          "new_vertex": 901,
+          "length_mm": 0.17846744698557818
+        },
+        {
+          "edge": [
+            273,
+            872
+          ],
+          "new_vertex": 902,
+          "length_mm": 0.17846744698557815
+        },
+        {
+          "edge": [
+            368,
+            873
+          ],
+          "new_vertex": 903,
+          "length_mm": 0.17055391339444909
+        },
+        {
+          "edge": [
+            337,
+            873
+          ],
+          "new_vertex": 904,
+          "length_mm": 0.17055391339444906
+        },
+        {
+          "edge": [
+            187,
+            874
+          ],
+          "new_vertex": 905,
+          "length_mm": 0.1700899445197913
+        },
+        {
+          "edge": [
+            141,
+            874
+          ],
+          "new_vertex": 906,
+          "length_mm": 0.17008994451979112
+        },
+        {
+          "edge": [
+            255,
+            875
+          ],
+          "new_vertex": 907,
+          "length_mm": 0.16266267734750525
+        },
+        {
+          "edge": [
+            234,
+            875
+          ],
+          "new_vertex": 908,
+          "length_mm": 0.16266267734750525
+        },
+        {
+          "edge": [
+            337,
+            876
+          ],
+          "new_vertex": 909,
+          "length_mm": 0.1486690994661992
+        },
+        {
+          "edge": [
+            336,
+            876
+          ],
+          "new_vertex": 910,
+          "length_mm": 0.14866909946619916
+        },
+        {
+          "edge": [
+            187,
+            877
+          ],
+          "new_vertex": 911,
+          "length_mm": 0.1473309949461894
+        },
+        {
+          "edge": [
+            152,
+            877
+          ],
+          "new_vertex": 912,
+          "length_mm": 0.1473309949461894
+        },
+        {
+          "edge": [
+            181,
+            878
+          ],
+          "new_vertex": 913,
+          "length_mm": 0.14457991012639168
+        },
+        {
+          "edge": [
+            141,
+            878
+          ],
+          "new_vertex": 914,
+          "length_mm": 0.14457991012639154
+        },
+        {
+          "edge": [
+            181,
+            879
+          ],
+          "new_vertex": 915,
+          "length_mm": 0.13985172911994317
+        },
+        {
+          "edge": [
+            158,
+            879
+          ],
+          "new_vertex": 916,
+          "length_mm": 0.1398517291199431
+        },
+        {
+          "edge": [
+            208,
+            880
+          ],
+          "new_vertex": 917,
+          "length_mm": 0.13223648083981998
+        },
+        {
+          "edge": [
+            200,
+            880
+          ],
+          "new_vertex": 918,
+          "length_mm": 0.13223648083981998
+        },
+        {
+          "edge": [
+            346,
+            881
+          ],
+          "new_vertex": 919,
+          "length_mm": 0.12830561926951772
+        },
+        {
+          "edge": [
+            368,
+            881
+          ],
+          "new_vertex": 920,
+          "length_mm": 0.12830561926951767
+        }
+      ],
+      "contract": "允许外部共面细分，不再要求外部三角面编号或集合不变",
+      "budget_exhausted": false,
+      "input_faces": 1724,
+      "output_faces": 1838,
+      "planar_improvement": {
+        "max_flips": 200,
+        "plane_tolerance_mm": 1e-10,
+        "flips": [],
+        "budget_exhausted": false,
+        "vertices_exact": true
+      },
+      "actual_edge_length_mm": 0.10017230311519328,
+      "max_protected_edge_mm": 0.12184152272333006,
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1430,
+        "external_faces_retained": 1430,
+        "missing_fixed_vertices": 0
+      },
+      "safe_projection_ms": 892.1492891386151,
+      "projection_fp64_restoration_max_mm": 1.5503342753302663e-07,
+      "collision_scope": "whole_mesh_author_energy_and_ccd",
+      "maintenance_ms": 3183.0830043181777,
+      "output_sha256": "56e369bf50b7226bbdcf4399d79e9ba5184a1200beb7fa6ed8d570f69b3a2f33",
+      "case": "crossing_e2",
+      "output_metrics": {
+        "vertices": 989,
+        "faces": 1974,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.85181108504068,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.006673030612354707,
+            "p95_mm": 4.440892098500626e-16,
+            "rms_mm": 0.00020505938567194515,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.007435695534999458,
+            "p95_mm": 4.440892098500626e-16,
+            "rms_mm": 0.00022223046767062544,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.007435695534999458,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.010571238821208084,
+        "probe_max_mm": 0.010571238821208084,
+        "continuous_geometry_certified": false
+      },
+      "quality": {
+        "total_faces": 1974,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 78,
+          "fraction": 0.03951367781155015,
+          "area_fraction": 0.005650132713050326
+        },
+        "angle_below_5_deg": {
+          "faces": 20,
+          "fraction": 0.010131712259371834,
+          "area_fraction": 0.00010317883511956673
+        },
+        "angle_below_1_deg": {
+          "faces": 4,
+          "fraction": 0.002026342451874367,
+          "area_fraction": 2.8375184611585937e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1492,
+          "fraction": 0.7558257345491388,
+          "area_fraction": 0.8900790818996158
+        }
+      },
+      "source_quality": {
+        "total_faces": 1724,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 92,
+          "fraction": 0.05336426914153132,
+          "area_fraction": 0.005222743706671391
+        },
+        "angle_below_5_deg": {
+          "faces": 42,
+          "fraction": 0.024361948955916472,
+          "area_fraction": 0.0005822434297419176
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0063805104408352666,
+          "area_fraction": 3.642322815840633e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1246,
+          "fraction": 0.722737819025522,
+          "area_fraction": 0.8919644317488797
+        }
+      },
+      "capacity_alarm": false
+    }
+  ],
+  "environment": {
+    "code_sha256": {
+      "constrained_remesh.cpp": "4fc35fcf68c7c89ab6fbfa8985378fba2378c6a4254c9f3a2284d98036334710",
+      "constrained_quality.py": "cec0e94a49ecd5fb0410e3905e2a5e93f8ff667ee7e812e31cdb62f0e1cacf0b",
+      "run_constrained_worker.py": "5d731de7f80b0d613ee2dbf3f7ceb7c3b0c53ffb9d34d8f9c272c7769d90def9",
+      "locality_masks.py": "eb65265ced26b823271c5507c0a58260a05ff56bf7dca8ce2837c73a54e140b2",
+      "locality_gpu.py": "85efcc97cd2680d90867f499df3994d517c4f6dfefc5ef17966c6a0511cd247c"
+    },
+    "compile": {
+      "returncode": 0,
+      "remote_roundtrip_ms": 13776.106900000741,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 300 g++ -O1 -std=c++17 '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh.cpp' -lgmp -lmpfr -o '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/constrained_remesh' > '/root/autodl-tmp/graduation_project/constrained_20261004_接缝共面质量对照_完整依赖_ef38d255f667/compile.log' 2>&1"
+    },
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.8.0+cu128",
+      "extension_sha256": "c0836ff8d36fe5c9e2fca8f27e9a341578aa3d716dfb1d0563784710717353ad"
+    },
+    "executable_sha256": "8529a90f4a4f187b2d2d5aac711f49c8a99554612f729575d0180357bd7f8986",
+    "dependency": "libcgal-dev:amd64\t5.4-1"
+  },
+  "new_code_sha256": {
+    "adaptive_seam.py": "65e517e7508205947d985479bb9476fd53c9cfd382b6b21175beb64e4049a03e",
+    "run_adaptive_worker.py": "958c2a959f6ebc1f00efbb7b50a232f13d700599d0caad013df3a1e2629bdd14",
+    "planar_quality.py": "d2cbd3f37e2fc26c29792fb4029c96b0df0327ce02e034776a9a9c62cd9781ec",
+    "locality_retriangulate.py": "c563a34082a39dedaf4a1a8cb346de44a5fd2d3bb75fb0235efaa89957501ec6"
+  }
+}

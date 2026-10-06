@@ -1,0 +1,964 @@
+{
+  "time_beijing": "2026-10-04T02:37:47.215274+08:00",
+  "studies": [
+    {
+      "folder": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_geometry_development_v3",
+      "status": "complete_with_recorded_failures",
+      "branches": {
+        "R": {
+          "planned_prefixes": 48,
+          "statuses": {
+            "reference_valid": 8,
+            "reference_topology_invalid": 2,
+            "blocked_by_previous_failure": 38
+          },
+          "pamo_calls": 0
+        },
+        "C0": {
+          "planned_prefixes": 48,
+          "statuses": {
+            "accepted_sampled": 7,
+            "output_invalid_or_reference_unavailable": 1,
+            "blocked_by_previous_failure": 39,
+            "pamo_input_invalid": 1
+          },
+          "pamo_calls": 8
+        },
+        "C1": {
+          "planned_prefixes": 48,
+          "statuses": {
+            "accepted_sampled": 6,
+            "output_invalid_or_reference_unavailable": 1,
+            "blocked_by_previous_failure": 40,
+            "pamo_input_invalid": 1
+          },
+          "pamo_calls": 7
+        }
+      },
+      "routes": [
+        {
+          "route": "development_long_slab_24",
+          "branch": "R",
+          "planned_prefixes": 24,
+          "valid_prefixes": 5,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e5",
+            "status": "reference_topology_invalid",
+            "input_metrics": null,
+            "output_metrics": null
+          }
+        },
+        {
+          "route": "development_long_sphere_24",
+          "branch": "R",
+          "planned_prefixes": 24,
+          "valid_prefixes": 3,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e3",
+            "status": "reference_topology_invalid",
+            "input_metrics": null,
+            "output_metrics": null
+          }
+        },
+        {
+          "route": "development_long_slab_24",
+          "branch": "C0",
+          "planned_prefixes": 24,
+          "valid_prefixes": 5,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e5",
+            "status": "output_invalid_or_reference_unavailable",
+            "input_metrics": {
+              "vertices": 711,
+              "faces": 1418,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 0,
+              "volume_mm3": 18.908376899807298,
+              "components": 1
+            },
+            "output_metrics": {
+              "vertices": 703,
+              "faces": 1402,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 0,
+              "volume_mm3": 18.91326927366086,
+              "components": 1
+            }
+          },
+          "uncut_sampled_max_mm": 0.04418273146757688,
+          "quality_tail_max_percent": {
+            "10": 3.078358208955224,
+            "5": 0.3412969283276451,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.04738672888274833
+        },
+        {
+          "route": "development_long_sphere_24",
+          "branch": "C0",
+          "planned_prefixes": 24,
+          "valid_prefixes": 2,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e2",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 2785,
+              "faces": 5566,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 9,
+              "volume_mm3": 65.06739033288535,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.006584903354821145,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.015301710055650888
+        },
+        {
+          "route": "development_long_slab_24",
+          "branch": "C1",
+          "planned_prefixes": 24,
+          "valid_prefixes": 5,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e5",
+            "status": "output_invalid_or_reference_unavailable",
+            "input_metrics": {
+              "vertices": 1187,
+              "faces": 2370,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 0,
+              "volume_mm3": 18.83242545629957,
+              "components": 1
+            },
+            "output_metrics": {
+              "vertices": 1136,
+              "faces": 2268,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 0,
+              "volume_mm3": 18.811515190634953,
+              "components": 1
+            }
+          },
+          "uncut_sampled_max_mm": 0.09256304498289054,
+          "quality_tail_max_percent": {
+            "10": 2.3842917251051894,
+            "5": 0.19083969465648853,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.07157320540672818
+        },
+        {
+          "route": "development_long_sphere_24",
+          "branch": "C1",
+          "planned_prefixes": 24,
+          "valid_prefixes": 1,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e1",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 2773,
+              "faces": 5542,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 2,
+              "volume_mm3": 65.00446047584965,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.006221791055081878,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.01257260678958609
+        }
+      ]
+    },
+    {
+      "folder": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_geometry_evaluation",
+      "status": "complete_with_recorded_failures",
+      "branches": {
+        "R": {
+          "planned_prefixes": 48,
+          "statuses": {
+            "reference_valid": 36,
+            "reference_topology_invalid": 6,
+            "blocked_by_previous_failure": 6
+          },
+          "pamo_calls": 0
+        },
+        "C0": {
+          "planned_prefixes": 48,
+          "statuses": {
+            "accepted_sampled": 33,
+            "pamo_input_invalid": 8,
+            "blocked_by_previous_failure": 6,
+            "contained_reused": 1
+          },
+          "pamo_calls": 33
+        },
+        "C1": {
+          "planned_prefixes": 48,
+          "statuses": {
+            "accepted_sampled": 38,
+            "pamo_input_invalid": 4,
+            "blocked_by_previous_failure": 6
+          },
+          "pamo_calls": 38
+        }
+      },
+      "routes": [
+        {
+          "route": "evaluation_crossing_slab_01",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 3,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e3",
+            "status": "reference_topology_invalid",
+            "input_metrics": null,
+            "output_metrics": null
+          }
+        },
+        {
+          "route": "evaluation_crossing_sphere_02",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 2,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e2",
+            "status": "reference_topology_invalid",
+            "input_metrics": null,
+            "output_metrics": null
+          }
+        },
+        {
+          "route": "evaluation_plan_edge_slab_01",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 1,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e1",
+            "status": "reference_topology_invalid",
+            "input_metrics": null,
+            "output_metrics": null
+          }
+        },
+        {
+          "route": "evaluation_plan_edge_sphere_02",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null
+        },
+        {
+          "route": "evaluation_repeat_slab_01",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 1,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e1",
+            "status": "reference_topology_invalid",
+            "input_metrics": null,
+            "output_metrics": null
+          }
+        },
+        {
+          "route": "evaluation_repeat_sphere_02",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null
+        },
+        {
+          "route": "evaluation_shallow_slab_01",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 3,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e3",
+            "status": "reference_topology_invalid",
+            "input_metrics": null,
+            "output_metrics": null
+          }
+        },
+        {
+          "route": "evaluation_shallow_sphere_02",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 2,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e2",
+            "status": "reference_topology_invalid",
+            "input_metrics": null,
+            "output_metrics": null
+          }
+        },
+        {
+          "route": "evaluation_stop_resume_slab_01",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null
+        },
+        {
+          "route": "evaluation_stop_resume_sphere_02",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null
+        },
+        {
+          "route": "evaluation_vertical_slab_01",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null
+        },
+        {
+          "route": "evaluation_vertical_sphere_02",
+          "branch": "R",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null
+        },
+        {
+          "route": "evaluation_crossing_slab_01",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 3,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e3",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 949,
+              "faces": 1894,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 8,
+              "volume_mm3": 18.71976762899644,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.03097679499869237,
+          "quality_tail_max_percent": {
+            "10": 2.1557719054242,
+            "5": 0.25773195876288657,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.029961533918426556
+        },
+        {
+          "route": "evaluation_crossing_sphere_02",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 1,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e1",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 2707,
+              "faces": 5410,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 2,
+              "volume_mm3": 64.94073914997848,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.00681925511677117,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.013319995841791504
+        },
+        {
+          "route": "evaluation_plan_edge_slab_01",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.03399326391336111,
+          "quality_tail_max_percent": {
+            "10": 2.345215759849906,
+            "5": 0.37523452157598497,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.031548793800360075
+        },
+        {
+          "route": "evaluation_plan_edge_sphere_02",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 2,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e2",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 2775,
+              "faces": 5546,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 7,
+              "volume_mm3": 65.20238583637295,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.006866271501421694,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.015751560244419295
+        },
+        {
+          "route": "evaluation_repeat_slab_01",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 1,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e1",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 578,
+              "faces": 1152,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 2,
+              "volume_mm3": 19.08021923505076,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.02307360118609094,
+          "quality_tail_max_percent": {
+            "10": 2.015355086372361,
+            "5": 0.09596928982725528,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.027667368274340142
+        },
+        {
+          "route": "evaluation_repeat_sphere_02",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 3,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e3",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 2759,
+              "faces": 5514,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 2,
+              "volume_mm3": 65.15561795963451,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.006233551741815229,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.014890721269095006
+        },
+        {
+          "route": "evaluation_shallow_slab_01",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 3,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e3",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 640,
+              "faces": 1276,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 2,
+              "volume_mm3": 18.96001372706692,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.03726634824684188,
+          "quality_tail_max_percent": {
+            "10": 2.888446215139442,
+            "5": 0.29880478087649404,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.029460439810075956
+        },
+        {
+          "route": "evaluation_shallow_sphere_02",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 2,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e2",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 2766,
+              "faces": 5528,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 5,
+              "volume_mm3": 65.2061111547882,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.0069942614567845484,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.0161303393193999
+        },
+        {
+          "route": "evaluation_stop_resume_slab_01",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.029249279290927868,
+          "quality_tail_max_percent": {
+            "10": 2.408637873754153,
+            "5": 0.33222591362126247,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.02575240555705885
+        },
+        {
+          "route": "evaluation_stop_resume_sphere_02",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 3,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e5",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 2872,
+              "faces": 5738,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": false,
+              "winding_consistent": true,
+              "vertex_manifold_closed": false,
+              "euler_number": 1,
+              "self_intersection_faces": 8,
+              "volume_mm3": 65.17151057674602,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.006926688864650569,
+          "quality_tail_max_percent": {
+            "10": 0.018621973929236497,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.014976923139899156
+        },
+        {
+          "route": "evaluation_vertical_slab_01",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.029650222399823917,
+          "quality_tail_max_percent": {
+            "10": 10.06637168141593,
+            "5": 2.9867256637168142,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.039217424103931336
+        },
+        {
+          "route": "evaluation_vertical_sphere_02",
+          "branch": "C0",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.00740949811231885,
+          "quality_tail_max_percent": {
+            "10": 0.019290123456790122,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.016638607828856598
+        },
+        {
+          "route": "evaluation_crossing_slab_01",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 3,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e3",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 1164,
+              "faces": 2324,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 2,
+              "volume_mm3": 18.694762002403095,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.06049064110935031,
+          "quality_tail_max_percent": {
+            "10": 1.6891891891891893,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.07131375066258892
+        },
+        {
+          "route": "evaluation_crossing_sphere_02",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 1,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e1",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 2729,
+              "faces": 5454,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 4,
+              "volume_mm3": 64.78695564916758,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.006167467935495673,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.016340627086000384
+        },
+        {
+          "route": "evaluation_plan_edge_slab_01",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.06939292073486827,
+          "quality_tail_max_percent": {
+            "10": 3.41130604288499,
+            "5": 0.14814814814814814,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.05333598136793657
+        },
+        {
+          "route": "evaluation_plan_edge_sphere_02",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.013045061679814368,
+          "quality_tail_max_percent": {
+            "10": 0.019880715705765408,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.026772482149921315
+        },
+        {
+          "route": "evaluation_repeat_slab_01",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 1,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e1",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 686,
+              "faces": 1368,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 2,
+              "volume_mm3": 19.074646800417117,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.032927106141122514,
+          "quality_tail_max_percent": {
+            "10": 2.8827037773359843,
+            "5": 0.09940357852882703,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.030462884614508436
+        },
+        {
+          "route": "evaluation_repeat_sphere_02",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 1,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e1",
+            "status": "pamo_input_invalid",
+            "input_metrics": {
+              "vertices": 2780,
+              "faces": 5556,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 2,
+              "volume_mm3": 65.04225916316857,
+              "components": 1
+            },
+            "output_metrics": null
+          },
+          "uncut_sampled_max_mm": 0.005965684541738219,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.01604011775184509
+        },
+        {
+          "route": "evaluation_shallow_slab_01",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.06934560626084661,
+          "quality_tail_max_percent": {
+            "10": 2.385496183206107,
+            "5": 0.19083969465648853,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.064562439385324
+        },
+        {
+          "route": "evaluation_shallow_sphere_02",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.012679621845480205,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.026718572288198652
+        },
+        {
+          "route": "evaluation_stop_resume_slab_01",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.06413247758102775,
+          "quality_tail_max_percent": {
+            "10": 2.425373134328358,
+            "5": 0.2724795640326975,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.06836341994173016
+        },
+        {
+          "route": "evaluation_stop_resume_sphere_02",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.012670623584557958,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.028644935033558083
+        },
+        {
+          "route": "evaluation_vertical_slab_01",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.08080531983618273,
+          "quality_tail_max_percent": {
+            "10": 9.572072072072071,
+            "5": 3.040540540540541,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.08166835265967504
+        },
+        {
+          "route": "evaluation_vertical_sphere_02",
+          "branch": "C1",
+          "planned_prefixes": 4,
+          "valid_prefixes": 4,
+          "full_sampled_sequence": true,
+          "first_stop": null,
+          "uncut_sampled_max_mm": 0.013364231130842258,
+          "quality_tail_max_percent": {
+            "10": 0.0,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.02279090428015132
+        }
+      ]
+    }
+  ]
+}

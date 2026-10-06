@@ -1,0 +1,163 @@
+{
+  "生成时间": "2026-10-07T01:50:17+08:00",
+  "修改时间及修改内容": "首次阶段诊断完整归档只读复算",
+  "文档概述": "20次实际调用均静态精确通过；三次计时仅诊断，递归按父子区分不重复求和",
+  "索引目录": [
+    "cases",
+    "receipt_reconciliation"
+  ],
+  "status": "completed_twenty_diagnostic_calls_verified",
+  "archive_sha256": "7c9b1d02f848b41e788b627e857cc42b1979b32df699a23ae174b8570ea6e271",
+  "raw_record_sha256": "cd7bd24e9cf196114b5717502c2900a45726d0397a46569078656964d6e94919",
+  "actual_calls": 20,
+  "exact_valid": 20,
+  "cases": [
+    {
+      "input_index": 13,
+      "case": "已见CT新位置与工具_00",
+      "profile_boolean_median_ms": 1041.565268,
+      "stages_median_ms": {
+        "copy_operands": 3.697263,
+        "freeze_input_coordinates": 4.084783,
+        "intersect": 318.377951,
+        "classify": 12.627315,
+        "pre_coplanar_cleanup": 1.089244,
+        "coplanar_quality": 691.665521,
+        "post_coplanar_cleanup": 1.089923
+      },
+      "coplanar_by_depth_median_ms": {
+        "0": {
+          "commit_exact_vertices_and_facets": 4.422146,
+          "conform_shared_boundary": 62.699779,
+          "discover_groups_and_anchors": 237.720025,
+          "parallel_region_cdt_and_proposals": 71.245598,
+          "recursive_shared_neighbors_or_rejection": 273.18505,
+          "restore_and_compact": 31.235901,
+          "whole_candidate_scores": 12.66823
+        },
+        "1": {
+          "commit_exact_vertices_and_facets": 1.4147,
+          "conform_shared_boundary": 0.000105,
+          "discover_groups_and_anchors": 232.732557,
+          "parallel_region_cdt_and_proposals": 12.212878,
+          "recursive_shared_neighbors_or_rejection": 8.6e-05,
+          "restore_and_compact": 5.524234,
+          "whole_candidate_scores": 12.622285
+        }
+      },
+      "triangle_total_median_ms": 1.331475,
+      "triangle_calls": [
+        39,
+        39,
+        39
+      ],
+      "official_same_method_reference_ms": 1020.252904
+    },
+    {
+      "input_index": 10,
+      "case": "独立旋转贯通孔_0.031毫米",
+      "profile_boolean_median_ms": 230.826656,
+      "stages_median_ms": {
+        "copy_operands": 0.472659,
+        "freeze_input_coordinates": 0.461061,
+        "intersect": 59.545393,
+        "classify": 1.248229,
+        "pre_coplanar_cleanup": 0.119114,
+        "coplanar_quality": 164.825747,
+        "post_coplanar_cleanup": 0.650829
+      },
+      "coplanar_by_depth_median_ms": {
+        "0": {
+          "commit_exact_vertices_and_facets": 43.782638,
+          "conform_shared_boundary": 40.579168,
+          "discover_groups_and_anchors": 30.262121,
+          "parallel_region_cdt_and_proposals": 40.104278,
+          "recursive_shared_neighbors_or_rejection": 0.0001,
+          "restore_and_compact": 3.123802,
+          "whole_candidate_scores": 4.02196
+        }
+      },
+      "triangle_total_median_ms": 0.871167,
+      "triangle_calls": [
+        18,
+        18,
+        18
+      ],
+      "official_same_method_reference_ms": 240.193092
+    },
+    {
+      "input_index": 4,
+      "case": "独立旋转薄壁_0.026毫米",
+      "profile_boolean_median_ms": 88.459411,
+      "stages_median_ms": {
+        "copy_operands": 0.118139,
+        "freeze_input_coordinates": 0.105973,
+        "intersect": 16.03755,
+        "classify": 0.471484,
+        "pre_coplanar_cleanup": 0.01139,
+        "coplanar_quality": 71.594843,
+        "post_coplanar_cleanup": 0.011419
+      },
+      "coplanar_by_depth_median_ms": {
+        "0": {
+          "commit_exact_vertices_and_facets": 1.748745,
+          "conform_shared_boundary": 1.83497,
+          "discover_groups_and_anchors": 6.118268,
+          "parallel_region_cdt_and_proposals": 5.819033,
+          "recursive_shared_neighbors_or_rejection": 54.260561,
+          "restore_and_compact": 0.474755,
+          "whole_candidate_scores": 0.307319
+        },
+        "1": {
+          "commit_exact_vertices_and_facets": 1.849536,
+          "conform_shared_boundary": 8.9e-05,
+          "discover_groups_and_anchors": 14.338757,
+          "parallel_region_cdt_and_proposals": 35.214113,
+          "recursive_shared_neighbors_or_rejection": 7.2e-05,
+          "restore_and_compact": 0.306305,
+          "whole_candidate_scores": 0.43344
+        }
+      },
+      "triangle_total_median_ms": 2.192469,
+      "triangle_calls": [
+        49,
+        49,
+        49
+      ],
+      "official_same_method_reference_ms": 88.262719
+    },
+    {
+      "input_index": 7,
+      "case": "独立旋转窄缝_0.031毫米",
+      "profile_boolean_median_ms": 30.389148,
+      "stages_median_ms": {
+        "copy_operands": 0.108528,
+        "freeze_input_coordinates": 0.104496,
+        "intersect": 16.398275,
+        "classify": 0.616462,
+        "pre_coplanar_cleanup": 0.011638,
+        "coplanar_quality": 13.01345,
+        "post_coplanar_cleanup": 0.014457
+      },
+      "coplanar_by_depth_median_ms": {
+        "0": {
+          "commit_exact_vertices_and_facets": 0.515562,
+          "conform_shared_boundary": 0.757953,
+          "discover_groups_and_anchors": 6.236148,
+          "parallel_region_cdt_and_proposals": 4.484869,
+          "recursive_shared_neighbors_or_rejection": 8.3e-05,
+          "restore_and_compact": 0.128596,
+          "whole_candidate_scores": 0.221937
+        }
+      },
+      "triangle_total_median_ms": 0.560658,
+      "triangle_calls": [
+        9,
+        9,
+        9
+      ],
+      "official_same_method_reference_ms": 30.093859
+    }
+  ],
+  "receipt_reconciliation": "614号控制器status残留running；其returncode为0，实际归档终态及20条保存审计成立，原记录不改写"
+}

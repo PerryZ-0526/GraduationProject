@@ -1,0 +1,201 @@
+FFFFFFF
+======================================================================
+FAIL: test_already_fixed_bad_not_added (__main__.ProtectionTests.test_already_fixed_bad_not_added)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 77, in test_already_fixed_bad_not_added
+    s=fixture(collision_g=(3,),collision_d=(3,));s._compute_diff();self.assertEqual(s.protected_vertices,[])
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 40, in fixture
+    s.grad=wp.zeros(4,dtype=wp.vec3,device=s.device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2843, in zeros
+    arr = empty(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 3013, in empty
+    return warp.array(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1290, in __init__
+    self._init_new(dtype, shape, strides, device, pinned)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1474, in _init_new
+    device = warp.get_device(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2673, in get_device
+    assert_initialized()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2601, in assert_initialized
+    assert runtime is not None, "Warp not initialized, call wp.init() before use"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: Warp not initialized, call wp.init() before use
+
+======================================================================
+FAIL: test_collision_diagonal_protected (__main__.ProtectionTests.test_collision_diagonal_protected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 61, in test_collision_diagonal_protected
+    s=fixture(collision_d=(1,));s._compute_diff();self.assertEqual(s.protected_vertices,[1])
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 40, in fixture
+    s.grad=wp.zeros(4,dtype=wp.vec3,device=s.device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2843, in zeros
+    arr = empty(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 3013, in empty
+    return warp.array(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1290, in __init__
+    self._init_new(dtype, shape, strides, device, pinned)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1474, in _init_new
+    device = warp.get_device(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2673, in get_device
+    assert_initialized()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2601, in assert_initialized
+    assert runtime is not None, "Warp not initialized, call wp.init() before use"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: Warp not initialized, call wp.init() before use
+
+======================================================================
+FAIL: test_collision_gradient_protected (__main__.ProtectionTests.test_collision_gradient_protected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 57, in test_collision_gradient_protected
+    s=fixture(collision_g=(0,));s._compute_diff();self.assertEqual(s.protected_vertices,[0])
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 40, in fixture
+    s.grad=wp.zeros(4,dtype=wp.vec3,device=s.device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2843, in zeros
+    arr = empty(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 3013, in empty
+    return warp.array(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1290, in __init__
+    self._init_new(dtype, shape, strides, device, pinned)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1474, in _init_new
+    device = warp.get_device(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2673, in get_device
+    assert_initialized()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2601, in assert_initialized
+    assert runtime is not None, "Warp not initialized, call wp.init() before use"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: Warp not initialized, call wp.init() before use
+
+======================================================================
+FAIL: test_finite_terms_unchanged (__main__.ProtectionTests.test_finite_terms_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 54, in test_finite_terms_unchanged
+    s=fixture();s._compute_diff();self.assertEqual(s.protected_vertices,[])
+      ^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 40, in fixture
+    s.grad=wp.zeros(4,dtype=wp.vec3,device=s.device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2843, in zeros
+    arr = empty(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 3013, in empty
+    return warp.array(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1290, in __init__
+    self._init_new(dtype, shape, strides, device, pinned)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1474, in _init_new
+    device = warp.get_device(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2673, in get_device
+    assert_initialized()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2601, in assert_initialized
+    assert runtime is not None, "Warp not initialized, call wp.init() before use"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: Warp not initialized, call wp.init() before use
+
+======================================================================
+FAIL: test_later_failure_rejected (__main__.ProtectionTests.test_later_failure_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 69, in test_later_failure_rejected
+    s=fixture(collision_g=(0,));s.diff_calls=1
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 40, in fixture
+    s.grad=wp.zeros(4,dtype=wp.vec3,device=s.device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2843, in zeros
+    arr = empty(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 3013, in empty
+    return warp.array(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1290, in __init__
+    self._init_new(dtype, shape, strides, device, pinned)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1474, in _init_new
+    device = warp.get_device(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2673, in get_device
+    assert_initialized()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2601, in assert_initialized
+    assert runtime is not None, "Warp not initialized, call wp.init() before use"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: Warp not initialized, call wp.init() before use
+
+======================================================================
+FAIL: test_noncollision_bad_rejected (__main__.ProtectionTests.test_noncollision_bad_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 64, in test_noncollision_bad_rejected
+    s=fixture(collision_g=(0,),distance_g=(2,))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 40, in fixture
+    s.grad=wp.zeros(4,dtype=wp.vec3,device=s.device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2843, in zeros
+    arr = empty(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 3013, in empty
+    return warp.array(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1290, in __init__
+    self._init_new(dtype, shape, strides, device, pinned)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1474, in _init_new
+    device = warp.get_device(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2673, in get_device
+    assert_initialized()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2601, in assert_initialized
+    assert runtime is not None, "Warp not initialized, call wp.init() before use"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: Warp not initialized, call wp.init() before use
+
+======================================================================
+FAIL: test_nonfinite_position_rejected (__main__.ProtectionTests.test_nonfinite_position_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 73, in test_nonfinite_position_rejected
+    s=fixture(collision_g=(0,));s.q.assign(np.full((4,3),np.nan))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞导数保护五输入GPU对照_92e5c456eebd/test_collision_protected_gpu.py", line 40, in fixture
+    s.grad=wp.zeros(4,dtype=wp.vec3,device=s.device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2843, in zeros
+    arr = empty(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 3013, in empty
+    return warp.array(shape=shape, dtype=dtype, device=device, requires_grad=requires_grad, pinned=pinned, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1290, in __init__
+    self._init_new(dtype, shape, strides, device, pinned)
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/types.py", line 1474, in _init_new
+    device = warp.get_device(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2673, in get_device
+    assert_initialized()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2601, in assert_initialized
+    assert runtime is not None, "Warp not initialized, call wp.init() before use"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: Warp not initialized, call wp.init() before use
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.004s
+
+FAILED (failures=7)

@@ -1,0 +1,31 @@
+{
+  "生成时间": "2026年10月04日19时16分48秒",
+  "修改时间及修改内容": "首次生成，保存真实第三刀输入拒绝负例",
+  "文档概述": "FP64闭合正面积网格在FP32出现4个真正零面积面，拒绝必须保留",
+  "索引目录": [
+    "files",
+    "expected"
+  ],
+  "files": {
+    "clean_labels.json": "5303040ba18d135980c5678685f5f2f3cc02cbc5ba9485bd425be09fe20ea2b1",
+    "clean_source.obj": "bf20c0fd088860eb3c7faa698eb4e2300bfc17a8e96d59b0adf8201a58796a8d",
+    "geogram.log": "4c79668dbcf4154c607de97b302f7b9aacd298f07ad8fc09b7965464775a3d67",
+    "labels.json": "e62b2b7070b757bace2b121b8727dd5e41346fb572336f490a65d06d58997723",
+    "parent.obj": "0f5ce37321c1909be5d33b48ac89d68977383b55be1c8d6d27853c40e5b7ae76",
+    "source.obj": "bf20c0fd088860eb3c7faa698eb4e2300bfc17a8e96d59b0adf8201a58796a8d",
+    "tool.obj": "518c0fd8b6031874ac28ac2737120cc89a509d1518a0bdc0afe4e689d1d0b9fd"
+  },
+  "expected": {
+    "fp64_zero_area_faces": 0,
+    "fp32_zero_area_faces": 4,
+    "fp32_zero_face_ids": [
+      89361,
+      89363,
+      89532,
+      89537
+    ],
+    "input_valid": false
+  },
+  "source_result_sha256": "5ba97c489fd09e26ac14881f3ae3ccc03b97ff9380177d1ec30c1bbca1eeddc5",
+  "scope": "已见开发源退化反例，不是真实CT或新独立路线"
+}

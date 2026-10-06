@@ -1,0 +1,49 @@
+{
+  "time_beijing": "2026-10-04T06:33:40.688719+08:00",
+  "environment": {
+    "code_sha256": {
+      "constrained_remesh.cpp": "4fc35fcf68c7c89ab6fbfa8985378fba2378c6a4254c9f3a2284d98036334710",
+      "constrained_quality.py": "cec0e94a49ecd5fb0410e3905e2a5e93f8ff667ee7e812e31cdb62f0e1cacf0b",
+      "run_constrained_worker.py": "5d731de7f80b0d613ee2dbf3f7ceb7c3b0c53ffb9d34d8f9c272c7769d90def9",
+      "locality_masks.py": "eb65265ced26b823271c5507c0a58260a05ff56bf7dca8ce2837c73a54e140b2",
+      "locality_gpu.py": "85efcc97cd2680d90867f499df3994d517c4f6dfefc5ef17966c6a0511cd247c"
+    },
+    "compile": {
+      "returncode": 0,
+      "remote_roundtrip_ms": 89188.28960000246,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 300 g++ -O1 -std=c++17 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥首批父反馈_65f7f74ec0b3/constrained_remesh.cpp' -lgmp -lmpfr -o '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥首批父反馈_65f7f74ec0b3/constrained_remesh' > '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥首批父反馈_65f7f74ec0b3/compile.log' 2>&1"
+    },
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.8.0+cu128",
+      "extension_sha256": "c0836ff8d36fe5c9e2fca8f27e9a341578aa3d716dfb1d0563784710717353ad"
+    },
+    "executable_sha256": "8529a90f4a4f187b2d2d5aac711f49c8a99554612f729575d0180357bd7f8986",
+    "dependency": "libcgal-dev:amd64\t5.4-1",
+    "exclusion_code_sha256": {
+      "cut_exclusion.py": "93d2301df42b5584d3b145047903b0234e117004d8aeeda6a522db0388725695",
+      "run_cut_exclusion_feedback.py": "2b15cfa03ea8d6c5d7dddba1aeea2c291aba5955e8c7809c312dca1b5290fba6",
+      "positive_area_input.py": "4b59e246b00f3e0b164698daef865a7e76b3a17a58a418c55f618324cd2843f0",
+      "run_constrained_feedback.py": "172b374325f0f9421fac9618d1dd9164afd4749880761e92ba1d2472da497c17",
+      "geometry_preservation_audit.py": "72a6c891e603edf7f818287d64684ffd7e557c837e1d58f16393e657b851bf79",
+      "locality_cleanup.py": "71020e811ecbb772f6b228fa0330d8e93314b9daee3b1c147a77552c75cedff6"
+    },
+    "input_policy": "both_branches_positive_area_diagnostic_input_only",
+    "output_policy": "original_1e_12_area_topology_and_0_1_mm_geometry",
+    "candidate_gpu_budget": "one_original_full_PaMO_per_prefix_no_extra_candidate_attempts",
+    "mechanism": "full_PaMO_then_joint_cumulative_tool_face_support_QP_and_exact_face_anchor_check",
+    "provenance_binary_sha256": "da6a45e3b45b0dceac87629379840046a692cfa3e24da6631234d0d00d50d033"
+  },
+  "parameters": {
+    "iterations": 3,
+    "rings": 2,
+    "expanded_rings": 4,
+    "projection_iterations": 5,
+    "geometry_budget_mm": 0.1,
+    "geometry_check": "8192_area_samples_and_all_vertices",
+    "fallback": "expanded_once_then_original_full"
+  },
+  "input_manifest_sha256": "917368bc20462dee60688ea0b45a89b2afa0705b2a8c7c9a70e34096c7dbef88"
+}

@@ -1,0 +1,153 @@
+{
+  "生成时间": "2026-10-06T22:41:56+08:00",
+  "修改时间及修改内容": "首次绑定原库执行作者阶段计时",
+  "文档概述": "开启日志的诊断，不属于正式交错速度样本",
+  "索引目录": [
+    "compile",
+    "rows"
+  ],
+  "status": "completed_twelve_actual_author_stage_diagnoses",
+  "build_sha256": "953666b3630d77775583500638c13b77f1bb92ca5d3f7309506ddee621ada45d",
+  "driver_source_sha256": "d49f90e550e306f4dfb93c8c8ff7e227bb45acf4df4a1be958c8885534505310",
+  "compile": [
+    {
+      "method": "baseline",
+      "returncode": 0,
+      "argv": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "/tmp/geogram_native_quality_20261006_14/stage_driver.cpp",
+        "-I/tmp/geogram_native_quality_20261006_02/baseline_source/src/lib",
+        "-L/tmp/geogram_native_quality_20261006_02/baseline_build/lib",
+        "-Wl,-rpath,/tmp/geogram_native_quality_20261006_02/baseline_build/lib",
+        "-lgeogram",
+        "-o",
+        "/tmp/geogram_native_quality_20261006_14/stage_diagnosis_01/baseline"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "method": "candidate",
+      "returncode": 0,
+      "argv": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "/tmp/geogram_native_quality_20261006_14/stage_driver.cpp",
+        "-I/tmp/geogram_native_quality_20261006_14/candidate_source/src/lib",
+        "-L/tmp/geogram_native_quality_20261006_14/candidate_build/lib",
+        "-Wl,-rpath,/tmp/geogram_native_quality_20261006_14/candidate_build/lib",
+        "-lgeogram",
+        "-o",
+        "/tmp/geogram_native_quality_20261006_14/stage_diagnosis_01/candidate"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "rows": [
+    {
+      "case_index": 0,
+      "method": "baseline",
+      "returncode": 0,
+      "log_sha256": "3bbf0bb1b2ebae7591815a491b175508033bfe05fd475723a7b960238aab7c7a"
+    },
+    {
+      "case_index": 0,
+      "method": "candidate",
+      "returncode": 0,
+      "log_sha256": "a41757732d5617b8ceb2569402da467f6e056383efd660d59d2fdd16166e4bba"
+    },
+    {
+      "case_index": 3,
+      "method": "baseline",
+      "returncode": 0,
+      "log_sha256": "819e7700d4bf5d7e99c12b2745bb2a2645515019729881899626e03a0236b432"
+    },
+    {
+      "case_index": 3,
+      "method": "candidate",
+      "returncode": 0,
+      "log_sha256": "e07cc8062b3d7179aec25befe71e1a87c3845869279c62c4b89e613fa907f0bb"
+    },
+    {
+      "case_index": 5,
+      "method": "baseline",
+      "returncode": 0,
+      "log_sha256": "99028f6abd9db3df7a75d33cbe669ee906d1d074cb9db67a06811312442a2351"
+    },
+    {
+      "case_index": 5,
+      "method": "candidate",
+      "returncode": 0,
+      "log_sha256": "f9c51cb264394f713defbeef163b6753ea10380748121b038656cac8eaafac2b"
+    },
+    {
+      "case_index": 7,
+      "method": "baseline",
+      "returncode": 0,
+      "log_sha256": "aa47f9ffd6f4753de0521806028f62113406f3d15f3548c4e710291f5baab875"
+    },
+    {
+      "case_index": 7,
+      "method": "candidate",
+      "returncode": 0,
+      "log_sha256": "ab59da930fff86e4d85d31df5d93a7dc04ca0103347f10c9e70e2dfb219ec1e2"
+    },
+    {
+      "case_index": 9,
+      "method": "baseline",
+      "returncode": 0,
+      "log_sha256": "bd98d239491768e054d4b3838d7df9aaac42afa26783f6bc62d38bec2135ccf3"
+    },
+    {
+      "case_index": 9,
+      "method": "candidate",
+      "returncode": 0,
+      "log_sha256": "7f6d829b68726fc958ab810366643a1dc14e87713ec610a0730b67afaf9570bc"
+    },
+    {
+      "case_index": 10,
+      "method": "baseline",
+      "returncode": 0,
+      "log_sha256": "9f0adec061e0d940a9c77c273130784183b14148959b8108cc947973d70b77ee"
+    },
+    {
+      "case_index": 10,
+      "method": "candidate",
+      "returncode": 0,
+      "log_sha256": "7249b9f3eea41162f8fe32937d422e4fc8f6678ccb25fe61f0cf0abcd3a0bbff"
+    }
+  ],
+  "finished_beijing": "2026-10-06T22:42:04+08:00",
+  "files": {
+    "baseline": "63ddb9fff7f5f5bb70e767e0c93eeaaf20e1460fea261f0f9855456c70a06566",
+    "baseline_compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "candidate": "710b61a7957ec236235d1389223938a74902db64b72323f4b4b1efdbc38ed6e7",
+    "candidate_compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "00_baseline.obj": "947f0d36927c616705da559100bd0e6d049cb80c758c770c038ff35e7c71546b",
+    "00_baseline.log": "3bbf0bb1b2ebae7591815a491b175508033bfe05fd475723a7b960238aab7c7a",
+    "00_candidate.obj": "27c6480cd3094b7be22ceccedfdea38aecbffb85984f7f3b44c9ca2e9840fdff",
+    "00_candidate.log": "a41757732d5617b8ceb2569402da467f6e056383efd660d59d2fdd16166e4bba",
+    "03_baseline.obj": "863efc3ce31a1617269e0f930030577e10d54d376cbf56cee987edfe7b5ebac1",
+    "03_baseline.log": "819e7700d4bf5d7e99c12b2745bb2a2645515019729881899626e03a0236b432",
+    "03_candidate.obj": "6a319f68b50cfd0f4669e1db742b51107cfbb190653736fd567dc6b33674d86f",
+    "03_candidate.log": "e07cc8062b3d7179aec25befe71e1a87c3845869279c62c4b89e613fa907f0bb",
+    "05_baseline.obj": "4a4ecb7ab0f588c4d3987063fddb68932912cac0e6a3a4d90401be6e1313cb75",
+    "05_baseline.log": "99028f6abd9db3df7a75d33cbe669ee906d1d074cb9db67a06811312442a2351",
+    "05_candidate.obj": "ad3b4f9b129495b659776f76e837f3735c0122f83831ce47dc28d17ebd403ad3",
+    "05_candidate.log": "f9c51cb264394f713defbeef163b6753ea10380748121b038656cac8eaafac2b",
+    "07_baseline.obj": "d921c10d41eeb12353009439c00d0b75371706f54712491e47f21fdc23751cc5",
+    "07_baseline.log": "aa47f9ffd6f4753de0521806028f62113406f3d15f3548c4e710291f5baab875",
+    "07_candidate.obj": "c94a97e0e710b0c047c90e5eb62b7a65d027974847cab56b975384f42bb6f64b",
+    "07_candidate.log": "ab59da930fff86e4d85d31df5d93a7dc04ca0103347f10c9e70e2dfb219ec1e2",
+    "09_baseline.obj": "781b0dc3333ab854341ee33814f662e1afc2b989a289371e9365342bd602293a",
+    "09_baseline.log": "bd98d239491768e054d4b3838d7df9aaac42afa26783f6bc62d38bec2135ccf3",
+    "09_candidate.obj": "368f8e95fa2b01213a1202a7712e132a5aeed7d940e6a4f0b87461440cfc72f6",
+    "09_candidate.log": "7f6d829b68726fc958ab810366643a1dc14e87713ec610a0730b67afaf9570bc",
+    "10_baseline.obj": "008fea56153213e950fa71cb21678b8b94f155f38520cd5c8216f79daf421517",
+    "10_baseline.log": "9f0adec061e0d940a9c77c273130784183b14148959b8108cc947973d70b77ee",
+    "10_candidate.obj": "983552751f18e3ddd372efe368cd8cdccb32114b4fc0a1472c5eddc503623b5e",
+    "10_candidate.log": "7249b9f3eea41162f8fe32937d422e4fc8f6678ccb25fe61f0cf0abcd3a0bbff"
+  }
+}

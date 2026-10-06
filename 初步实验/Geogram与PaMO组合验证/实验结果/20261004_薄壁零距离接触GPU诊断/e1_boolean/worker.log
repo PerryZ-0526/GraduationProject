@@ -1,0 +1,45 @@
+Warp 1.0.0-beta.2 initialized:
+   CUDA Toolkit: 12.8, Driver: 13.2
+   Devices:
+     "cpu"    | x86_64
+     "cuda:0" | NVIDIA GeForce RTX 4090 (sm_89)
+   Kernel cache: /root/.cache/warp/1.0.0-beta.2
+[33;20mWARNING - Triangle area is too small (min_area=1.3824544100845348e-11), may cause numerical instability (system.py:213)[0m
+Module pamo_safe_project.kernels.geometry_kernels load on device 'cuda:0' took 18.83 ms
+Module pamo_safe_project.kernels.energy_kernels.elastic_energy load on device 'cuda:0' took 10.99 ms
+Module pamo_safe_project.kernels.energy_kernels.hinge_energy load on device 'cuda:0' took 26.35 ms
+Module pamo_safe_project.kernels.energy_kernels.contact_detection load on device 'cuda:0' took 17.34 ms
+Module pamo_safe_project.kernels.energy_kernels.distance_energy load on device 'cuda:0' took 21.00 ms
+Module pamo_safe_project.kernels.energy_kernels.collision_energy load on device 'cuda:0' took 69.12 ms
+Module pamo_safe_project.kernels.utils_kernels load on device 'cuda:0' took 3.09 ms
+Module tangent_plane_gpu load on device 'cuda:0' took 1.21 ms
+Module locality_gpu load on device 'cuda:0' took 0.69 ms
+Module pamo_safe_project.kernels.solver_kernels load on device 'cuda:0' took 3.15 ms
+Module warp.utils load on device 'cuda:0' took 1.52 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs load on device 'cuda:0' took 16.97 ms
+Module pamo_safe_project.kernels.distance_kernels.hessian_funcs load on device 'cuda:0' took 73.33 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels load on device 'cuda:0' took 102.01 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs_struct load on device 'cuda:0' took 16.71 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels_struct load on device 'cuda:0' took 17.45 ms
+Module pamo_safe_project.kernels.ccd_kernels load on device 'cuda:0' took 21.16 ms
+Module pamo_safe_project.kernels.energy_kernels.lb_curvature_energy load on device 'cuda:0' took 3.18 ms
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零距离接触GPU诊断_e1639700cc9a/run_constrained_worker.py", line 85, in <module>
+    main()
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零距离接触GPU诊断_e1639700cc9a/run_constrained_worker.py", line 57, in main
+    result, projection = project_on_planes(source, mesh, fixed,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零距离接触GPU诊断_e1639700cc9a/tangent_plane_gpu.py", line 87, in project_on_planes
+    points, faces = process(source.vertices, source.faces, mesh.vertices, mesh.faces, 5, system=system, config=config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/pamo_safe_project/processing.py", line 87, in process
+    system.step()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/pamo_safe_project/system.py", line 439, in step
+    self._compute_diff()
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零距离接触GPU诊断_e1639700cc9a/collision_diff_diagnostic.py", line 84, in _compute_diff
+    raise error
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零距离接触GPU诊断_e1639700cc9a/collision_diff_diagnostic.py", line 19, in _compute_diff
+    super()._compute_diff()
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_薄壁零距离接触GPU诊断_e1639700cc9a/collision_protected_gpu.py", line 27, in _compute_diff
+    raise RuntimeError("数值保护只允许在有限初态第一次求导前固定自由点")
+RuntimeError: 数值保护只允许在有限初态第一次求导前固定自由点

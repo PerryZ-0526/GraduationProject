@@ -1,0 +1,132 @@
+{
+  "schema_version": 2,
+  "time_beijing": "2026-09-29 03:21:42",
+  "inputs": {
+    "source": {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260929_C1试运行准备\\取回输出\\stop_resume_e5\\geogram.obj",
+      "sha256": "20b035a4276e63f399449f69d8c522be4889482bee6a83bec7fb108566cff781"
+    },
+    "candidate": {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260929_C1试运行准备\\取回输出\\stop_resume_e5\\pamo.obj",
+      "sha256": "82dc556573e7bd5d81002be4ce2920d9a648699b72e071532bea6869f1490ec3"
+    },
+    "reference": {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260928_开发解析参照\\stop_resume_e5.vtp",
+      "sha256": "11139dd0d6d1c90fbb6d3633cb604d3d304d84c5aeffb3d2aac69211e1dc0eee"
+    }
+  },
+  "expected_components": 1,
+  "observed_components": 1,
+  "vertex_manifold_closed": true,
+  "topology_passed_with_vertex_check": true,
+  "quality_distribution": {
+    "total_faces": 5194,
+    "invalid_faces": 0,
+    "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+    "angle_below_10_deg": {
+      "faces": 0,
+      "fraction": 0.0,
+      "area_fraction": 0.0
+    },
+    "angle_below_5_deg": {
+      "faces": 0,
+      "fraction": 0.0,
+      "area_fraction": 0.0
+    },
+    "angle_below_1_deg": {
+      "faces": 0,
+      "fraction": 0.0,
+      "area_fraction": 0.0
+    },
+    "high_quality_25_deg_q_0_4": {
+      "faces": 5154,
+      "fraction": 0.9922988063149788,
+      "area_fraction": 0.9948353010625705
+    }
+  },
+  "legacy_strict_quality_passed": false,
+  "accepted_under_sampled_protocol_with_vertex_check": true,
+  "accepted_under_common_budget": null,
+  "reason_common_budget_unknown": "离散参照误差和连续双向表面距离界尚未证实",
+  "metrics": {
+    "input_quality": {
+      "vertices": 2769,
+      "faces": 5534,
+      "bad_faces": 187,
+      "min_q": 5.4179917640708934e-05,
+      "min_angle_deg": 0.0017922571665507092,
+      "boundary_edges": 0,
+      "quality_gate": {
+        "min_q": 0.4,
+        "min_angle_deg": 25.0
+      }
+    },
+    "input_topology": {
+      "connected_components": 1,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "inconsistent_interior_edges": 0,
+      "self_intersection_faces": 0
+    },
+    "input_validity_status": "passes_listed_topology_checks",
+    "output_quality": {
+      "vertices": 2599,
+      "faces": 5194,
+      "bad_faces": 40,
+      "min_q": 0.3801095685025783,
+      "min_angle_deg": 17.538464823173328,
+      "boundary_edges": 0,
+      "quality_gate": {
+        "min_q": 0.4,
+        "min_angle_deg": 25.0
+      }
+    },
+    "output_topology": {
+      "connected_components": 1,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "inconsistent_interior_edges": 0,
+      "self_intersection_faces": 0
+    },
+    "output_watertight": true,
+    "output_winding_consistent": true,
+    "sampled_drift": {
+      "pamo_to_geogram": {
+        "max_mm": 0.012240607430629154,
+        "p95_mm": 0.004331878264689508,
+        "rms_mm": 0.0023793401632492047,
+        "samples": 7793
+      },
+      "geogram_to_pamo": {
+        "max_mm": 0.016297634154729092,
+        "p95_mm": 0.005516288458952372,
+        "rms_mm": 0.003041494109716417,
+        "samples": 8303
+      },
+      "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+    },
+    "sampled_reference_geometry": {
+      "pamo_to_reference": {
+        "max_mm": 0.026213809961431904,
+        "p95_mm": 0.011761352690736726,
+        "rms_mm": 0.009886970674946845,
+        "samples": 8192
+      },
+      "reference_to_pamo": {
+        "max_mm": 0.027052317669713898,
+        "p95_mm": 0.011861917063454158,
+        "rms_mm": 0.009911238991373951,
+        "samples": 8192
+      },
+      "sampled_max_mm": 0.027052317669713898,
+      "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+    },
+    "quality_passed": false,
+    "topology_passed": true,
+    "sampled_geometry_passed": true,
+    "accepted_under_sampled_protocol": false,
+    "continuous_error_certificate_status": "not_available",
+    "accepted_under_common_budget": null,
+    "audit_wall_ms": 602.188799995929
+  }
+}

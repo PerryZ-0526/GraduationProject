@@ -1,0 +1,183 @@
+{
+  "time_beijing": "2026-10-04T07:10:13.318290",
+  "files": [
+    {
+      "file": "recover_public_reference.py",
+      "sha256": "00086109e82ae9f268ccaf81aa7b896f1b79a021afb83daf670d653fc93eb0aa"
+    },
+    {
+      "file": "audit_recovered_reference.py",
+      "sha256": "8d1e31e7cc1de225618f1ed7c18d392b3134df583cd1f96387145d55c48caa98"
+    },
+    {
+      "file": "fragment_pipeline.py",
+      "sha256": "44b5c1f34e1b2c8225b6099b33f2c1bc9d98996d2d88280a2d95a0073ebf9714"
+    },
+    {
+      "file": "locality_retriangulate.py",
+      "sha256": "448e13d84f3634ab8f257600bffa3f88787ae4971fbd2460d70e354e75690bb9"
+    },
+    {
+      "file": "locality_sliver_collapse.py",
+      "sha256": "f3c79115b83244a45d2d3d364df8ec5d10db023df20eff95cf0d15e8bca56150"
+    },
+    {
+      "file": "locality_cleanup.py",
+      "sha256": "c2b2ef02fe6432a0a396de2b2b68e038fd33fe9a16dce8672b0b98ed89e8a12f"
+    },
+    {
+      "file": "exact_alarm_contact.py",
+      "sha256": "499853b37d70a916338f1a52b4c2e7604adc38e8decd0880960975c5536cc19d"
+    }
+  ],
+  "route": {
+    "id": "BP3D_FJ3368_交叉浅磨",
+    "split": "application",
+    "category": "交叉浅磨",
+    "body": "ct",
+    "source_kind": "public_atlas_test_scale",
+    "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+    "initial_mesh": "BP3D_FJ3368.obj",
+    "initial_mesh_sha256": "98178ec8f322b547892147b3a6de9c294072fdeada2e268270bd342ae81ecb50",
+    "tool": {
+      "kind": "sphere",
+      "radius_mm": 1.0,
+      "mesh_subdivisions": 3
+    },
+    "events": [
+      {
+        "id": "e0",
+        "arrival_index": 0,
+        "timestamp_ms": 100,
+        "position_mm": [
+          -0.7814388223904042,
+          -0.042144725285296114,
+          -7.820845029941696
+        ],
+        "explicit_sweep_start_mm": [
+          -0.30718137522287603,
+          0.1522542628311186,
+          -7.333721937463569
+        ],
+        "tool_radius_mm": 1.0,
+        "orientation_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "cutting": true,
+        "connect_from_previous": false
+      },
+      {
+        "id": "e1",
+        "arrival_index": 1,
+        "timestamp_ms": 200,
+        "position_mm": [
+          -0.3854082391823515,
+          0.25569521528333194,
+          -8.325276538638333
+        ],
+        "explicit_sweep_start_mm": [
+          -0.7814388223904042,
+          -0.042144725285296114,
+          -7.820845029941696
+        ],
+        "tool_radius_mm": 1.0,
+        "orientation_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "cutting": true,
+        "connect_from_previous": false
+      },
+      {
+        "id": "e2",
+        "arrival_index": 2,
+        "timestamp_ms": 300,
+        "position_mm": [
+          0.0888492079851767,
+          0.4500942033997467,
+          -7.838153446160206
+        ],
+        "explicit_sweep_start_mm": [
+          -0.3854082391823515,
+          0.25569521528333194,
+          -8.325276538638333
+        ],
+        "tool_radius_mm": 1.0,
+        "orientation_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "cutting": true,
+        "connect_from_previous": false
+      },
+      {
+        "id": "e3",
+        "arrival_index": 3,
+        "timestamp_ms": 400,
+        "position_mm": [
+          -0.3071813752228759,
+          0.15225426283111865,
+          -7.333721937463569
+        ],
+        "explicit_sweep_start_mm": [
+          0.0888492079851767,
+          0.4500942033997467,
+          -7.838153446160206
+        ],
+        "tool_radius_mm": 1.0,
+        "orientation_xyzw": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "cutting": true,
+        "connect_from_previous": false
+      }
+    ],
+    "cutting_prefix_ids": [
+      "e0",
+      "e1",
+      "e2",
+      "e3"
+    ],
+    "prefix_tools": [
+      {
+        "event_id": "e0",
+        "mesh": "BP3D_FJ3368_交叉浅磨_e0_tool.obj",
+        "sha256": "2f0368a7abcdf59c1fc5ca44d7d75f242c7fbf98f655f297f1aa30e74c53bd11",
+        "faces": 1400
+      },
+      {
+        "event_id": "e1",
+        "mesh": "BP3D_FJ3368_交叉浅磨_e1_tool.obj",
+        "sha256": "1d1ef797eca30507924d20c49413ac206f0993ee2e717e1d234169e56b97c957",
+        "faces": 1384
+      },
+      {
+        "event_id": "e2",
+        "mesh": "BP3D_FJ3368_交叉浅磨_e2_tool.obj",
+        "sha256": "c056f039e8b3b3d1ee3be4f4bd58cce97669576d9061afda376c7e09cd2a38ab",
+        "faces": 1400
+      },
+      {
+        "event_id": "e3",
+        "mesh": "BP3D_FJ3368_交叉浅磨_e3_tool.obj",
+        "sha256": "6db1bb02853095fd57def41e6b99da1c8f6fc53acd4b89efafd1664bfc56cd59",
+        "faces": 1384
+      }
+    ],
+    "reference": {
+      "kind": "same_discrete_tools_cumulative_CSG",
+      "certified": false
+    }
+  },
+  "manifest_sha256": "5295067a16995845280fc84b1bbb63f2b10fe0eab7166309657c47fa834847a3"
+}

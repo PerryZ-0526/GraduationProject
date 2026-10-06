@@ -1,0 +1,389 @@
+{
+  "time_beijing": "2026-10-04T03:13:43.668645+08:00",
+  "role": "seen_development_saved_inputs_not_feedback",
+  "rows": [
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4120.415599999433,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_spatial/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_spatial/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_spatial/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/constrained_remesh' --method spatial --output '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_spatial/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_spatial/worker.log' 2>&1"
+      },
+      "method": "spatial",
+      "status": "accepted_sampled",
+      "quality_generation_ms": 44.706723652780056,
+      "requested_edge_length_mm": 0.11280217734728056,
+      "actual_edge_length_mm": 0.15374919097699877,
+      "max_protected_edge_mm": 0.20230156707499838,
+      "active_fraction": 0.26756496631376325,
+      "input_faces": 2078,
+      "output_faces": 2222,
+      "fp64_restoration_max_mm": 0.0,
+      "iterations": 3,
+      "fixed_contract_before_projection": {
+        "passed": true,
+        "external_faces": 1522,
+        "external_faces_retained": 1522,
+        "missing_fixed_vertices": 0
+      },
+      "safe_projection_ms": 888.7994419783354,
+      "projection_fp64_restoration_max_mm": 1.2571969299570243e-07,
+      "collision_scope": "whole_mesh_author_energy_and_ccd",
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1522,
+        "external_faces_retained": 1522,
+        "missing_fixed_vertices": 0
+      },
+      "maintenance_ms": 2692.5658211112022,
+      "output_sha256": "e58a8d5e686ce44c389f3b75eedab6bf09a044919c4080783c994cfc6d336b15",
+      "output_metrics": {
+        "vertices": 1113,
+        "faces": 2222,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.136760165452234,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "to_geogram_input": {
+        "pamo_to_reference": {
+          "max_mm": 0.007860486733661218,
+          "p95_mm": 4.175383346879678e-06,
+          "rms_mm": 0.0005140707993532325,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.007771632601196251,
+          "p95_mm": 4.723246047872305e-06,
+          "rms_mm": 0.0005105615142841456,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.007860486733661218,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 2222,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 167,
+          "fraction": 0.07515751575157516,
+          "area_fraction": 0.24569527227087795
+        },
+        "angle_below_5_deg": {
+          "faces": 49,
+          "fraction": 0.022052205220522054,
+          "area_fraction": 0.00023052906010964742
+        },
+        "angle_below_1_deg": {
+          "faces": 7,
+          "fraction": 0.0031503150315031502,
+          "area_fraction": 6.001689892883257e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1916,
+          "fraction": 0.8622862286228623,
+          "area_fraction": 0.6250965627384575
+        }
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "capacity_changed": false,
+      "audited_source_sha256": "8d663e43bc978d6908ead5763be84c102936018734d24de9e1c30f8258a27517",
+      "independent_audit_ms": 130.91010000061942,
+      "continuous_geometry_certified": false,
+      "case": "crossing_e0",
+      "round": 0
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4096.383600000081,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_boolean/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_boolean/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_boolean/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/constrained_remesh' --method boolean --output '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_boolean/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_boolean/worker.log' 2>&1"
+      },
+      "method": "boolean",
+      "status": "accepted_sampled",
+      "quality_generation_ms": 35.683597438037395,
+      "requested_edge_length_mm": 0.1001723031151933,
+      "actual_edge_length_mm": 0.21508746568294884,
+      "max_protected_edge_mm": 0.28300982326703794,
+      "active_fraction": 0.18768046198267566,
+      "input_faces": 2078,
+      "output_faces": 1970,
+      "fp64_restoration_max_mm": 0.0,
+      "iterations": 3,
+      "fixed_contract_before_projection": {
+        "passed": true,
+        "external_faces": 1688,
+        "external_faces_retained": 1688,
+        "missing_fixed_vertices": 0
+      },
+      "safe_projection_ms": 919.1205035895109,
+      "projection_fp64_restoration_max_mm": 1.2571969299570243e-07,
+      "collision_scope": "whole_mesh_author_energy_and_ccd",
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1688,
+        "external_faces_retained": 1688,
+        "missing_fixed_vertices": 0
+      },
+      "maintenance_ms": 2751.782656647265,
+      "output_sha256": "c7f87309d359122d18227149c040bbda46f07d2f1efc9db7632b9a7baab227be",
+      "output_metrics": {
+        "vertices": 987,
+        "faces": 1970,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.14044842771037,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "to_geogram_input": {
+        "pamo_to_reference": {
+          "max_mm": 0.01854649442669741,
+          "p95_mm": 2.220446049250313e-16,
+          "rms_mm": 0.0010739301328198717,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.018419275367526907,
+          "p95_mm": 2.220446049250313e-16,
+          "rms_mm": 0.0012321479608141013,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.01854649442669741,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 1970,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 173,
+          "fraction": 0.08781725888324873,
+          "area_fraction": 0.24629165079301527
+        },
+        "angle_below_5_deg": {
+          "faces": 56,
+          "fraction": 0.028426395939086295,
+          "area_fraction": 0.0005151613688283962
+        },
+        "angle_below_1_deg": {
+          "faces": 17,
+          "fraction": 0.008629441624365483,
+          "area_fraction": 3.300307146076509e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1632,
+          "fraction": 0.8284263959390863,
+          "area_fraction": 0.619196142089293
+        }
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "capacity_changed": false,
+      "audited_source_sha256": "8d663e43bc978d6908ead5763be84c102936018734d24de9e1c30f8258a27517",
+      "independent_audit_ms": 123.66190000011557,
+      "continuous_geometry_certified": false,
+      "case": "crossing_e0",
+      "round": 0
+    },
+    {
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4457.608899999286,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_full/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_full/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_full/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/constrained_remesh' --method full --output '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_full/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_full/worker.log' 2>&1"
+      },
+      "method": "full",
+      "status": "accepted_sampled",
+      "pamo_run_ms": 1364.9264089763165,
+      "stage1": "original",
+      "maintenance_ms": 2941.476244479418,
+      "output_sha256": "d7270c6f915d277da3fcf206c42117c34771854e687f751a8eed9c0c6cd4eadf",
+      "output_metrics": {
+        "vertices": 1004,
+        "faces": 2004,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.137000247486622,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "to_geogram_input": {
+        "pamo_to_reference": {
+          "max_mm": 0.016126059425850305,
+          "p95_mm": 0.0025226757969948445,
+          "rms_mm": 0.0014805368049067805,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.017947977598082154,
+          "p95_mm": 0.0028264763198291736,
+          "rms_mm": 0.0015980517783129662,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.017947977598082154,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 2004,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 21,
+          "fraction": 0.010479041916167664,
+          "area_fraction": 0.0019980895835138806
+        },
+        "angle_below_5_deg": {
+          "faces": 1,
+          "fraction": 0.000499001996007984,
+          "area_fraction": 1.3908662516226277e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1680,
+          "fraction": 0.8383233532934131,
+          "area_fraction": 0.9373302631312957
+        }
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "fixed_contract": null,
+      "capacity_changed": false,
+      "audited_source_sha256": "8d663e43bc978d6908ead5763be84c102936018734d24de9e1c30f8258a27517",
+      "independent_audit_ms": 100.31710000021121,
+      "continuous_geometry_certified": false,
+      "case": "crossing_e0",
+      "round": 0
+    },
+    {
+      "execution": {
+        "returncode": 1,
+        "remote_roundtrip_ms": 3305.219699999725,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_global/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_global/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_global/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/constrained_remesh' --method global --output '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_global/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/crossing_e0_r0_global/worker.log' 2>&1"
+      },
+      "method": "global",
+      "status": "execution_failed",
+      "case": "crossing_e0",
+      "round": 0
+    }
+  ],
+  "status": "completed_with_recorded_failures",
+  "environment": {
+    "code_sha256": {
+      "constrained_remesh.cpp": "4fc35fcf68c7c89ab6fbfa8985378fba2378c6a4254c9f3a2284d98036334710",
+      "constrained_quality.py": "ca793224c6595b75f6f893ba5b4cf605d86f91f84ec1e8ce7f823a76da1aa272",
+      "run_constrained_worker.py": "5d731de7f80b0d613ee2dbf3f7ceb7c3b0c53ffb9d34d8f9c272c7769d90def9",
+      "locality_masks.py": "eb65265ced26b823271c5507c0a58260a05ff56bf7dca8ce2837c73a54e140b2",
+      "locality_gpu.py": "85efcc97cd2680d90867f499df3994d517c4f6dfefc5ef17966c6a0511cd247c"
+    },
+    "compile": {
+      "returncode": 0,
+      "remote_roundtrip_ms": 13705.626999999367,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 300 g++ -O1 -std=c++17 '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/constrained_remesh.cpp' -lgmp -lmpfr -o '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/constrained_remesh' > '/root/autodl-tmp/graduation_project/constrained_20261004_约束质量生成首帧/compile.log' 2>&1"
+    },
+    "executable_sha256": "8529a90f4a4f187b2d2d5aac711f49c8a99554612f729575d0180357bd7f8986",
+    "dependency": "libcgal-dev:amd64\t5.4-1"
+  }
+}

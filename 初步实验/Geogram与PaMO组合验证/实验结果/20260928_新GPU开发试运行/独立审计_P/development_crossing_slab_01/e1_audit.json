@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-09-29 00:19:50",
+  "inputs": {
+    "source": {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260928_新GPU开发试运行\\前缀输入审计\\development_crossing_slab_01\\e1_clean.obj",
+      "sha256": "ed631e068cae687055f443b00552930ad08089168bda543e9985664652d6b766"
+    },
+    "candidate": {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260928_新GPU开发试运行\\pamo_dev_P\\development_crossing_slab_01\\e1.obj",
+      "sha256": "f570b0423eead31bc806fd992414b67cb4e7be9cbcfbcce989b9f2f2bad71d2b"
+    },
+    "reference": {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260928_开发解析参照\\crossing_e1.vtp",
+      "sha256": "a740503c0b671c24ad943baa15cbfbbaac5a32f06d3a63d070b421183733c93d"
+    }
+  },
+  "expected_components": 1,
+  "observed_components": 1,
+  "vertex_manifold_closed": true,
+  "topology_passed_with_vertex_check": true,
+  "accepted_under_sampled_protocol_with_vertex_check": false,
+  "accepted_under_common_budget": null,
+  "reason_common_budget_unknown": "离散参照误差和连续双向表面距离界尚未证实",
+  "metrics": {
+    "input_quality": {
+      "vertices": 582,
+      "faces": 1160,
+      "bad_faces": 374,
+      "min_q": 1.8757069606972078e-06,
+      "min_angle_deg": 6.204414853584154e-05,
+      "boundary_edges": 0,
+      "quality_gate": {
+        "min_q": 0.4,
+        "min_angle_deg": 25.0
+      }
+    },
+    "input_topology": {
+      "connected_components": 1,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "inconsistent_interior_edges": 0,
+      "self_intersection_faces": 0
+    },
+    "input_validity_status": "passes_listed_topology_checks",
+    "output_quality": {
+      "vertices": 568,
+      "faces": 1132,
+      "bad_faces": 274,
+      "min_q": 0.06438296484458633,
+      "min_angle_deg": 2.183358633874833,
+      "boundary_edges": 0,
+      "quality_gate": {
+        "min_q": 0.4,
+        "min_angle_deg": 25.0
+      }
+    },
+    "output_topology": {
+      "connected_components": 1,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "inconsistent_interior_edges": 0,
+      "self_intersection_faces": 0
+    },
+    "output_watertight": true,
+    "output_winding_consistent": true,
+    "sampled_drift": {
+      "pamo_to_geogram": {
+        "max_mm": 0.018132646768589947,
+        "p95_mm": 0.006499362936153077,
+        "rms_mm": 0.0028715012996265218,
+        "samples": 1700
+      },
+      "geogram_to_pamo": {
+        "max_mm": 0.04016124890610513,
+        "p95_mm": 0.012655869558110157,
+        "rms_mm": 0.005582530718089047,
+        "samples": 1742
+      },
+      "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+    },
+    "sampled_reference_geometry": {
+      "pamo_to_reference": {
+        "max_mm": 0.0227410369281784,
+        "p95_mm": 0.0050348061435766785,
+        "rms_mm": 0.002272982983706536,
+        "samples": 8192
+      },
+      "reference_to_pamo": {
+        "max_mm": 0.025743878622440652,
+        "p95_mm": 0.005387144953409099,
+        "rms_mm": 0.002431778469588794,
+        "samples": 8192
+      },
+      "sampled_max_mm": 0.025743878622440652,
+      "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+    },
+    "quality_passed": false,
+    "topology_passed": true,
+    "sampled_geometry_passed": true,
+    "accepted_under_sampled_protocol": false,
+    "continuous_error_certificate_status": "not_available",
+    "accepted_under_common_budget": null,
+    "audit_wall_ms": 329.2444000253454
+  }
+}

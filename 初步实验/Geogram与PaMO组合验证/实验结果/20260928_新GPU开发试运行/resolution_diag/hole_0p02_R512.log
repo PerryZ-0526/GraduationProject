@@ -1,0 +1,31 @@
+# of input verts : 2304
+# of input faces : 4608
+Stage1 :  True
+Stage3 :  True
+Warp 1.0.0-beta.2 initialized:
+   CUDA Toolkit: 12.8, Driver: 13.2
+   Devices:
+     "cpu"    | x86_64
+     "cuda:0" | NVIDIA GeForce RTX 4090 (sm_89)
+   Kernel cache: /root/.cache/warp/1.0.0-beta.2
+Target faces : 4608
+Time for Remeshing: 0.12521910667419434 sec
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py", line 57, in <module>
+    main()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py", line 32, in main
+    verts, faces = pamo.run(torch.from_numpy(input_mesh.vertices).float().cuda(), 
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/followup_20260928_2344/resolution_512/pamo/__init__.py", line 133, in run
+    verts, faces, verts_occ, verts_map, verts_undo = self.func.apply(verts, faces, verts_undo, n_verts_undo, scale, threshold, is_stuck, init)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/autograd/function.py", line 576, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/followup_20260928_2344/resolution_512/pamo/__init__.py", line 41, in forward
+    verts, faces, verts_occ, verts_map, verts_undo = pamo.forward(points, triangles, vertices_undo, num_vertices_undo, scale, threshold, is_stuck, init)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: parallel_for: failed to synchronize: cudaErrorIllegalAddress: an illegal memory access was encountered
+CUDA Runtime Error: an illegal memory access was encountered /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/cumesh2sdf/structs.cuh 12
+CUDA Runtime Error: driver shutting down /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/cumesh2sdf/allocator.cuh 84
+CUDA Runtime Error: driver shutting down /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/cumesh2sdf/allocator.cuh 84

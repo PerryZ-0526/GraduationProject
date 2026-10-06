@@ -1,0 +1,104 @@
+{
+  "rows": [
+    {
+      "diff_call": 1,
+      "finite_positions": true,
+      "free_vertices": 97,
+      "nonfinite_free_vertices": [],
+      "original_error": null,
+      "full_energy": null,
+      "full_energy_finite": false,
+      "component_energies": [
+        {
+          "name": "Mesh2GTDistanceBvhEnergyCalculator",
+          "finite": true,
+          "value": 4.005578275715571e-18
+        },
+        {
+          "name": "ElasticEnergyCalculator",
+          "finite": true,
+          "value": 1.2187861363319088e-14
+        },
+        {
+          "name": "HingeEnergyCalculator",
+          "finite": true,
+          "value": 0.0
+        },
+        {
+          "name": "CollisionBvhEnergyCalculator",
+          "finite": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "diff_call": 2,
+      "finite_positions": true,
+      "free_vertices": 97,
+      "nonfinite_free_vertices": [],
+      "original_error": null,
+      "full_energy": null,
+      "full_energy_finite": false,
+      "max_movement_since_previous_finite_diff_normalized": 5.135154879098991e-07
+    },
+    {
+      "diff_call": 3,
+      "finite_positions": true,
+      "free_vertices": 97,
+      "nonfinite_free_vertices": [
+        568,
+        605,
+        607
+      ],
+      "original_error": "数值保护只允许在有限初态第一次求导前固定自由点",
+      "full_energy": null,
+      "full_energy_finite": false,
+      "component_energies": [
+        {
+          "name": "Mesh2GTDistanceBvhEnergyCalculator",
+          "finite": true,
+          "value": 1.6918571713953404e-14
+        },
+        {
+          "name": "ElasticEnergyCalculator",
+          "finite": true,
+          "value": 9.859148220048297e-12
+        },
+        {
+          "name": "HingeEnergyCalculator",
+          "finite": true,
+          "value": 6.210966918047565e-15
+        },
+        {
+          "name": "CollisionBvhEnergyCalculator",
+          "finite": false,
+          "value": null
+        }
+      ],
+      "max_movement_since_previous_finite_diff_normalized": 2.091138640025747e-06,
+      "component_derivatives": [
+        {
+          "name": "Mesh2GTDistanceBvhEnergyCalculator",
+          "nonfinite_free_vertices": []
+        },
+        {
+          "name": "ElasticEnergyCalculator",
+          "nonfinite_free_vertices": []
+        },
+        {
+          "name": "HingeEnergyCalculator",
+          "nonfinite_free_vertices": []
+        },
+        {
+          "name": "CollisionBvhEnergyCalculator",
+          "nonfinite_free_vertices": [
+            568,
+            605,
+            607
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "原求导流程只读诊断；归一化坐标，非新算法输出或发布"
+}

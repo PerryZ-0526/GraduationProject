@@ -1,0 +1,167 @@
+{
+  "time_beijing": "2026-10-04T02:44:28.739945+08:00",
+  "studies": [
+    {
+      "folder": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_geometry_application_v2",
+      "status": "complete_with_recorded_failures",
+      "branches": {
+        "R": {
+          "planned_prefixes": 16,
+          "statuses": {
+            "reference_valid": 10,
+            "reference_topology_invalid": 1,
+            "blocked_by_previous_failure": 5
+          },
+          "pamo_calls": 0
+        },
+        "C0": {
+          "planned_prefixes": 16,
+          "statuses": {
+            "output_invalid_or_reference_unavailable": 1,
+            "blocked_by_previous_failure": 15
+          },
+          "pamo_calls": 1
+        },
+        "C1": {
+          "planned_prefixes": 16,
+          "statuses": {
+            "output_invalid_or_reference_unavailable": 1,
+            "blocked_by_previous_failure": 15
+          },
+          "pamo_calls": 1
+        }
+      },
+      "routes": [
+        {
+          "route": "application_ct_16",
+          "branch": "R",
+          "planned_prefixes": 16,
+          "valid_prefixes": 10,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e10",
+            "status": "reference_topology_invalid",
+            "input_metrics": null,
+            "output_metrics": null
+          }
+        },
+        {
+          "route": "application_ct_16",
+          "branch": "C0",
+          "planned_prefixes": 16,
+          "valid_prefixes": 0,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e0",
+            "status": "output_invalid_or_reference_unavailable",
+            "input_metrics": {
+              "vertices": 21936,
+              "faces": 43868,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 0,
+              "volume_mm3": 62228.80494414765,
+              "self_intersection_raw_alarm_faces": 2,
+              "separated_alarm_pairs": [
+                {
+                  "faces": [
+                    40397,
+                    40423
+                  ],
+                  "separation_gap_mm": 0.15464251811804897
+                }
+              ],
+              "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+              "components": 1
+            },
+            "output_metrics": {
+              "vertices": 21931,
+              "faces": 43858,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 0,
+              "volume_mm3": 62616.442881278366,
+              "self_intersection_raw_alarm_faces": 0,
+              "components": 1
+            }
+          },
+          "uncut_sampled_max_mm": 0.25862116229193405,
+          "quality_tail_max_percent": {
+            "10": 0.004560171462446989,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.2253565677673803
+        },
+        {
+          "route": "application_ct_16",
+          "branch": "C1",
+          "planned_prefixes": 16,
+          "valid_prefixes": 0,
+          "full_sampled_sequence": false,
+          "first_stop": {
+            "event": "e0",
+            "status": "output_invalid_or_reference_unavailable",
+            "input_metrics": {
+              "vertices": 21936,
+              "faces": 43868,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 0,
+              "volume_mm3": 62228.80494414765,
+              "self_intersection_raw_alarm_faces": 2,
+              "separated_alarm_pairs": [
+                {
+                  "faces": [
+                    40397,
+                    40423
+                  ],
+                  "separation_gap_mm": 0.15464251811804897
+                }
+              ],
+              "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+              "components": 1
+            },
+            "output_metrics": {
+              "vertices": 20637,
+              "faces": 41270,
+              "finite": true,
+              "zero_area_faces": 0,
+              "fp32_zero_area_faces": 0,
+              "watertight": true,
+              "winding_consistent": true,
+              "vertex_manifold_closed": true,
+              "euler_number": 2,
+              "self_intersection_faces": 0,
+              "volume_mm3": 62614.33859050792,
+              "self_intersection_raw_alarm_faces": 0,
+              "components": 1
+            }
+          },
+          "uncut_sampled_max_mm": 0.1984173423863119,
+          "quality_tail_max_percent": {
+            "10": 0.0121153380179307,
+            "5": 0.0,
+            "1": 0.0
+          },
+          "sampled_geometry_max_mm": 0.1972129871168684
+        }
+      ]
+    }
+  ]
+}

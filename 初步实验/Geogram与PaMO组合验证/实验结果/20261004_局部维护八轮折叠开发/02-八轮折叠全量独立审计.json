@@ -1,0 +1,4852 @@
+{
+  "time_beijing": "2026-10-04T02:51:34.392349+08:00",
+  "role": "seen_saved_static_inputs_development_not_new_feedback_or_independent_evaluation",
+  "manifest_sha256": "7bc1634d1da3dc6d909a9e72995a4e1b1dec07b224dbd7702c40354d632254eb",
+  "cases": [
+    {
+      "case": "crossing_e0",
+      "input_valid": true,
+      "status": "audited"
+    },
+    {
+      "case": "crossing_e1",
+      "input_valid": true,
+      "status": "audited"
+    },
+    {
+      "case": "crossing_e2",
+      "input_valid": true,
+      "status": "audited"
+    },
+    {
+      "case": "crossing_e3",
+      "input_valid": true,
+      "status": "audited"
+    },
+    {
+      "case": "stop_resume_e0",
+      "input_valid": true,
+      "status": "audited"
+    },
+    {
+      "case": "stop_resume_e1",
+      "input_valid": true,
+      "status": "audited"
+    },
+    {
+      "case": "stop_resume_e3",
+      "input_valid": true,
+      "status": "audited"
+    },
+    {
+      "case": "stop_resume_e5",
+      "input_valid": false,
+      "status": "input_rejected"
+    }
+  ],
+  "rows": [
+    {
+      "case": "crossing_e0",
+      "route": "development_crossing_slab_01",
+      "event": "e0",
+      "method": "full",
+      "round": 0,
+      "maintenance_wall_ms": 1910.6398997828364,
+      "active_fraction": null,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 2002,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 23,
+          "fraction": 0.011488511488511488,
+          "area_fraction": 0.0026061814024604096
+        },
+        "angle_below_5_deg": {
+          "faces": 1,
+          "fraction": 0.0004995004995004995,
+          "area_fraction": 2.4133369505702797e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1703,
+          "fraction": 0.8506493506493507,
+          "area_fraction": 0.9446778093033076
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 1041,
+          "faces": 2078,
+          "bad_faces": 301,
+          "min_q": 0.002138974489275734,
+          "min_angle_deg": 0.07075683891593137,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 1003,
+          "faces": 2002,
+          "bad_faces": 299,
+          "min_q": 0.08987269729227765,
+          "min_angle_deg": 3.646812266997951,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.019985047016099048,
+            "p95_mm": 0.00447805141975366,
+            "rms_mm": 0.0021790216904976453,
+            "samples": 3005
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.035312657685910395,
+            "p95_mm": 0.009408366338708883,
+            "rms_mm": 0.003893260268068495,
+            "samples": 3119
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.021079030745968952,
+            "p95_mm": 0.002589863948316836,
+            "rms_mm": 0.0016692756166156704,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.02359846425578058,
+            "p95_mm": 0.0031552634635214605,
+            "rms_mm": 0.0018749707501465487,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.02359846425578058,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 209.61280000028637
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "fixed_contract": null,
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7973,
+          "max_mm": 0.021583275628005924,
+          "mean_mm": 0.0005849400355709985,
+          "p95_mm": 0.0021577347654876513,
+          "over_0_01_mm": 48,
+          "normal_p95_deg": 4.029097040445488,
+          "normal_max_deg": 91.01156962059135
+        },
+        "candidate_to_source": {
+          "samples": 7984,
+          "max_mm": 0.018866504108459248,
+          "mean_mm": 0.0005171305786439136,
+          "p95_mm": 0.0019057262063556046,
+          "over_0_01_mm": 18,
+          "normal_p95_deg": 3.9501304048544665,
+          "normal_max_deg": 90.68748554840118
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 313.5385999994469,
+      "maintenance_plus_audit_ms": 2224.1784997822833
+    },
+    {
+      "case": "crossing_e0",
+      "route": "development_crossing_slab_01",
+      "event": "e0",
+      "method": "global",
+      "round": 0,
+      "maintenance_wall_ms": 1413.0144845694304,
+      "active_fraction": 1.0,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1310,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 109,
+          "fraction": 0.083206106870229,
+          "area_fraction": 0.24523764039377785
+        },
+        "angle_below_5_deg": {
+          "faces": 20,
+          "fraction": 0.015267175572519083,
+          "area_fraction": 0.0001535322848078149
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1099,
+          "fraction": 0.8389312977099237,
+          "area_fraction": 0.6232113228603373
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 1041,
+          "faces": 2078,
+          "bad_faces": 301,
+          "min_q": 0.002138974489275734,
+          "min_angle_deg": 0.07075683891593137,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 657,
+          "faces": 1310,
+          "bad_faces": 211,
+          "min_q": 0.031376075745710184,
+          "min_angle_deg": 1.0448484740758244,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.006255697558109857,
+            "p95_mm": 0.0013811104097556399,
+            "rms_mm": 0.0007331425718187865,
+            "samples": 1967
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.010330856418854647,
+            "p95_mm": 0.0023902185937305577,
+            "rms_mm": 0.0011559000004788714,
+            "samples": 3119
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.017320371402342417,
+            "p95_mm": 5.578266450341918e-05,
+            "rms_mm": 0.0013871343167836815,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.012474299310842067,
+            "p95_mm": 5.4434660687440074e-05,
+            "rms_mm": 0.000915167271802471,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.017320371402342417,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 173.6836999998559
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 0,
+        "external_faces_retained": 0,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7973,
+          "max_mm": 0.0002373345400024385,
+          "mean_mm": 1.088986096753314e-06,
+          "p95_mm": 1.8661884985473972e-06,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.0011875064569453662,
+          "normal_max_deg": 0.16374731907461312
+        },
+        "candidate_to_source": {
+          "samples": 7970,
+          "max_mm": 0.00025870342769021126,
+          "mean_mm": 1.1636877699711173e-06,
+          "p95_mm": 2.027292446779448e-06,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.0014610040463980355,
+          "normal_max_deg": 8.439348123109953
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 262.0518000003358,
+      "maintenance_plus_audit_ms": 1675.0662845697661
+    },
+    {
+      "case": "crossing_e0",
+      "route": "development_crossing_slab_01",
+      "event": "e0",
+      "method": "spatial",
+      "round": 0,
+      "maintenance_wall_ms": 1413.0794443190098,
+      "active_fraction": 0.26756496631376325,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1902,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 107,
+          "fraction": 0.05625657202944269,
+          "area_fraction": 0.24519775962446178
+        },
+        "angle_below_5_deg": {
+          "faces": 18,
+          "fraction": 0.00946372239747634,
+          "area_fraction": 0.00011053266990121839
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1698,
+          "fraction": 0.8927444794952681,
+          "area_fraction": 0.625754648379886
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 1041,
+          "faces": 2078,
+          "bad_faces": 301,
+          "min_q": 0.002138974489275734,
+          "min_angle_deg": 0.07075683891593137,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 953,
+          "faces": 1902,
+          "bad_faces": 204,
+          "min_q": 0.031374075105336886,
+          "min_angle_deg": 1.0447819270426977,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.006252759278565367,
+            "p95_mm": 0.0005686050598804718,
+            "rms_mm": 0.0005790038748642746,
+            "samples": 2855
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.010329044489498281,
+            "p95_mm": 0.002327803606837317,
+            "rms_mm": 0.001145931870048602,
+            "samples": 3119
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.01750573582815562,
+            "p95_mm": 8.437791003604998e-05,
+            "rms_mm": 0.00139564607100892,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.012474553526738319,
+            "p95_mm": 5.527654138713101e-05,
+            "rms_mm": 0.0009117772711729125,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.01750573582815562,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 177.93560000063735
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1522,
+        "external_faces_retained": 1522,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7973,
+          "max_mm": 0.002282621323835436,
+          "mean_mm": 1.7531035297481816e-06,
+          "p95_mm": 1.0254879920145825e-06,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.0008666252516473494,
+          "normal_max_deg": 1.9063333426986655
+        },
+        "candidate_to_source": {
+          "samples": 7975,
+          "max_mm": 0.0011927838997805248,
+          "mean_mm": 1.2899437167394963e-06,
+          "p95_mm": 8.854761564862855e-07,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.00079794225779967,
+          "normal_max_deg": 8.439897302202573
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 279.239299999972,
+      "maintenance_plus_audit_ms": 1692.3187443189818
+    },
+    {
+      "case": "crossing_e0",
+      "route": "development_crossing_slab_01",
+      "event": "e0",
+      "method": "boolean",
+      "round": 0,
+      "maintenance_wall_ms": 1412.1521562337875,
+      "active_fraction": 0.18768046198267566,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1914,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 107,
+          "fraction": 0.05590386624869383,
+          "area_fraction": 0.24519941517145505
+        },
+        "angle_below_5_deg": {
+          "faces": 18,
+          "fraction": 0.009404388714733543,
+          "area_fraction": 0.00010984364480909395
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1713,
+          "fraction": 0.8949843260188087,
+          "area_fraction": 0.6260935482395941
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 1041,
+          "faces": 2078,
+          "bad_faces": 301,
+          "min_q": 0.002138974489275734,
+          "min_angle_deg": 0.07075683891593137,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 959,
+          "faces": 1914,
+          "bad_faces": 201,
+          "min_q": 0.0314032713775116,
+          "min_angle_deg": 1.0457569549236694,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.007410256023594387,
+            "p95_mm": 0.0006253787119453701,
+            "rms_mm": 0.0006284683641438835,
+            "samples": 2873
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.01026133706484394,
+            "p95_mm": 0.0024420306369327635,
+            "rms_mm": 0.0011699178398838956,
+            "samples": 3119
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.01750573582815562,
+            "p95_mm": 4.7683716086766026e-08,
+            "rms_mm": 0.0013498544676648137,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.012474553526738319,
+            "p95_mm": 4.7683716086766026e-08,
+            "rms_mm": 0.0009143887164506926,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.01750573582815562,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 176.42400000022462
+      },
+      "source_quality": {
+        "total_faces": 2078,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 156,
+          "fraction": 0.07507218479307026,
+          "area_fraction": 0.2457941616905754
+        },
+        "angle_below_5_deg": {
+          "faces": 46,
+          "fraction": 0.02213666987487969,
+          "area_fraction": 0.0003873348738176201
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0052935514918190565,
+          "area_fraction": 1.8719060216724387e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1777,
+          "fraction": 0.8551491819056786,
+          "area_fraction": 0.6246103346808178
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1688,
+        "external_faces_retained": 1688,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7973,
+          "max_mm": 0.002341512288469383,
+          "mean_mm": 8.909207806493579e-07,
+          "p95_mm": 2.220446049250313e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.2074182697257333e-06,
+          "normal_max_deg": 1.9435027169194292
+        },
+        "candidate_to_source": {
+          "samples": 7953,
+          "max_mm": 0.002766985001833084,
+          "mean_mm": 7.216673510271829e-07,
+          "p95_mm": 2.220446049250313e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.2074182697257333e-06,
+          "normal_max_deg": 2.8122136795914146
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 274.5895999996719,
+      "maintenance_plus_audit_ms": 1686.7417562334595
+    },
+    {
+      "case": "crossing_e1",
+      "route": "development_crossing_slab_01",
+      "event": "e1",
+      "method": "full",
+      "round": 0,
+      "maintenance_wall_ms": 1810.0829180330038,
+      "active_fraction": null,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1408,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 35,
+          "fraction": 0.024857954545454544,
+          "area_fraction": 0.006251855530068345
+        },
+        "angle_below_5_deg": {
+          "faces": 1,
+          "fraction": 0.0007102272727272727,
+          "area_fraction": 0.00022573474137754695
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1091,
+          "fraction": 0.7748579545454546,
+          "area_fraction": 0.9057544591942255
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 729,
+          "faces": 1454,
+          "bad_faces": 480,
+          "min_q": 0.002290836606638848,
+          "min_angle_deg": 0.07670061495998913,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 706,
+          "faces": 1408,
+          "bad_faces": 317,
+          "min_q": 0.13273509985011844,
+          "min_angle_deg": 4.439430616095727,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.018520476947362054,
+            "p95_mm": 0.007102414025122066,
+            "rms_mm": 0.003044315468316924,
+            "samples": 2114
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.028977617901300257,
+            "p95_mm": 0.012409065657576003,
+            "rms_mm": 0.005448997493706562,
+            "samples": 2183
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.023518615383569794,
+            "p95_mm": 0.006557391698656864,
+            "rms_mm": 0.002857545642766208,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.03215443243286989,
+            "p95_mm": 0.007133468981619371,
+            "rms_mm": 0.0031316363154486387,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.03215443243286989,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 177.69549999957235
+      },
+      "source_quality": {
+        "total_faces": 1454,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 172,
+          "fraction": 0.11829436038514443,
+          "area_fraction": 0.04348161938251871
+        },
+        "angle_below_5_deg": {
+          "faces": 108,
+          "fraction": 0.07427785419532325,
+          "area_fraction": 0.03723934197470214
+        },
+        "angle_below_1_deg": {
+          "faces": 21,
+          "fraction": 0.014442916093535076,
+          "area_fraction": 0.0005943011228708636
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 974,
+          "fraction": 0.6698762035763411,
+          "area_fraction": 0.8641615879490206
+        }
+      },
+      "fixed_contract": null,
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7596,
+          "max_mm": 0.027361106505721527,
+          "mean_mm": 0.000773921099417462,
+          "p95_mm": 0.003953348061938424,
+          "over_0_01_mm": 59,
+          "normal_p95_deg": 6.625766489449272,
+          "normal_max_deg": 92.36998431407662
+        },
+        "candidate_to_source": {
+          "samples": 7568,
+          "max_mm": 0.019155618831556583,
+          "mean_mm": 0.0006942027140498151,
+          "p95_mm": 0.003542837753366898,
+          "over_0_01_mm": 34,
+          "normal_p95_deg": 5.613064067483824,
+          "normal_max_deg": 91.57396519464415
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 293.59979999935604,
+      "maintenance_plus_audit_ms": 2103.68271803236
+    },
+    {
+      "case": "crossing_e1",
+      "route": "development_crossing_slab_01",
+      "event": "e1",
+      "method": "global",
+      "round": 0,
+      "maintenance_wall_ms": 1408.2859633490443,
+      "active_fraction": 1.0,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 866,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 113,
+          "fraction": 0.13048498845265588,
+          "area_fraction": 0.04585350118284046
+        },
+        "angle_below_5_deg": {
+          "faces": 70,
+          "fraction": 0.08083140877598152,
+          "area_fraction": 0.03718171955260008
+        },
+        "angle_below_1_deg": {
+          "faces": 10,
+          "fraction": 0.011547344110854504,
+          "area_fraction": 0.0004821126826903966
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 558,
+          "fraction": 0.6443418013856813,
+          "area_fraction": 0.8527639381323333
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 729,
+          "faces": 1454,
+          "bad_faces": 480,
+          "min_q": 0.002290836606638848,
+          "min_angle_deg": 0.07670061495998913,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 435,
+          "faces": 866,
+          "bad_faces": 308,
+          "min_q": 0.004024011151882635,
+          "min_angle_deg": 0.13473018395759215,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.01635798992993326,
+            "p95_mm": 0.004474828519686122,
+            "rms_mm": 0.0019654069868484747,
+            "samples": 1301
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.030717343123957637,
+            "p95_mm": 0.005772980118377496,
+            "rms_mm": 0.002889802254112968,
+            "samples": 2183
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.026189622496743545,
+            "p95_mm": 0.004565611167126581,
+            "rms_mm": 0.0021098399700987644,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.028285684529686342,
+            "p95_mm": 0.0046502413425137815,
+            "rms_mm": 0.0022138363300924597,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.028285684529686342,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 177.39350000010745
+      },
+      "source_quality": {
+        "total_faces": 1454,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 172,
+          "fraction": 0.11829436038514443,
+          "area_fraction": 0.04348161938251871
+        },
+        "angle_below_5_deg": {
+          "faces": 108,
+          "fraction": 0.07427785419532325,
+          "area_fraction": 0.03723934197470214
+        },
+        "angle_below_1_deg": {
+          "faces": 21,
+          "fraction": 0.014442916093535076,
+          "area_fraction": 0.0005943011228708636
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 974,
+          "fraction": 0.6698762035763411,
+          "area_fraction": 0.8641615879490206
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 0,
+        "external_faces_retained": 0,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7596,
+          "max_mm": 0.02574141174300073,
+          "mean_mm": 0.0006743204640267397,
+          "p95_mm": 0.00354712274544756,
+          "over_0_01_mm": 40,
+          "normal_p95_deg": 3.103205696527917,
+          "normal_max_deg": 91.630880302806
+        },
+        "candidate_to_source": {
+          "samples": 7633,
+          "max_mm": 0.025666320726878467,
+          "mean_mm": 0.0006609907028209262,
+          "p95_mm": 0.0034317300379509857,
+          "over_0_01_mm": 34,
+          "normal_p95_deg": 3.103205696527917,
+          "normal_max_deg": 93.7311778651132
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 274.84980000008363,
+      "maintenance_plus_audit_ms": 1683.135763349128
+    },
+    {
+      "case": "crossing_e1",
+      "route": "development_crossing_slab_01",
+      "event": "e1",
+      "method": "spatial",
+      "round": 0,
+      "maintenance_wall_ms": 1412.5010212883353,
+      "active_fraction": 0.4656121045392022,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1208,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 114,
+          "fraction": 0.09437086092715231,
+          "area_fraction": 0.042891749728502154
+        },
+        "angle_below_5_deg": {
+          "faces": 71,
+          "fraction": 0.058774834437086095,
+          "area_fraction": 0.03711279693981039
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.009105960264900662,
+          "area_fraction": 0.0005156614773320331
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 828,
+          "fraction": 0.6854304635761589,
+          "area_fraction": 0.8582404496027257
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 729,
+          "faces": 1454,
+          "bad_faces": 480,
+          "min_q": 0.002290836606638848,
+          "min_angle_deg": 0.07670061495998913,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 606,
+          "faces": 1208,
+          "bad_faces": 380,
+          "min_q": 0.004024068439077438,
+          "min_angle_deg": 0.1347321048260415,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.0064884469039492845,
+            "p95_mm": 0.0019405453611347552,
+            "rms_mm": 0.0008740845417488333,
+            "samples": 1814
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.009493911744691507,
+            "p95_mm": 0.0036504754291319854,
+            "rms_mm": 0.0014169049146169773,
+            "samples": 2183
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.02296524606490325,
+            "p95_mm": 0.003092447186516059,
+            "rms_mm": 0.0016214907737939364,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.022827833521279785,
+            "p95_mm": 0.003055529271189838,
+            "rms_mm": 0.0016996155965625303,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.02296524606490325,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 184.74040000000969
+      },
+      "source_quality": {
+        "total_faces": 1454,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 172,
+          "fraction": 0.11829436038514443,
+          "area_fraction": 0.04348161938251871
+        },
+        "angle_below_5_deg": {
+          "faces": 108,
+          "fraction": 0.07427785419532325,
+          "area_fraction": 0.03723934197470214
+        },
+        "angle_below_1_deg": {
+          "faces": 21,
+          "fraction": 0.014442916093535076,
+          "area_fraction": 0.0005943011228708636
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 974,
+          "fraction": 0.6698762035763411,
+          "area_fraction": 0.8641615879490206
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 777,
+        "external_faces_retained": 777,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7596,
+          "max_mm": 0.005454579127088422,
+          "mean_mm": 2.0212143919866712e-05,
+          "p95_mm": 0.00011319304606189188,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.07944324135431065,
+          "normal_max_deg": 8.38175253871331
+        },
+        "candidate_to_source": {
+          "samples": 7604,
+          "max_mm": 0.004785376762722807,
+          "mean_mm": 2.2962045680670324e-05,
+          "p95_mm": 0.00011766050952154916,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.08143557944363727,
+          "normal_max_deg": 8.38175253871331
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 306.5848999995069,
+      "maintenance_plus_audit_ms": 1719.0859212878422
+    },
+    {
+      "case": "crossing_e1",
+      "route": "development_crossing_slab_01",
+      "event": "e1",
+      "method": "boolean",
+      "round": 0,
+      "maintenance_wall_ms": 1412.4634973704815,
+      "active_fraction": 0.35557083906464926,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1238,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 103,
+          "fraction": 0.08319870759289176,
+          "area_fraction": 0.041869765490432254
+        },
+        "angle_below_5_deg": {
+          "faces": 62,
+          "fraction": 0.050080775444264945,
+          "area_fraction": 0.036548019981442005
+        },
+        "angle_below_1_deg": {
+          "faces": 7,
+          "fraction": 0.005654281098546042,
+          "area_fraction": 0.00038202797368380053
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 880,
+          "fraction": 0.7108239095315024,
+          "area_fraction": 0.8669632607407807
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 729,
+          "faces": 1454,
+          "bad_faces": 480,
+          "min_q": 0.002290836606638848,
+          "min_angle_deg": 0.07670061495998913,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 621,
+          "faces": 1238,
+          "bad_faces": 358,
+          "min_q": 0.009797230411492252,
+          "min_angle_deg": 0.3416359916998879,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.007122656802894533,
+            "p95_mm": 0.0018747260365351995,
+            "rms_mm": 0.0008922954374535976,
+            "samples": 1859
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.009801370426898838,
+            "p95_mm": 0.0037341177086899773,
+            "rms_mm": 0.001480196643801953,
+            "samples": 2183
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.021266736594938003,
+            "p95_mm": 0.003121508867963755,
+            "rms_mm": 0.001628212169351607,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.022827833521279785,
+            "p95_mm": 0.0030116610818113495,
+            "rms_mm": 0.0016872829120758786,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.022827833521279785,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 176.7667000003712
+      },
+      "source_quality": {
+        "total_faces": 1454,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 172,
+          "fraction": 0.11829436038514443,
+          "area_fraction": 0.04348161938251871
+        },
+        "angle_below_5_deg": {
+          "faces": 108,
+          "fraction": 0.07427785419532325,
+          "area_fraction": 0.03723934197470214
+        },
+        "angle_below_1_deg": {
+          "faces": 21,
+          "fraction": 0.014442916093535076,
+          "area_fraction": 0.0005943011228708636
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 974,
+          "fraction": 0.6698762035763411,
+          "area_fraction": 0.8641615879490206
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 937,
+        "external_faces_retained": 937,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7596,
+          "max_mm": 0.0010128796271714733,
+          "mean_mm": 2.2514972558192416e-06,
+          "p95_mm": 4.440892098500626e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.4787793334710982e-06,
+          "normal_max_deg": 8.303849278076427
+        },
+        "candidate_to_source": {
+          "samples": 7627,
+          "max_mm": 0.00152012340705448,
+          "mean_mm": 2.862874976274936e-06,
+          "p95_mm": 4.440892098500626e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.4787793334710982e-06,
+          "normal_max_deg": 8.303849278076427
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 279.1692000000694,
+      "maintenance_plus_audit_ms": 1691.6326973705509
+    },
+    {
+      "case": "crossing_e2",
+      "route": "development_crossing_slab_01",
+      "event": "e2",
+      "method": "full",
+      "round": 0,
+      "maintenance_wall_ms": 1815.6702350825071,
+      "active_fraction": null,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1642,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 19,
+          "fraction": 0.011571254567600487,
+          "area_fraction": 0.0021306830292307254
+        },
+        "angle_below_5_deg": {
+          "faces": 3,
+          "fraction": 0.0018270401948842874,
+          "area_fraction": 0.00024182975131568414
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1293,
+          "fraction": 0.7874543239951279,
+          "area_fraction": 0.9102816672257711
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 864,
+          "faces": 1724,
+          "bad_faces": 478,
+          "min_q": 0.0005665945714187399,
+          "min_angle_deg": 0.018743017565459055,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 823,
+          "faces": 1642,
+          "bad_faces": 349,
+          "min_q": 0.08141860445487184,
+          "min_angle_deg": 3.0458496994522815,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.02084715875901334,
+            "p95_mm": 0.008335783223020076,
+            "rms_mm": 0.0033578295403930473,
+            "samples": 2465
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.04121214289455847,
+            "p95_mm": 0.01242929847497976,
+            "rms_mm": 0.005455002415800827,
+            "samples": 2588
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.03319146625256186,
+            "p95_mm": 0.011299177324103604,
+            "rms_mm": 0.004483651769081742,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.053316860704223125,
+            "p95_mm": 0.01226838858428599,
+            "rms_mm": 0.005102208686205006,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.053316860704223125,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 206.59820000037143
+      },
+      "source_quality": {
+        "total_faces": 1724,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 92,
+          "fraction": 0.05336426914153132,
+          "area_fraction": 0.005222743706671391
+        },
+        "angle_below_5_deg": {
+          "faces": 42,
+          "fraction": 0.024361948955916472,
+          "area_fraction": 0.0005822434297419176
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0063805104408352666,
+          "area_fraction": 3.642322815840633e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1246,
+          "fraction": 0.722737819025522,
+          "area_fraction": 0.8919644317488797
+        }
+      },
+      "fixed_contract": null,
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7414,
+          "max_mm": 0.029659857140177368,
+          "mean_mm": 0.0008672664625469604,
+          "p95_mm": 0.004486577777433476,
+          "over_0_01_mm": 71,
+          "normal_p95_deg": 7.1074154130774,
+          "normal_max_deg": 74.52197269570472
+        },
+        "candidate_to_source": {
+          "samples": 7479,
+          "max_mm": 0.02033900429828573,
+          "mean_mm": 0.0007962942495560638,
+          "p95_mm": 0.004068289377271197,
+          "over_0_01_mm": 44,
+          "normal_p95_deg": 6.538539138485799,
+          "normal_max_deg": 78.13879217833266
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 358.1764000000476,
+      "maintenance_plus_audit_ms": 2173.8466350825547
+    },
+    {
+      "case": "crossing_e2",
+      "route": "development_crossing_slab_01",
+      "event": "e2",
+      "method": "global",
+      "round": 0,
+      "maintenance_wall_ms": 1412.2548224404454,
+      "active_fraction": 1.0,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1110,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 59,
+          "fraction": 0.05315315315315315,
+          "area_fraction": 0.009637168944386192
+        },
+        "angle_below_5_deg": {
+          "faces": 20,
+          "fraction": 0.018018018018018018,
+          "area_fraction": 0.0007945704023883609
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.0009009009009009009,
+          "area_fraction": 8.472401154104143e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 782,
+          "fraction": 0.7045045045045045,
+          "area_fraction": 0.8759260509700297
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 864,
+          "faces": 1724,
+          "bad_faces": 478,
+          "min_q": 0.0005665945714187399,
+          "min_angle_deg": 0.018743017565459055,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 557,
+          "faces": 1110,
+          "bad_faces": 328,
+          "min_q": 0.024793964703045224,
+          "min_angle_deg": 0.9123711606287394,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.01869136882729251,
+            "p95_mm": 0.004205592209542094,
+            "rms_mm": 0.001894400380088172,
+            "samples": 1667
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.027898742988726855,
+            "p95_mm": 0.005683818298642184,
+            "rms_mm": 0.0027989353352271215,
+            "samples": 2588
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.03234207911739997,
+            "p95_mm": 0.008442690699458523,
+            "rms_mm": 0.003498387895324799,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.037700965155412505,
+            "p95_mm": 0.009462046577261473,
+            "rms_mm": 0.003914302678633206,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.037700965155412505,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 187.6097000003938
+      },
+      "source_quality": {
+        "total_faces": 1724,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 92,
+          "fraction": 0.05336426914153132,
+          "area_fraction": 0.005222743706671391
+        },
+        "angle_below_5_deg": {
+          "faces": 42,
+          "fraction": 0.024361948955916472,
+          "area_fraction": 0.0005822434297419176
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0063805104408352666,
+          "area_fraction": 3.642322815840633e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1246,
+          "fraction": 0.722737819025522,
+          "area_fraction": 0.8919644317488797
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 0,
+        "external_faces_retained": 0,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7414,
+          "max_mm": 0.02707333879827953,
+          "mean_mm": 0.0005775776082997434,
+          "p95_mm": 0.0030036089988086075,
+          "over_0_01_mm": 31,
+          "normal_p95_deg": 3.406769197808968,
+          "normal_max_deg": 86.21548622244269
+        },
+        "candidate_to_source": {
+          "samples": 7459,
+          "max_mm": 0.02450035315249505,
+          "mean_mm": 0.0005524821783528773,
+          "p95_mm": 0.0029234847495279805,
+          "over_0_01_mm": 22,
+          "normal_p95_deg": 3.5977777928185932,
+          "normal_max_deg": 76.57903723456211
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 291.65310000007594,
+      "maintenance_plus_audit_ms": 1703.9079224405214
+    },
+    {
+      "case": "crossing_e2",
+      "route": "development_crossing_slab_01",
+      "event": "e2",
+      "method": "spatial",
+      "round": 0,
+      "maintenance_wall_ms": 1412.4041283503175,
+      "active_fraction": 0.2720417633410673,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1570,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 53,
+          "fraction": 0.03375796178343949,
+          "area_fraction": 0.004975345736294298
+        },
+        "angle_below_5_deg": {
+          "faces": 19,
+          "fraction": 0.012101910828025478,
+          "area_fraction": 0.0005324600044829108
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.0006369426751592356,
+          "area_fraction": 8.457701475703774e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1165,
+          "fraction": 0.7420382165605095,
+          "area_fraction": 0.8893122931114009
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 864,
+          "faces": 1724,
+          "bad_faces": 478,
+          "min_q": 0.0005665945714187399,
+          "min_angle_deg": 0.018743017565459055,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 787,
+          "faces": 1570,
+          "bad_faces": 405,
+          "min_q": 0.024802408691078897,
+          "min_angle_deg": 0.9124114849063841,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.006929615457590931,
+            "p95_mm": 0.00048778670154607745,
+            "rms_mm": 0.0006177421012626037,
+            "samples": 2357
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.010963117964847776,
+            "p95_mm": 0.00214558752718602,
+            "rms_mm": 0.001025875252888028,
+            "samples": 2588
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.024427260614208635,
+            "p95_mm": 0.007224768010726817,
+            "rms_mm": 0.00301545591285907,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.03235896526140055,
+            "p95_mm": 0.007616500988331941,
+            "rms_mm": 0.0032941558156702956,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.03235896526140055,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 183.73269999938202
+      },
+      "source_quality": {
+        "total_faces": 1724,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 92,
+          "fraction": 0.05336426914153132,
+          "area_fraction": 0.005222743706671391
+        },
+        "angle_below_5_deg": {
+          "faces": 42,
+          "fraction": 0.024361948955916472,
+          "area_fraction": 0.0005822434297419176
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0063805104408352666,
+          "area_fraction": 3.642322815840633e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1246,
+          "fraction": 0.722737819025522,
+          "area_fraction": 0.8919644317488797
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1255,
+        "external_faces_retained": 1255,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7414,
+          "max_mm": 0.003014759706286892,
+          "mean_mm": 9.743026295526926e-06,
+          "p95_mm": 1.7324104456327365e-05,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.026309190018866852,
+          "normal_max_deg": 2.331832934774961
+        },
+        "candidate_to_source": {
+          "samples": 7417,
+          "max_mm": 0.003503465387047497,
+          "mean_mm": 1.1836791103259917e-05,
+          "p95_mm": 1.8326332202464576e-05,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.026309190018866852,
+          "normal_max_deg": 2.33679864152735
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 278.71999999933905,
+      "maintenance_plus_audit_ms": 1691.1241283496565
+    },
+    {
+      "case": "crossing_e2",
+      "route": "development_crossing_slab_01",
+      "event": "e2",
+      "method": "boolean",
+      "round": 0,
+      "maintenance_wall_ms": 1414.6139724180102,
+      "active_fraction": 0.20359628770301624,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1602,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 53,
+          "fraction": 0.033083645443196,
+          "area_fraction": 0.004974562355285484
+        },
+        "angle_below_5_deg": {
+          "faces": 19,
+          "fraction": 0.011860174781523096,
+          "area_fraction": 0.000531834535406364
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.0006242197253433209,
+          "area_fraction": 8.457528256118179e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1199,
+          "fraction": 0.7484394506866417,
+          "area_fraction": 0.8928467237722233
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 864,
+          "faces": 1724,
+          "bad_faces": 478,
+          "min_q": 0.0005665945714187399,
+          "min_angle_deg": 0.018743017565459055,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 803,
+          "faces": 1602,
+          "bad_faces": 403,
+          "min_q": 0.024727106779196997,
+          "min_angle_deg": 0.9123532484806434,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.006481523474744844,
+            "p95_mm": 0.00022969254115365402,
+            "rms_mm": 0.0005823122324194307,
+            "samples": 2405
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.010914084979492525,
+            "p95_mm": 0.0020135714277829723,
+            "rms_mm": 0.000996298979203234,
+            "samples": 2588
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.023044169061612434,
+            "p95_mm": 0.006713722309893388,
+            "rms_mm": 0.0029338912696843314,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.03235896526140055,
+            "p95_mm": 0.007576804377291562,
+            "rms_mm": 0.0032835279739571645,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.03235896526140055,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 180.4667000005793
+      },
+      "source_quality": {
+        "total_faces": 1724,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 92,
+          "fraction": 0.05336426914153132,
+          "area_fraction": 0.005222743706671391
+        },
+        "angle_below_5_deg": {
+          "faces": 42,
+          "fraction": 0.024361948955916472,
+          "area_fraction": 0.0005822434297419176
+        },
+        "angle_below_1_deg": {
+          "faces": 11,
+          "fraction": 0.0063805104408352666,
+          "area_fraction": 3.642322815840633e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1246,
+          "fraction": 0.722737819025522,
+          "area_fraction": 0.8919644317488797
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1373,
+        "external_faces_retained": 1373,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7414,
+          "max_mm": 7.325372947253191e-05,
+          "mean_mm": 5.0134918682777574e-08,
+          "p95_mm": 4.440892098500626e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.4787793334710982e-06,
+          "normal_max_deg": 0.04320380065345259
+        },
+        "candidate_to_source": {
+          "samples": 7441,
+          "max_mm": 6.892253006839155e-05,
+          "mean_mm": 5.5371374706138645e-08,
+          "p95_mm": 4.440892098500626e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.4787793334710982e-06,
+          "normal_max_deg": 0.04320380065345259
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 274.31179999985034,
+      "maintenance_plus_audit_ms": 1688.9257724178606
+    },
+    {
+      "case": "crossing_e3",
+      "route": "development_crossing_slab_01",
+      "event": "e3",
+      "method": "full",
+      "round": 0,
+      "maintenance_wall_ms": 1810.6639618054032,
+      "active_fraction": null,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 2048,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 14,
+          "fraction": 0.0068359375,
+          "area_fraction": 0.0022614893635982125
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1641,
+          "fraction": 0.80126953125,
+          "area_fraction": 0.9104419972138623
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 1089,
+          "faces": 2174,
+          "bad_faces": 714,
+          "min_q": 0.0013938425228616949,
+          "min_angle_deg": 0.047375644093404445,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 1026,
+          "faces": 2048,
+          "bad_faces": 407,
+          "min_q": 0.1949256838221579,
+          "min_angle_deg": 7.844022541742693,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.017042289049975772,
+            "p95_mm": 0.00746551738188004,
+            "rms_mm": 0.0030847237295686426,
+            "samples": 3074
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.033655175298558875,
+            "p95_mm": 0.010371128668737403,
+            "rms_mm": 0.004864659728029318,
+            "samples": 3263
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.041338589995962405,
+            "p95_mm": 0.013709863916912878,
+            "rms_mm": 0.005619891830803666,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.061493080467485105,
+            "p95_mm": 0.01591639061534066,
+            "rms_mm": 0.0065170962200797105,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.061493080467485105,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 201.73010000053182
+      },
+      "source_quality": {
+        "total_faces": 2174,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 293,
+          "fraction": 0.13477460901563937,
+          "area_fraction": 0.03206436744874152
+        },
+        "angle_below_5_deg": {
+          "faces": 176,
+          "fraction": 0.08095676172953081,
+          "area_fraction": 0.01678962159813888
+        },
+        "angle_below_1_deg": {
+          "faces": 44,
+          "fraction": 0.020239190432382703,
+          "area_fraction": 0.0006324935012188425
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1460,
+          "fraction": 0.671573137074517,
+          "area_fraction": 0.8823190817796841
+        }
+      },
+      "fixed_contract": null,
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7265,
+          "max_mm": 0.030506754123549924,
+          "mean_mm": 0.0008413857142566062,
+          "p95_mm": 0.004183403080350974,
+          "over_0_01_mm": 49,
+          "normal_p95_deg": 8.038539230466585,
+          "normal_max_deg": 82.88636039546518
+        },
+        "candidate_to_source": {
+          "samples": 7348,
+          "max_mm": 0.017629201815737582,
+          "mean_mm": 0.0008275784692058753,
+          "p95_mm": 0.004287183613133509,
+          "over_0_01_mm": 31,
+          "normal_p95_deg": 7.57695063402187,
+          "normal_max_deg": 82.88636039546518
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 303.2986999996865,
+      "maintenance_plus_audit_ms": 2113.9626618050897
+    },
+    {
+      "case": "crossing_e3",
+      "route": "development_crossing_slab_01",
+      "event": "e3",
+      "method": "global",
+      "round": 0,
+      "maintenance_wall_ms": 1408.8713908568025,
+      "active_fraction": 1.0,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1458,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 219,
+          "fraction": 0.15020576131687244,
+          "area_fraction": 0.03481829976893974
+        },
+        "angle_below_5_deg": {
+          "faces": 123,
+          "fraction": 0.08436213991769548,
+          "area_fraction": 0.016484617908646686
+        },
+        "angle_below_1_deg": {
+          "faces": 19,
+          "fraction": 0.013031550068587106,
+          "area_fraction": 0.0006642630266435724
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 928,
+          "fraction": 0.6364883401920439,
+          "area_fraction": 0.8661280823614608
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 1089,
+          "faces": 2174,
+          "bad_faces": 714,
+          "min_q": 0.0013938425228616949,
+          "min_angle_deg": 0.047375644093404445,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 731,
+          "faces": 1458,
+          "bad_faces": 530,
+          "min_q": 0.0035080827189562518,
+          "min_angle_deg": 0.15247174349130777,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.021043693617782883,
+            "p95_mm": 0.0051572876282310375,
+            "rms_mm": 0.0022104216263883645,
+            "samples": 2189
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.02923658238580395,
+            "p95_mm": 0.006526286671345494,
+            "rms_mm": 0.0031745776113392965,
+            "samples": 3263
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.03412845275680076,
+            "p95_mm": 0.01306322261948174,
+            "rms_mm": 0.005274604811372436,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.04366644732600001,
+            "p95_mm": 0.014061104842789135,
+            "rms_mm": 0.0059303547823004055,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.04366644732600001,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 195.1374999998734
+      },
+      "source_quality": {
+        "total_faces": 2174,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 293,
+          "fraction": 0.13477460901563937,
+          "area_fraction": 0.03206436744874152
+        },
+        "angle_below_5_deg": {
+          "faces": 176,
+          "fraction": 0.08095676172953081,
+          "area_fraction": 0.01678962159813888
+        },
+        "angle_below_1_deg": {
+          "faces": 44,
+          "fraction": 0.020239190432382703,
+          "area_fraction": 0.0006324935012188425
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1460,
+          "fraction": 0.671573137074517,
+          "area_fraction": 0.8823190817796841
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 0,
+        "external_faces_retained": 0,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7265,
+          "max_mm": 0.02788333491329046,
+          "mean_mm": 0.0006624097603295501,
+          "p95_mm": 0.003508699811873309,
+          "over_0_01_mm": 39,
+          "normal_p95_deg": 4.23822312170382,
+          "normal_max_deg": 71.41107362761954
+        },
+        "candidate_to_source": {
+          "samples": 7295,
+          "max_mm": 0.023256647894403484,
+          "mean_mm": 0.0006526841769565102,
+          "p95_mm": 0.003585315457548792,
+          "over_0_01_mm": 39,
+          "normal_p95_deg": 4.13275253377854,
+          "normal_max_deg": 69.14058227292458
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 286.0646999997698,
+      "maintenance_plus_audit_ms": 1694.9360908565723
+    },
+    {
+      "case": "crossing_e3",
+      "route": "development_crossing_slab_01",
+      "event": "e3",
+      "method": "spatial",
+      "round": 0,
+      "maintenance_wall_ms": 1414.5694496110082,
+      "active_fraction": 0.468721251149954,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1872,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 215,
+          "fraction": 0.11485042735042734,
+          "area_fraction": 0.03215699091389486
+        },
+        "angle_below_5_deg": {
+          "faces": 123,
+          "fraction": 0.06570512820512821,
+          "area_fraction": 0.016751407354268825
+        },
+        "angle_below_1_deg": {
+          "faces": 18,
+          "fraction": 0.009615384615384616,
+          "area_fraction": 0.0006357453982882049
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1253,
+          "fraction": 0.6693376068376068,
+          "area_fraction": 0.864723695886732
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 1089,
+          "faces": 2174,
+          "bad_faces": 714,
+          "min_q": 0.0013938425228616949,
+          "min_angle_deg": 0.047375644093404445,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 938,
+          "faces": 1872,
+          "bad_faces": 619,
+          "min_q": 0.0035083917271258587,
+          "min_angle_deg": 0.1524851501538062,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.020543438879353337,
+            "p95_mm": 0.0017764336455410778,
+            "rms_mm": 0.00129032104554812,
+            "samples": 2810
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.02613422302796891,
+            "p95_mm": 0.0030710041709806346,
+            "rms_mm": 0.0018747777447673884,
+            "samples": 3263
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.0350841162030927,
+            "p95_mm": 0.011732422341825933,
+            "rms_mm": 0.00482286370540513,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.041966650592338894,
+            "p95_mm": 0.012556883933668429,
+            "rms_mm": 0.005344444283415022,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.041966650592338894,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 212.12650000052236
+      },
+      "source_quality": {
+        "total_faces": 2174,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 293,
+          "fraction": 0.13477460901563937,
+          "area_fraction": 0.03206436744874152
+        },
+        "angle_below_5_deg": {
+          "faces": 176,
+          "fraction": 0.08095676172953081,
+          "area_fraction": 0.01678962159813888
+        },
+        "angle_below_1_deg": {
+          "faces": 44,
+          "fraction": 0.020239190432382703,
+          "area_fraction": 0.0006324935012188425
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1460,
+          "fraction": 0.671573137074517,
+          "area_fraction": 0.8823190817796841
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1155,
+        "external_faces_retained": 1155,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7265,
+          "max_mm": 0.007400692854741554,
+          "mean_mm": 2.6216313955411454e-05,
+          "p95_mm": 0.00016041550605203078,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.13919131385805647,
+          "normal_max_deg": 10.611358079386198
+        },
+        "candidate_to_source": {
+          "samples": 7234,
+          "max_mm": 0.008261650428822861,
+          "mean_mm": 2.60594131994669e-05,
+          "p95_mm": 0.00014944333625106085,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 0.15044736569502393,
+          "normal_max_deg": 4.626818722411786
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 309.6654999999373,
+      "maintenance_plus_audit_ms": 1724.2349496109455
+    },
+    {
+      "case": "crossing_e3",
+      "route": "development_crossing_slab_01",
+      "event": "e3",
+      "method": "boolean",
+      "round": 0,
+      "maintenance_wall_ms": 1412.5145003199577,
+      "active_fraction": 0.327966881324747,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 1978,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 205,
+          "fraction": 0.10364004044489383,
+          "area_fraction": 0.030298887459750085
+        },
+        "angle_below_5_deg": {
+          "faces": 115,
+          "fraction": 0.05813953488372093,
+          "area_fraction": 0.016146149634073875
+        },
+        "angle_below_1_deg": {
+          "faces": 19,
+          "fraction": 0.009605662285136502,
+          "area_fraction": 0.0006454977375620093
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1384,
+          "fraction": 0.6996966632962589,
+          "area_fraction": 0.882655288049708
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 1089,
+          "faces": 2174,
+          "bad_faces": 714,
+          "min_q": 0.0013938425228616949,
+          "min_angle_deg": 0.047375644093404445,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 991,
+          "faces": 1978,
+          "bad_faces": 594,
+          "min_q": 0.0035083643767754736,
+          "min_angle_deg": 0.1524839571684108,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.012763633900423435,
+            "p95_mm": 0.0012258833249704172,
+            "rms_mm": 0.0008319192571363425,
+            "samples": 2969
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.02658155820815821,
+            "p95_mm": 0.001822849393194837,
+            "rms_mm": 0.0016233947842770459,
+            "samples": 3263
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.03144284273148039,
+            "p95_mm": 0.010472699669640394,
+            "rms_mm": 0.0043344823936824145,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.041966650592338894,
+            "p95_mm": 0.011567459463779628,
+            "rms_mm": 0.0048301600830372455,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.041966650592338894,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 203.23060000009718
+      },
+      "source_quality": {
+        "total_faces": 2174,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 293,
+          "fraction": 0.13477460901563937,
+          "area_fraction": 0.03206436744874152
+        },
+        "angle_below_5_deg": {
+          "faces": 176,
+          "fraction": 0.08095676172953081,
+          "area_fraction": 0.01678962159813888
+        },
+        "angle_below_1_deg": {
+          "faces": 44,
+          "fraction": 0.020239190432382703,
+          "area_fraction": 0.0006324935012188425
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1460,
+          "fraction": 0.671573137074517,
+          "area_fraction": 0.8823190817796841
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 1461,
+        "external_faces_retained": 1461,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7265,
+          "max_mm": 0.004546235238331019,
+          "mean_mm": 1.252978486270893e-06,
+          "p95_mm": 4.440892098500626e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.2074182697257333e-06,
+          "normal_max_deg": 4.0895384689990975
+        },
+        "candidate_to_source": {
+          "samples": 7295,
+          "max_mm": 0.00605337602593478,
+          "mean_mm": 3.2295911379021505e-06,
+          "p95_mm": 4.440892098500626e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.2074182697257333e-06,
+          "normal_max_deg": 4.0895384689990975
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 299.08740000064427,
+      "maintenance_plus_audit_ms": 1711.601900320602
+    },
+    {
+      "case": "stop_resume_e0",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e0",
+      "method": "full",
+      "round": 0,
+      "maintenance_wall_ms": 2010.1102655753493,
+      "active_fraction": null,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 5092,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5068,
+          "fraction": 0.99528672427337,
+          "area_fraction": 0.997081833078881
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2692,
+          "faces": 5380,
+          "bad_faces": 135,
+          "min_q": 0.0016388381174290295,
+          "min_angle_deg": 0.05421236636146063,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 2548,
+          "faces": 5092,
+          "bad_faces": 24,
+          "min_q": 0.32904364545943604,
+          "min_angle_deg": 13.472651478921081,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.013378796192785258,
+            "p95_mm": 0.0040731143424018856,
+            "rms_mm": 0.0023613181473730064,
+            "samples": 7640
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.021192675587585988,
+            "p95_mm": 0.005358047878647384,
+            "rms_mm": 0.0030767673356713278,
+            "samples": 8072
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.011525984147857788,
+            "p95_mm": 0.005486030528105617,
+            "rms_mm": 0.003996291112885985,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.01320255305728405,
+            "p95_mm": 0.005485306912410611,
+            "rms_mm": 0.004004973683368029,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.01320255305728405,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 391.1916000006386
+      },
+      "source_quality": {
+        "total_faces": 5380,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 61,
+          "fraction": 0.01133828996282528,
+          "area_fraction": 0.0004149032405738012
+        },
+        "angle_below_5_deg": {
+          "faces": 34,
+          "fraction": 0.006319702602230483,
+          "area_fraction": 0.00011125775324571954
+        },
+        "angle_below_1_deg": {
+          "faces": 15,
+          "fraction": 0.0027881040892193307,
+          "area_fraction": 6.066530789222213e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5245,
+          "fraction": 0.974907063197026,
+          "area_fraction": 0.9981587950012046
+        }
+      },
+      "fixed_contract": null,
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 8083,
+          "max_mm": 0.0063515885776138075,
+          "mean_mm": 0.002089594615165442,
+          "p95_mm": 0.0039242383805455725,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 3.4112487044902364,
+          "normal_max_deg": 6.242949783300604
+        },
+        "candidate_to_source": {
+          "samples": 8102,
+          "max_mm": 0.006351334338075737,
+          "mean_mm": 0.00209939836095502,
+          "p95_mm": 0.003860246075651448,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 3.39077480020881,
+          "normal_max_deg": 5.751074509262092
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 564.8088999996617,
+      "maintenance_plus_audit_ms": 2574.919165575011
+    },
+    {
+      "case": "stop_resume_e0",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e0",
+      "method": "global",
+      "round": 0,
+      "maintenance_wall_ms": 1412.7550078555942,
+      "active_fraction": 1.0,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 3310,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 18,
+          "fraction": 0.005438066465256798,
+          "area_fraction": 0.00014039540746369267
+        },
+        "angle_below_5_deg": {
+          "faces": 11,
+          "fraction": 0.003323262839879154,
+          "area_fraction": 6.393182936441508e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.00030211480362537764,
+          "area_fraction": 2.304507349669489e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 3268,
+          "fraction": 0.9873111782477342,
+          "area_fraction": 0.9974016066865564
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2692,
+          "faces": 5380,
+          "bad_faces": 135,
+          "min_q": 0.0016388381174290295,
+          "min_angle_deg": 0.05421236636146063,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 1657,
+          "faces": 3310,
+          "bad_faces": 42,
+          "min_q": 0.016229822306483746,
+          "min_angle_deg": 0.5369162812968868,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.00939989811573463,
+            "p95_mm": 0.00522609613262982,
+            "rms_mm": 0.00274701470868455,
+            "samples": 4967
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.011334542130410593,
+            "p95_mm": 0.006409324211105902,
+            "rms_mm": 0.0033069406846044,
+            "samples": 8072
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.0102545081098703,
+            "p95_mm": 0.0070722321248401195,
+            "rms_mm": 0.004560170141065466,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.01064841567576143,
+            "p95_mm": 0.007148760444044057,
+            "rms_mm": 0.004538933064223281,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.01064841567576143,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 374.59669999952894
+      },
+      "source_quality": {
+        "total_faces": 5380,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 61,
+          "fraction": 0.01133828996282528,
+          "area_fraction": 0.0004149032405738012
+        },
+        "angle_below_5_deg": {
+          "faces": 34,
+          "fraction": 0.006319702602230483,
+          "area_fraction": 0.00011125775324571954
+        },
+        "angle_below_1_deg": {
+          "faces": 15,
+          "fraction": 0.0027881040892193307,
+          "area_fraction": 6.066530789222213e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5245,
+          "fraction": 0.974907063197026,
+          "area_fraction": 0.9981587950012046
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 0,
+        "external_faces_retained": 0,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 8083,
+          "max_mm": 0.008657410195165197,
+          "mean_mm": 0.002468256932724867,
+          "p95_mm": 0.005572802689807642,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 3.56741164584703,
+          "normal_max_deg": 5.890555748470877
+        },
+        "candidate_to_source": {
+          "samples": 8091,
+          "max_mm": 0.00878719208888762,
+          "mean_mm": 0.0024840131904230738,
+          "p95_mm": 0.005591455489966125,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 3.726564360011791,
+          "normal_max_deg": 6.417671932974446
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 502.9210000002422,
+      "maintenance_plus_audit_ms": 1915.6760078558364
+    },
+    {
+      "case": "stop_resume_e0",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e0",
+      "method": "spatial",
+      "round": 0,
+      "maintenance_wall_ms": 1512.051404453814,
+      "active_fraction": 0.09386617100371747,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 5180,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 17,
+          "fraction": 0.003281853281853282,
+          "area_fraction": 0.0001602467209798536
+        },
+        "angle_below_5_deg": {
+          "faces": 11,
+          "fraction": 0.0021235521235521237,
+          "area_fraction": 5.792706040571769e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.00019305019305019305,
+          "area_fraction": 2.2943495870993127e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5144,
+          "fraction": 0.993050193050193,
+          "area_fraction": 0.998942004313087
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2692,
+          "faces": 5380,
+          "bad_faces": 135,
+          "min_q": 0.0016388381174290295,
+          "min_angle_deg": 0.05421236636146063,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 2592,
+          "faces": 5180,
+          "bad_faces": 36,
+          "min_q": 0.016243737744187768,
+          "min_angle_deg": 0.5373767862535823,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.011349187833188737,
+            "p95_mm": 1.309158989319443e-05,
+            "rms_mm": 0.0005306530461514102,
+            "samples": 7772
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.013359883319064663,
+            "p95_mm": 0.0013299823324763684,
+            "rms_mm": 0.0009670702746415215,
+            "samples": 8072
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.008920858840032271,
+            "p95_mm": 0.0025966718648387016,
+            "rms_mm": 0.001963111870795923,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.009228081154387745,
+            "p95_mm": 0.002570140096866862,
+            "rms_mm": 0.0019420772043446792,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.009228081154387745,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 365.5568000003768
+      },
+      "source_quality": {
+        "total_faces": 5380,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 61,
+          "fraction": 0.01133828996282528,
+          "area_fraction": 0.0004149032405738012
+        },
+        "angle_below_5_deg": {
+          "faces": 34,
+          "fraction": 0.006319702602230483,
+          "area_fraction": 0.00011125775324571954
+        },
+        "angle_below_1_deg": {
+          "faces": 15,
+          "fraction": 0.0027881040892193307,
+          "area_fraction": 6.066530789222213e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5245,
+          "fraction": 0.974907063197026,
+          "area_fraction": 0.9981587950012046
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 4875,
+        "external_faces_retained": 4875,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 8083,
+          "max_mm": 0.0055768407264717035,
+          "mean_mm": 5.6922463307453574e-05,
+          "p95_mm": 4.996003610813204e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.7075472925031877e-06,
+          "normal_max_deg": 4.1928502797299405
+        },
+        "candidate_to_source": {
+          "samples": 8116,
+          "max_mm": 0.005844547172578248,
+          "mean_mm": 4.953443486455515e-05,
+          "p95_mm": 4.996003610813204e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.7075472925031877e-06,
+          "normal_max_deg": 4.489320228377832
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 523.6893000001146,
+      "maintenance_plus_audit_ms": 2035.7407044539286
+    },
+    {
+      "case": "stop_resume_e0",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e0",
+      "method": "boolean",
+      "round": 0,
+      "maintenance_wall_ms": 1408.5542615503073,
+      "active_fraction": 0.05985130111524164,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 5230,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 14,
+          "fraction": 0.0026768642447418736,
+          "area_fraction": 9.422006495690174e-05
+        },
+        "angle_below_5_deg": {
+          "faces": 11,
+          "fraction": 0.002103250478011472,
+          "area_fraction": 5.8955845742049636e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.00019120458891013384,
+          "area_fraction": 2.2656211801816226e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5194,
+          "fraction": 0.9931166347992352,
+          "area_fraction": 0.999052097062162
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2692,
+          "faces": 5380,
+          "bad_faces": 135,
+          "min_q": 0.0016388381174290295,
+          "min_angle_deg": 0.05421236636146063,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 2617,
+          "faces": 5230,
+          "bad_faces": 36,
+          "min_q": 0.016304784140938847,
+          "min_angle_deg": 0.5393971451280826,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.01066128467094756,
+            "p95_mm": 4.996003610813204e-16,
+            "rms_mm": 0.00045227324477850237,
+            "samples": 7847
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.012278539927166496,
+            "p95_mm": 0.00012998584545603057,
+            "rms_mm": 0.0008179677288194329,
+            "samples": 8072
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.009019774552038036,
+            "p95_mm": 0.002496983833263305,
+            "rms_mm": 0.0018841860000172125,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.008653075544641557,
+            "p95_mm": 0.0024741187985996963,
+            "rms_mm": 0.0018574726538245169,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.009019774552038036,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 379.6615999999631
+      },
+      "source_quality": {
+        "total_faces": 5380,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 61,
+          "fraction": 0.01133828996282528,
+          "area_fraction": 0.0004149032405738012
+        },
+        "angle_below_5_deg": {
+          "faces": 34,
+          "fraction": 0.006319702602230483,
+          "area_fraction": 0.00011125775324571954
+        },
+        "angle_below_1_deg": {
+          "faces": 15,
+          "fraction": 0.0027881040892193307,
+          "area_fraction": 6.066530789222213e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5245,
+          "fraction": 0.974907063197026,
+          "area_fraction": 0.9981587950012046
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 5058,
+        "external_faces_retained": 5058,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 8083,
+          "max_mm": 9.768619506460576e-05,
+          "mean_mm": 2.8515424232182068e-08,
+          "p95_mm": 4.611102534756203e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.4787793334710982e-06,
+          "normal_max_deg": 0.13952671333787958
+        },
+        "candidate_to_source": {
+          "samples": 8101,
+          "max_mm": 3.294080851804728e-05,
+          "mean_mm": 4.066264569954218e-09,
+          "p95_mm": 4.710277376051325e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.4787793334710982e-06,
+          "normal_max_deg": 0.6318237540397571
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 542.6837000004525,
+      "maintenance_plus_audit_ms": 1951.2379615507598
+    },
+    {
+      "case": "stop_resume_e1",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e1",
+      "method": "full",
+      "round": 0,
+      "maintenance_wall_ms": 2010.8691975474358,
+      "active_fraction": null,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 5172,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5140,
+          "fraction": 0.9938128383604021,
+          "area_fraction": 0.9962247847950452
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2745,
+          "faces": 5486,
+          "bad_faces": 217,
+          "min_q": 0.0034354703406096823,
+          "min_angle_deg": 0.11364493774802417,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 2588,
+          "faces": 5172,
+          "bad_faces": 32,
+          "min_q": 0.33694143010970895,
+          "min_angle_deg": 14.49000398195426,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.012472252669451608,
+            "p95_mm": 0.004288662964661461,
+            "rms_mm": 0.002362544835950181,
+            "samples": 7760
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.015390459228250762,
+            "p95_mm": 0.00569657034500584,
+            "rms_mm": 0.0031699985241439707,
+            "samples": 8231
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.014867851902685181,
+            "p95_mm": 0.007602749941266939,
+            "rms_mm": 0.0059614359233840985,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.015260826719381051,
+            "p95_mm": 0.00759336817655768,
+            "rms_mm": 0.005928422514932005,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.015260826719381051,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 378.62679999943794
+      },
+      "source_quality": {
+        "total_faces": 5486,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 125,
+          "fraction": 0.022785271600437477,
+          "area_fraction": 0.004734178345578202
+        },
+        "angle_below_5_deg": {
+          "faces": 67,
+          "fraction": 0.012212905577834488,
+          "area_fraction": 0.0010323867462338915
+        },
+        "angle_below_1_deg": {
+          "faces": 20,
+          "fraction": 0.0036456434560699965,
+          "area_fraction": 2.1760567010535094e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5269,
+          "fraction": 0.9604447685016405,
+          "area_fraction": 0.9909602768477722
+        }
+      },
+      "fixed_contract": null,
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 8045,
+          "max_mm": 0.00682906994606554,
+          "mean_mm": 0.00203422547360447,
+          "p95_mm": 0.004055985414830049,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 3.7469164411228184,
+          "normal_max_deg": 7.157762903859012
+        },
+        "candidate_to_source": {
+          "samples": 8047,
+          "max_mm": 0.006960667153209873,
+          "mean_mm": 0.002066848247750268,
+          "p95_mm": 0.0040347061879137365,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 3.753959372045823,
+          "normal_max_deg": 6.514726949046388
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 512.6152000002548,
+      "maintenance_plus_audit_ms": 2523.4843975476906
+    },
+    {
+      "case": "stop_resume_e1",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e1",
+      "method": "global",
+      "round": 0,
+      "maintenance_wall_ms": 1412.2348204255104,
+      "active_fraction": 1.0,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 3192,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 70,
+          "fraction": 0.021929824561403508,
+          "area_fraction": 0.0037635103315911494
+        },
+        "angle_below_5_deg": {
+          "faces": 30,
+          "fraction": 0.009398496240601503,
+          "area_fraction": 0.0008756176128370929
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 3065,
+          "fraction": 0.9602130325814536,
+          "area_fraction": 0.9916321409245826
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2745,
+          "faces": 5486,
+          "bad_faces": 217,
+          "min_q": 0.0034354703406096823,
+          "min_angle_deg": 0.11364493774802417,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 1598,
+          "faces": 3192,
+          "bad_faces": 127,
+          "min_q": 0.03174944153144604,
+          "min_angle_deg": 1.0508126583841537,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.008627370274316235,
+            "p95_mm": 0.004899953829963204,
+            "rms_mm": 0.0024470356239169296,
+            "samples": 4790
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.015314538379781093,
+            "p95_mm": 0.0058194677578593534,
+            "rms_mm": 0.003094295521093333,
+            "samples": 8231
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.01571531997189369,
+            "p95_mm": 0.008810822811053453,
+            "rms_mm": 0.006300457741679192,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.012021494252162764,
+            "p95_mm": 0.008754161733924409,
+            "rms_mm": 0.006244400896424036,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.01571531997189369,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 384.39780000044266
+      },
+      "source_quality": {
+        "total_faces": 5486,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 125,
+          "fraction": 0.022785271600437477,
+          "area_fraction": 0.004734178345578202
+        },
+        "angle_below_5_deg": {
+          "faces": 67,
+          "fraction": 0.012212905577834488,
+          "area_fraction": 0.0010323867462338915
+        },
+        "angle_below_1_deg": {
+          "faces": 20,
+          "fraction": 0.0036456434560699965,
+          "area_fraction": 2.1760567010535094e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5269,
+          "fraction": 0.9604447685016405,
+          "area_fraction": 0.9909602768477722
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 0,
+        "external_faces_retained": 0,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 8045,
+          "max_mm": 0.009229994976607142,
+          "mean_mm": 0.002303013537556922,
+          "p95_mm": 0.005151408249647916,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 4.055891632337958,
+          "normal_max_deg": 6.7814866036342245
+        },
+        "candidate_to_source": {
+          "samples": 8057,
+          "max_mm": 0.008884739495268187,
+          "mean_mm": 0.002333381623705828,
+          "p95_mm": 0.005207446498026037,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 4.0491763358195145,
+          "normal_max_deg": 8.069781826942123
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 516.7584999999235,
+      "maintenance_plus_audit_ms": 1928.993320425434
+    },
+    {
+      "case": "stop_resume_e1",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e1",
+      "method": "spatial",
+      "round": 0,
+      "maintenance_wall_ms": 1411.73764038831,
+      "active_fraction": 0.11155668975574189,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 5250,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 71,
+          "fraction": 0.013523809523809523,
+          "area_fraction": 0.003968052843010753
+        },
+        "angle_below_5_deg": {
+          "faces": 29,
+          "fraction": 0.005523809523809524,
+          "area_fraction": 0.0007991925986195466
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5106,
+          "fraction": 0.9725714285714285,
+          "area_fraction": 0.9897757570649091
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2745,
+          "faces": 5486,
+          "bad_faces": 217,
+          "min_q": 0.0034354703406096823,
+          "min_angle_deg": 0.11364493774802417,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 2627,
+          "faces": 5250,
+          "bad_faces": 144,
+          "min_q": 0.03175390328088676,
+          "min_angle_deg": 1.05096049673043,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.011909389160408382,
+            "p95_mm": 0.00010273195884525816,
+            "rms_mm": 0.0005941216715315964,
+            "samples": 7877
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.012723730929735486,
+            "p95_mm": 0.0013766573009118032,
+            "rms_mm": 0.0009495030653952663,
+            "samples": 8231
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.014175524446162966,
+            "p95_mm": 0.005717092166846995,
+            "rms_mm": 0.00409324437060632,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.013338083183887189,
+            "p95_mm": 0.005655424343701519,
+            "rms_mm": 0.004097979129446957,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.014175524446162966,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 375.6246999992072
+      },
+      "source_quality": {
+        "total_faces": 5486,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 125,
+          "fraction": 0.022785271600437477,
+          "area_fraction": 0.004734178345578202
+        },
+        "angle_below_5_deg": {
+          "faces": 67,
+          "fraction": 0.012212905577834488,
+          "area_fraction": 0.0010323867462338915
+        },
+        "angle_below_1_deg": {
+          "faces": 20,
+          "fraction": 0.0036456434560699965,
+          "area_fraction": 2.1760567010535094e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5269,
+          "fraction": 0.9604447685016405,
+          "area_fraction": 0.9909602768477722
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 4874,
+        "external_faces_retained": 4874,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 8045,
+          "max_mm": 0.01006622699644073,
+          "mean_mm": 0.00012023764330483913,
+          "p95_mm": 5.087681048627601e-16,
+          "over_0_01_mm": 1,
+          "normal_p95_deg": 1.7075472925031877e-06,
+          "normal_max_deg": 5.7830947466596205
+        },
+        "candidate_to_source": {
+          "samples": 8075,
+          "max_mm": 0.011979201622865563,
+          "mean_mm": 0.0001205410792391013,
+          "p95_mm": 5.087681048627601e-16,
+          "over_0_01_mm": 6,
+          "normal_p95_deg": 1.7075472925031877e-06,
+          "normal_max_deg": 6.403762579287884
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 526.212900000246,
+      "maintenance_plus_audit_ms": 1937.950540388556
+    },
+    {
+      "case": "stop_resume_e1",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e1",
+      "method": "boolean",
+      "round": 0,
+      "maintenance_wall_ms": 1512.2725814580917,
+      "active_fraction": 0.07200145825738243,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 5340,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 70,
+          "fraction": 0.013108614232209739,
+          "area_fraction": 0.003756146865028582
+        },
+        "angle_below_5_deg": {
+          "faces": 30,
+          "fraction": 0.0056179775280898875,
+          "area_fraction": 0.0008737567725920905
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5203,
+          "fraction": 0.9743445692883895,
+          "area_fraction": 0.9911374022229297
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2745,
+          "faces": 5486,
+          "bad_faces": 217,
+          "min_q": 0.0034354703406096823,
+          "min_angle_deg": 0.11364493774802417,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 2672,
+          "faces": 5340,
+          "bad_faces": 137,
+          "min_q": 0.03179898167941928,
+          "min_angle_deg": 1.0524545460081751,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.007171800158478551,
+            "p95_mm": 5.087681048627601e-16,
+            "rms_mm": 0.00033751766235074913,
+            "samples": 8012
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.0152681426939746,
+            "p95_mm": 0.00024365688672835795,
+            "rms_mm": 0.0006248151757858725,
+            "samples": 8231
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.009318741542440011,
+            "p95_mm": 0.005351373857320307,
+            "rms_mm": 0.003918172303664591,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.011735086464014157,
+            "p95_mm": 0.005319626074371275,
+            "rms_mm": 0.0038913374602505386,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.011735086464014157,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 358.55830000036804
+      },
+      "source_quality": {
+        "total_faces": 5486,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 125,
+          "fraction": 0.022785271600437477,
+          "area_fraction": 0.004734178345578202
+        },
+        "angle_below_5_deg": {
+          "faces": 67,
+          "fraction": 0.012212905577834488,
+          "area_fraction": 0.0010323867462338915
+        },
+        "angle_below_1_deg": {
+          "faces": 20,
+          "fraction": 0.0036456434560699965,
+          "area_fraction": 2.1760567010535094e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5269,
+          "fraction": 0.9604447685016405,
+          "area_fraction": 0.9909602768477722
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 5091,
+        "external_faces_retained": 5091,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 8045,
+          "max_mm": 0.001648174336943683,
+          "mean_mm": 5.616322706268776e-07,
+          "p95_mm": 4.710277376051325e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.2074182697257333e-06,
+          "normal_max_deg": 2.89799689539949
+        },
+        "candidate_to_source": {
+          "samples": 8072,
+          "max_mm": 0.0014004417543961054,
+          "mean_mm": 4.6927545808932864e-07,
+          "p95_mm": 4.710277376051325e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.2074182697257333e-06,
+          "normal_max_deg": 2.058438922562222
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 502.8271000001041,
+      "maintenance_plus_audit_ms": 2015.0996814581958
+    },
+    {
+      "case": "stop_resume_e3",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e3",
+      "method": "full",
+      "round": 0,
+      "maintenance_wall_ms": 1910.9596712514758,
+      "active_fraction": null,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 5360,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 1,
+          "fraction": 0.00018656716417910448,
+          "area_fraction": 4.014896158529229e-05
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5334,
+          "fraction": 0.9951492537313433,
+          "area_fraction": 0.9966363514366088
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2763,
+          "faces": 5522,
+          "bad_faces": 155,
+          "min_q": 0.007963972411012656,
+          "min_angle_deg": 0.263449806257248,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 2682,
+          "faces": 5360,
+          "bad_faces": 26,
+          "min_q": 0.19713326901343464,
+          "min_angle_deg": 7.407429754217999,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.01752494637039115,
+            "p95_mm": 0.00424228700232296,
+            "rms_mm": 0.0023411876271534843,
+            "samples": 8042
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.02274425286035096,
+            "p95_mm": 0.0054325422115682545,
+            "rms_mm": 0.0030865777584408237,
+            "samples": 8285
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.01843842400770043,
+            "p95_mm": 0.009676457622224733,
+            "rms_mm": 0.007890713380100315,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.025900269965887443,
+            "p95_mm": 0.009642743021257057,
+            "rms_mm": 0.007876877864855634,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.025900269965887443,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 384.7635000001901
+      },
+      "source_quality": {
+        "total_faces": 5522,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 66,
+          "fraction": 0.01195219123505976,
+          "area_fraction": 0.000395086147953434
+        },
+        "angle_below_5_deg": {
+          "faces": 39,
+          "fraction": 0.007062658457080768,
+          "area_fraction": 0.0001742068209732588
+        },
+        "angle_below_1_deg": {
+          "faces": 7,
+          "fraction": 0.0012676566461427019,
+          "area_fraction": 1.5546137583779063e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5367,
+          "fraction": 0.9719304599782688,
+          "area_fraction": 0.9953766623694434
+        }
+      },
+      "fixed_contract": null,
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7986,
+          "max_mm": 0.006495437217737164,
+          "mean_mm": 0.0020191193477080843,
+          "p95_mm": 0.004075011865597172,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 3.761472722795411,
+          "normal_max_deg": 6.4383084587388195
+        },
+        "candidate_to_source": {
+          "samples": 7984,
+          "max_mm": 0.00685843007491344,
+          "mean_mm": 0.002008306706262062,
+          "p95_mm": 0.003984564068441854,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 3.761412822372772,
+          "normal_max_deg": 7.337723944321828
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 531.0833000003186,
+      "maintenance_plus_audit_ms": 2442.0429712517944
+    },
+    {
+      "case": "stop_resume_e3",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e3",
+      "method": "global",
+      "round": 0,
+      "maintenance_wall_ms": 1413.2017334923148,
+      "active_fraction": 1.0,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 3152,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 12,
+          "fraction": 0.0038071065989847717,
+          "area_fraction": 9.512757650187164e-05
+        },
+        "angle_below_5_deg": {
+          "faces": 8,
+          "fraction": 0.0025380710659898475,
+          "area_fraction": 8.447391464919646e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.00031725888324873094,
+          "area_fraction": 7.129912367793315e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 3112,
+          "fraction": 0.9873096446700508,
+          "area_fraction": 0.9974978384160454
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2763,
+          "faces": 5522,
+          "bad_faces": 155,
+          "min_q": 0.007963972411012656,
+          "min_angle_deg": 0.263449806257248,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 1578,
+          "faces": 3152,
+          "bad_faces": 40,
+          "min_q": 0.024103358893175896,
+          "min_angle_deg": 0.7975278294010748,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.01088471468759684,
+            "p95_mm": 0.004961417589024404,
+            "rms_mm": 0.002507337312515342,
+            "samples": 4730
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.01385247667895784,
+            "p95_mm": 0.0058562791332787915,
+            "rms_mm": 0.00312906095276126,
+            "samples": 8285
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.01687999935620694,
+            "p95_mm": 0.011007580453810551,
+            "rms_mm": 0.008287260798128708,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.01890703763597038,
+            "p95_mm": 0.010986480011126357,
+            "rms_mm": 0.008242268367787558,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.01890703763597038,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 371.7691999991075
+      },
+      "source_quality": {
+        "total_faces": 5522,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 66,
+          "fraction": 0.01195219123505976,
+          "area_fraction": 0.000395086147953434
+        },
+        "angle_below_5_deg": {
+          "faces": 39,
+          "fraction": 0.007062658457080768,
+          "area_fraction": 0.0001742068209732588
+        },
+        "angle_below_1_deg": {
+          "faces": 7,
+          "fraction": 0.0012676566461427019,
+          "area_fraction": 1.5546137583779063e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5367,
+          "fraction": 0.9719304599782688,
+          "area_fraction": 0.9953766623694434
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 0,
+        "external_faces_retained": 0,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7986,
+          "max_mm": 0.008990190459501717,
+          "mean_mm": 0.0023272049318855455,
+          "p95_mm": 0.005191894816685987,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 4.128148108687009,
+          "normal_max_deg": 8.2048484808789
+        },
+        "candidate_to_source": {
+          "samples": 7996,
+          "max_mm": 0.008981167427415022,
+          "mean_mm": 0.0023337414735705524,
+          "p95_mm": 0.00516219750984241,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 4.101430916619689,
+          "normal_max_deg": 7.497994167813754
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 502.78939999952854,
+      "maintenance_plus_audit_ms": 1915.9911334918434
+    },
+    {
+      "case": "stop_resume_e3",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e3",
+      "method": "spatial",
+      "round": 0,
+      "maintenance_wall_ms": 1412.5584065914154,
+      "active_fraction": 0.1019558131111916,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 5318,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 12,
+          "fraction": 0.0022564874012786762,
+          "area_fraction": 9.491081360505278e-05
+        },
+        "angle_below_5_deg": {
+          "faces": 8,
+          "fraction": 0.001504324934185784,
+          "area_fraction": 8.427510916225344e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.000188040616773223,
+          "area_fraction": 7.115645364945384e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5262,
+          "fraction": 0.9894697254606996,
+          "area_fraction": 0.9952147641362094
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2763,
+          "faces": 5522,
+          "bad_faces": 155,
+          "min_q": 0.007963972411012656,
+          "min_angle_deg": 0.263449806257248,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 2661,
+          "faces": 5318,
+          "bad_faces": 56,
+          "min_q": 0.02409656767135002,
+          "min_angle_deg": 0.7973033962913062,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.007871279816349726,
+            "p95_mm": 4.0374288973674545e-06,
+            "rms_mm": 0.0004299633588997591,
+            "samples": 7979
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.01101888145675523,
+            "p95_mm": 0.0008710069922854744,
+            "rms_mm": 0.0007672319282356893,
+            "samples": 8285
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.01633925470973864,
+            "p95_mm": 0.007604969487847589,
+            "rms_mm": 0.005957978847146222,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.016466194393841276,
+            "p95_mm": 0.007555299880316339,
+            "rms_mm": 0.005935475104681978,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.016466194393841276,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 385.8036000001448
+      },
+      "source_quality": {
+        "total_faces": 5522,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 66,
+          "fraction": 0.01195219123505976,
+          "area_fraction": 0.000395086147953434
+        },
+        "angle_below_5_deg": {
+          "faces": 39,
+          "fraction": 0.007062658457080768,
+          "area_fraction": 0.0001742068209732588
+        },
+        "angle_below_1_deg": {
+          "faces": 7,
+          "fraction": 0.0012676566461427019,
+          "area_fraction": 1.5546137583779063e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5367,
+          "fraction": 0.9719304599782688,
+          "area_fraction": 0.9953766623694434
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 4959,
+        "external_faces_retained": 4959,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7986,
+          "max_mm": 0.008134669928653068,
+          "mean_mm": 3.742747804347327e-05,
+          "p95_mm": 4.996003610813204e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.4787793334710982e-06,
+          "normal_max_deg": 4.8245303470663226
+        },
+        "candidate_to_source": {
+          "samples": 7996,
+          "max_mm": 0.007652604979070496,
+          "mean_mm": 3.86878872356223e-05,
+          "p95_mm": 5.087681048627601e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.4787793334710982e-06,
+          "normal_max_deg": 4.8245303470663226
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 550.2840999997716,
+      "maintenance_plus_audit_ms": 1962.842506591187
+    },
+    {
+      "case": "stop_resume_e3",
+      "route": "development_stop_resume_sphere_01",
+      "event": "e3",
+      "method": "boolean",
+      "round": 0,
+      "maintenance_wall_ms": 1412.4745996668935,
+      "active_fraction": 0.05324157913799348,
+      "accepted_sampled": true,
+      "quality": {
+        "total_faces": 5398,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 15,
+          "fraction": 0.0027788069655427937,
+          "area_fraction": 0.00010658659784545909
+        },
+        "angle_below_5_deg": {
+          "faces": 8,
+          "fraction": 0.0014820303816228233,
+          "area_fraction": 8.413749790377383e-05
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.0001852537977028529,
+          "area_fraction": 7.071916219070252e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5337,
+          "fraction": 0.9886995183401259,
+          "area_fraction": 0.9964396185088098
+        }
+      },
+      "metrics": {
+        "input_quality": {
+          "vertices": 2763,
+          "faces": 5522,
+          "bad_faces": 155,
+          "min_q": 0.007963972411012656,
+          "min_angle_deg": 0.263449806257248,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "input_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "input_validity_status": "passes_listed_topology_checks",
+        "output_quality": {
+          "vertices": 2701,
+          "faces": 5398,
+          "bad_faces": 61,
+          "min_q": 0.02415998597448693,
+          "min_angle_deg": 0.7994042813049178,
+          "boundary_edges": 0,
+          "quality_gate": {
+            "min_q": 0.4,
+            "min_angle_deg": 25.0
+          }
+        },
+        "output_topology": {
+          "connected_components": 1,
+          "boundary_edges": 0,
+          "non_manifold_edges": 0,
+          "inconsistent_interior_edges": 0,
+          "self_intersection_faces": 0
+        },
+        "output_watertight": true,
+        "output_winding_consistent": true,
+        "sampled_drift": {
+          "pamo_to_geogram": {
+            "max_mm": 0.006685785813159591,
+            "p95_mm": 4.710277376051325e-16,
+            "rms_mm": 0.00024009187747829586,
+            "samples": 8099
+          },
+          "geogram_to_pamo": {
+            "max_mm": 0.009185153099042958,
+            "p95_mm": 5.087681048627601e-16,
+            "rms_mm": 0.0005065998934335932,
+            "samples": 8285
+          },
+          "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+        },
+        "sampled_reference_geometry": {
+          "pamo_to_reference": {
+            "max_mm": 0.014784954878655393,
+            "p95_mm": 0.007505782517091776,
+            "rms_mm": 0.005886481349910616,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.012705079952419662,
+            "p95_mm": 0.00744525724782656,
+            "rms_mm": 0.005866998703391357,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.014784954878655393,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "quality_passed": false,
+        "topology_passed": true,
+        "sampled_geometry_passed": true,
+        "accepted_under_sampled_protocol": false,
+        "continuous_error_certificate_status": "not_available",
+        "accepted_under_common_budget": null,
+        "audit_wall_ms": 377.1558999997069
+      },
+      "source_quality": {
+        "total_faces": 5522,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 66,
+          "fraction": 0.01195219123505976,
+          "area_fraction": 0.000395086147953434
+        },
+        "angle_below_5_deg": {
+          "faces": 39,
+          "fraction": 0.007062658457080768,
+          "area_fraction": 0.0001742068209732588
+        },
+        "angle_below_1_deg": {
+          "faces": 7,
+          "fraction": 0.0012676566461427019,
+          "area_fraction": 1.5546137583779063e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5367,
+          "fraction": 0.9719304599782688,
+          "area_fraction": 0.9953766623694434
+        }
+      },
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 5228,
+        "external_faces_retained": 5228,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "capacity_changed": false,
+      "far_drift": {
+        "source_to_candidate": {
+          "samples": 7986,
+          "max_mm": 1.6261893995320756e-06,
+          "mean_mm": 3.8715945215052883e-10,
+          "p95_mm": 4.710277376051325e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.2074182697257333e-06,
+          "normal_max_deg": 0.00467253570104425
+        },
+        "candidate_to_source": {
+          "samples": 8007,
+          "max_mm": 3.980127553113042e-06,
+          "mean_mm": 8.903937993738978e-10,
+          "p95_mm": 4.710277376051325e-16,
+          "over_0_01_mm": 0,
+          "normal_p95_deg": 1.2074182697257333e-06,
+          "normal_max_deg": 0.009961154563073624
+        },
+        "scope": "双向远区面积样本与最近面法向，非连续界或顶点对应"
+      },
+      "continuous_geometry_certified": false,
+      "independent_audit_ms": 532.080699999824,
+      "maintenance_plus_audit_ms": 1944.5552996667175
+    }
+  ],
+  "status": "completed"
+}

@@ -1,0 +1,15 @@
+{
+  "time_beijing": "2026-10-05T00:17:27.079251+08:00",
+  "initial_readonly_audit_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "affected_published_events": [
+    "application_ct_original138_e0",
+    "application_ct_original138_e2",
+    "application_ct_original138_e3"
+  ],
+  "cause": "零自由度恒等返回不产生远端锚点文件，失败下载留下本地空文件；原只读审计将空文件当作JSON。",
+  "acceptance": "仅projection为no_free_vertices_identity、anchor_record_available为false且anchor_updates为空时允许缺失记录；正常投影缺失或非空损坏记录仍拒绝。",
+  "audit_source_sha256": "c7d18b89be7d8143e04865e736f2716d916684fcfb5fb6a5b79b1fc30622f909",
+  "local_tests_passed": 5,
+  "execution_record_modified": false,
+  "empty_files_preserved": true
+}

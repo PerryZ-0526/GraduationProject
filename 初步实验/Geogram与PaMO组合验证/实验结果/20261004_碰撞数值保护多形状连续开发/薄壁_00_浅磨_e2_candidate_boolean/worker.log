@@ -1,0 +1,35 @@
+only got 10799/16384 samples!
+Warp 1.0.0-beta.2 initialized:
+   CUDA Toolkit: 12.8, Driver: 13.2
+   Devices:
+     "cpu"    | x86_64
+     "cuda:0" | NVIDIA GeForce RTX 4090 (sm_89)
+   Kernel cache: /root/.cache/warp/1.0.0-beta.2
+[33;20mWARNING - Triangle area is too small (min_area=3.567818783339181e-18), may cause numerical instability (system.py:213)[0m
+Module pamo_safe_project.kernels.geometry_kernels load on device 'cuda:0' took 16.51 ms
+Module pamo_safe_project.kernels.energy_kernels.elastic_energy load on device 'cuda:0' took 10.78 ms
+Module pamo_safe_project.kernels.energy_kernels.hinge_energy load on device 'cuda:0' took 27.10 ms
+Module pamo_safe_project.kernels.energy_kernels.contact_detection load on device 'cuda:0' took 15.84 ms
+Module pamo_safe_project.kernels.energy_kernels.distance_energy load on device 'cuda:0' took 20.86 ms
+Module pamo_safe_project.kernels.energy_kernels.collision_energy load on device 'cuda:0' took 70.79 ms
+Module pamo_safe_project.kernels.utils_kernels load on device 'cuda:0' took 3.03 ms
+Module tangent_plane_gpu load on device 'cuda:0' took 1.18 ms
+Module locality_gpu load on device 'cuda:0' took 0.64 ms
+Module pamo_safe_project.kernels.solver_kernels load on device 'cuda:0' took 2.81 ms
+Module warp.utils load on device 'cuda:0' took 1.58 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs load on device 'cuda:0' took 16.61 ms
+Module pamo_safe_project.kernels.distance_kernels.hessian_funcs load on device 'cuda:0' took 75.60 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels load on device 'cuda:0' took 101.64 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs_struct load on device 'cuda:0' took 15.76 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels_struct load on device 'cuda:0' took 17.58 ms
+Module pamo_safe_project.kernels.ccd_kernels load on device 'cuda:0' took 21.40 ms
+Module pamo_safe_project.kernels.energy_kernels.lb_curvature_energy load on device 'cuda:0' took 3.19 ms
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞数值保护多形状连续开发_cea2ca3a38cc/run_constrained_worker.py", line 83, in <module>
+    main()
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞数值保护多形状连续开发_cea2ca3a38cc/run_constrained_worker.py", line 55, in main
+    result, projection = project_on_planes(source, mesh, fixed,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_碰撞数值保护多形状连续开发_cea2ca3a38cc/tangent_plane_gpu.py", line 103, in project_on_planes
+    raise RuntimeError("切平面投影出现非有限值或面反向")
+RuntimeError: 切平面投影出现非有限值或面反向

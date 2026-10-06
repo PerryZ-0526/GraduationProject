@@ -1,0 +1,4267 @@
+{
+  "生成时间": "2026-10-04T07:23:58.055742+08:00",
+  "修改时间及修改内容": "首次生成，旧版本和已见评价结果保留",
+  "文档概述": "七家族各四个新参数几何体，28体28条三段交叉仿真路线；对第二版候选保留评价",
+  "索引目录": [
+    "generation_rule",
+    "bodies",
+    "routes"
+  ],
+  "generation_rule": {
+    "parameters": [
+      0.5,
+      1.5,
+      2.5,
+      3.5
+    ],
+    "distribution": "与v1同参数家族的均匀插值，不是新患者或新分布",
+    "anchor": "面心z最高的输入三角面，工具中心沿其外法向偏移0.35倍半径",
+    "span": "两个正交切向方向各正负1.5倍工具半径"
+  },
+  "routes": [
+    {
+      "id": "板体_新参数05_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "板体_新参数05.obj",
+      "initial_mesh_sha256": "a25fae5856aebf0a22a5996f4a39cc258641db08cf000900e3e2730120839132",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -2.9699999999999998,
+            2.5666666666666664,
+            1.76
+          ],
+          "explicit_sweep_start_mm": [
+            -1.17,
+            0.7666666666666668,
+            1.76
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -2.9699999999999998,
+            0.7666666666666668,
+            1.76
+          ],
+          "explicit_sweep_start_mm": [
+            -2.9699999999999998,
+            2.5666666666666664,
+            1.76
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -1.17,
+            2.5666666666666664,
+            1.76
+          ],
+          "explicit_sweep_start_mm": [
+            -2.9699999999999998,
+            0.7666666666666668,
+            1.76
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "板体_新参数05_交叉_e0_tool.obj",
+          "sha256": "b296962cd2a1ad62605aa3b5e097536dcc1d95ba43b8b3dcc39426f4b1972329",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "板体_新参数05_交叉_e1_tool.obj",
+          "sha256": "c519f0ce0e35a25d1089ce13c2820c8a1125adedd6cc6f8ea478d4542555966c",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "板体_新参数05_交叉_e2_tool.obj",
+          "sha256": "52c1ccb4589ac836e6a3301f4702ccb011ea9c9e42d4b3d23c18d3e18fb2cd63",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -2.07,
+          1.6666666666666667,
+          1.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "板体_新参数15_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "板体_新参数15.obj",
+      "initial_mesh_sha256": "01d52df41c33b28e06a7c082fd20fe96258fcdb9774d71353f6d107cdb2165d4",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -3.11,
+            2.5666666666666664,
+            1.8599999999999997
+          ],
+          "explicit_sweep_start_mm": [
+            -1.31,
+            0.7666666666666668,
+            1.8599999999999997
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -3.11,
+            0.7666666666666668,
+            1.8599999999999997
+          ],
+          "explicit_sweep_start_mm": [
+            -3.11,
+            2.5666666666666664,
+            1.8599999999999997
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -1.31,
+            2.5666666666666664,
+            1.8599999999999997
+          ],
+          "explicit_sweep_start_mm": [
+            -3.11,
+            0.7666666666666668,
+            1.8599999999999997
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "板体_新参数15_交叉_e0_tool.obj",
+          "sha256": "593d89d144fb289b1e88dc8b71e26e986b56dd65401dac76931cd66049a6c625",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "板体_新参数15_交叉_e1_tool.obj",
+          "sha256": "9f1f5917be4c72bb733abe9d1dcbbd3124e79d79d5be409697f08aa63f81d6a0",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "板体_新参数15_交叉_e2_tool.obj",
+          "sha256": "1cb37f00e025068dde5f0a823408573bde72149a77f1a74bd5b638d45a3ddb24",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -2.21,
+          1.6666666666666667,
+          1.6499999999999997
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "板体_新参数25_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "板体_新参数25.obj",
+      "initial_mesh_sha256": "8d368407201f271d6f5d5655592b8d9a50f9ed7ee33fd2a4fc981c19a148392d",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -3.25,
+            2.5666666666666664,
+            1.96
+          ],
+          "explicit_sweep_start_mm": [
+            -1.4500000000000002,
+            0.7666666666666668,
+            1.96
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -3.25,
+            0.7666666666666668,
+            1.96
+          ],
+          "explicit_sweep_start_mm": [
+            -3.25,
+            2.5666666666666664,
+            1.96
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -1.4500000000000002,
+            2.5666666666666664,
+            1.96
+          ],
+          "explicit_sweep_start_mm": [
+            -3.25,
+            0.7666666666666668,
+            1.96
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "板体_新参数25_交叉_e0_tool.obj",
+          "sha256": "e53e39623ce7bf60a99f32faa25d1b5033df0467af57fa53bfd292e60387e17b",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "板体_新参数25_交叉_e1_tool.obj",
+          "sha256": "c921e339d794a2dab79849abce70ba47d16f88ed54b5821e9056035b60137384",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "板体_新参数25_交叉_e2_tool.obj",
+          "sha256": "aa11e6e5cdc3205f356327432efc3687f00d891af4df9501a7f0d997d4c74405",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -2.35,
+          1.6666666666666667,
+          1.75
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "板体_新参数35_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "板体_新参数35.obj",
+      "initial_mesh_sha256": "6c9f53865d4c2367c6b9ed8d62253d419c25f07da0bfc40a83b38fff4968264b",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -3.39,
+            2.5666666666666664,
+            2.0600000000000005
+          ],
+          "explicit_sweep_start_mm": [
+            -1.5900000000000003,
+            0.7666666666666668,
+            2.0600000000000005
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -3.39,
+            0.7666666666666668,
+            2.0600000000000005
+          ],
+          "explicit_sweep_start_mm": [
+            -3.39,
+            2.5666666666666664,
+            2.0600000000000005
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -1.5900000000000003,
+            2.5666666666666664,
+            2.0600000000000005
+          ],
+          "explicit_sweep_start_mm": [
+            -3.39,
+            0.7666666666666668,
+            2.0600000000000005
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "板体_新参数35_交叉_e0_tool.obj",
+          "sha256": "db406c8b91e9bbbee118766109d1026286843807173fa65583dd0ea9b2ede1a8",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "板体_新参数35_交叉_e1_tool.obj",
+          "sha256": "d8d8da7a3f5f40510a433eb7fe09cef7bcbb0eb296639d49e780e079a55a40c4",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "板体_新参数35_交叉_e2_tool.obj",
+          "sha256": "a296f65187fa907ae7f62a077254f74e979102a6c77afb09d0943863ce4a854a",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -2.49,
+          1.6666666666666667,
+          1.8500000000000003
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "球体_新参数05_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "球体_新参数05.obj",
+      "initial_mesh_sha256": "9c2273c2013472a62b5969298c02a94f9a8770531dce1665f6103b08e3134014",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -1.1388402535944782,
+            1.2891033797900548,
+            5.239834392652695
+          ],
+          "explicit_sweep_start_mm": [
+            0.6589526900777731,
+            -0.5004277793122196,
+            5.453185657669638
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.1388402535944782,
+            -0.5065889626701215,
+            5.364289248845148
+          ],
+          "explicit_sweep_start_mm": [
+            -1.1388402535944782,
+            1.2891033797900548,
+            5.239834392652695
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.6589526900777731,
+            1.2952645631479567,
+            5.328730801477185
+          ],
+          "explicit_sweep_start_mm": [
+            -1.1388402535944782,
+            -0.5065889626701215,
+            5.364289248845148
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "球体_新参数05_交叉_e0_tool.obj",
+          "sha256": "3449417cc86d5643a6764ba9ca60a14937007358298ab2a91cd3612344ddb984",
+          "faces": 1388
+        },
+        {
+          "event_id": "e1",
+          "mesh": "球体_新参数05_交叉_e1_tool.obj",
+          "sha256": "804e51e15c95969a9bb8427aada9cf3045ca37e0a4926e8b0090e806f62ce386",
+          "faces": 1372
+        },
+        {
+          "event_id": "e2",
+          "mesh": "球体_新参数05_交叉_e2_tool.obj",
+          "sha256": "262b37c4f0dfb32170b2c367aedf761a3ae0f5fa11eaabf917a2ee589c6357d8",
+          "faces": 1388
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          -0.22954765464252005,
+          0.3798358702770681,
+          5.1372694589022
+        ],
+        "normal": [
+          -0.04950536721824972,
+          0.06905680934214062,
+          0.9963836488522227
+        ]
+      }
+    },
+    {
+      "id": "球体_新参数15_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "球体_新参数15.obj",
+      "initial_mesh_sha256": "2d4da4775b8591dbef1386612b05f0111d48e65c2e1dbe95f3acc94154b663b6",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -1.154365215744214,
+            1.314792762320871,
+            5.5872825686170975
+          ],
+          "explicit_sweep_start_mm": [
+            0.6434277279280374,
+            -0.4747383967814039,
+            5.800633833634039
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.154365215744214,
+            -0.4808995801393056,
+            5.711737424809548
+          ],
+          "explicit_sweep_start_mm": [
+            -1.154365215744214,
+            1.314792762320871,
+            5.5872825686170975
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.6434277279280374,
+            1.3209539456787727,
+            5.676178977441588
+          ],
+          "explicit_sweep_start_mm": [
+            -1.154365215744214,
+            -0.4808995801393056,
+            5.711737424809548
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "球体_新参数15_交叉_e0_tool.obj",
+          "sha256": "ce2e8fd672abf1db42c0207935f4e59286ae54c4f674541f1310f55c5a312528",
+          "faces": 1388
+        },
+        {
+          "event_id": "e1",
+          "mesh": "球体_新参数15_交叉_e1_tool.obj",
+          "sha256": "272b355e48a543840496364df4c2c183dcfad1967a1b737caed2f50956327078",
+          "faces": 1372
+        },
+        {
+          "event_id": "e2",
+          "mesh": "球体_新参数15_交叉_e2_tool.obj",
+          "sha256": "ea4c863ee3c7d5e276db8525664f02fc5a0b1b6f94fed7300173c3b0a6d35949",
+          "faces": 1388
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          -0.24507261679225575,
+          0.4055252528078843,
+          5.484717634866601
+        ],
+        "normal": [
+          -0.049505367218250114,
+          0.06905680934213922,
+          0.9963836488522227
+        ]
+      }
+    },
+    {
+      "id": "球体_新参数25_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "球体_新参数25.obj",
+      "initial_mesh_sha256": "551fb0f3d918b897c7af926f5b16d10224358bccb03b634c25cf924a081df36f",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -1.1698901778939497,
+            1.3404821448516873,
+            5.934730744581495
+          ],
+          "explicit_sweep_start_mm": [
+            0.6279027657783018,
+            -0.4490490142505874,
+            6.148082009598438
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.1698901778939497,
+            -0.45521019760848924,
+            6.059185600773947
+          ],
+          "explicit_sweep_start_mm": [
+            -1.1698901778939497,
+            1.3404821448516873,
+            5.934730744581495
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.6279027657783018,
+            1.346643328209589,
+            6.023627153405986
+          ],
+          "explicit_sweep_start_mm": [
+            -1.1698901778939497,
+            -0.45521019760848924,
+            6.059185600773947
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "球体_新参数25_交叉_e0_tool.obj",
+          "sha256": "cd918e2f48f0c2b314dca7ee9c2832c6510a369882e69a9ba0fa586f0b2f0eaa",
+          "faces": 1388
+        },
+        {
+          "event_id": "e1",
+          "mesh": "球体_新参数25_交叉_e1_tool.obj",
+          "sha256": "311c951f4541824ad101b640d0aa2a00814a399b5fec1ea663ab0237b820e886",
+          "faces": 1372
+        },
+        {
+          "event_id": "e2",
+          "mesh": "球体_新参数25_交叉_e2_tool.obj",
+          "sha256": "749bfa2b60c5f297b782009723815cfb178d4fc5347daeb4bd113c84382f6c6f",
+          "faces": 1388
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          -0.26059757894199137,
+          0.43121463533870047,
+          5.8321658108309995
+        ],
+        "normal": [
+          -0.04950536721825024,
+          0.06905680934214019,
+          0.9963836488522227
+        ]
+      }
+    },
+    {
+      "id": "球体_新参数35_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "球体_新参数35.obj",
+      "initial_mesh_sha256": "544201dd66c24c51fc3c437c77596c14ddc6ce32b90a415180e3c064367995d1",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -1.1854151400436852,
+            1.3661715273825032,
+            6.282178920545896
+          ],
+          "explicit_sweep_start_mm": [
+            0.6123778036285659,
+            -0.4233596317197714,
+            6.495530185562838
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.1854151400436852,
+            -0.42952081507767326,
+            6.406633776738346
+          ],
+          "explicit_sweep_start_mm": [
+            -1.1854151400436852,
+            1.3661715273825032,
+            6.282178920545896
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.6123778036285659,
+            1.372332710740405,
+            6.371075329370388
+          ],
+          "explicit_sweep_start_mm": [
+            -1.1854151400436852,
+            -0.42952081507767326,
+            6.406633776738346
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "球体_新参数35_交叉_e0_tool.obj",
+          "sha256": "cb778637df24fc64f2632cec20a13875adc0dd31d2ddf5c9a3a9eca41c15e61f",
+          "faces": 1388
+        },
+        {
+          "event_id": "e1",
+          "mesh": "球体_新参数35_交叉_e1_tool.obj",
+          "sha256": "bc873a4df206046b90029827f9cca677bc1acb104ef8a508583d8a46ccff4d61",
+          "faces": 1372
+        },
+        {
+          "event_id": "e2",
+          "mesh": "球体_新参数35_交叉_e2_tool.obj",
+          "sha256": "a120e0037e260e5f93a3ac05bc6267758fb0e860ca75dd0470ddcef3c1e11d44",
+          "faces": 1388
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          -0.2761225410917271,
+          0.45690401786951673,
+          6.1796139867954
+        ],
+        "normal": [
+          -0.04950536721825053,
+          0.06905680934213895,
+          0.9963836488522227
+        ]
+      }
+    },
+    {
+      "id": "椭球_新参数05_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "椭球_新参数05.obj",
+      "initial_mesh_sha256": "131b469298ff3e780339abcc715eaf728146202fd5eb624e29d6ea4a1c9cf1ce",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -1.2708175734722476,
+            1.2122867926443384,
+            3.052522687706047
+          ],
+          "explicit_sweep_start_mm": [
+            0.5289061070398519,
+            -0.5840188143006946,
+            3.172025157395247
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.2708175734722476,
+            -0.5855607244504533,
+            3.1405244222122035
+          ],
+          "explicit_sweep_start_mm": [
+            -1.2708175734722476,
+            1.2122867926443384,
+            3.052522687706047
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.5289061070398519,
+            1.213828702794097,
+            3.0840234228890906
+          ],
+          "explicit_sweep_start_mm": [
+            -1.2708175734722476,
+            -0.5855607244504533,
+            3.1405244222122035
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "椭球_新参数05_交叉_e0_tool.obj",
+          "sha256": "398fcacdd25af3c9071376b4fad9035921883eb9bba41b46b463f3ecedd45295",
+          "faces": 1392
+        },
+        {
+          "event_id": "e1",
+          "mesh": "椭球_新参数05_交叉_e1_tool.obj",
+          "sha256": "d1d29cc08c8942f3a0f90114344e9c160d4456ec764442ec3ba267477f19368c",
+          "faces": 1376
+        },
+        {
+          "event_id": "e2",
+          "mesh": "椭球_新参数05_交叉_e2_tool.obj",
+          "sha256": "f8afec6fb1377af715990bf4851b14aa688adc24647745a9c8240609e389add6",
+          "faces": 1388
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          -0.36727624742803217,
+          0.3038686962216545,
+          2.902557244279743
+        ],
+        "normal": [
+          -0.017521360896026822,
+          0.0488823473817495,
+          0.9986508489090674
+        ]
+      }
+    },
+    {
+      "id": "椭球_新参数15_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "椭球_新参数15.obj",
+      "initial_mesh_sha256": "9c34955757c5d4766334d8a605fd14806bdf958e9e28c8bd1930c005e8a4da41",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -1.295837296848529,
+            1.233180869872049,
+            3.410179620817999
+          ],
+          "explicit_sweep_start_mm": [
+            0.5038563484632425,
+            -0.5627229369234158,
+            3.536006087676066
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.295837296848529,
+            -0.5644324629102186,
+            3.502841942197445
+          ],
+          "explicit_sweep_start_mm": [
+            -1.295837296848529,
+            1.233180869872049,
+            3.410179620817999
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.5038563484632425,
+            1.2348903958588517,
+            3.44334376629662
+          ],
+          "explicit_sweep_start_mm": [
+            -1.295837296848529,
+            -0.5644324629102186,
+            3.502841942197445
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "椭球_新参数15_交叉_e0_tool.obj",
+          "sha256": "09baaf26f2b753c7542f67c2a70876b9fad8eb24bd474e809ebbda4ed7693cf4",
+          "faces": 1388
+        },
+        {
+          "event_id": "e1",
+          "mesh": "椭球_新参数15_交叉_e1_tool.obj",
+          "sha256": "acfdd332454b7c2d0b4e365bfa5a1e28fa7c5e931a096183f83ceaab8228f1db",
+          "faces": 1376
+        },
+        {
+          "event_id": "e2",
+          "mesh": "椭球_新参数15_交叉_e2_tool.obj",
+          "sha256": "e6fb2e584e631dd37ef7cdf4172e130c4fb0e76a417ed802f2d66d57e575bf4c",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          -0.39211618686760924,
+          0.3244202022463075,
+          3.2634069927456277
+        ],
+        "normal": [
+          -0.01844898726206648,
+          0.05147030584766215,
+          0.9985041023876428
+        ]
+      }
+    },
+    {
+      "id": "椭球_新参数25_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "椭球_新参数25.obj",
+      "initial_mesh_sha256": "b5e5f2d79324ddaa7c59132b80d3845386cd895b067257e3ffa0ee3c68de9145",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -1.320856164633046,
+            1.2540644094815903,
+            3.788683509607703
+          ],
+          "explicit_sweep_start_mm": [
+            0.47880591043332194,
+            -0.5414170133316367,
+            3.9208306847587573
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.320856164633046,
+            -0.5433027247154845,
+            3.886004550026484
+          ],
+          "explicit_sweep_start_mm": [
+            -1.320856164633046,
+            1.2540644094815903,
+            3.788683509607703
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.47880591043332194,
+            1.2559501208654382,
+            3.823509644339976
+          ],
+          "explicit_sweep_start_mm": [
+            -1.320856164633046,
+            -0.5433027247154845,
+            3.886004550026484
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "椭球_新参数25_交叉_e0_tool.obj",
+          "sha256": "84ee8dd0b88ef20448cf488c8972179f4e1b516bc21647aef0410995b452d7d8",
+          "faces": 1388
+        },
+        {
+          "event_id": "e1",
+          "mesh": "椭球_新参数25_交叉_e1_tool.obj",
+          "sha256": "f7aeaeeec6dabf4827c12096eda5810c750c24c6f40644175914f04713a5b277",
+          "faces": 1376
+        },
+        {
+          "event_id": "e2",
+          "mesh": "椭球_新参数25_交叉_e2_tool.obj",
+          "sha256": "865c7fe82c56abbd59fff465e6b0ea3a531a2b47b89122d8713e2ff9008bdb8c",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          -0.4169561263071862,
+          0.3449717082709604,
+          3.645103631769375
+        ],
+        "normal": [
+          -0.019376194250837107,
+          0.054057094304840035,
+          0.9983498353040738
+        ]
+      }
+    },
+    {
+      "id": "椭球_新参数35_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "椭球_新参数35.obj",
+      "initial_mesh_sha256": "bf292adffc1fb0ff74378e6a38ef625dfc7fbf7a097758888d7152bd88ae2b1a",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -1.3458741738467301,
+            1.2749374142437522,
+            4.188034437793945
+          ],
+          "explicit_sweep_start_mm": [
+            0.4537547987090714,
+            -0.5201010706741866,
+            4.326498869332376
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -1.3458741738467301,
+            -0.5221715219517624,
+            4.290012236584789
+          ],
+          "explicit_sweep_start_mm": [
+            -1.3458741738467301,
+            1.2749374142437522,
+            4.188034437793945
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.4537547987090714,
+            1.277007865521328,
+            4.224521070541532
+          ],
+          "explicit_sweep_start_mm": [
+            -1.3458741738467301,
+            -0.5221715219517624,
+            4.290012236584789
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "椭球_新参数35_交叉_e0_tool.obj",
+          "sha256": "56f859ff1ebd33e7a62032741e14ed2ebfb32d08b267d1461f149f3a103b2f5b",
+          "faces": 1388
+        },
+        {
+          "event_id": "e1",
+          "mesh": "椭球_新参数35_交叉_e1_tool.obj",
+          "sha256": "409e42cc5441a8b27e5872424e77a2f120dc64289cd413f7b5b7783f00e6e482",
+          "faces": 1376
+        },
+        {
+          "event_id": "e2",
+          "mesh": "椭球_新参数35_交叉_e2_tool.obj",
+          "sha256": "fa2b5599bd84f8f99c0bb7a7cc4deea427ca44919a2ffa71e65e3daffc6c34f6",
+          "faces": 1388
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          -0.4417960657467634,
+          0.36552321429561346,
+          4.047647161350987
+        ],
+        "normal": [
+          -0.02030296105745732,
+          0.05664265471032978,
+          0.9981880581532048
+        ]
+      }
+    },
+    {
+      "id": "弯曲骨样体_新参数05_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "弯曲骨样体_新参数05.obj",
+      "initial_mesh_sha256": "dc8fe8f8de4715bd6abc7a3b18ca6caf5802277de2287f276ebed3b747d65c37",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            2.3522661913418728,
+            1.20871796433549,
+            9.217996605641702
+          ],
+          "explicit_sweep_start_mm": [
+            4.138662133079893,
+            -0.5425818037464529,
+            9.688887953680783
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            2.3522661913418728,
+            -0.573528374877019,
+            9.470183017574639
+          ],
+          "explicit_sweep_start_mm": [
+            2.3522661913418728,
+            1.20871796433549,
+            9.217996605641702
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            4.138662133079893,
+            1.2396645354660563,
+            9.436701541747846
+          ],
+          "explicit_sweep_start_mm": [
+            2.3522661913418728,
+            -0.573528374877019,
+            9.470183017574639
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "弯曲骨样体_新参数05_交叉_e0_tool.obj",
+          "sha256": "e1dc8b07f14900157af9cace3ef2b66629fa9cc2fca759b2fab985610a66993c",
+          "faces": 1380
+        },
+        {
+          "event_id": "e1",
+          "mesh": "弯曲骨样体_新参数05_交叉_e1_tool.obj",
+          "sha256": "4fff60c88e29656e54ecb23a9b37c0358b996ba1a97912a05340dd2cc3ad37b4",
+          "faces": 1384
+        },
+        {
+          "event_id": "e2",
+          "mesh": "弯曲骨样体_新参数05_交叉_e2_tool.obj",
+          "sha256": "28a7669bbea51ba1bb4f53a4b507a1d42ce3ac4e0e517884f0faea416c03d778",
+          "faces": 1388
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          3.271233908834452,
+          0.3038686962216545,
+          9.247085026023958
+        ],
+        "normal": [
+          -0.12271307915985334,
+          0.13904468606125733,
+          0.9826535887489721
+        ]
+      }
+    },
+    {
+      "id": "弯曲骨样体_新参数15_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "弯曲骨样体_新参数15.obj",
+      "initial_mesh_sha256": "31026a6e41b51aa6a386901a531b501da2309b90162c88535bc5ddf45fa66894",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            2.820561843103436,
+            1.2293891400970438,
+            9.84485972870277
+          ],
+          "explicit_sweep_start_mm": [
+            4.607121073564855,
+            -0.5225012137326963,
+            10.312926288298103
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            2.820561843103436,
+            -0.5530743893115302,
+            10.095506424927413
+          ],
+          "explicit_sweep_start_mm": [
+            2.820561843103436,
+            1.2293891400970438,
+            9.84485972870277
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            4.607121073564855,
+            1.259962315675878,
+            10.06227959207346
+          ],
+          "explicit_sweep_start_mm": [
+            2.820561843103436,
+            -0.5530743893115302,
+            10.095506424927413
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "弯曲骨样体_新参数15_交叉_e0_tool.obj",
+          "sha256": "632dbc607f814ffbd17239ba8838a498ee96ba0bb4a6ca17b27bb71c7fa72c95",
+          "faces": 1380
+        },
+        {
+          "event_id": "e1",
+          "mesh": "弯曲骨样体_新参数15_交叉_e1_tool.obj",
+          "sha256": "e71a7f3bb49251d9ca2eb30181091ab06126ffbe334bc0c685231ba578ad1e54",
+          "faces": 1384
+        },
+        {
+          "event_id": "e2",
+          "mesh": "弯曲骨样体_新参数15_交叉_e2_tool.obj",
+          "sha256": "8c6c498f084973a130483e0740d085aacdd6c29f723703c8a047479f152e8315",
+          "faces": 1388
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          3.7394566647911294,
+          0.3244202022463075,
+          9.87249174275988
+        ],
+        "normal": [
+          -0.12197717360468541,
+          0.13820838540888702,
+          0.9828631701931256
+        ]
+      }
+    },
+    {
+      "id": "弯曲骨样体_新参数25_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "弯曲骨样体_新参数25.obj",
+      "initial_mesh_sha256": "438dd1a1a42d9fcf7a978c412d3aa33147d947dd51ab4cbe9a735a6a3b1fe5df",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            3.3201486995614933,
+            1.2500570805209053,
+            10.471705555338566
+          ],
+          "explicit_sweep_start_mm": [
+            5.106868326380759,
+            -0.5024132734917677,
+            10.936980348816057
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            3.3201486995614933,
+            -0.5326197043640728,
+            10.720830986862843
+          ],
+          "explicit_sweep_start_mm": [
+            3.3201486995614933,
+            1.2500570805209053,
+            10.471705555338566
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            5.106868326380759,
+            1.2802635113932104,
+            10.68785491729178
+          ],
+          "explicit_sweep_start_mm": [
+            3.3201486995614933,
+            -0.5326197043640728,
+            10.720830986862843
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "弯曲骨样体_新参数25_交叉_e0_tool.obj",
+          "sha256": "e12dd1b108d257720019134be556b2c8a97938093809c764b5385bf71f9f65bb",
+          "faces": 1380
+        },
+        {
+          "event_id": "e1",
+          "mesh": "弯曲骨样体_新参数25_交叉_e1_tool.obj",
+          "sha256": "d6a4a12fafe180360179ce5ff82a408d412748be003ab5c610a83d6b285d8e17",
+          "faces": 1384
+        },
+        {
+          "event_id": "e2",
+          "mesh": "弯曲骨样体_新参数25_交叉_e2_tool.obj",
+          "sha256": "a2e383c9266dae66bf3929483fa12f6f5a01224ce4b08351227daf6beca85b16",
+          "faces": 1388
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 394,
+        "point_mm": [
+          4.238970989621431,
+          0.3449717082709604,
+          10.497898459495799
+        ],
+        "normal": [
+          -0.12124988881097638,
+          0.13738188211242106,
+          0.9830690122929187
+        ]
+      }
+    },
+    {
+      "id": "弯曲骨样体_新参数35_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "弯曲骨样体_新参数35.obj",
+      "initial_mesh_sha256": "b417222a69cfce34e6502b502ea8748d5128d0908c81e6618c4fc519afa70697",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            3.851026758167508,
+            0.5121643245353678,
+            11.34615667769232
+          ],
+          "explicit_sweep_start_mm": [
+            5.637903956178613,
+            -1.3005680565363562,
+            11.313427579904278
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            3.851026758167508,
+            -1.270721875080048,
+            11.098534386246456
+          ],
+          "explicit_sweep_start_mm": [
+            3.851026758167508,
+            0.5121643245353678,
+            11.34615667769232
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            5.637903956178613,
+            0.48231814307905935,
+            11.561049871350143
+          ],
+          "explicit_sweep_start_mm": [
+            3.851026758167508,
+            -1.270721875080048,
+            11.098534386246456
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "弯曲骨样体_新参数35_交叉_e0_tool.obj",
+          "sha256": "355596a26febafd35736705ee761b149acb363f2ac226d26632185341ada6cc8",
+          "faces": 1388
+        },
+        {
+          "event_id": "e1",
+          "mesh": "弯曲骨样体_新参数35_交叉_e1_tool.obj",
+          "sha256": "c7496f6a742d7b5738ec390d4782c959bb6d18677ddac6e2472648c82d14d15e",
+          "faces": 1384
+        },
+        {
+          "event_id": "e2",
+          "mesh": "弯曲骨样体_新参数35_交叉_e2_tool.obj",
+          "sha256": "0a54e7ced29f87ee1277555d59499924989674e22d4dd2a9d9157938b62eb328",
+          "faces": 1376
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 416,
+        "point_mm": [
+          4.769776883325362,
+          -0.36552321429561346,
+          11.123305176231723
+        ],
+        "normal": [
+          -0.12053107691571996,
+          -0.1365650081184801,
+          0.9832712026979822
+        ]
+      }
+    },
+    {
+      "id": "贯通孔_新参数05_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "贯通孔_新参数05.obj",
+      "initial_mesh_sha256": "111750d1b0bb72cc6dfed1713eff327c914adaa7ed7a73a8e0b2eb3944201654",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            2.6116936535095405,
+            1.069079567068492,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            4.41169365350954,
+            -0.7309204329315079,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            2.6116936535095405,
+            -0.7309204329315079,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            2.6116936535095405,
+            1.069079567068492,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            4.41169365350954,
+            1.069079567068492,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            2.6116936535095405,
+            -0.7309204329315079,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "贯通孔_新参数05_交叉_e0_tool.obj",
+          "sha256": "4cd3cc69cb542a2a81b02c10ad321bcb3eab8a03d7febe28a3d9b6b0acd8c8c7",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "贯通孔_新参数05_交叉_e1_tool.obj",
+          "sha256": "8d71d1f9f5c21a91c1538ca5adfca4fa7c6db16b066e496a52660129a6b5d0dc",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "贯通孔_新参数05_交叉_e2_tool.obj",
+          "sha256": "23b6988a43e12179da256f936d45779aa324199ecf47a521dc64fc5dfc53b949",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          3.5116936535095404,
+          0.16907956706849203,
+          1.0
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "贯通孔_新参数15_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "贯通孔_新参数15.obj",
+      "initial_mesh_sha256": "a798891c93639f1eb9fd6c4b346712e84ba31628039828f8de5cf7fb11aa1f5c",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            2.8844652049546298,
+            1.0805149001069407,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            4.68446520495463,
+            -0.7194850998930591,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            2.8844652049546298,
+            -0.7194850998930591,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            2.8844652049546298,
+            1.0805149001069407,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            4.68446520495463,
+            1.0805149001069407,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            2.8844652049546298,
+            -0.7194850998930591,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "贯通孔_新参数15_交叉_e0_tool.obj",
+          "sha256": "ae3bfd528bf315cbb9dbfc6521990f820975f8a8202ce59dc77b7067c691974a",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "贯通孔_新参数15_交叉_e1_tool.obj",
+          "sha256": "f6bdd1c566ee120acb3e320c600f3b6f5a6075a32043144fed2a253c729146cf",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "贯通孔_新参数15_交叉_e2_tool.obj",
+          "sha256": "dbc956b8296cdeb6b4adecdc4a4b7fbac9e670e7a0fd3d6dbdd7b2b868894459",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          3.7844652049546297,
+          0.1805149001069408,
+          1.0
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "贯通孔_新参数25_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "贯通孔_新参数25.obj",
+      "initial_mesh_sha256": "8c086cf733df7e65c2e03e165dea588867bcd63655da4787da83ed7615e7ca8d",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            3.1572367563997186,
+            1.0919502331453894,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            4.957236756399718,
+            -0.7080497668546104,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            3.1572367563997186,
+            -0.7080497668546104,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            3.1572367563997186,
+            1.0919502331453894,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            4.957236756399718,
+            1.0919502331453894,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            3.1572367563997186,
+            -0.7080497668546104,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "贯通孔_新参数25_交叉_e0_tool.obj",
+          "sha256": "bb80e6589ecc9b6cc7e935e0c4033b9d364db6b0088449daa75ff2eec2480637",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "贯通孔_新参数25_交叉_e1_tool.obj",
+          "sha256": "3ab7bd6294212c5b77e6aa8cc1a91b18fbb70f574ca631409d7d95078f3424c7",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "贯通孔_新参数25_交叉_e2_tool.obj",
+          "sha256": "15dd12b90d433e38595b6a0cb355bd05269fc12c89125453ab8edf330ed9a1fe",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          4.0572367563997185,
+          0.1919502331453895,
+          1.0
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "贯通孔_新参数35_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "贯通孔_新参数35.obj",
+      "initial_mesh_sha256": "8be515c5df8d1e33ed9c8f7ca416fe6643eacc2fa11c6ab809fa5bcf86f7dd4b",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            3.4300083078448096,
+            1.103385566183838,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            5.230008307844809,
+            -0.6966144338161616,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            3.4300083078448096,
+            -0.6966144338161616,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            3.4300083078448096,
+            1.103385566183838,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            5.230008307844809,
+            1.103385566183838,
+            1.21
+          ],
+          "explicit_sweep_start_mm": [
+            3.4300083078448096,
+            -0.6966144338161616,
+            1.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "贯通孔_新参数35_交叉_e0_tool.obj",
+          "sha256": "223574ac831c91b76bc83f0485e348d8f2802ee4570fb342627231ed4402a44d",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "贯通孔_新参数35_交叉_e1_tool.obj",
+          "sha256": "506997b6b001379285033dda6818a4a10714faaea12d721db5157097c192d7fd",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "贯通孔_新参数35_交叉_e2_tool.obj",
+          "sha256": "665db2dca78d02cb7fa4012df52ac8ae7bbc11124287e1c7fb29831aa2aa7cfd",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          4.3300083078448095,
+          0.20338556618383827,
+          1.0
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "id": "薄壁_新参数05_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "薄壁_新参数05.obj",
+      "initial_mesh_sha256": "645b5d1e3adb0dc6b7e0abd73835bc494b94c3ada1963999ce9d4ff1cbec939c",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.016970562748477143,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -2.0254558441227157,
+            1.6921225107893825,
+            0.027152900397563424
+          ],
+          "explicit_sweep_start_mm": [
+            -1.9745441558772843,
+            1.641210822543951,
+            0.027152900397563424
+          ],
+          "tool_radius_mm": 0.016970562748477143,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -2.0254558441227157,
+            1.641210822543951,
+            0.027152900397563424
+          ],
+          "explicit_sweep_start_mm": [
+            -2.0254558441227157,
+            1.6921225107893825,
+            0.027152900397563424
+          ],
+          "tool_radius_mm": 0.016970562748477143,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -1.9745441558772843,
+            1.6921225107893825,
+            0.027152900397563424
+          ],
+          "explicit_sweep_start_mm": [
+            -2.0254558441227157,
+            1.641210822543951,
+            0.027152900397563424
+          ],
+          "tool_radius_mm": 0.016970562748477143,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "薄壁_新参数05_交叉_e0_tool.obj",
+          "sha256": "5dcab01ba73cf90e8f4ae837ec5bbbb68de71769868afc832477298d18335bd6",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "薄壁_新参数05_交叉_e1_tool.obj",
+          "sha256": "2de9f0638e676b973727d6a4602952f4c018d81abf750c36f06e199e83a441dc",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "薄壁_新参数05_交叉_e2_tool.obj",
+          "sha256": "1260e417904a8f971d8634a49452b5769684d0add82ba50b231c5064ac049b5d",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -2.0,
+          1.6666666666666667,
+          0.021213203435596423
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "薄壁_新参数15_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "薄壁_新参数15.obj",
+      "initial_mesh_sha256": "1a9841227a4c40bedc33d8d41ea25a7aaa2fa8ffd65dc4472f5aaa2c6c1a7295",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.033941125496954286,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -2.0509116882454315,
+            1.7175783549120982,
+            0.05430580079512685
+          ],
+          "explicit_sweep_start_mm": [
+            -1.9490883117545685,
+            1.6157549784212353,
+            0.05430580079512685
+          ],
+          "tool_radius_mm": 0.033941125496954286,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -2.0509116882454315,
+            1.6157549784212353,
+            0.05430580079512685
+          ],
+          "explicit_sweep_start_mm": [
+            -2.0509116882454315,
+            1.7175783549120982,
+            0.05430580079512685
+          ],
+          "tool_radius_mm": 0.033941125496954286,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -1.9490883117545685,
+            1.7175783549120982,
+            0.05430580079512685
+          ],
+          "explicit_sweep_start_mm": [
+            -2.0509116882454315,
+            1.6157549784212353,
+            0.05430580079512685
+          ],
+          "tool_radius_mm": 0.033941125496954286,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "薄壁_新参数15_交叉_e0_tool.obj",
+          "sha256": "cc67960f10fa3873caac4a753c5f2d9ecda231c329aa449aa178635a24ddf19a",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "薄壁_新参数15_交叉_e1_tool.obj",
+          "sha256": "8556ddc8198319ad73f849226e9e79b8a74732cabfb955e8977bd6a6d98c737e",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "薄壁_新参数15_交叉_e2_tool.obj",
+          "sha256": "366d1170f0fdcb8d95c2b8defa9bcadf9e9b19c7f205212d7f35feac06eab0d4",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -2.0,
+          1.6666666666666667,
+          0.04242640687119285
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "薄壁_新参数25_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "薄壁_新参数25.obj",
+      "initial_mesh_sha256": "3a43a6e8bc9504c6b1788e846f05c0be8439193ddc46f55ab049e9d22d796662",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.06788225099390857,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -2.101823376490863,
+            1.7684900431575297,
+            0.1086116015902537
+          ],
+          "explicit_sweep_start_mm": [
+            -1.898176623509137,
+            1.5648432901758038,
+            0.1086116015902537
+          ],
+          "tool_radius_mm": 0.06788225099390857,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -2.101823376490863,
+            1.5648432901758038,
+            0.1086116015902537
+          ],
+          "explicit_sweep_start_mm": [
+            -2.101823376490863,
+            1.7684900431575297,
+            0.1086116015902537
+          ],
+          "tool_radius_mm": 0.06788225099390857,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -1.898176623509137,
+            1.7684900431575297,
+            0.1086116015902537
+          ],
+          "explicit_sweep_start_mm": [
+            -2.101823376490863,
+            1.5648432901758038,
+            0.1086116015902537
+          ],
+          "tool_radius_mm": 0.06788225099390857,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "薄壁_新参数25_交叉_e0_tool.obj",
+          "sha256": "1c4881634a424789c5695e28aa871fac801f69ea4c40e377e19a1a6ae8474e58",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "薄壁_新参数25_交叉_e1_tool.obj",
+          "sha256": "23badfbb2ef0dae89e27c85c31497e031a23ce5a3a94d44f8b602132554da247",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "薄壁_新参数25_交叉_e2_tool.obj",
+          "sha256": "2034fc3e1e838850115daf4314919af41b1e69966f80e338e26854ba35510182",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -2.0,
+          1.6666666666666667,
+          0.0848528137423857
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "薄壁_新参数35_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "薄壁_新参数35.obj",
+      "initial_mesh_sha256": "5dbf8be4483ba7970597112b2dac7674b21acca087757d80ec77ae8f03e59409",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.13576450198781714,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -2.203646752981726,
+            1.8703134196483924,
+            0.2172232031805074
+          ],
+          "explicit_sweep_start_mm": [
+            -1.7963532470182744,
+            1.463019913684941,
+            0.2172232031805074
+          ],
+          "tool_radius_mm": 0.13576450198781714,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -2.203646752981726,
+            1.463019913684941,
+            0.2172232031805074
+          ],
+          "explicit_sweep_start_mm": [
+            -2.203646752981726,
+            1.8703134196483924,
+            0.2172232031805074
+          ],
+          "tool_radius_mm": 0.13576450198781714,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -1.7963532470182744,
+            1.8703134196483924,
+            0.2172232031805074
+          ],
+          "explicit_sweep_start_mm": [
+            -2.203646752981726,
+            1.463019913684941,
+            0.2172232031805074
+          ],
+          "tool_radius_mm": 0.13576450198781714,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "薄壁_新参数35_交叉_e0_tool.obj",
+          "sha256": "1a3076ee83655dea6379f2edb62f90129a42122255a5ba5ab8e2354f68a04425",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "薄壁_新参数35_交叉_e1_tool.obj",
+          "sha256": "9d0e5f10f12264b37ac9f6680b0ae0758beb23eb42f5410b83ef99288dc0888c",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "薄壁_新参数35_交叉_e2_tool.obj",
+          "sha256": "4391ec25f24b5393aa8e904c7bde05014eaeedd552c29f9d93dba6fb642e3f4d",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -2.0,
+          1.6666666666666667,
+          0.1697056274847714
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "窄缝_新参数05_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "窄缝_新参数05.obj",
+      "initial_mesh_sha256": "84c4e16abb4636ddc0c7b5ae1726f6bd0edee72aaa31f1f6ba96bed5e0aab3d9",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -4.25454653676893,
+            2.5666666666666664,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -2.4545465367689303,
+            0.7666666666666668,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -4.25454653676893,
+            0.7666666666666668,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -4.25454653676893,
+            2.5666666666666664,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -2.4545465367689303,
+            2.5666666666666664,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -4.25454653676893,
+            0.7666666666666668,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "窄缝_新参数05_交叉_e0_tool.obj",
+          "sha256": "e691f01950a54f6c95065be6482c69241d0e53f012a6ba84b03a771980b714b6",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "窄缝_新参数05_交叉_e1_tool.obj",
+          "sha256": "d9e414c48fcd268b60b0ca0f8acda452b9dba5b720281a54d229beaf905be895",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "窄缝_新参数05_交叉_e2_tool.obj",
+          "sha256": "74ec40b2ef7b0d5aa83506e37e014a38bbaac8e42e000dbf3dde5eaf73a8fcdb",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -3.35454653676893,
+          1.6666666666666667,
+          1.5
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "窄缝_新参数15_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "窄缝_新参数15.obj",
+      "initial_mesh_sha256": "5734aba3e738fe211b38272160b50b6039fb9945cfe5183aeac6fd6d5b29708a",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -4.275759740204527,
+            2.5666666666666664,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -2.475759740204527,
+            0.7666666666666668,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -4.275759740204527,
+            0.7666666666666668,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -4.275759740204527,
+            2.5666666666666664,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -2.475759740204527,
+            2.5666666666666664,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -4.275759740204527,
+            0.7666666666666668,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "窄缝_新参数15_交叉_e0_tool.obj",
+          "sha256": "6f92eb5c291dbd2c862f1aa2aa86756a88ff365f0cd3434219bdef9d767559d4",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "窄缝_新参数15_交叉_e1_tool.obj",
+          "sha256": "236b4e5175ad40e5992f98aa4eacee80be03cb5fb6a3a34113bd5470a92454b4",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "窄缝_新参数15_交叉_e2_tool.obj",
+          "sha256": "b0bbe702564e7a709900cff275af6fc6d5769d4022f59ca7048c88202eaa3558",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -3.375759740204527,
+          1.6666666666666667,
+          1.5
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "窄缝_新参数25_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "窄缝_新参数25.obj",
+      "initial_mesh_sha256": "aba957d3f5c9b9b486292f645163454dcb10974d09d0b88b216f04f4edbc0bf1",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -4.318186147075719,
+            2.5666666666666664,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -2.5181861470757188,
+            0.7666666666666668,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -4.318186147075719,
+            0.7666666666666668,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -4.318186147075719,
+            2.5666666666666664,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -2.5181861470757188,
+            2.5666666666666664,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -4.318186147075719,
+            0.7666666666666668,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "窄缝_新参数25_交叉_e0_tool.obj",
+          "sha256": "34fdb926c5cb436273e44fdb8b30e99b49cfa5dd562cb4cec73e2331f8894d21",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "窄缝_新参数25_交叉_e1_tool.obj",
+          "sha256": "4b09ecb00ace0a675fcae24774a6b37f47d14c2b6b887a564e688f6dcfaa76ea",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "窄缝_新参数25_交叉_e2_tool.obj",
+          "sha256": "ed6bcc4ca20379ff2695e066e04b34ade90c0ffea042628c93d38afa9b75f3d6",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -3.4181861470757187,
+          1.6666666666666667,
+          1.5
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "窄缝_新参数35_交叉",
+      "split": "evaluation",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic_new_parameter_v2",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "窄缝_新参数35.obj",
+      "initial_mesh_sha256": "1c8428b3c6dea9bcb1617514998d12cb88a9ba7ac27a07d5369613a10f28ffff",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -4.403038960818105,
+            2.5666666666666664,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -2.603038960818105,
+            0.7666666666666668,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -4.403038960818105,
+            0.7666666666666668,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -4.403038960818105,
+            2.5666666666666664,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            -2.603038960818105,
+            2.5666666666666664,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -4.403038960818105,
+            0.7666666666666668,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "窄缝_新参数35_交叉_e0_tool.obj",
+          "sha256": "9e97a85299478c90723d35c65bb1e370d55bc44dbfb89aebbe7270755f161825",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "窄缝_新参数35_交叉_e1_tool.obj",
+          "sha256": "bb28b4ca36f3168604eaace7237038ef51448ea4a3cb61c53a0d89fd0546752f",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "窄缝_新参数35_交叉_e2_tool.obj",
+          "sha256": "b5054a3d1e25c9c8a7f8fb07cc7211204d7cb96f8773edbf985b1e002f4bdebd",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      },
+      "initial_surface_anchor": {
+        "face": 4,
+        "point_mm": [
+          -3.5030389608181047,
+          1.6666666666666667,
+          1.5
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    }
+  ],
+  "bodies": [
+    {
+      "id": "板体_新参数05",
+      "parameter": 0.5,
+      "family": "板体",
+      "mesh": "板体_新参数05.obj",
+      "sha256": "a25fae5856aebf0a22a5996f4a39cc258641db08cf000900e3e2730120839132",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -2.07,
+        1.6666666666666667,
+        1.55
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "板体_新参数15",
+      "parameter": 1.5,
+      "family": "板体",
+      "mesh": "板体_新参数15.obj",
+      "sha256": "01d52df41c33b28e06a7c082fd20fe96258fcdb9774d71353f6d107cdb2165d4",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -2.21,
+        1.6666666666666667,
+        1.6499999999999997
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "板体_新参数25",
+      "parameter": 2.5,
+      "family": "板体",
+      "mesh": "板体_新参数25.obj",
+      "sha256": "8d368407201f271d6f5d5655592b8d9a50f9ed7ee33fd2a4fc981c19a148392d",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -2.35,
+        1.6666666666666667,
+        1.75
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "板体_新参数35",
+      "parameter": 3.5,
+      "family": "板体",
+      "mesh": "板体_新参数35.obj",
+      "sha256": "6c9f53865d4c2367c6b9ed8d62253d419c25f07da0bfc40a83b38fff4968264b",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -2.49,
+        1.6666666666666667,
+        1.8500000000000003
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "球体_新参数05",
+      "parameter": 0.5,
+      "family": "球体",
+      "mesh": "球体_新参数05.obj",
+      "sha256": "9c2273c2013472a62b5969298c02a94f9a8770531dce1665f6103b08e3134014",
+      "anchor_face": 394,
+      "anchor_mm": [
+        -0.22954765464252005,
+        0.3798358702770681,
+        5.1372694589022
+      ],
+      "normal": [
+        -0.04950536721824972,
+        0.06905680934214062,
+        0.9963836488522227
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "球体_新参数15",
+      "parameter": 1.5,
+      "family": "球体",
+      "mesh": "球体_新参数15.obj",
+      "sha256": "2d4da4775b8591dbef1386612b05f0111d48e65c2e1dbe95f3acc94154b663b6",
+      "anchor_face": 394,
+      "anchor_mm": [
+        -0.24507261679225575,
+        0.4055252528078843,
+        5.484717634866601
+      ],
+      "normal": [
+        -0.049505367218250114,
+        0.06905680934213922,
+        0.9963836488522227
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "球体_新参数25",
+      "parameter": 2.5,
+      "family": "球体",
+      "mesh": "球体_新参数25.obj",
+      "sha256": "551fb0f3d918b897c7af926f5b16d10224358bccb03b634c25cf924a081df36f",
+      "anchor_face": 394,
+      "anchor_mm": [
+        -0.26059757894199137,
+        0.43121463533870047,
+        5.8321658108309995
+      ],
+      "normal": [
+        -0.04950536721825024,
+        0.06905680934214019,
+        0.9963836488522227
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "球体_新参数35",
+      "parameter": 3.5,
+      "family": "球体",
+      "mesh": "球体_新参数35.obj",
+      "sha256": "544201dd66c24c51fc3c437c77596c14ddc6ce32b90a415180e3c064367995d1",
+      "anchor_face": 394,
+      "anchor_mm": [
+        -0.2761225410917271,
+        0.45690401786951673,
+        6.1796139867954
+      ],
+      "normal": [
+        -0.04950536721825053,
+        0.06905680934213895,
+        0.9963836488522227
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "椭球_新参数05",
+      "parameter": 0.5,
+      "family": "椭球",
+      "mesh": "椭球_新参数05.obj",
+      "sha256": "131b469298ff3e780339abcc715eaf728146202fd5eb624e29d6ea4a1c9cf1ce",
+      "anchor_face": 394,
+      "anchor_mm": [
+        -0.36727624742803217,
+        0.3038686962216545,
+        2.902557244279743
+      ],
+      "normal": [
+        -0.017521360896026822,
+        0.0488823473817495,
+        0.9986508489090674
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "椭球_新参数15",
+      "parameter": 1.5,
+      "family": "椭球",
+      "mesh": "椭球_新参数15.obj",
+      "sha256": "9c34955757c5d4766334d8a605fd14806bdf958e9e28c8bd1930c005e8a4da41",
+      "anchor_face": 394,
+      "anchor_mm": [
+        -0.39211618686760924,
+        0.3244202022463075,
+        3.2634069927456277
+      ],
+      "normal": [
+        -0.01844898726206648,
+        0.05147030584766215,
+        0.9985041023876428
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "椭球_新参数25",
+      "parameter": 2.5,
+      "family": "椭球",
+      "mesh": "椭球_新参数25.obj",
+      "sha256": "b5e5f2d79324ddaa7c59132b80d3845386cd895b067257e3ffa0ee3c68de9145",
+      "anchor_face": 394,
+      "anchor_mm": [
+        -0.4169561263071862,
+        0.3449717082709604,
+        3.645103631769375
+      ],
+      "normal": [
+        -0.019376194250837107,
+        0.054057094304840035,
+        0.9983498353040738
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "椭球_新参数35",
+      "parameter": 3.5,
+      "family": "椭球",
+      "mesh": "椭球_新参数35.obj",
+      "sha256": "bf292adffc1fb0ff74378e6a38ef625dfc7fbf7a097758888d7152bd88ae2b1a",
+      "anchor_face": 394,
+      "anchor_mm": [
+        -0.4417960657467634,
+        0.36552321429561346,
+        4.047647161350987
+      ],
+      "normal": [
+        -0.02030296105745732,
+        0.05664265471032978,
+        0.9981880581532048
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "弯曲骨样体_新参数05",
+      "parameter": 0.5,
+      "family": "弯曲骨样体",
+      "mesh": "弯曲骨样体_新参数05.obj",
+      "sha256": "dc8fe8f8de4715bd6abc7a3b18ca6caf5802277de2287f276ebed3b747d65c37",
+      "anchor_face": 394,
+      "anchor_mm": [
+        3.271233908834452,
+        0.3038686962216545,
+        9.247085026023958
+      ],
+      "normal": [
+        -0.12271307915985334,
+        0.13904468606125733,
+        0.9826535887489721
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "弯曲骨样体_新参数15",
+      "parameter": 1.5,
+      "family": "弯曲骨样体",
+      "mesh": "弯曲骨样体_新参数15.obj",
+      "sha256": "31026a6e41b51aa6a386901a531b501da2309b90162c88535bc5ddf45fa66894",
+      "anchor_face": 394,
+      "anchor_mm": [
+        3.7394566647911294,
+        0.3244202022463075,
+        9.87249174275988
+      ],
+      "normal": [
+        -0.12197717360468541,
+        0.13820838540888702,
+        0.9828631701931256
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "弯曲骨样体_新参数25",
+      "parameter": 2.5,
+      "family": "弯曲骨样体",
+      "mesh": "弯曲骨样体_新参数25.obj",
+      "sha256": "438dd1a1a42d9fcf7a978c412d3aa33147d947dd51ab4cbe9a735a6a3b1fe5df",
+      "anchor_face": 394,
+      "anchor_mm": [
+        4.238970989621431,
+        0.3449717082709604,
+        10.497898459495799
+      ],
+      "normal": [
+        -0.12124988881097638,
+        0.13738188211242106,
+        0.9830690122929187
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "弯曲骨样体_新参数35",
+      "parameter": 3.5,
+      "family": "弯曲骨样体",
+      "mesh": "弯曲骨样体_新参数35.obj",
+      "sha256": "b417222a69cfce34e6502b502ea8748d5128d0908c81e6618c4fc519afa70697",
+      "anchor_face": 416,
+      "anchor_mm": [
+        4.769776883325362,
+        -0.36552321429561346,
+        11.123305176231723
+      ],
+      "normal": [
+        -0.12053107691571996,
+        -0.1365650081184801,
+        0.9832712026979822
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "贯通孔_新参数05",
+      "parameter": 0.5,
+      "family": "贯通孔",
+      "mesh": "贯通孔_新参数05.obj",
+      "sha256": "111750d1b0bb72cc6dfed1713eff327c914adaa7ed7a73a8e0b2eb3944201654",
+      "anchor_face": 4,
+      "anchor_mm": [
+        3.5116936535095404,
+        0.16907956706849203,
+        1.0
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "贯通孔_新参数15",
+      "parameter": 1.5,
+      "family": "贯通孔",
+      "mesh": "贯通孔_新参数15.obj",
+      "sha256": "a798891c93639f1eb9fd6c4b346712e84ba31628039828f8de5cf7fb11aa1f5c",
+      "anchor_face": 4,
+      "anchor_mm": [
+        3.7844652049546297,
+        0.1805149001069408,
+        1.0
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "贯通孔_新参数25",
+      "parameter": 2.5,
+      "family": "贯通孔",
+      "mesh": "贯通孔_新参数25.obj",
+      "sha256": "8c086cf733df7e65c2e03e165dea588867bcd63655da4787da83ed7615e7ca8d",
+      "anchor_face": 4,
+      "anchor_mm": [
+        4.0572367563997185,
+        0.1919502331453895,
+        1.0
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "贯通孔_新参数35",
+      "parameter": 3.5,
+      "family": "贯通孔",
+      "mesh": "贯通孔_新参数35.obj",
+      "sha256": "8be515c5df8d1e33ed9c8f7ca416fe6643eacc2fa11c6ab809fa5bcf86f7dd4b",
+      "anchor_face": 4,
+      "anchor_mm": [
+        4.3300083078448095,
+        0.20338556618383827,
+        1.0
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        0.9999999999999999
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "薄壁_新参数05",
+      "parameter": 0.5,
+      "family": "薄壁",
+      "mesh": "薄壁_新参数05.obj",
+      "sha256": "645b5d1e3adb0dc6b7e0abd73835bc494b94c3ada1963999ce9d4ff1cbec939c",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -2.0,
+        1.6666666666666667,
+        0.021213203435596423
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "薄壁_新参数15",
+      "parameter": 1.5,
+      "family": "薄壁",
+      "mesh": "薄壁_新参数15.obj",
+      "sha256": "1a9841227a4c40bedc33d8d41ea25a7aaa2fa8ffd65dc4472f5aaa2c6c1a7295",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -2.0,
+        1.6666666666666667,
+        0.04242640687119285
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "薄壁_新参数25",
+      "parameter": 2.5,
+      "family": "薄壁",
+      "mesh": "薄壁_新参数25.obj",
+      "sha256": "3a43a6e8bc9504c6b1788e846f05c0be8439193ddc46f55ab049e9d22d796662",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -2.0,
+        1.6666666666666667,
+        0.0848528137423857
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "薄壁_新参数35",
+      "parameter": 3.5,
+      "family": "薄壁",
+      "mesh": "薄壁_新参数35.obj",
+      "sha256": "5dbf8be4483ba7970597112b2dac7674b21acca087757d80ec77ae8f03e59409",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -2.0,
+        1.6666666666666667,
+        0.1697056274847714
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "窄缝_新参数05",
+      "parameter": 0.5,
+      "family": "窄缝",
+      "mesh": "窄缝_新参数05.obj",
+      "sha256": "84c4e16abb4636ddc0c7b5ae1726f6bd0edee72aaa31f1f6ba96bed5e0aab3d9",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -3.35454653676893,
+        1.6666666666666667,
+        1.5
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "窄缝_新参数15",
+      "parameter": 1.5,
+      "family": "窄缝",
+      "mesh": "窄缝_新参数15.obj",
+      "sha256": "5734aba3e738fe211b38272160b50b6039fb9945cfe5183aeac6fd6d5b29708a",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -3.375759740204527,
+        1.6666666666666667,
+        1.5
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "窄缝_新参数25",
+      "parameter": 2.5,
+      "family": "窄缝",
+      "mesh": "窄缝_新参数25.obj",
+      "sha256": "aba957d3f5c9b9b486292f645163454dcb10974d09d0b88b216f04f4edbc0bf1",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -3.4181861470757187,
+        1.6666666666666667,
+        1.5
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    },
+    {
+      "id": "窄缝_新参数35",
+      "parameter": 3.5,
+      "family": "窄缝",
+      "mesh": "窄缝_新参数35.obj",
+      "sha256": "1c8428b3c6dea9bcb1617514998d12cb88a9ba7ac27a07d5369613a10f28ffff",
+      "anchor_face": 4,
+      "anchor_mm": [
+        -3.5030389608181047,
+        1.6666666666666667,
+        1.5
+      ],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "unit": "人为毫米测试尺度",
+      "split": "held_out_for_v2"
+    }
+  ],
+  "negative_inputs": [],
+  "units": {
+    "length": "mm",
+    "time": "ms"
+  },
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200
+  },
+  "source_hashes": {
+    "build_cut_exclusion_cases.py": "0d65aa5e8ee88dd6e019046045b1ac47ade2f4aa5be83e25814fcaddd59ad507",
+    "build_cases.py": "cbd6c1949c29e45042a7363cafff779d5376276888d8e820c4398059454251a4",
+    "prepare_feedback.py": "bf13f1c5d74431416a407eb6fd1eb90d026fdd8b52095310ad0abc5a880e040e"
+  }
+}

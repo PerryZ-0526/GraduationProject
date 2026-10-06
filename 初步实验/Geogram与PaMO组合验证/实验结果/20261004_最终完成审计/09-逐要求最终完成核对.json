@@ -1,0 +1,56 @@
+{
+  "time_beijing": "2026-10-04T04:57:26.013503+08:00",
+  "requirements": [
+    {
+      "requirement": "诊断原版活动范围、阶段代价及远区变化",
+      "evidence": "29号体检、30号来源体检与阶段对照；误报警复核保留历史口径",
+      "research_execution_verified": true
+    },
+    {
+      "requirement": "定义来源、交线、活动域、外部固定及扩域回退",
+      "evidence": "37/38号协议；locality_masks.py、constrained_quality.py及完整闭环分支",
+      "research_execution_verified": true
+    },
+    {
+      "requirement": "在完整闭合网格实现并用GPU运行",
+      "evidence": "作者GPU投影完整碰撞范围；实际worker输出与设备记录；五阶段远端二进制哈希重新核对",
+      "research_execution_verified": true
+    },
+    {
+      "requirement": "公平工程基线、普通局部及机制消融",
+      "evidence": "原版工程收益隔离；同输入8×7×3共168条记录；161张返回输出哈希、随机交错顺序及共同输入核对",
+      "research_execution_verified": true
+    },
+    {
+      "requirement": "冻结独立输入、真实反馈、长序列和CT应用",
+      "evidence": "13源码与全部登记输入哈希；开发24、长48、CT154、独立48共274前缀；四组父链；九特征27维护；125保存输出重审",
+      "research_execution_verified": true
+    }
+  ],
+  "research_execution_complete": true,
+  "algorithm_innovation_established": false,
+  "valid_full_ct_execution_complete": false,
+  "continuous_geometry_certified": false,
+  "product_online_realtime_delivery": false,
+  "fresh_checks": {
+    "core_tests": 108,
+    "extra_tests": 14,
+    "core_skipped_classes": 1,
+    "saved_outputs_rechecked": 125,
+    "remote_binary_hashes_checked": 5,
+    "frozen_sources_checked": 13,
+    "development_records": 168,
+    "returned_output_hashes_checked": 161
+  },
+  "development_revision": {
+    "old_source_sha256": "ca793224c6595b75f6f893ba5b4cf605d86f91f84ec1e8ce7f823a76da1aa272",
+    "frozen_source_sha256": "cec0e94a49ecd5fb0410e3905e2a5e93f8ff667ee7e812e31cdb62f0e1cacf0b",
+    "difference": "独立冻结前增加零自由度恒等返回；开发历史源码已从远端取回并核对，不冒充全批同源码"
+  },
+  "limitations": [
+    "实验执行完成不代表失败路线修复；阻断段未运行维护",
+    "没有稳定胜过完整PaMO或普通空间局部的协同贡献证据",
+    "当前方法不再使用已打开独立输入调参后宣称独立验证",
+    "保存网格仅通过列明的浮点数值检查，参考离散误差及连续查询误差未认证"
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "time_beijing": "2026-10-04T04:23:13.414338+08:00",
+  "scope": "只读复核，不增加发布或继续后续GPU；原记录保持",
+  "rows": [
+    {
+      "route": "development_shallow_slab_01",
+      "event": "e1",
+      "listed_topology_valid_after_separation_review": false,
+      "checks": {
+        "vertices": 712,
+        "faces": 1420,
+        "finite": true,
+        "zero_area_faces": 9,
+        "fp32_zero_area_faces": 9,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.083495565915943,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      }
+    },
+    {
+      "route": "development_repeat_slab_01",
+      "event": "e1",
+      "listed_topology_valid_after_separation_review": true,
+      "checks": {
+        "vertices": 701,
+        "faces": 1398,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.035376887241828,
+        "self_intersection_raw_alarm_faces": 2,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              1087,
+              1089
+            ],
+            "separation_gap_mm": 0.00023465434729452728
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      }
+    },
+    {
+      "route": "development_plan_edge_slab_01",
+      "event": "e2",
+      "listed_topology_valid_after_separation_review": false,
+      "checks": {
+        "vertices": 715,
+        "faces": 1426,
+        "finite": true,
+        "zero_area_faces": 28,
+        "fp32_zero_area_faces": 28,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.088878260763796,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      }
+    },
+    {
+      "route": "development_crossing_slab_01",
+      "event": "e1",
+      "listed_topology_valid_after_separation_review": false,
+      "checks": {
+        "vertices": 682,
+        "faces": 1360,
+        "finite": true,
+        "zero_area_faces": 4,
+        "fp32_zero_area_faces": 4,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.925552409124908,
+        "self_intersection_raw_alarm_faces": 4,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              935,
+              936
+            ],
+            "separation_gap_mm": 2.464646183986119e-05
+          },
+          {
+            "faces": [
+              935,
+              1343
+            ],
+            "separation_gap_mm": 0.5291256166804875
+          },
+          {
+            "faces": [
+              935,
+              1351
+            ],
+            "separation_gap_mm": 0.5994804770514282
+          },
+          {
+            "faces": [
+              936,
+              1343
+            ],
+            "separation_gap_mm": 0.6120561929835389
+          },
+          {
+            "faces": [
+              936,
+              1351
+            ],
+            "separation_gap_mm": 0.6308031716020204
+          },
+          {
+            "faces": [
+              1343,
+              1351
+            ],
+            "separation_gap_mm": 0.019451208584654323
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      }
+    }
+  ]
+}

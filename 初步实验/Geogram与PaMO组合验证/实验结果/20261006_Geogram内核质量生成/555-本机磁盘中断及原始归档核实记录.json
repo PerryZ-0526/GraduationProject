@@ -1,0 +1,27 @@
+{
+  "生成时间": "2026-10-07T01:12:03+08:00",
+  "修改时间及修改内容": "首次本机磁盘中断及远端实际终态核实",
+  "文档概述": "420原生调用已完成；本机部分解包保留，完整ZIP逐对象摘要成立；CT原账本不覆盖",
+  "索引目录": [
+    "development",
+    "ct"
+  ],
+  "status": "completed_readonly_actual_remote_and_archive_verification",
+  "development": {
+    "archive_sha256": "9990d2d604fccf35b475a0293df180d983a82b2724c1aedd944e58324f8f3d0a",
+    "planned": 420,
+    "returned": 420,
+    "failed": 0,
+    "archive_crc_all_valid": true,
+    "all_returned_mesh_sha256_matched": true
+  },
+  "ct": {
+    "source_record_sha256": "a7c70bf75d7de0feaa94cde5dc558014c2941f99047bd3074dd068a00c113f7e",
+    "status": "failed_actual_native_feedback_controller",
+    "recorded_events": 15,
+    "accepted_events": 15,
+    "error": "[Errno 32] Broken pipe",
+    "last_event_index": 14
+  },
+  "partial_extraction_policy": "不重新生成、不删除或覆盖部分解包现场；质量及几何复算直接读取完整原ZIP"
+}

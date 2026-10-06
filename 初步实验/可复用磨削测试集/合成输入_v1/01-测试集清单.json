@@ -1,0 +1,1764 @@
+{
+  "schema": 1,
+  "time_beijing": "2026-10-04T05:00:20.146189+08:00",
+  "units": {
+    "length": "mm",
+    "time": "ms"
+  },
+  "source": "确定性程序生成，无患者数据",
+  "split_rule": "每家族变体0、1用于开发，2、3、4用于保留评价；同体全部路线同一划分",
+  "reference": "输入多边形几何；没有连续CSG真值或距离证书",
+  "bodies": [
+    {
+      "id": "板体_00",
+      "family": "板体",
+      "variant": 0,
+      "split": "development",
+      "mesh": "板体_00.obj",
+      "sha256": "a4490b1de6dbae8da738ce81ba8ff1c2e7f7a747b7be7310b624e264d76221e4",
+      "bounds": [
+        [
+          -6.0,
+          -5.0,
+          -1.5
+        ],
+        [
+          6.0,
+          5.0,
+          1.5
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "板体_00_浅磨.json",
+          "sha256": "1425442dbcd5e9f3b70c5977504b21b4055598b79f44cb3bebb70cc646e2aac8",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "板体_00_交叉.json",
+          "sha256": "3a8c8918c8f2fb1b55600ea0b2507d3c154767ea22bba61df095b1d0e195a0bc",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "板体_00_重复.json",
+          "sha256": "13251c553a39255d79f411fead2e63792ea2ee63995944a8967cfe8dce6e06dc",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "板体_00_长序列.json",
+          "sha256": "e3e7c586e443ad11767970e74b0d68a78119a5b844f583d0250d64b9fbf55693",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "板体_01",
+      "family": "板体",
+      "variant": 1,
+      "split": "development",
+      "mesh": "板体_01.obj",
+      "sha256": "ec02341bbf15525c8b0c1f91f6cab01316fc0427f89af51dbc94fea1ae0e33f6",
+      "bounds": [
+        [
+          -6.42,
+          -5.0,
+          -1.6
+        ],
+        [
+          6.42,
+          5.0,
+          1.6
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "板体_01_浅磨.json",
+          "sha256": "2c29625173321107b924658ea4f41369526af3e50ceec54c367cc087d81f3c67",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "板体_01_交叉.json",
+          "sha256": "58388bc49c37242af9886f10aa4a0dbccf0a19886d1fd43d8f4c1ec7f754bda3",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "板体_01_重复.json",
+          "sha256": "e67e8e34d3e15732bf6eaa441d8a596df70ad0fa67dc01abce3ff86dfc63560d",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "板体_01_长序列.json",
+          "sha256": "a7df7c9446ec4e3f100bf0e42fac2e721acc23e98c4a8d11429649f3d4f7c3b5",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "板体_02",
+      "family": "板体",
+      "variant": 2,
+      "split": "held_out",
+      "mesh": "板体_02.obj",
+      "sha256": "9b7ab621d39ed2fa5063967429668b63104bb1d8de8cf4256be35b2e595c1504",
+      "bounds": [
+        [
+          -6.840000000000001,
+          -5.0,
+          -1.7
+        ],
+        [
+          6.840000000000001,
+          5.0,
+          1.7
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "板体_02_浅磨.json",
+          "sha256": "386a6feaa769a169039548eba89ade5f3f1fb305573ffe547b68eb89ad888e38",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "板体_02_交叉.json",
+          "sha256": "0ade13a10c9969f2ecdd64469b536302280664e878c4f1cc66e1cf6f3af31dd3",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "板体_02_重复.json",
+          "sha256": "7f5e6e591b3e4a995db5052a7785e86ad2b144593356da5fac3cac80b84d755a",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "板体_02_长序列.json",
+          "sha256": "457fe94fef85caf34dd6fa9370ad0c4b3a1b0c2ff3c22bd6c3ec97654b34652f",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "板体_03",
+      "family": "板体",
+      "variant": 3,
+      "split": "held_out",
+      "mesh": "板体_03.obj",
+      "sha256": "72f329e0d4d70955d8e5305c40e7d85224cf7c2d06b9907edac02b56722c5884",
+      "bounds": [
+        [
+          -7.26,
+          -5.0,
+          -1.8
+        ],
+        [
+          7.26,
+          5.0,
+          1.8
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "板体_03_浅磨.json",
+          "sha256": "7812c1ae8661dc11de9666e46533c899775741c667168b9d3fc809b74a68885e",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "板体_03_交叉.json",
+          "sha256": "c1d677ee369636ec88c3407a7de3dab4726d831bf60ed1d916a51b91a521010b",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "板体_03_重复.json",
+          "sha256": "d58c24fb913d25fc6d81a26099efc1d69127fbc064fc9360c56feb5f55437030",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "板体_03_长序列.json",
+          "sha256": "64b5c3f67076dfecb41ee8af6ee123b9eb929aebcfe2fef6553e5bde43937cb1",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "板体_04",
+      "family": "板体",
+      "variant": 4,
+      "split": "held_out",
+      "mesh": "板体_04.obj",
+      "sha256": "45c5adbdd590af6399b0694eecbdabd1d8bec2ed4ae4f0f250a985ddd5d4d104",
+      "bounds": [
+        [
+          -7.68,
+          -5.0,
+          -1.9
+        ],
+        [
+          7.68,
+          5.0,
+          1.9
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "板体_04_浅磨.json",
+          "sha256": "3e1079224c76183079fa5293f5c5c88085e1485bf2f930d0c529f4f5e07412f1",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "板体_04_交叉.json",
+          "sha256": "d4b475cc6322f009cb017c10979c40c2ebb15f6267319559d6545488b4247249",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "板体_04_重复.json",
+          "sha256": "62962ec78238a30e6eb267f1ecb1bc5b9a06db9de45811d15569e47f41c15c62",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "板体_04_长序列.json",
+          "sha256": "8fd6d48bd45c40009f586a4ef46d6432828b68b4e1e0829c6587855bcc633fe5",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "球体_00",
+      "family": "球体",
+      "variant": 0,
+      "split": "development",
+      "mesh": "球体_00.obj",
+      "sha256": "a151caf7baff927cba923e2315bf1e49b6e5a384150a2acb5b1cd1e00f440a39",
+      "bounds": [
+        [
+          -5.0,
+          -5.0,
+          -5.0
+        ],
+        [
+          5.0,
+          5.0,
+          5.0
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "球体_00_浅磨.json",
+          "sha256": "426395fa7e5fa775db0486d15b872601d788488d79c73c54fae5e6618c87d7e4",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "球体_00_交叉.json",
+          "sha256": "479868d2235cb24d8398b9893d85ddb333939731718992baa1e31f61f945b10f",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "球体_00_重复.json",
+          "sha256": "1423269c05d250aa314f8b1aa9b5ab0198712fee792b130ad00b413b68b42f04",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "球体_00_长序列.json",
+          "sha256": "1c75cb400adac26b57ee83864e95bb6f46be93df197317c9d31ee1307216ddcd",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "球体_01",
+      "family": "球体",
+      "variant": 1,
+      "split": "development",
+      "mesh": "球体_01.obj",
+      "sha256": "4c3b14736c272903aaf973a5d8345ef15f97a0124da85d88e288f7b38e09c216",
+      "bounds": [
+        [
+          -5.3500000000000005,
+          -5.3500000000000005,
+          -5.3500000000000005
+        ],
+        [
+          5.3500000000000005,
+          5.3500000000000005,
+          5.3500000000000005
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "球体_01_浅磨.json",
+          "sha256": "f4ca6399de81e2c8b31045a9704ded2dde8df279a5282931249328d0c7096c31",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "球体_01_交叉.json",
+          "sha256": "a80bb627e72997ab584e1a5784cd272722aa868a9955bb6fff748e321b2d34d1",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "球体_01_重复.json",
+          "sha256": "a7be26706857cf9da2bbfb02a25f84f4f77c145275e27985b285441041846a15",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "球体_01_长序列.json",
+          "sha256": "6440149112917806f69c0ccd23832893f8b213fa80de02fc6a68dcd3eda00eca",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "球体_02",
+      "family": "球体",
+      "variant": 2,
+      "split": "held_out",
+      "mesh": "球体_02.obj",
+      "sha256": "810a0003fcabde51169e20c4ea05f2d2be8cd7bdeed781957c3f46f0ff1d5b36",
+      "bounds": [
+        [
+          -5.700000000000001,
+          -5.700000000000001,
+          -5.700000000000001
+        ],
+        [
+          5.700000000000001,
+          5.700000000000001,
+          5.700000000000001
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "球体_02_浅磨.json",
+          "sha256": "774d9f01edc3d0e0b0dcd0c459c8c3522dc1a9b26aefa4a24ee8612db0e4434a",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "球体_02_交叉.json",
+          "sha256": "798f31df8acff78257edda9e1d10375b8ab66f42450d905d83a059738c4d5f41",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "球体_02_重复.json",
+          "sha256": "e952c05bf23acbcce16838c6dbee0a804e34b24983e9ae4839a43b54707e25e4",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "球体_02_长序列.json",
+          "sha256": "353cac15f12a03c86a193a6d0741d0b0e607f37ad2996dfb485c19b96c5f249d",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "球体_03",
+      "family": "球体",
+      "variant": 3,
+      "split": "held_out",
+      "mesh": "球体_03.obj",
+      "sha256": "48dfb47a3b9e14dab97f7f2f7a506bc6349d55160ddf0b70d9afbc42e21e4ea4",
+      "bounds": [
+        [
+          -6.05,
+          -6.05,
+          -6.05
+        ],
+        [
+          6.05,
+          6.05,
+          6.05
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "球体_03_浅磨.json",
+          "sha256": "0a13471039b66dc05f0d8bc817abd22ff9e213d626850524d9de95e96e3de051",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "球体_03_交叉.json",
+          "sha256": "61a9d0bb82fa8d5e57e7eb7ed6a2568e8aa60975451e91a4decc7a33e95f0e1a",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "球体_03_重复.json",
+          "sha256": "3f0c0a0e0c7f354e4281eb1f730be03ce2d5d30fc77797ade8692ec82b24eba7",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "球体_03_长序列.json",
+          "sha256": "12d9ad1a036a2f87e62f40bc437e733a134a9054788e2fb8a8128333d7b041e9",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "球体_04",
+      "family": "球体",
+      "variant": 4,
+      "split": "held_out",
+      "mesh": "球体_04.obj",
+      "sha256": "5f0f879c163bfff0e9e12ad53f85b29eff5fda52be8325e6a42c461b3d1ca2ca",
+      "bounds": [
+        [
+          -6.4,
+          -6.4,
+          -6.4
+        ],
+        [
+          6.4,
+          6.4,
+          6.4
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "球体_04_浅磨.json",
+          "sha256": "3439c5c5e80cf6dfce055854ff11f59e8d8a55fcb7e773e70fa61d993121a605",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "球体_04_交叉.json",
+          "sha256": "90838277980cbe71d60d11483ded63e89a2cdf718c3069046335f849f4606bbc",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "球体_04_重复.json",
+          "sha256": "cde7819d01045005e3709abcf573eec9069ec103409e42a4461e7cab1b7dcd3d",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "球体_04_长序列.json",
+          "sha256": "71fe7a904d652cec7ad755b0ad810dfd923ea541b9162d9498cfdd673aba0209",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "椭球_00",
+      "family": "椭球",
+      "variant": 0,
+      "split": "development",
+      "mesh": "椭球_00.obj",
+      "sha256": "20fafd2f698b82b32b43d3d2f7354888a94aa16776575ce723597b26abb7db19",
+      "bounds": [
+        [
+          -8.0,
+          -4.0,
+          -2.75
+        ],
+        [
+          8.0,
+          4.0,
+          2.75
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "椭球_00_浅磨.json",
+          "sha256": "87f04e405756c8201586ce1bcfa93cb139968a3fcbeac0712175dfd6643e9455",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "椭球_00_交叉.json",
+          "sha256": "767ea5b6b39805d44fce7b6ba5bba71e73bc6f415b9ab89eb70e05744092df7d",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "椭球_00_重复.json",
+          "sha256": "76b7266c3fee54ad5803de38eee2ed371243547ef58932808c162f4d0de6e943",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "椭球_00_长序列.json",
+          "sha256": "6f105cbea354c12ca1d70424e4d5994bf046ebd59707d43861e7dc2a0be28a3f",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "椭球_01",
+      "family": "椭球",
+      "variant": 1,
+      "split": "development",
+      "mesh": "椭球_01.obj",
+      "sha256": "205125e97a4b94ab014fc590df1ece617573811d917d1189971e64212c7d184a",
+      "bounds": [
+        [
+          -8.56,
+          -4.28,
+          -3.1030000000000006
+        ],
+        [
+          8.56,
+          4.28,
+          3.1030000000000006
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "椭球_01_浅磨.json",
+          "sha256": "0139eccf68cbedc7a9989c9d1ce3bb5e586c642ad9b2ad0437587565ca533d63",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "椭球_01_交叉.json",
+          "sha256": "e1e6c549ffd15c14b0f9124b88a70c6f11df0de06fbbd6d9ace0c40d16c27fcc",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "椭球_01_重复.json",
+          "sha256": "b1cb2f6c471d29c40d9ffec16ad71757a774222f5dc4c16649637b563866ecef",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "椭球_01_长序列.json",
+          "sha256": "409235558711d0a1a4e7e29078cb245c26c1f468663bd95424b30928a3e9ee22",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "椭球_02",
+      "family": "椭球",
+      "variant": 2,
+      "split": "held_out",
+      "mesh": "椭球_02.obj",
+      "sha256": "87ae141a6f153edac97822a3e287d666fcfc920ac82113772cbe803ff48d0c0b",
+      "bounds": [
+        [
+          -9.120000000000003,
+          -4.560000000000001,
+          -3.477000000000001
+        ],
+        [
+          9.120000000000003,
+          4.560000000000001,
+          3.477000000000001
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "椭球_02_浅磨.json",
+          "sha256": "5142d6e4a861e7ee8a811ff02d8378e6be8a785ef5a662d40159934d5eccbb57",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "椭球_02_交叉.json",
+          "sha256": "75778c4c1e7740ae3771b9da2845ecf0f98dd4c31fca04db6fe4399151784806",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "椭球_02_重复.json",
+          "sha256": "cb5ecdb3e1c6fb3dbbdbffb5ed45e7b39dcb1d0612bdaa56a6717052b05e7dd0",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "椭球_02_长序列.json",
+          "sha256": "083d96b7a54f128eac39c7312a415bbf67c895a0d709e7008f16beb27a1af5bf",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "椭球_03",
+      "family": "椭球",
+      "variant": 3,
+      "split": "held_out",
+      "mesh": "椭球_03.obj",
+      "sha256": "def0828264e26b396b1c03e2be3cd4c6140dcfe692a7d6cd77d7da1b9e765a8d",
+      "bounds": [
+        [
+          -9.68,
+          -4.84,
+          -3.872
+        ],
+        [
+          9.68,
+          4.84,
+          3.872
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "椭球_03_浅磨.json",
+          "sha256": "01a172b9d1bc27a13c6ec9c106e437b5c6ce74aa7947dfebf28a267fb9d611e9",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "椭球_03_交叉.json",
+          "sha256": "0e9a17d98371715d76823fa83b43dc246ff9a97048b03e39b2ba4ed302f987a0",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "椭球_03_重复.json",
+          "sha256": "cc6105c0bd16b864458ed72944dabeb53c86a6e46303f4c99a3b8a8090ae3871",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "椭球_03_长序列.json",
+          "sha256": "b4897bffc3d2c535a3ed50fff1c2a26f10d610797da24108e928191d9969b85b",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "椭球_04",
+      "family": "椭球",
+      "variant": 4,
+      "split": "held_out",
+      "mesh": "椭球_04.obj",
+      "sha256": "7526f967d9a7508cdbb69994d734ce82e4bdd36b5c9a09ebb80c52140fcfe233",
+      "bounds": [
+        [
+          -10.240000000000002,
+          -5.120000000000001,
+          -4.288
+        ],
+        [
+          10.240000000000002,
+          5.120000000000001,
+          4.288
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "椭球_04_浅磨.json",
+          "sha256": "8d37fe1b021ac9ed521f615dbb49c2c5df996c61e688ead52776121556486a33",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "椭球_04_交叉.json",
+          "sha256": "49bedbed31298f1f4239d9d586a846238bebb0442f14f7a3688cf8d4a7d16532",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "椭球_04_重复.json",
+          "sha256": "41a9de80da637a1ee10ec3e73e25926cf8ca086dd1cb3009e6a58498938bbd8a",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "椭球_04_长序列.json",
+          "sha256": "03888b420a540700c6c971de905438c003f5019ae1626c823328682edb2b0255",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "弯曲骨样体_00",
+      "family": "弯曲骨样体",
+      "variant": 0,
+      "split": "development",
+      "mesh": "弯曲骨样体_00.obj",
+      "sha256": "a4d7e3757683e456c087b57d317e48b55f933a508741eebf0e26a2a2319ac4d1",
+      "bounds": [
+        [
+          -3.25,
+          -4.0,
+          -9.0
+        ],
+        [
+          4.0531121390971165,
+          4.0,
+          9.0
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "弯曲骨样体_00_浅磨.json",
+          "sha256": "df0d3d65879d13b4e0e20b0648672f18ae233d6c5586c083712f6434aa94bcdc",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "弯曲骨样体_00_交叉.json",
+          "sha256": "172c9805f7251b4d2ca33da54cbae694f67134231c4475e5ca36d858494a273b",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "弯曲骨样体_00_重复.json",
+          "sha256": "56c4fb9c039e736f5e8e28db9c16c3d65a8f67c9387979cd39bd5a854b581611",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "弯曲骨样体_00_长序列.json",
+          "sha256": "bdedad8470b5a89354357ba5b5611357778f606dc9cb4f44675f70136fc29b83",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "弯曲骨样体_01",
+      "family": "弯曲骨样体",
+      "variant": 1,
+      "split": "development",
+      "mesh": "弯曲骨样体_01.obj",
+      "sha256": "93a39ca16f2b05dd82fa1b9978c728f90f6a91bb3caad08c7dddf331f99b6682",
+      "bounds": [
+        [
+          -3.4775000000000005,
+          -4.28,
+          -9.63
+        ],
+        [
+          4.512431992084689,
+          4.28,
+          9.63
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "弯曲骨样体_01_浅磨.json",
+          "sha256": "b7e58e513523342d0d90aa3335f829129c5226884f0318197f66e621095bc5eb",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "弯曲骨样体_01_交叉.json",
+          "sha256": "b1f9327833c68e0221d0fa1a0076a8afb56395d3d374ef50e0464ae68fd603da",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "弯曲骨样体_01_重复.json",
+          "sha256": "d1b3dc90a68ea67ffbe77faac892ab36d6ef14bc78863c46ff3543046781fcc3",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "弯曲骨样体_01_长序列.json",
+          "sha256": "464adf4913155e09271ce45e2233226d727176b200cb807c86aa478413bca5da",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "弯曲骨样体_02",
+      "family": "弯曲骨样体",
+      "variant": 2,
+      "split": "held_out",
+      "mesh": "弯曲骨样体_02.obj",
+      "sha256": "c7ca36a20cccf3b323b5137ceccf9fad2320f174e0abcc1be9d5ff028780cd8d",
+      "bounds": [
+        [
+          -3.705000000000001,
+          -4.560000000000001,
+          -10.260000000000002
+        ],
+        [
+          4.994727808114419,
+          4.560000000000001,
+          10.260000000000002
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "弯曲骨样体_02_浅磨.json",
+          "sha256": "94cec908a28bcdd3c1e7c258b6d6ca439ece1b39bc4cfed59aa5c02694edb779",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "弯曲骨样体_02_交叉.json",
+          "sha256": "d75c1e7854b16c3006cca7ba466d60a88a8bc521104a7ad8c32e6f6c506a0096",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "弯曲骨样体_02_重复.json",
+          "sha256": "cf220ecf76e4b9bbf0926336f84a4bfbb5681ffc98a959e00ee29d7cf58db314",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "弯曲骨样体_02_长序列.json",
+          "sha256": "a87ec4e1ae4a4d160725d61faa14a798dcd8bd1caaf22e9e6778129324c8ac17",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "弯曲骨样体_03",
+      "family": "弯曲骨样体",
+      "variant": 3,
+      "split": "held_out",
+      "mesh": "弯曲骨样体_03.obj",
+      "sha256": "a749dc19bf8ee6fc884e5515454ac57735604b97aa2895ace25231c32d6b8273",
+      "bounds": [
+        [
+          -3.9325,
+          -4.84,
+          -10.89
+        ],
+        [
+          5.525491014825045,
+          4.84,
+          10.89
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "弯曲骨样体_03_浅磨.json",
+          "sha256": "9307e5a3d9b0a8f3a5375d49834473d6577eaf6d51a2e241c16856b7376220bd",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "弯曲骨样体_03_交叉.json",
+          "sha256": "5e0cfbb5acdf8af3cfc088cf90c2bc0cf2f32e6ceaee019c652a596ecae41320",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "弯曲骨样体_03_重复.json",
+          "sha256": "bbd952774838b410e588851087aaa74684b896440ee204b54a2993b9495a7332",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "弯曲骨样体_03_长序列.json",
+          "sha256": "c73e8c6d280501bd20e27563551be6d47384c292e0920d077d8ab0cb57840b05",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "弯曲骨样体_04",
+      "family": "弯曲骨样体",
+      "variant": 4,
+      "split": "held_out",
+      "mesh": "弯曲骨样体_04.obj",
+      "sha256": "89365b66011d8adb01b20f5473719b72737448d3596e0968fb54e69e4ed57c6d",
+      "bounds": [
+        [
+          -4.16,
+          -5.120000000000001,
+          -11.520000000000001
+        ],
+        [
+          6.087126654469028,
+          5.120000000000001,
+          11.520000000000001
+        ]
+      ],
+      "faces": 1280,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "弯曲骨样体_04_浅磨.json",
+          "sha256": "e7dadb94ea45b6f2571141cd66f73f949c3dff34d2b157080cdf0c3be9b82770",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "弯曲骨样体_04_交叉.json",
+          "sha256": "f3976b0f40934ff59327f076aafcfd14fece62bb2a755fd6da555b1df84e343d",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "弯曲骨样体_04_重复.json",
+          "sha256": "9d8725cbbccffe9fb002965189c439867b8d8afb7896add9625e9a3e41052143",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "弯曲骨样体_04_长序列.json",
+          "sha256": "22372b4dd9dcc736610dc8e05297184eb352cc8f6675b52ae952849546bce64b",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "贯通孔_00",
+      "family": "贯通孔",
+      "variant": 0,
+      "split": "development",
+      "mesh": "贯通孔_00.obj",
+      "sha256": "104156e465044b0f209df08c738e49d8d87f07f231809af50d482f9b7fc1f26a",
+      "bounds": [
+        [
+          -5.0,
+          -5.0,
+          -1.0
+        ],
+        [
+          5.0,
+          5.0,
+          1.0
+        ]
+      ],
+      "faces": 512,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "贯通孔_00_浅磨.json",
+          "sha256": "8a39edaa0fbcaae6173e9f03a5e252764fa0546eb8c2b03e437f3ebc11777888",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "贯通孔_00_交叉.json",
+          "sha256": "c0db62761d91b44027a1f2bcbe1159592b29b5f98c6b4b8208edbdc0c788db7e",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "贯通孔_00_重复.json",
+          "sha256": "0081782f416ea65e4527c31b6785bed61b55424fe2e4951ca4eec46e00316251",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "贯通孔_00_长序列.json",
+          "sha256": "03c255e93f9e5420fc3b9a6b196bb8e9bb1f1fecad753bf9b05a7c965d0ffe73",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "贯通孔_01",
+      "family": "贯通孔",
+      "variant": 1,
+      "split": "development",
+      "mesh": "贯通孔_01.obj",
+      "sha256": "73e06e22ed474c395036b3ee1dc3f77b1830965a3c5f00130e33e64759234868",
+      "bounds": [
+        [
+          -5.3500000000000005,
+          -5.3500000000000005,
+          -1.0
+        ],
+        [
+          5.3500000000000005,
+          5.3500000000000005,
+          1.0
+        ]
+      ],
+      "faces": 512,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "贯通孔_01_浅磨.json",
+          "sha256": "0330a9ad597546a92262c18defaf5742da531e1ca58b9091fa28f2dee5d85404",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "贯通孔_01_交叉.json",
+          "sha256": "b6fb6443fc731b51644912637ea199b37403059a03d6d10b0145018ea38df163",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "贯通孔_01_重复.json",
+          "sha256": "3c55f9c24474a851a66ab832cdbe5ab95dc77afcbd6ee5839621c55bde3d825c",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "贯通孔_01_长序列.json",
+          "sha256": "9e7449aa0a3810f0019336fa57ba25b9c5c572f9589ec611d4b9ec17de67e19d",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "贯通孔_02",
+      "family": "贯通孔",
+      "variant": 2,
+      "split": "held_out",
+      "mesh": "贯通孔_02.obj",
+      "sha256": "63c4aa82d3bbf47b562c3ce2352a706c3e185440565c93ff68634ab21bf7ddfa",
+      "bounds": [
+        [
+          -5.700000000000001,
+          -5.700000000000001,
+          -1.0
+        ],
+        [
+          5.700000000000001,
+          5.700000000000001,
+          1.0
+        ]
+      ],
+      "faces": 512,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "贯通孔_02_浅磨.json",
+          "sha256": "3cd495c6e2995c716d245efe470a1604e529d16a5be3d0223236a49f80f693c5",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "贯通孔_02_交叉.json",
+          "sha256": "a56c3db05512d47fdef5b18b17927e5c3326c29b83c71c7ef4bf7750c78f72ba",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "贯通孔_02_重复.json",
+          "sha256": "5c4fcf672036939923f2e3c8c17d74a30be92b3866eed6d68eb577f778512172",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "贯通孔_02_长序列.json",
+          "sha256": "2113554030e92f71c58387a6147c555ae4753ccb5392fafcca0c41c5c8b17ee2",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "贯通孔_03",
+      "family": "贯通孔",
+      "variant": 3,
+      "split": "held_out",
+      "mesh": "贯通孔_03.obj",
+      "sha256": "c60beb840546c2f24cc38e05a0ae5f961ce945f4824aa6cea189ff740681d1ed",
+      "bounds": [
+        [
+          -6.05,
+          -6.05,
+          -1.0
+        ],
+        [
+          6.05,
+          6.05,
+          1.0
+        ]
+      ],
+      "faces": 512,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "贯通孔_03_浅磨.json",
+          "sha256": "496fd5becd55485b8d5fe1454a54b04faf919d1f4aa7e0aec630ee59c70691aa",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "贯通孔_03_交叉.json",
+          "sha256": "c228fce50d956b53740ab4964af07594592c2fa456b4d2b8a95ee2571a9c6e17",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "贯通孔_03_重复.json",
+          "sha256": "d918f4aae1a562497a58f69376cb8070c2208b97bbf2ee7e351017959219c4d0",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "贯通孔_03_长序列.json",
+          "sha256": "8fe762e5d9a870d1dbe7b67be7ae85ad704c93d3c2d632c25c741be56f2b5700",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "贯通孔_04",
+      "family": "贯通孔",
+      "variant": 4,
+      "split": "held_out",
+      "mesh": "贯通孔_04.obj",
+      "sha256": "8bc45f9d6599dd080986172c429fcacee8692f2150af3894901b7a667c504bbd",
+      "bounds": [
+        [
+          -6.4,
+          -6.4,
+          -1.0
+        ],
+        [
+          6.4,
+          6.4,
+          1.0
+        ]
+      ],
+      "faces": 512,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "贯通孔_04_浅磨.json",
+          "sha256": "019cc15ca0a1a2f2be2e0a165403d802141a857397d13feecdef8090e121b798",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "贯通孔_04_交叉.json",
+          "sha256": "f015a024ba78ef9deda627fdfa04d46bb8b7fe5c68e2767b7fdb4b65f1079f4a",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "贯通孔_04_重复.json",
+          "sha256": "abcbdd86625dc89d436a9652de33267f89a90fcbe4907dbf3c952687f3ef549c",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "贯通孔_04_长序列.json",
+          "sha256": "d280cae54a870d95c9d52b198200ff38ff108a34152b57231aebefd23e90db94",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "薄壁_00",
+      "family": "薄壁",
+      "variant": 0,
+      "split": "development",
+      "mesh": "薄壁_00.obj",
+      "sha256": "aaf42a439b3130a3d1856f7132d5c8da8610094328953b8a3cd5a837cc1dc429",
+      "bounds": [
+        [
+          -6.0,
+          -5.0,
+          -0.015
+        ],
+        [
+          6.0,
+          5.0,
+          0.015
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "薄壁_00_浅磨.json",
+          "sha256": "da888d6da61c41ea963e69d108ec1ba6ad1afdc4c4cc51ab2ef42c211d759a93",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "薄壁_00_交叉.json",
+          "sha256": "798dc52fedf4e3466d440b9e6e682c8da0927f2e40518bfda726cb1e2d4305f8",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "薄壁_00_重复.json",
+          "sha256": "195ae655eb8d93bd44e22f10249a21378791f3963926ec6993435193b9ed108b",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "薄壁_00_长序列.json",
+          "sha256": "56cc4aeef15091ef6d13e560a94d06b9d9fbe24da0a65a6504c0017f5c939aaf",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "薄壁_01",
+      "family": "薄壁",
+      "variant": 1,
+      "split": "development",
+      "mesh": "薄壁_01.obj",
+      "sha256": "3fe2955bbcbea735883de749ef16d264492344476f89b282a9d1df06f413c051",
+      "bounds": [
+        [
+          -6.0,
+          -5.0,
+          -0.03
+        ],
+        [
+          6.0,
+          5.0,
+          0.03
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "薄壁_01_浅磨.json",
+          "sha256": "18876e19d9627714c03494645f86ce8b15e499cc9cb71baa5b5f562ebcdfc51f",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "薄壁_01_交叉.json",
+          "sha256": "32722be9e0530b74af69f1e1c3fd1689c711ce98f1fdfd44be07d1d50fb91dfa",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "薄壁_01_重复.json",
+          "sha256": "283925043818324ef6677f1a6cb5615cc6e2269af59c900f449cd8811e53e54d",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "薄壁_01_长序列.json",
+          "sha256": "7b63b4c51206e9781cc8b728a7a635f8ee16717f0497089c45611f70fb81add8",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "薄壁_02",
+      "family": "薄壁",
+      "variant": 2,
+      "split": "held_out",
+      "mesh": "薄壁_02.obj",
+      "sha256": "3804089eceb352cdb1f0ba765a3f070269334360eb55d72609737bd010bcfe83",
+      "bounds": [
+        [
+          -6.0,
+          -5.0,
+          -0.06
+        ],
+        [
+          6.0,
+          5.0,
+          0.06
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "薄壁_02_浅磨.json",
+          "sha256": "d9409917cf6a924fb5cba2f1f3bc0a85d7df6babf9b5c4d72692bfd6c5e1450e",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "薄壁_02_交叉.json",
+          "sha256": "e964817c06389f7e57cdee6ba52ef268ad4c7e4cbf8694fff16031f3e9f9fb8a",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "薄壁_02_重复.json",
+          "sha256": "313f99c98a584408b95a0565c1c71ed8bc0842e46ca96fa2d2fe5eb56bc64bff",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "薄壁_02_长序列.json",
+          "sha256": "ceda6243042d618bc58bb7f29322d6365ddd2cb5d9e9597d94b63dc12a5c5a3a",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "薄壁_03",
+      "family": "薄壁",
+      "variant": 3,
+      "split": "held_out",
+      "mesh": "薄壁_03.obj",
+      "sha256": "eb28d245af20485449d1f793de500a10bb3cb29fd35c024cbe071d97ac35d76c",
+      "bounds": [
+        [
+          -6.0,
+          -5.0,
+          -0.12
+        ],
+        [
+          6.0,
+          5.0,
+          0.12
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "薄壁_03_浅磨.json",
+          "sha256": "008f636507df9f13e07e9cdea0862cd83776ee9265338b8641e2ecdc9ae50fe2",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "薄壁_03_交叉.json",
+          "sha256": "6100ca602650b3f053d277795bd03a41e108d8d1a131ff2c5fa000ba2d8d093e",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "薄壁_03_重复.json",
+          "sha256": "a443ac59209b48a703c4df7794628470a1c26f25380d4a64b7446ab67ba42936",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "薄壁_03_长序列.json",
+          "sha256": "e0cce1321235b5f6671f7dfb8a8608516ccbad3d7256c393331599082f8d0be5",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "薄壁_04",
+      "family": "薄壁",
+      "variant": 4,
+      "split": "held_out",
+      "mesh": "薄壁_04.obj",
+      "sha256": "747a73ae32593644d77b04e798207fa061d457d77a62da4e1b1dea1167215bee",
+      "bounds": [
+        [
+          -6.0,
+          -5.0,
+          -0.24
+        ],
+        [
+          6.0,
+          5.0,
+          0.24
+        ]
+      ],
+      "faces": 12,
+      "components": 1,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "薄壁_04_浅磨.json",
+          "sha256": "88d8865c0c7d4852001991a5939250797f4ce53522f8ea31466e4655f497751b",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "薄壁_04_交叉.json",
+          "sha256": "e1b4a1261727c9f0f328185f3277f7a4087cc4d56d2b11c795729172b53275bd",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "薄壁_04_重复.json",
+          "sha256": "4c8ab719072db68007a711f99db982e896cb36289e386cbf4915601fc9a22ecf",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "薄壁_04_长序列.json",
+          "sha256": "75add64d8309c9bf5e607d2491599b162cf0624644e3b2a3137e415fa4b61e4f",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "窄缝_00",
+      "family": "窄缝",
+      "variant": 0,
+      "split": "development",
+      "mesh": "窄缝_00.obj",
+      "sha256": "fec4cb4836cac869ddd97a3806c58bf5b0c35cc6b748915308214bb04e80fd3d",
+      "bounds": [
+        [
+          -5.015000000000001,
+          -5.0,
+          -1.5
+        ],
+        [
+          5.015000000000001,
+          5.0,
+          1.5
+        ]
+      ],
+      "faces": 24,
+      "components": 2,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "窄缝_00_浅磨.json",
+          "sha256": "2f971a89341976def208fc95c4f6217c12c64b4afbfccb4aa382d6a35cb95f4f",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "窄缝_00_交叉.json",
+          "sha256": "06e0ed198ce4c646f7a09ec3c499dc7c44a8cbc5d563d0cb77311e7dc53b0776",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "窄缝_00_重复.json",
+          "sha256": "e79a04824d3efe2cb2c0bd1ee45fe139e4cbf53f973017413d695be5c4d30672",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "窄缝_00_长序列.json",
+          "sha256": "3f52445b754fb205cb277ef2f9d0d894dc324acbd2c6384ab8398708069cf202",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "窄缝_01",
+      "family": "窄缝",
+      "variant": 1,
+      "split": "development",
+      "mesh": "窄缝_01.obj",
+      "sha256": "8023584644fa76fff471166a533384fe926dc509f70fc58674b7ce108796e63b",
+      "bounds": [
+        [
+          -5.029999999999999,
+          -5.0,
+          -1.5
+        ],
+        [
+          5.029999999999999,
+          5.0,
+          1.5
+        ]
+      ],
+      "faces": 24,
+      "components": 2,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "窄缝_01_浅磨.json",
+          "sha256": "c2639afea721ad1cb34edd9cbbd00a14b1fbdf66fad438555ec67176d7713ca0",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "窄缝_01_交叉.json",
+          "sha256": "f54dccdaa1089ab7295e57e0436d38e19bcf82a0049ee63b349b1d4084985f95",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "窄缝_01_重复.json",
+          "sha256": "9eaceea7f39913dbd0b3e6890fe69a36dba60a9c04a81e21b59cd7da07cf8277",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "窄缝_01_长序列.json",
+          "sha256": "c4810395bb43d68c52bed65fee29e4cfa8c2942dc1ce231f503b1f2dce0a6bd5",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "窄缝_02",
+      "family": "窄缝",
+      "variant": 2,
+      "split": "held_out",
+      "mesh": "窄缝_02.obj",
+      "sha256": "49f43508ad611b53ece8d0bc8fab9f36ce5cd2238e84c9b1e054f422e6b7fba4",
+      "bounds": [
+        [
+          -5.0600000000000005,
+          -5.0,
+          -1.5
+        ],
+        [
+          5.0600000000000005,
+          5.0,
+          1.5
+        ]
+      ],
+      "faces": 24,
+      "components": 2,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "窄缝_02_浅磨.json",
+          "sha256": "fc68796bcb1ce9ebb15c4d41c28ce9ac447701e3caf2e76f1f107badab9ea8d6",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "窄缝_02_交叉.json",
+          "sha256": "f9fa8eeffb7b3dbeead48cdb22357713dfbdf0150698026292e86d244509af3c",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "窄缝_02_重复.json",
+          "sha256": "64c9518c66974ce0374e7145ab6799675705b4e3ac8fd8214d839359068e98e9",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "窄缝_02_长序列.json",
+          "sha256": "c73a6cac7c804164c28c3b3ea0e6feb4571b4b5ca9b6248041779ebd4281c3ce",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "窄缝_03",
+      "family": "窄缝",
+      "variant": 3,
+      "split": "held_out",
+      "mesh": "窄缝_03.obj",
+      "sha256": "fdee05cec74a427e5b725610f38664e46f73dab0be4dda2b4d40014091807de9",
+      "bounds": [
+        [
+          -5.12,
+          -5.0,
+          -1.5
+        ],
+        [
+          5.12,
+          5.0,
+          1.5
+        ]
+      ],
+      "faces": 24,
+      "components": 2,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "窄缝_03_浅磨.json",
+          "sha256": "ac1ad18c2534bf7eb090108ec78af7ae6d8cd79c1b525e9d8584f15f24abf65f",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "窄缝_03_交叉.json",
+          "sha256": "75c1297721dfbc32fe0ab5457db2c103a82af7cdfcea1ab4f20bac515bcb055b",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "窄缝_03_重复.json",
+          "sha256": "8f1e4741cf59ddddf6c0251d9055433a001118d502f18cc6faab8a0fe24ac240",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "窄缝_03_长序列.json",
+          "sha256": "a144b476df6ab34a34731c0a9b0afcfe9995ec77b00d0b3bef0b6776e57d4a3d",
+          "segments": 32
+        }
+      ]
+    },
+    {
+      "id": "窄缝_04",
+      "family": "窄缝",
+      "variant": 4,
+      "split": "held_out",
+      "mesh": "窄缝_04.obj",
+      "sha256": "2c47f0168787aef55b11abcf18976b9e849500e58bf8f790ba4b151926430207",
+      "bounds": [
+        [
+          -5.24,
+          -5.0,
+          -1.5
+        ],
+        [
+          5.24,
+          5.0,
+          1.5
+        ]
+      ],
+      "faces": 24,
+      "components": 2,
+      "watertight": true,
+      "winding_consistent": true,
+      "routes": [
+        {
+          "name": "浅磨",
+          "file": "窄缝_04_浅磨.json",
+          "sha256": "8d69e7f84b147c7e10897f0ac65543b6bb20cb7fcd9ddf08ff3b080e0c3c3c1d",
+          "segments": 8
+        },
+        {
+          "name": "交叉",
+          "file": "窄缝_04_交叉.json",
+          "sha256": "057d27d5af29a2c981c5daa8616aca5cb03181fccc57586035c7279f5768d089",
+          "segments": 3
+        },
+        {
+          "name": "重复",
+          "file": "窄缝_04_重复.json",
+          "sha256": "4c686c1fec44e6c24a158ed81db8488dcdd82a5d3b6cb4353fc05b06a1760238",
+          "segments": 24
+        },
+        {
+          "name": "长序列",
+          "file": "窄缝_04_长序列.json",
+          "sha256": "cec3ea8a456c3d25110d658436a8c35aed1f20ef0d80e6cc0c4c10cb90ac8bf6",
+          "segments": 32
+        }
+      ]
+    }
+  ],
+  "generator_sha256": "cbd6c1949c29e45042a7363cafff779d5376276888d8e820c4398059454251a4"
+}

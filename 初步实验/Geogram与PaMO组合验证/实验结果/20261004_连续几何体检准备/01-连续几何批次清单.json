@@ -1,0 +1,3794 @@
+{
+  "schema_version": 1,
+  "time_beijing": "2026-10-04T02:19:01.255131+08:00",
+  "parent_manifest_sha256": "387be60d704aa02b32cc5986c553dcefc1515cec5bb02f3efdaf5a3d3d534b54",
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200,
+    "interpolate_missing_motion": false
+  },
+  "routes": [
+    {
+      "id": "evaluation_shallow_slab_01",
+      "split": "evaluation",
+      "category": "shallow",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/shallow/slab/1",
+      "initial_mesh": "evaluation_shallow_slab_01_initial.obj",
+      "initial_mesh_sha256": "43b77c8f0150d2cd473de7b1bacbe3b1d6f70424ff37ddfae954c8fec133afdc",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.14168,
+          -0.043871
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.817318,
+            -0.063063,
+            0.408272
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.367318,
+            -0.063063,
+            0.472028
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.132682,
+            -0.063063,
+            0.542868
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.632682,
+            -0.063063,
+            0.613708
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_shallow_slab_01_e0_tool.obj",
+          "sha256": "265265ca1384ae4809eb1bc15ef9c1adc4be9939e731824fce00ca5e7d8045b2",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_shallow_slab_01_e1_tool.obj",
+          "sha256": "fa8d88897da48f7caae55e015b64bb4808aea6aa13ce0abc632263a317ec7269",
+          "faces": 1372
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_shallow_slab_01_e2_tool.obj",
+          "sha256": "8ed5194072fba220812c556704634a86592f3c2ecc3d3c6545e2f665ff08da69",
+          "faces": 1372
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_shallow_slab_01_e3_tool.obj",
+          "sha256": "9e05dab829451e0e4c7893a2496fbc656cd2123e70b16523a6a10a2a0a7074e1",
+          "faces": 1372
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_shallow_sphere_02",
+      "split": "evaluation",
+      "category": "shallow",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/shallow/sphere/2",
+      "initial_mesh": "evaluation_shallow_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.680817,
+            -0.051143,
+            2.958656
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.230817,
+            -0.051143,
+            3.042484
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.269183,
+            -0.051143,
+            3.038627
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.769183,
+            -0.051143,
+            2.931868
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_shallow_sphere_02_e0_tool.obj",
+          "sha256": "2993e72839a22460dc064f10179715d502a9ccdc0ca6826765d717b0aa31290b",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_shallow_sphere_02_e1_tool.obj",
+          "sha256": "46b545c4b5464bb51c467f5a4dab804c58407680d78c694ff189c7d23ab9222d",
+          "faces": 1384
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_shallow_sphere_02_e2_tool.obj",
+          "sha256": "cd24dcdd3a2c8b03cc73af300db88106b39a36f2030e8f261fb2a1a58e691a0c",
+          "faces": 1376
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_shallow_sphere_02_e3_tool.obj",
+          "sha256": "9ada050add32a3b0685cfa321b516a7ed54579472eec683a20cc9d913a7ae46d",
+          "faces": 1400
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_repeat_slab_01",
+      "split": "evaluation",
+      "category": "repeat",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/repeat/slab/1",
+      "initial_mesh": "evaluation_repeat_slab_01_initial.obj",
+      "initial_mesh_sha256": "faeb83f5396305da8648f91e6c32a9213d275c9a7f354741d11a186a3935524d",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.07913,
+          -0.063029
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.582204,
+            -0.151916,
+            0.512084
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.217796,
+            -0.151916,
+            0.575388
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.217796,
+            -0.151916,
+            0.575388
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.717796,
+            -0.151916,
+            0.614953
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_repeat_slab_01_e0_tool.obj",
+          "sha256": "7131027aa8a50ab187874e2777f3394abfe909fbb3cd6ed9408b3ad39bec9a04",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_repeat_slab_01_e1_tool.obj",
+          "sha256": "4bf928cc4c5d3524a3e7e8222bca389f162e1778d91461bd47d0d44bd240f2e8",
+          "faces": 1408
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_repeat_slab_01_e2_tool.obj",
+          "sha256": "7de747d6859500eaf5413301359f071bab0b162923454ea51d97966e8f6285a0",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_repeat_slab_01_e3_tool.obj",
+          "sha256": "addb6b84810d7e94b789879dc110d7927a64f4ced392e33810dd4fdcc2df1789",
+          "faces": 1408
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_repeat_sphere_02",
+      "split": "evaluation",
+      "category": "repeat",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/repeat/sphere/2",
+      "initial_mesh": "evaluation_repeat_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.674419,
+            -0.135677,
+            2.946951
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.125581,
+            -0.135677,
+            3.036619
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.125581,
+            -0.135677,
+            3.036619
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.625581,
+            -0.135677,
+            2.960123
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_repeat_sphere_02_e0_tool.obj",
+          "sha256": "c143d398311240ad19726311a79cad2e51923f324eb009119e1d69c031bccd6e",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_repeat_sphere_02_e1_tool.obj",
+          "sha256": "51bf423da97fa20203094b5c2cc0f91de27974fe0c9e8eeae98a293597e05a86",
+          "faces": 1380
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_repeat_sphere_02_e2_tool.obj",
+          "sha256": "16576d08f39dca4c017c49546bfd4b51e9b7438f262d12643319763efb06894f",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_repeat_sphere_02_e3_tool.obj",
+          "sha256": "cdcb7c40fa27518a524ad2341c82878e0c01aaf701031508d5968c4b07704c24",
+          "faces": 1380
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_plan_edge_slab_01",
+      "split": "evaluation",
+      "category": "plan_edge",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/plan_edge/slab/1",
+      "initial_mesh": "evaluation_plan_edge_slab_01_initial.obj",
+      "initial_mesh_sha256": "b1e3cd488a748735d56f0c651c88af071371372f3188a58916f8e7a9018a4aaf",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.128659,
+          -0.084859
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.465338,
+            0.044912,
+            0.601021
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.815338,
+            0.044912,
+            0.646052
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            1.115338,
+            0.044912,
+            0.684649
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            1.465338,
+            0.044912,
+            0.72968
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_plan_edge_slab_01_e0_tool.obj",
+          "sha256": "d71eecf3464ed7a6d6a4c81b3d3cb1cb34e1a9876c350b8cd7df731c21ea25a5",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_plan_edge_slab_01_e1_tool.obj",
+          "sha256": "f81f4d857769a294e1b65682827615c8c8deab3fcd0eab60009b3e8ffffc1ff0",
+          "faces": 1372
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_plan_edge_slab_01_e2_tool.obj",
+          "sha256": "b571d4757af689dad80f130f25ad97bc6626ebd2631f514df1f799ef1acdf269",
+          "faces": 1372
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_plan_edge_slab_01_e3_tool.obj",
+          "sha256": "7f1887a9a7e1e4ca1ff7ace4f1a52089515bb262029bdd47969049435f5f8e07",
+          "faces": 1372
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_plan_edge_sphere_02",
+      "split": "evaluation",
+      "category": "plan_edge",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/plan_edge/sphere/2",
+      "initial_mesh": "evaluation_plan_edge_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.498043,
+            0.092331,
+            3.000553
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.848043,
+            0.092331,
+            2.902362
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            1.148043,
+            0.092331,
+            2.771295
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            1.498043,
+            0.092331,
+            2.551741
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_plan_edge_sphere_02_e0_tool.obj",
+          "sha256": "3a6f5ec017dab4f815d4d4114942f4bfd3f507cb445ac0d81540b4a3ead2b47b",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_plan_edge_sphere_02_e1_tool.obj",
+          "sha256": "7832280134fd4f085cfa9612f584805bd354125e605f9e9794dcbd5e236d1a2b",
+          "faces": 1376
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_plan_edge_sphere_02_e2_tool.obj",
+          "sha256": "8645b591b22ec235c53843bfeb94b7f27aa5f14d5e92cc4adfc6b640e66c96e1",
+          "faces": 1380
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_plan_edge_sphere_02_e3_tool.obj",
+          "sha256": "1a1c7879c69b23d5f807acd9141b640d03e95d983a32ae7c3ffd0a1e177c51ef",
+          "faces": 1360
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_vertical_slab_01",
+      "split": "evaluation",
+      "category": "vertical",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/vertical/slab/1",
+      "initial_mesh": "evaluation_vertical_slab_01_initial.obj",
+      "initial_mesh_sha256": "7b817b36b325eda99574311ff283fad44c73425ffaf27910a196aaaf24df5dda",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.101883,
+          -0.104215
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.181795,
+            0.150793,
+            0.564858
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.181795,
+            0.150793,
+            0.484858
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.181795,
+            0.150793,
+            0.384858
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.181795,
+            0.150793,
+            0.504858
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_vertical_slab_01_e0_tool.obj",
+          "sha256": "2f5977009954b25fa98b09a835a21db4acb524f5ffcfab442389d60b55aa3476",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_vertical_slab_01_e1_tool.obj",
+          "sha256": "156b77970db732219b7197e5254cf61b2d220e2c9e7566262e35f27c3fe3b792",
+          "faces": 1280
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_vertical_slab_01_e2_tool.obj",
+          "sha256": "68b3d891a443030ca22537c007ab0bafdbada7135c9e46bf943edafd0290fdd5",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_vertical_slab_01_e3_tool.obj",
+          "sha256": "184f3e2257d843395bc1528b9ead21f16ee42e5173b9cf4a655616cc2d10c13f",
+          "faces": 1280
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_vertical_sphere_02",
+      "split": "evaluation",
+      "category": "vertical",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/vertical/sphere/2",
+      "initial_mesh": "evaluation_vertical_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.08128,
+            0.179627,
+            3.058067
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.08128,
+            0.179627,
+            2.978067
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.08128,
+            0.179627,
+            2.878067
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.08128,
+            0.179627,
+            2.998067
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_vertical_sphere_02_e0_tool.obj",
+          "sha256": "585b6df17e998351235dae389a0b5a99850731dd14fc99a55e23a6761fa3ae2a",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_vertical_sphere_02_e1_tool.obj",
+          "sha256": "585d54c54e897818cf86309536c4daa1a0262b6c41e32d7fbb74e569b51cf0fb",
+          "faces": 1280
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_vertical_sphere_02_e2_tool.obj",
+          "sha256": "1c730bd56e4fc852d385439a67401e703da1bf2cbf9ce6f2546cdbebbc9bd73d",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_vertical_sphere_02_e3_tool.obj",
+          "sha256": "9100227814f3a87888b3637e44a40429fabca77c74877ba631837b4dfb304228",
+          "faces": 1280
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_crossing_slab_01",
+      "split": "evaluation",
+      "category": "crossing",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/crossing/slab/1",
+      "initial_mesh": "evaluation_crossing_slab_01_initial.obj",
+      "initial_mesh_sha256": "8245b4e4f1f18ffa54ad360312770c094fede13547d8cd9532533da0a9e54037",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.070506,
+          -0.096153
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.713189,
+            -0.546167,
+            0.518111
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.586811,
+            0.653833,
+            0.494385
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.613189,
+            0.653833,
+            0.409778
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.686811,
+            -0.546167,
+            0.616819
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_crossing_slab_01_e0_tool.obj",
+          "sha256": "6a76e8baf1750ce0349dad154b1e438b665d40e8c637ba8eaadbca2e160502c9",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_crossing_slab_01_e1_tool.obj",
+          "sha256": "684759d95998653c9e68aa6a0959f158ba803ea250d7a2a9780c6053a392e1e3",
+          "faces": 1392
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_crossing_slab_01_e2_tool.obj",
+          "sha256": "bac03bf282fe7169bcf9e4d524a85fd8055a1d4bccdbca11eb57a6568e38c4c0",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_crossing_slab_01_e3_tool.obj",
+          "sha256": "f8cc6a23631b6f1dc2427394937067958cfc2fa3022c770a8ebada65c74c08d0",
+          "faces": 1388
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_crossing_sphere_02",
+      "split": "evaluation",
+      "category": "crossing",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/crossing/sphere/2",
+      "initial_mesh": "evaluation_crossing_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.767853,
+            -0.624898,
+            2.826181
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.532147,
+            0.575102,
+            2.904596
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.667853,
+            0.575102,
+            2.870048
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.632147,
+            -0.624898,
+            2.867195
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_crossing_sphere_02_e0_tool.obj",
+          "sha256": "acd30fd4eba2369ce360a55f2a78865d6c916383a55440c96ad04e733faa465d",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_crossing_sphere_02_e1_tool.obj",
+          "sha256": "5ddf3198c6e87c9962773bb1b58b275a9d4bfb03f4cd9f8cfe9f7e11d9af6578",
+          "faces": 1388
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_crossing_sphere_02_e2_tool.obj",
+          "sha256": "0917334026914e7e8a4b46ebb9922070ce77436af87b455fbffeb5ac2d2e89a4",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_crossing_sphere_02_e3_tool.obj",
+          "sha256": "7bbac718b2f49c5ff8a4c3f5fdfa203486cbc8838273bcb2ca170e6abd29860b",
+          "faces": 1396
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_stop_resume_slab_01",
+      "split": "evaluation",
+      "category": "stop_resume",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/stop_resume/slab/1",
+      "initial_mesh": "evaluation_stop_resume_slab_01_initial.obj",
+      "initial_mesh_sha256": "a244e536ce62e0654c16952bfc5122f8c0e355f3f030539f1abdbfbfc34fca18",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.09256,
+          -0.103048
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.699499,
+            -0.012184,
+            0.460914
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.249499,
+            -0.012184,
+            0.502566
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.000501,
+            -0.012184,
+            0.525706
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 400,
+          "position_mm": [
+            0.300501,
+            0.087816,
+            0.54317
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e4",
+          "arrival_index": 4,
+          "timestamp_ms": 350,
+          "position_mm": [
+            0.400501,
+            0.087816,
+            0.552426
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e5",
+          "arrival_index": 5,
+          "timestamp_ms": 500,
+          "position_mm": [
+            0.700501,
+            0.087816,
+            0.580194
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e3",
+        "e5"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_stop_resume_slab_01_e0_tool.obj",
+          "sha256": "4240922bf544a2bbd1fecad4fc3e917ed3e3f2b3e73fc436d80ce2b367954ff8",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_stop_resume_slab_01_e1_tool.obj",
+          "sha256": "e72d3b341754865076422ee32ace97695f21fa8000b01a394d05c4e410486002",
+          "faces": 1380
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_stop_resume_slab_01_e3_tool.obj",
+          "sha256": "a150a248a970f95521649f2b2426d67142a7b1aebcef07a4e2d395c648c9ac9e",
+          "faces": 1280
+        },
+        {
+          "event_id": "e5",
+          "mesh": "evaluation_stop_resume_slab_01_e5_tool.obj",
+          "sha256": "d96abdaaeb3c099de435886a899ced1b3a5c4836368c3405527d4731bf9786da",
+          "faces": 1380
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [
+        "e4"
+      ],
+      "missing_interval_ms": [
+        200,
+        400
+      ],
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "evaluation_stop_resume_sphere_02",
+      "split": "evaluation",
+      "category": "stop_resume",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/stop_resume/sphere/2",
+      "initial_mesh": "evaluation_stop_resume_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.684218,
+            -0.012377,
+            2.953853
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.234218,
+            -0.012377,
+            3.038311
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.015782,
+            -0.012377,
+            3.049258
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 400,
+          "position_mm": [
+            0.315782,
+            0.087623,
+            3.027766
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e4",
+          "arrival_index": 4,
+          "timestamp_ms": 350,
+          "position_mm": [
+            0.415782,
+            0.087623,
+            3.012963
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e5",
+          "arrival_index": 5,
+          "timestamp_ms": 500,
+          "position_mm": [
+            0.715782,
+            0.087623,
+            2.943075
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e3",
+        "e5"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_stop_resume_sphere_02_e0_tool.obj",
+          "sha256": "892ce4604196df114d7240e5910c21f621303b99746f45fbc1de0091dee3cc16",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_stop_resume_sphere_02_e1_tool.obj",
+          "sha256": "638cbf9da5988d4a2c0ae490b42a65b73837d718a87c0db88cb04bb39d4c614d",
+          "faces": 1392
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_stop_resume_sphere_02_e3_tool.obj",
+          "sha256": "a88037de61528b48323df2800fd495588d57ddad3a7dc9e23901f21eb1a36102",
+          "faces": 1280
+        },
+        {
+          "event_id": "e5",
+          "mesh": "evaluation_stop_resume_sphere_02_e5_tool.obj",
+          "sha256": "0ae026d235e404bbc12cd56d6f9cc3e333d046dc3b2f92d206d7dcf8fb2715be",
+          "faces": 1408
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [
+        "e4"
+      ],
+      "missing_interval_ms": [
+        200,
+        400
+      ],
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "independent_analytic_and_discrete_mesh"
+    },
+    {
+      "id": "development_long_slab_24",
+      "split": "development",
+      "category": "long",
+      "body": "slab",
+      "random_stream": "20260922/development/shallow/slab/1",
+      "initial_mesh": "development_long_slab_24_initial.obj",
+      "initial_mesh_sha256": "f88f38967cc3967c5a0d5a99e0a7eeff7f4295531784595ed760549670aaf30f",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.08354,
+          -0.075642
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.8,
+            -0.8,
+            0.5336816
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.0,
+            -0.8,
+            0.6005136
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.8,
+            -0.8,
+            0.6673456
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.8,
+            -0.5714285714285714,
+            0.6500560000000001
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e4",
+          "arrival_index": 4,
+          "timestamp_ms": 400,
+          "position_mm": [
+            0.0,
+            -0.5714285714285714,
+            0.5832240000000001
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e5",
+          "arrival_index": 5,
+          "timestamp_ms": 500,
+          "position_mm": [
+            -0.8,
+            -0.5714285714285714,
+            0.5163920000000001
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e6",
+          "arrival_index": 6,
+          "timestamp_ms": 600,
+          "position_mm": [
+            -0.8,
+            -0.34285714285714286,
+            0.49910240000000006
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e7",
+          "arrival_index": 7,
+          "timestamp_ms": 700,
+          "position_mm": [
+            0.0,
+            -0.34285714285714286,
+            0.5659344000000001
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e8",
+          "arrival_index": 8,
+          "timestamp_ms": 800,
+          "position_mm": [
+            0.8,
+            -0.34285714285714286,
+            0.6327664000000001
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e9",
+          "arrival_index": 9,
+          "timestamp_ms": 900,
+          "position_mm": [
+            0.8,
+            -0.11428571428571432,
+            0.6154768
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e10",
+          "arrival_index": 10,
+          "timestamp_ms": 1000,
+          "position_mm": [
+            0.0,
+            -0.11428571428571432,
+            0.5486448
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e11",
+          "arrival_index": 11,
+          "timestamp_ms": 1100,
+          "position_mm": [
+            -0.8,
+            -0.11428571428571432,
+            0.48181280000000004
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e12",
+          "arrival_index": 12,
+          "timestamp_ms": 1200,
+          "position_mm": [
+            -0.8,
+            0.11428571428571432,
+            0.4645232
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e13",
+          "arrival_index": 13,
+          "timestamp_ms": 1300,
+          "position_mm": [
+            0.0,
+            0.11428571428571432,
+            0.5313552
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e14",
+          "arrival_index": 14,
+          "timestamp_ms": 1400,
+          "position_mm": [
+            0.8,
+            0.11428571428571432,
+            0.5981872
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e15",
+          "arrival_index": 15,
+          "timestamp_ms": 1500,
+          "position_mm": [
+            0.8,
+            0.34285714285714297,
+            0.5808976
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e16",
+          "arrival_index": 16,
+          "timestamp_ms": 1600,
+          "position_mm": [
+            0.0,
+            0.34285714285714297,
+            0.5140656
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e17",
+          "arrival_index": 17,
+          "timestamp_ms": 1700,
+          "position_mm": [
+            -0.8,
+            0.34285714285714297,
+            0.4472336
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e18",
+          "arrival_index": 18,
+          "timestamp_ms": 1800,
+          "position_mm": [
+            -0.8,
+            0.5714285714285714,
+            0.42994400000000005
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e19",
+          "arrival_index": 19,
+          "timestamp_ms": 1900,
+          "position_mm": [
+            0.0,
+            0.5714285714285714,
+            0.49677600000000005
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e20",
+          "arrival_index": 20,
+          "timestamp_ms": 2000,
+          "position_mm": [
+            0.8,
+            0.5714285714285714,
+            0.563608
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e21",
+          "arrival_index": 21,
+          "timestamp_ms": 2100,
+          "position_mm": [
+            0.8,
+            0.8,
+            0.5463184000000001
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e22",
+          "arrival_index": 22,
+          "timestamp_ms": 2200,
+          "position_mm": [
+            0.0,
+            0.8,
+            0.47948640000000003
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e23",
+          "arrival_index": 23,
+          "timestamp_ms": 2300,
+          "position_mm": [
+            -0.8,
+            0.8,
+            0.41265440000000003
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17",
+        "e18",
+        "e19",
+        "e20",
+        "e21",
+        "e22",
+        "e23"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_long_slab_24_e0_tool.obj",
+          "sha256": "1d5a27546a380bb9e7a85bdf1d2b98c348aa9e45b6b7499faa3eeb076ea763d5"
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_long_slab_24_e1_tool.obj",
+          "sha256": "76b8c31bd664314aaf05ec5c9e6e6443eb5ac1bb067ad015d0feaad5a648851d"
+        },
+        {
+          "event_id": "e2",
+          "mesh": "development_long_slab_24_e2_tool.obj",
+          "sha256": "6a492a2929e595f2d627237f9f9f81e120cbac25185b7a50a77c8faa574147fc"
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_long_slab_24_e3_tool.obj",
+          "sha256": "ededd2118ce231e6933f39c212b65e430e7b91c6f26623e303b2bfd6c4706907"
+        },
+        {
+          "event_id": "e4",
+          "mesh": "development_long_slab_24_e4_tool.obj",
+          "sha256": "87a1e84a20129d58620e93459f0b353d0a7046687d0ae7c31de2941c3104d68e"
+        },
+        {
+          "event_id": "e5",
+          "mesh": "development_long_slab_24_e5_tool.obj",
+          "sha256": "a56d00201dcb3a426bab0ea43090a9e40d8a69fd0b0ffb89c4f8aca86247ba7f"
+        },
+        {
+          "event_id": "e6",
+          "mesh": "development_long_slab_24_e6_tool.obj",
+          "sha256": "0bfb9f34b7df2f5b9594e1618d4b2b4f1a77877f95961393aa40a651d8523a62"
+        },
+        {
+          "event_id": "e7",
+          "mesh": "development_long_slab_24_e7_tool.obj",
+          "sha256": "9f466a1f2f68059b6be755c5d31357b96e3e96bf48028e3a6e8296f7c3a9cc05"
+        },
+        {
+          "event_id": "e8",
+          "mesh": "development_long_slab_24_e8_tool.obj",
+          "sha256": "7b3cb6e3068222ce4aa80cd6d5aca3f4a797324db77fc7479a7a9232976345e7"
+        },
+        {
+          "event_id": "e9",
+          "mesh": "development_long_slab_24_e9_tool.obj",
+          "sha256": "3b9337e33334751028669baf6a26bb3a4ee5fd049138888c512ab09cddf6b1b9"
+        },
+        {
+          "event_id": "e10",
+          "mesh": "development_long_slab_24_e10_tool.obj",
+          "sha256": "f9719093067c27a06c521e1e4bfd21ad7f34eb7fc6bc227b847369b6491044d6"
+        },
+        {
+          "event_id": "e11",
+          "mesh": "development_long_slab_24_e11_tool.obj",
+          "sha256": "9ba522a8cb26a8e1bf5d56033d3635ae02e0cdaf5cbf153f5d4a3a9575362b0c"
+        },
+        {
+          "event_id": "e12",
+          "mesh": "development_long_slab_24_e12_tool.obj",
+          "sha256": "4f249a894adeb5bf1d657a29844062bcfb8633687215d91c8d325ebca457368e"
+        },
+        {
+          "event_id": "e13",
+          "mesh": "development_long_slab_24_e13_tool.obj",
+          "sha256": "f4678451bd85bbd9043f3dd2f05075510ff0311e039474f68816f4bf7679faf7"
+        },
+        {
+          "event_id": "e14",
+          "mesh": "development_long_slab_24_e14_tool.obj",
+          "sha256": "5ab2a1ff338cce066481c7948a5a988316825ee5b5b37f419af15f5f00299086"
+        },
+        {
+          "event_id": "e15",
+          "mesh": "development_long_slab_24_e15_tool.obj",
+          "sha256": "7095ff9dcd52b476b69db01c4aa9780ee97cb878c3024b731ffaff0284142c1d"
+        },
+        {
+          "event_id": "e16",
+          "mesh": "development_long_slab_24_e16_tool.obj",
+          "sha256": "55d2b4de5c8660b62171d233895f48b069328eb6ef334ab39022e3f2b75e96d5"
+        },
+        {
+          "event_id": "e17",
+          "mesh": "development_long_slab_24_e17_tool.obj",
+          "sha256": "a7515078b083c81eb442f70ca349a5168571777cfe2e4e3765650da5fdb61696"
+        },
+        {
+          "event_id": "e18",
+          "mesh": "development_long_slab_24_e18_tool.obj",
+          "sha256": "ab168ee3be3fd7c1bbaa6b44069024d9152c96f2ba27a872155e6f0fe006f810"
+        },
+        {
+          "event_id": "e19",
+          "mesh": "development_long_slab_24_e19_tool.obj",
+          "sha256": "a6fd9e0b5d9d3fb0c6341fd9a2b3a037757cab116f6a6099d018e381846c1da6"
+        },
+        {
+          "event_id": "e20",
+          "mesh": "development_long_slab_24_e20_tool.obj",
+          "sha256": "232a517162a32d6a530c086ab709579d2a3edc57f06946e9dedd9edb0ee8799a"
+        },
+        {
+          "event_id": "e21",
+          "mesh": "development_long_slab_24_e21_tool.obj",
+          "sha256": "b4ea3b69f4edad530c9fa053b9f4f0c0767d1d093e06b680e571a2239785605c"
+        },
+        {
+          "event_id": "e22",
+          "mesh": "development_long_slab_24_e22_tool.obj",
+          "sha256": "dc800d9147051ea2a6a4edd9579fec4f4b282450577f413976834e95e8bea6dd"
+        },
+        {
+          "event_id": "e23",
+          "mesh": "development_long_slab_24_e23_tool.obj",
+          "sha256": "6a5eb6a15be63f4b15982c100bd42c83f696ac340986f6936b09d63225bcb325"
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "same_discrete_initial_and_cumulative_tools"
+    },
+    {
+      "id": "development_long_sphere_24",
+      "split": "development",
+      "category": "long",
+      "body": "sphere",
+      "random_stream": "20260922/development/vertical/sphere/1",
+      "initial_mesh": "development_long_sphere_24_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.8,
+            -0.8,
+            2.769349680960795
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.0,
+            -0.8,
+            2.908543856465402
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.8,
+            -0.8,
+            2.769349680960795
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.8,
+            -0.5714285714285714,
+            2.8385798632536354
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e4",
+          "arrival_index": 4,
+          "timestamp_ms": 400,
+          "position_mm": [
+            0.0,
+            -0.5714285714285714,
+            2.9738178624858316
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e5",
+          "arrival_index": 5,
+          "timestamp_ms": 500,
+          "position_mm": [
+            -0.8,
+            -0.5714285714285714,
+            2.8385798632536354
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e6",
+          "arrival_index": 6,
+          "timestamp_ms": 600,
+          "position_mm": [
+            -0.8,
+            -0.34285714285714286,
+            2.8835974440146153
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e7",
+          "arrival_index": 7,
+          "timestamp_ms": 700,
+          "position_mm": [
+            0.0,
+            -0.34285714285714286,
+            3.0163781980125406
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e8",
+          "arrival_index": 8,
+          "timestamp_ms": 800,
+          "position_mm": [
+            0.8,
+            -0.34285714285714286,
+            2.8835974440146153
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e9",
+          "arrival_index": 9,
+          "timestamp_ms": 900,
+          "position_mm": [
+            0.8,
+            -0.11428571428571432,
+            2.9057850230970277
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e10",
+          "arrival_index": 10,
+          "timestamp_ms": 1000,
+          "position_mm": [
+            0.0,
+            -0.11428571428571432,
+            3.037386388909454
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e11",
+          "arrival_index": 11,
+          "timestamp_ms": 1100,
+          "position_mm": [
+            -0.8,
+            -0.11428571428571432,
+            2.9057850230970277
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e12",
+          "arrival_index": 12,
+          "timestamp_ms": 1200,
+          "position_mm": [
+            -0.8,
+            0.11428571428571432,
+            2.9057850230970277
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e13",
+          "arrival_index": 13,
+          "timestamp_ms": 1300,
+          "position_mm": [
+            0.0,
+            0.11428571428571432,
+            3.037386388909454
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e14",
+          "arrival_index": 14,
+          "timestamp_ms": 1400,
+          "position_mm": [
+            0.8,
+            0.11428571428571432,
+            2.9057850230970277
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e15",
+          "arrival_index": 15,
+          "timestamp_ms": 1500,
+          "position_mm": [
+            0.8,
+            0.34285714285714297,
+            2.8835974440146153
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e16",
+          "arrival_index": 16,
+          "timestamp_ms": 1600,
+          "position_mm": [
+            0.0,
+            0.34285714285714297,
+            3.0163781980125406
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e17",
+          "arrival_index": 17,
+          "timestamp_ms": 1700,
+          "position_mm": [
+            -0.8,
+            0.34285714285714297,
+            2.8835974440146153
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e18",
+          "arrival_index": 18,
+          "timestamp_ms": 1800,
+          "position_mm": [
+            -0.8,
+            0.5714285714285714,
+            2.8385798632536354
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e19",
+          "arrival_index": 19,
+          "timestamp_ms": 1900,
+          "position_mm": [
+            0.0,
+            0.5714285714285714,
+            2.9738178624858316
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e20",
+          "arrival_index": 20,
+          "timestamp_ms": 2000,
+          "position_mm": [
+            0.8,
+            0.5714285714285714,
+            2.8385798632536354
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e21",
+          "arrival_index": 21,
+          "timestamp_ms": 2100,
+          "position_mm": [
+            0.8,
+            0.8,
+            2.769349680960795
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e22",
+          "arrival_index": 22,
+          "timestamp_ms": 2200,
+          "position_mm": [
+            0.0,
+            0.8,
+            2.908543856465402
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e23",
+          "arrival_index": 23,
+          "timestamp_ms": 2300,
+          "position_mm": [
+            -0.8,
+            0.8,
+            2.769349680960795
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17",
+        "e18",
+        "e19",
+        "e20",
+        "e21",
+        "e22",
+        "e23"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_long_sphere_24_e0_tool.obj",
+          "sha256": "f21321d3ffe4266971ef12236afb8a5f2367a79347b0404839a28b1461f7851b"
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_long_sphere_24_e1_tool.obj",
+          "sha256": "0fabb4380148ead4004a17ff6f7936008fb6e6060316150aba0468e0b899bee4"
+        },
+        {
+          "event_id": "e2",
+          "mesh": "development_long_sphere_24_e2_tool.obj",
+          "sha256": "32cbbc7887d1e532d5bf1f7d400ec88e2a5c0382e83960ef5c2317623dc972a6"
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_long_sphere_24_e3_tool.obj",
+          "sha256": "e78dfbdb98a6481bf5404c9fe8543c028ca04b0813495ca828a43aaecef31fb8"
+        },
+        {
+          "event_id": "e4",
+          "mesh": "development_long_sphere_24_e4_tool.obj",
+          "sha256": "18bfc9b5bd8cc791fa166d1ef74cbae9064f3fe702ba5a3ee0e36e03a46cf036"
+        },
+        {
+          "event_id": "e5",
+          "mesh": "development_long_sphere_24_e5_tool.obj",
+          "sha256": "b35bf85aae0c478a9768e2ca59d38e60edfc3bd86ad6fb5c23d255b1c7fa2de1"
+        },
+        {
+          "event_id": "e6",
+          "mesh": "development_long_sphere_24_e6_tool.obj",
+          "sha256": "4268de88644657e7b3320a1f3d78f495f806ff36d7884b569ff5a336d088f192"
+        },
+        {
+          "event_id": "e7",
+          "mesh": "development_long_sphere_24_e7_tool.obj",
+          "sha256": "4d125e4675a67308bd886822f870c674faf5e8c5f140d0e67f45f2702f045ee9"
+        },
+        {
+          "event_id": "e8",
+          "mesh": "development_long_sphere_24_e8_tool.obj",
+          "sha256": "78c96df20f4bfb3a02a0360e26c66bac544a7e83686230072e75fe9260b1a08c"
+        },
+        {
+          "event_id": "e9",
+          "mesh": "development_long_sphere_24_e9_tool.obj",
+          "sha256": "bd6b6cf06aa623d24b64443f12e0ce19989a80d85728346c73318e6fa902ae9a"
+        },
+        {
+          "event_id": "e10",
+          "mesh": "development_long_sphere_24_e10_tool.obj",
+          "sha256": "e6a3e91d683b18c1298076115e48aeb66980ded442513375987dbb66ad8c3628"
+        },
+        {
+          "event_id": "e11",
+          "mesh": "development_long_sphere_24_e11_tool.obj",
+          "sha256": "0940367fb48146ff7907625c0eca224ef8f2844ccb916e6c8d988e04feaa01a0"
+        },
+        {
+          "event_id": "e12",
+          "mesh": "development_long_sphere_24_e12_tool.obj",
+          "sha256": "eff0b5c3cf08f6d29f1524756ff11a1ed69bbaefcb035067a96fedab98611cf9"
+        },
+        {
+          "event_id": "e13",
+          "mesh": "development_long_sphere_24_e13_tool.obj",
+          "sha256": "c8457f7fe7864a850c5391283ecb35c233ce3f3152e25301055cbd66fa77151b"
+        },
+        {
+          "event_id": "e14",
+          "mesh": "development_long_sphere_24_e14_tool.obj",
+          "sha256": "80e488814e5575f3f32b473906c095fa3f3994378aee6e09bab2addae9df6823"
+        },
+        {
+          "event_id": "e15",
+          "mesh": "development_long_sphere_24_e15_tool.obj",
+          "sha256": "93a6890b63aa1fcc43db5ed471f0db2410bc992c2be7bbf0daeb94c7e130c1d6"
+        },
+        {
+          "event_id": "e16",
+          "mesh": "development_long_sphere_24_e16_tool.obj",
+          "sha256": "ae2363fff83032ba943b00fc5a490fdbabdd7efc4ed2fdeb55337f98a1fdf541"
+        },
+        {
+          "event_id": "e17",
+          "mesh": "development_long_sphere_24_e17_tool.obj",
+          "sha256": "5bec8791fd1a4d3a3fef4ce011f19a564848ebed334435654febe6ce11d1cef9"
+        },
+        {
+          "event_id": "e18",
+          "mesh": "development_long_sphere_24_e18_tool.obj",
+          "sha256": "02776c11df3efc3db4e63a298d50e15f05d6c5b9ceda7aa45a34630642f0cfa8"
+        },
+        {
+          "event_id": "e19",
+          "mesh": "development_long_sphere_24_e19_tool.obj",
+          "sha256": "27db882f7712879c75110c5ed2cfef01a23bd881f114c34bad81090c0473e26d"
+        },
+        {
+          "event_id": "e20",
+          "mesh": "development_long_sphere_24_e20_tool.obj",
+          "sha256": "7c689da811c83f1888484d11568710f25417ae0c24937937e382bc9d09591fa2"
+        },
+        {
+          "event_id": "e21",
+          "mesh": "development_long_sphere_24_e21_tool.obj",
+          "sha256": "bc6e179bf8b10f4d2c70e45b823eda2eb3654cafa165157418e241565dcf3f77"
+        },
+        {
+          "event_id": "e22",
+          "mesh": "development_long_sphere_24_e22_tool.obj",
+          "sha256": "a2a96ccd01388b7b8ddff18941148d8568b7563470ce5038fd07cff349b2902c"
+        },
+        {
+          "event_id": "e23",
+          "mesh": "development_long_sphere_24_e23_tool.obj",
+          "sha256": "c415ec0ccff14dcfa7499ba669499c72ad83c3c92371d516df5211225338d049"
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      },
+      "reference_role": "same_discrete_initial_and_cumulative_tools"
+    },
+    {
+      "id": "application_ct_16",
+      "split": "application",
+      "category": "ct_crossing",
+      "body": "ct",
+      "initial_mesh": "application_ct_16_initial.obj",
+      "initial_mesh_sha256": "feea66dbcf0132890d0a88440431b8f6ac00be9691a6e3a3e309ca0789a58af2",
+      "reference_role": "same_preprocessed_ct_initial_and_discrete_cumulative_tools",
+      "source_npz_sha256": "c072886a0843ce981e92146179a28fb112ff70986bff840e857683d14bbf0623",
+      "tool": {
+        "radius_mm": 3.0
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.75,
+            0.037,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            -1.0,
+            0.037,
+            1.8
+          ]
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.5,
+            0.037,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            -0.75,
+            0.037,
+            1.8
+          ]
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.25,
+            0.037,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            -0.5,
+            0.037,
+            1.8
+          ]
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.0,
+            0.037,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            -0.25,
+            0.037,
+            1.8
+          ]
+        },
+        {
+          "id": "e4",
+          "arrival_index": 4,
+          "timestamp_ms": 400,
+          "position_mm": [
+            0.25,
+            0.037,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.0,
+            0.037,
+            1.8
+          ]
+        },
+        {
+          "id": "e5",
+          "arrival_index": 5,
+          "timestamp_ms": 500,
+          "position_mm": [
+            0.5,
+            0.037,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.25,
+            0.037,
+            1.8
+          ]
+        },
+        {
+          "id": "e6",
+          "arrival_index": 6,
+          "timestamp_ms": 600,
+          "position_mm": [
+            0.75,
+            0.037,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.5,
+            0.037,
+            1.8
+          ]
+        },
+        {
+          "id": "e7",
+          "arrival_index": 7,
+          "timestamp_ms": 700,
+          "position_mm": [
+            1.0,
+            0.037,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.75,
+            0.037,
+            1.8
+          ]
+        },
+        {
+          "id": "e8",
+          "arrival_index": 8,
+          "timestamp_ms": 800,
+          "position_mm": [
+            0.037,
+            -0.75,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.037,
+            -1.0,
+            1.8
+          ]
+        },
+        {
+          "id": "e9",
+          "arrival_index": 9,
+          "timestamp_ms": 900,
+          "position_mm": [
+            0.037,
+            -0.5,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.037,
+            -0.75,
+            1.8
+          ]
+        },
+        {
+          "id": "e10",
+          "arrival_index": 10,
+          "timestamp_ms": 1000,
+          "position_mm": [
+            0.037,
+            -0.25,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.037,
+            -0.5,
+            1.8
+          ]
+        },
+        {
+          "id": "e11",
+          "arrival_index": 11,
+          "timestamp_ms": 1100,
+          "position_mm": [
+            0.037,
+            0.0,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.037,
+            -0.25,
+            1.8
+          ]
+        },
+        {
+          "id": "e12",
+          "arrival_index": 12,
+          "timestamp_ms": 1200,
+          "position_mm": [
+            0.037,
+            0.25,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.037,
+            0.0,
+            1.8
+          ]
+        },
+        {
+          "id": "e13",
+          "arrival_index": 13,
+          "timestamp_ms": 1300,
+          "position_mm": [
+            0.037,
+            0.5,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.037,
+            0.25,
+            1.8
+          ]
+        },
+        {
+          "id": "e14",
+          "arrival_index": 14,
+          "timestamp_ms": 1400,
+          "position_mm": [
+            0.037,
+            0.75,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.037,
+            0.5,
+            1.8
+          ]
+        },
+        {
+          "id": "e15",
+          "arrival_index": 15,
+          "timestamp_ms": 1500,
+          "position_mm": [
+            0.037,
+            1.0,
+            1.8
+          ],
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false,
+          "explicit_sweep_start_mm": [
+            0.037,
+            0.75,
+            1.8
+          ]
+        }
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "application_ct_16_e0_tool.obj",
+          "sha256": "cbd73586ef30987c5c6b7bd3452a37e510fe2cd6c15393a884064c1e60dc4c62"
+        },
+        {
+          "event_id": "e1",
+          "mesh": "application_ct_16_e1_tool.obj",
+          "sha256": "969b169e548770eccd368d6b6c33c6196a49bc4ecd76c853977225335cb8ab8d"
+        },
+        {
+          "event_id": "e2",
+          "mesh": "application_ct_16_e2_tool.obj",
+          "sha256": "1321c0cfb10c38b0d75ea0df64f0e0eef9a3bb1126ffd5a91240ffb6b307c70c"
+        },
+        {
+          "event_id": "e3",
+          "mesh": "application_ct_16_e3_tool.obj",
+          "sha256": "33e907af1e1b76e4a21e599c9f38e0ddbe21dbdefa153473ae656304c7035bfd"
+        },
+        {
+          "event_id": "e4",
+          "mesh": "application_ct_16_e4_tool.obj",
+          "sha256": "3aa9ac6656c708368b3971b2ecf33eb68979cfd7613e1d174e860ab301cc1ff5"
+        },
+        {
+          "event_id": "e5",
+          "mesh": "application_ct_16_e5_tool.obj",
+          "sha256": "16422025f80db9ab4e1d462fc82d998e934328da713a85b1ebe39b265335d29d"
+        },
+        {
+          "event_id": "e6",
+          "mesh": "application_ct_16_e6_tool.obj",
+          "sha256": "9937747d8ebdc9fd9ea11d240e122b26e03fa494a7404abe50fae96a8aab0bbb"
+        },
+        {
+          "event_id": "e7",
+          "mesh": "application_ct_16_e7_tool.obj",
+          "sha256": "49da53c8e71a4644a8e54a25ca6e60ac85594cd0e4418c6f23b086c4f1c5d159"
+        },
+        {
+          "event_id": "e8",
+          "mesh": "application_ct_16_e8_tool.obj",
+          "sha256": "b180a547bea247ee2ebdc2698cf8407d4d4291df6ccc4ba13c9ef874b8a238fe"
+        },
+        {
+          "event_id": "e9",
+          "mesh": "application_ct_16_e9_tool.obj",
+          "sha256": "46ff203d6097ebb9bd5868ae4cc2c60bb10ce93139226afe286375c829388e11"
+        },
+        {
+          "event_id": "e10",
+          "mesh": "application_ct_16_e10_tool.obj",
+          "sha256": "cf458fc099be36fb02567c6e6b092e57e0a511020d62f4494966f5b72a1ee31e"
+        },
+        {
+          "event_id": "e11",
+          "mesh": "application_ct_16_e11_tool.obj",
+          "sha256": "6dddee65155a9ad244348af5d305c877b8312d9d9bd1c131fa99dede3606629a"
+        },
+        {
+          "event_id": "e12",
+          "mesh": "application_ct_16_e12_tool.obj",
+          "sha256": "e78d6e165996f520f0ef603a4878ef14b781decc0f643a96a4c758bd8ef2ee99"
+        },
+        {
+          "event_id": "e13",
+          "mesh": "application_ct_16_e13_tool.obj",
+          "sha256": "678254f22d4d6ce5e862db82a44f59b5df88e2f825a0721ba6cd42dba89c757a"
+        },
+        {
+          "event_id": "e14",
+          "mesh": "application_ct_16_e14_tool.obj",
+          "sha256": "1cdf879828f34732783b5659eec3dec3587f08b5b9384ce3c0635a63fb51217d"
+        },
+        {
+          "event_id": "e15",
+          "mesh": "application_ct_16_e15_tool.obj",
+          "sha256": "d5e9ba8a14fc095c3288abecdf5f1d956ccc62b43a1444063d3c81b99bc07a2a"
+        }
+      ],
+      "expected_event_rejections": [],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15"
+      ]
+    }
+  ],
+  "negative_inputs": [
+    {
+      "id": "negative_thin_wall_0.5voxel",
+      "kind": "thin_wall",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.01,
+      "feature_to_nominal_voxel": 0.5,
+      "mesh": "negative_thin_wall_0.5voxel.obj",
+      "sha256": "8544287acd9356ae27021140bf387efeb0db3f34844cbe5eae94b886ae01a390",
+      "expected_components": 1,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_narrow_gap_0.5voxel",
+      "kind": "narrow_gap",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.01,
+      "feature_to_nominal_voxel": 0.5,
+      "mesh": "negative_narrow_gap_0.5voxel.obj",
+      "sha256": "f5ba514beadb2535afd9acc84eb38e6248ce246ce8bde51bfacbfa49e05bb737",
+      "expected_components": 2,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_through_hole_0.5voxel",
+      "kind": "through_hole",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.01,
+      "feature_to_nominal_voxel": 0.5,
+      "mesh": "negative_through_hole_0.5voxel.obj",
+      "sha256": "ed0289b233e55fcbb347bb3c06136ed116fef32b9f9c380e320ad4e66e80fda9",
+      "expected_components": 1,
+      "expected_genus": 1,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_thin_wall_1voxel",
+      "kind": "thin_wall",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.02,
+      "feature_to_nominal_voxel": 1.0,
+      "mesh": "negative_thin_wall_1voxel.obj",
+      "sha256": "70683a398524086a6ded1a5ebaa5e5600145b4a0f2ab81ce165908996d429bc3",
+      "expected_components": 1,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_narrow_gap_1voxel",
+      "kind": "narrow_gap",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.02,
+      "feature_to_nominal_voxel": 1.0,
+      "mesh": "negative_narrow_gap_1voxel.obj",
+      "sha256": "88699e1fafd37b27380e3ef21a9b1f9aa7b8c97f376647e00599916cc43bb231",
+      "expected_components": 2,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_through_hole_1voxel",
+      "kind": "through_hole",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.02,
+      "feature_to_nominal_voxel": 1.0,
+      "mesh": "negative_through_hole_1voxel.obj",
+      "sha256": "493a24cffec0d6937f1d9b410216d99d53fcaa2772085168fe0343274f6c4ed0",
+      "expected_components": 1,
+      "expected_genus": 1,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_thin_wall_2voxel",
+      "kind": "thin_wall",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.04,
+      "feature_to_nominal_voxel": 2.0,
+      "mesh": "negative_thin_wall_2voxel.obj",
+      "sha256": "cb23474b051c4a80ba4b15433456865ed8732bf0ef71076c72949ed820296ea3",
+      "expected_components": 1,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_narrow_gap_2voxel",
+      "kind": "narrow_gap",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.04,
+      "feature_to_nominal_voxel": 2.0,
+      "mesh": "negative_narrow_gap_2voxel.obj",
+      "sha256": "0904ff6cdfdc37e63b3e064d235820b1f9d820320b862e9f1fbf079c6936e5de",
+      "expected_components": 2,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_through_hole_2voxel",
+      "kind": "through_hole",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.04,
+      "feature_to_nominal_voxel": 2.0,
+      "mesh": "negative_through_hole_2voxel.obj",
+      "sha256": "b02ee517a8f8c058ca28be493756b56f0f5ebac5905397e90f3bdde309fabc7b",
+      "expected_components": 1,
+      "expected_genus": 1,
+      "expected_policy": "preserve_or_reject"
+    }
+  ],
+  "algorithm": "author_P_full_three_stages_ratio1_minvertex0_original_sign",
+  "branches": {
+    "C0": "Geogram parent feedback; PaMO display only",
+    "C1": "audited PaMO parent feedback",
+    "R": "original initial minus accumulated union of discrete tools"
+  },
+  "geometry_budget_mm": 0.1,
+  "far_margin_mm": 0.1,
+  "distance_samples_per_direction": 8192,
+  "reference_error_status": "discrete_reference_error_not_certified",
+  "test_access": "original baseline characterization; inspected routes become seen",
+  "quality": "report angle fractions below 10/5/1 and high quality 25deg_q0.4; no hard angle rejection"
+}

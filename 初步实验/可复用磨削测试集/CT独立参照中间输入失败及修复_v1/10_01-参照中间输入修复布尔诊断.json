@@ -1,0 +1,166 @@
+{
+  "time_beijing": "2026-10-04T22:20:12.834731+08:00",
+  "execution": {
+    "returncode": 0,
+    "remote_roundtrip_ms": 1102.152899999055,
+    "stdout": "",
+    "stderr": "",
+    "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean '/root/autodl-tmp/graduation_project/constrained_20261004_独立参照中间输入修复布尔诊断_b6f922e063f8/operand_0.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_独立参照中间输入修复布尔诊断_b6f922e063f8/operand_1.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_独立参照中间输入修复布尔诊断_b6f922e063f8/result.obj' > '/root/autodl-tmp/graduation_project/constrained_20261004_独立参照中间输入修复布尔诊断_b6f922e063f8/result.obj.log' 2>&1"
+  },
+  "operands": [
+    {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_第十二事件独立参照实际失败输入\\repaired_parent_not_published.obj",
+      "sha256": "052b67c9ab8a7c3f0706b4eb87fa8eb4b7499c6fbd3717a4a63e84510bc9de33"
+    },
+    {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_第十二事件独立参照实际失败输入\\tool.obj",
+      "sha256": "309d563147c086374ecebcf62467cd41dd82a01786b785217209038da7d40ce2"
+    }
+  ],
+  "scope": "实际失败参照的修复操作数新诊断；没有候选父网格，不发布、不改原138步记录",
+  "raw_result_valid": true,
+  "raw_result_metrics": {
+    "vertices": 22582,
+    "faces": 45160,
+    "finite": true,
+    "zero_area_faces": 0,
+    "fp32_zero_area_faces": 10,
+    "watertight": true,
+    "winding_consistent": true,
+    "vertex_manifold_closed": true,
+    "euler_number": 2,
+    "self_intersection_faces": 0,
+    "volume_mm3": 62208.35074100174,
+    "self_intersection_raw_alarm_faces": 6,
+    "separated_alarm_pairs": [
+      {
+        "faces": [
+          40692,
+          40768
+        ],
+        "separation_gap_mm": 0.15464251811804897
+      },
+      {
+        "faces": [
+          40692,
+          43318
+        ],
+        "separation_gap_mm": 16.407994002768884
+      },
+      {
+        "faces": [
+          40692,
+          43522
+        ],
+        "separation_gap_mm": 16.439392063157765
+      },
+      {
+        "faces": [
+          40692,
+          43662
+        ],
+        "separation_gap_mm": 16.439392063157765
+      },
+      {
+        "faces": [
+          40692,
+          45153
+        ],
+        "separation_gap_mm": 16.40799400276887
+      },
+      {
+        "faces": [
+          40768,
+          43318
+        ],
+        "separation_gap_mm": 16.344260827369634
+      },
+      {
+        "faces": [
+          40768,
+          43522
+        ],
+        "separation_gap_mm": 16.391403378692743
+      },
+      {
+        "faces": [
+          40768,
+          43662
+        ],
+        "separation_gap_mm": 16.39140337869274
+      },
+      {
+        "faces": [
+          40768,
+          45153
+        ],
+        "separation_gap_mm": 16.344260827369617
+      },
+      {
+        "faces": [
+          43318,
+          43522
+        ],
+        "separation_gap_mm": 0.6492266304797374
+      },
+      {
+        "faces": [
+          43318,
+          43662
+        ],
+        "separation_gap_mm": 0.8452455061830004
+      },
+      {
+        "faces": [
+          43318,
+          45153
+        ],
+        "separation_gap_mm": 0.0031955385781098355
+      },
+      {
+        "faces": [
+          43522,
+          43662
+        ],
+        "separation_gap_mm": 0.03304863785070311
+      },
+      {
+        "faces": [
+          43522,
+          45153
+        ],
+        "separation_gap_mm": 0.6127921516184065
+      },
+      {
+        "faces": [
+          43662,
+          45153
+        ],
+        "separation_gap_mm": 0.8501648478725445
+      }
+    ],
+    "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+    "components": 1,
+    "arithmetic_policy": "保存FP64物理面积门槛不变；FP32退化须交原固定几何后端验证",
+    "full_exact_embedding": {
+      "saved_sha256": "3e7b892754d03423f71f51946c269032f22644229909a14cec7d8e36996f44f5",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 488.8910999870859,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":22582,\"faces\":45160,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_独立参照中间输入修复布尔诊断_b6f922e063f8/embedding_3e7b892754d03423f71f51946c269032f22644229909a14cec7d8e36996f44f5.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 22582,
+      "faces": 45160,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64"
+    },
+    "historical_unresolved_alarm_faces": 0,
+    "full_exact_embedding_bound": true
+  }
+}

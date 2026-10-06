@@ -1,0 +1,225 @@
+{
+  "time_beijing": "2026-10-04T02:50:37.606588+08:00",
+  "source_sha256": "ebdcafbf717cf950591efe41a81c74d2532ebf036bd4595b793b81c2ad9389ae",
+  "labels_sha256": "ca94e08b0c13aae5add568134d89537aebc396caee7f055eb5bd0185e1ac80a3",
+  "tool_sha256": "62344d743a67958cc773dfb2d2b0d39388306c5d656b56b1a15526388030973c",
+  "extension_sha256": "e15dfcdd5d982a1ad5927b59debbac5ff42126eaf996fd0f7e5a2bb0b0235f2d",
+  "parent_cuda_initialized": false,
+  "source_vertices": 2763,
+  "source_faces": 5522,
+  "execution": "CPU预加载后每张每方法独立CUDA子进程；不含独立几何审计",
+  "rows": [
+    {
+      "method": "full",
+      "round": 0,
+      "wall_ms": 1910.9596712514758,
+      "child_status": 0,
+      "status": "pending_independent_audit",
+      "output_sha256": "9a56f12651606184999025ed4dbdf52c31e9a3601280528846322f115a78c77d",
+      "pamo_run_ms": 1462.2899340465665,
+      "stage1": "original"
+    },
+    {
+      "method": "global",
+      "round": 0,
+      "wall_ms": 1413.2017334923148,
+      "child_status": 0,
+      "status": "pending_independent_audit",
+      "output_sha256": "d860640a3c1209389519d5ac74d76f4afa2622e75e58a5e15b95a1e77ba18985",
+      "mask_ms": 0.4481188952922821,
+      "stage2_ms": 53.414867259562016,
+      "stage3_ms": 935.3420250117779,
+      "active_faces": 5522,
+      "active_fraction": 1.0,
+      "fixed_vertices": 0,
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 0,
+        "external_faces_retained": 0,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "collapse_pass_budget": 8,
+      "collapse_passes": [
+        {
+          "iteration": 0,
+          "before_faces": 5522,
+          "after_faces": 5142
+        },
+        {
+          "iteration": 1,
+          "before_faces": 5142,
+          "after_faces": 4756
+        },
+        {
+          "iteration": 2,
+          "before_faces": 4756,
+          "after_faces": 4410
+        },
+        {
+          "iteration": 3,
+          "before_faces": 4410,
+          "after_faces": 4128
+        },
+        {
+          "iteration": 4,
+          "before_faces": 4128,
+          "after_faces": 3844
+        },
+        {
+          "iteration": 5,
+          "before_faces": 3844,
+          "after_faces": 3590
+        },
+        {
+          "iteration": 6,
+          "before_faces": 3590,
+          "after_faces": 3360
+        },
+        {
+          "iteration": 7,
+          "before_faces": 3360,
+          "after_faces": 3152
+        }
+      ],
+      "fp64_restoration_max_mm": 0.0,
+      "stage1": "skipped_for_audited_closed_boolean_input",
+      "stage3_collision_scope": "whole_mesh_author_energy_and_ccd"
+    },
+    {
+      "method": "spatial",
+      "round": 0,
+      "wall_ms": 1412.5584065914154,
+      "child_status": 0,
+      "status": "pending_independent_audit",
+      "output_sha256": "23ec83c275071f64a07ee2c71287ff8849700c063fb448245d2fcf5b39409d2e",
+      "mask_ms": 7.097464054822922,
+      "stage2_ms": 53.55259496718645,
+      "stage3_ms": 848.3409890905023,
+      "active_faces": 563,
+      "active_fraction": 0.1019558131111916,
+      "fixed_vertices": 2508,
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 4959,
+        "external_faces_retained": 4959,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "collapse_pass_budget": 8,
+      "collapse_passes": [
+        {
+          "iteration": 0,
+          "before_faces": 5522,
+          "after_faces": 5476
+        },
+        {
+          "iteration": 1,
+          "before_faces": 5476,
+          "after_faces": 5440
+        },
+        {
+          "iteration": 2,
+          "before_faces": 5440,
+          "after_faces": 5408
+        },
+        {
+          "iteration": 3,
+          "before_faces": 5408,
+          "after_faces": 5386
+        },
+        {
+          "iteration": 4,
+          "before_faces": 5386,
+          "after_faces": 5364
+        },
+        {
+          "iteration": 5,
+          "before_faces": 5364,
+          "after_faces": 5348
+        },
+        {
+          "iteration": 6,
+          "before_faces": 5348,
+          "after_faces": 5334
+        },
+        {
+          "iteration": 7,
+          "before_faces": 5334,
+          "after_faces": 5318
+        }
+      ],
+      "fp64_restoration_max_mm": 1.5323044831342746e-07,
+      "stage1": "skipped_for_audited_closed_boolean_input",
+      "stage3_collision_scope": "whole_mesh_author_energy_and_ccd"
+    },
+    {
+      "method": "boolean",
+      "round": 0,
+      "wall_ms": 1412.4745996668935,
+      "child_status": 0,
+      "status": "pending_independent_audit",
+      "output_sha256": "eb4c37be4855ab9668a23af3cd64bdb190cd5884fe763e560d18982b489b85a5",
+      "mask_ms": 5.038333125412464,
+      "stage2_ms": 52.262354642152786,
+      "stage3_ms": 850.7540598511696,
+      "active_faces": 294,
+      "active_fraction": 0.05324157913799348,
+      "fixed_vertices": 2633,
+      "fixed_contract": {
+        "passed": true,
+        "external_faces": 5228,
+        "external_faces_retained": 5228,
+        "all_fixed_vertices_retained": true,
+        "fixed_positions_exact": true
+      },
+      "collapse_pass_budget": 8,
+      "collapse_passes": [
+        {
+          "iteration": 0,
+          "before_faces": 5522,
+          "after_faces": 5488
+        },
+        {
+          "iteration": 1,
+          "before_faces": 5488,
+          "after_faces": 5468
+        },
+        {
+          "iteration": 2,
+          "before_faces": 5468,
+          "after_faces": 5448
+        },
+        {
+          "iteration": 3,
+          "before_faces": 5448,
+          "after_faces": 5434
+        },
+        {
+          "iteration": 4,
+          "before_faces": 5434,
+          "after_faces": 5422
+        },
+        {
+          "iteration": 5,
+          "before_faces": 5422,
+          "after_faces": 5416
+        },
+        {
+          "iteration": 6,
+          "before_faces": 5416,
+          "after_faces": 5410
+        },
+        {
+          "iteration": 7,
+          "before_faces": 5410,
+          "after_faces": 5398
+        }
+      ],
+      "fp64_restoration_max_mm": 1.5323044831342746e-07,
+      "stage1": "skipped_for_audited_closed_boolean_input",
+      "stage3_collision_scope": "whole_mesh_author_energy_and_ccd"
+    }
+  ],
+  "status": "pending_independent_audit"
+}

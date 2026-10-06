@@ -1,0 +1,21 @@
+o-[Process     ] Max used threads = 4
+o-[I/O         ] Loading file /tmp/geogram_native_quality_20261006_20/native_ct16_feedback_01/e02_candidate.obj...
+o-[I/O         ] (FP64) nb_v:22014 nb_e:0 nb_f:44024 nb_b:0 tri:1 dim:3
+o-[I/O         ] Attributes on vertices: point[3]
+o-[I/O         ] Loading file /tmp/geogram_native_quality_20261006_20/ct16_inputs/03_tool.obj...
+o-[I/O         ] (FP64) nb_v:674 nb_e:0 nb_f:1344 nb_b:0 tri:1 dim:3
+o-[I/O         ] Attributes on vertices: point[3]
+(E)-[Assert] Assertion failed: !Q.empty().
+File: /tmp/geogram_native_quality_20261006_20/candidate_source/src/lib/geogram/delaunay/CDT_2d.cpp,
+Line: 610
+Stacktrace: /tmp/geogram_native_quality_20261006_20/candidate_build/lib/libgeogram.so.1.10.2(+0xfa390) [0x7f4d47651390]
+Stacktrace: /tmp/geogram_native_quality_20261006_20/candidate_build/lib/libgeogram.so.1.10.2(_ZN3GEO20geo_assertion_failedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_i+0x124) [0x7f4d475f8994]
+Stacktrace: /tmp/geogram_native_quality_20261006_20/candidate_build/lib/libgeogram.so.1.10.2(_ZN3GEO9CDTBase2d15constrain_edgesEjjRNS0_5DListES2_+0x4ab) [0x7f4d477d22fb]
+Stacktrace: /tmp/geogram_native_quality_20261006_20/candidate_build/lib/libgeogram.so.1.10.2(_ZN3GEO9CDTBase2d17insert_constraintEjj+0xd9) [0x7f4d477d23f9]
+Stacktrace: /tmp/geogram_native_quality_20261006_20/candidate_build/lib/libgeogram.so.1.10.2(+0x26c03a) [0x7f4d477c303a]
+Stacktrace: /tmp/geogram_native_quality_20261006_20/candidate_build/lib/libgeogram.so.1.10.2(+0x256824) [0x7f4d477ad824]
+Stacktrace: /tmp/geogram_native_quality_20261006_20/candidate_build/lib/libgeogram.so.1.10.2(+0xf352c) [0x7f4d4764a52c]
+Stacktrace: /tmp/geogram_native_quality_20261006_20/candidate_build/lib/libgeogram.so.1.10.2(+0xf9587) [0x7f4d47650587]
+Stacktrace: /usr/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x7f4d47166ac3]
+Stacktrace: /usr/lib/x86_64-linux-gnu/libc.so.6(clone+0x44) [0x7f4d471f7a04]
+Abnormal program termination: function terminate() was called

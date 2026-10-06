@@ -1,0 +1,1640 @@
+{
+  "生成时间": "2026-10-04T06:44:35.672850+08:00",
+  "修改时间及修改内容": "首次生成；七个CPU后布尔强对照，不运行额外PaMO",
+  "文档概述": "原版PaMO后重新扣除工具，采用既有精确CSG与17位输出，评估网格质量代价",
+  "索引目录": [
+    "environment",
+    "rows"
+  ],
+  "rows": [
+    {
+      "case": "crossing_e0",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 78.73869999821181,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e0_parent.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e0_tool.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e0_recut.obj' --no-simplify > '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e0.log' 2>&1"
+      },
+      "input_hashes": {
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\取回输出\\saved_batch_outputs\\crossing_e0\\r0_full.obj": "380d2affa7a5f94a1ff1615e44ce2011c470aeedc31950bdc26de3095be29b88",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\crossing_e0\\tool.obj": "6b75f36501241413420c5cf283f006b126ba6f19aac64db191866ed288e2a2b4",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\crossing_e0\\source.obj": "8d663e43bc978d6908ead5763be84c102936018734d24de9e1c30f8258a27517"
+      },
+      "mesh_valid": true,
+      "metrics": {
+        "vertices": 1218,
+        "faces": 2432,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 19.132565778212612,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "quality": {
+        "total_faces": 2432,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 166,
+          "fraction": 0.06825657894736842,
+          "area_fraction": 0.004121935921749731
+        },
+        "angle_below_5_deg": {
+          "faces": 73,
+          "fraction": 0.030016447368421052,
+          "area_fraction": 0.00046368533313164724
+        },
+        "angle_below_1_deg": {
+          "faces": 14,
+          "fraction": 0.005756578947368421,
+          "area_fraction": 4.3356489907105595e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1856,
+          "fraction": 0.7631578947368421,
+          "area_fraction": 0.9259401780558209
+        }
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.015969993588832887,
+            "p95_mm": 0.001992170360699079,
+            "rms_mm": 0.001206529466367118,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.01630473250903015,
+            "p95_mm": 0.002172294756654547,
+            "rms_mm": 0.0013316335263393886,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.01630473250903015,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.03139756011630994,
+        "probe_max_mm": 0.03139756011630994,
+        "continuous_geometry_certified": false
+      },
+      "inside_probe_count": 0,
+      "max_inward_plane_depth_mm": 2.220446049250313e-16
+    },
+    {
+      "case": "crossing_e1",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 123.83630000113044,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e1_parent.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e1_tool.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e1_recut.obj' --no-simplify > '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e1.log' 2>&1"
+      },
+      "input_hashes": {
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\取回输出\\saved_batch_outputs\\crossing_e1\\r0_full.obj": "b7fdf0a177ef404123b780f37d022948d7d1681effc2be9a5e0f61f5de648178",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\crossing_e1\\tool.obj": "fb1e18d888056303e2c648be225741e8880c06246752866e7b746b097b6fd2bf",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\crossing_e1\\source.obj": "3019c17ecef627c6917d685da38b92b37eb322ed8691cfe38f31055b8c8e24d5"
+      },
+      "mesh_valid": false,
+      "metrics": {
+        "vertices": 1004,
+        "faces": 2004,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 4,
+        "volume_mm3": 18.901582030483144,
+        "self_intersection_raw_alarm_faces": 10,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              1842,
+              1848
+            ],
+            "separation_gap_mm": 0.011224909778915354
+          },
+          {
+            "faces": [
+              1842,
+              1919
+            ],
+            "separation_gap_mm": 0.07733522536029683
+          },
+          {
+            "faces": [
+              1842,
+              1928
+            ],
+            "separation_gap_mm": 0.09818398337041154
+          },
+          {
+            "faces": [
+              1842,
+              1952
+            ],
+            "separation_gap_mm": 0.270734213655377
+          },
+          {
+            "faces": [
+              1842,
+              1955
+            ],
+            "separation_gap_mm": 0.18211125223393784
+          },
+          {
+            "faces": [
+              1842,
+              1959
+            ],
+            "separation_gap_mm": 0.22088024986739987
+          },
+          {
+            "faces": [
+              1842,
+              1962
+            ],
+            "separation_gap_mm": 0.243182800519881
+          },
+          {
+            "faces": [
+              1842,
+              1967
+            ],
+            "separation_gap_mm": 0.17881928885431533
+          },
+          {
+            "faces": [
+              1842,
+              1974
+            ],
+            "separation_gap_mm": 0.19921094030978512
+          },
+          {
+            "faces": [
+              1848,
+              1919
+            ],
+            "separation_gap_mm": 0.08779510085794792
+          },
+          {
+            "faces": [
+              1848,
+              1928
+            ],
+            "separation_gap_mm": 0.11848734663514526
+          },
+          {
+            "faces": [
+              1848,
+              1952
+            ],
+            "separation_gap_mm": 0.2807109270838631
+          },
+          {
+            "faces": [
+              1848,
+              1955
+            ],
+            "separation_gap_mm": 0.9869823012540977
+          },
+          {
+            "faces": [
+              1848,
+              1959
+            ],
+            "separation_gap_mm": 0.3809127316258456
+          },
+          {
+            "faces": [
+              1848,
+              1962
+            ],
+            "separation_gap_mm": 0.9904712381692998
+          },
+          {
+            "faces": [
+              1848,
+              1967
+            ],
+            "separation_gap_mm": 0.17931729382894615
+          },
+          {
+            "faces": [
+              1848,
+              1974
+            ],
+            "separation_gap_mm": 0.2300635283677148
+          },
+          {
+            "faces": [
+              1919,
+              1928
+            ],
+            "separation_gap_mm": 0.0030922840010336877
+          },
+          {
+            "faces": [
+              1919,
+              1952
+            ],
+            "separation_gap_mm": 0.4336345463704292
+          },
+          {
+            "faces": [
+              1919,
+              1955
+            ],
+            "separation_gap_mm": 1.0983842013488876
+          },
+          {
+            "faces": [
+              1919,
+              1959
+            ],
+            "separation_gap_mm": 0.42762355280902653
+          },
+          {
+            "faces": [
+              1919,
+              1962
+            ],
+            "separation_gap_mm": 0.7462283435415416
+          },
+          {
+            "faces": [
+              1919,
+              1967
+            ],
+            "separation_gap_mm": 0.338614061834694
+          },
+          {
+            "faces": [
+              1919,
+              1974
+            ],
+            "separation_gap_mm": 0.39845436755756247
+          },
+          {
+            "faces": [
+              1928,
+              1952
+            ],
+            "separation_gap_mm": 0.44337931215528614
+          },
+          {
+            "faces": [
+              1928,
+              1955
+            ],
+            "separation_gap_mm": 1.2134981783032326
+          },
+          {
+            "faces": [
+              1928,
+              1959
+            ],
+            "separation_gap_mm": 0.4735732331020888
+          },
+          {
+            "faces": [
+              1928,
+              1962
+            ],
+            "separation_gap_mm": 0.8698204724552813
+          },
+          {
+            "faces": [
+              1928,
+              1967
+            ],
+            "separation_gap_mm": 0.34899797469480087
+          },
+          {
+            "faces": [
+              1928,
+              1974
+            ],
+            "separation_gap_mm": 0.42561330134548137
+          },
+          {
+            "faces": [
+              1952,
+              1955
+            ],
+            "separation_gap_mm": 0.036155961863397756
+          },
+          {
+            "faces": [
+              1952,
+              1959
+            ],
+            "separation_gap_mm": 0.01083165728423316
+          },
+          {
+            "faces": [
+              1952,
+              1967
+            ],
+            "separation_gap_mm": 0.07007719410792448
+          },
+          {
+            "faces": [
+              1952,
+              1974
+            ],
+            "separation_gap_mm": 0.0074980569882476256
+          },
+          {
+            "faces": [
+              1955,
+              1959
+            ],
+            "separation_gap_mm": 0.01254830623289277
+          },
+          {
+            "faces": [
+              1955,
+              1962
+            ],
+            "separation_gap_mm": 0.011323004857696939
+          },
+          {
+            "faces": [
+              1955,
+              1974
+            ],
+            "separation_gap_mm": 0.3793568910479839
+          },
+          {
+            "faces": [
+              1959,
+              1962
+            ],
+            "separation_gap_mm": 0.008592575187750862
+          },
+          {
+            "faces": [
+              1959,
+              1967
+            ],
+            "separation_gap_mm": 0.029229258050854884
+          },
+          {
+            "faces": [
+              1959,
+              1974
+            ],
+            "separation_gap_mm": 0.0038992255298004597
+          },
+          {
+            "faces": [
+              1962,
+              1967
+            ],
+            "separation_gap_mm": 0.06444555677195551
+          },
+          {
+            "faces": [
+              1962,
+              1974
+            ],
+            "separation_gap_mm": 0.3541072611861832
+          },
+          {
+            "faces": [
+              1967,
+              1974
+            ],
+            "separation_gap_mm": 1.3687860657002338e-05
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "quality": {
+        "total_faces": 2004,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 309,
+          "fraction": 0.15419161676646706,
+          "area_fraction": 0.0389078268178489
+        },
+        "angle_below_5_deg": {
+          "faces": 196,
+          "fraction": 0.09780439121756487,
+          "area_fraction": 0.028729858949212622
+        },
+        "angle_below_1_deg": {
+          "faces": 57,
+          "fraction": 0.02844311377245509,
+          "area_fraction": 0.0020667509023078756
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1279,
+          "fraction": 0.6382235528942116,
+          "area_fraction": 0.8713732266724303
+        }
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.01910595695744042,
+            "p95_mm": 0.003213233735048908,
+            "rms_mm": 0.0016144316090268794,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.02193137484066299,
+            "p95_mm": 0.0034760623307950153,
+            "rms_mm": 0.0017382415625273328,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.02193137484066299,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.03782595520207507,
+        "probe_max_mm": 0.03782595520207507,
+        "continuous_geometry_certified": false
+      },
+      "inside_probe_count": 0,
+      "max_inward_plane_depth_mm": 2.220446049250313e-16
+    },
+    {
+      "case": "crossing_e2",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 77.1811999984493,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e2_parent.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e2_tool.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e2_recut.obj' --no-simplify > '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e2.log' 2>&1"
+      },
+      "input_hashes": {
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\取回输出\\saved_batch_outputs\\crossing_e2\\r0_full.obj": "2c63b0536b0550ad545061d91cdbddcc1d703a3a234d8d12cd64c7c14e8827cd",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\crossing_e2\\tool.obj": "6572910bd803b71dd99e1bb04a727b350f2f3a25237a18ec5e7f8671f60f01a8",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\crossing_e2\\source.obj": "74677226ccd9f720a6b6e01df4e248c027d5cb34a731f43a14a82efec4742309"
+      },
+      "mesh_valid": true,
+      "metrics": {
+        "vertices": 1073,
+        "faces": 2142,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 18.837868729046946,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "quality": {
+        "total_faces": 2142,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 155,
+          "fraction": 0.07236227824463119,
+          "area_fraction": 0.00456287430205485
+        },
+        "angle_below_5_deg": {
+          "faces": 65,
+          "fraction": 0.03034547152194211,
+          "area_fraction": 0.0006377881715872281
+        },
+        "angle_below_1_deg": {
+          "faces": 10,
+          "fraction": 0.004668534080298786,
+          "area_fraction": 3.2970286427253414e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1532,
+          "fraction": 0.715219421101774,
+          "area_fraction": 0.9022948929822122
+        }
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.019583050922150454,
+            "p95_mm": 0.005230857484832249,
+            "rms_mm": 0.0021884473480785573,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.02283698911809905,
+            "p95_mm": 0.005356542553870806,
+            "rms_mm": 0.002323393134724189,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.02283698911809905,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.026193172170998483,
+        "probe_max_mm": 0.026193172170998483,
+        "continuous_geometry_certified": false
+      },
+      "inside_probe_count": 0,
+      "max_inward_plane_depth_mm": 1.1102230246251565e-16
+    },
+    {
+      "case": "crossing_e3",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 124.60450000071432,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e3_parent.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e3_tool.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e3_recut.obj' --no-simplify > '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/crossing_e3.log' 2>&1"
+      },
+      "input_hashes": {
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\取回输出\\saved_batch_outputs\\crossing_e3\\r0_full.obj": "83e608472fff28d4d6dc9f94249d5364bd04394904f82a58234c8b1330873a9c",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\crossing_e3\\tool.obj": "f14f15bb7e5b49378dc8f7c1ca52aca1b860ed23d96e67686fe2b918cb048219",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\crossing_e3\\source.obj": "c47c5275ade4e9ec1a0b3c5e3be06e7a988f8450fe8c07c744ec2077d90c5f49"
+      },
+      "mesh_valid": false,
+      "metrics": {
+        "vertices": 1434,
+        "faces": 2864,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 10,
+        "volume_mm3": 18.684138174012244,
+        "self_intersection_raw_alarm_faces": 16,
+        "separated_alarm_pairs": [
+          {
+            "faces": [
+              2791,
+              2796
+            ],
+            "separation_gap_mm": 0.003742711631083376
+          },
+          {
+            "faces": [
+              2791,
+              2799
+            ],
+            "separation_gap_mm": 0.08217254067626464
+          },
+          {
+            "faces": [
+              2791,
+              2800
+            ],
+            "separation_gap_mm": 0.056671753379799114
+          },
+          {
+            "faces": [
+              2791,
+              2803
+            ],
+            "separation_gap_mm": 0.10505692159407096
+          },
+          {
+            "faces": [
+              2791,
+              2807
+            ],
+            "separation_gap_mm": 0.30757700314108427
+          },
+          {
+            "faces": [
+              2791,
+              2811
+            ],
+            "separation_gap_mm": 0.25642156001662686
+          },
+          {
+            "faces": [
+              2791,
+              2813
+            ],
+            "separation_gap_mm": 0.31677382579082186
+          },
+          {
+            "faces": [
+              2791,
+              2817
+            ],
+            "separation_gap_mm": 0.25642156001662675
+          },
+          {
+            "faces": [
+              2791,
+              2822
+            ],
+            "separation_gap_mm": 0.32674553408190987
+          },
+          {
+            "faces": [
+              2791,
+              2824
+            ],
+            "separation_gap_mm": 0.37043142117732947
+          },
+          {
+            "faces": [
+              2791,
+              2829
+            ],
+            "separation_gap_mm": 0.32531868824133
+          },
+          {
+            "faces": [
+              2791,
+              2830
+            ],
+            "separation_gap_mm": 0.3438960273354611
+          },
+          {
+            "faces": [
+              2791,
+              2836
+            ],
+            "separation_gap_mm": 0.40825780162425107
+          },
+          {
+            "faces": [
+              2791,
+              2838
+            ],
+            "separation_gap_mm": 0.3185748651564785
+          },
+          {
+            "faces": [
+              2794,
+              2799
+            ],
+            "separation_gap_mm": 0.1172471679453631
+          },
+          {
+            "faces": [
+              2794,
+              2800
+            ],
+            "separation_gap_mm": 0.019855929202502356
+          },
+          {
+            "faces": [
+              2794,
+              2803
+            ],
+            "separation_gap_mm": 0.13353023787079005
+          },
+          {
+            "faces": [
+              2794,
+              2807
+            ],
+            "separation_gap_mm": 0.30833286900796936
+          },
+          {
+            "faces": [
+              2794,
+              2811
+            ],
+            "separation_gap_mm": 0.2564586856856924
+          },
+          {
+            "faces": [
+              2794,
+              2813
+            ],
+            "separation_gap_mm": 0.3236655807418919
+          },
+          {
+            "faces": [
+              2794,
+              2817
+            ],
+            "separation_gap_mm": 0.2614295906357936
+          },
+          {
+            "faces": [
+              2794,
+              2822
+            ],
+            "separation_gap_mm": 0.32975085638282353
+          },
+          {
+            "faces": [
+              2794,
+              2824
+            ],
+            "separation_gap_mm": 0.38909114899245245
+          },
+          {
+            "faces": [
+              2794,
+              2829
+            ],
+            "separation_gap_mm": 0.3317501573825873
+          },
+          {
+            "faces": [
+              2794,
+              2830
+            ],
+            "separation_gap_mm": 0.3438960273354612
+          },
+          {
+            "faces": [
+              2794,
+              2836
+            ],
+            "separation_gap_mm": 0.41983746193397187
+          },
+          {
+            "faces": [
+              2794,
+              2838
+            ],
+            "separation_gap_mm": 0.32500633429773584
+          },
+          {
+            "faces": [
+              2796,
+              2799
+            ],
+            "separation_gap_mm": 0.22174358464222826
+          },
+          {
+            "faces": [
+              2796,
+              2800
+            ],
+            "separation_gap_mm": 0.01931668726976278
+          },
+          {
+            "faces": [
+              2796,
+              2803
+            ],
+            "separation_gap_mm": 0.3179298181084208
+          },
+          {
+            "faces": [
+              2796,
+              2807
+            ],
+            "separation_gap_mm": 0.6136282003310318
+          },
+          {
+            "faces": [
+              2796,
+              2811
+            ],
+            "separation_gap_mm": 0.6041302987680628
+          },
+          {
+            "faces": [
+              2796,
+              2813
+            ],
+            "separation_gap_mm": 0.3408912226684989
+          },
+          {
+            "faces": [
+              2796,
+              2817
+            ],
+            "separation_gap_mm": 0.26180247475453855
+          },
+          {
+            "faces": [
+              2796,
+              2822
+            ],
+            "separation_gap_mm": 0.39426738663501193
+          },
+          {
+            "faces": [
+              2796,
+              2824
+            ],
+            "separation_gap_mm": 0.38909114899245245
+          },
+          {
+            "faces": [
+              2796,
+              2829
+            ],
+            "separation_gap_mm": 0.3634989222116026
+          },
+          {
+            "faces": [
+              2796,
+              2830
+            ],
+            "separation_gap_mm": 0.3861141652406405
+          },
+          {
+            "faces": [
+              2796,
+              2836
+            ],
+            "separation_gap_mm": 0.41983746193397187
+          },
+          {
+            "faces": [
+              2796,
+              2838
+            ],
+            "separation_gap_mm": 0.3408912226684989
+          },
+          {
+            "faces": [
+              2799,
+              2800
+            ],
+            "separation_gap_mm": 0.4299924779308603
+          },
+          {
+            "faces": [
+              2799,
+              2803
+            ],
+            "separation_gap_mm": 0.008643434911687148
+          },
+          {
+            "faces": [
+              2799,
+              2807
+            ],
+            "separation_gap_mm": 0.36568325794920076
+          },
+          {
+            "faces": [
+              2799,
+              2811
+            ],
+            "separation_gap_mm": 0.7298603418764513
+          },
+          {
+            "faces": [
+              2799,
+              2813
+            ],
+            "separation_gap_mm": 0.43894741893566
+          },
+          {
+            "faces": [
+              2799,
+              2817
+            ],
+            "separation_gap_mm": 0.2969708609029392
+          },
+          {
+            "faces": [
+              2799,
+              2822
+            ],
+            "separation_gap_mm": 0.450771846324957
+          },
+          {
+            "faces": [
+              2799,
+              2824
+            ],
+            "separation_gap_mm": 0.3295490134652887
+          },
+          {
+            "faces": [
+              2799,
+              2829
+            ],
+            "separation_gap_mm": 0.5693265848762408
+          },
+          {
+            "faces": [
+              2799,
+              2830
+            ],
+            "separation_gap_mm": 0.4381706702989574
+          },
+          {
+            "faces": [
+              2799,
+              2836
+            ],
+            "separation_gap_mm": 0.3911495227624713
+          },
+          {
+            "faces": [
+              2799,
+              2838
+            ],
+            "separation_gap_mm": 0.35912162839610734
+          },
+          {
+            "faces": [
+              2800,
+              2803
+            ],
+            "separation_gap_mm": 0.5270843618538592
+          },
+          {
+            "faces": [
+              2800,
+              2807
+            ],
+            "separation_gap_mm": 0.3896702521513946
+          },
+          {
+            "faces": [
+              2800,
+              2811
+            ],
+            "separation_gap_mm": 0.3444567038838363
+          },
+          {
+            "faces": [
+              2800,
+              2813
+            ],
+            "separation_gap_mm": 0.3778273993280785
+          },
+          {
+            "faces": [
+              2800,
+              2817
+            ],
+            "separation_gap_mm": 0.3420253055412484
+          },
+          {
+            "faces": [
+              2800,
+              2822
+            ],
+            "separation_gap_mm": 0.3904347979257774
+          },
+          {
+            "faces": [
+              2800,
+              2824
+            ],
+            "separation_gap_mm": 0.4869273872419611
+          },
+          {
+            "faces": [
+              2800,
+              2829
+            ],
+            "separation_gap_mm": 0.384179804150913
+          },
+          {
+            "faces": [
+              2800,
+              2830
+            ],
+            "separation_gap_mm": 0.3951387381750289
+          },
+          {
+            "faces": [
+              2800,
+              2836
+            ],
+            "separation_gap_mm": 0.4915408810088755
+          },
+          {
+            "faces": [
+              2800,
+              2838
+            ],
+            "separation_gap_mm": 0.3789807447740068
+          },
+          {
+            "faces": [
+              2803,
+              2807
+            ],
+            "separation_gap_mm": 0.46572778528490255
+          },
+          {
+            "faces": [
+              2803,
+              2811
+            ],
+            "separation_gap_mm": 0.8054633932860196
+          },
+          {
+            "faces": [
+              2803,
+              2813
+            ],
+            "separation_gap_mm": 0.49968111059096043
+          },
+          {
+            "faces": [
+              2803,
+              2817
+            ],
+            "separation_gap_mm": 0.36640801285248237
+          },
+          {
+            "faces": [
+              2803,
+              2822
+            ],
+            "separation_gap_mm": 0.5056636460211676
+          },
+          {
+            "faces": [
+              2803,
+              2824
+            ],
+            "separation_gap_mm": 0.33754299608810245
+          },
+          {
+            "faces": [
+              2803,
+              2829
+            ],
+            "separation_gap_mm": 0.6627401326932398
+          },
+          {
+            "faces": [
+              2803,
+              2830
+            ],
+            "separation_gap_mm": 0.4904721756361917
+          },
+          {
+            "faces": [
+              2803,
+              2836
+            ],
+            "separation_gap_mm": 0.386680237867371
+          },
+          {
+            "faces": [
+              2803,
+              2838
+            ],
+            "separation_gap_mm": 0.4343791918621438
+          },
+          {
+            "faces": [
+              2807,
+              2811
+            ],
+            "separation_gap_mm": 0.012660251036468576
+          },
+          {
+            "faces": [
+              2807,
+              2813
+            ],
+            "separation_gap_mm": 0.22181160227552799
+          },
+          {
+            "faces": [
+              2807,
+              2817
+            ],
+            "separation_gap_mm": 0.22181160227552799
+          },
+          {
+            "faces": [
+              2807,
+              2822
+            ],
+            "separation_gap_mm": 0.2317928230204507
+          },
+          {
+            "faces": [
+              2807,
+              2824
+            ],
+            "separation_gap_mm": 0.6672446116116043
+          },
+          {
+            "faces": [
+              2807,
+              2829
+            ],
+            "separation_gap_mm": 0.30503864581329343
+          },
+          {
+            "faces": [
+              2807,
+              2836
+            ],
+            "separation_gap_mm": 0.7248484720889032
+          },
+          {
+            "faces": [
+              2807,
+              2838
+            ],
+            "separation_gap_mm": 0.24251848348838018
+          },
+          {
+            "faces": [
+              2811,
+              2813
+            ],
+            "separation_gap_mm": 0.18427597493717585
+          },
+          {
+            "faces": [
+              2811,
+              2817
+            ],
+            "separation_gap_mm": 0.18980127079976966
+          },
+          {
+            "faces": [
+              2811,
+              2822
+            ],
+            "separation_gap_mm": 0.1939333840988397
+          },
+          {
+            "faces": [
+              2811,
+              2824
+            ],
+            "separation_gap_mm": 0.5045837879368678
+          },
+          {
+            "faces": [
+              2811,
+              2829
+            ],
+            "separation_gap_mm": 0.2963916029999838
+          },
+          {
+            "faces": [
+              2811,
+              2830
+            ],
+            "separation_gap_mm": 0.05708470344973689
+          },
+          {
+            "faces": [
+              2811,
+              2836
+            ],
+            "separation_gap_mm": 0.5585266963327369
+          },
+          {
+            "faces": [
+              2811,
+              2838
+            ],
+            "separation_gap_mm": 0.20053719872102455
+          },
+          {
+            "faces": [
+              2813,
+              2822
+            ],
+            "separation_gap_mm": 0.0014353499759765243
+          },
+          {
+            "faces": [
+              2813,
+              2824
+            ],
+            "separation_gap_mm": 0.15729171727595337
+          },
+          {
+            "faces": [
+              2813,
+              2829
+            ],
+            "separation_gap_mm": 0.0014353499759765243
+          },
+          {
+            "faces": [
+              2813,
+              2830
+            ],
+            "separation_gap_mm": 0.005950160487733808
+          },
+          {
+            "faces": [
+              2813,
+              2836
+            ],
+            "separation_gap_mm": 0.11104704072253899
+          },
+          {
+            "faces": [
+              2817,
+              2822
+            ],
+            "separation_gap_mm": 0.005207777866432811
+          },
+          {
+            "faces": [
+              2817,
+              2824
+            ],
+            "separation_gap_mm": 0.22896008478717852
+          },
+          {
+            "faces": [
+              2817,
+              2829
+            ],
+            "separation_gap_mm": 0.005207777866432811
+          },
+          {
+            "faces": [
+              2817,
+              2830
+            ],
+            "separation_gap_mm": 0.0079146065217984
+          },
+          {
+            "faces": [
+              2817,
+              2836
+            ],
+            "separation_gap_mm": 0.2943581487623122
+          },
+          {
+            "faces": [
+              2822,
+              2824
+            ],
+            "separation_gap_mm": 0.15335334872800072
+          },
+          {
+            "faces": [
+              2822,
+              2836
+            ],
+            "separation_gap_mm": 0.08860174002590798
+          },
+          {
+            "faces": [
+              2824,
+              2829
+            ],
+            "separation_gap_mm": 0.5233744418918986
+          },
+          {
+            "faces": [
+              2824,
+              2830
+            ],
+            "separation_gap_mm": 0.13461386773539502
+          },
+          {
+            "faces": [
+              2824,
+              2836
+            ],
+            "separation_gap_mm": 0.012639871263757568
+          },
+          {
+            "faces": [
+              2824,
+              2838
+            ],
+            "separation_gap_mm": 0.20245442232940375
+          },
+          {
+            "faces": [
+              2829,
+              2836
+            ],
+            "separation_gap_mm": 0.47942630113409224
+          },
+          {
+            "faces": [
+              2830,
+              2836
+            ],
+            "separation_gap_mm": 0.08810628631479922
+          },
+          {
+            "faces": [
+              2830,
+              2838
+            ],
+            "separation_gap_mm": 0.006814887922633822
+          },
+          {
+            "faces": [
+              2836,
+              2838
+            ],
+            "separation_gap_mm": 0.26969230362524593
+          }
+        ],
+        "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+        "components": 1
+      },
+      "quality": {
+        "total_faces": 2864,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 392,
+          "fraction": 0.13687150837988826,
+          "area_fraction": 0.027114340733510812
+        },
+        "angle_below_5_deg": {
+          "faces": 221,
+          "fraction": 0.07716480446927375,
+          "area_fraction": 0.013118729553075898
+        },
+        "angle_below_1_deg": {
+          "faces": 57,
+          "fraction": 0.019902234636871508,
+          "area_fraction": 0.0011802055647246786
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 1888,
+          "fraction": 0.659217877094972,
+          "area_fraction": 0.8840949607021997
+        }
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.021274045840400314,
+            "p95_mm": 0.004434053715395199,
+            "rms_mm": 0.0020389737251930275,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.024000372791888807,
+            "p95_mm": 0.004729099822474138,
+            "rms_mm": 0.0021648783825323446,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.024000372791888807,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.029597818993096704,
+        "probe_max_mm": 0.029597818993096704,
+        "continuous_geometry_certified": false
+      },
+      "inside_probe_count": 0,
+      "max_inward_plane_depth_mm": 3.3306690738754696e-16
+    },
+    {
+      "case": "stop_resume_e0",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 161.3186000031419,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e0_parent.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e0_tool.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e0_recut.obj' --no-simplify > '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e0.log' 2>&1"
+      },
+      "input_hashes": {
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\取回输出\\saved_batch_outputs\\stop_resume_e0\\r0_full.obj": "7261341f4aa97fbabd8586cad61ce4f8549ad76ec42ca04ca5f0f2070e96a2b6",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\stop_resume_e0\\tool.obj": "2900e5c16fb64d927765fe1fbf5fe79affd4ddf0cf7a5a7b012df09735f974cf",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\stop_resume_e0\\source.obj": "587b6b820554c4f876497fd64491f1691dcb840f3a8ecfcccb3ca4fc36e58c55"
+      },
+      "mesh_valid": true,
+      "metrics": {
+        "vertices": 2719,
+        "faces": 5434,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 65.10568282387196,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "quality": {
+        "total_faces": 5434,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 97,
+          "fraction": 0.01785057048214943,
+          "area_fraction": 0.0004669475022327648
+        },
+        "angle_below_5_deg": {
+          "faces": 51,
+          "fraction": 0.009385351490614648,
+          "area_fraction": 0.00011171303256573955
+        },
+        "angle_below_1_deg": {
+          "faces": 16,
+          "fraction": 0.002944423997055576,
+          "area_fraction": 9.681641643024418e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5231,
+          "fraction": 0.9626426205373574,
+          "area_fraction": 0.9963942994914946
+        }
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.0064031465642316425,
+            "p95_mm": 0.0038708113318590403,
+            "rms_mm": 0.0023240729635930777,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.00767648396055421,
+            "p95_mm": 0.003900370788631738,
+            "rms_mm": 0.0023156376115093013,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.00767648396055421,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.010270053570284168,
+        "probe_max_mm": 0.010270053570284168,
+        "continuous_geometry_certified": false
+      },
+      "inside_probe_count": 0,
+      "max_inward_plane_depth_mm": 4.440892098500626e-16
+    },
+    {
+      "case": "stop_resume_e1",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 90.25750000000698,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e1_parent.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e1_tool.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e1_recut.obj' --no-simplify > '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e1.log' 2>&1"
+      },
+      "input_hashes": {
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\取回输出\\saved_batch_outputs\\stop_resume_e1\\r0_full.obj": "9f4b710f1b695edb42171856633368876900df7a633d98c59eac1490fca4b41a",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\stop_resume_e1\\tool.obj": "650b04d82089eb5448f498fafb903a87a771929bd0c83dba56eecfd1d08a5919",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\stop_resume_e1\\source.obj": "79f49091c712eeb6183e87062b1c7180a464f4da5cc1305b4c77847d78a69e5c"
+      },
+      "mesh_valid": true,
+      "metrics": {
+        "vertices": 2866,
+        "faces": 5728,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 64.93063411367699,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "quality": {
+        "total_faces": 5728,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 158,
+          "fraction": 0.027583798882681563,
+          "area_fraction": 0.004518522991907468
+        },
+        "angle_below_5_deg": {
+          "faces": 88,
+          "fraction": 0.015363128491620111,
+          "area_fraction": 0.0012846726690535404
+        },
+        "angle_below_1_deg": {
+          "faces": 18,
+          "fraction": 0.0031424581005586594,
+          "area_fraction": 3.5250776926533765e-05
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5463,
+          "fraction": 0.953736033519553,
+          "area_fraction": 0.9918859033271938
+        }
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.006966045889426325,
+            "p95_mm": 0.003877135918769267,
+            "rms_mm": 0.0022333563262820827,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.007316337120063959,
+            "p95_mm": 0.003863758479015954,
+            "rms_mm": 0.0022157549792305928,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.007316337120063959,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.014728109602043795,
+        "probe_max_mm": 0.014728109602043795,
+        "continuous_geometry_certified": false
+      },
+      "inside_probe_count": 0,
+      "max_inward_plane_depth_mm": 6.661338147750939e-16
+    },
+    {
+      "case": "stop_resume_e3",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 249.54889999935403,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 120 env LD_LIBRARY_PATH=/root/autodl-tmp/graduation_project/followup_20260928_2344/geogram_src/build/followup-linux64-gcc-dynamic/lib /root/autodl-tmp/graduation_project/followup_20260928_2344/bin/geogram_boolean '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e3_parent.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e3_tool.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e3_recut.obj' --no-simplify > '/root/autodl-tmp/graduation_project/constrained_20261004_质量后重新布尔强对照_2ca0f7bce768/stop_resume_e3.log' 2>&1"
+      },
+      "input_hashes": {
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\取回输出\\saved_batch_outputs\\stop_resume_e3\\r0_full.obj": "359c3310e8a74d700de792c18beb711fbe93d8bd7327f7be29d505fe9c69e009",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\stop_resume_e3\\tool.obj": "62344d743a67958cc773dfb2d2b0d39388306c5d656b56b1a15526388030973c",
+        "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部维护保存帧开发\\stop_resume_e3\\source.obj": "ebdcafbf717cf950591efe41a81c74d2532ebf036bd4595b793b81c2ad9389ae"
+      },
+      "mesh_valid": true,
+      "metrics": {
+        "vertices": 2830,
+        "faces": 5656,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 64.75407492583138,
+        "self_intersection_raw_alarm_faces": 0,
+        "components": 1
+      },
+      "quality": {
+        "total_faces": 5656,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 72,
+          "fraction": 0.01272984441301273,
+          "area_fraction": 0.00031679660864328176
+        },
+        "angle_below_5_deg": {
+          "faces": 45,
+          "fraction": 0.007956152758132957,
+          "area_fraction": 0.00012507046185740388
+        },
+        "angle_below_1_deg": {
+          "faces": 17,
+          "fraction": 0.003005657708628006,
+          "area_fraction": 5.803138300923796e-06
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 5490,
+          "fraction": 0.9706506364922206,
+          "area_fraction": 0.9953454262344652
+        }
+      },
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.015189240160548031,
+            "p95_mm": 0.003958988812031866,
+            "rms_mm": 0.00230053156545259,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.013778335155031731,
+            "p95_mm": 0.004002234556922534,
+            "rms_mm": 0.002288577194316085,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.015189240160548031,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.02307198839209997,
+        "probe_max_mm": 0.02307198839209997,
+        "continuous_geometry_certified": false
+      },
+      "inside_probe_count": 0,
+      "max_inward_plane_depth_mm": 6.661338147750939e-16
+    }
+  ],
+  "status": "completed",
+  "environment": {
+    "geogram_sha256": "5452616f1ff5a495b35f973ea8f0ad63c8073f3553a04273e379a786ffbf4dc2",
+    "script_sha256": "4f2459e90428cc55282a263ffd0c978c6f5bd505b0ee5c4190398e8395aa9696",
+    "csg_calls_budget": 7
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "生成时间": "2026年09月28日22时54分50秒（北京时间）",
+  "修改时间及修改内容": "首次生成：补齐输入合法性否定性检查；未读取算法输出。",
+  "文档概述": "两个新OBJ分别有局部绕序不一致及零面积三角面，预期由入口拒绝。",
+  "索引目录": [
+    "原清单哈希",
+    "反例清单"
+  ],
+  "frozen_manifest_sha256": "387be60d704aa02b32cc5986c553dcefc1515cec5bb02f3efdaf5a3d3d534b54",
+  "cases": [
+    {
+      "id": "negative_mixed_winding",
+      "kind": "inconsistent_winding",
+      "mesh": "negative_mixed_winding.obj",
+      "sha256": "3c06423aad80853f938abc522a2518041600f6de58db174c3c4cbf8ae634f5dc",
+      "expected_policy": "reject_before_PaMO"
+    },
+    {
+      "id": "negative_zero_area_face",
+      "kind": "degenerate_face",
+      "mesh": "negative_zero_area_face.obj",
+      "sha256": "c042a6e5947816c15a585cab2a8cde568efd026b644af4685a3cea2e633d6bda",
+      "expected_policy": "reject_before_PaMO"
+    }
+  ]
+}

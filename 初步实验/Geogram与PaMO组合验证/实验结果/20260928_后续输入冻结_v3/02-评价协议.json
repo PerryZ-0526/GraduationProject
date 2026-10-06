@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "seed": 20260922,
+  "record_kind": "simulated",
+  "coordinate_frame": {
+    "name": "bone",
+    "length_unit": "mm",
+    "time_unit": "ms",
+    "handedness": "right"
+  },
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200,
+    "interpolate_missing_motion": false
+  },
+  "quality": {
+    "minimum_angle_deg": 25,
+    "minimum_q": 0.4,
+    "geometry_budget_mm": 0.1
+  },
+  "geometry_samples_per_direction": 8192,
+  "geometry_seed": 20260922,
+  "statistics_unit": "route",
+  "independent_repetitions": 3,
+  "diagnostic_repeat_limit": 5,
+  "primary_metric": "continuous_accepted_cutting_prefix_length_over_registered_prefix_count",
+  "reference": "analytic solid minus union of arrived sphere capsules; sampled mesh error separately recorded",
+  "evaluation_access": "candidate outputs remain unopened until code and parameters are frozen",
+  "nominal_negative_voxel_mm": 0.02
+}

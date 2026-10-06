@@ -1,0 +1,24 @@
+Warp 1.0.0-beta.2 initialized:
+   CUDA Toolkit: 12.8, Driver: 13.2
+   Devices:
+     "cpu"    | x86_64
+     "cuda:0" | NVIDIA GeForce RTX 4090 (sm_89)
+   Kernel cache: /root/.cache/warp/1.0.0-beta.2
+Module pamo_safe_project.kernels.geometry_kernels load on device 'cuda:0' took 17.36 ms
+Module pamo_safe_project.kernels.energy_kernels.elastic_energy load on device 'cuda:0' took 10.96 ms
+Module pamo_safe_project.kernels.energy_kernels.hinge_energy load on device 'cuda:0' took 28.22 ms
+Module pamo_safe_project.kernels.energy_kernels.contact_detection load on device 'cuda:0' took 16.66 ms
+Module pamo_safe_project.kernels.energy_kernels.distance_energy load on device 'cuda:0' took 21.38 ms
+Module pamo_safe_project.kernels.energy_kernels.collision_energy load on device 'cuda:0' took 72.24 ms
+Module pamo_safe_project.kernels.utils_kernels load on device 'cuda:0' took 3.20 ms
+Module locality_gpu load on device 'cuda:0' took 0.78 ms
+Module pamo_safe_project.kernels.solver_kernels load on device 'cuda:0' took 2.60 ms
+Module warp.utils load on device 'cuda:0' took 1.44 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs load on device 'cuda:0' took 17.97 ms
+Module pamo_safe_project.kernels.distance_kernels.hessian_funcs load on device 'cuda:0' took 75.96 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels load on device 'cuda:0' took 104.08 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs_struct load on device 'cuda:0' took 16.20 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels_struct load on device 'cuda:0' took 17.39 ms
+Module pamo_safe_project.kernels.ccd_kernels load on device 'cuda:0' took 21.90 ms
+Module pamo_safe_project.kernels.energy_kernels.lb_curvature_energy load on device 'cuda:0' took 3.14 ms
+{"quality_generation_ms": 26.89495962113142, "requested_edge_length_mm": 0.10017230311519329, "actual_edge_length_mm": 0.21496381367720035, "max_protected_edge_mm": 0.28284712325947414, "active_fraction": 0.1786407766990291, "input_faces": 2060, "output_faces": 1962, "fp64_restoration_max_mm": 0.0, "iterations": 3, "fixed_contract_before_projection": {"passed": true, "external_faces": 1692, "external_faces_retained": 1692, "missing_fixed_vertices": 0}, "safe_projection_ms": 897.3497254773974, "projection_fp64_restoration_max_mm": 1.040722367478907e-07, "collision_scope": "whole_mesh_author_energy_and_ccd", "fixed_contract": {"passed": true, "external_faces": 1692, "external_faces_retained": 1692, "missing_fixed_vertices": 0}, "method": "boolean", "maintenance_ms": 2709.1853925958276, "status": "pending_independent_audit"}

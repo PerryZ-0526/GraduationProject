@@ -1,0 +1,110 @@
+{
+  "time_beijing": "2026-10-07T02:09:58.166766+08:00",
+  "status": "completed_with_recorded_failures",
+  "planned_feedback_events": 1536,
+  "candidate_planned": 768,
+  "candidate_published": 157,
+  "saved_objects": 950,
+  "valid_published_outputs": 314,
+  "valid_published_sources": 314,
+  "vertex_bytes_fixed": 157,
+  "parent_chains_verified": true,
+  "quality": {
+    "development_long_slab_384": {
+      "published": 73,
+      "thresholds": {
+        "10": {
+          "count_improved": 9,
+          "count_worse": 0,
+          "area_improved": 22,
+          "area_worse": 0,
+          "bad_face_count_reduction_sum": 10
+        },
+        "5": {
+          "count_improved": 12,
+          "count_worse": 0,
+          "area_improved": 30,
+          "area_worse": 0,
+          "bad_face_count_reduction_sum": 14
+        },
+        "1": {
+          "count_improved": 24,
+          "count_worse": 0,
+          "area_improved": 45,
+          "area_worse": 0,
+          "bad_face_count_reduction_sum": 38
+        }
+      }
+    },
+    "development_long_sphere_384": {
+      "published": 84,
+      "thresholds": {
+        "10": {
+          "count_improved": 2,
+          "count_worse": 0,
+          "area_improved": 9,
+          "area_worse": 2,
+          "bad_face_count_reduction_sum": 4
+        },
+        "5": {
+          "count_improved": 4,
+          "count_worse": 0,
+          "area_improved": 33,
+          "area_worse": 0,
+          "bad_face_count_reduction_sum": 8
+        },
+        "1": {
+          "count_improved": 16,
+          "count_worse": 0,
+          "area_improved": 46,
+          "area_worse": 0,
+          "bad_face_count_reduction_sum": 25
+        }
+      }
+    }
+  },
+  "actual_queue": [
+    {
+      "hz": 5.0,
+      "planned": 384,
+      "published": 84,
+      "arrived": 85,
+      "queued_at_stop": 0,
+      "schedule_cancelled": 299,
+      "first_rejection": 85,
+      "input_to_pixels": {
+        "count": 84,
+        "mean_ms": 92.9365011896672,
+        "median_ms": 82.07489998312667,
+        "p95_ms": 172.53229497291608,
+        "max_ms": 280.5324999499135
+      },
+      "waiting": {
+        "count": 84,
+        "mean_ms": 1.7638738139621204,
+        "median_ms": 0.07634999928995967,
+        "p95_ms": 0.20485501445364196,
+        "max_ms": 76.54430001275614
+      },
+      "service_to_pixels": {
+        "count": 84,
+        "mean_ms": 91.17262737570508,
+        "median_ms": 81.85195000260137,
+        "p95_ms": 170.4403999785426,
+        "max_ms": 280.4667999735102
+      }
+    }
+  ],
+  "geometry_comparisons": 157,
+  "finite_probe_max_mm": 1.3864641050366405e-15,
+  "reference": "共享切削与必要修复的独立无可选质量材料链，非独立算法真值",
+  "hardware": "本机CPU维护和Intel Arc离屏渲染；不与远端不同版本、父网格和设备直接相除",
+  "conclusion": "合法前缀速度已接近交互要求，但完整路线仍因源自交拒绝，未实现连续实时建模",
+  "evidence_sha256": {
+    "00-完整长轨迹输入与本机方法冻结.json": "98ca0ef718367955f3140cab4964409c7fa0fe32300eb4e85e24e5862fdecedf",
+    "02-常驻长序列完整记录.json": "c3cc79cba55b9c1928c230ea45c8cc8665a5949f55e021f09b9e0647cb585565",
+    "04-保存对象完整精确复审.json": "e455002ab92d843097275b2d3423129e8d1d71587a40a71d26530ea9ef4f31c5",
+    "05-独立材料参照逐帧有限探针.json": "26e7364da8f40f0b29faa851dc540e6a95b4a6981090497ec2c87b64ede778a5",
+    "live_queue/01-真实输入队列与GPU像素完整记录.json": "7875e3cb0f4f4cb937facee5aa3115d3e6dae41280a9ca2a47b02eb5c40bc5b2"
+  }
+}

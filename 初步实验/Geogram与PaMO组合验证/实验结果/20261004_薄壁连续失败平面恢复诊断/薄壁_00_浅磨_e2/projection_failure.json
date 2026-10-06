@@ -1,0 +1,63 @@
+{
+  "stages": {
+    "before_projection": {
+      "finite_vertices": true,
+      "nonpositive_orientation_faces": [
+        942
+      ],
+      "nonfinite_orientation_faces": [],
+      "minimum_orientation": 0.0,
+      "area_at_most_1e_12_faces": 1
+    },
+    "raw_cuda_output": {
+      "finite_vertices": true,
+      "nonpositive_orientation_faces": [
+        942
+      ],
+      "nonfinite_orientation_faces": [],
+      "minimum_orientation": 0.0,
+      "area_at_most_1e_12_faces": 1
+    },
+    "restored_planes": {
+      "finite_vertices": true,
+      "nonpositive_orientation_faces": [
+        942
+      ],
+      "nonfinite_orientation_faces": [],
+      "minimum_orientation": 0.0,
+      "area_at_most_1e_12_faces": 1
+    }
+  },
+  "fp64_correction_max_mm": 3.488812179825648e-07,
+  "collision_protected_vertices": [
+    500
+  ],
+  "collision_protection": [
+    {
+      "first_diff": true,
+      "protected_vertices": [
+        500
+      ],
+      "component_records": [
+        {
+          "name": "<class 'pamo_safe_project.energy.Mesh2GTDistanceBvhEnergyCalculator'>",
+          "nonfinite_free_vertices": 0
+        },
+        {
+          "name": "<class 'pamo_safe_project.energy.ElasticEnergyCalculator'>",
+          "nonfinite_free_vertices": 0
+        },
+        {
+          "name": "<class 'pamo_safe_project.energy.HingeEnergyCalculator'>",
+          "nonfinite_free_vertices": 0
+        },
+        {
+          "name": "<class 'pamo_safe_project.energy.CollisionBvhEnergyCalculator'>",
+          "nonfinite_free_vertices": 1
+        }
+      ]
+    }
+  ],
+  "remaining_free_vertices": 45,
+  "scope": "失败数值定位，不代表自交证书，不发布或替换结果"
+}

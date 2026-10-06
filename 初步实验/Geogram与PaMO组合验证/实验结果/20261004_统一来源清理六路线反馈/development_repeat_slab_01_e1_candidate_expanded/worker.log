@@ -1,0 +1,30 @@
+Warp 1.0.0-beta.2 initialized:
+   CUDA Toolkit: 12.8, Driver: 13.2
+   Devices:
+     "cpu"    | x86_64
+     "cuda:0" | NVIDIA GeForce RTX 4090 (sm_89)
+   Kernel cache: /root/.cache/warp/1.0.0-beta.2
+[33;20mWARNING - Triangle area is too small (min_area=3.189271721666815e-21), may cause numerical instability (system.py:213)[0m
+Module pamo_safe_project.kernels.geometry_kernels load on device 'cuda:0' took 16.99 ms
+Module pamo_safe_project.kernels.energy_kernels.elastic_energy load on device 'cuda:0' took 10.98 ms
+Module pamo_safe_project.kernels.energy_kernels.hinge_energy load on device 'cuda:0' took 27.63 ms
+Module pamo_safe_project.kernels.energy_kernels.contact_detection load on device 'cuda:0' took 16.19 ms
+Module pamo_safe_project.kernels.energy_kernels.distance_energy load on device 'cuda:0' took 21.04 ms
+Module pamo_safe_project.kernels.energy_kernels.collision_energy load on device 'cuda:0' took 71.54 ms
+Module pamo_safe_project.kernels.utils_kernels load on device 'cuda:0' took 3.17 ms
+Module locality_gpu load on device 'cuda:0' took 0.79 ms
+Module pamo_safe_project.kernels.solver_kernels load on device 'cuda:0' took 2.53 ms
+Module warp.utils load on device 'cuda:0' took 1.38 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs load on device 'cuda:0' took 17.51 ms
+Module pamo_safe_project.kernels.distance_kernels.hessian_funcs load on device 'cuda:0' took 72.71 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels load on device 'cuda:0' took 102.26 ms
+Module pamo_safe_project.kernels.distance_kernels.grad_funcs_struct load on device 'cuda:0' took 15.88 ms
+Module pamo_safe_project.kernels.distance_kernels.distance_kernels_struct load on device 'cuda:0' took 17.42 ms
+Module pamo_safe_project.kernels.ccd_kernels load on device 'cuda:0' took 22.34 ms
+Module pamo_safe_project.kernels.energy_kernels.lb_curvature_energy load on device 'cuda:0' took 3.16 ms
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_统一来源清理六路线反馈_a5d101f7efdc/run_constrained_worker.py", line 56, in <module>
+    main()
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_统一来源清理六路线反馈_a5d101f7efdc/run_constrained_worker.py", line 47, in main
+    raise RuntimeError("非有限或退化输出")
+RuntimeError: 非有限或退化输出

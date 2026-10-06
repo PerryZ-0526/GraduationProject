@@ -1,0 +1,216 @@
+{
+  "生成时间": "2026-10-04T23:12:58.263747+08:00",
+  "修改时间及修改内容": "首次生成，定位实际保存QP失败对象",
+  "文档概述": "全量计数加前32对定位，不改变旧拒绝",
+  "索引目录": [
+    "rows"
+  ],
+  "status": "completed",
+  "previous_record_sha256": "c4eb3b80fff3a66682df4fa55ec0d40f0fb0fcc058b1783b1766ef333ff0111d",
+  "rows": [
+    {
+      "role": "合法恢复基准",
+      "saved_sha256": "4ea999a114d1a51e89ab4f46e522bd856e681400f1b7bef30bde990c3825506a",
+      "original_attempt_level": "late_reverse",
+      "checks": {
+        "parsed": true,
+        "topology_valid": true,
+        "vertices": 15720,
+        "faces": 31436,
+        "closed": true,
+        "self_intersection_pairs": 0,
+        "embedded_closed": true,
+        "kernel": "EPECK_on_stored_binary64",
+        "listed_pair_limit": 32,
+        "intersection_face_ids": []
+      },
+      "listed_pairs_geometry": [],
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.1840517823664573,
+            "p95_mm": 0.017825588751214434,
+            "rms_mm": 0.0090087317502728,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.14377335815817485,
+            "p95_mm": 0.018275738035445584,
+            "rms_mm": 0.008685198390521232,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.1840517823664573,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.16435711215408272,
+        "probe_max_mm": 0.1840517823664573,
+        "continuous_geometry_certified": false
+      }
+    },
+    {
+      "role": "失败QP实际对象",
+      "saved_sha256": "b823de808be1f512c358be018e208c07dae0e75324b6239384d6bba57b83b731",
+      "original_attempt_level": "local_coverage_0",
+      "checks": {
+        "parsed": true,
+        "topology_valid": true,
+        "vertices": 15769,
+        "faces": 31534,
+        "closed": true,
+        "self_intersection_pairs": 3,
+        "embedded_closed": false,
+        "kernel": "EPECK_on_stored_binary64",
+        "listed_pair_limit": 32,
+        "intersection_face_ids": [
+          [
+            19808,
+            19807
+          ],
+          [
+            19819,
+            19813
+          ],
+          [
+            19808,
+            19819
+          ]
+        ]
+      },
+      "listed_pairs_geometry": [
+        {
+          "face_ids": [
+            19808,
+            19807
+          ],
+          "vertex_ids": [
+            [
+              10039,
+              15722,
+              15754
+            ],
+            [
+              5680,
+              10039,
+              14456
+            ]
+          ],
+          "area_mm2": [
+            0.039121378025059265,
+            0.0629812168298355
+          ],
+          "bounds_mm": [
+            [
+              3.272644596560196,
+              -4.850739692095075,
+              43.02401249430599
+            ],
+            [
+              3.527616615140998,
+              -4.50870371575454,
+              43.665896558078344
+            ]
+          ]
+        },
+        {
+          "face_ids": [
+            19819,
+            19813
+          ],
+          "vertex_ids": [
+            [
+              5680,
+              14456,
+              14455
+            ],
+            [
+              10039,
+              15754,
+              14456
+            ]
+          ],
+          "area_mm2": [
+            0.0808170397454562,
+            0.027672897683348952
+          ],
+          "bounds_mm": [
+            [
+              3.272644596560196,
+              -4.864185408973448,
+              43.02401249430599
+            ],
+            [
+              3.527616615140998,
+              -4.50870371575454,
+              43.67566380636857
+            ]
+          ]
+        },
+        {
+          "face_ids": [
+            19808,
+            19819
+          ],
+          "vertex_ids": [
+            [
+              10039,
+              15722,
+              15754
+            ],
+            [
+              5680,
+              14456,
+              14455
+            ]
+          ],
+          "area_mm2": [
+            0.039121378025059265,
+            0.0808170397454562
+          ],
+          "bounds_mm": [
+            [
+              3.272644596560196,
+              -4.864185408973448,
+              43.02401249430599
+            ],
+            [
+              3.527616615140998,
+              -4.50870371575454,
+              43.67566380636857
+            ]
+          ]
+        }
+      ],
+      "geometry": {
+        "sampled": {
+          "pamo_to_reference": {
+            "max_mm": 0.17219121281179067,
+            "p95_mm": 0.01777745765352063,
+            "rms_mm": 0.009186625947810681,
+            "samples": 8192
+          },
+          "reference_to_pamo": {
+            "max_mm": 0.07941479705230413,
+            "p95_mm": 0.01823624974648333,
+            "rms_mm": 0.008543242625117811,
+            "samples": 8192
+          },
+          "sampled_max_mm": 0.17219121281179067,
+          "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+        },
+        "all_vertices_probe_max_mm": 0.2179944027679242,
+        "probe_max_mm": 0.2179944027679242,
+        "continuous_geometry_certified": false
+      }
+    }
+  ],
+  "checker_source_sha256": "44c9afa003920f31b62361cd05dd57537a501faf8dfda4a150019a1a9db5b5a1",
+  "compile": {
+    "returncode": 0,
+    "remote_roundtrip_ms": 9406.855099994573,
+    "stdout": "",
+    "stderr": "",
+    "command": "timeout 300 g++ -O1 -std=c++17 '/root/autodl-tmp/graduation_project/constrained_20261004_FJ3368双向覆盖嵌入诊断_f6e41738c1ef/diagnosis.cpp' -lgmp -lmpfr -o '/root/autodl-tmp/graduation_project/constrained_20261004_FJ3368双向覆盖嵌入诊断_f6e41738c1ef/diagnosis' > '/root/autodl-tmp/graduation_project/constrained_20261004_FJ3368双向覆盖嵌入诊断_f6e41738c1ef/build.log' 2>&1"
+  },
+  "checker_sha256": "0288aa598c3a0284b12ce55f73d6ee3d1fa5d290f43ac0aefc890f56aae5d7cd",
+  "finished_beijing": "2026-10-04T23:13:10.848816+08:00"
+}

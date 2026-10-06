@@ -1,0 +1,43 @@
+{
+  "modules": [
+    {
+      "original_module": "pamo_safe_project.kernels.energy_kernels.collision_energy",
+      "original_sha256": "8b97959ea12a74377962e55c0f61a2939462ccc5e484331a46c355097b7fca6e",
+      "isolated_sha256": "e57838ec968add069bb5718160de2f7f7ab8f91ef854b6781dc77d3106100c70",
+      "replaced_kernels": [
+        "collision_energy_kernel",
+        "collision_energy_wo_buffer_pt_kernel",
+        "collision_energy_wo_buffer_ee_kernel",
+        "collision_diff_kernel",
+        "collision_diff_wo_buffer_pt_kernel",
+        "collision_diff_wo_buffer_ee_kernel",
+        "collision_hess_dx_kernel",
+        "collision_hess_dx_wo_buffer_pt_kernel",
+        "collision_hess_dx_wo_buffer_ee_kernel"
+      ]
+    },
+    {
+      "original_module": "pamo_safe_project.kernels.energy_kernels.contact_detection",
+      "original_sha256": "b6a06fba6e744be1cb2202a67d8bb6ee89de5ed5a30ed0fa672485f98c808fd0",
+      "isolated_sha256": "89a37dd8aa79ac1f5e949de222547237aaf8325247766674a4022efd1dd9b054",
+      "replaced_kernels": [
+        "detect_pt_contact_kernel",
+        "detect_ee_contact_kernel",
+        "detect_pt_contact_bvh_kernel",
+        "detect_ee_contact_bvh_kernel"
+      ]
+    },
+    {
+      "original_module": "pamo_safe_project.kernels.ccd_kernels",
+      "original_sha256": "f9076c849fafb0d4f72d969c27ba30a0b2169f7aade586e9d0bf3d836242d965",
+      "isolated_sha256": "5fde98542a07771235ec9eb064e83f4c35f27f4f5b6bb22fa5733c54a3453fe6",
+      "replaced_kernels": [
+        "accd_kernel",
+        "accd_wo_buffer_pt_kernel",
+        "accd_wo_buffer_ee_kernel"
+      ]
+    }
+  ],
+  "required_kernels_covered": true,
+  "scope": "FP32状态和原浮点导数不变；点三角形分类及距离使用FP64中间量；边边与完整CCD流程保留"
+}

@@ -1,0 +1,102 @@
+{
+  "time_beijing": "2026-10-04T08:39:52.032140+08:00",
+  "source": "保存的开发失败及修复输入，非独立评价",
+  "cases": [
+    {
+      "id": "公开股骨相邻小面簇",
+      "files": [
+        {
+          "file": "公开股骨相邻小面簇\\01-维护源.obj",
+          "sha256": "ae444977be3672be32fccc6f70bdbd37e12281ccff9ec9bdf3ad898ff3949518",
+          "role": "original_invalid_input",
+          "original_path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_参照恢复与面积保护公开长路线\\BP3D_FJ3365_重复长磨_e6_candidate_input\\clean_source.obj"
+        },
+        {
+          "file": "公开股骨相邻小面簇\\02-维护源来源.json",
+          "sha256": "7a50d47aabaa2fd5708489617f7bc2af8d35b1eca87f8198dc7bcd0ea5406ace",
+          "role": "operand_bits",
+          "original_path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_参照恢复与面积保护公开长路线\\BP3D_FJ3365_重复长磨_e6_candidate_input\\clean_labels.json"
+        },
+        {
+          "file": "公开股骨相邻小面簇\\03-实际父骨面.obj",
+          "sha256": "2fe2f8242a41c6055f9fc196fafbce569ad6c7ecce96ed8403e11b7a63306c14",
+          "role": "parent",
+          "original_path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_参照恢复与面积保护公开长路线\\BP3D_FJ3365_重复长磨_e5_candidate_boolean\\candidate.obj"
+        },
+        {
+          "file": "公开股骨相邻小面簇\\04-第七刀工具.obj",
+          "sha256": "a6de4bbfc9c7bd7c1b75a96684864e5e0668808e8c7318fa925571e34b258ebf",
+          "role": "tool",
+          "original_path": "初步实验\\可复用磨削测试集\\公开重复长磨批次_v1\\inputs\\BP3D_FJ3365_重复长磨_e6_tool.obj"
+        },
+        {
+          "file": "公开股骨相邻小面簇\\05-修复输入.obj",
+          "sha256": "ee1515a3d70b1042a8a35017ba44f9eabfd6ea3398b5a74b9f9f5d3180b2bf64",
+          "role": "repaired",
+          "original_path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_相邻小面折叠公开股骨开发\\pipeline_candidate.obj"
+        },
+        {
+          "file": "公开股骨相邻小面簇\\06-修复来源.json",
+          "sha256": "f0c3a236a54d758d1e426e9357b839f1f05b40bf1234909d842df87a9b4800d8",
+          "role": "repaired_operand_bits",
+          "original_path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_相邻小面折叠公开股骨开发\\pipeline_labels.json"
+        }
+      ],
+      "expected_checks_for_current_protocol": {
+        "original_invalid_faces": 4,
+        "repaired_invalid_faces": 0,
+        "both_closed": true
+      },
+      "description": "BodyParts3D派生FJ3365，人为最大轴100毫米；原版翻边折叠不能处理相邻小面，显式新规则静态修复通过"
+    },
+    {
+      "id": "球体重复面参照负例",
+      "files": [
+        {
+          "file": "球体重复面参照负例\\01-初始球体.obj",
+          "sha256": "ebe88860721185b997aa381908d84728bb81d5eae068490d1d97041d989a641c",
+          "role": "initial",
+          "original_path": "初步实验\\可复用磨削测试集\\局部质量独立插值输入_v3\\inputs\\球体_新参数1p25.obj"
+        },
+        {
+          "file": "球体重复面参照负例\\02-第1刀工具.obj",
+          "sha256": "e30dafd9040101948170a69c3e340787ab02f21212b99d61093a56a368d0d050",
+          "role": "tool",
+          "original_path": "初步实验\\可复用磨削测试集\\局部质量独立插值输入_v3\\inputs\\球体_新参数1p25_交叉_e0_tool.obj"
+        },
+        {
+          "file": "球体重复面参照负例\\03-第2刀工具.obj",
+          "sha256": "918344a993f13921f097a0472c9d81338d1dac9b1b523e18301fd97f76988007",
+          "role": "tool",
+          "original_path": "初步实验\\可复用磨削测试集\\局部质量独立插值输入_v3\\inputs\\球体_新参数1p25_交叉_e1_tool.obj"
+        },
+        {
+          "file": "球体重复面参照负例\\04-第3刀工具.obj",
+          "sha256": "d620257786bc5bdacea164ef08c3bf8de443f4c0aca6f48073e87ac5ab0fc5ee",
+          "role": "tool",
+          "original_path": "初步实验\\可复用磨削测试集\\局部质量独立插值输入_v3\\inputs\\球体_新参数1p25_交叉_e2_tool.obj"
+        },
+        {
+          "file": "球体重复面参照负例\\05-顺序重放原始参照.obj",
+          "sha256": "91dfbd08d5c7490859e5d1856d2ada88d3ab61b58de517cd4f830420dcf9efb6",
+          "role": "unresolved_reference",
+          "original_path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_局部质量28体连续评价_异常记录修订\\球体_新参数1p25_交叉_e2_reference\\sequential_replay_raw.obj"
+        }
+      ],
+      "expected_checks_for_current_protocol": {
+        "reference_recovery_accepted": false,
+        "expected_status": "reference_cleanup_rejected"
+      },
+      "description": "第三刀顺序重放，八位坐标清理产生重复面；不得用候选父网格替代独立参照"
+    }
+  ],
+  "units": {
+    "length": "人为毫米测试尺度"
+  },
+  "scope": "固定资产用于复现故障与评估后续修复，不把原失败或修复当作新增独立样本",
+  "code_sha256": {
+    "locality_sliver_collapse.py": "d7ad8652f0211f09c869f76e38918359e42f88f7b6ed6c696a4c67459fba262f",
+    "fragment_pipeline.py": "1d2698075734605b77a11f2677f26e22af46e29df10b4f6d38155e8c249c5b57",
+    "independent_reference_recovery.py": "11e02275e92e940227cdd827815610353ac21d6c8579ef0ad47a14a194b61546"
+  }
+}

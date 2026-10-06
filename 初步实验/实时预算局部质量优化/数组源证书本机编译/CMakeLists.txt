@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.20)
+project(array_source_certificate LANGUAGES CXX)
+get_filename_component(WORKSPACE "${CMAKE_CURRENT_SOURCE_DIR}/../../.." ABSOLUTE)
+# 私有目标只编译新算法，不覆盖既有证书DLL或Geogram运行环境。
+add_library(incremental_mesh_memory SHARED ../incremental_mesh_memory_array.cpp)
+target_compile_features(incremental_mesh_memory PRIVATE cxx_std_17)
+target_compile_definitions(incremental_mesh_memory PRIVATE CGAL_DISABLE_GMP)
+target_compile_options(incremental_mesh_memory PRIVATE /utf-8 /fp:strict)
+target_include_directories(incremental_mesh_memory PRIVATE "${WORKSPACE}/tmp/实时预算精确整数依赖")
+# 原过滤谓词单独编译为同配置参照，避免拿不同历史DLL的耗时作结论。
+add_library(incremental_mesh_reference SHARED ../incremental_mesh_memory_filtered.cpp)
+target_compile_features(incremental_mesh_reference PRIVATE cxx_std_17)
+target_compile_definitions(incremental_mesh_reference PRIVATE CGAL_DISABLE_GMP)
+target_compile_options(incremental_mesh_reference PRIVATE /utf-8 /fp:strict)
+target_include_directories(incremental_mesh_reference PRIVATE "${WORKSPACE}/tmp/实时预算精确整数依赖")

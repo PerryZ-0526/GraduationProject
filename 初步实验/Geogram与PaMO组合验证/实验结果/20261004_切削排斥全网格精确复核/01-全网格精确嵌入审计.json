@@ -1,0 +1,3514 @@
+{
+  "生成时间": "2026-10-04T06:59:04.091770+08:00",
+  "修改时间及修改内容": "首次生成，先验证检查器再审查全部冻结输出",
+  "文档概述": "CGAL EPECK对保存二进制FP64三角面的全量自交检查，区别于有限报警复核",
+  "索引目录": [
+    "environment",
+    "tests",
+    "rows"
+  ],
+  "tests": [
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥全网格精确复核\\测试_闭合立方体.obj",
+      "sha256": "30e1ee323badbb95a065d630fa876e876a2ef9c8b7c47063e1c2331fb3937fb9",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 45.95580000022892,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":8,\"faces\":12,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/test_0.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 8,
+      "faces": 12,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked",
+      "case": "闭合立方体",
+      "passed": true
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥全网格精确复核\\测试_分离双实体.obj",
+      "sha256": "56a33f52a149bd14bca5605226dd06dc6076b0ef49d240454d7d3a53606e1e0a",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.794999998790445,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":16,\"faces\":24,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/test_1.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 16,
+      "faces": 24,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked",
+      "case": "分离双实体",
+      "passed": true
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥全网格精确复核\\测试_交叠双实体.obj",
+      "sha256": "6ec2d24e16f4db3452801705b8edfccfcb649de650ff39cb4952c8ad8e681280",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 58.79909999930533,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":16,\"faces\":24,\"closed\":true,\"self_intersection_pairs\":18,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/test_2.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 16,
+      "faces": 24,
+      "closed": true,
+      "self_intersection_pairs": 18,
+      "embedded_closed": false,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked",
+      "case": "交叠双实体",
+      "passed": true
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥全网格精确复核\\测试_合法共享边.obj",
+      "sha256": "94c92846b7c92293c102c43a98badcd542e8d48a2536381be6388a8f3d7bb779",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 46.334300001035444,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":4,\"faces\":2,\"closed\":false,\"self_intersection_pairs\":0,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/test_3.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 4,
+      "faces": 2,
+      "closed": false,
+      "self_intersection_pairs": 0,
+      "embedded_closed": false,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked",
+      "case": "合法共享边",
+      "passed": true
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥全网格精确复核\\测试_共享边折叠重叠.obj",
+      "sha256": "3d3884f68f36567bb86b51985b86eb4af7ab2101678e46bdadadd261f887a8e3",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 75.26940000025206,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":4,\"faces\":2,\"closed\":false,\"self_intersection_pairs\":1,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/test_4.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 4,
+      "faces": 2,
+      "closed": false,
+      "self_intersection_pairs": 1,
+      "embedded_closed": false,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked",
+      "case": "共享边折叠重叠",
+      "passed": true
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥全网格精确复核\\测试_完全重复面.obj",
+      "sha256": "7340dbd9227daaaa53fdb00f4c5526f7035d33a563066912d137e715c0d980af",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 44.92970000137575,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":4,\"faces\":2,\"closed\":true,\"self_intersection_pairs\":1,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/test_5.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 4,
+      "faces": 2,
+      "closed": true,
+      "self_intersection_pairs": 1,
+      "embedded_closed": false,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked",
+      "case": "完全重复面",
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e0_exclusion.obj",
+      "sha256": "63b2a7f597f0866af8d560bd52dbdc8154ffa69cc79e216c819ebb5d1f4435ef",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.10689999896567,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":995,\"faces\":1986,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_0.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 995,
+      "faces": 1986,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e0_full.obj",
+      "sha256": "81dd12ba3e595726c113c86e2578257047e00353a6f57c5d494583ad5f83ea04",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 104.61859999850276,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":995,\"faces\":1986,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_1.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 995,
+      "faces": 1986,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e0_nearest.obj",
+      "sha256": "c01cc02594eada29949cfae97539e5c3c68602946bfc4aaf4e466d331b6a61ee",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 71.23290000163252,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":995,\"faces\":1986,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_2.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 995,
+      "faces": 1986,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e0_vertex_only.obj",
+      "sha256": "2a04080f6908858498c743225a277595d71e1e5e6acf64cf6fb133511ede583b",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.715499998565065,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":995,\"faces\":1986,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_3.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 995,
+      "faces": 1986,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e1_exclusion.obj",
+      "sha256": "7b2e9c495aa6ea47bbba1ada6e88df5a90ee074d750c59786a545a23933664f7",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.41879999791854,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":705,\"faces\":1406,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_4.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 705,
+      "faces": 1406,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e1_full.obj",
+      "sha256": "09e1eb84091d98d01a489084d20d8bd491b0bb415d73250c6e596b740035bf65",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.07969999941997,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":705,\"faces\":1406,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_5.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 705,
+      "faces": 1406,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e1_nearest.obj",
+      "sha256": "d099511a3467995406a725bc450a0dd96e54f628739b0a82ad7407777f551ebb",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.630200000450714,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":705,\"faces\":1406,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_6.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 705,
+      "faces": 1406,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e1_vertex_only.obj",
+      "sha256": "ea5081f9e83f4ade7f3241bb305fd2068c3db3df439cb9576365423a58dcb25e",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 52.60640000051353,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":705,\"faces\":1406,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_7.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 705,
+      "faces": 1406,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e2_exclusion.obj",
+      "sha256": "3a67cf656dfe2e1b8c9fdfbae1e1860cb2d8d0a7548852ed8ad292229d8e8de3",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.27259999830858,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":856,\"faces\":1708,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_8.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 856,
+      "faces": 1708,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e2_full.obj",
+      "sha256": "301f6d3c99b486963692aac3eabec3564b20e5c486f5e24d7f3230b4692b8d5c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 87.00390000012703,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":856,\"faces\":1708,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_9.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 856,
+      "faces": 1708,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e2_nearest.obj",
+      "sha256": "49cf1ad71fe713a609d6558cdb6bcb0585db1e7253a38c2133fc1c72dcdc52a0",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 124.85620000006747,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":856,\"faces\":1708,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_10.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 856,
+      "faces": 1708,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e2_vertex_only.obj",
+      "sha256": "27059df5a55b8803a6b94b11e07dac39a4b44e040dbc6b7a404160bbc853e7f7",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 85.96730000135722,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":856,\"faces\":1708,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_11.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 856,
+      "faces": 1708,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e3_exclusion.obj",
+      "sha256": "65fa979a68741478cba586abd1f2d8edf03009676c383f2fa91f28ef327b9431",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 87.80460000343737,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1073,\"faces\":2142,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_12.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1073,
+      "faces": 2142,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e3_full.obj",
+      "sha256": "b4f0b3e22f9ed39e0de5e34dd65012551330141c718b73d729a65a38f3b48482",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 56.87540000144509,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1073,\"faces\":2142,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_13.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1073,
+      "faces": 2142,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e3_nearest.obj",
+      "sha256": "8bac3f9955103a04a303039156ac36fdb9dd9f1eb54ae4dc1ce1e4eea4f16dc9",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 58.57009999817819,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1073,\"faces\":2142,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_14.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1073,
+      "faces": 2142,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\crossing_e3_vertex_only.obj",
+      "sha256": "2aeaf3729b573299c91989ce2dd68a2cdf0d8c357623099a159f6e5ac964f833",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.21360000016284,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1073,\"faces\":2142,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_15.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1073,
+      "faces": 2142,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e0_exclusion.obj",
+      "sha256": "3821ce70d3eb11fece9edbb60fe5ce2de88b277c5aaac5d330b7e81c5c33942d",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 143.00210000146762,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2551,\"faces\":5098,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_16.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2551,
+      "faces": 5098,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e0_full.obj",
+      "sha256": "941417284ff9ee20dd9208265eb86274cae58aa59c1c076afe0c3714fb5f4a3b",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 78.43049999792129,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2551,\"faces\":5098,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_17.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2551,
+      "faces": 5098,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e0_nearest.obj",
+      "sha256": "f9b3b90ca955c78127ea010f06ae431967967a1e5074f701e6a33631bf657b13",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 114.74829999860958,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2551,\"faces\":5098,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_18.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2551,
+      "faces": 5098,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e0_vertex_only.obj",
+      "sha256": "98b156b8a8416807bcc32f56c0fdee6f2743b0c75254e04c3ff526dfb26436a1",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 64.31399999928544,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2551,\"faces\":5098,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_19.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2551,
+      "faces": 5098,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e1_exclusion.obj",
+      "sha256": "75be001e6c32916446b02e769b01f3057ecbd59c698e3f55b376bdb40fc56777",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 97.82289999930072,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2693,\"faces\":5382,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_20.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2693,
+      "faces": 5382,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e1_full.obj",
+      "sha256": "7907e98afa0666859f072f413fa08dfce04888a8b4124c48a1b7ce8840be177c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 75.51610000155051,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2693,\"faces\":5382,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_21.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2693,
+      "faces": 5382,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e1_nearest.obj",
+      "sha256": "761d5e5e477c89db702385de9ebb5ffe050b1bd8471c1cb616f018fd8f36a21f",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 104.422299998987,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2693,\"faces\":5382,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_22.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2693,
+      "faces": 5382,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e1_vertex_only.obj",
+      "sha256": "f61f1c2d72c9339bd41e05eb57fa2ae68cdd60885bd3b348ba15e22d8c2fcdf6",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 79.63979999840376,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2693,\"faces\":5382,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_23.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2693,
+      "faces": 5382,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e3_exclusion.obj",
+      "sha256": "8748a827dd58751fc959481ac1d1f976dad9043c0a0d1da9c9e33ddb12e4a0fb",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 98.97260000070673,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2716,\"faces\":5428,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_24.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2716,
+      "faces": 5428,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e3_full.obj",
+      "sha256": "2017458a2edc701d56bc38e6c5cd95927f39ec0047ec9636570e2759145ef2cd",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 80.70709999810788,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2716,\"faces\":5428,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_25.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2716,
+      "faces": 5428,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e3_nearest.obj",
+      "sha256": "9108535a3c2a5122fc0a1054845f2f3f7dbdbaf98e2ca4393bd958afedff0c59",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 99.80500000165193,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2716,\"faces\":5428,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_26.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2716,
+      "faces": 5428,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥半空间开发_整面消融\\stop_resume_e3_vertex_only.obj",
+      "sha256": "028117cf96e70a42ff8513f6284176bd3114ff56dab07c2bd286f8c5dd0c1201",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 80.20059999762452,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2716,\"faces\":5428,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_27.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2716,
+      "faces": 5428,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\crossing_e0_raw_recut.obj",
+      "sha256": "852259bdb054793eac66c0a2af4dfce0857bcfbec95e55d75949889166c08b0d",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.48540000017965,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1218,\"faces\":2432,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_28.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1218,
+      "faces": 2432,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\crossing_e0_recut.obj",
+      "sha256": "852259bdb054793eac66c0a2af4dfce0857bcfbec95e55d75949889166c08b0d",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 139.24640000186628,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1218,\"faces\":2432,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_29.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1218,
+      "faces": 2432,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\crossing_e1_raw_recut.obj",
+      "sha256": "7b7ad9a58fa2643e8fec2c606a5df06fe4b34f63454fb0bd8c0ea534a0d1acac",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 79.48409999880823,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1004,\"faces\":2004,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_30.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1004,
+      "faces": 2004,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\crossing_e1_recut.obj",
+      "sha256": "7b7ad9a58fa2643e8fec2c606a5df06fe4b34f63454fb0bd8c0ea534a0d1acac",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 66.45750000097905,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1004,\"faces\":2004,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_31.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1004,
+      "faces": 2004,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\crossing_e2_raw_recut.obj",
+      "sha256": "3d4befde63c6db6c7dcfae57e7af6fe704820c5d7df157c4c63756685f2ab337",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 80.66529999996419,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1073,\"faces\":2142,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_32.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1073,
+      "faces": 2142,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\crossing_e2_recut.obj",
+      "sha256": "3d4befde63c6db6c7dcfae57e7af6fe704820c5d7df157c4c63756685f2ab337",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 130.33700000232784,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1073,\"faces\":2142,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_33.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1073,
+      "faces": 2142,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\crossing_e3_raw_recut.obj",
+      "sha256": "13f01f65de0ad497b43ea9eb2a0948e4965b0e377560e3c5b3bd3cf79707365c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 118.72199999925215,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1434,\"faces\":2864,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_34.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1434,
+      "faces": 2864,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\crossing_e3_recut.obj",
+      "sha256": "13f01f65de0ad497b43ea9eb2a0948e4965b0e377560e3c5b3bd3cf79707365c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 176.90719999882276,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":1434,\"faces\":2864,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_35.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 1434,
+      "faces": 2864,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\stop_resume_e0_raw_recut.obj",
+      "sha256": "ecc1203b06c5e9d36c933b3a3a18550a0a29c7365e87534ee856739c9961711f",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 112.48220000197762,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2719,\"faces\":5434,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_36.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2719,
+      "faces": 5434,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\stop_resume_e0_recut.obj",
+      "sha256": "ecc1203b06c5e9d36c933b3a3a18550a0a29c7365e87534ee856739c9961711f",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 94.32069999820669,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2719,\"faces\":5434,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_37.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2719,
+      "faces": 5434,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\stop_resume_e1_raw_recut.obj",
+      "sha256": "2e23383de9c0134eea0d69ad7fefe041baae27e798f42b4715b8ea1b943e8231",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 68.78569999753381,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2866,\"faces\":5728,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_38.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2866,
+      "faces": 5728,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\stop_resume_e1_recut.obj",
+      "sha256": "2e23383de9c0134eea0d69ad7fefe041baae27e798f42b4715b8ea1b943e8231",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 87.79850000064471,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2866,\"faces\":5728,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_39.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2866,
+      "faces": 5728,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\stop_resume_e3_raw_recut.obj",
+      "sha256": "b466eb6f1fcabc22280baeca7e2585811dd32fd957e2c722ceca79a2cbfb7254",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 98.1181999995897,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2830,\"faces\":5656,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_40.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2830,
+      "faces": 5656,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_质量后重新布尔强对照\\stop_resume_e3_recut.obj",
+      "sha256": "b466eb6f1fcabc22280baeca7e2585811dd32fd957e2c722ceca79a2cbfb7254",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 83.66369999930612,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":2830,\"faces\":5656,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_41.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 2830,
+      "faces": 5656,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_02_交叉\\exclusion.obj",
+      "sha256": "2956df397c4f9812301d6b39ee4e927bed52fb6c5ed065225804956e88121e30",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.74449999988428,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":608,\"faces\":1212,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_42.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 608,
+      "faces": 1212,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_02_交叉\\full.obj",
+      "sha256": "2956df397c4f9812301d6b39ee4e927bed52fb6c5ed065225804956e88121e30",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.86160000125528,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":608,\"faces\":1212,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_43.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 608,
+      "faces": 1212,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_02_交叉\\nearest.obj",
+      "sha256": "e4187ab3b3c94b0cb7fa7ea8e4ea1cffa2fa30177c7b774e56bd3d74c636df61",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 58.04179999904591,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":608,\"faces\":1212,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_44.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 608,
+      "faces": 1212,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_02_交叉\\raw_source.obj",
+      "sha256": "b6654d0db67ccc87a85ddd2a7e1f298b90c4a1c43e85e6bbb1dae445aa9439d4",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 57.48769999991055,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":642,\"faces\":1280,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_45.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 642,
+      "faces": 1280,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_02_交叉\\source.obj",
+      "sha256": "b6654d0db67ccc87a85ddd2a7e1f298b90c4a1c43e85e6bbb1dae445aa9439d4",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 49.62370000066585,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":642,\"faces\":1280,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_46.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 642,
+      "faces": 1280,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_02_交叉\\vertex_only.obj",
+      "sha256": "2956df397c4f9812301d6b39ee4e927bed52fb6c5ed065225804956e88121e30",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 49.7414999990724,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":608,\"faces\":1212,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_47.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 608,
+      "faces": 1212,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_03_交叉\\exclusion.obj",
+      "sha256": "73ba02391f0e3eb04a590930ba6740fd07b79caaa81e3393294a6052b3d9991b",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 64.74860000162153,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":611,\"faces\":1218,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_48.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 611,
+      "faces": 1218,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_03_交叉\\full.obj",
+      "sha256": "73ba02391f0e3eb04a590930ba6740fd07b79caaa81e3393294a6052b3d9991b",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 143.84509999945294,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":611,\"faces\":1218,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_49.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 611,
+      "faces": 1218,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_03_交叉\\nearest.obj",
+      "sha256": "c65cf51d85119a584c0b3f3460c23b05577f9f4112708fcd06e542ed3a0bfb22",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.51189999782946,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":611,\"faces\":1218,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_50.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 611,
+      "faces": 1218,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_03_交叉\\raw_source.obj",
+      "sha256": "ad37fcae882debde575021f22399bbfe3cfd348118412d0fd52d09255b907c8f",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.85720000049332,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":642,\"faces\":1280,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_51.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 642,
+      "faces": 1280,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_03_交叉\\source.obj",
+      "sha256": "ad37fcae882debde575021f22399bbfe3cfd348118412d0fd52d09255b907c8f",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.56829999820911,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":642,\"faces\":1280,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_52.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 642,
+      "faces": 1280,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_03_交叉\\vertex_only.obj",
+      "sha256": "73ba02391f0e3eb04a590930ba6740fd07b79caaa81e3393294a6052b3d9991b",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.32990000108839,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":611,\"faces\":1218,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_53.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 611,
+      "faces": 1218,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_04_交叉\\exclusion.obj",
+      "sha256": "2c4e8a252a68407fc3f3032ce62c34d142b905fcd4db32f43d106fdea7b4fb37",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 52.81160000231466,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":599,\"faces\":1194,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_54.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 599,
+      "faces": 1194,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_04_交叉\\full.obj",
+      "sha256": "2c4e8a252a68407fc3f3032ce62c34d142b905fcd4db32f43d106fdea7b4fb37",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 52.733699998498196,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":599,\"faces\":1194,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_55.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 599,
+      "faces": 1194,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_04_交叉\\nearest.obj",
+      "sha256": "896d6078a2bcd23f6dfb9ecc65be4a4ff4b848387279fbfad2f76463a22b6718",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 77.21759999913047,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":599,\"faces\":1194,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_56.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 599,
+      "faces": 1194,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_04_交叉\\raw_source.obj",
+      "sha256": "7153f2214c789e74621fe83e0b069f2eb9972af238ab56d528f8bc1cc7e82091",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.95569999786676,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":642,\"faces\":1280,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_57.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 642,
+      "faces": 1280,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_04_交叉\\source.obj",
+      "sha256": "7153f2214c789e74621fe83e0b069f2eb9972af238ab56d528f8bc1cc7e82091",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.265499999019084,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":642,\"faces\":1280,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_58.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 642,
+      "faces": 1280,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\弯曲骨样体_04_交叉\\vertex_only.obj",
+      "sha256": "2c4e8a252a68407fc3f3032ce62c34d142b905fcd4db32f43d106fdea7b4fb37",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.1991999996535,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":599,\"faces\":1194,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_59.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 599,
+      "faces": 1194,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_02_交叉\\exclusion.obj",
+      "sha256": "4671eeec153038b95077a1e173fd814ae443db54c3cdfb983995598f0369d7f4",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.653199999942444,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":311,\"faces\":618,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_60.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 311,
+      "faces": 618,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_02_交叉\\full.obj",
+      "sha256": "9f4b19dfc0d8a85e6bfbbb7d434b6f4caab84018e318db5db04e2adf63a94be3",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.68209999828832,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":311,\"faces\":618,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_61.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 311,
+      "faces": 618,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_02_交叉\\nearest.obj",
+      "sha256": "46956d6d103a4a5f230ead175a59ab5bf91c165c5570cf2076c98b45d58db02e",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.37409999931697,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":311,\"faces\":618,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_62.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 311,
+      "faces": 618,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_02_交叉\\raw_source.obj",
+      "sha256": "f18b6d2b58d2ff0e6a1449a5186bf9cc5feb6e830cd065e76a0f37bd734b6cd2",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 47.78799999985495,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":330,\"faces\":656,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_63.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 330,
+      "faces": 656,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_02_交叉\\source.obj",
+      "sha256": "f18b6d2b58d2ff0e6a1449a5186bf9cc5feb6e830cd065e76a0f37bd734b6cd2",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 49.99580000003334,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":330,\"faces\":656,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_64.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 330,
+      "faces": 656,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_02_交叉\\vertex_only.obj",
+      "sha256": "126c1ca171413e01179b95c7933e26024ff17804b3552e5aa595b1fa348472a3",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.317700000159675,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":311,\"faces\":618,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_65.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 311,
+      "faces": 618,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_03_交叉\\exclusion.obj",
+      "sha256": "0a78f59bca40774914a0aeb246cb61fef75dfed7d34db56a1166277a5cfff31c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 143.94730000276468,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":310,\"faces\":616,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_66.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 310,
+      "faces": 616,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_03_交叉\\full.obj",
+      "sha256": "0a78f59bca40774914a0aeb246cb61fef75dfed7d34db56a1166277a5cfff31c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 56.51580000267131,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":310,\"faces\":616,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_67.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 310,
+      "faces": 616,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_03_交叉\\nearest.obj",
+      "sha256": "a6d5f01cb08730417e87b6b9405d9ec822da95676bdc525eb10b0db9d6fe2417",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 47.22490000131074,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":310,\"faces\":616,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_68.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 310,
+      "faces": 616,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_03_交叉\\raw_source.obj",
+      "sha256": "20125bf67476d7af6c5b458dbc0f4f64672fc100398d7e93911ffdc356ce422a",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 49.45199999929173,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":330,\"faces\":656,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_69.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 330,
+      "faces": 656,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_03_交叉\\source.obj",
+      "sha256": "20125bf67476d7af6c5b458dbc0f4f64672fc100398d7e93911ffdc356ce422a",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.59740000028978,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":330,\"faces\":656,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_70.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 330,
+      "faces": 656,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_03_交叉\\vertex_only.obj",
+      "sha256": "1b26bec633b52f219af20b2519a122e3d59c41c3051a06c608babb9827c98222",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 46.12969999652705,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":310,\"faces\":616,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_71.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 310,
+      "faces": 616,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_04_交叉\\exclusion.obj",
+      "sha256": "f19aa1aaaa36222a296b532926ff604ee0c9c4824ecf49799fc341b4287527c9",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 85.1617999978771,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":318,\"faces\":632,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_72.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 318,
+      "faces": 632,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_04_交叉\\full.obj",
+      "sha256": "f19aa1aaaa36222a296b532926ff604ee0c9c4824ecf49799fc341b4287527c9",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 108.81090000111726,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":318,\"faces\":632,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_73.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 318,
+      "faces": 632,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_04_交叉\\nearest.obj",
+      "sha256": "cbfa2ee8a6e7b170c59d23f563d96e74f507e383eccf38aeddc49659a192ad09",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 47.24799999894458,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":318,\"faces\":632,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_74.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 318,
+      "faces": 632,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_04_交叉\\raw_source.obj",
+      "sha256": "124df74843d1c9c2422ce620e5cbbb23e0ec5515527bc864803a4ef5e56d1e26",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.25239999991027,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":332,\"faces\":660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_75.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 332,
+      "faces": 660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_04_交叉\\source.obj",
+      "sha256": "124df74843d1c9c2422ce620e5cbbb23e0ec5515527bc864803a4ef5e56d1e26",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 56.931399998575216,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":332,\"faces\":660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_76.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 332,
+      "faces": 660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\板体_04_交叉\\vertex_only.obj",
+      "sha256": "b8cd5d30fafc7aa17e669ec950886b4e3e747536d6a90254d96b394e2f7d020d",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.534499998320825,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":318,\"faces\":632,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_77.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 318,
+      "faces": 632,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_02_交叉\\exclusion.obj",
+      "sha256": "99a5c64caa45dfe15c676cdeeda7f5000049d97c6992dfac199b96c0efdee574",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.93960000239895,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":725,\"faces\":1446,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_78.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 725,
+      "faces": 1446,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_02_交叉\\full.obj",
+      "sha256": "1cc412c94b58ad0500de404acaa62b44fc1c5dae7e6a615b2ed1bdddef395e41",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 73.23570000153268,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":725,\"faces\":1446,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_79.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 725,
+      "faces": 1446,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_02_交叉\\nearest.obj",
+      "sha256": "62d32e05cb4b815afb7c5ced3c69bb01e4ae3acfcc9d1eb3ea207165827569d0",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.06800000127987,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":725,\"faces\":1446,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_80.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 725,
+      "faces": 1446,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_02_交叉\\raw_source.obj",
+      "sha256": "d8a72e8c42c37144f3d8dca111cba01786ecd8152e633e8c0b2d28d6ec0d148a",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 56.10060000253725,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":741,\"faces\":1478,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_81.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 741,
+      "faces": 1478,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_02_交叉\\source.obj",
+      "sha256": "d8a72e8c42c37144f3d8dca111cba01786ecd8152e633e8c0b2d28d6ec0d148a",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 57.99920000208658,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":741,\"faces\":1478,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_82.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 741,
+      "faces": 1478,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_02_交叉\\vertex_only.obj",
+      "sha256": "609db3ac8efffd877095c8f058db244ccefc3a9ec4471383e71eebfe7a87d920",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.3072000000393,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":725,\"faces\":1446,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_83.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 725,
+      "faces": 1446,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_03_交叉\\exclusion.obj",
+      "sha256": "1d8cca7ba2ce7cdbe2af067a5c9a9ade44be4692c62bfbbd2f4946a3daab8a88",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 84.7814999979164,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":738,\"faces\":1472,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_84.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 738,
+      "faces": 1472,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_03_交叉\\full.obj",
+      "sha256": "9868110252f1a09d5e04f6e737a59729b95e77dcbaefe1bc5c2c4396391264d1",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.32679999931133,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":738,\"faces\":1472,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_85.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 738,
+      "faces": 1472,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_03_交叉\\nearest.obj",
+      "sha256": "1c6a3d45cf1503d03588018bf745a3fc6b79345548991161ebfa38ab1c29501e",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 57.72060000163037,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":738,\"faces\":1472,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_86.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 738,
+      "faces": 1472,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_03_交叉\\raw_source.obj",
+      "sha256": "35b5860a68c2ed3564823bd9227a74de24024cd3112b9b1003ef261c99e28802",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.133700003352715,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":741,\"faces\":1478,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_87.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 741,
+      "faces": 1478,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_03_交叉\\source.obj",
+      "sha256": "35b5860a68c2ed3564823bd9227a74de24024cd3112b9b1003ef261c99e28802",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 56.9515000024694,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":741,\"faces\":1478,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_88.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 741,
+      "faces": 1478,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_03_交叉\\vertex_only.obj",
+      "sha256": "809b7996bb3ae689a3a5f67c0e81a1057f4c73e35763333400919d45ca059258",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 52.08610000045155,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":738,\"faces\":1472,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_89.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 738,
+      "faces": 1472,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_04_交叉\\exclusion.obj",
+      "sha256": "db0163c178beed7f0c2d40bf906162c766f5bbca65588a8046faba7756b2443d",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 80.48070000222651,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":740,\"faces\":1476,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_90.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 740,
+      "faces": 1476,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_04_交叉\\full.obj",
+      "sha256": "a63a6e7c9b2c9d3d8fc6889fdccfe010b42d8de63c55464de3308a674ba9f53d",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 58.709900000394555,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":740,\"faces\":1476,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_91.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 740,
+      "faces": 1476,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_04_交叉\\nearest.obj",
+      "sha256": "6aac17200cec9e2c7d73a7a16296c711427ea4b5c329f5a418de18590f269940",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 57.101099999272265,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":740,\"faces\":1476,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_92.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 740,
+      "faces": 1476,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_04_交叉\\raw_source.obj",
+      "sha256": "9369279a536a854cca58a0a2ecae7a62a4175b1f3053c4246d899e02b6857368",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.195400000025984,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":743,\"faces\":1482,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_93.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 743,
+      "faces": 1482,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_04_交叉\\source.obj",
+      "sha256": "9369279a536a854cca58a0a2ecae7a62a4175b1f3053c4246d899e02b6857368",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.55930000243825,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":743,\"faces\":1482,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_94.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 743,
+      "faces": 1482,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\椭球_04_交叉\\vertex_only.obj",
+      "sha256": "75059d1303851ce87fc39da487e387359fb66be5d92796d6fa88d3897ea5ffe7",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.79169999912847,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":740,\"faces\":1476,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_95.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 740,
+      "faces": 1476,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_02_交叉\\exclusion.obj",
+      "sha256": "f5f39f3c705c5facc9f144982e3beef60e74a69280aa02b3155dc090d7d19da2",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 108.67050000160816,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":719,\"faces\":1434,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_96.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 719,
+      "faces": 1434,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_02_交叉\\full.obj",
+      "sha256": "86be3bc4e28e9102cdeaa5eb42a9c6a563def56d22882809222ec2234bb70f21",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 61.78429999999935,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":719,\"faces\":1434,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_97.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 719,
+      "faces": 1434,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_02_交叉\\nearest.obj",
+      "sha256": "568e60432d6b4d0c29ff43d6797df6ee6161f7031c1d4c160205f01369da3548",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.92850000175531,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":719,\"faces\":1434,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_98.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 719,
+      "faces": 1434,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_02_交叉\\raw_source.obj",
+      "sha256": "d47b029f9612f0ee77c9eecd4b7f309606f85ce19a566f3b50fd0dd29f658531",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.78320000029635,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":739,\"faces\":1474,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_99.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 739,
+      "faces": 1474,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_02_交叉\\source.obj",
+      "sha256": "d47b029f9612f0ee77c9eecd4b7f309606f85ce19a566f3b50fd0dd29f658531",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.48599999747239,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":739,\"faces\":1474,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_100.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 739,
+      "faces": 1474,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_02_交叉\\vertex_only.obj",
+      "sha256": "e9288f24b3a826c201092002f3e41ee8ee6cbed5a54657b21b9934c0d4cadb3c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.677300001552794,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":719,\"faces\":1434,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_101.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 719,
+      "faces": 1434,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_03_交叉\\exclusion.obj",
+      "sha256": "ef5c4a7c8632c40086c94c32710c5bba20888ac76689970761108fdc058fe2a1",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.874300000141375,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":694,\"faces\":1380,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_102.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 694,
+      "faces": 1380,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_03_交叉\\full.obj",
+      "sha256": "ef5c4a7c8632c40086c94c32710c5bba20888ac76689970761108fdc058fe2a1",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.22429999837186,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":694,\"faces\":1380,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_103.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 694,
+      "faces": 1380,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_03_交叉\\nearest.obj",
+      "sha256": "d7c1c2fb44ca7970b4e6ea457757638ed21dabfc43d3da6b9e2b697078f1b204",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.986499998747604,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":694,\"faces\":1380,\"closed\":true,\"self_intersection_pairs\":2504,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_104.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 694,
+      "faces": 1380,
+      "closed": true,
+      "self_intersection_pairs": 2504,
+      "embedded_closed": false,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_03_交叉\\raw_source.obj",
+      "sha256": "689587c78bf64ce834064908a1538f159b501d6050853024c109e211cc781b28",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.99570000049425,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":737,\"faces\":1470,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_105.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 737,
+      "faces": 1470,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_03_交叉\\source.obj",
+      "sha256": "689587c78bf64ce834064908a1538f159b501d6050853024c109e211cc781b28",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.801700003125006,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":737,\"faces\":1470,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_106.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 737,
+      "faces": 1470,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_03_交叉\\vertex_only.obj",
+      "sha256": "e282b0d3cd30469eff66455dfdfe1162ede6133c7c14abc936ec1f0f13013431",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 92.39090000119177,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":694,\"faces\":1380,\"closed\":true,\"self_intersection_pairs\":31,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_107.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 694,
+      "faces": 1380,
+      "closed": true,
+      "self_intersection_pairs": 31,
+      "embedded_closed": false,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_04_交叉\\exclusion.obj",
+      "sha256": "efe7872a1712eddb966bbe040ba627a1d4064ac98920ad18254cb14815766002",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 54.292100001475774,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":716,\"faces\":1428,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_108.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 716,
+      "faces": 1428,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_04_交叉\\full.obj",
+      "sha256": "2d4605dba9dcd4f55faa916b2878ca3161c58cff71b36e94ab2e70a8776d2439",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 58.145400002104,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":716,\"faces\":1428,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_109.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 716,
+      "faces": 1428,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_04_交叉\\nearest.obj",
+      "sha256": "d8119e9e24b9a822e8ae55857e711008ecd064658188aebca267ef0f71dc59e5",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.57660000299802,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":716,\"faces\":1428,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_110.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 716,
+      "faces": 1428,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_04_交叉\\raw_source.obj",
+      "sha256": "0a1672d7cf2d261ab9c8e1d29b695306b786010ae2dee95a1a4f90fc4b843698",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 75.5779999999504,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":735,\"faces\":1466,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_111.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 735,
+      "faces": 1466,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_04_交叉\\source.obj",
+      "sha256": "0a1672d7cf2d261ab9c8e1d29b695306b786010ae2dee95a1a4f90fc4b843698",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 179.97189999732655,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":735,\"faces\":1466,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_112.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 735,
+      "faces": 1466,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\球体_04_交叉\\vertex_only.obj",
+      "sha256": "4467466a8b3716a021edaa86af4df814aa3f02af44a7679fcb2f451fab6dce82",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 61.270099999092054,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":716,\"faces\":1428,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_113.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 716,
+      "faces": 1428,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_02_交叉\\exclusion.obj",
+      "sha256": "d17a7648f7bf8650280a0655fa5dac65e63f6d6ab250b8c9d042809eb10b72c0",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.15669999981765,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":411,\"faces\":818,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_114.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 411,
+      "faces": 818,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_02_交叉\\full.obj",
+      "sha256": "58a477082e3f7d171cb05cc20a95bfed77ddf5cd6ee95cf3651cce748a65b4e5",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.09119999947143,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":411,\"faces\":818,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_115.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 411,
+      "faces": 818,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_02_交叉\\nearest.obj",
+      "sha256": "9a6d7998d0ba92e809583d26debcf6472d5f6a7013bb8a0de2bbbc5404821282",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 52.24449999877834,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":411,\"faces\":818,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_116.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 411,
+      "faces": 818,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_02_交叉\\raw_source.obj",
+      "sha256": "f4012194b3d1e41e0b5207ee712412b5989a9d6284b35cc65e33ea89c7838f89",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.76749999716412,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":434,\"faces\":860,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_117.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 434,
+      "faces": 860,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_02_交叉\\source.obj",
+      "sha256": "f4012194b3d1e41e0b5207ee712412b5989a9d6284b35cc65e33ea89c7838f89",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 108.6472999995749,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":434,\"faces\":860,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_118.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 434,
+      "faces": 860,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_02_交叉\\vertex_only.obj",
+      "sha256": "d0a2c0e92aa706d07133e63c3524d9c4a98c78488fb9d4ee9dc86d702b5242d7",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 90.22099999856437,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":411,\"faces\":818,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_119.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 411,
+      "faces": 818,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_03_交叉\\exclusion.obj",
+      "sha256": "738ae22b8ca11dfcb3672577958997370e1acceb1b51d513ab0761c71dad133a",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.04779999903985,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":412,\"faces\":816,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_120.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 412,
+      "faces": 816,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_03_交叉\\full.obj",
+      "sha256": "738ae22b8ca11dfcb3672577958997370e1acceb1b51d513ab0761c71dad133a",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.365300001431024,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":412,\"faces\":816,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_121.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 412,
+      "faces": 816,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_03_交叉\\nearest.obj",
+      "sha256": "206d1557466ba272303f7cbebd3d5292951216f86a260617b602e7fb7d35715d",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 79.43599999998696,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":412,\"faces\":816,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_122.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 412,
+      "faces": 816,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_03_交叉\\raw_source.obj",
+      "sha256": "dfc82f4cf9bdf3976fc646dd896074d8da0e38f7840fc8d26b43395f989a5949",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 56.19500000102562,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":428,\"faces\":848,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_123.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 428,
+      "faces": 848,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_03_交叉\\source.obj",
+      "sha256": "dfc82f4cf9bdf3976fc646dd896074d8da0e38f7840fc8d26b43395f989a5949",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.384800001367694,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":428,\"faces\":848,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_124.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 428,
+      "faces": 848,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_03_交叉\\vertex_only.obj",
+      "sha256": "781f35be6c4667f821e2a1bc0f45db2715a2e6904efe4ee00c499b3882657a6f",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.97660000016913,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":412,\"faces\":816,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_125.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 412,
+      "faces": 816,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_04_交叉\\exclusion.obj",
+      "sha256": "da1376812f1d54b384aa5ad44169f622b255e09d402e89a017d15549f06fb067",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.33320000095409,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":413,\"faces\":818,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_126.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 413,
+      "faces": 818,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_04_交叉\\full.obj",
+      "sha256": "da1376812f1d54b384aa5ad44169f622b255e09d402e89a017d15549f06fb067",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.69150000074296,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":413,\"faces\":818,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_127.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 413,
+      "faces": 818,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_04_交叉\\nearest.obj",
+      "sha256": "f338ad27fe958e744482eb5b2ab6b8e314128248f62ae0646f38d5320e2361a1",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.967200000741286,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":413,\"faces\":818,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_128.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 413,
+      "faces": 818,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_04_交叉\\raw_source.obj",
+      "sha256": "dc9261b910579b8bea1e79ff7e8cae5105bbac1de120c8ae94b7697247bc5b8c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.477399997471366,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":426,\"faces\":844,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_129.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 426,
+      "faces": 844,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_04_交叉\\source.obj",
+      "sha256": "dc9261b910579b8bea1e79ff7e8cae5105bbac1de120c8ae94b7697247bc5b8c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.82959999810555,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":426,\"faces\":844,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_130.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 426,
+      "faces": 844,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\窄缝_04_交叉\\vertex_only.obj",
+      "sha256": "b016cb889b1a1e4bf3f2a0762645c43a4847851e86cd1bc7da571bbd44f987c6",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.82310000236612,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":413,\"faces\":818,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_131.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 413,
+      "faces": 818,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_02_交叉\\exclusion.obj",
+      "sha256": "8bec99e5b17b1c755a0debcbc1dffea69365b0e498bb2fcc5913753716b427da",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.46790000071633,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":325,\"faces\":646,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_132.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 325,
+      "faces": 646,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_02_交叉\\full.obj",
+      "sha256": "5238307f9c2e7e821b5047177664fb45d6208d37bc26f53ae6909a9a528ee8aa",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 52.68610000348417,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":325,\"faces\":646,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_133.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 325,
+      "faces": 646,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_02_交叉\\nearest.obj",
+      "sha256": "f113a3681ec869d607fc67e179f47be97a02c51ca580a412c4340d56c3b52707",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.933899998199195,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":325,\"faces\":646,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_134.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 325,
+      "faces": 646,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_02_交叉\\raw_source.obj",
+      "sha256": "122a65a91183e1b1b5a6a8cb8c3c42704682c5a35056d0c7d4d92db679e7eb26",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.87409999780357,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":332,\"faces\":660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_135.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 332,
+      "faces": 660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_02_交叉\\source.obj",
+      "sha256": "122a65a91183e1b1b5a6a8cb8c3c42704682c5a35056d0c7d4d92db679e7eb26",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.125800000998424,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":332,\"faces\":660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_136.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 332,
+      "faces": 660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_02_交叉\\vertex_only.obj",
+      "sha256": "06aa8dafd7a3877ca79e3f5c11f318c792508e56773d3e5e333d5d89bcffdae2",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.88879999998608,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":325,\"faces\":646,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_137.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 325,
+      "faces": 646,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_03_交叉\\exclusion.obj",
+      "sha256": "d5ab188399993f3f67d40aa0898ce7d21b0e0b6c5597afdfd22b60f7bc141afa",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 47.05110000213608,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":318,\"faces\":632,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_138.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 318,
+      "faces": 632,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_03_交叉\\full.obj",
+      "sha256": "d5ab188399993f3f67d40aa0898ce7d21b0e0b6c5597afdfd22b60f7bc141afa",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.852899999474175,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":318,\"faces\":632,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_139.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 318,
+      "faces": 632,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_03_交叉\\nearest.obj",
+      "sha256": "a053b59cfc32b43becdca6ebd3c744e0bc61acf49e2d1bffd1e8b90393481db3",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 70.27250000101048,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":318,\"faces\":632,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_140.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 318,
+      "faces": 632,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_03_交叉\\raw_source.obj",
+      "sha256": "c05bbbb03c833eca9f61a52b58fbd6643d916b5306e5fdec9a93817558fd04c2",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.97849999947357,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":332,\"faces\":660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_141.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 332,
+      "faces": 660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_03_交叉\\source.obj",
+      "sha256": "c05bbbb03c833eca9f61a52b58fbd6643d916b5306e5fdec9a93817558fd04c2",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 78.96119999713846,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":332,\"faces\":660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_142.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 332,
+      "faces": 660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_03_交叉\\vertex_only.obj",
+      "sha256": "d5ab188399993f3f67d40aa0898ce7d21b0e0b6c5597afdfd22b60f7bc141afa",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.11449999760953,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":318,\"faces\":632,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_143.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 318,
+      "faces": 632,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_04_交叉\\exclusion.obj",
+      "sha256": "ac1518d575a3adea75737fe45df31fee27aa478a963f22bae67cb79e49f4e715",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 46.81759999948554,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":325,\"faces\":646,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_144.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 325,
+      "faces": 646,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_04_交叉\\full.obj",
+      "sha256": "ac1518d575a3adea75737fe45df31fee27aa478a963f22bae67cb79e49f4e715",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 124.8392999987118,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":325,\"faces\":646,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_145.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 325,
+      "faces": 646,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_04_交叉\\nearest.obj",
+      "sha256": "36b7cea5e19ddb94947b957cab31e14497f6b7f7fcf67499bc998de1d1623f53",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 67.93319999997038,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":325,\"faces\":646,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_146.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 325,
+      "faces": 646,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_04_交叉\\raw_source.obj",
+      "sha256": "ff342993dd0d6597ef3b3b83e0434233dd0ddd34e94b6964a2092af68307f42f",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 52.097499999945285,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":332,\"faces\":660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_147.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 332,
+      "faces": 660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_04_交叉\\source.obj",
+      "sha256": "ff342993dd0d6597ef3b3b83e0434233dd0ddd34e94b6964a2092af68307f42f",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 48.269599999912316,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":332,\"faces\":660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_148.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 332,
+      "faces": 660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\薄壁_04_交叉\\vertex_only.obj",
+      "sha256": "eb0e5391b4cca946c8fc9c1c5b3990091ed0280d633dd8d2433ac447628c9f0e",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 50.885299999208655,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":325,\"faces\":646,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_149.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 325,
+      "faces": 646,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_02_交叉\\exclusion.obj",
+      "sha256": "71c5dff56559d40292d6c9fbb4571a8f0c71241501fa812d704cf1f8e1951778",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.07059999945341,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":788,\"faces\":1576,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_150.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 788,
+      "faces": 1576,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_02_交叉\\full.obj",
+      "sha256": "1b3f71ab4f2915eaa4d5db3b9874cb7c0e84ac952d5845017b4541251496ca33",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 68.29699999798322,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":788,\"faces\":1576,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_151.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 788,
+      "faces": 1576,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_02_交叉\\nearest.obj",
+      "sha256": "3fcff281bbf005dc649b368674fe0493bf68907b59b60dfa9f4a04cfdeefde05",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 59.00149999797577,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":788,\"faces\":1576,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_152.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 788,
+      "faces": 1576,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_02_交叉\\raw_source.obj",
+      "sha256": "8b45d7528caab4e4c3fbd89f9d1c8c1a06a1cce91b03aa9059357bc6178f9bb0",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 64.50070000209962,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":815,\"faces\":1630,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_153.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 815,
+      "faces": 1630,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_02_交叉\\source.obj",
+      "sha256": "0582eec40150d599bdebe8e1eeb4430b7c3009fa7cc348ab4b36388404a9bf42",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 83.38279999952647,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":814,\"faces\":1628,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_154.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 814,
+      "faces": 1628,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_02_交叉\\vertex_only.obj",
+      "sha256": "e031ad44ed644cfa98f1fbe489459d3ddcf2f168738b81c1da1ddbfb71febe7c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 51.29210000086459,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":788,\"faces\":1576,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_155.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 788,
+      "faces": 1576,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_03_交叉\\exclusion.obj",
+      "sha256": "0f4e30c50b536518d56f07d9cdc570af8b4a72e141a7a3c69a9ad5bc2a6ec571",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 52.155699999275384,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":830,\"faces\":1660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_156.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 830,
+      "faces": 1660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_03_交叉\\full.obj",
+      "sha256": "0f4e30c50b536518d56f07d9cdc570af8b4a72e141a7a3c69a9ad5bc2a6ec571",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 55.90219999794499,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":830,\"faces\":1660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_157.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 830,
+      "faces": 1660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_03_交叉\\nearest.obj",
+      "sha256": "9512b9dd572f87873a43ca1685e1403e43db0cd88b77b31281a69c123f7f6bdb",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 52.57279999932507,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":830,\"faces\":1660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_158.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 830,
+      "faces": 1660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_03_交叉\\raw_source.obj",
+      "sha256": "1eace0d6588174a42622dd5c7a97efc14f88cd294ab393b0401fc3a073f899b7",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 68.42450000112876,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":835,\"faces\":1670,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_159.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 835,
+      "faces": 1670,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_03_交叉\\source.obj",
+      "sha256": "8960121967cc03a082f4b0f975b335f6a5583885c9f493bcc1f85d17a20bec49",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 133.93450000148732,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":834,\"faces\":1668,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_160.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 834,
+      "faces": 1668,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_03_交叉\\vertex_only.obj",
+      "sha256": "8424f5739b03df7234a1f1a6bbcfc2329175bcf89e645b0882466a147bb79ac3",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 91.37399999963236,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":830,\"faces\":1660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_161.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 830,
+      "faces": 1660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_04_交叉\\exclusion.obj",
+      "sha256": "ee4b10be491507aa71fa05c58d1035b9073d4533a1a4639d701eeddb52e393b4",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.14630000066245,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":786,\"faces\":1572,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_162.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 786,
+      "faces": 1572,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_04_交叉\\full.obj",
+      "sha256": "ee4b10be491507aa71fa05c58d1035b9073d4533a1a4639d701eeddb52e393b4",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 53.391699999338016,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":786,\"faces\":1572,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_163.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 786,
+      "faces": 1572,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_04_交叉\\nearest.obj",
+      "sha256": "85357f292d81c237744d07692b90ad06ae1d51641bdd97fba176f59e0a6f2663",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 105.99870000078226,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":786,\"faces\":1572,\"closed\":true,\"self_intersection_pairs\":3382,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_164.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 786,
+      "faces": 1572,
+      "closed": true,
+      "self_intersection_pairs": 3382,
+      "embedded_closed": false,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_04_交叉\\raw_source.obj",
+      "sha256": "a28efe40a26ce2c3aab8ad154707ed285f44e0af1588b7b7ba5dedf59814853c",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 150.5734999991546,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":805,\"faces\":1610,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_165.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 805,
+      "faces": 1610,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_04_交叉\\source.obj",
+      "sha256": "fb9af02a8e988760511c1f22be8288264b1fc7b36d9502858a3d0c9a8bd13b81",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 72.49049999882118,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":804,\"faces\":1608,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_166.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 804,
+      "faces": 1608,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    },
+    {
+      "path": "C:\\Users\\24848\\Desktop\\GraduationProject\\初步实验\\Geogram与PaMO组合验证\\实验结果\\20261004_切削排斥21几何体独立静态验证\\贯通孔_04_交叉\\vertex_only.obj",
+      "sha256": "6b7f7016de009fe3b509eede08bb6c23f9147764568ef4b6d7eeb3366ed4079f",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 88.38080000350601,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":786,\"faces\":1572,\"closed\":true,\"self_intersection_pairs\":144,\"embedded_closed\":false,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥全网格精确复核_f8dd191c7155/mesh_167.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 786,
+      "faces": 1572,
+      "closed": true,
+      "self_intersection_pairs": 144,
+      "embedded_closed": false,
+      "kernel": "EPECK_on_stored_binary64",
+      "status": "checked"
+    }
+  ],
+  "status": "completed_with_recorded_outcomes",
+  "environment": {
+    "checker_sha256": "0af22fcb7cad4de31524cd09d5b143a3716f53c81d5c271a218307da05adcdd3",
+    "checker_source_sha256": "702429d3943975f76c30416ed1872b2f38a8d993563f7c52d019c6bd8412e7d9",
+    "cgal_version": "libcgal-dev:amd64\t5.4-1"
+  },
+  "finished_beijing": "2026-10-04T06:59:45.662644+08:00",
+  "scope": "全量三角面自交检查；须结合闭合链接、方向、面支撑及锚点记录，不能当作整体距离或CCD证书"
+}

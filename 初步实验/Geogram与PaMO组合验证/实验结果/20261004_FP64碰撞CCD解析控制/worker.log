@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2484, in load_dll
+    dll = ctypes.CDLL(dll_path, winmode=0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: /root/miniconda3/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/bin/warp-clang.so)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/constrained_20261004_FP64碰撞CCD解析控制_0771eaeb415d/run_precision_ccd_worker.py", line 16, in <module>
+    wp.init()
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 4092, in init
+    runtime = Runtime()
+              ^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 1900, in __init__
+    self.llvm = self.load_dll(llvm_lib)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/context.py", line 2488, in load_dll
+    raise RuntimeError(f"Failed to load the shared library '{dll_path}'")
+RuntimeError: Failed to load the shared library '/root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/lib/python3.12/site-packages/warp/bin/warp-clang.so'

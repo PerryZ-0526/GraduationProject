@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.20)
+project(NativeQuality LANGUAGES C CXX)
+# 原始算法和依赖树保持，编译器按UTF8读取既有中文注释。
+add_compile_options(/utf-8)
+add_subdirectory(source geogram_build)
+add_executable(native driver.cpp)
+target_link_libraries(native PRIVATE geogram)
+target_compile_features(native PRIVATE cxx_std_17)
+target_compile_definitions(native PRIVATE GEO_DYNAMIC_LIBS)
+set_target_properties(native PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")

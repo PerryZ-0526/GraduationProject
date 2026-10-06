@@ -1,0 +1,27 @@
+[1/4] /usr/local/cuda/bin/nvcc --generate-dependencies-with-compile --dependency-output cusimp.cuda.o.d -DTORCH_EXTENSION_NAME=pamo_order_control -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1018\" -isystem /root/miniconda3/lib/python3.12/site-packages/torch/include -isystem /root/miniconda3/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include -isystem /root/miniconda3/include/python3.12 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_89,code=sm_89 --compiler-options '-fPIC' -O3 --extended-lambda --fmad=false -std=c++17 -c '/root/autodl-tmp/graduation_project/constrained_20261004_简化邻接顺序隔离构建_6b28c664b1dc/control/src/cusimp.cu' -o cusimp.cuda.o 
+[2/4] c++ -MMD -MF pybind.o.d -DTORCH_EXTENSION_NAME=pamo_order_control -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1018\" -isystem /root/miniconda3/lib/python3.12/site-packages/torch/include -isystem /root/miniconda3/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include -isystem /root/miniconda3/include/python3.12 -fPIC -std=c++17 -O3 -c '/root/autodl-tmp/graduation_project/constrained_20261004_简化邻接顺序隔离构建_6b28c664b1dc/control/src/pybind.cpp' -o pybind.o 
+[3/4] /usr/local/cuda/bin/nvcc --generate-dependencies-with-compile --dependency-output cusimp_free.cuda.o.d -DTORCH_EXTENSION_NAME=pamo_order_control -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1018\" -isystem /root/miniconda3/lib/python3.12/site-packages/torch/include -isystem /root/miniconda3/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include -isystem /root/miniconda3/include/python3.12 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_89,code=sm_89 --compiler-options '-fPIC' -O3 --extended-lambda --fmad=false -std=c++17 -c '/root/autodl-tmp/graduation_project/constrained_20261004_简化邻接顺序隔离构建_6b28c664b1dc/control/src/cusimp_free.cu' -o cusimp_free.cuda.o 
+/root/autodl-tmp/graduation_project/constrained_20261004_简化邻接顺序隔离构建_6b28c664b1dc/control/src/bvh/tri_tri_3d.cuh(109): warning #177-D: variable "range" was declared but never referenced
+    } range[2];
+      ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/root/autodl-tmp/graduation_project/constrained_20261004_简化邻接顺序隔离构建_6b28c664b1dc/control/src/bvh/tri_tri_3d.cuh(112): warning #177-D: variable "plane_b" was declared but never referenced
+    double ba[3], bc[3], plane_a[4], plane_b[4];
+                                     ^
+
+/root/autodl-tmp/graduation_project/constrained_20261004_简化邻接顺序隔离构建_6b28c664b1dc/control/src/bvh/tri_tri_2d.cuh(401): warning #550-D: parameter "epsilon" was set but never used
+              bool coplanar_vertex_sharing_test(float3 p1, float3 q1, float3 r1, float3 p2, float3 q2, float3 r2, float epsilon) {
+                                                                                                                        ^
+
+/root/autodl-tmp/graduation_project/constrained_20261004_简化邻接顺序隔离构建_6b28c664b1dc/control/src/cusimp_free.cu(918): warning #177-D: variable "first_n_edges_undo_init_val" was declared but never referenced
+          int first_n_edges_undo_init_val = first_n_vertices_undo;
+              ^
+
+/root/autodl-tmp/graduation_project/constrained_20261004_简化邻接顺序隔离构建_6b28c664b1dc/control/src/bvh/query.cuh(87): warning #177-D: variable "iter" was declared but never referenced
+          int iter = 0;
+              ^
+
+[4/4] c++ pybind.o cusimp.cuda.o cusimp_free.cuda.o -shared -L/root/miniconda3/lib/python3.12/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/usr/local/cuda/lib64 -lcudart -o pamo_order_control.so
+/root/autodl-tmp/graduation_project/constrained_20261004_简化邻接顺序隔离构建_6b28c664b1dc/control/build/pamo_order_control.so

@@ -1,0 +1,42 @@
+未见普通切口_00 baseline_r00 0 31.996816
+未见普通切口_00 candidate_r00 0 64.227933
+未见普通切口_01 candidate_r00 0 73.260028
+未见普通切口_01 baseline_r00 0 27.219814
+未见普通切口_02 candidate_r00 0 65.46289
+未见普通切口_02 baseline_r00 0 29.183752
+未见薄壁_0.018毫米 candidate_r00 0 37.246924
+未见薄壁_0.018毫米 baseline_r00 0 12.984585
+未见薄壁_0.036毫米 candidate_r00 0 39.245526
+未见薄壁_0.036毫米 baseline_r00 0 11.599045
+未见窄缝_0.018毫米 candidate_r00 0 24.866291
+未见窄缝_0.018毫米 baseline_r00 0 13.026745
+未见窄缝_0.036毫米 candidate_r00 0 18.086674
+未见窄缝_0.036毫米 baseline_r00 0 11.774817
+未见贯通孔_0.018毫米 candidate_r00 0 993.131236
+未见贯通孔_0.018毫米 baseline_r00 0 85.594201
+未见贯通孔_0.036毫米 candidate_r00 0 582.984021
+未见贯通孔_0.036毫米 baseline_r00 0 351.141588
+既有真实CT原始父输入_00 candidate_r00 0 1230.60568
+既有真实CT原始父输入_00 baseline_r00 0 865.864102
+既有真实CT原始父输入_15 candidate_r00 0 1472.848736
+既有真实CT原始父输入_15 baseline_r00 0 891.756946
+trace 0 28 17
+trace 1 22 11
+trace 2 19 12
+trace 3 3 3
+trace 4 3 3
+trace 5 3 2
+trace 6 3 2
+Traceback (most recent call last):
+  File "/tmp/geogram_native_quality_20261006_13/benchmark.py", line 106, in <module>
+    traces=[json.loads(line[len('NATIVE_QUALITY_REGION '):]) for line in p.stdout.splitlines()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 238 (char 237)

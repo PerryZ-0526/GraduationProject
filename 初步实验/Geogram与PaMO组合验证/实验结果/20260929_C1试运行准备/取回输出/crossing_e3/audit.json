@@ -1,0 +1,132 @@
+{
+  "schema_version": 2,
+  "time_beijing": "2026-09-29 03:16:57",
+  "inputs": {
+    "source": {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260929_C1试运行准备\\取回输出\\crossing_e3\\geogram.obj",
+      "sha256": "9d476278096814ced880d319c7488b50b3ff38759baeaf36520a93974f678f66"
+    },
+    "candidate": {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260929_C1试运行准备\\取回输出\\crossing_e3\\pamo.obj",
+      "sha256": "c41bb24a530e85c7d5305004aee088fcca1757598bc752fd81766b6a77ca57f0"
+    },
+    "reference": {
+      "path": "初步实验\\Geogram与PaMO组合验证\\实验结果\\20260928_开发解析参照\\crossing_e3.vtp",
+      "sha256": "52a696d52ec0240d9a041586688bc73a63a64ff921dc4f2a4aa339783d68ef52"
+    }
+  },
+  "expected_components": 1,
+  "observed_components": 1,
+  "vertex_manifold_closed": true,
+  "topology_passed_with_vertex_check": true,
+  "quality_distribution": {
+    "total_faces": 2050,
+    "invalid_faces": 0,
+    "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+    "angle_below_10_deg": {
+      "faces": 21,
+      "fraction": 0.01024390243902439,
+      "area_fraction": 0.0033147957615105514
+    },
+    "angle_below_5_deg": {
+      "faces": 0,
+      "fraction": 0.0,
+      "area_fraction": 0.0
+    },
+    "angle_below_1_deg": {
+      "faces": 0,
+      "fraction": 0.0,
+      "area_fraction": 0.0
+    },
+    "high_quality_25_deg_q_0_4": {
+      "faces": 1657,
+      "fraction": 0.8082926829268293,
+      "area_fraction": 0.9222673152829134
+    }
+  },
+  "legacy_strict_quality_passed": false,
+  "accepted_under_sampled_protocol_with_vertex_check": true,
+  "accepted_under_common_budget": null,
+  "reason_common_budget_unknown": "离散参照误差和连续双向表面距离界尚未证实",
+  "metrics": {
+    "input_quality": {
+      "vertices": 1079,
+      "faces": 2154,
+      "bad_faces": 693,
+      "min_q": 0.0013938425228618462,
+      "min_angle_deg": 0.06058064473905106,
+      "boundary_edges": 0,
+      "quality_gate": {
+        "min_q": 0.4,
+        "min_angle_deg": 25.0
+      }
+    },
+    "input_topology": {
+      "connected_components": 1,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "inconsistent_interior_edges": 0,
+      "self_intersection_faces": 2
+    },
+    "input_validity_status": "detector_flags_pending_review",
+    "output_quality": {
+      "vertices": 1027,
+      "faces": 2050,
+      "bad_faces": 393,
+      "min_q": 0.1428972155113473,
+      "min_angle_deg": 5.558581096344674,
+      "boundary_edges": 0,
+      "quality_gate": {
+        "min_q": 0.4,
+        "min_angle_deg": 25.0
+      }
+    },
+    "output_topology": {
+      "connected_components": 1,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "inconsistent_interior_edges": 0,
+      "self_intersection_faces": 0
+    },
+    "output_watertight": true,
+    "output_winding_consistent": true,
+    "sampled_drift": {
+      "pamo_to_geogram": {
+        "max_mm": 0.01834641759268131,
+        "p95_mm": 0.007398717965593795,
+        "rms_mm": 0.0030862000480104063,
+        "samples": 3077
+      },
+      "geogram_to_pamo": {
+        "max_mm": 0.03331515341469498,
+        "p95_mm": 0.011962928649363491,
+        "rms_mm": 0.005269946963246864,
+        "samples": 3233
+      },
+      "interpretation": "顶点和面心双向抽样距离，不是连续Hausdorff严格上界"
+    },
+    "sampled_reference_geometry": {
+      "pamo_to_reference": {
+        "max_mm": 0.03702125747561147,
+        "p95_mm": 0.013607415376848932,
+        "rms_mm": 0.005517065093633649,
+        "samples": 8192
+      },
+      "reference_to_pamo": {
+        "max_mm": 0.05681164024551522,
+        "p95_mm": 0.015754254498867366,
+        "rms_mm": 0.00654771405345736,
+        "samples": 8192
+      },
+      "sampled_max_mm": 0.05681164024551522,
+      "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+    },
+    "quality_passed": false,
+    "topology_passed": true,
+    "sampled_geometry_passed": true,
+    "accepted_under_sampled_protocol": false,
+    "continuous_error_certificate_status": "not_available",
+    "accepted_under_common_budget": null,
+    "audit_wall_ms": 354.7297999029979
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "生成时间": "2026-10-04T22:39:37.108607+08:00",
+  "修改时间及修改内容": "首次生成，先固定真实失败源及父状态",
+  "文档概述": "只检验第三刀输入修复，不声称连续完成",
+  "索引目录": [
+    "repair",
+    "provenance"
+  ],
+  "status": "completed",
+  "parent_sha256": "83e5d65393967449272f79ae452ea38484bdd5e04f5e8e070d1417a91e238807",
+  "source_sha256": "04462b87fd60a809d96a8ac8bf569a4d43bad898a297271f490d178ed330f995",
+  "previous_record_sha256": "d25ac061d18c9697c495285003cacc4d6ab422a75650596680ee12f5a08c6783",
+  "guard_sha256": "c48660a09c43a5ce823077fc8b9626ab8846d3f33c002a91a4962ddc08c0c13e",
+  "full_input_checks": [
+    {
+      "saved_sha256": "418c9cb778d60c0666193fb706b2fe0744a75b6941433d1b61838148687e5d6b",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 678.3769000030588,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":30832,\"faces\":61660,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_FJ3262原生FP32第三刀修复控制_4ce9e1d066ac/20261004_FJ3262原生FP32第三刀修复控制_input_embedding_0.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 30832,
+      "faces": 61660,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64"
+    }
+  ],
+  "repair": {
+    "initial_invalid_faces": 1,
+    "steps": [
+      {
+        "operation": "repair_degenerate",
+        "details": {
+          "initial_invalid_faces": 1,
+          "max_flips": 1,
+          "plane_tolerance_mm": 1e-08,
+          "area_threshold_mm2": 1e-12,
+          "flips": [
+            {
+              "faces": [
+                61608,
+                61609
+              ],
+              "old_edge": [
+                30828,
+                30615
+              ],
+              "new_edge": [
+                30625,
+                30818
+              ],
+              "source_bit": 2,
+              "plane_deviation_mm": 2.48979898740566e-16
+            }
+          ],
+          "rejected_pair_checks": {
+            "new_invalid_face": 1
+          },
+          "scope": "数值近共面与凸性测试，非精确谓词或连续几何证书",
+          "remaining_invalid_faces": 0,
+          "vertices_exact": true
+        }
+      }
+    ],
+    "accepted": true,
+    "audit": {
+      "vertices": 30832,
+      "faces": 61660,
+      "finite": true,
+      "zero_area_faces": 0,
+      "fp32_zero_area_faces": 0,
+      "watertight": true,
+      "winding_consistent": true,
+      "vertex_manifold_closed": true,
+      "euler_number": 2,
+      "self_intersection_faces": 0,
+      "volume_mm3": 5353.602401599164,
+      "self_intersection_raw_alarm_faces": 282,
+      "components": 1,
+      "historical_area_threshold_counts": {
+        "fp64": 0,
+        "fp32": 0
+      },
+      "area_arithmetic": [
+        {
+          "dtype": "float64",
+          "zero_faces": 0,
+          "nonfinite_areas": 0,
+          "small_positive_faces": 0,
+          "min_area_mm2": 5.32595533645156e-10
+        },
+        {
+          "dtype": "float32",
+          "zero_faces": 0,
+          "nonfinite_areas": 0,
+          "small_positive_faces": 0,
+          "min_area_mm2": 2.997366799206702e-10
+        }
+      ],
+      "area_policy": "development_true_zero_input_check",
+      "small_positive_faces_are_risk_statistics": true,
+      "output_policy_unchanged": true,
+      "historical_unresolved_alarm_faces": 282,
+      "full_exact_embedding_bound": true,
+      "intersection_check_interpretation": "同一保存FP64输入的完整精确嵌入证据"
+    },
+    "topology_preserved": true,
+    "remaining_invalid_faces": 0,
+    "geometry_probe_max_mm": 2.540336878442283e-13,
+    "geometry_budget_mm": 1e-07,
+    "continuous_geometry_certified": false,
+    "native_fp32_arithmetic_guard": true,
+    "old_detector_bad_faces": 0,
+    "detector_scope": "old_thresholds_or_native_FP32_zero_or_nonfinite_area"
+  },
+  "provenance": {
+    "1": {
+      "samples": 245596,
+      "sampled_max_mm": 9.101120538054984e-15
+    },
+    "2": {
+      "samples": 1044,
+      "sampled_max_mm": 7.108895957933346e-16
+    },
+    "seam": {
+      "vertices": 181,
+      "parent_sampled_max_mm": 5.23691153334427e-16,
+      "tool_sampled_max_mm": 6.661338147750939e-16
+    },
+    "passed_1e_8_mm_numerical_check": true
+  },
+  "finished_beijing": "2026-10-04T22:39:44.408679+08:00",
+  "repaired_sha256": "418c9cb778d60c0666193fb706b2fe0744a75b6941433d1b61838148687e5d6b",
+  "labels_sha256": "d95ca63dffd3ba3481bd693578b3aa790bacd3aa153fcb02ea5745685c5f92a4",
+  "tool_sha256": "195ad337945c90acd9338735dc80f10eb1dbe600fe75a2938ca59ccf39b01a1b",
+  "accepted": true
+}

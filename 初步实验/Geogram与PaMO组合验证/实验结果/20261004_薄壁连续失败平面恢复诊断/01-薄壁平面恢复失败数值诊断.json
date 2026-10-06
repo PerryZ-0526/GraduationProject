@@ -1,0 +1,209 @@
+{
+  "time_beijing": "2026-10-04T07:54:53.268417+08:00",
+  "rows": [
+    {
+      "execution": {
+        "returncode": 1,
+        "remote_roundtrip_ms": 6756.064300003345,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_00_浅磨_e2/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_00_浅磨_e2/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_00_浅磨_e2/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/constrained_remesh' --method planar_tangent_protected_shared --output '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_00_浅磨_e2/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_00_浅磨_e2/worker.log' 2>&1"
+      },
+      "method": "planar_tangent_protected_shared",
+      "status": "execution_failed",
+      "inputs_sha256": {
+        "source.obj": "705264e242ded25ddc5ca2259b6fd9279cff1eb69d0aa3172e1add69db23ca3a",
+        "labels.json": "a4a42ae9d347d9122568407e4176cefbfff47335180df6f495171a18dae021e7",
+        "tool.obj": "c9d030f572b442ee2b48a8a46456f929cca6043a618e77989e8e6aa374b43dc5"
+      },
+      "route": "薄壁_00_浅磨",
+      "event": "e2",
+      "projection_failure": {
+        "stages": {
+          "before_projection": {
+            "finite_vertices": true,
+            "nonpositive_orientation_faces": [
+              942
+            ],
+            "nonfinite_orientation_faces": [],
+            "minimum_orientation": 0.0,
+            "area_at_most_1e_12_faces": 1
+          },
+          "raw_cuda_output": {
+            "finite_vertices": true,
+            "nonpositive_orientation_faces": [
+              942
+            ],
+            "nonfinite_orientation_faces": [],
+            "minimum_orientation": 0.0,
+            "area_at_most_1e_12_faces": 1
+          },
+          "restored_planes": {
+            "finite_vertices": true,
+            "nonpositive_orientation_faces": [
+              942
+            ],
+            "nonfinite_orientation_faces": [],
+            "minimum_orientation": 0.0,
+            "area_at_most_1e_12_faces": 1
+          }
+        },
+        "fp64_correction_max_mm": 3.488812179825648e-07,
+        "collision_protected_vertices": [
+          500
+        ],
+        "collision_protection": [
+          {
+            "first_diff": true,
+            "protected_vertices": [
+              500
+            ],
+            "component_records": [
+              {
+                "name": "<class 'pamo_safe_project.energy.Mesh2GTDistanceBvhEnergyCalculator'>",
+                "nonfinite_free_vertices": 0
+              },
+              {
+                "name": "<class 'pamo_safe_project.energy.ElasticEnergyCalculator'>",
+                "nonfinite_free_vertices": 0
+              },
+              {
+                "name": "<class 'pamo_safe_project.energy.HingeEnergyCalculator'>",
+                "nonfinite_free_vertices": 0
+              },
+              {
+                "name": "<class 'pamo_safe_project.energy.CollisionBvhEnergyCalculator'>",
+                "nonfinite_free_vertices": 1
+              }
+            ]
+          }
+        ],
+        "remaining_free_vertices": 45,
+        "scope": "失败数值定位，不代表自交证书，不发布或替换结果"
+      }
+    },
+    {
+      "execution": {
+        "returncode": 1,
+        "remote_roundtrip_ms": 5843.689199999062,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 'PYTHONPATH=/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f' /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/run_constrained_worker.py' --source '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_01_浅磨_e5/source.obj' --labels '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_01_浅磨_e5/labels.json' --tool '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_01_浅磨_e5/tool.obj' --executable '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/constrained_remesh' --method planar_tangent_protected_shared --output '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_01_浅磨_e5/output' > '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/薄壁_01_浅磨_e5/worker.log' 2>&1"
+      },
+      "method": "planar_tangent_protected_shared",
+      "status": "execution_failed",
+      "inputs_sha256": {
+        "source.obj": "eb31b518d86142f18c3ae1b3ee0071f8d66a021ed872fef8113642a6515139be",
+        "labels.json": "d9aa26563e4e894680f2074a8b17b5b0b0f06b5df3918b19fd4f4b43a458444e",
+        "tool.obj": "a307e10e1498e307fd79659a4719e270b6d6992f63e1fa21a7fd2acf43ff21b3"
+      },
+      "route": "薄壁_01_浅磨",
+      "event": "e5",
+      "projection_failure": {
+        "stages": {
+          "before_projection": {
+            "finite_vertices": true,
+            "nonpositive_orientation_faces": [
+              2218,
+              2232,
+              2306,
+              2336,
+              2354
+            ],
+            "nonfinite_orientation_faces": [],
+            "minimum_orientation": 0.0,
+            "area_at_most_1e_12_faces": 5
+          },
+          "raw_cuda_output": {
+            "finite_vertices": true,
+            "nonpositive_orientation_faces": [
+              2218,
+              2232,
+              2306,
+              2336,
+              2354
+            ],
+            "nonfinite_orientation_faces": [],
+            "minimum_orientation": 0.0,
+            "area_at_most_1e_12_faces": 5
+          },
+          "restored_planes": {
+            "finite_vertices": true,
+            "nonpositive_orientation_faces": [
+              2218,
+              2232,
+              2306,
+              2336,
+              2354
+            ],
+            "nonfinite_orientation_faces": [],
+            "minimum_orientation": 0.0,
+            "area_at_most_1e_12_faces": 5
+          }
+        },
+        "fp64_correction_max_mm": 3.588131491693371e-07,
+        "collision_protected_vertices": [],
+        "collision_protection": [],
+        "remaining_free_vertices": 61,
+        "scope": "失败数值定位，不代表自交证书，不发布或替换结果"
+      }
+    }
+  ],
+  "status": "completed_failure_diagnostics",
+  "scope": "已见薄壁失败复现；不发布结果",
+  "environment": {
+    "code_sha256": {
+      "constrained_remesh.cpp": "4fc35fcf68c7c89ab6fbfa8985378fba2378c6a4254c9f3a2284d98036334710",
+      "constrained_quality.py": "cec0e94a49ecd5fb0410e3905e2a5e93f8ff667ee7e812e31cdb62f0e1cacf0b",
+      "run_constrained_worker.py": "5d731de7f80b0d613ee2dbf3f7ceb7c3b0c53ffb9d34d8f9c272c7769d90def9",
+      "locality_masks.py": "cfaeac76c08d10937bf237c5e7a88ffb3c373b52badbc07995b5132177d3b6b6",
+      "locality_gpu.py": "85efcc97cd2680d90867f499df3994d517c4f6dfefc5ef17966c6a0511cd247c"
+    },
+    "compile": {
+      "returncode": 0,
+      "remote_roundtrip_ms": 14511.552199997823,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 300 g++ -O1 -std=c++17 '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/constrained_remesh.cpp' -lgmp -lmpfr -o '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/constrained_remesh' > '/root/autodl-tmp/graduation_project/constrained_20261004_薄壁连续失败平面恢复诊断_d992482eeb9f/compile.log' 2>&1"
+    },
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.8.0+cu128",
+      "extension_sha256": "c0836ff8d36fe5c9e2fca8f27e9a341578aa3d716dfb1d0563784710717353ad"
+    },
+    "executable_sha256": "8529a90f4a4f187b2d2d5aac711f49c8a99554612f729575d0180357bd7f8986",
+    "dependency": "libcgal-dev:amd64\t5.4-1",
+    "planar_code_sha256": {
+      "planar_patch.py": "fc76d44983f025799bb13272e4c1c432bb14849c556a19a5977e3058fb0fff76",
+      "run_planar_worker.py": "5cb467759b6eba1cae04a55b8e4a1e95fb33e4915b0eff530058aaa3b94dcee2",
+      "tangent_plane_gpu.py": "12f8888833ef7e3e56eb322c330d892f61dac9d261cde5b70c884d4acff59e73"
+    },
+    "triangle": {
+      "version": "20250106",
+      "binary_sha256": "6d5b31720500c28b383b064a87ffb07223f57d2e730187331b10018e1421ebf1"
+    },
+    "mechanism": "same_source_planar_regions_and_per_vertex_tangent_PAP_Pg_safe_projection",
+    "geometry_generation": "CPU_Triangle",
+    "projection": "GPU_if_free_vertices_else_identity",
+    "exact_contact_audit_sha256": "2c632215eea684c919df31b13bf7e3dd7f7e83f4c21cde29f4c06b0bbf63f617",
+    "contact_scope": "仅原报警集合，精确证明共享单纯形接触；不认证完整无自交",
+    "shared_source_code_sha256": {
+      "locality_masks.py": "cfaeac76c08d10937bf237c5e7a88ffb3c373b52badbc07995b5132177d3b6b6",
+      "planar_patch.py": "fc76d44983f025799bb13272e4c1c432bb14849c556a19a5977e3058fb0fff76",
+      "run_planar_worker.py": "5cb467759b6eba1cae04a55b8e4a1e95fb33e4915b0eff530058aaa3b94dcee2"
+    },
+    "shared_source_policy": "保留位3，分别核对父及工具表面；共同来源区域独立重建",
+    "shared_repair_sha256": {
+      "run_shared_repair_feedback.py": "dbf1b1d916824aa27c4cf59d36f4eb9e77627d0d89c7f72657153d9cf8ad4e76",
+      "fragment_pipeline.py": "44b5c1f34e1b2c8225b6099b33f2c1bc9d98996d2d88280a2d95a0073ebf9714",
+      "locality_retriangulate.py": "448e13d84f3634ab8f257600bffa3f88787ae4971fbd2460d70e354e75690bb9",
+      "locality_sliver_collapse.py": "f3c79115b83244a45d2d3d364df8ec5d10db023df20eff95cf0d15e8bca56150",
+      "locality_cleanup.py": "c2b2ef02fe6432a0a396de2b2b68e038fd33fe9a16dce8672b0b98ed89e8a12f",
+      "locality_diagnostic.py": "d714dcd5a5dda874c4691d276e2024f71739559d6c4e94579a4fd8ad85dd22ab"
+    },
+    "repair_policy": "同来源碎片翻边折叠与整体回滚，保留位3；原面积及几何门槛不变",
+    "collision_protected_gpu_sha256": "0af337bcd4b4de7db0a35b9ca320a9917a0c1f7f063f076b2f2c0bcab5a0925b",
+    "collision_policy": "第一次求导，其他能量有限时增加固定新增点；完整碰撞和CCD不变"
+  },
+  "finished_beijing": "2026-10-04T07:55:27.532028+08:00"
+}

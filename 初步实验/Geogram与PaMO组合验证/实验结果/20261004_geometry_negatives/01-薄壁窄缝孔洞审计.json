@@ -1,0 +1,749 @@
+{
+  "time_beijing": "2026-10-04T02:39:21.255487+08:00",
+  "manifest_sha256": "fada77f4c0d5e5a0fd50f29c8519bafe9cbb73d13dcc65825951401e76f7e50a",
+  "environment": {
+    "extension_sha256": "c0836ff8d36fe5c9e2fca8f27e9a341578aa3d716dfb1d0563784710717353ad",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "script_sha256": "4ccc42d2e238bd6da37e99f5b454932378b77a648acc10ea6594cb2304086b92",
+  "rows": [
+    {
+      "id": "negative_thin_wall_0.5voxel",
+      "feature_width_mm": 0.01,
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4053.025500000331,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_thin_wall_0.5voxel.obj --output /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_thin_wall_0.5voxel_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_thin_wall_0.5voxel.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 8,
+        "faces": 12,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 0.04,
+        "components": 1
+      },
+      "output_metrics": {
+        "vertices": 15,
+        "faces": 26,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 0.024324880692144526,
+        "components": 1
+      },
+      "output_sha256": "669b37f3cecd5adb1e93077e057025bdf0525a961a3c906c75d05494cd5903c0",
+      "sampled_geometry": {
+        "pamo_to_reference": {
+          "max_mm": 0.004999627273878587,
+          "p95_mm": 0.0043769362463139975,
+          "rms_mm": 0.0017955828367212968,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.3789912171443425,
+          "p95_mm": 0.11760518951293265,
+          "rms_mm": 0.04824152074145349,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.3789912171443425,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 26,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 2,
+          "fraction": 0.07692307692307693,
+          "area_fraction": 0.017475797590063787
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 17,
+          "fraction": 0.6538461538461539,
+          "area_fraction": 0.8799645528151555
+        }
+      },
+      "status": "not_preserved"
+    },
+    {
+      "id": "negative_narrow_gap_0.5voxel",
+      "feature_width_mm": 0.01,
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4086.2356999996337,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_narrow_gap_0.5voxel.obj --output /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_narrow_gap_0.5voxel_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_narrow_gap_0.5voxel.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 16,
+        "faces": 24,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 4,
+        "self_intersection_faces": 0,
+        "volume_mm3": 3.9999999999999996,
+        "components": 2
+      },
+      "output_metrics": {
+        "vertices": 27,
+        "faces": 50,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 4.020164471121838,
+        "components": 1
+      },
+      "output_sha256": "5b6a19eefac64395ff9594b5c61bf22ed3fc3165fcf57f8e7a44c04a3ceed9f7",
+      "sampled_geometry": {
+        "pamo_to_reference": {
+          "max_mm": 0.0048803603482721995,
+          "p95_mm": 2.4823303846260858e-05,
+          "rms_mm": 0.00016309005708773895,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.5000031872401957,
+          "p95_mm": 0.3185202666961907,
+          "rms_mm": 0.11239593735864034,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.5000031872401957,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 50,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 37,
+          "fraction": 0.74,
+          "area_fraction": 0.8127612278330837
+        }
+      },
+      "status": "not_preserved"
+    },
+    {
+      "id": "negative_through_hole_0.5voxel",
+      "feature_width_mm": 0.01,
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4264.330699999846,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_through_hole_0.5voxel.obj --output /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_through_hole_0.5voxel_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_through_hole_0.5voxel.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 2304,
+        "faces": 4608,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 0,
+        "self_intersection_faces": 0,
+        "volume_mm3": 2.4619465740388344,
+        "components": 1
+      },
+      "output_metrics": {
+        "vertices": 2283,
+        "faces": 4562,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 2.4560985817234675,
+        "components": 1
+      },
+      "output_sha256": "a05c04d97686c878ca029768361a01597dfd8d579feab88a7f4345bd9719ceba",
+      "sampled_geometry": {
+        "pamo_to_reference": {
+          "max_mm": 0.012902407834126849,
+          "p95_mm": 0.002560424913074345,
+          "rms_mm": 0.0011894860371167303,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.07247134884853063,
+          "p95_mm": 0.0025123747935794686,
+          "rms_mm": 0.0018965981527034716,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.07247134884853063,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 4562,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 1,
+          "fraction": 0.00021920210434020167,
+          "area_fraction": 3.919021610174049e-05
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 4493,
+          "fraction": 0.9848750548005261,
+          "area_fraction": 0.988272043310821
+        }
+      },
+      "status": "not_preserved"
+    },
+    {
+      "id": "negative_thin_wall_1voxel",
+      "feature_width_mm": 0.02,
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4021.545999999944,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_thin_wall_1voxel.obj --output /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_thin_wall_1voxel_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_thin_wall_1voxel.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 8,
+        "faces": 12,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 0.08,
+        "components": 1
+      },
+      "output_metrics": {
+        "vertices": 32,
+        "faces": 60,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 0.07371174270468214,
+        "components": 1
+      },
+      "output_sha256": "1341227e35e318d690aaab7082e19e4e2bdf3ecf71b2937928186123d3eb1e2f",
+      "sampled_geometry": {
+        "pamo_to_reference": {
+          "max_mm": 0.009996837806862937,
+          "p95_mm": 0.005853988934487716,
+          "rms_mm": 0.002106092903157921,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.18261886386535683,
+          "p95_mm": 0.007601365736339856,
+          "rms_mm": 0.008877602156744139,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.18261886386535683,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 60,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 16,
+          "fraction": 0.26666666666666666,
+          "area_fraction": 0.023051311541985944
+        },
+        "angle_below_5_deg": {
+          "faces": 13,
+          "fraction": 0.21666666666666667,
+          "area_fraction": 0.015703548449789398
+        },
+        "angle_below_1_deg": {
+          "faces": 1,
+          "fraction": 0.016666666666666666,
+          "area_fraction": 0.0009165084792591952
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 32,
+          "fraction": 0.5333333333333333,
+          "area_fraction": 0.8840462120703845
+        }
+      },
+      "status": "not_preserved"
+    },
+    {
+      "id": "negative_narrow_gap_1voxel",
+      "feature_width_mm": 0.02,
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4003.730500000529,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_narrow_gap_1voxel.obj --output /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_narrow_gap_1voxel_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_narrow_gap_1voxel.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 16,
+        "faces": 24,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 4,
+        "self_intersection_faces": 0,
+        "volume_mm3": 4.0,
+        "components": 2
+      },
+      "output_metrics": {
+        "vertices": 40,
+        "faces": 76,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 4.0377916034472845,
+        "components": 1
+      },
+      "output_sha256": "048854f3eafc2ec5fbc6f069b5da8bc13dddd109266ccba93dfe8e85dd7f8472",
+      "sampled_geometry": {
+        "pamo_to_reference": {
+          "max_mm": 0.025167930728716148,
+          "p95_mm": 0.0005736915430236964,
+          "rms_mm": 0.0015851319179170347,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.5000019746033333,
+          "p95_mm": 0.31851707975410176,
+          "rms_mm": 0.11240805276194908,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.5000019746033333,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 76,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 5,
+          "fraction": 0.06578947368421052,
+          "area_fraction": 0.014800149611449393
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 52,
+          "fraction": 0.6842105263157895,
+          "area_fraction": 0.8281255304158865
+        }
+      },
+      "status": "not_preserved"
+    },
+    {
+      "id": "negative_through_hole_1voxel",
+      "feature_width_mm": 0.02,
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4412.169399999584,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_through_hole_1voxel.obj --output /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_through_hole_1voxel_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_through_hole_1voxel.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 2304,
+        "faces": 4608,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 0,
+        "self_intersection_faces": 0,
+        "volume_mm3": 2.4863222826926843,
+        "components": 1
+      },
+      "output_metrics": {
+        "vertices": 2176,
+        "faces": 4348,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 2.4803196731652606,
+        "components": 1
+      },
+      "output_sha256": "f8d70da03b2e0d9407acf46409ce1e0c55e75fcb4d3b3791c83d2c3d6dd015a3",
+      "sampled_geometry": {
+        "pamo_to_reference": {
+          "max_mm": 0.020576031466551244,
+          "p95_mm": 0.0025477506247909617,
+          "rms_mm": 0.0012081096107548004,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.05755439413149422,
+          "p95_mm": 0.0025806307611106654,
+          "rms_mm": 0.0017016123006403064,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.05755439413149422,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 4348,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 1,
+          "fraction": 0.00022999080036798528,
+          "area_fraction": 9.705663123366735e-05
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 4275,
+          "fraction": 0.9832106715731371,
+          "area_fraction": 0.9888607293597781
+        }
+      },
+      "status": "not_preserved"
+    },
+    {
+      "id": "negative_thin_wall_2voxel",
+      "feature_width_mm": 0.04,
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4080.8741999999256,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_thin_wall_2voxel.obj --output /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_thin_wall_2voxel_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_thin_wall_2voxel.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 8,
+        "faces": 12,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 0.16,
+        "components": 1
+      },
+      "output_metrics": {
+        "vertices": 44,
+        "faces": 84,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 0.15022809746083124,
+        "components": 1
+      },
+      "output_sha256": "f93e2574e120dfb4cddc362fb196fd044b2895ba9081cd334450865a11e7c4d1",
+      "sampled_geometry": {
+        "pamo_to_reference": {
+          "max_mm": 0.01990209948989145,
+          "p95_mm": 0.007932299882878647,
+          "rms_mm": 0.003260294453987626,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.03946959589991413,
+          "p95_mm": 0.00959256049030374,
+          "rms_mm": 0.004567853430244244,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.03946959589991413,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 84,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 23,
+          "fraction": 0.27380952380952384,
+          "area_fraction": 0.031588814281394116
+        },
+        "angle_below_5_deg": {
+          "faces": 11,
+          "fraction": 0.13095238095238096,
+          "area_fraction": 0.014616650231761478
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 37,
+          "fraction": 0.44047619047619047,
+          "area_fraction": 0.7140505438341163
+        }
+      },
+      "status": "preserved_sampled"
+    },
+    {
+      "id": "negative_narrow_gap_2voxel",
+      "feature_width_mm": 0.04,
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4009.624199999962,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_narrow_gap_2voxel.obj --output /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_narrow_gap_2voxel_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_narrow_gap_2voxel.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 16,
+        "faces": 24,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 4,
+        "self_intersection_faces": 0,
+        "volume_mm3": 4.0,
+        "components": 2
+      },
+      "output_metrics": {
+        "vertices": 49,
+        "faces": 94,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 2,
+        "self_intersection_faces": 0,
+        "volume_mm3": 4.0758688525867575,
+        "components": 1
+      },
+      "output_sha256": "6272738c8ef677b40ae9640484eb6d9ef925922c5150e42092e64c1f8939720c",
+      "sampled_geometry": {
+        "pamo_to_reference": {
+          "max_mm": 0.019907542923937666,
+          "p95_mm": 0.0029498230572844227,
+          "rms_mm": 0.0017701546975369422,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.5000357376326472,
+          "p95_mm": 0.31851280159180645,
+          "rms_mm": 0.11241935696185922,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.5000357376326472,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 94,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 10,
+          "fraction": 0.10638297872340426,
+          "area_fraction": 0.022687469675198173
+        },
+        "angle_below_5_deg": {
+          "faces": 3,
+          "fraction": 0.031914893617021274,
+          "area_fraction": 0.0035305609998631813
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 55,
+          "fraction": 0.5851063829787234,
+          "area_fraction": 0.7669899655049666
+        }
+      },
+      "status": "not_preserved"
+    },
+    {
+      "id": "negative_through_hole_2voxel",
+      "feature_width_mm": 0.04,
+      "run": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 4434.296100000211,
+        "stdout": "",
+        "stderr": "",
+        "command": "timeout 900 env -u PYTHONPATH LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/venv/bin/python /root/autodl-tmp/graduation_project/pamo_quality_20260927_015556_807159_retry3/pamo/example.py --input /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_through_hole_2voxel.obj --output /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_through_hole_2voxel_pamo.obj --ratio 1.0 --min-vertex 0 > /root/autodl-tmp/graduation_project/geometry_negative_20261004_geometry_negatives/negative_through_hole_2voxel.log 2>&1"
+      },
+      "input_metrics": {
+        "vertices": 2304,
+        "faces": 4608,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 0,
+        "self_intersection_faces": 0,
+        "volume_mm3": 2.535073700000384,
+        "components": 1
+      },
+      "output_metrics": {
+        "vertices": 2235,
+        "faces": 4470,
+        "finite": true,
+        "zero_area_faces": 0,
+        "fp32_zero_area_faces": 0,
+        "watertight": true,
+        "winding_consistent": true,
+        "vertex_manifold_closed": true,
+        "euler_number": 0,
+        "self_intersection_faces": 0,
+        "volume_mm3": 2.5289650932315113,
+        "components": 1
+      },
+      "output_sha256": "2f3f6f0722e542a6c7cb25b296cc92c329512de4487771a594e39b9180398676",
+      "sampled_geometry": {
+        "pamo_to_reference": {
+          "max_mm": 0.011251728516727058,
+          "p95_mm": 0.002618260455576611,
+          "rms_mm": 0.0012549155334252594,
+          "samples": 8192
+        },
+        "reference_to_pamo": {
+          "max_mm": 0.01235393824276568,
+          "p95_mm": 0.002680861142973615,
+          "rms_mm": 0.0013065460470392865,
+          "samples": 8192
+        },
+        "sampled_max_mm": 0.01235393824276568,
+        "interpretation": "每方向8192个固定种子面积样本；参照是0.025 mm规则网格等值面，非连续Hausdorff证书"
+      },
+      "quality": {
+        "total_faces": 4470,
+        "invalid_faces": 0,
+        "denominator": "评价网格全部三角形，包括单列的退化或非有限面",
+        "angle_below_10_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_5_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "angle_below_1_deg": {
+          "faces": 0,
+          "fraction": 0.0,
+          "area_fraction": 0.0
+        },
+        "high_quality_25_deg_q_0_4": {
+          "faces": 4398,
+          "fraction": 0.9838926174496644,
+          "area_fraction": 0.9885339659810737
+        }
+      },
+      "status": "preserved_sampled"
+    }
+  ]
+}

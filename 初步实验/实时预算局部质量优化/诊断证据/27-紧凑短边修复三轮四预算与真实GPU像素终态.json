@@ -1,0 +1,718 @@
+{
+  "time_beijing": "2026-10-06T20:15:56.401988+08:00",
+  "status": "completed",
+  "planned_events": 384,
+  "driver_sha256": "da5f2ac4fb0d2341a03277826794ac733acee97ac4cc2a3c04755262b612e170",
+  "same_source_sha256": "cf38c955cff9b16d169c2f03074237b9c37c80598852685f7bc8f1ac950cc873",
+  "same_source": {
+    "reference_ms": {
+      "samples": 48,
+      "mean_ms": 50.78981268646506,
+      "median_ms": 48.7960004247725,
+      "p95_ms": 80.70128811523318,
+      "maximum_ms": 147.75478327646852
+    },
+    "compact_ms": {
+      "samples": 48,
+      "mean_ms": 18.489438652371366,
+      "median_ms": 18.16063793376088,
+      "p95_ms": 35.963302524760365,
+      "maximum_ms": 36.675367038697004
+    },
+    "reference_preparation_ms": {
+      "samples": 48,
+      "mean_ms": 20.384214411024004,
+      "median_ms": 19.995300099253654,
+      "p95_ms": 23.327219835482538,
+      "maximum_ms": 27.45593525469303
+    },
+    "compact_preparation_ms": {
+      "samples": 48,
+      "mean_ms": 3.0571436315464475,
+      "median_ms": 3.185318084433675,
+      "p95_ms": 3.8956979755312204,
+      "maximum_ms": 4.55594714730978
+    }
+  },
+  "bindings": [
+    {
+      "batch": "r0_reference_workers",
+      "record_sha256": "ba1f22ec69be08d3cc7843bdc53e6d0c510ecec0769e0b4583d07e143616c8d3",
+      "audit_sha256": "16051a451c14369dc1bd6ed550675589b99304984e6581da32c4b4f4e32a4f73",
+      "objects": 63
+    },
+    {
+      "batch": "r0_workers",
+      "record_sha256": "8771fbbc07a0bbea24865af53fc158e3320e3db780d8a83527bef81294ec1e50",
+      "audit_sha256": "4397f78bbf15c76f391ec02111377b111c6c145876d88051c6aa3b6fbed73d47",
+      "objects": 106
+    },
+    {
+      "batch": "r1_workers",
+      "record_sha256": "d479a5c48ae41fdc77cfb8d734589ff151ffddca9ea42054aaf1833cb0feb075",
+      "audit_sha256": "ac1de047b95bb19fc977cf11afe0b3408609b711b6cea7323ed6e414e3611f4e",
+      "objects": 106
+    },
+    {
+      "batch": "r1_reference_workers",
+      "record_sha256": "e650f04b76d710a40d7f5b992ec82c95e7b12b32a49ea144e2bdfae27b36d37f",
+      "audit_sha256": "2703043620255d260ed5fa2d4fc89f9f589455da05d2af11aaa50023fd3c36e6",
+      "objects": 63
+    },
+    {
+      "batch": "r2_reference_workers",
+      "record_sha256": "ef7c4720e04529880f280d338ad2b786a8b196db67b610ec365c03dc235298d6",
+      "audit_sha256": "1e525850f59072d2bab5e680b1e0f095fb3fe8537677b7ba041f9b51af6cf404",
+      "objects": 63
+    },
+    {
+      "batch": "r2_workers",
+      "record_sha256": "e740cd0189ddcdeeeae72b3eda7e50ea2260ca7e751dc069c76c46b8528525bf",
+      "audit_sha256": "b1cb1a7a9d533c9874d2d536f69687d65de1a69e5a8638cae3360c99d1fcfa88",
+      "objects": 106
+    }
+  ],
+  "groups": [
+    {
+      "variant": "reference_workers",
+      "budget_ms": 20,
+      "planned": 48,
+      "published": 3,
+      "rejected": 3,
+      "blocked": 42,
+      "published_within_budget": 0,
+      "published_maintenance": {
+        "samples": 3,
+        "mean_ms": 99.34531509255369,
+        "median_ms": 98.97066093981266,
+        "p95_ms": 101.24404220841825,
+        "maximum_ms": 101.4966401271522
+      },
+      "published_cut_and_maintenance": {
+        "samples": 3,
+        "mean_ms": 237.81772516667843,
+        "median_ms": 232.3672496713698,
+        "p95_ms": 249.12435971200466,
+        "maximum_ms": 250.98626082763076
+      },
+      "all_attempted_maintenance": {
+        "samples": 6,
+        "mean_ms": 91.2729356593142,
+        "median_ms": 91.53582830913365,
+        "p95_ms": 100.86514533031732,
+        "maximum_ms": 101.4966401271522
+      },
+      "repair": {
+        "samples": 3,
+        "mean_ms": 23.05131048584978,
+        "median_ms": 22.8746528737247,
+        "p95_ms": 23.68983863852918,
+        "maximum_ms": 23.78041483461857
+      },
+      "repair_preparation": {
+        "samples": 3,
+        "mean_ms": 21.014489854375523,
+        "median_ms": 20.801045931875706,
+        "p95_ms": 21.646890183910728,
+        "maximum_ms": 21.740872878581285
+      },
+      "quality_operations": 0,
+      "quality": {
+        "10": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "5": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "1": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        }
+      }
+    },
+    {
+      "variant": "reference_workers",
+      "budget_ms": 50,
+      "planned": 48,
+      "published": 3,
+      "rejected": 3,
+      "blocked": 42,
+      "published_within_budget": 0,
+      "published_maintenance": {
+        "samples": 3,
+        "mean_ms": 95.19896749407053,
+        "median_ms": 97.24326292052865,
+        "p95_ms": 101.09028951264918,
+        "maximum_ms": 101.51773691177368
+      },
+      "published_cut_and_maintenance": {
+        "samples": 3,
+        "mean_ms": 239.6120928848783,
+        "median_ms": 220.07982479408383,
+        "p95_ms": 281.20825798250735,
+        "maximum_ms": 288.0003061145544
+      },
+      "all_attempted_maintenance": {
+        "samples": 6,
+        "mean_ms": 91.33859436648588,
+        "median_ms": 91.79957630112767,
+        "p95_ms": 100.44911841396242,
+        "maximum_ms": 101.51773691177368
+      },
+      "repair": {
+        "samples": 3,
+        "mean_ms": 21.062659565359354,
+        "median_ms": 21.937972865998745,
+        "p95_ms": 22.483181301504374,
+        "maximum_ms": 22.543760016560555
+      },
+      "repair_preparation": {
+        "samples": 3,
+        "mean_ms": 19.324861156443756,
+        "median_ms": 20.294159650802612,
+        "p95_ms": 20.436950400471687,
+        "maximum_ms": 20.452816039323807
+      },
+      "quality_operations": 0,
+      "quality": {
+        "10": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "5": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "1": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        }
+      }
+    },
+    {
+      "variant": "reference_workers",
+      "budget_ms": 100,
+      "planned": 48,
+      "published": 3,
+      "rejected": 3,
+      "blocked": 42,
+      "published_within_budget": 2,
+      "published_maintenance": {
+        "samples": 3,
+        "mean_ms": 140.4835480886201,
+        "median_ms": 91.21414739638567,
+        "p95_ms": 227.02833018265665,
+        "maximum_ms": 242.11879493668675
+      },
+      "published_cut_and_maintenance": {
+        "samples": 3,
+        "mean_ms": 256.12490298226476,
+        "median_ms": 207.18702021986246,
+        "p95_ms": 342.58301267400384,
+        "maximum_ms": 357.6270118355751
+      },
+      "all_attempted_maintenance": {
+        "samples": 6,
+        "mean_ms": 159.52094838333628,
+        "median_ms": 103.42058865353465,
+        "p95_ms": 307.15510027948767,
+        "maximum_ms": 328.833868727088
+      },
+      "repair": {
+        "samples": 3,
+        "mean_ms": 20.696879364550114,
+        "median_ms": 20.53853217512369,
+        "p95_ms": 22.04275606200099,
+        "maximum_ms": 22.2098920494318
+      },
+      "repair_preparation": {
+        "samples": 3,
+        "mean_ms": 18.81701375047366,
+        "median_ms": 18.700005020946264,
+        "p95_ms": 20.180555479601026,
+        "maximum_ms": 20.34506108611822
+      },
+      "quality_operations": 0,
+      "quality": {
+        "10": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "5": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "1": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        }
+      }
+    },
+    {
+      "variant": "reference_workers",
+      "budget_ms": 200,
+      "planned": 48,
+      "published": 48,
+      "rejected": 0,
+      "blocked": 0,
+      "published_within_budget": 46,
+      "published_maintenance": {
+        "samples": 48,
+        "mean_ms": 152.51588811709857,
+        "median_ms": 148.21606106124818,
+        "p95_ms": 177.0087423734367,
+        "maximum_ms": 248.37353732436895
+      },
+      "published_cut_and_maintenance": {
+        "samples": 48,
+        "mean_ms": 278.87077307483804,
+        "median_ms": 265.03972010686994,
+        "p95_ms": 433.521314524114,
+        "maximum_ms": 474.65524496510625
+      },
+      "all_attempted_maintenance": {
+        "samples": 48,
+        "mean_ms": 152.51588811709857,
+        "median_ms": 148.21606106124818,
+        "p95_ms": 177.0087423734367,
+        "maximum_ms": 248.37353732436895
+      },
+      "repair": {
+        "samples": 48,
+        "mean_ms": 49.882007093401626,
+        "median_ms": 50.32273312099278,
+        "p95_ms": 83.35338770411909,
+        "maximum_ms": 85.7976321130991
+      },
+      "repair_preparation": {
+        "samples": 48,
+        "mean_ms": 20.461558684473857,
+        "median_ms": 20.289287669584155,
+        "p95_ms": 22.594460262916982,
+        "maximum_ms": 23.654906079173088
+      },
+      "quality_operations": 10,
+      "quality": {
+        "10": {
+          "count_gain": 7,
+          "count_improved_frames": 5,
+          "area_improved_frames": 3,
+          "area_worse_frames": 1,
+          "area_gain_sum": 1.0715498682811742e-07
+        },
+        "5": {
+          "count_gain": 7,
+          "count_improved_frames": 5,
+          "area_improved_frames": 3,
+          "area_worse_frames": 0,
+          "area_gain_sum": 1.0715498683093634e-07
+        },
+        "1": {
+          "count_gain": 10,
+          "count_improved_frames": 8,
+          "area_improved_frames": 8,
+          "area_worse_frames": 0,
+          "area_gain_sum": 1.292660065542557e-07
+        }
+      }
+    },
+    {
+      "variant": "workers",
+      "budget_ms": 20,
+      "planned": 48,
+      "published": 3,
+      "rejected": 3,
+      "blocked": 42,
+      "published_within_budget": 0,
+      "published_maintenance": {
+        "samples": 3,
+        "mean_ms": 82.06282773365577,
+        "median_ms": 81.27355016767979,
+        "p95_ms": 83.89857280999422,
+        "maximum_ms": 84.1902419924736
+      },
+      "published_cut_and_maintenance": {
+        "samples": 3,
+        "mean_ms": 209.88603526105484,
+        "median_ms": 208.6881590075791,
+        "p95_ms": 212.0877378154546,
+        "maximum_ms": 212.46546879410744
+      },
+      "all_attempted_maintenance": {
+        "samples": 6,
+        "mean_ms": 73.12392303720117,
+        "median_ms": 73.77467560581863,
+        "p95_ms": 83.46106903627515,
+        "maximum_ms": 84.1902419924736
+      },
+      "repair": {
+        "samples": 3,
+        "mean_ms": 3.962352561453978,
+        "median_ms": 3.8416190072894096,
+        "p95_ms": 4.185537714511156,
+        "maximum_ms": 4.223750904202461
+      },
+      "repair_preparation": {
+        "samples": 3,
+        "mean_ms": 1.8700480771561463,
+        "median_ms": 1.7463541589677334,
+        "p95_ms": 2.0878727082163095,
+        "maximum_ms": 2.1258192136883736
+      },
+      "quality_operations": 0,
+      "quality": {
+        "10": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "5": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "1": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        }
+      }
+    },
+    {
+      "variant": "workers",
+      "budget_ms": 50,
+      "planned": 48,
+      "published": 3,
+      "rejected": 3,
+      "blocked": 42,
+      "published_within_budget": 0,
+      "published_maintenance": {
+        "samples": 3,
+        "mean_ms": 73.88390150542061,
+        "median_ms": 72.76657782495022,
+        "p95_ms": 76.14298276603222,
+        "maximum_ms": 76.51813887059689
+      },
+      "published_cut_and_maintenance": {
+        "samples": 3,
+        "mean_ms": 187.4112170189619,
+        "median_ms": 190.40189404040575,
+        "p95_ms": 190.48667321912944,
+        "maximum_ms": 190.49609312787652
+      },
+      "all_attempted_maintenance": {
+        "samples": 6,
+        "mean_ms": 71.26996441123386,
+        "median_ms": 72.56678282283247,
+        "p95_ms": 76.99611235875636,
+        "maximum_ms": 77.15543685480952
+      },
+      "repair": {
+        "samples": 3,
+        "mean_ms": 3.076589976747831,
+        "median_ms": 2.948042005300522,
+        "p95_ms": 3.341027954593301,
+        "maximum_ms": 3.3846930600702763
+      },
+      "repair_preparation": {
+        "samples": 3,
+        "mean_ms": 1.432678351799647,
+        "median_ms": 1.4325822703540325,
+        "p95_ms": 1.4328546822071075,
+        "maximum_ms": 1.4328849501907825
+      },
+      "quality_operations": 0,
+      "quality": {
+        "10": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "5": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "1": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        }
+      }
+    },
+    {
+      "variant": "workers",
+      "budget_ms": 100,
+      "planned": 48,
+      "published": 48,
+      "rejected": 0,
+      "blocked": 0,
+      "published_within_budget": 40,
+      "published_maintenance": {
+        "samples": 48,
+        "mean_ms": 96.9090965227224,
+        "median_ms": 89.65228241868317,
+        "p95_ms": 111.80622654501349,
+        "maximum_ms": 333.79525784403086
+      },
+      "published_cut_and_maintenance": {
+        "samples": 48,
+        "mean_ms": 234.5931461507765,
+        "median_ms": 203.9738807361573,
+        "p95_ms": 382.6705268817022,
+        "maximum_ms": 776.0784360580146
+      },
+      "all_attempted_maintenance": {
+        "samples": 48,
+        "mean_ms": 96.9090965227224,
+        "median_ms": 89.65228241868317,
+        "p95_ms": 111.80622654501349,
+        "maximum_ms": 333.79525784403086
+      },
+      "repair": {
+        "samples": 48,
+        "mean_ms": 20.04453163438787,
+        "median_ms": 19.737397553399205,
+        "p95_ms": 38.70709948241711,
+        "maximum_ms": 41.863180696964264
+      },
+      "repair_preparation": {
+        "samples": 48,
+        "mean_ms": 3.2563478841135898,
+        "median_ms": 3.3746440894901752,
+        "p95_ms": 4.433818277902901,
+        "maximum_ms": 4.911566618829966
+      },
+      "quality_operations": 0,
+      "quality": {
+        "10": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "5": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        },
+        "1": {
+          "count_gain": 0,
+          "count_improved_frames": 0,
+          "area_improved_frames": 0,
+          "area_worse_frames": 0,
+          "area_gain_sum": 0.0
+        }
+      }
+    },
+    {
+      "variant": "workers",
+      "budget_ms": 200,
+      "planned": 48,
+      "published": 48,
+      "rejected": 0,
+      "blocked": 0,
+      "published_within_budget": 47,
+      "published_maintenance": {
+        "samples": 48,
+        "mean_ms": 129.90635027138828,
+        "median_ms": 122.99543293192983,
+        "p95_ms": 176.02386325597763,
+        "maximum_ms": 328.5413268022239
+      },
+      "published_cut_and_maintenance": {
+        "samples": 48,
+        "mean_ms": 280.91522310084355,
+        "median_ms": 236.99102574028075,
+        "p95_ms": 570.3863146482034,
+        "maximum_ms": 743.5630690306425
+      },
+      "all_attempted_maintenance": {
+        "samples": 48,
+        "mean_ms": 129.90635027138828,
+        "median_ms": 122.99543293192983,
+        "p95_ms": 176.02386325597763,
+        "maximum_ms": 328.5413268022239
+      },
+      "repair": {
+        "samples": 48,
+        "mean_ms": 21.28520397430596,
+        "median_ms": 20.183614920824766,
+        "p95_ms": 37.656668364070356,
+        "maximum_ms": 101.62074398249388
+      },
+      "repair_preparation": {
+        "samples": 48,
+        "mean_ms": 3.3434881867530444,
+        "median_ms": 3.3037748653441668,
+        "p95_ms": 4.684865940362215,
+        "maximum_ms": 6.107199005782604
+      },
+      "quality_operations": 16,
+      "quality": {
+        "10": {
+          "count_gain": 14,
+          "count_improved_frames": 8,
+          "area_improved_frames": 2,
+          "area_worse_frames": 2,
+          "area_gain_sum": 7.143665788078568e-08
+        },
+        "5": {
+          "count_gain": 14,
+          "count_improved_frames": 8,
+          "area_improved_frames": 2,
+          "area_worse_frames": 0,
+          "area_gain_sum": 7.14366578872909e-08
+        },
+        "1": {
+          "count_gain": 16,
+          "count_improved_frames": 10,
+          "area_improved_frames": 10,
+          "area_worse_frames": 0,
+          "area_gain_sum": 8.617733770287214e-08
+        }
+      }
+    }
+  ],
+  "full_audited_objects": 507,
+  "render_root": "/tmp/compact_short_repair_20261006/render_trials_retry2",
+  "render_status": "completed",
+  "render": [
+    {
+      "batch": "reference_workers_budget200",
+      "status": "completed",
+      "planned": 16,
+      "rendered": 16,
+      "pixels": {
+        "samples": 16,
+        "mean_ms": 316.70252815820277,
+        "median_ms": 295.8733371924609,
+        "p95_ms": 450.65986865665764,
+        "maximum_ms": 528.6634489893913
+      },
+      "render": {
+        "samples": 16,
+        "mean_ms": 31.12224893993698,
+        "median_ms": 22.107361583039165,
+        "p95_ms": 60.97091280389577,
+        "maximum_ms": 152.68848184496164
+      },
+      "pixel_intervals_with_offline_work": {
+        "samples": 15,
+        "mean_ms": 530.5677606103321,
+        "median_ms": 473.86259539052844,
+        "p95_ms": 849.051523860544,
+        "maximum_ms": 857.5758989900351
+      },
+      "all_saved_audits_pass": true,
+      "record_sha256": "522de28654f542f9b48ed3629b9977036f462e3fc7cd8493b07f170b275f5665",
+      "renderer_capabilities": "EGL version string:  1.5\nEGL vendor string:  NVIDIA\nEGL client APIs:  OpenGL_ES OpenGL\nEGL extensions:  EGL_ANDROID_native_fence_sync EGL_EXT_buffer_age EGL_EXT_client_sync EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_MESA_image_dma_buf_export EGL_EXT_output_base EGL_EXT_output_drm EGL_EXT_protected_content EGL_EXT_stream_consumer_egloutput EGL_EXT_stream_acquire_mode EGL_EXT_sync_reuse EGL_IMG_context_priority EGL_KHR_config_attribs EGL_KHR_create_context_no_error EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_partial_update EGL_KHR_swap_buffers_with_damage EGL_KHR_no_config_context EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_reusable_sync EGL_KHR_stream EGL_KHR_stream_attrib EGL_KHR_stream_consumer_gltexture EGL_KHR_stream_cross_process_fd EGL_KHR_stream_fifo EGL_KHR_stream_producer_eglsurface EGL_KHR_surfaceless_context EGL_KHR_wait_sync EGL_NV_nvrm_fence_sync EGL_NV_quadruple_buffer EGL_NV_stream_consumer_eglimage EGL_NV_stream_cross_display EGL_NV_stream_cross_object EGL_NV_stream_cross_process EGL_NV_stream_cross_system EGL_NV_stream_dma EGL_NV_stream_flush EGL_NV_stream_metadata EGL_NV_stream_remote EGL_NV_stream_reset EGL_NV_stream_socket EGL_NV_stream_socket_inet EGL_NV_stream_socket_unix EGL_NV_stream_sync EGL_NV_stream_fifo_next EGL_NV_stream_fifo_synchronous EGL_NV_stream_consumer_gltexture_yuv EGL_NV_stream_attrib EGL_NV_stream_origin EGL_NV_system_time EGL_NV_output_drm_flip_event EGL_NV_triple_buffer EGL_NV_robustness_video_memory_purge\nOpenGL vendor string:  NVIDIA Corporation\nOpenGL renderer string:  NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2\nOpenGL version string:  4.6.0 NVIDIA 595.91.07\nOpenGL extensions:  \n  GL_AMD_multi_draw_indirect\n  GL_AMD_seamless_cubemap_per_texture\n  GL_AMD_vertex_shader_viewport_index\n  GL_AMD_vertex_shader_layer\n  GL_ARB_arrays_of_arrays\n  GL_ARB_base_instance\n  GL_ARB_bindless_texture\n  GL_ARB_blend_func_extended\n  GL_ARB_buffer_storage\n  GL_ARB_clear_buffer_object\n  GL_ARB_clear_texture\n  GL_ARB_clip_control\n  GL_ARB_color_buffer_float\n  GL_ARB_compatibility\n  GL_ARB_compressed_texture_pixel_storage\n  GL_ARB_conservative_depth\n  GL_ARB_compute_shader\n  GL_ARB_compute_variable_group_size\n  GL_ARB_conditional_render_inverted\n  GL_ARB_copy_buffer\n  GL_ARB_copy_image\n  GL_ARB_cull_distance\n  GL_ARB_debug_output\n  GL_ARB_depth_buffer_float\n  GL_ARB_depth_clamp\n  GL_ARB_depth_texture\n  GL_ARB_derivative_control\n  GL_ARB_direct_state_access\n  GL_ARB_draw_buffers\n  GL_ARB_draw_buffers_blend\n  GL_ARB_draw_indirect\n  GL_ARB_draw_elements_base_vertex\n  GL_ARB_draw_instanced\n  GL_ARB_enhanced_layouts\n  GL_ARB_ES2_compatibility\n  GL_ARB_ES3_compatibility\n  GL_ARB_ES3_1_compatibility\n  GL_ARB_ES3_2_compatibility\n  GL_ARB_explicit_attrib_location\n  GL_ARB_explicit_uniform_location\n  GL_ARB_fragment_coord_conventions\n  GL_ARB_fragment_layer_viewport\n  GL_ARB_fragment_program\n  GL_ARB_fragment_program_shadow\n  GL_ARB_fragment_shader\n  GL_ARB_fragment_shader_interlock\n  GL_ARB_framebuffer_no_attachments\n  GL_ARB_framebuffer_object\n  GL_ARB_framebuffer_sRGB\n  GL_ARB_geometry_shader4\n  GL_ARB_get_program_binary\n  GL_ARB_get_texture_sub_image\n  GL_ARB_gl_spirv\n  GL_ARB_gpu_shader5\n  GL_ARB_gpu_shader_fp64\n  GL_ARB_gpu_shader_int64\n  GL_ARB_half_float_pixel\n  GL_ARB_half_float_vertex\n  GL_ARB_imaging\n  GL_ARB_indirect_parameters\n  GL_ARB_instanced_arrays\n  GL_ARB_internalformat_query\n  GL_ARB_internalformat_query2\n  GL_ARB_invalidate_subdata\n  GL_ARB_map_buffer_alignment\n  GL_ARB_map_buffer_range\n  GL_ARB_multi_bind\n  GL_ARB_multi_draw_indirect\n  GL_ARB_multisample\n  GL_ARB_multitexture\n  GL_ARB_occlusion_query\n  GL_ARB_occlusion_query2\n  GL_ARB_parallel_shader_compile\n  GL_ARB_pipeline_statistics_query\n  GL_ARB_pixel_buffer_object\n  GL_ARB_point_parameters\n  GL_ARB_point_sprite\n  GL_ARB_polygon_offset_clamp\n  GL_ARB_post_depth_coverage\n  GL_ARB_program_interface_query\n  GL_ARB_provoking_vertex\n  GL_ARB_query_buffer_object\n  GL_ARB_robust_buffer_access_behavior\n  GL_ARB_robustness\n  GL_ARB_sample_locations\n  GL_ARB_sample_shading\n  GL_ARB_sampler_objects\n  GL_ARB_seamless_cube_map\n  GL_ARB_seamless_cubemap_per_texture\n  GL_ARB_separate_shader_objects\n  GL_ARB_shader_atomic_counter_ops\n  GL_ARB_shader_atomic_counters\n  GL_ARB_shader_ballot\n  GL_ARB_shader_bit_encoding\n  GL_ARB_shader_clock\n  GL_ARB_shader_draw_parameters\n  GL_ARB_shader_group_vote\n  GL_ARB_shader_image_load_store\n  GL_ARB_shader_image_size\n  GL_ARB_shader_objects\n  GL_ARB_shader_precision\n  GL_ARB_shader_storage_buffer_object\n  GL_ARB_shader_subroutine\n  GL_ARB_shader_texture_image_samples\n  GL_ARB_shader_texture_lod\n  GL_ARB_shading_language_100\n  GL_ARB_shader_viewport_layer_array\n  GL_ARB_shading_language_420pack\n  GL_ARB_shading_language_include\n  GL_ARB_shading_language_packing\n  GL_ARB_shadow\n  GL_ARB_sparse_buffer\n  GL_ARB_sparse_texture\n  GL_ARB_sparse_texture2\n  GL_ARB_sparse_texture_clamp\n  GL_ARB_spirv_extensions\n  GL_ARB_stencil_texturing\n  GL_ARB_sync\n  GL_ARB_tessellation_shader\n  GL_ARB_texture_barrier\n  GL_ARB_texture_border_clamp\n  GL_ARB_texture_buffer_object\n  GL_ARB_texture_buffer_object_rgb32\n  GL_ARB_texture_buffer_range\n  GL_ARB_texture_compression\n  GL_ARB_texture_compression_bptc\n  GL_ARB_texture_compression_rgtc\n  GL_ARB_texture_cube_map\n  GL_ARB_texture_cube_map_array\n  GL_ARB_texture_env_add\n  GL_ARB_texture_env_combine\n  GL_ARB_texture_env_crossbar\n  GL_ARB_texture_env_dot3\n  GL_ARB_texture_filter_anisotropic\n  GL_ARB_texture_filter_minmax\n  GL_ARB_texture_float\n  GL_ARB_texture_gather\n  GL_ARB_texture_mirror_clamp_to_edge\n  GL_ARB_texture_mirrored_repeat\n  GL_ARB_texture_multisample\n  GL_ARB_texture_non_power_of_two\n  GL_ARB_texture_query_levels\n  GL_ARB_texture_query_lod\n  GL_ARB_texture_rectangle\n  GL_ARB_texture_rg\n  GL_ARB_texture_rgb10_a2ui\n  GL_ARB_texture_stencil8\n  GL_ARB_texture_storage\n  GL_ARB_texture_storage_multisample\n  GL_ARB_texture_swizzle\n  GL_ARB_texture_view\n  GL_ARB_timer_query\n  GL_ARB_transform_feedback2\n  GL_ARB_transform_feedback3\n  GL_ARB_transform_feedback_instanced\n  GL_ARB_transform_feedback_overflow_query\n  GL_ARB_transpose_matrix\n  GL_ARB_uniform_buffer_object\n  GL_ARB_vertex_array_bgra\n  GL_ARB_vertex_array_object\n  GL_ARB_vertex_attrib_64bit\n  GL_ARB_vertex_attrib_binding\n  GL_ARB_vertex_buffer_object\n  GL_ARB_vertex_program\n  GL_ARB_vertex_shader\n  GL_ARB_vertex_type_10f_11f_11f_rev\n  GL_ARB_vertex_type_2_10_10_10_rev\n  GL_ARB_viewport_array\n  GL_ARB_window_pos\n  GL_ATI_draw_buffers\n  GL_ATI_texture_float\n  GL_ATI_texture_mirror_once\n  GL_S3_s3tc\n  GL_EXT_texture_env_add\n  GL_EXT_abgr\n  GL_EXT_bgra\n  GL_EXT_bindable_uniform\n  GL_EXT_blend_color\n  GL_EXT_blend_equation_separate\n  GL_EXT_blend_func_separate\n  GL_EXT_blend_minmax\n  GL_EXT_blend_subtract\n  GL_EXT_compiled_vertex_array\n  GL_EXT_Cg_shader\n  GL_EXT_depth_bounds_test\n  GL_EXT_direct_state_access\n  GL_EXT_draw_buffers2\n  GL_EXT_draw_instanced\n  GL_EXT_draw_range_elements\n  GL_EXT_EGL_image_storage\n  GL_EXT_fog_coord\n  GL_EXT_framebuffer_blit\n  GL_EXT_framebuffer_multisample\n  GL_EXTX_framebuffer_mixed_formats\n  GL_EXT_framebuffer_multisample_blit_scaled\n  GL_EXT_framebuffer_object\n  GL_EXT_framebuffer_sRGB\n  GL_EXT_geometry_shader4\n  GL_EXT_gpu_program_parameters\n  GL_EXT_gpu_shader4\n  GL_EXT_multi_draw_arrays\n  GL_EXT_multiview_texture_multisample\n  GL_EXT_multiview_timer_query\n  GL_EXT_packed_depth_stencil\n  GL_EXT_packed_float\n  GL_EXT_packed_pixels\n  GL_EXT_pixel_buffer_object\n  GL_EXT_point_parameters\n  GL_EXT_polygon_offset_clamp\n  GL_EXT_post_depth_coverage\n  GL_EXT_provoking_vertex\n  GL_EXT_raster_multisample\n  GL_EXT_rescale_normal\n  GL_EXT_secondary_color\n  GL_EXT_separate_shader_objects\n  GL_EXT_separate_specular_color\n  GL_EXT_shader_image_load_formatted\n  GL_EXT_shader_image_load_store\n  GL_EXT_shader_integer_mix\n  GL_EXT_shadow_funcs\n  GL_EXT_sparse_texture2\n  GL_EXT_stencil_two_side\n  GL_EXT_stencil_wrap\n  GL_EXT_texture3D\n  GL_EXT_texture_array\n  GL_EXT_texture_buffer_object\n  GL_EXT_texture_compression_dxt1\n  GL_EXT_texture_compression_latc\n  GL_EXT_texture_compression_rgtc\n  GL_EXT_texture_compression_s3tc\n  GL_EXT_texture_cube_map\n  GL_EXT_texture_edge_clamp\n  GL_EXT_texture_env_combine\n  GL_EXT_texture_env_dot3\n  GL_EXT_texture_filter_anisotropic\n  GL_EXT_texture_filter_minmax\n  GL_EXT_texture_integer\n  GL_EXT_texture_lod\n  GL_EXT_texture_lod_bias\n  GL_EXT_texture_mirror_clamp\n  GL_EXT_texture_object\n  GL_EXT_texture_shadow_lod\n  GL_EXT_texture_shared_exponent\n  GL_EXT_texture_sRGB\n  GL_EXT_texture_sRGB_R8\n  GL_EXT_texture_sRGB_decode\n  GL_EXT_texture_storage\n  GL_EXT_texture_swizzle\n  GL_EXT_timer_query\n  GL_EXT_transform_feedback2\n  GL_EXT_vertex_array\n  GL_EXT_vertex_array_bgra\n  GL_EXT_vertex_attrib_64bit\n  GL_EXT_window_rectangles\n  GL_EXT_import_sync_object\n  GL_NV_robustness_video_memory_purge\n  GL_IBM_rasterpos_clip\n  GL_IBM_texture_mirrored_repeat\n  GL_KHR_context_flush_control\n  GL_KHR_debug\n  GL_EXT_memory_object\n  GL_EXT_memory_object_fd\n  GL_NV_memory_object_sparse\n  GL_KHR_parallel_shader_compile\n  GL_KHR_no_error\n  GL_KHR_robust_buffer_access_behavior\n  GL_KHR_robustness\n  GL_EXT_semaphore\n  GL_EXT_semaphore_fd\n  GL_NV_timeline_semaphore\n  GL_KHR_shader_subgroup\n  GL_KTX_buffer_region\n  GL_NV_alpha_to_coverage_dither_control\n  GL_NV_bindless_multi_draw_indirect\n  GL_NV_bindless_multi_draw_indirect_count\n  GL_NV_bindless_texture\n  GL_NV_blend_equation_advanced\n  GL_NV_blend_equation_advanced_coherent\n  GL_NVX_blend_equation_advanced_multi_draw_buffers\n  GL_NV_blend_minmax_factor\n  GL_NV_blend_square\n  GL_NV_clip_space_w_scaling\n  GL_NV_command_list\n  GL_NV_compute_program5\n  GL_NV_compute_shader_derivatives\n  GL_NV_conditional_render\n  GL_NV_conservative_raster\n  GL_NV_conservative_raster_dilate\n  GL_NV_conservative_raster_pre_snap\n  GL_NV_conservative_raster_pre_snap_triangles\n  GL_NV_conservative_raster_underestimation\n  GL_NV_copy_depth_to_color\n  GL_NV_copy_image\n  GL_NV_depth_buffer_float\n  GL_NV_depth_clamp\n  GL_NV_draw_texture\n  GL_NV_draw_vulkan_image\n  GL_NV_ES1_1_compatibility\n  GL_NV_ES3_1_compatibility\n  GL_NV_explicit_multisample\n  GL_NV_feature_query\n  GL_NV_fence\n  GL_NV_fill_rectangle\n  GL_NV_float_buffer\n  GL_NV_fog_distance\n  GL_NV_fragment_coverage_to_color\n  GL_NV_fragment_program\n  GL_NV_fragment_program_option\n  GL_NV_fragment_program2\n  GL_NV_fragment_shader_barycentric\n  GL_NV_fragment_shader_interlock\n  GL_NV_framebuffer_mixed_samples\n  GL_NV_framebuffer_multisample_coverage\n  GL_NV_geometry_shader4\n  GL_NV_geometry_shader_passthrough\n  GL_NV_gpu_program4\n  GL_NV_internalformat_sample_query\n  GL_NV_gpu_program4_1\n  GL_NV_gpu_program5\n  GL_NV_gpu_program5_mem_extended\n  GL_NV_gpu_program_fp64\n  GL_NV_gpu_program_multiview\n  GL_NV_gpu_shader5\n  GL_NV_half_float\n  GL_NV_light_max_exponent\n  GL_NV_memory_attachment\n  GL_NV_mesh_shader\n  GL_NV_multisample_coverage\n  GL_NV_multisample_filter_hint\n  GL_NV_occlusion_query\n  GL_NV_packed_depth_stencil\n  GL_NV_parameter_buffer_object\n  GL_NV_parameter_buffer_object2\n  GL_NV_path_rendering\n  GL_NV_path_rendering_shared_edge\n  GL_NV_point_sprite\n  GL_NV_primitive_restart\n  GL_NV_primitive_shading_rate\n  GL_NV_query_resource\n  GL_NV_query_resource_tag\n  GL_NV_register_combiners\n  GL_NV_register_combiners2\n  GL_NV_representative_fragment_test\n  GL_NV_sample_locations\n  GL_NV_sample_mask_override_coverage\n  GL_NV_scissor_exclusive\n  GL_NV_shader_atomic_counters\n  GL_NV_shader_atomic_float\n  GL_NV_shader_atomic_float64\n  GL_NV_shader_atomic_fp16_vector\n  GL_NV_shader_atomic_int64\n  GL_NV_shader_buffer_load\n  GL_NV_shader_storage_buffer_object\n  GL_NV_shader_subgroup_partitioned\n  GL_NV_shader_texture_footprint\n  GL_NV_shading_rate_image\n  GL_NV_stereo_view_rendering\n  GL_NV_texgen_reflection\n  GL_NV_texture_barrier\n  GL_NV_texture_compression_vtc\n  GL_NV_texture_dirty_tile_map\n  GL_NV_texture_env_combine4\n  GL_NV_texture_multisample\n  GL_NV_texture_rectangle\n  GL_NV_texture_rectangle_compressed\n  GL_NV_texture_shader\n  GL_NV_texture_shader2\n  GL_NV_texture_shader3\n  GL_NV_transform_feedback\n  GL_NV_transform_feedback2\n  GL_NV_uniform_buffer_unified_memory\n  GL_NV_uniform_buffer_std430_layout\n  GL_NV_vertex_attrib_integer_64bit\n  GL_NV_vertex_buffer_unified_memory\n  GL_NV_vertex_program\n  GL_NV_vertex_program1_1\n  GL_NV_vertex_program2\n  GL_NV_vertex_program2_option\n  GL_NV_vertex_program3\n  GL_NV_viewport_array2\n  GL_NV_viewport_swizzle\n  GL_NVX_conditional_render\n  GL_NV_gpu_multicast\n  GL_NVX_progress_fence\n  GL_NVX_gpu_memory_info\n  GL_NVX_nvenc_interop\n  GL_NV_shader_thread_group\n  GL_NV_shader_thread_shuffle\n  GL_KHR_blend_equation_advanced\n  GL_KHR_blend_equation_advanced_coherent\n  GL_OES_EGL_image\n  GL_OVR_multiview\n  GL_OVR_multiview2\n  GL_SGIS_generate_mipmap\n  GL_SGIS_texture_lod\n  GL_SGIX_depth_texture\n  GL_SGIX_shadow\n  GL_SUN_slice_accum\n"
+    },
+    {
+      "batch": "workers_budget100",
+      "status": "completed",
+      "planned": 16,
+      "rendered": 16,
+      "pixels": {
+        "samples": 16,
+        "mean_ms": 291.25664313323796,
+        "median_ms": 241.0535509698093,
+        "p95_ms": 555.0977952079847,
+        "maximum_ms": 601.0337430052459
+      },
+      "render": {
+        "samples": 16,
+        "mean_ms": 39.553710870677605,
+        "median_ms": 22.555679781362414,
+        "p95_ms": 139.69448441639543,
+        "maximum_ms": 176.47244269028306
+      },
+      "pixel_intervals_with_offline_work": {
+        "samples": 15,
+        "mean_ms": 514.073780272156,
+        "median_ms": 434.3793881125748,
+        "p95_ms": 896.3897676672785,
+        "maximum_ms": 972.2113660536706
+      },
+      "all_saved_audits_pass": true,
+      "record_sha256": "7802395e018647a7c3a836b2bae5a245a21d0b064b7e2a4a5ee0f168150dd92e",
+      "renderer_capabilities": "EGL version string:  1.5\nEGL vendor string:  NVIDIA\nEGL client APIs:  OpenGL_ES OpenGL\nEGL extensions:  EGL_ANDROID_native_fence_sync EGL_EXT_buffer_age EGL_EXT_client_sync EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_MESA_image_dma_buf_export EGL_EXT_output_base EGL_EXT_output_drm EGL_EXT_protected_content EGL_EXT_stream_consumer_egloutput EGL_EXT_stream_acquire_mode EGL_EXT_sync_reuse EGL_IMG_context_priority EGL_KHR_config_attribs EGL_KHR_create_context_no_error EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_partial_update EGL_KHR_swap_buffers_with_damage EGL_KHR_no_config_context EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_reusable_sync EGL_KHR_stream EGL_KHR_stream_attrib EGL_KHR_stream_consumer_gltexture EGL_KHR_stream_cross_process_fd EGL_KHR_stream_fifo EGL_KHR_stream_producer_eglsurface EGL_KHR_surfaceless_context EGL_KHR_wait_sync EGL_NV_nvrm_fence_sync EGL_NV_quadruple_buffer EGL_NV_stream_consumer_eglimage EGL_NV_stream_cross_display EGL_NV_stream_cross_object EGL_NV_stream_cross_process EGL_NV_stream_cross_system EGL_NV_stream_dma EGL_NV_stream_flush EGL_NV_stream_metadata EGL_NV_stream_remote EGL_NV_stream_reset EGL_NV_stream_socket EGL_NV_stream_socket_inet EGL_NV_stream_socket_unix EGL_NV_stream_sync EGL_NV_stream_fifo_next EGL_NV_stream_fifo_synchronous EGL_NV_stream_consumer_gltexture_yuv EGL_NV_stream_attrib EGL_NV_stream_origin EGL_NV_system_time EGL_NV_output_drm_flip_event EGL_NV_triple_buffer EGL_NV_robustness_video_memory_purge\nOpenGL vendor string:  NVIDIA Corporation\nOpenGL renderer string:  NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2\nOpenGL version string:  4.6.0 NVIDIA 595.91.07\nOpenGL extensions:  \n  GL_AMD_multi_draw_indirect\n  GL_AMD_seamless_cubemap_per_texture\n  GL_AMD_vertex_shader_viewport_index\n  GL_AMD_vertex_shader_layer\n  GL_ARB_arrays_of_arrays\n  GL_ARB_base_instance\n  GL_ARB_bindless_texture\n  GL_ARB_blend_func_extended\n  GL_ARB_buffer_storage\n  GL_ARB_clear_buffer_object\n  GL_ARB_clear_texture\n  GL_ARB_clip_control\n  GL_ARB_color_buffer_float\n  GL_ARB_compatibility\n  GL_ARB_compressed_texture_pixel_storage\n  GL_ARB_conservative_depth\n  GL_ARB_compute_shader\n  GL_ARB_compute_variable_group_size\n  GL_ARB_conditional_render_inverted\n  GL_ARB_copy_buffer\n  GL_ARB_copy_image\n  GL_ARB_cull_distance\n  GL_ARB_debug_output\n  GL_ARB_depth_buffer_float\n  GL_ARB_depth_clamp\n  GL_ARB_depth_texture\n  GL_ARB_derivative_control\n  GL_ARB_direct_state_access\n  GL_ARB_draw_buffers\n  GL_ARB_draw_buffers_blend\n  GL_ARB_draw_indirect\n  GL_ARB_draw_elements_base_vertex\n  GL_ARB_draw_instanced\n  GL_ARB_enhanced_layouts\n  GL_ARB_ES2_compatibility\n  GL_ARB_ES3_compatibility\n  GL_ARB_ES3_1_compatibility\n  GL_ARB_ES3_2_compatibility\n  GL_ARB_explicit_attrib_location\n  GL_ARB_explicit_uniform_location\n  GL_ARB_fragment_coord_conventions\n  GL_ARB_fragment_layer_viewport\n  GL_ARB_fragment_program\n  GL_ARB_fragment_program_shadow\n  GL_ARB_fragment_shader\n  GL_ARB_fragment_shader_interlock\n  GL_ARB_framebuffer_no_attachments\n  GL_ARB_framebuffer_object\n  GL_ARB_framebuffer_sRGB\n  GL_ARB_geometry_shader4\n  GL_ARB_get_program_binary\n  GL_ARB_get_texture_sub_image\n  GL_ARB_gl_spirv\n  GL_ARB_gpu_shader5\n  GL_ARB_gpu_shader_fp64\n  GL_ARB_gpu_shader_int64\n  GL_ARB_half_float_pixel\n  GL_ARB_half_float_vertex\n  GL_ARB_imaging\n  GL_ARB_indirect_parameters\n  GL_ARB_instanced_arrays\n  GL_ARB_internalformat_query\n  GL_ARB_internalformat_query2\n  GL_ARB_invalidate_subdata\n  GL_ARB_map_buffer_alignment\n  GL_ARB_map_buffer_range\n  GL_ARB_multi_bind\n  GL_ARB_multi_draw_indirect\n  GL_ARB_multisample\n  GL_ARB_multitexture\n  GL_ARB_occlusion_query\n  GL_ARB_occlusion_query2\n  GL_ARB_parallel_shader_compile\n  GL_ARB_pipeline_statistics_query\n  GL_ARB_pixel_buffer_object\n  GL_ARB_point_parameters\n  GL_ARB_point_sprite\n  GL_ARB_polygon_offset_clamp\n  GL_ARB_post_depth_coverage\n  GL_ARB_program_interface_query\n  GL_ARB_provoking_vertex\n  GL_ARB_query_buffer_object\n  GL_ARB_robust_buffer_access_behavior\n  GL_ARB_robustness\n  GL_ARB_sample_locations\n  GL_ARB_sample_shading\n  GL_ARB_sampler_objects\n  GL_ARB_seamless_cube_map\n  GL_ARB_seamless_cubemap_per_texture\n  GL_ARB_separate_shader_objects\n  GL_ARB_shader_atomic_counter_ops\n  GL_ARB_shader_atomic_counters\n  GL_ARB_shader_ballot\n  GL_ARB_shader_bit_encoding\n  GL_ARB_shader_clock\n  GL_ARB_shader_draw_parameters\n  GL_ARB_shader_group_vote\n  GL_ARB_shader_image_load_store\n  GL_ARB_shader_image_size\n  GL_ARB_shader_objects\n  GL_ARB_shader_precision\n  GL_ARB_shader_storage_buffer_object\n  GL_ARB_shader_subroutine\n  GL_ARB_shader_texture_image_samples\n  GL_ARB_shader_texture_lod\n  GL_ARB_shading_language_100\n  GL_ARB_shader_viewport_layer_array\n  GL_ARB_shading_language_420pack\n  GL_ARB_shading_language_include\n  GL_ARB_shading_language_packing\n  GL_ARB_shadow\n  GL_ARB_sparse_buffer\n  GL_ARB_sparse_texture\n  GL_ARB_sparse_texture2\n  GL_ARB_sparse_texture_clamp\n  GL_ARB_spirv_extensions\n  GL_ARB_stencil_texturing\n  GL_ARB_sync\n  GL_ARB_tessellation_shader\n  GL_ARB_texture_barrier\n  GL_ARB_texture_border_clamp\n  GL_ARB_texture_buffer_object\n  GL_ARB_texture_buffer_object_rgb32\n  GL_ARB_texture_buffer_range\n  GL_ARB_texture_compression\n  GL_ARB_texture_compression_bptc\n  GL_ARB_texture_compression_rgtc\n  GL_ARB_texture_cube_map\n  GL_ARB_texture_cube_map_array\n  GL_ARB_texture_env_add\n  GL_ARB_texture_env_combine\n  GL_ARB_texture_env_crossbar\n  GL_ARB_texture_env_dot3\n  GL_ARB_texture_filter_anisotropic\n  GL_ARB_texture_filter_minmax\n  GL_ARB_texture_float\n  GL_ARB_texture_gather\n  GL_ARB_texture_mirror_clamp_to_edge\n  GL_ARB_texture_mirrored_repeat\n  GL_ARB_texture_multisample\n  GL_ARB_texture_non_power_of_two\n  GL_ARB_texture_query_levels\n  GL_ARB_texture_query_lod\n  GL_ARB_texture_rectangle\n  GL_ARB_texture_rg\n  GL_ARB_texture_rgb10_a2ui\n  GL_ARB_texture_stencil8\n  GL_ARB_texture_storage\n  GL_ARB_texture_storage_multisample\n  GL_ARB_texture_swizzle\n  GL_ARB_texture_view\n  GL_ARB_timer_query\n  GL_ARB_transform_feedback2\n  GL_ARB_transform_feedback3\n  GL_ARB_transform_feedback_instanced\n  GL_ARB_transform_feedback_overflow_query\n  GL_ARB_transpose_matrix\n  GL_ARB_uniform_buffer_object\n  GL_ARB_vertex_array_bgra\n  GL_ARB_vertex_array_object\n  GL_ARB_vertex_attrib_64bit\n  GL_ARB_vertex_attrib_binding\n  GL_ARB_vertex_buffer_object\n  GL_ARB_vertex_program\n  GL_ARB_vertex_shader\n  GL_ARB_vertex_type_10f_11f_11f_rev\n  GL_ARB_vertex_type_2_10_10_10_rev\n  GL_ARB_viewport_array\n  GL_ARB_window_pos\n  GL_ATI_draw_buffers\n  GL_ATI_texture_float\n  GL_ATI_texture_mirror_once\n  GL_S3_s3tc\n  GL_EXT_texture_env_add\n  GL_EXT_abgr\n  GL_EXT_bgra\n  GL_EXT_bindable_uniform\n  GL_EXT_blend_color\n  GL_EXT_blend_equation_separate\n  GL_EXT_blend_func_separate\n  GL_EXT_blend_minmax\n  GL_EXT_blend_subtract\n  GL_EXT_compiled_vertex_array\n  GL_EXT_Cg_shader\n  GL_EXT_depth_bounds_test\n  GL_EXT_direct_state_access\n  GL_EXT_draw_buffers2\n  GL_EXT_draw_instanced\n  GL_EXT_draw_range_elements\n  GL_EXT_EGL_image_storage\n  GL_EXT_fog_coord\n  GL_EXT_framebuffer_blit\n  GL_EXT_framebuffer_multisample\n  GL_EXTX_framebuffer_mixed_formats\n  GL_EXT_framebuffer_multisample_blit_scaled\n  GL_EXT_framebuffer_object\n  GL_EXT_framebuffer_sRGB\n  GL_EXT_geometry_shader4\n  GL_EXT_gpu_program_parameters\n  GL_EXT_gpu_shader4\n  GL_EXT_multi_draw_arrays\n  GL_EXT_multiview_texture_multisample\n  GL_EXT_multiview_timer_query\n  GL_EXT_packed_depth_stencil\n  GL_EXT_packed_float\n  GL_EXT_packed_pixels\n  GL_EXT_pixel_buffer_object\n  GL_EXT_point_parameters\n  GL_EXT_polygon_offset_clamp\n  GL_EXT_post_depth_coverage\n  GL_EXT_provoking_vertex\n  GL_EXT_raster_multisample\n  GL_EXT_rescale_normal\n  GL_EXT_secondary_color\n  GL_EXT_separate_shader_objects\n  GL_EXT_separate_specular_color\n  GL_EXT_shader_image_load_formatted\n  GL_EXT_shader_image_load_store\n  GL_EXT_shader_integer_mix\n  GL_EXT_shadow_funcs\n  GL_EXT_sparse_texture2\n  GL_EXT_stencil_two_side\n  GL_EXT_stencil_wrap\n  GL_EXT_texture3D\n  GL_EXT_texture_array\n  GL_EXT_texture_buffer_object\n  GL_EXT_texture_compression_dxt1\n  GL_EXT_texture_compression_latc\n  GL_EXT_texture_compression_rgtc\n  GL_EXT_texture_compression_s3tc\n  GL_EXT_texture_cube_map\n  GL_EXT_texture_edge_clamp\n  GL_EXT_texture_env_combine\n  GL_EXT_texture_env_dot3\n  GL_EXT_texture_filter_anisotropic\n  GL_EXT_texture_filter_minmax\n  GL_EXT_texture_integer\n  GL_EXT_texture_lod\n  GL_EXT_texture_lod_bias\n  GL_EXT_texture_mirror_clamp\n  GL_EXT_texture_object\n  GL_EXT_texture_shadow_lod\n  GL_EXT_texture_shared_exponent\n  GL_EXT_texture_sRGB\n  GL_EXT_texture_sRGB_R8\n  GL_EXT_texture_sRGB_decode\n  GL_EXT_texture_storage\n  GL_EXT_texture_swizzle\n  GL_EXT_timer_query\n  GL_EXT_transform_feedback2\n  GL_EXT_vertex_array\n  GL_EXT_vertex_array_bgra\n  GL_EXT_vertex_attrib_64bit\n  GL_EXT_window_rectangles\n  GL_EXT_import_sync_object\n  GL_NV_robustness_video_memory_purge\n  GL_IBM_rasterpos_clip\n  GL_IBM_texture_mirrored_repeat\n  GL_KHR_context_flush_control\n  GL_KHR_debug\n  GL_EXT_memory_object\n  GL_EXT_memory_object_fd\n  GL_NV_memory_object_sparse\n  GL_KHR_parallel_shader_compile\n  GL_KHR_no_error\n  GL_KHR_robust_buffer_access_behavior\n  GL_KHR_robustness\n  GL_EXT_semaphore\n  GL_EXT_semaphore_fd\n  GL_NV_timeline_semaphore\n  GL_KHR_shader_subgroup\n  GL_KTX_buffer_region\n  GL_NV_alpha_to_coverage_dither_control\n  GL_NV_bindless_multi_draw_indirect\n  GL_NV_bindless_multi_draw_indirect_count\n  GL_NV_bindless_texture\n  GL_NV_blend_equation_advanced\n  GL_NV_blend_equation_advanced_coherent\n  GL_NVX_blend_equation_advanced_multi_draw_buffers\n  GL_NV_blend_minmax_factor\n  GL_NV_blend_square\n  GL_NV_clip_space_w_scaling\n  GL_NV_command_list\n  GL_NV_compute_program5\n  GL_NV_compute_shader_derivatives\n  GL_NV_conditional_render\n  GL_NV_conservative_raster\n  GL_NV_conservative_raster_dilate\n  GL_NV_conservative_raster_pre_snap\n  GL_NV_conservative_raster_pre_snap_triangles\n  GL_NV_conservative_raster_underestimation\n  GL_NV_copy_depth_to_color\n  GL_NV_copy_image\n  GL_NV_depth_buffer_float\n  GL_NV_depth_clamp\n  GL_NV_draw_texture\n  GL_NV_draw_vulkan_image\n  GL_NV_ES1_1_compatibility\n  GL_NV_ES3_1_compatibility\n  GL_NV_explicit_multisample\n  GL_NV_feature_query\n  GL_NV_fence\n  GL_NV_fill_rectangle\n  GL_NV_float_buffer\n  GL_NV_fog_distance\n  GL_NV_fragment_coverage_to_color\n  GL_NV_fragment_program\n  GL_NV_fragment_program_option\n  GL_NV_fragment_program2\n  GL_NV_fragment_shader_barycentric\n  GL_NV_fragment_shader_interlock\n  GL_NV_framebuffer_mixed_samples\n  GL_NV_framebuffer_multisample_coverage\n  GL_NV_geometry_shader4\n  GL_NV_geometry_shader_passthrough\n  GL_NV_gpu_program4\n  GL_NV_internalformat_sample_query\n  GL_NV_gpu_program4_1\n  GL_NV_gpu_program5\n  GL_NV_gpu_program5_mem_extended\n  GL_NV_gpu_program_fp64\n  GL_NV_gpu_program_multiview\n  GL_NV_gpu_shader5\n  GL_NV_half_float\n  GL_NV_light_max_exponent\n  GL_NV_memory_attachment\n  GL_NV_mesh_shader\n  GL_NV_multisample_coverage\n  GL_NV_multisample_filter_hint\n  GL_NV_occlusion_query\n  GL_NV_packed_depth_stencil\n  GL_NV_parameter_buffer_object\n  GL_NV_parameter_buffer_object2\n  GL_NV_path_rendering\n  GL_NV_path_rendering_shared_edge\n  GL_NV_point_sprite\n  GL_NV_primitive_restart\n  GL_NV_primitive_shading_rate\n  GL_NV_query_resource\n  GL_NV_query_resource_tag\n  GL_NV_register_combiners\n  GL_NV_register_combiners2\n  GL_NV_representative_fragment_test\n  GL_NV_sample_locations\n  GL_NV_sample_mask_override_coverage\n  GL_NV_scissor_exclusive\n  GL_NV_shader_atomic_counters\n  GL_NV_shader_atomic_float\n  GL_NV_shader_atomic_float64\n  GL_NV_shader_atomic_fp16_vector\n  GL_NV_shader_atomic_int64\n  GL_NV_shader_buffer_load\n  GL_NV_shader_storage_buffer_object\n  GL_NV_shader_subgroup_partitioned\n  GL_NV_shader_texture_footprint\n  GL_NV_shading_rate_image\n  GL_NV_stereo_view_rendering\n  GL_NV_texgen_reflection\n  GL_NV_texture_barrier\n  GL_NV_texture_compression_vtc\n  GL_NV_texture_dirty_tile_map\n  GL_NV_texture_env_combine4\n  GL_NV_texture_multisample\n  GL_NV_texture_rectangle\n  GL_NV_texture_rectangle_compressed\n  GL_NV_texture_shader\n  GL_NV_texture_shader2\n  GL_NV_texture_shader3\n  GL_NV_transform_feedback\n  GL_NV_transform_feedback2\n  GL_NV_uniform_buffer_unified_memory\n  GL_NV_uniform_buffer_std430_layout\n  GL_NV_vertex_attrib_integer_64bit\n  GL_NV_vertex_buffer_unified_memory\n  GL_NV_vertex_program\n  GL_NV_vertex_program1_1\n  GL_NV_vertex_program2\n  GL_NV_vertex_program2_option\n  GL_NV_vertex_program3\n  GL_NV_viewport_array2\n  GL_NV_viewport_swizzle\n  GL_NVX_conditional_render\n  GL_NV_gpu_multicast\n  GL_NVX_progress_fence\n  GL_NVX_gpu_memory_info\n  GL_NVX_nvenc_interop\n  GL_NV_shader_thread_group\n  GL_NV_shader_thread_shuffle\n  GL_KHR_blend_equation_advanced\n  GL_KHR_blend_equation_advanced_coherent\n  GL_OES_EGL_image\n  GL_OVR_multiview\n  GL_OVR_multiview2\n  GL_SGIS_generate_mipmap\n  GL_SGIS_texture_lod\n  GL_SGIX_depth_texture\n  GL_SGIX_shadow\n  GL_SUN_slice_accum\n"
+    },
+    {
+      "batch": "workers_budget200",
+      "status": "completed",
+      "planned": 16,
+      "rendered": 16,
+      "pixels": {
+        "samples": 16,
+        "mean_ms": 276.0759556258563,
+        "median_ms": 255.87257789447904,
+        "p95_ms": 381.11907115671784,
+        "maximum_ms": 518.368961289525
+      },
+      "render": {
+        "samples": 16,
+        "mean_ms": 24.93976239929907,
+        "median_ms": 23.148807464167476,
+        "p95_ms": 36.03310033213347,
+        "maximum_ms": 40.46959104016423
+      },
+      "pixel_intervals_with_offline_work": {
+        "samples": 15,
+        "mean_ms": 488.11651365831494,
+        "median_ms": 469.27036391571164,
+        "p95_ms": 623.5677652526646,
+        "maximum_ms": 674.0685850381851
+      },
+      "all_saved_audits_pass": true,
+      "record_sha256": "994ed2986c9198c52aa19783f649c4cf962643f16c10e412600a7cc7b6b6b57d",
+      "renderer_capabilities": "EGL version string:  1.5\nEGL vendor string:  NVIDIA\nEGL client APIs:  OpenGL_ES OpenGL\nEGL extensions:  EGL_ANDROID_native_fence_sync EGL_EXT_buffer_age EGL_EXT_client_sync EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_MESA_image_dma_buf_export EGL_EXT_output_base EGL_EXT_output_drm EGL_EXT_protected_content EGL_EXT_stream_consumer_egloutput EGL_EXT_stream_acquire_mode EGL_EXT_sync_reuse EGL_IMG_context_priority EGL_KHR_config_attribs EGL_KHR_create_context_no_error EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_partial_update EGL_KHR_swap_buffers_with_damage EGL_KHR_no_config_context EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_reusable_sync EGL_KHR_stream EGL_KHR_stream_attrib EGL_KHR_stream_consumer_gltexture EGL_KHR_stream_cross_process_fd EGL_KHR_stream_fifo EGL_KHR_stream_producer_eglsurface EGL_KHR_surfaceless_context EGL_KHR_wait_sync EGL_NV_nvrm_fence_sync EGL_NV_quadruple_buffer EGL_NV_stream_consumer_eglimage EGL_NV_stream_cross_display EGL_NV_stream_cross_object EGL_NV_stream_cross_process EGL_NV_stream_cross_system EGL_NV_stream_dma EGL_NV_stream_flush EGL_NV_stream_metadata EGL_NV_stream_remote EGL_NV_stream_reset EGL_NV_stream_socket EGL_NV_stream_socket_inet EGL_NV_stream_socket_unix EGL_NV_stream_sync EGL_NV_stream_fifo_next EGL_NV_stream_fifo_synchronous EGL_NV_stream_consumer_gltexture_yuv EGL_NV_stream_attrib EGL_NV_stream_origin EGL_NV_system_time EGL_NV_output_drm_flip_event EGL_NV_triple_buffer EGL_NV_robustness_video_memory_purge\nOpenGL vendor string:  NVIDIA Corporation\nOpenGL renderer string:  NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2\nOpenGL version string:  4.6.0 NVIDIA 595.91.07\nOpenGL extensions:  \n  GL_AMD_multi_draw_indirect\n  GL_AMD_seamless_cubemap_per_texture\n  GL_AMD_vertex_shader_viewport_index\n  GL_AMD_vertex_shader_layer\n  GL_ARB_arrays_of_arrays\n  GL_ARB_base_instance\n  GL_ARB_bindless_texture\n  GL_ARB_blend_func_extended\n  GL_ARB_buffer_storage\n  GL_ARB_clear_buffer_object\n  GL_ARB_clear_texture\n  GL_ARB_clip_control\n  GL_ARB_color_buffer_float\n  GL_ARB_compatibility\n  GL_ARB_compressed_texture_pixel_storage\n  GL_ARB_conservative_depth\n  GL_ARB_compute_shader\n  GL_ARB_compute_variable_group_size\n  GL_ARB_conditional_render_inverted\n  GL_ARB_copy_buffer\n  GL_ARB_copy_image\n  GL_ARB_cull_distance\n  GL_ARB_debug_output\n  GL_ARB_depth_buffer_float\n  GL_ARB_depth_clamp\n  GL_ARB_depth_texture\n  GL_ARB_derivative_control\n  GL_ARB_direct_state_access\n  GL_ARB_draw_buffers\n  GL_ARB_draw_buffers_blend\n  GL_ARB_draw_indirect\n  GL_ARB_draw_elements_base_vertex\n  GL_ARB_draw_instanced\n  GL_ARB_enhanced_layouts\n  GL_ARB_ES2_compatibility\n  GL_ARB_ES3_compatibility\n  GL_ARB_ES3_1_compatibility\n  GL_ARB_ES3_2_compatibility\n  GL_ARB_explicit_attrib_location\n  GL_ARB_explicit_uniform_location\n  GL_ARB_fragment_coord_conventions\n  GL_ARB_fragment_layer_viewport\n  GL_ARB_fragment_program\n  GL_ARB_fragment_program_shadow\n  GL_ARB_fragment_shader\n  GL_ARB_fragment_shader_interlock\n  GL_ARB_framebuffer_no_attachments\n  GL_ARB_framebuffer_object\n  GL_ARB_framebuffer_sRGB\n  GL_ARB_geometry_shader4\n  GL_ARB_get_program_binary\n  GL_ARB_get_texture_sub_image\n  GL_ARB_gl_spirv\n  GL_ARB_gpu_shader5\n  GL_ARB_gpu_shader_fp64\n  GL_ARB_gpu_shader_int64\n  GL_ARB_half_float_pixel\n  GL_ARB_half_float_vertex\n  GL_ARB_imaging\n  GL_ARB_indirect_parameters\n  GL_ARB_instanced_arrays\n  GL_ARB_internalformat_query\n  GL_ARB_internalformat_query2\n  GL_ARB_invalidate_subdata\n  GL_ARB_map_buffer_alignment\n  GL_ARB_map_buffer_range\n  GL_ARB_multi_bind\n  GL_ARB_multi_draw_indirect\n  GL_ARB_multisample\n  GL_ARB_multitexture\n  GL_ARB_occlusion_query\n  GL_ARB_occlusion_query2\n  GL_ARB_parallel_shader_compile\n  GL_ARB_pipeline_statistics_query\n  GL_ARB_pixel_buffer_object\n  GL_ARB_point_parameters\n  GL_ARB_point_sprite\n  GL_ARB_polygon_offset_clamp\n  GL_ARB_post_depth_coverage\n  GL_ARB_program_interface_query\n  GL_ARB_provoking_vertex\n  GL_ARB_query_buffer_object\n  GL_ARB_robust_buffer_access_behavior\n  GL_ARB_robustness\n  GL_ARB_sample_locations\n  GL_ARB_sample_shading\n  GL_ARB_sampler_objects\n  GL_ARB_seamless_cube_map\n  GL_ARB_seamless_cubemap_per_texture\n  GL_ARB_separate_shader_objects\n  GL_ARB_shader_atomic_counter_ops\n  GL_ARB_shader_atomic_counters\n  GL_ARB_shader_ballot\n  GL_ARB_shader_bit_encoding\n  GL_ARB_shader_clock\n  GL_ARB_shader_draw_parameters\n  GL_ARB_shader_group_vote\n  GL_ARB_shader_image_load_store\n  GL_ARB_shader_image_size\n  GL_ARB_shader_objects\n  GL_ARB_shader_precision\n  GL_ARB_shader_storage_buffer_object\n  GL_ARB_shader_subroutine\n  GL_ARB_shader_texture_image_samples\n  GL_ARB_shader_texture_lod\n  GL_ARB_shading_language_100\n  GL_ARB_shader_viewport_layer_array\n  GL_ARB_shading_language_420pack\n  GL_ARB_shading_language_include\n  GL_ARB_shading_language_packing\n  GL_ARB_shadow\n  GL_ARB_sparse_buffer\n  GL_ARB_sparse_texture\n  GL_ARB_sparse_texture2\n  GL_ARB_sparse_texture_clamp\n  GL_ARB_spirv_extensions\n  GL_ARB_stencil_texturing\n  GL_ARB_sync\n  GL_ARB_tessellation_shader\n  GL_ARB_texture_barrier\n  GL_ARB_texture_border_clamp\n  GL_ARB_texture_buffer_object\n  GL_ARB_texture_buffer_object_rgb32\n  GL_ARB_texture_buffer_range\n  GL_ARB_texture_compression\n  GL_ARB_texture_compression_bptc\n  GL_ARB_texture_compression_rgtc\n  GL_ARB_texture_cube_map\n  GL_ARB_texture_cube_map_array\n  GL_ARB_texture_env_add\n  GL_ARB_texture_env_combine\n  GL_ARB_texture_env_crossbar\n  GL_ARB_texture_env_dot3\n  GL_ARB_texture_filter_anisotropic\n  GL_ARB_texture_filter_minmax\n  GL_ARB_texture_float\n  GL_ARB_texture_gather\n  GL_ARB_texture_mirror_clamp_to_edge\n  GL_ARB_texture_mirrored_repeat\n  GL_ARB_texture_multisample\n  GL_ARB_texture_non_power_of_two\n  GL_ARB_texture_query_levels\n  GL_ARB_texture_query_lod\n  GL_ARB_texture_rectangle\n  GL_ARB_texture_rg\n  GL_ARB_texture_rgb10_a2ui\n  GL_ARB_texture_stencil8\n  GL_ARB_texture_storage\n  GL_ARB_texture_storage_multisample\n  GL_ARB_texture_swizzle\n  GL_ARB_texture_view\n  GL_ARB_timer_query\n  GL_ARB_transform_feedback2\n  GL_ARB_transform_feedback3\n  GL_ARB_transform_feedback_instanced\n  GL_ARB_transform_feedback_overflow_query\n  GL_ARB_transpose_matrix\n  GL_ARB_uniform_buffer_object\n  GL_ARB_vertex_array_bgra\n  GL_ARB_vertex_array_object\n  GL_ARB_vertex_attrib_64bit\n  GL_ARB_vertex_attrib_binding\n  GL_ARB_vertex_buffer_object\n  GL_ARB_vertex_program\n  GL_ARB_vertex_shader\n  GL_ARB_vertex_type_10f_11f_11f_rev\n  GL_ARB_vertex_type_2_10_10_10_rev\n  GL_ARB_viewport_array\n  GL_ARB_window_pos\n  GL_ATI_draw_buffers\n  GL_ATI_texture_float\n  GL_ATI_texture_mirror_once\n  GL_S3_s3tc\n  GL_EXT_texture_env_add\n  GL_EXT_abgr\n  GL_EXT_bgra\n  GL_EXT_bindable_uniform\n  GL_EXT_blend_color\n  GL_EXT_blend_equation_separate\n  GL_EXT_blend_func_separate\n  GL_EXT_blend_minmax\n  GL_EXT_blend_subtract\n  GL_EXT_compiled_vertex_array\n  GL_EXT_Cg_shader\n  GL_EXT_depth_bounds_test\n  GL_EXT_direct_state_access\n  GL_EXT_draw_buffers2\n  GL_EXT_draw_instanced\n  GL_EXT_draw_range_elements\n  GL_EXT_EGL_image_storage\n  GL_EXT_fog_coord\n  GL_EXT_framebuffer_blit\n  GL_EXT_framebuffer_multisample\n  GL_EXTX_framebuffer_mixed_formats\n  GL_EXT_framebuffer_multisample_blit_scaled\n  GL_EXT_framebuffer_object\n  GL_EXT_framebuffer_sRGB\n  GL_EXT_geometry_shader4\n  GL_EXT_gpu_program_parameters\n  GL_EXT_gpu_shader4\n  GL_EXT_multi_draw_arrays\n  GL_EXT_multiview_texture_multisample\n  GL_EXT_multiview_timer_query\n  GL_EXT_packed_depth_stencil\n  GL_EXT_packed_float\n  GL_EXT_packed_pixels\n  GL_EXT_pixel_buffer_object\n  GL_EXT_point_parameters\n  GL_EXT_polygon_offset_clamp\n  GL_EXT_post_depth_coverage\n  GL_EXT_provoking_vertex\n  GL_EXT_raster_multisample\n  GL_EXT_rescale_normal\n  GL_EXT_secondary_color\n  GL_EXT_separate_shader_objects\n  GL_EXT_separate_specular_color\n  GL_EXT_shader_image_load_formatted\n  GL_EXT_shader_image_load_store\n  GL_EXT_shader_integer_mix\n  GL_EXT_shadow_funcs\n  GL_EXT_sparse_texture2\n  GL_EXT_stencil_two_side\n  GL_EXT_stencil_wrap\n  GL_EXT_texture3D\n  GL_EXT_texture_array\n  GL_EXT_texture_buffer_object\n  GL_EXT_texture_compression_dxt1\n  GL_EXT_texture_compression_latc\n  GL_EXT_texture_compression_rgtc\n  GL_EXT_texture_compression_s3tc\n  GL_EXT_texture_cube_map\n  GL_EXT_texture_edge_clamp\n  GL_EXT_texture_env_combine\n  GL_EXT_texture_env_dot3\n  GL_EXT_texture_filter_anisotropic\n  GL_EXT_texture_filter_minmax\n  GL_EXT_texture_integer\n  GL_EXT_texture_lod\n  GL_EXT_texture_lod_bias\n  GL_EXT_texture_mirror_clamp\n  GL_EXT_texture_object\n  GL_EXT_texture_shadow_lod\n  GL_EXT_texture_shared_exponent\n  GL_EXT_texture_sRGB\n  GL_EXT_texture_sRGB_R8\n  GL_EXT_texture_sRGB_decode\n  GL_EXT_texture_storage\n  GL_EXT_texture_swizzle\n  GL_EXT_timer_query\n  GL_EXT_transform_feedback2\n  GL_EXT_vertex_array\n  GL_EXT_vertex_array_bgra\n  GL_EXT_vertex_attrib_64bit\n  GL_EXT_window_rectangles\n  GL_EXT_import_sync_object\n  GL_NV_robustness_video_memory_purge\n  GL_IBM_rasterpos_clip\n  GL_IBM_texture_mirrored_repeat\n  GL_KHR_context_flush_control\n  GL_KHR_debug\n  GL_EXT_memory_object\n  GL_EXT_memory_object_fd\n  GL_NV_memory_object_sparse\n  GL_KHR_parallel_shader_compile\n  GL_KHR_no_error\n  GL_KHR_robust_buffer_access_behavior\n  GL_KHR_robustness\n  GL_EXT_semaphore\n  GL_EXT_semaphore_fd\n  GL_NV_timeline_semaphore\n  GL_KHR_shader_subgroup\n  GL_KTX_buffer_region\n  GL_NV_alpha_to_coverage_dither_control\n  GL_NV_bindless_multi_draw_indirect\n  GL_NV_bindless_multi_draw_indirect_count\n  GL_NV_bindless_texture\n  GL_NV_blend_equation_advanced\n  GL_NV_blend_equation_advanced_coherent\n  GL_NVX_blend_equation_advanced_multi_draw_buffers\n  GL_NV_blend_minmax_factor\n  GL_NV_blend_square\n  GL_NV_clip_space_w_scaling\n  GL_NV_command_list\n  GL_NV_compute_program5\n  GL_NV_compute_shader_derivatives\n  GL_NV_conditional_render\n  GL_NV_conservative_raster\n  GL_NV_conservative_raster_dilate\n  GL_NV_conservative_raster_pre_snap\n  GL_NV_conservative_raster_pre_snap_triangles\n  GL_NV_conservative_raster_underestimation\n  GL_NV_copy_depth_to_color\n  GL_NV_copy_image\n  GL_NV_depth_buffer_float\n  GL_NV_depth_clamp\n  GL_NV_draw_texture\n  GL_NV_draw_vulkan_image\n  GL_NV_ES1_1_compatibility\n  GL_NV_ES3_1_compatibility\n  GL_NV_explicit_multisample\n  GL_NV_feature_query\n  GL_NV_fence\n  GL_NV_fill_rectangle\n  GL_NV_float_buffer\n  GL_NV_fog_distance\n  GL_NV_fragment_coverage_to_color\n  GL_NV_fragment_program\n  GL_NV_fragment_program_option\n  GL_NV_fragment_program2\n  GL_NV_fragment_shader_barycentric\n  GL_NV_fragment_shader_interlock\n  GL_NV_framebuffer_mixed_samples\n  GL_NV_framebuffer_multisample_coverage\n  GL_NV_geometry_shader4\n  GL_NV_geometry_shader_passthrough\n  GL_NV_gpu_program4\n  GL_NV_internalformat_sample_query\n  GL_NV_gpu_program4_1\n  GL_NV_gpu_program5\n  GL_NV_gpu_program5_mem_extended\n  GL_NV_gpu_program_fp64\n  GL_NV_gpu_program_multiview\n  GL_NV_gpu_shader5\n  GL_NV_half_float\n  GL_NV_light_max_exponent\n  GL_NV_memory_attachment\n  GL_NV_mesh_shader\n  GL_NV_multisample_coverage\n  GL_NV_multisample_filter_hint\n  GL_NV_occlusion_query\n  GL_NV_packed_depth_stencil\n  GL_NV_parameter_buffer_object\n  GL_NV_parameter_buffer_object2\n  GL_NV_path_rendering\n  GL_NV_path_rendering_shared_edge\n  GL_NV_point_sprite\n  GL_NV_primitive_restart\n  GL_NV_primitive_shading_rate\n  GL_NV_query_resource\n  GL_NV_query_resource_tag\n  GL_NV_register_combiners\n  GL_NV_register_combiners2\n  GL_NV_representative_fragment_test\n  GL_NV_sample_locations\n  GL_NV_sample_mask_override_coverage\n  GL_NV_scissor_exclusive\n  GL_NV_shader_atomic_counters\n  GL_NV_shader_atomic_float\n  GL_NV_shader_atomic_float64\n  GL_NV_shader_atomic_fp16_vector\n  GL_NV_shader_atomic_int64\n  GL_NV_shader_buffer_load\n  GL_NV_shader_storage_buffer_object\n  GL_NV_shader_subgroup_partitioned\n  GL_NV_shader_texture_footprint\n  GL_NV_shading_rate_image\n  GL_NV_stereo_view_rendering\n  GL_NV_texgen_reflection\n  GL_NV_texture_barrier\n  GL_NV_texture_compression_vtc\n  GL_NV_texture_dirty_tile_map\n  GL_NV_texture_env_combine4\n  GL_NV_texture_multisample\n  GL_NV_texture_rectangle\n  GL_NV_texture_rectangle_compressed\n  GL_NV_texture_shader\n  GL_NV_texture_shader2\n  GL_NV_texture_shader3\n  GL_NV_transform_feedback\n  GL_NV_transform_feedback2\n  GL_NV_uniform_buffer_unified_memory\n  GL_NV_uniform_buffer_std430_layout\n  GL_NV_vertex_attrib_integer_64bit\n  GL_NV_vertex_buffer_unified_memory\n  GL_NV_vertex_program\n  GL_NV_vertex_program1_1\n  GL_NV_vertex_program2\n  GL_NV_vertex_program2_option\n  GL_NV_vertex_program3\n  GL_NV_viewport_array2\n  GL_NV_viewport_swizzle\n  GL_NVX_conditional_render\n  GL_NV_gpu_multicast\n  GL_NVX_progress_fence\n  GL_NVX_gpu_memory_info\n  GL_NVX_nvenc_interop\n  GL_NV_shader_thread_group\n  GL_NV_shader_thread_shuffle\n  GL_KHR_blend_equation_advanced\n  GL_KHR_blend_equation_advanced_coherent\n  GL_OES_EGL_image\n  GL_OVR_multiview\n  GL_OVR_multiview2\n  GL_SGIS_generate_mipmap\n  GL_SGIS_texture_lod\n  GL_SGIX_depth_texture\n  GL_SGIX_shadow\n  GL_SUN_slice_accum\n"
+    }
+  ],
+  "resource_isolation_not_proven": true,
+  "scope": "同源组件对拍为逐项等同；完整反馈各自父链，共享设备不作正式隔离速度优势；像素非屏幕呈现"
+}

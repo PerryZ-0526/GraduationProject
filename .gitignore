@@ -20,3 +20,24 @@ __pycache__/
 *.key
 id_rsa
 id_ed25519
+
+# 原始网格、数组、归档及编译产物单独迁移，不进入新增Git提交。
+*.obj
+*.vtp
+*.npy
+*.npz
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.so
+*.dll
+*.lib
+*.pdb
+*.pack
+
+# Word临时锁文件不作为文档交付。
+~$*
+
+# 裸Git镜像由迁移资产保存，不把内部对象和引用当作项目源码。
+/实验结果/Geogram原生源码只读镜像/

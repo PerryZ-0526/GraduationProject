@@ -1,0 +1,256 @@
+{
+  "time_beijing": "2026-10-04T06:31:48.549672+08:00",
+  "generator_sha256": "bf13f1c5d74431416a407eb6fd1eb90d026fdd8b52095310ad0abc5a880e040e",
+  "asset_manifest_sha256": "bc8434d0e71f5a928f8f88fdf1d52171e03b1bdcdd8fe30da87b27e1fb53ae4d",
+  "routes": [
+    {
+      "id": "板体_00_交叉",
+      "split": "development",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "板体_00.obj",
+      "initial_mesh_sha256": "a4490b1de6dbae8da738ce81ba8ff1c2e7f7a747b7be7310b624e264d76221e4",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            3.5999999999999996,
+            3.0,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -3.5999999999999996,
+            -3.0,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -3.5999999999999996,
+            3.0,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            3.5999999999999996,
+            3.0,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            3.5999999999999996,
+            -3.0,
+            1.71
+          ],
+          "explicit_sweep_start_mm": [
+            -3.5999999999999996,
+            3.0,
+            1.71
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "板体_00_交叉_e0_tool.obj",
+          "sha256": "5ff11a3ea8fb10fec157fd8a0e3aab81f86bec98203035585e9058125b0f6893",
+          "faces": 1400
+        },
+        {
+          "event_id": "e1",
+          "mesh": "板体_00_交叉_e1_tool.obj",
+          "sha256": "9138a81876acb7c0c800957b99dfe06dbdaf2fb7f5c1e09ac8e363999f2ba0c8",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "板体_00_交叉_e2_tool.obj",
+          "sha256": "8112747c1a6e4f9defa19514fff35923e06d16da85fccacfe73a7e7491339e1f",
+          "faces": 1400
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      }
+    },
+    {
+      "id": "球体_00_交叉",
+      "split": "development",
+      "category": "交叉",
+      "body": "ct",
+      "source_kind": "synthetic",
+      "body_dispatch_note": "兼容旧执行器的离散网格分支，body=ct不代表输入是CT",
+      "initial_mesh": "球体_00.obj",
+      "initial_mesh_sha256": "a151caf7baff927cba923e2315bf1e49b6e5a384150a2acb5b1cd1e00f440a39",
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.6,
+        "mesh_subdivisions": 3
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 100,
+          "position_mm": [
+            3.0,
+            3.0,
+            5.21
+          ],
+          "explicit_sweep_start_mm": [
+            -3.0,
+            -3.0,
+            5.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -3.0,
+            3.0,
+            5.21
+          ],
+          "explicit_sweep_start_mm": [
+            3.0,
+            3.0,
+            5.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 300,
+          "position_mm": [
+            3.0,
+            -3.0,
+            5.21
+          ],
+          "explicit_sweep_start_mm": [
+            -3.0,
+            3.0,
+            5.21
+          ],
+          "tool_radius_mm": 0.6,
+          "orientation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "球体_00_交叉_e0_tool.obj",
+          "sha256": "54fefbd639e6d22a979460fd675b92a42abfd6ce010c5445b094a50f04bc60cf",
+          "faces": 1384
+        },
+        {
+          "event_id": "e1",
+          "mesh": "球体_00_交叉_e1_tool.obj",
+          "sha256": "abb2a4bfdab8fc6a080c6e4c3ef6dcb7eeca71edf748af624cc37b8985f93a13",
+          "faces": 1344
+        },
+        {
+          "event_id": "e2",
+          "mesh": "球体_00_交叉_e2_tool.obj",
+          "sha256": "885433b1cb476942cbaf3b17548a1f7d71d5b795354df4f4a355e5a29a0bd749",
+          "faces": 1384
+        }
+      ],
+      "reference": {
+        "kind": "same_discrete_tools_cumulative_CSG",
+        "certified": false
+      }
+    }
+  ],
+  "negative_inputs": [],
+  "units": {
+    "length": "mm",
+    "time": "ms"
+  },
+  "replay_policy": {
+    "late_event": "reject",
+    "max_link_gap_ms": 200
+  },
+  "scope": "35个不同合成体、140条完整冻结路线，不代表已经运行维护",
+  "tool_discretization": "icosphere subdivisions=3端点凸包，参照离散误差未认证",
+  "parent_manifest_sha256": "6eae2f0743798cc077f8336f5bcd1169b6ecacfa2397c4f34fab5df4c1aa2599",
+  "role": "new_mechanism_development_not_held_out"
+}

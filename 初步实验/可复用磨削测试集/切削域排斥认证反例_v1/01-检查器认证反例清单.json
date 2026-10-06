@@ -1,0 +1,66 @@
+{
+  "生成时间": "2026年10月04日07时39分57秒（北京时间）",
+  "修改时间及修改内容": "2026年10月04日07时39分57秒，首次生成，复制已验证检查器反例",
+  "文档概述": "全网格精确自交检查器六种可复用正负例，不能作为算法独立评价体",
+  "索引目录": [
+    "cases",
+    "source_audit_sha256"
+  ],
+  "cases": [
+    {
+      "case": "闭合立方体",
+      "mesh": "测试_闭合立方体.obj",
+      "sha256": "30e1ee323badbb95a065d630fa876e876a2ef9c8b7c47063e1c2331fb3937fb9",
+      "expected_embedded_closed": true,
+      "expected_self_intersection_pairs": 0,
+      "expected_topology_valid": true,
+      "verified": true
+    },
+    {
+      "case": "分离双实体",
+      "mesh": "测试_分离双实体.obj",
+      "sha256": "56a33f52a149bd14bca5605226dd06dc6076b0ef49d240454d7d3a53606e1e0a",
+      "expected_embedded_closed": true,
+      "expected_self_intersection_pairs": 0,
+      "expected_topology_valid": true,
+      "verified": true
+    },
+    {
+      "case": "交叠双实体",
+      "mesh": "测试_交叠双实体.obj",
+      "sha256": "6ec2d24e16f4db3452801705b8edfccfcb649de650ff39cb4952c8ad8e681280",
+      "expected_embedded_closed": false,
+      "expected_self_intersection_pairs": 18,
+      "expected_topology_valid": true,
+      "verified": true
+    },
+    {
+      "case": "合法共享边",
+      "mesh": "测试_合法共享边.obj",
+      "sha256": "94c92846b7c92293c102c43a98badcd542e8d48a2536381be6388a8f3d7bb779",
+      "expected_embedded_closed": false,
+      "expected_self_intersection_pairs": 0,
+      "expected_topology_valid": true,
+      "verified": true
+    },
+    {
+      "case": "共享边折叠重叠",
+      "mesh": "测试_共享边折叠重叠.obj",
+      "sha256": "3d3884f68f36567bb86b51985b86eb4af7ab2101678e46bdadadd261f887a8e3",
+      "expected_embedded_closed": false,
+      "expected_self_intersection_pairs": 1,
+      "expected_topology_valid": true,
+      "verified": true
+    },
+    {
+      "case": "完全重复面",
+      "mesh": "测试_完全重复面.obj",
+      "sha256": "7340dbd9227daaaa53fdb00f4c5526f7035d33a563066912d137e715c0d980af",
+      "expected_embedded_closed": false,
+      "expected_self_intersection_pairs": 1,
+      "expected_topology_valid": true,
+      "verified": true
+    }
+  ],
+  "source_audit_sha256": "b927ca84078b68981ae05c6f6bd71e7c5d529faec19b1594805b23d7171f9b49"
+}

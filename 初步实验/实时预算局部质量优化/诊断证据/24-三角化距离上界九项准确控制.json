@@ -1,0 +1,156 @@
+{
+  "time_beijing": "2026-10-06T19:22:47.092728+08:00",
+  "status": "completed",
+  "controls": [
+    {
+      "name": "完全共面",
+      "result": {
+        "accepted": true,
+        "exactly_same_oriented_triangles": false,
+        "error_upper_mm": 0.0,
+        "patches": [
+          {
+            "label": 1,
+            "old_triangles": 2,
+            "new_triangles": 2,
+            "projection_axis": 2,
+            "same_oriented_boundary": true,
+            "same_direction_nonzero_projection": true,
+            "bound_numerator": "0",
+            "bound_denominator": "1",
+            "error_upper_mm": 0.0
+          }
+        ],
+        "scope": "仅两份保存三角面的双向几何上界，不证明嵌入性、布尔真值或连续累计误差"
+      }
+    },
+    {
+      "name": "微小离面",
+      "result": {
+        "accepted": true,
+        "exactly_same_oriented_triangles": false,
+        "error_upper_mm": 2e-12,
+        "patches": [
+          {
+            "label": 1,
+            "old_triangles": 2,
+            "new_triangles": 2,
+            "projection_axis": 2,
+            "same_oriented_boundary": true,
+            "same_direction_nonzero_projection": true,
+            "bound_numerator": "4951760157141521",
+            "bound_denominator": "2475880078570760549798248448",
+            "error_upper_mm": 2e-12
+          }
+        ],
+        "scope": "仅两份保存三角面的双向几何上界，不证明嵌入性、布尔真值或连续累计误差"
+      }
+    },
+    {
+      "name": "明确超界",
+      "result": {
+        "accepted": false,
+        "reason": "距离上界超出指定容差",
+        "completed_patches": [
+          {
+            "label": 1,
+            "old_triangles": 2,
+            "new_triangles": 2,
+            "projection_axis": 2,
+            "same_oriented_boundary": true,
+            "same_direction_nonzero_projection": true,
+            "bound_numerator": "1152921504606847",
+            "bound_denominator": "576460752303423488",
+            "error_upper_mm": 0.002
+          }
+        ]
+      }
+    },
+    {
+      "name": "反向新面",
+      "result": {
+        "accepted": false,
+        "reason": "投影存在反向面，覆盖证明未成立",
+        "completed_patches": []
+      }
+    },
+    {
+      "name": "来源被更改",
+      "result": {
+        "accepted": false,
+        "reason": "两侧有向边界不同或局部投影无边界",
+        "completed_patches": []
+      }
+    },
+    {
+      "name": "遗漏新面",
+      "result": {
+        "accepted": false,
+        "reason": "两侧有向边界不同或局部投影无边界",
+        "completed_patches": []
+      }
+    },
+    {
+      "name": "重复新增面",
+      "result": {
+        "accepted": false,
+        "reason": "两侧有向边界不同或局部投影无边界",
+        "completed_patches": []
+      }
+    },
+    {
+      "name": "新顶点微小编码差异辅助对应",
+      "result": {
+        "accepted": true,
+        "virtual_only": true,
+        "error_upper_mm": 2.0000000000000004e-12,
+        "bound_numerator": "2475880078570761",
+        "bound_denominator": "1237940039285380274899124224",
+        "vertex_move_squared_numerator": "24519928653854220747377622193441",
+        "vertex_move_squared_denominator": "24519928653854221733733552434404946937899825954937634816",
+        "direct": {
+          "accepted": false,
+          "reason": "两侧有向边界不同或局部投影无边界",
+          "completed_patches": []
+        },
+        "projection": {
+          "accepted": true,
+          "exactly_same_oriented_triangles": false,
+          "error_upper_mm": 0.0,
+          "patches": [
+            {
+              "label": 1,
+              "old_triangles": 2,
+              "new_triangles": 2,
+              "projection_axis": 2,
+              "same_oriented_boundary": true,
+              "same_direction_nonzero_projection": true,
+              "bound_numerator": "0",
+              "bound_denominator": "1",
+              "error_upper_mm": 0.0
+            }
+          ],
+          "scope": "仅两份保存三角面的双向几何上界，不证明嵌入性、布尔真值或连续累计误差"
+        },
+        "scope": "仅保存对象双向几何上界；辅助面不发布，不证明嵌入或布尔真值，不是连续误差证书"
+      }
+    },
+    {
+      "name": "完整小分量辅助删除拒绝",
+      "result": {
+        "accepted": false,
+        "reason": "辅助退化映像缺少同来源完整覆盖",
+        "direct": {
+          "accepted": false,
+          "reason": "两侧有向边界不同或局部投影无边界",
+          "completed_patches": []
+        }
+      }
+    }
+  ],
+  "controls_count": 9,
+  "method_sha256": {
+    "verify_triangle_correspondence_bound.py": "50f1304103d5fc32a003cecc3fb65727b3c89cec549fb8fd98c4586fee4a908b",
+    "triangle_correspondence_bound.py": "e59d42a1dcfe94824c2005ca3b66a0a78b4173028b4be5f9238695e967b39293"
+  }
+}

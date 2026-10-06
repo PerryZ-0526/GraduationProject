@@ -1,0 +1,3149 @@
+{
+  "生成时间": "2026-10-04T19:22:23.425454+08:00",
+  "修改时间及修改内容": "首次生成，复用已有来源碎片修复，不修改其原实现",
+  "文档概述": "真实第三刀退化源开发诊断，尚未全量精确嵌入或GPU运行",
+  "索引目录": [
+    "repair"
+  ],
+  "repair": {
+    "initial_invalid_faces": 4,
+    "steps": [
+      {
+        "operation": "repair_degenerate",
+        "details": {
+          "initial_invalid_faces": 4,
+          "max_flips": 4,
+          "plane_tolerance_mm": 1e-08,
+          "area_threshold_mm2": 1e-12,
+          "flips": [],
+          "rejected_pair_checks": {
+            "new_invalid_face": 7,
+            "different_source": 2
+          },
+          "scope": "数值近共面与凸性测试，非精确谓词或连续几何证书",
+          "remaining_invalid_faces": 4,
+          "vertices_exact": true
+        }
+      },
+      {
+        "operation": "collapse_degenerate",
+        "details": {
+          "initial_invalid_faces": 4,
+          "max_collapses": 4,
+          "plane_tolerance_mm": 1e-08,
+          "collapses": [
+            {
+              "removed_vertex": 44754,
+              "retained_vertex": 44755,
+              "endpoint_distance_mm": 4.9343841629398645e-08,
+              "max_incident_plane_deviation_mm": 1.5178830414797062e-15,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 44753,
+              "retained_vertex": 44755,
+              "endpoint_distance_mm": 1.0236185024556003e-07,
+              "max_incident_plane_deviation_mm": 1.302343649589588e-15,
+              "deleted_faces": 2
+            }
+          ],
+          "allow_small_incident": true,
+          "scope": "数值链接和逐面平面检查，后续必须重审整网格与来源",
+          "remaining_invalid_faces": 0
+        }
+      }
+    ],
+    "accepted": true,
+    "audit": {
+      "vertices": 44802,
+      "faces": 89600,
+      "finite": true,
+      "zero_area_faces": 0,
+      "fp32_zero_area_faces": 0,
+      "watertight": true,
+      "winding_consistent": true,
+      "vertex_manifold_closed": true,
+      "euler_number": 2,
+      "self_intersection_faces": 0,
+      "volume_mm3": 16010.983321458587,
+      "self_intersection_raw_alarm_faces": 30,
+      "separated_alarm_pairs": [
+        {
+          "faces": [
+            112,
+            3203
+          ],
+          "separation_gap_mm": 6.231151804678911
+        },
+        {
+          "faces": [
+            112,
+            10262
+          ],
+          "separation_gap_mm": 13.124608457593595
+        },
+        {
+          "faces": [
+            112,
+            10994
+          ],
+          "separation_gap_mm": 13.519184828631351
+        },
+        {
+          "faces": [
+            112,
+            12519
+          ],
+          "separation_gap_mm": 30.52168091319648
+        },
+        {
+          "faces": [
+            112,
+            14352
+          ],
+          "separation_gap_mm": 6.238378233117505
+        },
+        {
+          "faces": [
+            112,
+            14578
+          ],
+          "separation_gap_mm": 15.252949815713842
+        },
+        {
+          "faces": [
+            112,
+            20676
+          ],
+          "separation_gap_mm": 18.08209622079039
+        },
+        {
+          "faces": [
+            112,
+            26847
+          ],
+          "separation_gap_mm": 28.336609307101426
+        },
+        {
+          "faces": [
+            112,
+            29795
+          ],
+          "separation_gap_mm": 5.682752603590327
+        },
+        {
+          "faces": [
+            112,
+            34200
+          ],
+          "separation_gap_mm": 8.455068452241171
+        },
+        {
+          "faces": [
+            112,
+            34439
+          ],
+          "separation_gap_mm": 9.893390429341624
+        },
+        {
+          "faces": [
+            112,
+            38380
+          ],
+          "separation_gap_mm": 9.890194044507622
+        },
+        {
+          "faces": [
+            112,
+            38816
+          ],
+          "separation_gap_mm": 32.62191218111168
+        },
+        {
+          "faces": [
+            112,
+            40442
+          ],
+          "separation_gap_mm": 25.267850485752472
+        },
+        {
+          "faces": [
+            112,
+            43818
+          ],
+          "separation_gap_mm": 32.36519658381168
+        },
+        {
+          "faces": [
+            112,
+            48249
+          ],
+          "separation_gap_mm": 5.819636089271674
+        },
+        {
+          "faces": [
+            112,
+            48335
+          ],
+          "separation_gap_mm": 1.7553603980740942
+        },
+        {
+          "faces": [
+            112,
+            51504
+          ],
+          "separation_gap_mm": 15.241111133551398
+        },
+        {
+          "faces": [
+            112,
+            54011
+          ],
+          "separation_gap_mm": 5.908555627626859
+        },
+        {
+          "faces": [
+            112,
+            67273
+          ],
+          "separation_gap_mm": 0.33882220135997
+        },
+        {
+          "faces": [
+            112,
+            71960
+          ],
+          "separation_gap_mm": 24.462422809351125
+        },
+        {
+          "faces": [
+            112,
+            74501
+          ],
+          "separation_gap_mm": 14.206721067468582
+        },
+        {
+          "faces": [
+            112,
+            76858
+          ],
+          "separation_gap_mm": 18.71616007342363
+        },
+        {
+          "faces": [
+            112,
+            78257
+          ],
+          "separation_gap_mm": 28.804104940999366
+        },
+        {
+          "faces": [
+            112,
+            81264
+          ],
+          "separation_gap_mm": 28.877353765667845
+        },
+        {
+          "faces": [
+            112,
+            83096
+          ],
+          "separation_gap_mm": 13.487415851637074
+        },
+        {
+          "faces": [
+            112,
+            84149
+          ],
+          "separation_gap_mm": 2.044793020969958
+        },
+        {
+          "faces": [
+            112,
+            85053
+          ],
+          "separation_gap_mm": 8.526878582522665
+        },
+        {
+          "faces": [
+            112,
+            87152
+          ],
+          "separation_gap_mm": 5.667579885139716
+        },
+        {
+          "faces": [
+            3203,
+            10262
+          ],
+          "separation_gap_mm": 8.919316762796317
+        },
+        {
+          "faces": [
+            3203,
+            10994
+          ],
+          "separation_gap_mm": 9.899405779712717
+        },
+        {
+          "faces": [
+            3203,
+            12519
+          ],
+          "separation_gap_mm": 27.983461000764056
+        },
+        {
+          "faces": [
+            3203,
+            14352
+          ],
+          "separation_gap_mm": 4.628679172770117
+        },
+        {
+          "faces": [
+            3203,
+            14578
+          ],
+          "separation_gap_mm": 12.202334797541592
+        },
+        {
+          "faces": [
+            3203,
+            20676
+          ],
+          "separation_gap_mm": 19.845760390022576
+        },
+        {
+          "faces": [
+            3203,
+            26847
+          ],
+          "separation_gap_mm": 27.412903380684668
+        },
+        {
+          "faces": [
+            3203,
+            29795
+          ],
+          "separation_gap_mm": 1.2279645390790268
+        },
+        {
+          "faces": [
+            3203,
+            34200
+          ],
+          "separation_gap_mm": 1.9464736454502027
+        },
+        {
+          "faces": [
+            3203,
+            34439
+          ],
+          "separation_gap_mm": 3.586692075702657
+        },
+        {
+          "faces": [
+            3203,
+            38380
+          ],
+          "separation_gap_mm": 3.3576247321462205
+        },
+        {
+          "faces": [
+            3203,
+            38816
+          ],
+          "separation_gap_mm": 38.41970603645626
+        },
+        {
+          "faces": [
+            3203,
+            40442
+          ],
+          "separation_gap_mm": 21.528359227691766
+        },
+        {
+          "faces": [
+            3203,
+            43818
+          ],
+          "separation_gap_mm": 38.185763590995435
+        },
+        {
+          "faces": [
+            3203,
+            48249
+          ],
+          "separation_gap_mm": 0.2457816067442138
+        },
+        {
+          "faces": [
+            3203,
+            48335
+          ],
+          "separation_gap_mm": 5.288758171572778
+        },
+        {
+          "faces": [
+            3203,
+            51504
+          ],
+          "separation_gap_mm": 10.74404580503326
+        },
+        {
+          "faces": [
+            3203,
+            54011
+          ],
+          "separation_gap_mm": 4.226131936365854
+        },
+        {
+          "faces": [
+            3203,
+            67273
+          ],
+          "separation_gap_mm": 6.2546267911029725
+        },
+        {
+          "faces": [
+            3203,
+            71960
+          ],
+          "separation_gap_mm": 20.403151678406452
+        },
+        {
+          "faces": [
+            3203,
+            74501
+          ],
+          "separation_gap_mm": 13.684270274288505
+        },
+        {
+          "faces": [
+            3203,
+            76858
+          ],
+          "separation_gap_mm": 20.37288414491099
+        },
+        {
+          "faces": [
+            3203,
+            78257
+          ],
+          "separation_gap_mm": 24.43160456294403
+        },
+        {
+          "faces": [
+            3203,
+            81264
+          ],
+          "separation_gap_mm": 24.930674110099755
+        },
+        {
+          "faces": [
+            3203,
+            83096
+          ],
+          "separation_gap_mm": 9.502583502054792
+        },
+        {
+          "faces": [
+            3203,
+            84149
+          ],
+          "separation_gap_mm": 4.629291172797842
+        },
+        {
+          "faces": [
+            3203,
+            85053
+          ],
+          "separation_gap_mm": 2.356835625542775
+        },
+        {
+          "faces": [
+            3203,
+            87152
+          ],
+          "separation_gap_mm": 1.1954627635902684
+        },
+        {
+          "faces": [
+            10262,
+            10994
+          ],
+          "separation_gap_mm": 14.613750881816568
+        },
+        {
+          "faces": [
+            10262,
+            12519
+          ],
+          "separation_gap_mm": 18.34451240925604
+        },
+        {
+          "faces": [
+            10262,
+            14352
+          ],
+          "separation_gap_mm": 13.446836821895957
+        },
+        {
+          "faces": [
+            10262,
+            14578
+          ],
+          "separation_gap_mm": 20.87733027341859
+        },
+        {
+          "faces": [
+            10262,
+            20676
+          ],
+          "separation_gap_mm": 31.318583671597256
+        },
+        {
+          "faces": [
+            10262,
+            26847
+          ],
+          "separation_gap_mm": 18.547544913775763
+        },
+        {
+          "faces": [
+            10262,
+            29795
+          ],
+          "separation_gap_mm": 9.670867942394734
+        },
+        {
+          "faces": [
+            10262,
+            34200
+          ],
+          "separation_gap_mm": 9.623555729278927
+        },
+        {
+          "faces": [
+            10262,
+            34439
+          ],
+          "separation_gap_mm": 6.3935705457822545
+        },
+        {
+          "faces": [
+            10262,
+            38380
+          ],
+          "separation_gap_mm": 6.811697647376382
+        },
+        {
+          "faces": [
+            10262,
+            38816
+          ],
+          "separation_gap_mm": 43.678464838229765
+        },
+        {
+          "faces": [
+            10262,
+            40442
+          ],
+          "separation_gap_mm": 28.110872604857008
+        },
+        {
+          "faces": [
+            10262,
+            43818
+          ],
+          "separation_gap_mm": 43.37825132364768
+        },
+        {
+          "faces": [
+            10262,
+            48249
+          ],
+          "separation_gap_mm": 9.475583107560228
+        },
+        {
+          "faces": [
+            10262,
+            48335
+          ],
+          "separation_gap_mm": 14.052512751416016
+        },
+        {
+          "faces": [
+            10262,
+            51504
+          ],
+          "separation_gap_mm": 17.065085610132286
+        },
+        {
+          "faces": [
+            10262,
+            54011
+          ],
+          "separation_gap_mm": 13.070085305761928
+        },
+        {
+          "faces": [
+            10262,
+            67273
+          ],
+          "separation_gap_mm": 13.78950253943309
+        },
+        {
+          "faces": [
+            10262,
+            71960
+          ],
+          "separation_gap_mm": 28.35858281205735
+        },
+        {
+          "faces": [
+            10262,
+            74501
+          ],
+          "separation_gap_mm": 20.988411003377113
+        },
+        {
+          "faces": [
+            10262,
+            76858
+          ],
+          "separation_gap_mm": 31.149779293057556
+        },
+        {
+          "faces": [
+            10262,
+            78257
+          ],
+          "separation_gap_mm": 31.959316498017266
+        },
+        {
+          "faces": [
+            10262,
+            81264
+          ],
+          "separation_gap_mm": 31.472633376365174
+        },
+        {
+          "faces": [
+            10262,
+            83096
+          ],
+          "separation_gap_mm": 0.44959028161690595
+        },
+        {
+          "faces": [
+            10262,
+            84149
+          ],
+          "separation_gap_mm": 13.11590957745889
+        },
+        {
+          "faces": [
+            10262,
+            85053
+          ],
+          "separation_gap_mm": 9.965550848355841
+        },
+        {
+          "faces": [
+            10262,
+            87152
+          ],
+          "separation_gap_mm": 10.150030904233176
+        },
+        {
+          "faces": [
+            10994,
+            12519
+          ],
+          "separation_gap_mm": 33.96577912995777
+        },
+        {
+          "faces": [
+            10994,
+            14352
+          ],
+          "separation_gap_mm": 7.438999951165861
+        },
+        {
+          "faces": [
+            10994,
+            14578
+          ],
+          "separation_gap_mm": 4.599413530457065
+        },
+        {
+          "faces": [
+            10994,
+            20676
+          ],
+          "separation_gap_mm": 18.854869008295818
+        },
+        {
+          "faces": [
+            10994,
+            26847
+          ],
+          "separation_gap_mm": 34.1960864766278
+        },
+        {
+          "faces": [
+            10994,
+            29795
+          ],
+          "separation_gap_mm": 10.27884640320418
+        },
+        {
+          "faces": [
+            10994,
+            34200
+          ],
+          "separation_gap_mm": 8.067703733946848
+        },
+        {
+          "faces": [
+            10994,
+            34439
+          ],
+          "separation_gap_mm": 9.882192237860654
+        },
+        {
+          "faces": [
+            10994,
+            38380
+          ],
+          "separation_gap_mm": 9.127462880475054
+        },
+        {
+          "faces": [
+            10994,
+            38816
+          ],
+          "separation_gap_mm": 39.21465919951268
+        },
+        {
+          "faces": [
+            10994,
+            40442
+          ],
+          "separation_gap_mm": 13.463966702999201
+        },
+        {
+          "faces": [
+            10994,
+            43818
+          ],
+          "separation_gap_mm": 39.628269218363066
+        },
+        {
+          "faces": [
+            10994,
+            48249
+          ],
+          "separation_gap_mm": 9.79483241589361
+        },
+        {
+          "faces": [
+            10994,
+            48335
+          ],
+          "separation_gap_mm": 11.526995871687339
+        },
+        {
+          "faces": [
+            10994,
+            51504
+          ],
+          "separation_gap_mm": 0.24814527918348617
+        },
+        {
+          "faces": [
+            10994,
+            54011
+          ],
+          "separation_gap_mm": 7.4770040417423775
+        },
+        {
+          "faces": [
+            10994,
+            67273
+          ],
+          "separation_gap_mm": 13.50748778061914
+        },
+        {
+          "faces": [
+            10994,
+            71960
+          ],
+          "separation_gap_mm": 14.009360797267426
+        },
+        {
+          "faces": [
+            10994,
+            74501
+          ],
+          "separation_gap_mm": 4.436595654008425
+        },
+        {
+          "faces": [
+            10994,
+            76858
+          ],
+          "separation_gap_mm": 18.317261851172162
+        },
+        {
+          "faces": [
+            10994,
+            78257
+          ],
+          "separation_gap_mm": 17.65922659758524
+        },
+        {
+          "faces": [
+            10994,
+            81264
+          ],
+          "separation_gap_mm": 17.12578924734769
+        },
+        {
+          "faces": [
+            10994,
+            83096
+          ],
+          "separation_gap_mm": 15.273801160695818
+        },
+        {
+          "faces": [
+            10994,
+            84149
+          ],
+          "separation_gap_mm": 11.984970076846016
+        },
+        {
+          "faces": [
+            10994,
+            85053
+          ],
+          "separation_gap_mm": 7.315444004362041
+        },
+        {
+          "faces": [
+            10994,
+            87152
+          ],
+          "separation_gap_mm": 9.596246086837441
+        },
+        {
+          "faces": [
+            12519,
+            14352
+          ],
+          "separation_gap_mm": 32.86824639504205
+        },
+        {
+          "faces": [
+            12519,
+            14578
+          ],
+          "separation_gap_mm": 39.69168829118981
+        },
+        {
+          "faces": [
+            12519,
+            20676
+          ],
+          "separation_gap_mm": 49.74307567658313
+        },
+        {
+          "faces": [
+            12519,
+            26847
+          ],
+          "separation_gap_mm": 0.3302406923717669
+        },
+        {
+          "faces": [
+            12519,
+            29795
+          ],
+          "separation_gap_mm": 28.887898158211396
+        },
+        {
+          "faces": [
+            12519,
+            34200
+          ],
+          "separation_gap_mm": 28.796935148667597
+        },
+        {
+          "faces": [
+            12519,
+            34439
+          ],
+          "separation_gap_mm": 25.353771026738773
+        },
+        {
+          "faces": [
+            12519,
+            38380
+          ],
+          "separation_gap_mm": 25.747472724327526
+        },
+        {
+          "faces": [
+            12519,
+            38816
+          ],
+          "separation_gap_mm": 60.33624494764892
+        },
+        {
+          "faces": [
+            12519,
+            40442
+          ],
+          "separation_gap_mm": 43.65545889315602
+        },
+        {
+          "faces": [
+            12519,
+            43818
+          ],
+          "separation_gap_mm": 60.29143023185333
+        },
+        {
+          "faces": [
+            12519,
+            48249
+          ],
+          "separation_gap_mm": 28.493331691758854
+        },
+        {
+          "faces": [
+            12519,
+            48335
+          ],
+          "separation_gap_mm": 32.29027813981041
+        },
+        {
+          "faces": [
+            12519,
+            51504
+          ],
+          "separation_gap_mm": 34.63789868545136
+        },
+        {
+          "faces": [
+            12519,
+            54011
+          ],
+          "separation_gap_mm": 32.4752830878074
+        },
+        {
+          "faces": [
+            12519,
+            67273
+          ],
+          "separation_gap_mm": 31.193009720422808
+        },
+        {
+          "faces": [
+            12519,
+            71960
+          ],
+          "separation_gap_mm": 44.10758303083523
+        },
+        {
+          "faces": [
+            12519,
+            74501
+          ],
+          "separation_gap_mm": 39.66072201902676
+        },
+        {
+          "faces": [
+            12519,
+            76858
+          ],
+          "separation_gap_mm": 49.651740145948025
+        },
+        {
+          "faces": [
+            12519,
+            78257
+          ],
+          "separation_gap_mm": 46.108572956999225
+        },
+        {
+          "faces": [
+            12519,
+            81264
+          ],
+          "separation_gap_mm": 44.83041802851406
+        },
+        {
+          "faces": [
+            12519,
+            83096
+          ],
+          "separation_gap_mm": 17.73596473106879
+        },
+        {
+          "faces": [
+            12519,
+            84149
+          ],
+          "separation_gap_mm": 32.08557906352639
+        },
+        {
+          "faces": [
+            12519,
+            85053
+          ],
+          "separation_gap_mm": 29.1666310490691
+        },
+        {
+          "faces": [
+            12519,
+            87152
+          ],
+          "separation_gap_mm": 29.39620309113001
+        },
+        {
+          "faces": [
+            14352,
+            14578
+          ],
+          "separation_gap_mm": 8.869235767535724
+        },
+        {
+          "faces": [
+            14352,
+            20676
+          ],
+          "separation_gap_mm": 16.476991235946944
+        },
+        {
+          "faces": [
+            14352,
+            26847
+          ],
+          "separation_gap_mm": 32.42669474562064
+        },
+        {
+          "faces": [
+            14352,
+            29795
+          ],
+          "separation_gap_mm": 3.6156879308391217
+        },
+        {
+          "faces": [
+            14352,
+            34200
+          ],
+          "separation_gap_mm": 3.223193586514679
+        },
+        {
+          "faces": [
+            14352,
+            34439
+          ],
+          "separation_gap_mm": 6.452278058499927
+        },
+        {
+          "faces": [
+            14352,
+            38380
+          ],
+          "separation_gap_mm": 6.015455626179966
+        },
+        {
+          "faces": [
+            14352,
+            38816
+          ],
+          "separation_gap_mm": 28.16942747672209
+        },
+        {
+          "faces": [
+            14352,
+            40442
+          ],
+          "separation_gap_mm": 19.782144458782316
+        },
+        {
+          "faces": [
+            14352,
+            43818
+          ],
+          "separation_gap_mm": 28.042752696993258
+        },
+        {
+          "faces": [
+            14352,
+            48249
+          ],
+          "separation_gap_mm": 4.229359558220651
+        },
+        {
+          "faces": [
+            14352,
+            48335
+          ],
+          "separation_gap_mm": 3.653179671471553
+        },
+        {
+          "faces": [
+            14352,
+            51504
+          ],
+          "separation_gap_mm": 8.675030352133382
+        },
+        {
+          "faces": [
+            14352,
+            54011
+          ],
+          "separation_gap_mm": 0.32821910305023394
+        },
+        {
+          "faces": [
+            14352,
+            67273
+          ],
+          "separation_gap_mm": 5.898567320945135
+        },
+        {
+          "faces": [
+            14352,
+            71960
+          ],
+          "separation_gap_mm": 20.281535703200785
+        },
+        {
+          "faces": [
+            14352,
+            74501
+          ],
+          "separation_gap_mm": 9.545179837217919
+        },
+        {
+          "faces": [
+            14352,
+            76858
+          ],
+          "separation_gap_mm": 15.914677216893304
+        },
+        {
+          "faces": [
+            14352,
+            78257
+          ],
+          "separation_gap_mm": 23.292969620743467
+        },
+        {
+          "faces": [
+            14352,
+            81264
+          ],
+          "separation_gap_mm": 23.20787342653694
+        },
+        {
+          "faces": [
+            14352,
+            83096
+          ],
+          "separation_gap_mm": 14.128434680344554
+        },
+        {
+          "faces": [
+            14352,
+            84149
+          ],
+          "separation_gap_mm": 3.800565686358045
+        },
+        {
+          "faces": [
+            14352,
+            85053
+          ],
+          "separation_gap_mm": 3.1554865163362678
+        },
+        {
+          "faces": [
+            14352,
+            87152
+          ],
+          "separation_gap_mm": 3.2130605565541126
+        },
+        {
+          "faces": [
+            14578,
+            20676
+          ],
+          "separation_gap_mm": 14.880232459315028
+        },
+        {
+          "faces": [
+            14578,
+            26847
+          ],
+          "separation_gap_mm": 40.21653923919828
+        },
+        {
+          "faces": [
+            14578,
+            29795
+          ],
+          "separation_gap_mm": 11.967064052411738
+        },
+        {
+          "faces": [
+            14578,
+            34200
+          ],
+          "separation_gap_mm": 10.972313196984981
+        },
+        {
+          "faces": [
+            14578,
+            34439
+          ],
+          "separation_gap_mm": 14.220327111387135
+        },
+        {
+          "faces": [
+            14578,
+            38380
+          ],
+          "separation_gap_mm": 13.841182425067029
+        },
+        {
+          "faces": [
+            14578,
+            38816
+          ],
+          "separation_gap_mm": 34.88722958159996
+        },
+        {
+          "faces": [
+            14578,
+            40442
+          ],
+          "separation_gap_mm": 11.659800469975949
+        },
+        {
+          "faces": [
+            14578,
+            43818
+          ],
+          "separation_gap_mm": 35.22261807553945
+        },
+        {
+          "faces": [
+            14578,
+            48249
+          ],
+          "separation_gap_mm": 11.803055824405726
+        },
+        {
+          "faces": [
+            14578,
+            48335
+          ],
+          "separation_gap_mm": 12.905371292569129
+        },
+        {
+          "faces": [
+            14578,
+            51504
+          ],
+          "separation_gap_mm": 4.206047731646916
+        },
+        {
+          "faces": [
+            14578,
+            54011
+          ],
+          "separation_gap_mm": 9.462048176336836
+        },
+        {
+          "faces": [
+            14578,
+            67273
+          ],
+          "separation_gap_mm": 14.891002081319495
+        },
+        {
+          "faces": [
+            14578,
+            71960
+          ],
+          "separation_gap_mm": 12.185240330222097
+        },
+        {
+          "faces": [
+            14578,
+            74501
+          ],
+          "separation_gap_mm": 0.16494774645865817
+        },
+        {
+          "faces": [
+            14578,
+            76858
+          ],
+          "separation_gap_mm": 14.233209441245627
+        },
+        {
+          "faces": [
+            14578,
+            78257
+          ],
+          "separation_gap_mm": 16.102224650175888
+        },
+        {
+          "faces": [
+            14578,
+            81264
+          ],
+          "separation_gap_mm": 15.589416414216206
+        },
+        {
+          "faces": [
+            14578,
+            83096
+          ],
+          "separation_gap_mm": 21.660692765402093
+        },
+        {
+          "faces": [
+            14578,
+            84149
+          ],
+          "separation_gap_mm": 12.993171503678937
+        },
+        {
+          "faces": [
+            14578,
+            85053
+          ],
+          "separation_gap_mm": 10.7318386665581
+        },
+        {
+          "faces": [
+            14578,
+            87152
+          ],
+          "separation_gap_mm": 11.884765773186464
+        },
+        {
+          "faces": [
+            20676,
+            26847
+          ],
+          "separation_gap_mm": 42.57631245978018
+        },
+        {
+          "faces": [
+            20676,
+            29795
+          ],
+          "separation_gap_mm": 19.401998016022837
+        },
+        {
+          "faces": [
+            20676,
+            34200
+          ],
+          "separation_gap_mm": 19.91149001074027
+        },
+        {
+          "faces": [
+            20676,
+            34439
+          ],
+          "separation_gap_mm": 22.712355212916798
+        },
+        {
+          "faces": [
+            20676,
+            38380
+          ],
+          "separation_gap_mm": 22.423213799514777
+        },
+        {
+          "faces": [
+            20676,
+            38816
+          ],
+          "separation_gap_mm": 19.81023570743112
+        },
+        {
+          "faces": [
+            20676,
+            40442
+          ],
+          "separation_gap_mm": 22.76170595301781
+        },
+        {
+          "faces": [
+            20676,
+            43818
+          ],
+          "separation_gap_mm": 19.962714438981273
+        },
+        {
+          "faces": [
+            20676,
+            48249
+          ],
+          "separation_gap_mm": 20.752718862629454
+        },
+        {
+          "faces": [
+            20676,
+            48335
+          ],
+          "separation_gap_mm": 15.84979482489691
+        },
+        {
+          "faces": [
+            20676,
+            51504
+          ],
+          "separation_gap_mm": 20.185384159885018
+        },
+        {
+          "faces": [
+            20676,
+            54011
+          ],
+          "separation_gap_mm": 16.755549518260924
+        },
+        {
+          "faces": [
+            20676,
+            67273
+          ],
+          "separation_gap_mm": 15.075055456555686
+        },
+        {
+          "faces": [
+            20676,
+            71960
+          ],
+          "separation_gap_mm": 22.994687893700053
+        },
+        {
+          "faces": [
+            20676,
+            74501
+          ],
+          "separation_gap_mm": 15.283952005646029
+        },
+        {
+          "faces": [
+            20676,
+            76858
+          ],
+          "separation_gap_mm": 0.355081275324312
+        },
+        {
+          "faces": [
+            20676,
+            78257
+          ],
+          "separation_gap_mm": 27.105506065824844
+        },
+        {
+          "faces": [
+            20676,
+            81264
+          ],
+          "separation_gap_mm": 26.928217855853518
+        },
+        {
+          "faces": [
+            20676,
+            83096
+          ],
+          "separation_gap_mm": 31.70091392885986
+        },
+        {
+          "faces": [
+            20676,
+            84149
+          ],
+          "separation_gap_mm": 18.181332090468278
+        },
+        {
+          "faces": [
+            20676,
+            85053
+          ],
+          "separation_gap_mm": 19.661913299937925
+        },
+        {
+          "faces": [
+            20676,
+            87152
+          ],
+          "separation_gap_mm": 18.8479551810244
+        },
+        {
+          "faces": [
+            26847,
+            29795
+          ],
+          "separation_gap_mm": 28.630973069931553
+        },
+        {
+          "faces": [
+            26847,
+            34200
+          ],
+          "separation_gap_mm": 28.87387399462319
+        },
+        {
+          "faces": [
+            26847,
+            34439
+          ],
+          "separation_gap_mm": 25.645103064100113
+        },
+        {
+          "faces": [
+            26847,
+            38380
+          ],
+          "separation_gap_mm": 25.942182118572493
+        },
+        {
+          "faces": [
+            26847,
+            38816
+          ],
+          "separation_gap_mm": 57.17940399485411
+        },
+        {
+          "faces": [
+            26847,
+            40442
+          ],
+          "separation_gap_mm": 46.58555280713421
+        },
+        {
+          "faces": [
+            26847,
+            43818
+          ],
+          "separation_gap_mm": 59.32088741229097
+        },
+        {
+          "faces": [
+            26847,
+            48249
+          ],
+          "separation_gap_mm": 27.81284221334042
+        },
+        {
+          "faces": [
+            26847,
+            48335
+          ],
+          "separation_gap_mm": 32.14763095830195
+        },
+        {
+          "faces": [
+            26847,
+            51504
+          ],
+          "separation_gap_mm": 35.32689771365985
+        },
+        {
+          "faces": [
+            26847,
+            54011
+          ],
+          "separation_gap_mm": 32.006437612662964
+        },
+        {
+          "faces": [
+            26847,
+            67273
+          ],
+          "separation_gap_mm": 28.437621182620866
+        },
+        {
+          "faces": [
+            26847,
+            71960
+          ],
+          "separation_gap_mm": 47.11327727831242
+        },
+        {
+          "faces": [
+            26847,
+            74501
+          ],
+          "separation_gap_mm": 40.15976198818499
+        },
+        {
+          "faces": [
+            26847,
+            76858
+          ],
+          "separation_gap_mm": 40.22118600702849
+        },
+        {
+          "faces": [
+            26847,
+            78257
+          ],
+          "separation_gap_mm": 49.12137182900862
+        },
+        {
+          "faces": [
+            26847,
+            81264
+          ],
+          "separation_gap_mm": 48.59898149237988
+        },
+        {
+          "faces": [
+            26847,
+            83096
+          ],
+          "separation_gap_mm": 18.07322032065587
+        },
+        {
+          "faces": [
+            26847,
+            84149
+          ],
+          "separation_gap_mm": 32.460975692620444
+        },
+        {
+          "faces": [
+            26847,
+            85053
+          ],
+          "separation_gap_mm": 28.991309529175492
+        },
+        {
+          "faces": [
+            26847,
+            87152
+          ],
+          "separation_gap_mm": 28.818045364456808
+        },
+        {
+          "faces": [
+            29795,
+            34200
+          ],
+          "separation_gap_mm": 2.3363944722527528
+        },
+        {
+          "faces": [
+            29795,
+            34439
+          ],
+          "separation_gap_mm": 4.192272080122383
+        },
+        {
+          "faces": [
+            29795,
+            38380
+          ],
+          "separation_gap_mm": 4.199330608781105
+        },
+        {
+          "faces": [
+            29795,
+            38816
+          ],
+          "separation_gap_mm": 32.9389697968899
+        },
+        {
+          "faces": [
+            29795,
+            40442
+          ],
+          "separation_gap_mm": 22.383756582130122
+        },
+        {
+          "faces": [
+            29795,
+            43818
+          ],
+          "separation_gap_mm": 32.77539679110301
+        },
+        {
+          "faces": [
+            29795,
+            48249
+          ],
+          "separation_gap_mm": 1.1734814512010674
+        },
+        {
+          "faces": [
+            29795,
+            48335
+          ],
+          "separation_gap_mm": 3.9869507186262325
+        },
+        {
+          "faces": [
+            29795,
+            51504
+          ],
+          "separation_gap_mm": 11.366308515111736
+        },
+        {
+          "faces": [
+            29795,
+            54011
+          ],
+          "separation_gap_mm": 3.2145221503884
+        },
+        {
+          "faces": [
+            29795,
+            67273
+          ],
+          "separation_gap_mm": 5.708728127249102
+        },
+        {
+          "faces": [
+            29795,
+            71960
+          ],
+          "separation_gap_mm": 22.780039995457994
+        },
+        {
+          "faces": [
+            29795,
+            74501
+          ],
+          "separation_gap_mm": 13.331342763912259
+        },
+        {
+          "faces": [
+            29795,
+            76858
+          ],
+          "separation_gap_mm": 19.471857210148592
+        },
+        {
+          "faces": [
+            29795,
+            78257
+          ],
+          "separation_gap_mm": 26.727690873582585
+        },
+        {
+          "faces": [
+            29795,
+            81264
+          ],
+          "separation_gap_mm": 26.33957932645325
+        },
+        {
+          "faces": [
+            29795,
+            83096
+          ],
+          "separation_gap_mm": 10.237677238374657
+        },
+        {
+          "faces": [
+            29795,
+            84149
+          ],
+          "separation_gap_mm": 3.545888093922637
+        },
+        {
+          "faces": [
+            29795,
+            85053
+          ],
+          "separation_gap_mm": 2.7676744511366813
+        },
+        {
+          "faces": [
+            29795,
+            87152
+          ],
+          "separation_gap_mm": 0.24718865558941516
+        },
+        {
+          "faces": [
+            34200,
+            34439
+          ],
+          "separation_gap_mm": 2.8250659124351403
+        },
+        {
+          "faces": [
+            34200,
+            38380
+          ],
+          "separation_gap_mm": 2.42069023319564
+        },
+        {
+          "faces": [
+            34200,
+            38816
+          ],
+          "separation_gap_mm": 30.702669895743284
+        },
+        {
+          "faces": [
+            34200,
+            40442
+          ],
+          "separation_gap_mm": 21.86385856695238
+        },
+        {
+          "faces": [
+            34200,
+            43818
+          ],
+          "separation_gap_mm": 30.57756089434224
+        },
+        {
+          "faces": [
+            34200,
+            48249
+          ],
+          "separation_gap_mm": 2.070286415790668
+        },
+        {
+          "faces": [
+            34200,
+            48335
+          ],
+          "separation_gap_mm": 6.2255997816532895
+        },
+        {
+          "faces": [
+            34200,
+            51504
+          ],
+          "separation_gap_mm": 9.082478963437831
+        },
+        {
+          "faces": [
+            34200,
+            54011
+          ],
+          "separation_gap_mm": 2.8208337609157503
+        },
+        {
+          "faces": [
+            34200,
+            67273
+          ],
+          "separation_gap_mm": 8.457910069944125
+        },
+        {
+          "faces": [
+            34200,
+            71960
+          ],
+          "separation_gap_mm": 22.3807552552885
+        },
+        {
+          "faces": [
+            34200,
+            74501
+          ],
+          "separation_gap_mm": 12.168147493241865
+        },
+        {
+          "faces": [
+            34200,
+            76858
+          ],
+          "separation_gap_mm": 18.958903552477366
+        },
+        {
+          "faces": [
+            34200,
+            78257
+          ],
+          "separation_gap_mm": 25.443154589877167
+        },
+        {
+          "faces": [
+            34200,
+            81264
+          ],
+          "separation_gap_mm": 24.934139825027955
+        },
+        {
+          "faces": [
+            34200,
+            83096
+          ],
+          "separation_gap_mm": 10.435592768111439
+        },
+        {
+          "faces": [
+            34200,
+            84149
+          ],
+          "separation_gap_mm": 5.937631107196969
+        },
+        {
+          "faces": [
+            34200,
+            85053
+          ],
+          "separation_gap_mm": 0.3651006849409537
+        },
+        {
+          "faces": [
+            34200,
+            87152
+          ],
+          "separation_gap_mm": 2.262513291665261
+        },
+        {
+          "faces": [
+            34439,
+            38380
+          ],
+          "separation_gap_mm": 0.3332250600406361
+        },
+        {
+          "faces": [
+            34439,
+            38816
+          ],
+          "separation_gap_mm": 32.3423881308797
+        },
+        {
+          "faces": [
+            34439,
+            40442
+          ],
+          "separation_gap_mm": 23.678075158227756
+        },
+        {
+          "faces": [
+            34439,
+            43818
+          ],
+          "separation_gap_mm": 33.24420684390133
+        },
+        {
+          "faces": [
+            34439,
+            48249
+          ],
+          "separation_gap_mm": 3.753345841204751
+        },
+        {
+          "faces": [
+            34439,
+            48335
+          ],
+          "separation_gap_mm": 8.639547632702548
+        },
+        {
+          "faces": [
+            34439,
+            51504
+          ],
+          "separation_gap_mm": 10.898488268015342
+        },
+        {
+          "faces": [
+            34439,
+            54011
+          ],
+          "separation_gap_mm": 6.04992127191094
+        },
+        {
+          "faces": [
+            34439,
+            67273
+          ],
+          "separation_gap_mm": 10.240567947914643
+        },
+        {
+          "faces": [
+            34439,
+            71960
+          ],
+          "separation_gap_mm": 24.19454456962937
+        },
+        {
+          "faces": [
+            34439,
+            74501
+          ],
+          "separation_gap_mm": 14.766118097586727
+        },
+        {
+          "faces": [
+            34439,
+            76858
+          ],
+          "separation_gap_mm": 22.190724504895982
+        },
+        {
+          "faces": [
+            34439,
+            78257
+          ],
+          "separation_gap_mm": 27.27013732556992
+        },
+        {
+          "faces": [
+            34439,
+            81264
+          ],
+          "separation_gap_mm": 26.761582196403083
+        },
+        {
+          "faces": [
+            34439,
+            83096
+          ],
+          "separation_gap_mm": 7.205421031534431
+        },
+        {
+          "faces": [
+            34439,
+            84149
+          ],
+          "separation_gap_mm": 8.501033925450507
+        },
+        {
+          "faces": [
+            34439,
+            85053
+          ],
+          "separation_gap_mm": 3.221358111438464
+        },
+        {
+          "faces": [
+            34439,
+            87152
+          ],
+          "separation_gap_mm": 3.723391204552035
+        },
+        {
+          "faces": [
+            38380,
+            38816
+          ],
+          "separation_gap_mm": 40.73204980631655
+        },
+        {
+          "faces": [
+            38380,
+            40442
+          ],
+          "separation_gap_mm": 22.92435481499311
+        },
+        {
+          "faces": [
+            38380,
+            43818
+          ],
+          "separation_gap_mm": 40.54340848103671
+        },
+        {
+          "faces": [
+            38380,
+            48249
+          ],
+          "separation_gap_mm": 3.7751102197347906
+        },
+        {
+          "faces": [
+            38380,
+            48335
+          ],
+          "separation_gap_mm": 8.95403909787461
+        },
+        {
+          "faces": [
+            38380,
+            51504
+          ],
+          "separation_gap_mm": 10.143282218659081
+        },
+        {
+          "faces": [
+            38380,
+            54011
+          ],
+          "separation_gap_mm": 5.604610942511659
+        },
+        {
+          "faces": [
+            38380,
+            67273
+          ],
+          "separation_gap_mm": 10.167527921563298
+        },
+        {
+          "faces": [
+            38380,
+            71960
+          ],
+          "separation_gap_mm": 23.441028131823344
+        },
+        {
+          "faces": [
+            38380,
+            74501
+          ],
+          "separation_gap_mm": 14.171963153849298
+        },
+        {
+          "faces": [
+            38380,
+            76858
+          ],
+          "separation_gap_mm": 21.446399184015185
+        },
+        {
+          "faces": [
+            38380,
+            78257
+          ],
+          "separation_gap_mm": 26.512410888421044
+        },
+        {
+          "faces": [
+            38380,
+            81264
+          ],
+          "separation_gap_mm": 26.003644328827995
+        },
+        {
+          "faces": [
+            38380,
+            83096
+          ],
+          "separation_gap_mm": 7.641337330554071
+        },
+        {
+          "faces": [
+            38380,
+            84149
+          ],
+          "separation_gap_mm": 8.368202170072895
+        },
+        {
+          "faces": [
+            38380,
+            85053
+          ],
+          "separation_gap_mm": 2.7935880124212114
+        },
+        {
+          "faces": [
+            38380,
+            87152
+          ],
+          "separation_gap_mm": 4.365921378953299
+        },
+        {
+          "faces": [
+            38816,
+            40442
+          ],
+          "separation_gap_mm": 40.955078732378766
+        },
+        {
+          "faces": [
+            38816,
+            43818
+          ],
+          "separation_gap_mm": 0.2481716229861739
+        },
+        {
+          "faces": [
+            38816,
+            48249
+          ],
+          "separation_gap_mm": 37.362668683635675
+        },
+        {
+          "faces": [
+            38816,
+            48335
+          ],
+          "separation_gap_mm": 32.468836785920004
+        },
+        {
+          "faces": [
+            38816,
+            51504
+          ],
+          "separation_gap_mm": 40.32375379325187
+        },
+        {
+          "faces": [
+            38816,
+            54011
+          ],
+          "separation_gap_mm": 27.832676956981125
+        },
+        {
+          "faces": [
+            38816,
+            67273
+          ],
+          "separation_gap_mm": 31.791042541944226
+        },
+        {
+          "faces": [
+            38816,
+            71960
+          ],
+          "separation_gap_mm": 41.34248033264811
+        },
+        {
+          "faces": [
+            38816,
+            74501
+          ],
+          "separation_gap_mm": 33.8416660982279
+        },
+        {
+          "faces": [
+            38816,
+            76858
+          ],
+          "separation_gap_mm": 20.645240795375962
+        },
+        {
+          "faces": [
+            38816,
+            78257
+          ],
+          "separation_gap_mm": 45.91171082886887
+        },
+        {
+          "faces": [
+            38816,
+            81264
+          ],
+          "separation_gap_mm": 45.59551405036887
+        },
+        {
+          "faces": [
+            38816,
+            83096
+          ],
+          "separation_gap_mm": 42.775863147756894
+        },
+        {
+          "faces": [
+            38816,
+            84149
+          ],
+          "separation_gap_mm": 33.76430764535378
+        },
+        {
+          "faces": [
+            38816,
+            85053
+          ],
+          "separation_gap_mm": 38.30067892637691
+        },
+        {
+          "faces": [
+            38816,
+            87152
+          ],
+          "separation_gap_mm": 27.65764735663491
+        },
+        {
+          "faces": [
+            40442,
+            43818
+          ],
+          "separation_gap_mm": 40.95507873237872
+        },
+        {
+          "faces": [
+            40442,
+            48249
+          ],
+          "separation_gap_mm": 21.27235950590593
+        },
+        {
+          "faces": [
+            40442,
+            48335
+          ],
+          "separation_gap_mm": 23.549445536690737
+        },
+        {
+          "faces": [
+            40442,
+            51504
+          ],
+          "separation_gap_mm": 12.488451461877023
+        },
+        {
+          "faces": [
+            40442,
+            54011
+          ],
+          "separation_gap_mm": 20.444401143302063
+        },
+        {
+          "faces": [
+            40442,
+            67273
+          ],
+          "separation_gap_mm": 25.125051538171554
+        },
+        {
+          "faces": [
+            40442,
+            71960
+          ],
+          "separation_gap_mm": 0.17910761594232838
+        },
+        {
+          "faces": [
+            40442,
+            74501
+          ],
+          "separation_gap_mm": 10.325083392954207
+        },
+        {
+          "faces": [
+            40442,
+            76858
+          ],
+          "separation_gap_mm": 21.52058118812402
+        },
+        {
+          "faces": [
+            40442,
+            78257
+          ],
+          "separation_gap_mm": 4.510242296046485
+        },
+        {
+          "faces": [
+            40442,
+            81264
+          ],
+          "separation_gap_mm": 4.151053904903215
+        },
+        {
+          "faces": [
+            40442,
+            83096
+          ],
+          "separation_gap_mm": 28.959872114760806
+        },
+        {
+          "faces": [
+            40442,
+            84149
+          ],
+          "separation_gap_mm": 23.48712785071137
+        },
+        {
+          "faces": [
+            40442,
+            85053
+          ],
+          "separation_gap_mm": 21.094312977116147
+        },
+        {
+          "faces": [
+            40442,
+            87152
+          ],
+          "separation_gap_mm": 22.815338584367844
+        },
+        {
+          "faces": [
+            43818,
+            48249
+          ],
+          "separation_gap_mm": 37.18603936581434
+        },
+        {
+          "faces": [
+            43818,
+            48335
+          ],
+          "separation_gap_mm": 32.36317498945075
+        },
+        {
+          "faces": [
+            43818,
+            51504
+          ],
+          "separation_gap_mm": 40.69393854224453
+        },
+        {
+          "faces": [
+            43818,
+            54011
+          ],
+          "separation_gap_mm": 27.71632438538289
+        },
+        {
+          "faces": [
+            43818,
+            67273
+          ],
+          "separation_gap_mm": 31.534610494694828
+        },
+        {
+          "faces": [
+            43818,
+            71960
+          ],
+          "separation_gap_mm": 41.34248033264807
+        },
+        {
+          "faces": [
+            43818,
+            74501
+          ],
+          "separation_gap_mm": 33.72873058007636
+        },
+        {
+          "faces": [
+            43818,
+            76858
+          ],
+          "separation_gap_mm": 20.733249111680777
+        },
+        {
+          "faces": [
+            43818,
+            78257
+          ],
+          "separation_gap_mm": 45.91171082886884
+        },
+        {
+          "faces": [
+            43818,
+            81264
+          ],
+          "separation_gap_mm": 45.59551405036884
+        },
+        {
+          "faces": [
+            43818,
+            83096
+          ],
+          "separation_gap_mm": 42.465164627046775
+        },
+        {
+          "faces": [
+            43818,
+            84149
+          ],
+          "separation_gap_mm": 33.52162011973357
+        },
+        {
+          "faces": [
+            43818,
+            85053
+          ],
+          "separation_gap_mm": 38.107452336974085
+        },
+        {
+          "faces": [
+            43818,
+            87152
+          ],
+          "separation_gap_mm": 29.407061171084436
+        },
+        {
+          "faces": [
+            48249,
+            48335
+          ],
+          "separation_gap_mm": 4.552165138128331
+        },
+        {
+          "faces": [
+            48249,
+            51504
+          ],
+          "separation_gap_mm": 10.759624308944042
+        },
+        {
+          "faces": [
+            48249,
+            54011
+          ],
+          "separation_gap_mm": 3.826812288786847
+        },
+        {
+          "faces": [
+            48249,
+            67273
+          ],
+          "separation_gap_mm": 5.820211593014595
+        },
+        {
+          "faces": [
+            48249,
+            71960
+          ],
+          "separation_gap_mm": 19.48724785856183
+        },
+        {
+          "faces": [
+            48249,
+            74501
+          ],
+          "separation_gap_mm": 13.395004928831971
+        },
+        {
+          "faces": [
+            48249,
+            76858
+          ],
+          "separation_gap_mm": 20.30249425551442
+        },
+        {
+          "faces": [
+            48249,
+            78257
+          ],
+          "separation_gap_mm": 23.934509593867354
+        },
+        {
+          "faces": [
+            48249,
+            81264
+          ],
+          "separation_gap_mm": 24.70277337529086
+        },
+        {
+          "faces": [
+            48249,
+            83096
+          ],
+          "separation_gap_mm": 10.025962483075107
+        },
+        {
+          "faces": [
+            48249,
+            84149
+          ],
+          "separation_gap_mm": 4.028393906188643
+        },
+        {
+          "faces": [
+            48249,
+            85053
+          ],
+          "separation_gap_mm": 2.1863835786357964
+        },
+        {
+          "faces": [
+            48249,
+            87152
+          ],
+          "separation_gap_mm": 1.1693233285274767
+        },
+        {
+          "faces": [
+            48335,
+            51504
+          ],
+          "separation_gap_mm": 12.916010228264906
+        },
+        {
+          "faces": [
+            48335,
+            54011
+          ],
+          "separation_gap_mm": 3.6547049401988763
+        },
+        {
+          "faces": [
+            48335,
+            67273
+          ],
+          "separation_gap_mm": 1.7389940199999199
+        },
+        {
+          "faces": [
+            48335,
+            71960
+          ],
+          "separation_gap_mm": 22.76991907297527
+        },
+        {
+          "faces": [
+            48335,
+            74501
+          ],
+          "separation_gap_mm": 12.11367896910188
+        },
+        {
+          "faces": [
+            48335,
+            76858
+          ],
+          "separation_gap_mm": 15.983237781068961
+        },
+        {
+          "faces": [
+            48335,
+            78257
+          ],
+          "separation_gap_mm": 27.18408212246068
+        },
+        {
+          "faces": [
+            48335,
+            81264
+          ],
+          "separation_gap_mm": 27.24034341874519
+        },
+        {
+          "faces": [
+            48335,
+            83096
+          ],
+          "separation_gap_mm": 14.555881192086488
+        },
+        {
+          "faces": [
+            48335,
+            84149
+          ],
+          "separation_gap_mm": 0.3981615038268753
+        },
+        {
+          "faces": [
+            48335,
+            85053
+          ],
+          "separation_gap_mm": 6.300564523287543
+        },
+        {
+          "faces": [
+            48335,
+            87152
+          ],
+          "separation_gap_mm": 3.566427865222699
+        },
+        {
+          "faces": [
+            51504,
+            54011
+          ],
+          "separation_gap_mm": 9.107040223212973
+        },
+        {
+          "faces": [
+            51504,
+            67273
+          ],
+          "separation_gap_mm": 14.949084678972842
+        },
+        {
+          "faces": [
+            51504,
+            71960
+          ],
+          "separation_gap_mm": 12.35682181411478
+        },
+        {
+          "faces": [
+            51504,
+            74501
+          ],
+          "separation_gap_mm": 4.060697424267495
+        },
+        {
+          "faces": [
+            51504,
+            76858
+          ],
+          "separation_gap_mm": 19.395564213880544
+        },
+        {
+          "faces": [
+            51504,
+            78257
+          ],
+          "separation_gap_mm": 16.26664357926971
+        },
+        {
+          "faces": [
+            51504,
+            81264
+          ],
+          "separation_gap_mm": 15.80094206796582
+        },
+        {
+          "faces": [
+            51504,
+            83096
+          ],
+          "separation_gap_mm": 17.965439410284098
+        },
+        {
+          "faces": [
+            51504,
+            84149
+          ],
+          "separation_gap_mm": 12.94431630465105
+        },
+        {
+          "faces": [
+            51504,
+            85053
+          ],
+          "separation_gap_mm": 8.298909773663416
+        },
+        {
+          "faces": [
+            51504,
+            87152
+          ],
+          "separation_gap_mm": 10.807886281627464
+        },
+        {
+          "faces": [
+            54011,
+            67273
+          ],
+          "separation_gap_mm": 5.903268688766934
+        },
+        {
+          "faces": [
+            54011,
+            71960
+          ],
+          "separation_gap_mm": 20.94366169746041
+        },
+        {
+          "faces": [
+            54011,
+            74501
+          ],
+          "separation_gap_mm": 10.204225897875535
+        },
+        {
+          "faces": [
+            54011,
+            76858
+          ],
+          "separation_gap_mm": 16.315543374054624
+        },
+        {
+          "faces": [
+            54011,
+            78257
+          ],
+          "separation_gap_mm": 23.9577936711722
+        },
+        {
+          "faces": [
+            54011,
+            81264
+          ],
+          "separation_gap_mm": 23.465519970051414
+        },
+        {
+          "faces": [
+            54011,
+            83096
+          ],
+          "separation_gap_mm": 13.74294231408737
+        },
+        {
+          "faces": [
+            54011,
+            84149
+          ],
+          "separation_gap_mm": 3.6380920591548893
+        },
+        {
+          "faces": [
+            54011,
+            85053
+          ],
+          "separation_gap_mm": 2.9683496447672812
+        },
+        {
+          "faces": [
+            54011,
+            87152
+          ],
+          "separation_gap_mm": 2.810891183421992
+        },
+        {
+          "faces": [
+            67273,
+            71960
+          ],
+          "separation_gap_mm": 24.386028702738578
+        },
+        {
+          "faces": [
+            67273,
+            74501
+          ],
+          "separation_gap_mm": 14.327606454504856
+        },
+        {
+          "faces": [
+            67273,
+            76858
+          ],
+          "separation_gap_mm": 15.448066546765624
+        },
+        {
+          "faces": [
+            67273,
+            78257
+          ],
+          "separation_gap_mm": 28.740647906026997
+        },
+        {
+          "faces": [
+            67273,
+            81264
+          ],
+          "separation_gap_mm": 28.7932785332955
+        },
+        {
+          "faces": [
+            67273,
+            83096
+          ],
+          "separation_gap_mm": 14.14969542742642
+        },
+        {
+          "faces": [
+            67273,
+            84149
+          ],
+          "separation_gap_mm": 1.9930317409326932
+        },
+        {
+          "faces": [
+            67273,
+            85053
+          ],
+          "separation_gap_mm": 8.528757868766865
+        },
+        {
+          "faces": [
+            67273,
+            87152
+          ],
+          "separation_gap_mm": 5.6703857685744765
+        },
+        {
+          "faces": [
+            71960,
+            74501
+          ],
+          "separation_gap_mm": 10.192049919648792
+        },
+        {
+          "faces": [
+            71960,
+            76858
+          ],
+          "separation_gap_mm": 21.716939024156417
+        },
+        {
+          "faces": [
+            71960,
+            78257
+          ],
+          "separation_gap_mm": 3.9203706226120225
+        },
+        {
+          "faces": [
+            71960,
+            81264
+          ],
+          "separation_gap_mm": 3.5503677906885898
+        },
+        {
+          "faces": [
+            71960,
+            83096
+          ],
+          "separation_gap_mm": 29.02579919132477
+        },
+        {
+          "faces": [
+            71960,
+            84149
+          ],
+          "separation_gap_mm": 22.908866352748255
+        },
+        {
+          "faces": [
+            71960,
+            85053
+          ],
+          "separation_gap_mm": 21.613309397472364
+        },
+        {
+          "faces": [
+            71960,
+            87152
+          ],
+          "separation_gap_mm": 23.31146684419413
+        },
+        {
+          "faces": [
+            74501,
+            76858
+          ],
+          "separation_gap_mm": 14.711037308361076
+        },
+        {
+          "faces": [
+            74501,
+            78257
+          ],
+          "separation_gap_mm": 14.782362006032194
+        },
+        {
+          "faces": [
+            74501,
+            81264
+          ],
+          "separation_gap_mm": 14.605305412183931
+        },
+        {
+          "faces": [
+            74501,
+            83096
+          ],
+          "separation_gap_mm": 21.942964549014388
+        },
+        {
+          "faces": [
+            74501,
+            84149
+          ],
+          "separation_gap_mm": 12.383112240696873
+        },
+        {
+          "faces": [
+            74501,
+            85053
+          ],
+          "separation_gap_mm": 11.585362559348562
+        },
+        {
+          "faces": [
+            74501,
+            87152
+          ],
+          "separation_gap_mm": 12.83224573471708
+        },
+        {
+          "faces": [
+            76858,
+            78257
+          ],
+          "separation_gap_mm": 25.897688853661133
+        },
+        {
+          "faces": [
+            76858,
+            81264
+          ],
+          "separation_gap_mm": 25.516366848815704
+        },
+        {
+          "faces": [
+            76858,
+            83096
+          ],
+          "separation_gap_mm": 31.603932256686203
+        },
+        {
+          "faces": [
+            76858,
+            84149
+          ],
+          "separation_gap_mm": 17.230728794404136
+        },
+        {
+          "faces": [
+            76858,
+            85053
+          ],
+          "separation_gap_mm": 18.02569100265014
+        },
+        {
+          "faces": [
+            76858,
+            87152
+          ],
+          "separation_gap_mm": 19.29624433793686
+        },
+        {
+          "faces": [
+            78257,
+            81264
+          ],
+          "separation_gap_mm": 0.14551074682040266
+        },
+        {
+          "faces": [
+            78257,
+            83096
+          ],
+          "separation_gap_mm": 32.691021156277614
+        },
+        {
+          "faces": [
+            78257,
+            84149
+          ],
+          "separation_gap_mm": 27.55656949908038
+        },
+        {
+          "faces": [
+            78257,
+            85053
+          ],
+          "separation_gap_mm": 24.630450582688162
+        },
+        {
+          "faces": [
+            78257,
+            87152
+          ],
+          "separation_gap_mm": 26.3028678596594
+        },
+        {
+          "faces": [
+            81264,
+            83096
+          ],
+          "separation_gap_mm": 32.211663911826015
+        },
+        {
+          "faces": [
+            81264,
+            84149
+          ],
+          "separation_gap_mm": 27.140868869057066
+        },
+        {
+          "faces": [
+            81264,
+            85053
+          ],
+          "separation_gap_mm": 24.11925498584214
+        },
+        {
+          "faces": [
+            81264,
+            87152
+          ],
+          "separation_gap_mm": 25.813521285294478
+        },
+        {
+          "faces": [
+            83096,
+            84149
+          ],
+          "separation_gap_mm": 13.692913258765255
+        },
+        {
+          "faces": [
+            83096,
+            85053
+          ],
+          "separation_gap_mm": 10.808301419137873
+        },
+        {
+          "faces": [
+            83096,
+            87152
+          ],
+          "separation_gap_mm": 10.734501054663538
+        },
+        {
+          "faces": [
+            84149,
+            85053
+          ],
+          "separation_gap_mm": 5.721043445397223
+        },
+        {
+          "faces": [
+            84149,
+            87152
+          ],
+          "separation_gap_mm": 3.1848262727728676
+        },
+        {
+          "faces": [
+            85053,
+            87152
+          ],
+          "separation_gap_mm": 2.346320519368339
+        }
+      ],
+      "intersection_check_interpretation": "报警面集合内分离轴复核；非完整精确自交证书",
+      "components": 1,
+      "historical_area_threshold_counts": {
+        "fp64": 0,
+        "fp32": 0
+      },
+      "area_arithmetic": [
+        {
+          "dtype": "float64",
+          "zero_faces": 0,
+          "nonfinite_areas": 0,
+          "small_positive_faces": 0,
+          "min_area_mm2": 2.5652699566762115e-05
+        },
+        {
+          "dtype": "float32",
+          "zero_faces": 0,
+          "nonfinite_areas": 0,
+          "small_positive_faces": 0,
+          "min_area_mm2": 2.563162342994474e-05
+        }
+      ],
+      "area_policy": "development_true_zero_input_check",
+      "small_positive_faces_are_risk_statistics": true,
+      "output_policy_unchanged": true
+    },
+    "topology_preserved": true,
+    "remaining_invalid_faces": 0,
+    "geometry_probe_max_mm": 1.0290994924006174e-14,
+    "geometry_budget_mm": 1e-07,
+    "continuous_geometry_certified": false
+  }
+}

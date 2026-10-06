@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/graduation_project/locality_cuda_20261004/run_locality_gpu_pilot.py", line 109, in <module>
+    main()
+  File "/root/autodl-tmp/graduation_project/locality_cuda_20261004/run_locality_gpu_pilot.py", line 40, in main
+    extension = load_extension(args.extension)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/graduation_project/locality_cuda_20261004/locality_gpu.py", line 61, in load_extension
+    extension = importlib.util.module_from_spec(spec)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 813, in module_from_spec
+  File "<frozen importlib._bootstrap_external>", line 1289, in create_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+ImportError: generic_type: type "CUDSP_Free" is already registered!

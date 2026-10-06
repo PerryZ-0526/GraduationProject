@@ -1,0 +1,2988 @@
+{
+  "schema_version": 1,
+  "generator": "freeze_followup_inputs.py",
+  "generator_sha256": "27614930c44c5b7168108da66920d6b3a694aefd02e27bed0819250697ee089b",
+  "protocol_sha256": "22e60a50bce36fd666663d98a43445f1b440eebd399789f956d245520cd94c95",
+  "reference_code_sha256": "92ab71c5851836cee06ece1fe8b1e2b7439f42ff2013361559945837bfad4d76",
+  "development_route_count": 6,
+  "evaluation_route_count": 12,
+  "routes": [
+    {
+      "id": "development_shallow_slab_01",
+      "split": "development",
+      "category": "shallow",
+      "body": "slab",
+      "random_stream": "20260922/development/shallow/slab/1",
+      "initial_mesh": "development_shallow_slab_01_initial.obj",
+      "initial_mesh_sha256": "f88f38967cc3967c5a0d5a99e0a7eeff7f4295531784595ed760549670aaf30f",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.08354,
+          -0.075642
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.762588,
+            -0.068201,
+            0.463358
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.312588,
+            -0.068201,
+            0.500951
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.187412,
+            -0.068201,
+            0.542721
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.687412,
+            -0.068201,
+            0.584491
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_shallow_slab_01_e0_tool.obj",
+          "sha256": "750d2091bb25790d2f1a61bc43e4b66894184b790e3efac29be8dee370c3f738",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_shallow_slab_01_e1_tool.obj",
+          "sha256": "86d922312ebd5e16daeb0e7e819762df04b2db21904fcee4f5a2cc9f1b7192cc",
+          "faces": 1408
+        },
+        {
+          "event_id": "e2",
+          "mesh": "development_shallow_slab_01_e2_tool.obj",
+          "sha256": "abeee2e4d8274980cfc5bf67ca49c0540f0854db671461b30e226edae336665f",
+          "faces": 1408
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_shallow_slab_01_e3_tool.obj",
+          "sha256": "c280d433b67a033857f6e1886359cf54e7bccd0c4a48477ca431fad8ccd20688",
+          "faces": 1408
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_shallow_slab_01",
+      "split": "evaluation",
+      "category": "shallow",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/shallow/slab/1",
+      "initial_mesh": "evaluation_shallow_slab_01_initial.obj",
+      "initial_mesh_sha256": "43b77c8f0150d2cd473de7b1bacbe3b1d6f70424ff37ddfae954c8fec133afdc",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.14168,
+          -0.043871
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.817318,
+            -0.063063,
+            0.408272
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.367318,
+            -0.063063,
+            0.472028
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.132682,
+            -0.063063,
+            0.542868
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.632682,
+            -0.063063,
+            0.613708
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_shallow_slab_01_e0_tool.obj",
+          "sha256": "265265ca1384ae4809eb1bc15ef9c1adc4be9939e731824fce00ca5e7d8045b2",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_shallow_slab_01_e1_tool.obj",
+          "sha256": "fa8d88897da48f7caae55e015b64bb4808aea6aa13ce0abc632263a317ec7269",
+          "faces": 1372
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_shallow_slab_01_e2_tool.obj",
+          "sha256": "8ed5194072fba220812c556704634a86592f3c2ecc3d3c6545e2f665ff08da69",
+          "faces": 1372
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_shallow_slab_01_e3_tool.obj",
+          "sha256": "9e05dab829451e0e4c7893a2496fbc656cd2123e70b16523a6a10a2a0a7074e1",
+          "faces": 1372
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_shallow_sphere_02",
+      "split": "evaluation",
+      "category": "shallow",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/shallow/sphere/2",
+      "initial_mesh": "evaluation_shallow_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.680817,
+            -0.051143,
+            2.958656
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.230817,
+            -0.051143,
+            3.042484
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.269183,
+            -0.051143,
+            3.038627
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.769183,
+            -0.051143,
+            2.931868
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_shallow_sphere_02_e0_tool.obj",
+          "sha256": "2993e72839a22460dc064f10179715d502a9ccdc0ca6826765d717b0aa31290b",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_shallow_sphere_02_e1_tool.obj",
+          "sha256": "46b545c4b5464bb51c467f5a4dab804c58407680d78c694ff189c7d23ab9222d",
+          "faces": 1384
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_shallow_sphere_02_e2_tool.obj",
+          "sha256": "cd24dcdd3a2c8b03cc73af300db88106b39a36f2030e8f261fb2a1a58e691a0c",
+          "faces": 1376
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_shallow_sphere_02_e3_tool.obj",
+          "sha256": "9ada050add32a3b0685cfa321b516a7ed54579472eec683a20cc9d913a7ae46d",
+          "faces": 1400
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "development_repeat_slab_01",
+      "split": "development",
+      "category": "repeat",
+      "body": "slab",
+      "random_stream": "20260922/development/repeat/slab/1",
+      "initial_mesh": "development_repeat_slab_01_initial.obj",
+      "initial_mesh_sha256": "fdcad51ed2042bde8b11f7d87d3f1f3af1f27469ce65ee7f47a9a2aafb45bbcb",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.072632,
+          -0.111338
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.588579,
+            -0.215317,
+            0.499052
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.211421,
+            -0.215317,
+            0.557158
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.211421,
+            -0.215317,
+            0.557158
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.711421,
+            -0.215317,
+            0.593474
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_repeat_slab_01_e0_tool.obj",
+          "sha256": "451021c236c48e3d5677e4a25d957373a692d3c99e927edd12100084e4c976d2",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_repeat_slab_01_e1_tool.obj",
+          "sha256": "234dc91e6c58ba4e167395fd259f0eac0c063f3f51ff04b286220f776580b066",
+          "faces": 1408
+        },
+        {
+          "event_id": "e2",
+          "mesh": "development_repeat_slab_01_e2_tool.obj",
+          "sha256": "685f9fb77ae2bb0a4560b09bcdc99d52cd89be81b77abdbc22fc74ead79e46e1",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_repeat_slab_01_e3_tool.obj",
+          "sha256": "435ca9d9711a46801b0464a69e4d1006a8f34f6fb9597615f4c4bb7fa4dea8cf",
+          "faces": 1408
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_repeat_slab_01",
+      "split": "evaluation",
+      "category": "repeat",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/repeat/slab/1",
+      "initial_mesh": "evaluation_repeat_slab_01_initial.obj",
+      "initial_mesh_sha256": "faeb83f5396305da8648f91e6c32a9213d275c9a7f354741d11a186a3935524d",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.07913,
+          -0.063029
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.582204,
+            -0.151916,
+            0.512084
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.217796,
+            -0.151916,
+            0.575388
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.217796,
+            -0.151916,
+            0.575388
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.717796,
+            -0.151916,
+            0.614953
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_repeat_slab_01_e0_tool.obj",
+          "sha256": "7131027aa8a50ab187874e2777f3394abfe909fbb3cd6ed9408b3ad39bec9a04",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_repeat_slab_01_e1_tool.obj",
+          "sha256": "4bf928cc4c5d3524a3e7e8222bca389f162e1778d91461bd47d0d44bd240f2e8",
+          "faces": 1408
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_repeat_slab_01_e2_tool.obj",
+          "sha256": "7de747d6859500eaf5413301359f071bab0b162923454ea51d97966e8f6285a0",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_repeat_slab_01_e3_tool.obj",
+          "sha256": "addb6b84810d7e94b789879dc110d7927a64f4ced392e33810dd4fdcc2df1789",
+          "faces": 1408
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_repeat_sphere_02",
+      "split": "evaluation",
+      "category": "repeat",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/repeat/sphere/2",
+      "initial_mesh": "evaluation_repeat_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.674419,
+            -0.135677,
+            2.946951
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.125581,
+            -0.135677,
+            3.036619
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.125581,
+            -0.135677,
+            3.036619
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.625581,
+            -0.135677,
+            2.960123
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_repeat_sphere_02_e0_tool.obj",
+          "sha256": "c143d398311240ad19726311a79cad2e51923f324eb009119e1d69c031bccd6e",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_repeat_sphere_02_e1_tool.obj",
+          "sha256": "51bf423da97fa20203094b5c2cc0f91de27974fe0c9e8eeae98a293597e05a86",
+          "faces": 1380
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_repeat_sphere_02_e2_tool.obj",
+          "sha256": "16576d08f39dca4c017c49546bfd4b51e9b7438f262d12643319763efb06894f",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_repeat_sphere_02_e3_tool.obj",
+          "sha256": "cdcb7c40fa27518a524ad2341c82878e0c01aaf701031508d5968c4b07704c24",
+          "faces": 1380
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "development_plan_edge_slab_01",
+      "split": "development",
+      "category": "plan_edge",
+      "body": "slab",
+      "random_stream": "20260922/development/plan_edge/slab/1",
+      "initial_mesh": "development_plan_edge_slab_01_initial.obj",
+      "initial_mesh_sha256": "24d94dd48f6aa685d9aa9f1fdcab5d68ced3c8fc28ba1b19c85d116bfb8fbb88",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.157482,
+          -0.069029
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.539685,
+            0.032614,
+            0.632606
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.889685,
+            0.032614,
+            0.687725
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            1.189685,
+            0.032614,
+            0.734969
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            1.539685,
+            0.032614,
+            0.790088
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_plan_edge_slab_01_e0_tool.obj",
+          "sha256": "9617c867de82ec5a550461247295910571ddc055ae658abc2bd82ed9b8e65cb0",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_plan_edge_slab_01_e1_tool.obj",
+          "sha256": "45238ebccec9abf4aed2a10454e537e3c4500c3cfe158c2198ae9b9a5d3749d8",
+          "faces": 1380
+        },
+        {
+          "event_id": "e2",
+          "mesh": "development_plan_edge_slab_01_e2_tool.obj",
+          "sha256": "d005ecfd7e24f8f2ee1ed080e66a3909cf1b1dbf07b79604ccfa341af6399804",
+          "faces": 1380
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_plan_edge_slab_01_e3_tool.obj",
+          "sha256": "f6f40c8b42b9eba451bc52a9c84c191d0426571593a43e2f424732b08cbbc5ac",
+          "faces": 1380
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_plan_edge_slab_01",
+      "split": "evaluation",
+      "category": "plan_edge",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/plan_edge/slab/1",
+      "initial_mesh": "evaluation_plan_edge_slab_01_initial.obj",
+      "initial_mesh_sha256": "b1e3cd488a748735d56f0c651c88af071371372f3188a58916f8e7a9018a4aaf",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.128659,
+          -0.084859
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.465338,
+            0.044912,
+            0.601021
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.815338,
+            0.044912,
+            0.646052
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            1.115338,
+            0.044912,
+            0.684649
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            1.465338,
+            0.044912,
+            0.72968
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_plan_edge_slab_01_e0_tool.obj",
+          "sha256": "d71eecf3464ed7a6d6a4c81b3d3cb1cb34e1a9876c350b8cd7df731c21ea25a5",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_plan_edge_slab_01_e1_tool.obj",
+          "sha256": "f81f4d857769a294e1b65682827615c8c8deab3fcd0eab60009b3e8ffffc1ff0",
+          "faces": 1372
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_plan_edge_slab_01_e2_tool.obj",
+          "sha256": "b571d4757af689dad80f130f25ad97bc6626ebd2631f514df1f799ef1acdf269",
+          "faces": 1372
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_plan_edge_slab_01_e3_tool.obj",
+          "sha256": "7f1887a9a7e1e4ca1ff7ace4f1a52089515bb262029bdd47969049435f5f8e07",
+          "faces": 1372
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_plan_edge_sphere_02",
+      "split": "evaluation",
+      "category": "plan_edge",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/plan_edge/sphere/2",
+      "initial_mesh": "evaluation_plan_edge_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.498043,
+            0.092331,
+            3.000553
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.848043,
+            0.092331,
+            2.902362
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            1.148043,
+            0.092331,
+            2.771295
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            1.498043,
+            0.092331,
+            2.551741
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_plan_edge_sphere_02_e0_tool.obj",
+          "sha256": "3a6f5ec017dab4f815d4d4114942f4bfd3f507cb445ac0d81540b4a3ead2b47b",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_plan_edge_sphere_02_e1_tool.obj",
+          "sha256": "7832280134fd4f085cfa9612f584805bd354125e605f9e9794dcbd5e236d1a2b",
+          "faces": 1376
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_plan_edge_sphere_02_e2_tool.obj",
+          "sha256": "8645b591b22ec235c53843bfeb94b7f27aa5f14d5e92cc4adfc6b640e66c96e1",
+          "faces": 1380
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_plan_edge_sphere_02_e3_tool.obj",
+          "sha256": "1a1c7879c69b23d5f807acd9141b640d03e95d983a32ae7c3ffd0a1e177c51ef",
+          "faces": 1360
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "development_vertical_sphere_01",
+      "split": "development",
+      "category": "vertical",
+      "body": "sphere",
+      "random_stream": "20260922/development/vertical/sphere/1",
+      "initial_mesh": "development_vertical_sphere_01_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.047292,
+            0.099461,
+            3.058972
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.047292,
+            0.099461,
+            2.978972
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.047292,
+            0.099461,
+            2.878972
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.047292,
+            0.099461,
+            2.998972
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_vertical_sphere_01_e0_tool.obj",
+          "sha256": "ddc5523fcc34ca2dfd0ce83dfe91cad504c1a17150bb75b866e5c0f0435fb628",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_vertical_sphere_01_e1_tool.obj",
+          "sha256": "62326b63494d9ff0afd5e2ff8f13bdff049216fdb5a38da4e7eda044ed41dc02",
+          "faces": 1280
+        },
+        {
+          "event_id": "e2",
+          "mesh": "development_vertical_sphere_01_e2_tool.obj",
+          "sha256": "917990547ebdd6ff47261eab0eb5c989ea649fee5de2e440fd66eb4052ad4a89",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_vertical_sphere_01_e3_tool.obj",
+          "sha256": "6685619ce2edc5f7ee19df117fbd7c547398516019d91106dcc2a0fc07de129f",
+          "faces": 1280
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_vertical_slab_01",
+      "split": "evaluation",
+      "category": "vertical",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/vertical/slab/1",
+      "initial_mesh": "evaluation_vertical_slab_01_initial.obj",
+      "initial_mesh_sha256": "7b817b36b325eda99574311ff283fad44c73425ffaf27910a196aaaf24df5dda",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.101883,
+          -0.104215
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.181795,
+            0.150793,
+            0.564858
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.181795,
+            0.150793,
+            0.484858
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.181795,
+            0.150793,
+            0.384858
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.181795,
+            0.150793,
+            0.504858
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_vertical_slab_01_e0_tool.obj",
+          "sha256": "2f5977009954b25fa98b09a835a21db4acb524f5ffcfab442389d60b55aa3476",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_vertical_slab_01_e1_tool.obj",
+          "sha256": "156b77970db732219b7197e5254cf61b2d220e2c9e7566262e35f27c3fe3b792",
+          "faces": 1280
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_vertical_slab_01_e2_tool.obj",
+          "sha256": "68b3d891a443030ca22537c007ab0bafdbada7135c9e46bf943edafd0290fdd5",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_vertical_slab_01_e3_tool.obj",
+          "sha256": "184f3e2257d843395bc1528b9ead21f16ee42e5173b9cf4a655616cc2d10c13f",
+          "faces": 1280
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_vertical_sphere_02",
+      "split": "evaluation",
+      "category": "vertical",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/vertical/sphere/2",
+      "initial_mesh": "evaluation_vertical_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            0.08128,
+            0.179627,
+            3.058067
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.08128,
+            0.179627,
+            2.978067
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.08128,
+            0.179627,
+            2.878067
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.08128,
+            0.179627,
+            2.998067
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_vertical_sphere_02_e0_tool.obj",
+          "sha256": "585b6df17e998351235dae389a0b5a99850731dd14fc99a55e23a6761fa3ae2a",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_vertical_sphere_02_e1_tool.obj",
+          "sha256": "585d54c54e897818cf86309536c4daa1a0262b6c41e32d7fbb74e569b51cf0fb",
+          "faces": 1280
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_vertical_sphere_02_e2_tool.obj",
+          "sha256": "1c730bd56e4fc852d385439a67401e703da1bf2cbf9ce6f2546cdbebbc9bd73d",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_vertical_sphere_02_e3_tool.obj",
+          "sha256": "9100227814f3a87888b3637e44a40429fabca77c74877ba631837b4dfb304228",
+          "faces": 1280
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "development_crossing_slab_01",
+      "split": "development",
+      "category": "crossing",
+      "body": "slab",
+      "random_stream": "20260922/development/crossing/slab/1",
+      "initial_mesh": "development_crossing_slab_01_initial.obj",
+      "initial_mesh_sha256": "174681df41b9dfc2fa3718fc87ca643cb5b06ac52834d5c4cc9772a89bde9aa1",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.152145,
+          -0.103524
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.726348,
+            -0.646526,
+            0.481349
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.573652,
+            0.553474,
+            0.554909
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.626348,
+            0.553474,
+            0.372335
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.673652,
+            -0.646526,
+            0.694352
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_crossing_slab_01_e0_tool.obj",
+          "sha256": "6b75f36501241413420c5cf283f006b126ba6f19aac64db191866ed288e2a2b4",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_crossing_slab_01_e1_tool.obj",
+          "sha256": "fb1e18d888056303e2c648be225741e8880c06246752866e7b746b097b6fd2bf",
+          "faces": 1396
+        },
+        {
+          "event_id": "e2",
+          "mesh": "development_crossing_slab_01_e2_tool.obj",
+          "sha256": "6572910bd803b71dd99e1bb04a727b350f2f3a25237a18ec5e7f8671f60f01a8",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_crossing_slab_01_e3_tool.obj",
+          "sha256": "f14f15bb7e5b49378dc8f7c1ca52aca1b860ed23d96e67686fe2b918cb048219",
+          "faces": 1388
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_crossing_slab_01",
+      "split": "evaluation",
+      "category": "crossing",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/crossing/slab/1",
+      "initial_mesh": "evaluation_crossing_slab_01_initial.obj",
+      "initial_mesh_sha256": "8245b4e4f1f18ffa54ad360312770c094fede13547d8cd9532533da0a9e54037",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.070506,
+          -0.096153
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.713189,
+            -0.546167,
+            0.518111
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.586811,
+            0.653833,
+            0.494385
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.613189,
+            0.653833,
+            0.409778
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.686811,
+            -0.546167,
+            0.616819
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_crossing_slab_01_e0_tool.obj",
+          "sha256": "6a76e8baf1750ce0349dad154b1e438b665d40e8c637ba8eaadbca2e160502c9",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_crossing_slab_01_e1_tool.obj",
+          "sha256": "684759d95998653c9e68aa6a0959f158ba803ea250d7a2a9780c6053a392e1e3",
+          "faces": 1392
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_crossing_slab_01_e2_tool.obj",
+          "sha256": "bac03bf282fe7169bcf9e4d524a85fd8055a1d4bccdbca11eb57a6568e38c4c0",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_crossing_slab_01_e3_tool.obj",
+          "sha256": "f8cc6a23631b6f1dc2427394937067958cfc2fa3022c770a8ebada65c74c08d0",
+          "faces": 1388
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_crossing_sphere_02",
+      "split": "evaluation",
+      "category": "crossing",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/crossing/sphere/2",
+      "initial_mesh": "evaluation_crossing_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.767853,
+            -0.624898,
+            2.826181
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            0.532147,
+            0.575102,
+            2.904596
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.667853,
+            0.575102,
+            2.870048
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 300,
+          "position_mm": [
+            0.632147,
+            -0.624898,
+            2.867195
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_crossing_sphere_02_e0_tool.obj",
+          "sha256": "acd30fd4eba2369ce360a55f2a78865d6c916383a55440c96ad04e733faa465d",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_crossing_sphere_02_e1_tool.obj",
+          "sha256": "5ddf3198c6e87c9962773bb1b58b275a9d4bfb03f4cd9f8cfe9f7e11d9af6578",
+          "faces": 1388
+        },
+        {
+          "event_id": "e2",
+          "mesh": "evaluation_crossing_sphere_02_e2_tool.obj",
+          "sha256": "0917334026914e7e8a4b46ebb9922070ce77436af87b455fbffeb5ac2d2e89a4",
+          "faces": 1280
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_crossing_sphere_02_e3_tool.obj",
+          "sha256": "7bbac718b2f49c5ff8a4c3f5fdfa203486cbc8838273bcb2ca170e6abd29860b",
+          "faces": 1396
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [],
+      "missing_interval_ms": null,
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "development_stop_resume_sphere_01",
+      "split": "development",
+      "category": "stop_resume",
+      "body": "sphere",
+      "random_stream": "20260922/development/stop_resume/sphere/1",
+      "initial_mesh": "development_stop_resume_sphere_01_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.727537,
+            0.016237,
+            2.948305
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.277537,
+            0.016237,
+            3.041058
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            -0.027537,
+            0.016237,
+            3.05636
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 400,
+          "position_mm": [
+            0.272463,
+            0.116237,
+            3.038952
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e4",
+          "arrival_index": 4,
+          "timestamp_ms": 350,
+          "position_mm": [
+            0.372463,
+            0.116237,
+            3.025928
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e5",
+          "arrival_index": 5,
+          "timestamp_ms": 500,
+          "position_mm": [
+            0.672463,
+            0.116237,
+            2.961617
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e3",
+        "e5"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "development_stop_resume_sphere_01_e0_tool.obj",
+          "sha256": "2900e5c16fb64d927765fe1fbf5fe79affd4ddf0cf7a5a7b012df09735f974cf",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "development_stop_resume_sphere_01_e1_tool.obj",
+          "sha256": "650b04d82089eb5448f498fafb903a87a771929bd0c83dba56eecfd1d08a5919",
+          "faces": 1408
+        },
+        {
+          "event_id": "e3",
+          "mesh": "development_stop_resume_sphere_01_e3_tool.obj",
+          "sha256": "62344d743a67958cc773dfb2d2b0d39388306c5d656b56b1a15526388030973c",
+          "faces": 1280
+        },
+        {
+          "event_id": "e5",
+          "mesh": "development_stop_resume_sphere_01_e5_tool.obj",
+          "sha256": "7b3c34949381e92ab153e1230c4d9076e881ad9df66f8a7997c8881a62838b1a",
+          "faces": 1400
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [
+        "e4"
+      ],
+      "missing_interval_ms": [
+        200,
+        400
+      ],
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_stop_resume_slab_01",
+      "split": "evaluation",
+      "category": "stop_resume",
+      "body": "slab",
+      "random_stream": "20260922/evaluation/stop_resume/slab/1",
+      "initial_mesh": "evaluation_stop_resume_slab_01_initial.obj",
+      "initial_mesh_sha256": "a244e536ce62e0654c16952bfc5122f8c0e355f3f030539f1abdbfbfc34fca18",
+      "initial_faces": 1760,
+      "analytic_body": {
+        "kind": "slab",
+        "slope_xy": [
+          0.09256,
+          -0.103048
+        ],
+        "bounds_xy_mm": [
+          -2,
+          2,
+          -2,
+          2
+        ],
+        "bottom_z_mm": -1.2,
+        "radius_mm": null
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.699499,
+            -0.012184,
+            0.460914
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.249499,
+            -0.012184,
+            0.502566
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.000501,
+            -0.012184,
+            0.525706
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 400,
+          "position_mm": [
+            0.300501,
+            0.087816,
+            0.54317
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e4",
+          "arrival_index": 4,
+          "timestamp_ms": 350,
+          "position_mm": [
+            0.400501,
+            0.087816,
+            0.552426
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e5",
+          "arrival_index": 5,
+          "timestamp_ms": 500,
+          "position_mm": [
+            0.700501,
+            0.087816,
+            0.580194
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e3",
+        "e5"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_stop_resume_slab_01_e0_tool.obj",
+          "sha256": "4240922bf544a2bbd1fecad4fc3e917ed3e3f2b3e73fc436d80ce2b367954ff8",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_stop_resume_slab_01_e1_tool.obj",
+          "sha256": "e72d3b341754865076422ee32ace97695f21fa8000b01a394d05c4e410486002",
+          "faces": 1380
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_stop_resume_slab_01_e3_tool.obj",
+          "sha256": "a150a248a970f95521649f2b2426d67142a7b1aebcef07a4e2d395c648c9ac9e",
+          "faces": 1280
+        },
+        {
+          "event_id": "e5",
+          "mesh": "evaluation_stop_resume_slab_01_e5_tool.obj",
+          "sha256": "d96abdaaeb3c099de435886a899ced1b3a5c4836368c3405527d4731bf9786da",
+          "faces": 1380
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [
+        "e4"
+      ],
+      "missing_interval_ms": [
+        200,
+        400
+      ],
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    },
+    {
+      "id": "evaluation_stop_resume_sphere_02",
+      "split": "evaluation",
+      "category": "stop_resume",
+      "body": "sphere",
+      "random_stream": "20260922/evaluation/stop_resume/sphere/2",
+      "initial_mesh": "evaluation_stop_resume_sphere_02_initial.obj",
+      "initial_mesh_sha256": "c351a77a9e0f5cdba94298370298040df758c6b69859d15b5a7c766a4c1afd95",
+      "initial_faces": 5120,
+      "analytic_body": {
+        "kind": "sphere",
+        "slope_xy": null,
+        "bounds_xy_mm": null,
+        "bottom_z_mm": null,
+        "radius_mm": 2.5
+      },
+      "tool": {
+        "kind": "sphere",
+        "radius_mm": 0.7,
+        "mesh_subdivisions": 3
+      },
+      "plan": {
+        "center_xy_mm": [
+          0,
+          0
+        ],
+        "allowed_radius_mm": 1.2,
+        "target_depth_mm": 0.25
+      },
+      "events": [
+        {
+          "id": "e0",
+          "arrival_index": 0,
+          "timestamp_ms": 0,
+          "position_mm": [
+            -0.684218,
+            -0.012377,
+            2.953853
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e1",
+          "arrival_index": 1,
+          "timestamp_ms": 100,
+          "position_mm": [
+            -0.234218,
+            -0.012377,
+            3.038311
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        },
+        {
+          "id": "e2",
+          "arrival_index": 2,
+          "timestamp_ms": 200,
+          "position_mm": [
+            0.015782,
+            -0.012377,
+            3.049258
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e3",
+          "arrival_index": 3,
+          "timestamp_ms": 400,
+          "position_mm": [
+            0.315782,
+            0.087623,
+            3.027766
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e4",
+          "arrival_index": 4,
+          "timestamp_ms": 350,
+          "position_mm": [
+            0.415782,
+            0.087623,
+            3.012963
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": false,
+          "connect_from_previous": false
+        },
+        {
+          "id": "e5",
+          "arrival_index": 5,
+          "timestamp_ms": 500,
+          "position_mm": [
+            0.715782,
+            0.087623,
+            2.943075
+          ],
+          "orientation_xyzw": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cutting": true,
+          "connect_from_previous": true
+        }
+      ],
+      "cutting_prefix_ids": [
+        "e0",
+        "e1",
+        "e3",
+        "e5"
+      ],
+      "prefix_tools": [
+        {
+          "event_id": "e0",
+          "mesh": "evaluation_stop_resume_sphere_02_e0_tool.obj",
+          "sha256": "892ce4604196df114d7240e5910c21f621303b99746f45fbc1de0091dee3cc16",
+          "faces": 1280
+        },
+        {
+          "event_id": "e1",
+          "mesh": "evaluation_stop_resume_sphere_02_e1_tool.obj",
+          "sha256": "638cbf9da5988d4a2c0ae490b42a65b73837d718a87c0db88cb04bb39d4c614d",
+          "faces": 1392
+        },
+        {
+          "event_id": "e3",
+          "mesh": "evaluation_stop_resume_sphere_02_e3_tool.obj",
+          "sha256": "a88037de61528b48323df2800fd495588d57ddad3a7dc9e23901f21eb1a36102",
+          "faces": 1280
+        },
+        {
+          "event_id": "e5",
+          "mesh": "evaluation_stop_resume_sphere_02_e5_tool.obj",
+          "sha256": "0ae026d235e404bbc12cd56d6f9cc3e333d046dc3b2f92d206d7dcf8fb2715be",
+          "faces": 1408
+        }
+      ],
+      "expected_initial_topology": {
+        "components": 1,
+        "watertight": true,
+        "cavities": 0
+      },
+      "expected_event_rejections": [
+        "e4"
+      ],
+      "missing_interval_ms": [
+        200,
+        400
+      ],
+      "reference": {
+        "kind": "analytic_set_difference",
+        "source": "analytic_body+exact_sphere_capsules",
+        "surface_mesh_reference_error_mm": null
+      }
+    }
+  ],
+  "negative_inputs": [
+    {
+      "id": "negative_thin_wall_0.5voxel",
+      "kind": "thin_wall",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.01,
+      "feature_to_nominal_voxel": 0.5,
+      "mesh": "negative_thin_wall_0.5voxel.obj",
+      "sha256": "8544287acd9356ae27021140bf387efeb0db3f34844cbe5eae94b886ae01a390",
+      "expected_components": 1,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_narrow_gap_0.5voxel",
+      "kind": "narrow_gap",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.01,
+      "feature_to_nominal_voxel": 0.5,
+      "mesh": "negative_narrow_gap_0.5voxel.obj",
+      "sha256": "f5ba514beadb2535afd9acc84eb38e6248ce246ce8bde51bfacbfa49e05bb737",
+      "expected_components": 2,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_through_hole_0.5voxel",
+      "kind": "through_hole",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.01,
+      "feature_to_nominal_voxel": 0.5,
+      "mesh": "negative_through_hole_0.5voxel.obj",
+      "sha256": "ed0289b233e55fcbb347bb3c06136ed116fef32b9f9c380e320ad4e66e80fda9",
+      "expected_components": 1,
+      "expected_genus": 1,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_thin_wall_1voxel",
+      "kind": "thin_wall",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.02,
+      "feature_to_nominal_voxel": 1.0,
+      "mesh": "negative_thin_wall_1voxel.obj",
+      "sha256": "70683a398524086a6ded1a5ebaa5e5600145b4a0f2ab81ce165908996d429bc3",
+      "expected_components": 1,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_narrow_gap_1voxel",
+      "kind": "narrow_gap",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.02,
+      "feature_to_nominal_voxel": 1.0,
+      "mesh": "negative_narrow_gap_1voxel.obj",
+      "sha256": "88699e1fafd37b27380e3ef21a9b1f9aa7b8c97f376647e00599916cc43bb231",
+      "expected_components": 2,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_through_hole_1voxel",
+      "kind": "through_hole",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.02,
+      "feature_to_nominal_voxel": 1.0,
+      "mesh": "negative_through_hole_1voxel.obj",
+      "sha256": "493a24cffec0d6937f1d9b410216d99d53fcaa2772085168fe0343274f6c4ed0",
+      "expected_components": 1,
+      "expected_genus": 1,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_thin_wall_2voxel",
+      "kind": "thin_wall",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.04,
+      "feature_to_nominal_voxel": 2.0,
+      "mesh": "negative_thin_wall_2voxel.obj",
+      "sha256": "cb23474b051c4a80ba4b15433456865ed8732bf0ef71076c72949ed820296ea3",
+      "expected_components": 1,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_narrow_gap_2voxel",
+      "kind": "narrow_gap",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.04,
+      "feature_to_nominal_voxel": 2.0,
+      "mesh": "negative_narrow_gap_2voxel.obj",
+      "sha256": "0904ff6cdfdc37e63b3e064d235820b1f9d820320b862e9f1fbf079c6936e5de",
+      "expected_components": 2,
+      "expected_genus": 0,
+      "expected_policy": "preserve_or_reject"
+    },
+    {
+      "id": "negative_through_hole_2voxel",
+      "kind": "through_hole",
+      "nominal_voxel_mm": 0.02,
+      "feature_width_mm": 0.04,
+      "feature_to_nominal_voxel": 2.0,
+      "mesh": "negative_through_hole_2voxel.obj",
+      "sha256": "b02ee517a8f8c058ca28be493756b56f0f5ebac5905397e90f3bdde309fabc7b",
+      "expected_components": 1,
+      "expected_genus": 1,
+      "expected_policy": "preserve_or_reject"
+    }
+  ]
+}

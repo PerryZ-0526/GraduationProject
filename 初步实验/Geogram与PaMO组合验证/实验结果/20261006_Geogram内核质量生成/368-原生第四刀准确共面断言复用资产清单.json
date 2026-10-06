@@ -1,0 +1,36 @@
+{
+  "生成时间": "2026-10-06T23:50:01+08:00",
+  "修改时间及修改内容": "2026-10-06T23:50:01+08:00，首次绑定原生第四刀准确共面断言",
+  "文档概述": "真实已见开发负例，前父有效；候选自然断言失败，原版返回但同保存对象不嵌入",
+  "索引目录": [
+    "files",
+    "failure",
+    "symbol_location"
+  ],
+  "status": "frozen_actual_native_fourth_event_assertion_scene",
+  "source_record_sha256": "7e76b55767d1abb13a2db9fb182a46db12fd53a88c79c53e793f5eed83efaf76",
+  "parent_sha256": "5946fb4a65f79085482c5e71ca53d6e4d86c51d286ef90621cdfcb93b0347913",
+  "tool_sha256": "33e907af1e1b76e4a21e599c9f38e0ddbe21dbdefa153473ae656304c7035bfd",
+  "failure": {
+    "returncode": 1,
+    "log_sha256": "d78431bdf56ce12d043b8a97b2e4e5911104392d33921ea5368bd781335e4ded",
+    "subprocess_wall_ms": 1095.338721293956
+  },
+  "symbol_location": {
+    "library_offset_0x26c03a": "GEO::CoplanarFacets::triangulate()",
+    "library_offset_0x256824": "GEO::MeshSurfaceIntersection::simplify_coplanar_facets(double) parallel lambda",
+    "resolution": "实际原运行库addr2line -f -C；Release没有源码行信息，断言本身报告CDT_2d.cpp:610"
+  },
+  "files": {
+    "00-真实第三刀有效父网格.obj": "5946fb4a65f79085482c5e71ca53d6e4d86c51d286ef90621cdfcb93b0347913",
+    "01-真实第四刀工具.obj": "33e907af1e1b76e4a21e599c9f38e0ddbe21dbdefa153473ae656304c7035bfd",
+    "02-原生候选第四刀实际失败日志.txt": "d78431bdf56ce12d043b8a97b2e4e5911104392d33921ea5368bd781335e4ded",
+    "03-原版同父第四刀输出.obj": "859f50a715a59d938b39bbf4a566a8f860b570999c66419c678d1736d8b1a5c9",
+    "04-原版同父第四刀精确审计.json": "6f0aa800da5e483485bde885ae3cc43ea8060a18865d4a8a46c6a8072865b53d",
+    "05-实际原生编译记录.json": "ae79739851d56ba4c4d300304736006634a949b6f030165ef5a49622d420bfaf",
+    "06-实际源码清单.json": "ee2d6bd83c099a019c0931291f965a2e2b82830c23ed66c26566c6c50d5caf14",
+    "mesh_surface_intersection.cpp": "ca7a2c1eb74a960a8c499bf6ef5ec5f7ab44aaa92292a9404ae53b898db83842",
+    "mesh_surface_intersection_internal.cpp": "2e670419fdaaafd21dba38fe48c7c325947836855e4bd3374f6f0c1882b5e840",
+    "mesh_surface_intersection_internal.h": "4247d6131cda4df157d7a8f185ddddeb47136bb38a754dca008e2f0a62e925c9"
+  }
+}

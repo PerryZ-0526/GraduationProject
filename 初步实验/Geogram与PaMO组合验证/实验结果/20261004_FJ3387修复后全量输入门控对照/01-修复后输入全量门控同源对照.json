@@ -1,0 +1,148 @@
+{
+  "生成时间": "2026-10-04T20:42:51.376962+08:00",
+  "修改时间及修改内容": "首次生成，固定旧拒绝源，仅替换修复后的审计门控",
+  "文档概述": "相同碎片操作及预算，旧回滚保持",
+  "索引目录": [
+    "repair",
+    "provenance"
+  ],
+  "source_sha256": "9a066a2b9e53bac860b78fba43feaf06d77dc762604d7a6f4f57283b6bb371e6",
+  "full_input_checks": [
+    {
+      "saved_sha256": "914ad87f5c088874421d2402f004411a4a25e43fb674614fed2dcc01ffceade2",
+      "execution": {
+        "returncode": 0,
+        "remote_roundtrip_ms": 599.2790999880526,
+        "stdout": "{\"parsed\":true,\"topology_valid\":true,\"vertices\":24178,\"faces\":48352,\"closed\":true,\"self_intersection_pairs\":0,\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\"}\n",
+        "stderr": "",
+        "command": "/root/autodl-tmp/graduation_project/exact_mesh_audit_20261004_0646 '/root/autodl-tmp/graduation_project/constrained_20261004_FJ3387修复后全量输入门控对照_584de558c5cc/20261004_FJ3387修复后全量输入门控对照_input_embedding_0.obj'"
+      },
+      "parsed": true,
+      "topology_valid": true,
+      "vertices": 24178,
+      "faces": 48352,
+      "closed": true,
+      "self_intersection_pairs": 0,
+      "embedded_closed": true,
+      "kernel": "EPECK_on_stored_binary64"
+    }
+  ],
+  "repair": {
+    "initial_invalid_faces": 4,
+    "steps": [
+      {
+        "operation": "repair_degenerate",
+        "details": {
+          "initial_invalid_faces": 4,
+          "max_flips": 4,
+          "plane_tolerance_mm": 1e-08,
+          "area_threshold_mm2": 1e-12,
+          "flips": [],
+          "rejected_pair_checks": {
+            "new_invalid_face": 7,
+            "different_source": 2
+          },
+          "scope": "数值近共面与凸性测试，非精确谓词或连续几何证书",
+          "remaining_invalid_faces": 4,
+          "vertices_exact": true
+        }
+      },
+      {
+        "operation": "collapse_degenerate",
+        "details": {
+          "initial_invalid_faces": 4,
+          "max_collapses": 4,
+          "plane_tolerance_mm": 1e-08,
+          "collapses": [
+            {
+              "removed_vertex": 24145,
+              "retained_vertex": 24146,
+              "endpoint_distance_mm": 2.850390901258913e-08,
+              "max_incident_plane_deviation_mm": 4.581849136209293e-09,
+              "deleted_faces": 2
+            },
+            {
+              "removed_vertex": 24144,
+              "retained_vertex": 24146,
+              "endpoint_distance_mm": 1.2439390319697565e-07,
+              "max_incident_plane_deviation_mm": 4.584757462566813e-09,
+              "deleted_faces": 2
+            }
+          ],
+          "allow_small_incident": true,
+          "scope": "数值链接和逐面平面检查，后续必须重审整网格与来源",
+          "remaining_invalid_faces": 0
+        }
+      }
+    ],
+    "accepted": true,
+    "audit": {
+      "vertices": 24178,
+      "faces": 48352,
+      "finite": true,
+      "zero_area_faces": 0,
+      "fp32_zero_area_faces": 0,
+      "watertight": true,
+      "winding_consistent": true,
+      "vertex_manifold_closed": true,
+      "euler_number": 2,
+      "self_intersection_faces": 0,
+      "volume_mm3": 5435.043258710028,
+      "self_intersection_raw_alarm_faces": 507,
+      "components": 1,
+      "historical_area_threshold_counts": {
+        "fp64": 0,
+        "fp32": 0
+      },
+      "area_arithmetic": [
+        {
+          "dtype": "float64",
+          "zero_faces": 0,
+          "nonfinite_areas": 0,
+          "small_positive_faces": 0,
+          "min_area_mm2": 8.343126207853581e-08
+        },
+        {
+          "dtype": "float32",
+          "zero_faces": 0,
+          "nonfinite_areas": 0,
+          "small_positive_faces": 0,
+          "min_area_mm2": 7.760124987044037e-08
+        }
+      ],
+      "area_policy": "development_true_zero_input_check",
+      "small_positive_faces_are_risk_statistics": true,
+      "output_policy_unchanged": true,
+      "historical_unresolved_alarm_faces": 507,
+      "full_exact_embedding_bound": true,
+      "intersection_check_interpretation": "同一保存FP64输入的完整精确嵌入证据"
+    },
+    "topology_preserved": true,
+    "remaining_invalid_faces": 0,
+    "geometry_probe_max_mm": 3.056504608656689e-09,
+    "geometry_budget_mm": 1e-07,
+    "continuous_geometry_certified": false
+  },
+  "provenance": {
+    "1": {
+      "samples": 192740,
+      "sampled_max_mm": 9.128842153614742e-15
+    },
+    "2": {
+      "samples": 668,
+      "sampled_max_mm": 1.528253214744564e-09
+    },
+    "seam": {
+      "vertices": 85,
+      "parent_sampled_max_mm": 1.2560739669470201e-15,
+      "tool_sampled_max_mm": 1.2560739669470201e-15
+    },
+    "passed_1e_8_mm_numerical_check": true
+  },
+  "repaired_sha256": "914ad87f5c088874421d2402f004411a4a25e43fb674614fed2dcc01ffceade2",
+  "labels_sha256": "fcb7cf441526f03c9b601ec776ed69f97b1c001c0d01dc0a6bf21be624a007af",
+  "parent_sha256": "278a2cdf4624fe3b5d24d9428029bf392a629a3ceaf8a57c94abbff84fbbd605",
+  "tool_sha256": "db7d03871656a77873bfe35fc95d1bffa029fe71f2844866824dd2f29d3b8208",
+  "status": "completed",
+  "finished_beijing": "2026-10-04T20:42:57.081127+08:00"
+}

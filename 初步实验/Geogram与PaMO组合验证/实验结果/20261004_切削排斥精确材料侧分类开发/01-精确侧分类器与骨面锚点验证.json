@@ -1,0 +1,492 @@
+{
+  "生成时间": "2026-10-04T19:01:11.438368+08:00",
+  "修改时间及修改内容": "首次生成，隔离分类器开发验证",
+  "文档概述": "完整嵌入检查后分类工具内部锚点，未接入旧连续版本",
+  "索引目录": [
+    "environment",
+    "tests",
+    "application"
+  ],
+  "status": "completed",
+  "tests": [
+    {
+      "case": "立方体内边外",
+      "passed": true,
+      "result": {
+        "embedded_closed": true,
+        "kernel": "EPECK_on_stored_binary64",
+        "sides": [
+          1,
+          0,
+          -1
+        ],
+        "saved_mesh_sha256": "c963b99828a811f2041de651f200deb05a08e217021f4acf5c692fc6f43a129c",
+        "points_sha256": "d528bf540a8109a9e8107b9243ac04f826cb58551d159e7884c568072005120d",
+        "execution": {
+          "returncode": 0,
+          "remote_roundtrip_ms": 117.15730000287294,
+          "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[1,0,-1]}\n",
+          "stderr": "",
+          "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_1.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_1.txt'"
+        }
+      }
+    },
+    {
+      "case": "包围盒内孔洞与实体",
+      "passed": true,
+      "result": {
+        "embedded_closed": true,
+        "kernel": "EPECK_on_stored_binary64",
+        "sides": [
+          -1,
+          1
+        ],
+        "saved_mesh_sha256": "fa39ba3228da9fd7af92c8ee966448047b830e5c7e58bae4ac1bddad800e30d0",
+        "points_sha256": "6a4d455c7ddebfce054006f735661b2e798c8f96309eaae73c1e58dfbf0ea403",
+        "execution": {
+          "returncode": 0,
+          "remote_roundtrip_ms": 137.05850000405917,
+          "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,1]}\n",
+          "stderr": "",
+          "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_2.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_2.txt'"
+        }
+      }
+    },
+    {
+      "case": "自交实体拒绝分类",
+      "passed": true,
+      "result": {
+        "embedded_closed": false,
+        "sides": [],
+        "saved_mesh_sha256": "efd5537c9ebb6de8b8d8c63b1a615bd7e36f2eb6b7a816ff0d90290b0ef63ae6",
+        "points_sha256": "fbaf6e2ac1852f6ea33a3d75a7a8d95d6771a25dc56d710e777ed9c84c6a34b0",
+        "execution": {
+          "returncode": 0,
+          "remote_roundtrip_ms": 118.90690000291215,
+          "stdout": "{\"embedded_closed\":false,\"sides\":[]}\n",
+          "stderr": "",
+          "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_3.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_3.txt'"
+        }
+      }
+    },
+    {
+      "case": "工具在孔洞内",
+      "passed": true,
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": true,
+        "point_mm": [
+          5.28677630773884e-18,
+          0.0,
+          0.0
+        ],
+        "side": -1,
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "saved_mesh_sha256": "fa39ba3228da9fd7af92c8ee966448047b830e5c7e58bae4ac1bddad800e30d0",
+          "points_sha256": "d5b8c988d3fbd9e6ec6cb00e18d47d6a5b62569af0745fef2cb95f08a395fdcf",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 138.08379999682074,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,-1,-1,-1,-1,-1,-1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_4.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_4.txt'"
+          }
+        },
+        "scope": "严格在工具支撑交集内、在已存储闭合嵌入骨材料外；结合整面支撑才推出材料排斥"
+      }
+    },
+    {
+      "case": "工具被材料整包",
+      "passed": true,
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": false,
+        "reason": "no_exact_material_outside_anchor",
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "saved_mesh_sha256": "c963b99828a811f2041de651f200deb05a08e217021f4acf5c692fc6f43a129c",
+          "points_sha256": "d5b8c988d3fbd9e6ec6cb00e18d47d6a5b62569af0745fef2cb95f08a395fdcf",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 114.79849999886937,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[1,1,1,1,1,1,1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_5.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_5.txt'"
+          }
+        }
+      }
+    }
+  ],
+  "application": [
+    {
+      "route": "BP3D_FJ3384_交叉浅磨",
+      "reference_sha256": "2d5b3b5cad55f1881b17f8af41e3fc736c7e2eeb96350ea6597d5b5ea6291045",
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": true,
+        "point_mm": [
+          19.470022924963953,
+          26.878107378054906,
+          -24.25254077488211
+        ],
+        "side": -1,
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "saved_mesh_sha256": "2d5b3b5cad55f1881b17f8af41e3fc736c7e2eeb96350ea6597d5b5ea6291045",
+          "points_sha256": "c067cf29da2c6ea9050ec4e50f5e87de79e99bac955353dba24391e188078109",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 453.3917000007932,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,-1,-1,-1,-1,-1,-1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_6.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_6.txt'"
+          }
+        },
+        "scope": "严格在工具支撑交集内、在已存储闭合嵌入骨材料外；结合整面支撑才推出材料排斥"
+      }
+    },
+    {
+      "route": "BP3D_FJ3279_交叉浅磨",
+      "reference_sha256": "54f8c627e194b8aae55cab7c68a4f160db45544910de79a5a55d2b60f993e829",
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": true,
+        "point_mm": [
+          -2.051028586892507,
+          13.482296944962043,
+          3.191745846338856
+        ],
+        "side": -1,
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "saved_mesh_sha256": "54f8c627e194b8aae55cab7c68a4f160db45544910de79a5a55d2b60f993e829",
+          "points_sha256": "27d3eb1adede93973d3884a32f2261a0a4b158d9f00bcc2030be92c419eb89ba",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 477.73610000149347,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,-1,-1,-1,-1,-1,-1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_7.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_7.txt'"
+          }
+        },
+        "scope": "严格在工具支撑交集内、在已存储闭合嵌入骨材料外；结合整面支撑才推出材料排斥"
+      }
+    },
+    {
+      "route": "BP3D_FJ3368_交叉浅磨",
+      "reference_sha256": "3367509c3c83f9983b31f383394b6f4a461907eddf02b844f63c6f966ed26485",
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": true,
+        "point_mm": [
+          -0.5443100988066399,
+          0.05505476877291119,
+          -7.577283483702624
+        ],
+        "side": -1,
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "saved_mesh_sha256": "3367509c3c83f9983b31f383394b6f4a461907eddf02b844f63c6f966ed26485",
+          "points_sha256": "9e8152713e2a334fd31d2d6797447a178621c41131f323e492d7e545aae226e5",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 183.50069999723928,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,-1,-1,-1,-1,-1,-1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_8.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_8.txt'"
+          }
+        },
+        "scope": "严格在工具支撑交集内、在已存储闭合嵌入骨材料外；结合整面支撑才推出材料排斥"
+      }
+    },
+    {
+      "route": "BP3D_FJ3262_交叉浅磨",
+      "reference_sha256": "a18d7d8297ae7df8a33195583c095b6a92cb7e2d932e10261054b1abc454dc7b",
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": true,
+        "point_mm": [
+          1.1060207436015885,
+          -0.723229266504627,
+          -4.402719574217195
+        ],
+        "side": -1,
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "saved_mesh_sha256": "a18d7d8297ae7df8a33195583c095b6a92cb7e2d932e10261054b1abc454dc7b",
+          "points_sha256": "ba921845f21e653723ca099f48c2b0296aa5faf2edea40c89128f5bd8bf91e52",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 179.7461000023759,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,-1,-1,-1,-1,-1,-1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_9.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_9.txt'"
+          }
+        },
+        "scope": "严格在工具支撑交集内、在已存储闭合嵌入骨材料外；结合整面支撑才推出材料排斥"
+      }
+    },
+    {
+      "route": "BP3D_FJ3365_交叉浅磨",
+      "reference_sha256": "ac3bb80141d9b9fc779dfa5dfe39dd7444025f89a588e14542d24a8185000551",
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": true,
+        "point_mm": [
+          2.3740582157015204,
+          0.42122848412380537,
+          -25.851097581364115
+        ],
+        "side": -1,
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "saved_mesh_sha256": "ac3bb80141d9b9fc779dfa5dfe39dd7444025f89a588e14542d24a8185000551",
+          "points_sha256": "518c2529933e132a964ee2b8a9ecdf3004abc70923a3aebef3c194b86cc92d52",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 243.98529999598395,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,-1,-1,-1,-1,-1,-1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_10.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_10.txt'"
+          }
+        },
+        "scope": "严格在工具支撑交集内、在已存储闭合嵌入骨材料外；结合整面支撑才推出材料排斥"
+      }
+    },
+    {
+      "route": "BP3D_FJ3259_交叉浅磨",
+      "reference_sha256": "45a3466736a08729bc9bcf612f1886494ad0527305e5ea513278e828e1e5d2cb",
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": true,
+        "point_mm": [
+          3.1640948329224474,
+          -0.3100708957856395,
+          -6.037744955757638
+        ],
+        "side": -1,
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "saved_mesh_sha256": "45a3466736a08729bc9bcf612f1886494ad0527305e5ea513278e828e1e5d2cb",
+          "points_sha256": "8f4c7758685307fafb8fcf3ff682c9ffa338f22d3c9a24e91f2737e8d5490719",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 180.9817000030307,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,-1,-1,-1,-1,-1,-1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_11.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_11.txt'"
+          }
+        },
+        "scope": "严格在工具支撑交集内、在已存储闭合嵌入骨材料外；结合整面支撑才推出材料排斥"
+      }
+    },
+    {
+      "route": "BP3D_FJ3387_交叉浅磨",
+      "reference_sha256": "4b902a5c208e0692fa3c99bf704f491b47d48d15136d271d94b9312a605c2e94",
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": true,
+        "point_mm": [
+          -6.201937395880641,
+          -2.7841718212357423,
+          17.164589553666776
+        ],
+        "side": -1,
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "saved_mesh_sha256": "4b902a5c208e0692fa3c99bf704f491b47d48d15136d271d94b9312a605c2e94",
+          "points_sha256": "b843f2cb39f05269a0ce1ef9baa1bafb12d9cad760d3f35a150443e139af839b",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 168.593399997917,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,-1,-1,-1,-1,-1,-1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_12.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_12.txt'"
+          }
+        },
+        "scope": "严格在工具支撑交集内、在已存储闭合嵌入骨材料外；结合整面支撑才推出材料排斥"
+      }
+    },
+    {
+      "route": "BP3D_FJ3282_交叉浅磨",
+      "reference_sha256": "674442fb091c4fe87843e9c6843674ff5954feb72570ac7a087aecf3f6e408d6",
+      "old_bounding_box_anchor": {
+        "passed": false,
+        "reason": "no_bounding_box_anchor",
+        "scope": "未找到不等于材料相交，禁止以此放宽认证"
+      },
+      "result": {
+        "passed": true,
+        "point_mm": [
+          6.071443578833622,
+          -1.6877186655017038,
+          18.350484167087185
+        ],
+        "side": -1,
+        "classification": {
+          "embedded_closed": true,
+          "kernel": "EPECK_on_stored_binary64",
+          "sides": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "saved_mesh_sha256": "674442fb091c4fe87843e9c6843674ff5954feb72570ac7a087aecf3f6e408d6",
+          "points_sha256": "8e2f2aa4fc2069a3cc10a9851b639405ee8ff95a4eef4a3f0b06a326d2367c0b",
+          "execution": {
+            "returncode": 0,
+            "remote_roundtrip_ms": 156.0678000023472,
+            "stdout": "{\"embedded_closed\":true,\"kernel\":\"EPECK_on_stored_binary64\",\"sides\":[-1,-1,-1,-1,-1,-1,-1]}\n",
+            "stderr": "",
+            "command": "'/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_13.obj' '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/side_13.txt'"
+          }
+        },
+        "scope": "严格在工具支撑交集内、在已存储闭合嵌入骨材料外；结合整面支撑才推出材料排斥"
+      }
+    }
+  ],
+  "environment": {
+    "compile": {
+      "returncode": 0,
+      "remote_roundtrip_ms": 16110.324599998421,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 300 g++ -O1 -std=c++17 '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side.cpp' -lgmp -lmpfr -o '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side' > '/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/compile.log' 2>&1"
+    },
+    "executable": "/root/autodl-tmp/graduation_project/constrained_20261004_切削排斥精确材料侧分类开发_b6aaa055e521/exact_cut_side",
+    "source_sha256": "61de1fe743739083b03ca0ad56c3b4dce0e9b17d21a616ffedb90239bb7b18ef",
+    "executable_sha256": "54a97a90e88a17d2a5932e630ee0ac9888c7b601f00b86a0ef94d9271cddbc5e"
+  },
+  "finished_beijing": "2026-10-04T19:01:38.135302+08:00"
+}

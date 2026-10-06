@@ -1,0 +1,66 @@
+{
+  "time_beijing": "2026-10-04T06:54:35.804353+08:00",
+  "environment": {
+    "code_sha256": {
+      "constrained_remesh.cpp": "4fc35fcf68c7c89ab6fbfa8985378fba2378c6a4254c9f3a2284d98036334710",
+      "constrained_quality.py": "cec0e94a49ecd5fb0410e3905e2a5e93f8ff667ee7e812e31cdb62f0e1cacf0b",
+      "run_constrained_worker.py": "5d731de7f80b0d613ee2dbf3f7ceb7c3b0c53ffb9d34d8f9c272c7769d90def9",
+      "locality_masks.py": "cfaeac76c08d10937bf237c5e7a88ffb3c373b52badbc07995b5132177d3b6b6",
+      "locality_gpu.py": "85efcc97cd2680d90867f499df3994d517c4f6dfefc5ef17966c6a0511cd247c"
+    },
+    "compile": {
+      "returncode": 0,
+      "remote_roundtrip_ms": 37864.64040000283,
+      "stdout": "",
+      "stderr": "",
+      "command": "timeout 300 g++ -O1 -std=c++17 '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复公开骨面反馈_cb43c04438a1/constrained_remesh.cpp' -lgmp -lmpfr -o '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复公开骨面反馈_cb43c04438a1/constrained_remesh' > '/root/autodl-tmp/graduation_project/constrained_20261004_共同来源碎片修复公开骨面反馈_cb43c04438a1/compile.log' 2>&1"
+    },
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "torch": "2.8.0+cu128",
+      "extension_sha256": "c0836ff8d36fe5c9e2fca8f27e9a341578aa3d716dfb1d0563784710717353ad"
+    },
+    "executable_sha256": "8529a90f4a4f187b2d2d5aac711f49c8a99554612f729575d0180357bd7f8986",
+    "dependency": "libcgal-dev:amd64\t5.4-1",
+    "planar_code_sha256": {
+      "planar_patch.py": "fc76d44983f025799bb13272e4c1c432bb14849c556a19a5977e3058fb0fff76",
+      "run_planar_worker.py": "d3cc55acfa30702712e79273f6dd31009d6d54d918841e9bc07acc90f0e92f5d",
+      "tangent_plane_gpu.py": "062669ffc0d04cc1b0a8444ae9f8a1872beeb9beed99363b037d6fbb99057291"
+    },
+    "triangle": {
+      "version": "20250106",
+      "binary_sha256": "6d5b31720500c28b383b064a87ffb07223f57d2e730187331b10018e1421ebf1"
+    },
+    "mechanism": "same_source_planar_regions_and_per_vertex_tangent_PAP_Pg_safe_projection",
+    "geometry_generation": "CPU_Triangle",
+    "projection": "GPU_if_free_vertices_else_identity",
+    "exact_contact_audit_sha256": "499853b37d70a916338f1a52b4c2e7604adc38e8decd0880960975c5536cc19d",
+    "contact_scope": "仅原报警集合，精确证明共享单纯形接触；不认证完整无自交",
+    "shared_source_code_sha256": {
+      "locality_masks.py": "cfaeac76c08d10937bf237c5e7a88ffb3c373b52badbc07995b5132177d3b6b6",
+      "planar_patch.py": "fc76d44983f025799bb13272e4c1c432bb14849c556a19a5977e3058fb0fff76",
+      "run_planar_worker.py": "d3cc55acfa30702712e79273f6dd31009d6d54d918841e9bc07acc90f0e92f5d"
+    },
+    "shared_source_policy": "保留位3，分别核对父及工具表面；共同来源区域独立重建",
+    "shared_repair_sha256": {
+      "run_shared_repair_feedback.py": "dbf1b1d916824aa27c4cf59d36f4eb9e77627d0d89c7f72657153d9cf8ad4e76",
+      "fragment_pipeline.py": "44b5c1f34e1b2c8225b6099b33f2c1bc9d98996d2d88280a2d95a0073ebf9714",
+      "locality_retriangulate.py": "448e13d84f3634ab8f257600bffa3f88787ae4971fbd2460d70e354e75690bb9",
+      "locality_sliver_collapse.py": "f3c79115b83244a45d2d3d364df8ec5d10db023df20eff95cf0d15e8bca56150",
+      "locality_cleanup.py": "c2b2ef02fe6432a0a396de2b2b68e038fd33fe9a16dce8672b0b98ed89e8a12f",
+      "locality_diagnostic.py": "d714dcd5a5dda874c4691d276e2024f71739559d6c4e94579a4fd8ad85dd22ab"
+    },
+    "repair_policy": "同来源碎片翻边折叠与整体回滚，保留位3；原面积及几何门槛不变",
+    "provenance_binary_sha256": "da6a45e3b45b0dceac87629379840046a692cfa3e24da6631234d0d00d50d033"
+  },
+  "parameters": {
+    "iterations": 3,
+    "rings": 2,
+    "expanded_rings": 4,
+    "projection_iterations": 5,
+    "geometry_budget_mm": 0.1,
+    "geometry_check": "8192_area_samples_and_all_vertices",
+    "fallback": "expanded_once_then_original_full"
+  },
+  "input_manifest_sha256": "5295067a16995845280fc84b1bbb63f2b10fe0eab7166309657c47fa834847a3"
+}

@@ -1,0 +1,9 @@
+candidate_configure 0
+candidate_build 2
+Traceback (most recent call last):
+  File "/tmp/geogram_native_quality_20261006_05/build.py", line 54, in <module>
+    execute('candidate_build',['cmake','--build',str(build),'--target','geogram','-j','4'])
+  File "/tmp/geogram_native_quality_20261006_05/build.py", line 39, in execute
+    if result.returncode: raise RuntimeError(name+'实际构建失败')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: candidate_build实际构建失败
