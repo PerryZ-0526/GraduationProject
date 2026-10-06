@@ -8,7 +8,6 @@ import re
 import shutil
 import subprocess
 import time
-from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -216,36 +215,117 @@ def copy_raw(root, bundle, assets=False):
         raise
 
 
-def index_assets(bundle):
-    # 同卷移动只改目录位置；原文件内容不变，清单诚实标明未再次全量求摘要。
-    root = bundle / '原D盘资产'
-    manifest = bundle / '05-原D盘资产逐文件位置清单.jsonl'
-    totals = Counter()
-    counts = Counter()
+def verify_migration(root, bundle):
+    # 摘要在复制时逐文件核对；终态再核查清单绑定、源变化和目录遗漏。
     errors = []
-    with manifest.open('w', encoding='utf-8') as output:
-        for base, dirs, files in os.walk(root, onerror=lambda error: errors.append(str(error))):
-            for name in sorted(files):
-                path = Path(base, name)
-                rel = path.relative_to(root)
-                stat = path.stat()
-                counts[rel.parts[0]] += 1
-                totals[rel.parts[0]] += stat.st_size
-                output.write(json.dumps({'relative_path': rel.as_posix(), 'bytes': stat.st_size,
-                                          'mtime_ns': stat.st_mtime_ns,
-                                          'sha256_status': 'not_rehashed_same_volume_move'}, ensure_ascii=False) + '\n')
-    receipt = {'status': 'completed' if not errors else 'failed', 'time_beijing': now(),
-               'files': dict(counts), 'bytes': dict(totals), 'errors': errors,
-               'manifest_sha256': digest(manifest), 'same_volume_move': True,
-               'original_paths_preserved_by_junction': True}
-    write_json(bundle / '06-原D盘资产整理回执.json', receipt)
-    print(json.dumps(receipt, ensure_ascii=False), flush=True)
+    summaries = []
+    project_paths = set()
+    asset_paths = set()
+    asset_source = None
+    cases = [(bundle, root, False)]
+    worktree_bundle = bundle / '工作树补充'
+    if worktree_bundle.exists():
+        plan = json.loads((worktree_bundle / '02-项目提交与原始数据迁移计划.json').read_text('utf-8'))
+        cases.append((worktree_bundle, Path(plan['project_root']), False))
+    cases.append((bundle, None, True))
+    for folder, source_root, assets in cases:
+        plan_path = folder / ('07-原D盘资产完整复制计划.json' if assets else '02-项目提交与原始数据迁移计划.json')
+        manifest_path = folder / ('08-原D盘资产逐文件复制核对.jsonl' if assets else '03-项目原始数据逐文件复制核对.jsonl')
+        receipt_path = folder / ('09-原D盘资产复制回执.json' if assets else '04-项目原始数据复制回执.json')
+        plan = json.loads(plan_path.read_text('utf-8'))
+        receipt = json.loads(receipt_path.read_text('utf-8'))
+        if assets:
+            source_root = Path(plan['source_root'])
+            asset_source = source_root
+        target_root = folder / ('原D盘资产' if assets else '项目未入Git原始数据')
+        records = {}
+        with manifest_path.open(encoding='utf-8') as stream:
+            for line in stream:
+                row = json.loads(line)
+                if row['relative_path'] in records:
+                    errors.append('复制清单出现重复路径：' + row['relative_path'])
+                records[row['relative_path']] = row
+        planned = {row['relative_path']: row for row in plan['raw_files']}
+        if receipt['status'] != 'completed' or planned.keys() != records.keys():
+            errors.append('回执或清单分母不完整：' + str(folder))
+        if digest(plan_path) != receipt['plan_sha256'] or digest(manifest_path) != receipt['manifest_sha256']:
+            errors.append('计划或复制清单摘要不一致：' + str(folder))
+        for rel, row in planned.items():
+            source = source_root / rel
+            target = target_root / rel
+            try:
+                source_stat = source.stat()
+                target_stat = target.stat()
+                if source_stat.st_size != row['bytes'] or source_stat.st_mtime_ns != row['mtime_ns']:
+                    errors.append('源文件在规划后变化：' + str(source))
+                if target_stat.st_size != row['bytes'] or not records[rel]['verified']:
+                    errors.append('目标缺失或未通过摘要：' + str(target))
+            except OSError as error:
+                errors.append(str(error))
+        if assets:
+            asset_paths = set(planned)
+        elif folder == bundle:
+            project_paths = set(planned)
+        else:
+            # 独立工作树也要重新枚举，不能只检查先前已规划的708份文件。
+            fresh = set(git(source_root, 'ls-files', '--others', '--exclude-standard', '-z').decode('utf-8').split('\0'))
+            fresh |= set(git(source_root, 'ls-files', '--others', '--ignored', '--exclude-standard', '-z').decode('utf-8').split('\0'))
+            for rel in fresh - {''}:
+                path = Path(rel)
+                if any(part in SKIP_PARTS | {'venv', 'node_modules'} for part in path.parts) or is_private(path):
+                    continue
+                if (source_root / path).is_file() and rel not in planned:
+                    errors.append('独立工作树有未覆盖新文件：' + str(source_root / path))
+            if git(source_root, 'diff', 'HEAD', '--name-only'):
+                errors.append('独立工作树存在未保存的新代码修改：' + str(source_root))
+        summaries.append({'source': str(source_root), 'files': len(planned), 'bytes': plan['raw_bytes'],
+                          'manifest_sha256': receipt['manifest_sha256']})
+    candidates = set(git(root, 'ls-files', '--others', '--exclude-standard', '-z').decode('utf-8').split('\0'))
+    ignored = set(git(root, 'ls-files', '--others', '--ignored', '--exclude-standard', '-z').decode('utf-8').split('\0'))
+    new_paths = []
+    for rel in sorted((candidates | ignored) - {''}):
+        path = Path(rel)
+        if any(part in SKIP_PARTS for part in path.parts) or is_private(path) or path.name.startswith('~$'):
+            continue
+        if path.parts[:2] == ('tmp', 'git_migration_20261007'):
+            continue
+        source = root / path
+        if not source.is_file():
+            continue
+        if rel in project_paths:
+            continue
+        # 新产生的轻量文件也需要提交或补充迁移，不能因体积小而漏报。
+        new_paths.append(rel)
+    if new_paths:
+        errors.append('项目有新产生但未覆盖的文件：' + repr(new_paths[:20]))
+    fresh_assets = set()
+    for base, dirs, files in os.walk(asset_source, onerror=lambda error: errors.append(str(error))):
+        for name in files:
+            path = Path(base, name)
+            rel = path.relative_to(asset_source)
+            if any(part in {'__pycache__', '.pytest_cache', '.ruff_cache'} for part in rel.parts) or path.suffix in {'.pyc', '.pyo'}:
+                continue
+            fresh_assets.add(rel.as_posix())
+    added_assets = sorted(fresh_assets - asset_paths)
+    removed_assets = sorted(asset_paths - fresh_assets)
+    if added_assets or removed_assets:
+        errors.append('D盘源目录在规划后发生增删')
+    result = {'status': 'completed' if not errors else 'failed', 'time_beijing': now(),
+              'summaries': summaries, 'total_files': sum(row['files'] for row in summaries),
+              'total_bytes': sum(row['bytes'] for row in summaries), 'errors': errors,
+              'new_project_paths': new_paths, 'added_asset_paths': added_assets,
+              'removed_asset_paths': removed_assets, 'source_inventory_checked': True,
+              'sha256_source_target_verified_during_copy': True}
+    write_json(bundle / '05-全部迁移覆盖与终态核对.json', result)
+    print(json.dumps({key: value for key, value in result.items() if key != 'summaries'}, ensure_ascii=False), flush=True)
+    if errors:
+        raise RuntimeError('迁移最终覆盖核查未通过，不能删除本机源数据')
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--bundle', type=Path, required=True)
-    parser.add_argument('--phase', choices=['plan', 'copy', 'assets', 'index'], required=True)
+    parser.add_argument('--phase', choices=['plan', 'copy', 'assets', 'verify'], required=True)
     parser.add_argument('--asset-source', type=Path)
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
@@ -259,8 +339,8 @@ def main():
         copy_raw(root, bundle)
     elif args.phase == 'assets':
         copy_raw(root, bundle, assets=True)
-    else:
-        index_assets(bundle)
+    elif args.phase == 'verify':
+        verify_migration(root, bundle)
 
 
 if __name__ == '__main__':
